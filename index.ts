@@ -1,148 +1,85 @@
-import {GotoLabel, GotoScene, Label, parseScenesToTokensInPlace, Scene, Token} from "./parser";
+import {GotoLabel, GotoScene, Label, Scene, Token, tokeniseScenes} from "./parser";
+import Graph from "graphology";
 
 const execute = async () => {
     const startup = await loadScene('startup');
     const sceneNames = readSceneList(startup);
     const implicitControlFlow = startup.content.indexOf('*create implicit_control_flow true') !== -1;
 
-    if(implicitControlFlow) {
+    if (implicitControlFlow) {
         console.warn("Implicit Control Flow detected, this is unsupported at this time.");
     }
 
     let scenes = await Promise.all(sceneNames.map(scene => loadScene(scene)));
     console.info(`Loaded ${scenes.length} scenes`);
 
-    scenes = await parseScenesToTokensInPlace(scenes);
+    const tokens = await tokeniseScenes(scenes);
+
+    const graph = createDG(tokens);
+    const graphExport = graph.export();
     
-    let endingReached = false;
-    let sceneIndex = 0;
-    let flowIndex = 0;
-    let currentScene = scenes[sceneIndex];
-    let choiceIndent = 0;
-    let inChoice = false;
-    let fakeChoiceIndent = 0;
-    let inFakeChoice = false;
+    console.log(graphExport);
+}
+export const createDG = (tokens: Token[]): Graph => {
+    let tokenIndex = 0;
+    const graph = new Graph({ allowSelfLoops: true, type: "directed" });
+    const tokensMap = tokens.map(token => ({
+        id: tokenIdentifier(token),
+        token: token
+    }));
+    tokensMap
+        .forEach(t => {
+            graph.addNode(t.id, t.token)
+        });
     
-    const edges: { from: Token, to: Token }[] = [];
-    const visited = [];
-    while(!endingReached) {
-        if(flowIndex >= currentScene.flow.length) {
-            if(sceneIndex >= scenes.length) {
-                endingReached = true;
+    while(true) {
+        if(tokenIndex >= tokensMap.length) break;
+        
+        const current = tokensMap[tokenIndex];
+        switch(current.token.type){
+            case 'GotoScene': {
+                const from = current.id;
+                const gotoToken = current.token as GotoScene;
+                const to = tokensMap.find(t => {
+                    if(!gotoToken.targetLabel) {
+                        return t.token.sceneName === gotoToken.sceneName && t.token.type === 'SceneStart';
+                    }
+                    return t.token.sceneName === gotoToken.target && t.token.type === 'Label' && gotoToken.targetLabel === (t.token as Label).name;
+                });
+                if(to === undefined) {
+                    console.warn('Unable to find match for goto scene', gotoToken);
+                    break;
+                }
+                graph.addDirectedEdgeWithKey(`${from}->${to}`, from, to);
                 break;
             }
-            console.info(`Reached end of scene flow without encountering a finish statement, moving to ${sceneIndex+1} ${scenes[sceneIndex+1]?.name}:0`);
-            do {
-                sceneIndex++;
-                flowIndex = 0;
-                currentScene = scenes[sceneIndex];
-            } while((currentScene?.flow === undefined || currentScene.flow.length === 0) && sceneIndex <= scenes.length);
-            if(sceneIndex === scenes.length) {
-                endingReached = true;
+            case 'GotoLabel': {
+                const from = current.id;
+                const gotoToken = current.token as GotoLabel;
+                const to = tokensMap.find(t => {
+                    return t.token.sceneName === gotoToken.sceneName && t.token.type === 'Label' && (t.token as Label).name === gotoToken.target;
+                });
+                
+                if(to === undefined) {
+                    console.warn('Unable to find match for goto label', gotoToken);
+                    break;
+                }
+                graph.addDirectedEdgeWithKey(`${from}->${to.id}`, from, to.id);
                 break;
+            }
+            default: {
+                
             }
         }
         
-        const currentToken = currentScene?.flow[flowIndex];
-        if(currentScene === undefined) {
-            endingReached = true;
-            break;
-        }
-        if(currentToken.indent < choiceIndent) {
-            inChoice = false;
-        }
-        if(currentToken.indent < fakeChoiceIndent) {
-            inFakeChoice = false;
-        }
-        switch(currentToken.type) {
-           case 'Choice': {
-               choiceIndent = currentToken.indent + 1;
-               inChoice = true;
-               continue;
-           }
-           case 'FakeChoice': {
-               fakeChoiceIndent = currentToken.indent + 1;
-               inFakeChoice = true;
-               continue;
-           }
-           case 'Ending': {
-               console.info(`Encountered Ending at ${currentScene.name}:${currentToken.index}, done.`);
-               edges.push({ from: currentToken, to: undefined})
-               endingReached = true;
-               continue;
-           }
-           case 'Finish': {
-               edges.push({ from: currentToken, to: scenes[sceneIndex+1].flow[0]})
-               console.info(`Encountered Finish at ${currentScene.name}:${currentToken.index} moving to ${scenes[sceneIndex+1].name}:0`);
-               sceneIndex++;
-               flowIndex = 0;
-               currentScene = scenes[sceneIndex];
-               visited.push(currentToken);
-               continue;
-           }
-           case 'GotoLabel': {
-               if(visited.includes(currentToken)) {
-                   flowIndex++;
-                   continue;
-               }
-               
-               const targetLabelIndex = currentScene.flow
-                   .findIndex(token => token.type === 'Label' && (<Label>token).name === (<GotoLabel>currentToken).target);
-               if(currentScene.flow[targetLabelIndex] === undefined) {
-                   console.error(`Unable to find matching label for *goto ${currentToken.target} at ${currentScene.name}:${currentToken.index}`);
-                   flowIndex++;
-                   continue;
-               }
-               edges.push({ from: currentToken, to: currentScene.flow[targetLabelIndex]});
-
-               console.info(`Linking label goto ${currentScene.name}:${currentToken.index} to ${currentScene.name}:${currentScene.flow[targetLabelIndex].index}`);
-               flowIndex = targetLabelIndex;
-               visited.push(currentToken);
-               continue;
-           }
-           case 'GotoScene': {
-               if(visited.includes(currentToken)) {
-                   flowIndex++;
-                   continue;
-               }
-               const targetSceneIndex = scenes
-                   .findIndex(scene => scene.name === (<GotoScene>currentToken).target);
-               if(targetSceneIndex === -1) {
-                   console.error(`Cant find scene for *goto_scene '${currentToken.target}' referenced at ${currentScene.name}:${currentToken.index}`);
-                   flowIndex++;
-                   continue;
-               }
-               
-               let targetLabelIndex = scenes[targetSceneIndex].flow
-                   .findIndex(token => token.type === 'Label' && (<Label>token).name === (<GotoScene>currentToken).targetLabel);
-
-               if(currentToken.targetLabel === undefined) {
-                   targetLabelIndex = 0;
-               }
-               
-               if(targetLabelIndex === -1) {
-                   throw new Error(`Unable to find matching label for *goto_scene ${currentToken.target} ${currentToken.targetLabel}, at ${currentScene.name}:${currentToken.index}`);
-               }
-               
-               console.info(`Linking scene goto ${currentScene.name}:${currentToken.index} to ${scenes[targetSceneIndex].name}:${scenes[targetSceneIndex]?.flow[targetLabelIndex]?.index}`);
-               edges.push({ from: currentToken, to: scenes[targetSceneIndex].flow[targetLabelIndex] });
-               
-               sceneIndex = targetSceneIndex;
-               flowIndex = targetLabelIndex;
-               visited.push(currentToken);
-               continue;
-           }
-           default: {
-               flowIndex++;
-               visited.push(currentToken);
-               continue;
-           }
-        }
+        tokenIndex++;
     }
-
-    // TODO: Generate Directed Graph
-    // TODO: Render Graph
+    return graph;
 }
+const tokenIdentifier = (token: Token) => {
+    return `${token.sceneName}:${token.lineNumber}:${token.position}:${token.type}`;
+}
+
 
 export const loadScene = async (name: string) => {
     const sourceUrl = `${url}/scenes/${name}.txt`;
