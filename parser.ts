@@ -1,39 +1,11 @@
-﻿export interface Scene {
-    sourceUrl: string;
-    name: string;
-    content: string;
-
-    prose: Prose[];
-    labels: Label[];
-    localJumps: GotoLabel[];
-    externalJumps: GotoScene[];
-    finishes: Finish[];
-    createTempVariables: CreateTempVariable[];
-    createVariables: CreateVariable[];
-    setVariables: SetVariable[];
-
-    choices: Choice[];
-    options: Option[];
-    fakeChoices: FakeChoice[];
-
-    selectableIfs: SelectableIf[];
-    ifs: If[];
-    elses: Else[];
-    elseIfs: ElseIf[];
-
-    endings: Ending[];
-
-    flow: Token[];
-}
-
-export interface Token {
-    lineNumber: number;
-    position: number;
-    type: string;
-    sceneName: string;
-    indent: number;
-}
-
+﻿import { Token } from "./tokens/token";
+import {Scene} from "./tokens/scene";
+import {TokenParser} from "./tokens/token-parser";
+import {commentParser} from "./tokens/comment";
+import {setVariableParser} from "./tokens/set-variable";
+import {createCommandParser} from "./tokens/create-command";
+import {stringLiteralParser} from "./tokens/string-literal";
+import {variableReferenceParser} from "./tokens/variable-reference";
 export interface Label extends Token {
     name: string;
     type: 'Label';
@@ -59,22 +31,10 @@ export interface Finish extends Token {
     type: 'Finish';
 }
 
-export interface CreateVariable extends Token {
-    name: string;
-    value: string | number;
-    type: 'CreateVariable';
-}
-
 export interface CreateTempVariable extends Token {
     name: string;
-    value: string | number;
+    value: string | number | boolean;
     type: 'CreateTempVariable';
-}
-
-export interface SetVariable extends Token {
-    name: string;
-    value: string | number;
-    type: 'SetVariable';
 }
 
 export interface SelectableIf extends Token {
@@ -110,19 +70,12 @@ export interface FakeChoice extends Token {
     type: 'FakeChoice';
 }
 
-export interface Ending extends Token {
-    type: 'Ending';
-}
-
 export interface SceneStart extends Token {
     type: 'SceneStart';
 }
 export interface SceneEnd extends Token {
     type: 'SceneEnd';
 }
-
-type TokenParser<TToken> = (scene: Scene, line: string, lineNumber: number, startIndex: number) => { token: TToken, endIndex: number | undefined };
-
 export const tokeniseScenes = async (scenes: Scene[]) => {
     const cleanedScenes = scenes.filter(scene => scene.content !== '{"error":"couldn\'t find scene"}\n');
     return cleanedScenes.flatMap(scene => tokenise(scene));
@@ -133,6 +86,10 @@ export const tokenise = (scene: Scene) => {
     
     let token = '';
     let insideToken = false;
+
+    let parenthesisStack: string[] = [];
+    let quoteStack: string[] = [];
+
     let insideMultilineToken = false;
     let tokenStartIndex = -1;
     
@@ -142,7 +99,7 @@ export const tokenise = (scene: Scene) => {
     
     let previousIndent = 0;
     let indent = 0;
-    let seenText = false;
+    let hasSeenText = false;
     const tokens: Token[] = [
         <SceneStart>{
             sceneName: scene.name,
@@ -159,13 +116,14 @@ export const tokenise = (scene: Scene) => {
             cursor = 0;
             
             insideToken = false;
+
             tokenStartIndex = 0;
             
             token = '';
             
             previousIndent = indent;
             indent = 0;
-            seenText = false;
+            hasSeenText = false;
             
             if(proseBlock.length !== 0) {
                 proseBlock += '\n';
@@ -178,9 +136,9 @@ export const tokenise = (scene: Scene) => {
         // --------------------------------------------------------
         // ----------------------- INDENT -------------------------
         // --------------------------------------------------------
-        if(!seenText) {
+        if(!hasSeenText) {
             if (line[cursor] !== '\t' && line[cursor] !== ' ') {
-                seenText = true;
+                hasSeenText = true;
             }
             if (line[cursor] === '\t') {
                 indent++;
@@ -218,46 +176,94 @@ export const tokenise = (scene: Scene) => {
         if (insideToken) {
             token += line[cursor];
             const evaluateToken = <TToken extends Token>(parser: TokenParser<TToken>) => {
-                const {token, endIndex} = parser(scene, line, lineNumber, tokenStartIndex);
-                token.sceneName = scene.name;
-                token.indent = indent;
-                token.lineNumber = lineNumber;
-                tokens.push(token);
+                const {token: output, endIndex} = parser(scene, line, token, lineNumber, tokenStartIndex);
+
+                output.sceneName = scene.name;
+                output.indent = indent;
+                output.lineNumber = lineNumber;
+
+                tokens.push(output);
             }
+
             // evaluate token, decide if not inside token anymore
             switch (token) {
                 case '*label': {
                     evaluateToken(labelParser);
+                    token = '';
                     break;
                 }
                 case '*goto ': {
                     evaluateToken(gotoParser);
+                    token = '';
                     break;
                 }
                 case '*goto_scene': {
                     evaluateToken(gotoSceneParser);
+                    token = '';
                     break;
                 }
                 case '#': {
                     evaluateToken(optionParser);
+                    token = '';
+                    insideToken = false; // whole rest of line is now choice block logic
+                    break;
+                }
+                case '*if': {
+                    evaluateToken(ifParser);
+                    token = '';
+                    break;
+                }
+                case '*elseif':
+                case '*elsif': {
+                    evaluateToken(elseIfParser);
+                    token = '';
+                    break;
+                }
+                case '*else': {
+                    evaluateToken(elseParser);
+                    token = '';
+                    break;
+                }
+                case '*create': {
+                    evaluateToken(createCommandParser);
+                    token = '';
+                    break;
+                }
+                case '*temp': {
+                    evaluateToken(createTempVariableParser);
+                    token = '';
+                    break;
+                }
+                case '*set': {
+                    evaluateToken(setVariableParser);
+                    token = '';
                     break;
                 }
                 case '*choice': {
                     evaluateToken(choiceParser);
+                    token = '';
                     break;
                 }
                 case '*fake_choice': {
                     evaluateToken(fakeChoiceParser);
+                    token = '';
                     break;
                 }
                 case '*finish': {
                     evaluateToken(finishParser);
+                    token = '';
                     break;
                 }
                 case '*selectable_if': {
                     evaluateToken(selectableIfParser);
                     insideToken = false;
                     token = '';
+                    break;
+                }
+                case '*comment': {
+                    evaluateToken(commentParser);
+                    token = '';
+                    insideToken = false; // anything after comment is not parsed as command logic
                     break;
                 }
                 case '*scene_list': {
@@ -267,6 +273,51 @@ export const tokenise = (scene: Scene) => {
                 case '*achievement': {
                     insideMultilineToken = true;
                     break;
+                }
+                case '"': {
+                    // string literal start
+                    if(quoteStack.filter(e => e === '"').length % 2 === 1) {
+                        quoteStack.pop();
+                        evaluateToken(stringLiteralParser)
+                        break;
+                    }
+                    quoteStack.push('"');
+                    break;
+                }
+                case "'": {
+                    // string literal start
+                    if(quoteStack.filter(e => e === "'").length % 2 === 1) {
+                        quoteStack.pop();
+                        evaluateToken(stringLiteralParser)
+                        break;
+                    }
+                    quoteStack.push('"');
+                    break;
+                }
+                case '(' : {
+                    parenthesisStack.push('(');
+                    break;
+                }
+                case ')' : {
+                    parenthesisStack.pop(); //do expression stuff idK?
+                    break;
+                }
+                case '+' : {
+                    //check token for fairmath
+                    break;
+                }
+                case '-' : {
+                    // check token for fairmath
+                    break;
+                }
+                case ' ': {
+                    token = token.trim();
+                    if(token.length > 0) {
+                        if(isVariableName(token)) {
+                            evaluateToken(variableReferenceParser);
+                            token = '';
+                        }
+                    }
                 }
             }
         }
@@ -293,7 +344,23 @@ export const tokenise = (scene: Scene) => {
     );
     return tokens;
 }
-export const labelParser: TokenParser<Label> = (scene: Scene, line: string, lineNumber: number, index: number) => {
+export const isVariableName = (value: string) => {
+    for (let i = 0; i < value.length; i++) {
+        const char = value.charAt(i);
+        const isValid =
+            (char >= 'a' && char <= 'z') ||
+            (char >= 'A' && char <= 'Z') ||
+            (char >= '0' && char <= '9') ||
+            char === '_';
+
+        if (!isValid) {
+            return false;
+        }
+    }
+
+    return true;
+}
+export const labelParser: TokenParser<Label> = (scene: Scene, line: string, token: string, lineNumber: number, index: number) => {
     const label = line.slice(index);
     return {
         token: <Label>{
@@ -306,7 +373,7 @@ export const labelParser: TokenParser<Label> = (scene: Scene, line: string, line
     };
 }
 
-export const gotoParser: TokenParser<GotoLabel> = (scene: Scene, line: string, lineNumber: number, startIndex: number) => {
+export const gotoParser: TokenParser<GotoLabel> = (scene: Scene, line: string, token: string, lineNumber: number, startIndex: number) => {
     const target = line.replace('*goto ', '').trim();
 
     return {
@@ -320,7 +387,7 @@ export const gotoParser: TokenParser<GotoLabel> = (scene: Scene, line: string, l
     };
 }
 
-export const gotoSceneParser: TokenParser<GotoScene> = (scene: Scene, line:string, lineNumber: number, index: number) => {
+export const gotoSceneParser: TokenParser<GotoScene> = (scene: Scene, line:string, token: string, lineNumber: number, index: number) => {
     const goto = line.slice(index);
     const target = goto.split('*goto_scene ')[1].trim();
 
@@ -349,7 +416,7 @@ export const gotoSceneParser: TokenParser<GotoScene> = (scene: Scene, line:strin
     };
 }
 
-export const finishParser: TokenParser<Finish> = (scene: Scene, line:string, lineNumber: number, index: number) => {
+export const finishParser: TokenParser<Finish> = (scene: Scene, line:string, token: string, lineNumber: number, index: number) => {
     return {
         token: <Finish>{
             type: 'Finish',
@@ -360,7 +427,7 @@ export const finishParser: TokenParser<Finish> = (scene: Scene, line:string, lin
     };
 }
 
-export const choiceParser: TokenParser<Choice> = (scene: Scene, line:string, lineNumber: number, index: number) => {
+export const choiceParser: TokenParser<Choice> = (scene: Scene, line:string, token: string, lineNumber: number, index: number) => {
     return {
         token: <Choice>{
             type: 'Choice',
@@ -371,7 +438,7 @@ export const choiceParser: TokenParser<Choice> = (scene: Scene, line:string, lin
     };
 }
 
-export const optionParser: TokenParser<Option> = (scene: Scene, line: string, lineNumber: number, index: number) => {
+export const optionParser: TokenParser<Option> = (scene: Scene, line: string, token: string, lineNumber: number, index: number) => {
     const statement = line.slice(index);
     return {
         token: <Option>{
@@ -383,7 +450,7 @@ export const optionParser: TokenParser<Option> = (scene: Scene, line: string, li
     };
 }
 
-export const fakeChoiceParser: TokenParser<FakeChoice> = (scene: Scene, line: string, lineNumber: number, index: number) => {
+export const fakeChoiceParser: TokenParser<FakeChoice> = (scene: Scene, line: string, token: string, lineNumber: number, index: number) => {
     return {
         token: <FakeChoice>{
             type: 'FakeChoice',
@@ -394,7 +461,7 @@ export const fakeChoiceParser: TokenParser<FakeChoice> = (scene: Scene, line: st
     };
 }
 
-export const selectableIfParser: TokenParser<SelectableIf> = (scene: Scene, line:string, lineNumber: number, index: number) => {
+export const selectableIfParser: TokenParser<SelectableIf> = (scene: Scene, line:string, token: string, lineNumber: number, index: number) => {
     const nextOption = line.indexOf('#', index);
     const nextStatement = line.indexOf('*', index);
     const indexToSlice = [nextOption, nextStatement].filter(a => a !== -1).sort()[0];
@@ -407,5 +474,107 @@ export const selectableIfParser: TokenParser<SelectableIf> = (scene: Scene, line
             expression: statement.replace('*selectable_if', '').trim()
         },
         endIndex: indexToSlice
+    };
+}
+
+export const ifParser: TokenParser<If> = (scene: Scene, line: string, lineNumber: number, token: string, index: number) => {
+    const nextOption = line.indexOf('#', index);
+    const nextStatement = line.indexOf('*', index + 1); // +1 to avoid finding the current '*if'
+
+    let indexToSlice = line.length;
+    if (nextOption !== -1 || nextStatement !== -1) {
+        // Find the closest next token
+        const candidates = [nextOption, nextStatement].filter(a => a !== -1);
+        if (candidates.length > 0) {
+            indexToSlice = Math.min(...candidates);
+        }
+    }
+
+    const statement = line.slice(index, indexToSlice);
+    // Extract the expression between parentheses
+    const expressionMatch = statement.match(/\*if\s*\(([^)]*)\)/);
+    const expression = expressionMatch ? expressionMatch[1].trim() : statement.replace('*if', '').trim();
+
+    return {
+        token: <If>{
+            type: 'If',
+            position: index,
+            lineNumber: lineNumber,
+            expression: expression
+        },
+        endIndex: indexToSlice
+    };
+}
+
+export const elseIfParser: TokenParser<ElseIf> = (scene: Scene, line: string, token: string, lineNumber: number, index: number) => {
+    const nextOption = line.indexOf('#', index);
+    const nextStatement = line.indexOf('*', index + 1); // +1 to avoid finding the current '*elseif'
+
+    let indexToSlice = line.length;
+    if (nextOption !== -1 || nextStatement !== -1) {
+        // Find the closest next token
+        const candidates = [nextOption, nextStatement].filter(a => a !== -1);
+        if (candidates.length > 0) {
+            indexToSlice = Math.min(...candidates);
+        }
+    }
+
+    const statement = line.slice(index, indexToSlice);
+    // Extract the expression between parentheses
+    const expressionMatch = statement.match(/\*(?:elseif|elsif)\s*\(([^)]*)\)/);
+    const expression = expressionMatch ? expressionMatch[1].trim() : statement.replace(/\*(?:elseif|elsif)/, '').trim();
+
+    return {
+        token: <ElseIf>{
+            type: 'ElseIf',
+            position: index,
+            lineNumber: lineNumber,
+            expression: expression
+        },
+        endIndex: indexToSlice
+    };
+}
+
+export const elseParser: TokenParser<Else> = (scene: Scene, line: string, token: string, lineNumber: number, index: number) => {
+    return {
+        token: <Else>{
+            type: 'Else',
+            position: index,
+            lineNumber: lineNumber
+        },
+        endIndex: undefined
+    };
+}
+
+export const createTempVariableParser: TokenParser<CreateTempVariable> = (scene: Scene, line: string, token: string, lineNumber: number, index: number) => {
+    // Extract the part after "*temp "
+    const variableDeclaration = line.slice(index + 5).trim(); // +5 for "*temp "
+
+    // Extract variable name and value
+    const parts = variableDeclaration.split(/\s+/);
+    const name = parts[0];
+
+    // Join the rest as the value (if present)
+    let value: string | number | boolean = parts.slice(1).join(' ').trim();
+
+    // Convert to number if it's numeric
+    if (/^-?\d+(\.\d+)?$/.test(value)) {
+        value = parseFloat(value);
+    } else if (value === 'true' || value === 'false') {
+        value = value === 'true';
+    } else if (value === '') {
+        // Default to 0 for empty values in ChoiceScript
+        value = 0;
+    }
+
+    return {
+        token: <CreateTempVariable>{
+            type: 'CreateTempVariable',
+            position: index,
+            lineNumber: lineNumber,
+            name: name,
+            value: value
+        },
+        endIndex: undefined
     };
 }
