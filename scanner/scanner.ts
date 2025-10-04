@@ -17,7 +17,18 @@ import {
     CreateVariable,
     CreateTempVariable,
     SetVariable,
-    SelectableIf
+    SelectableIf,
+    BeginMultiReplace,
+    Image,
+    InputText,
+    GameIdentifier,
+    Author,
+    PageBreak,
+    SaveCheckpoint,
+    RestoreCheckpoint,
+    GoSubScene,
+    GoSub,
+    Return
 } from "./tokens";
 import {tokenizeExpressionString} from './expression-handler';
 import { Prose } from "../tokens/prose";
@@ -55,7 +66,7 @@ export const scanScene = (scene: Scene) => {
     while (context.lineNumber < sceneLines.length) {
 
         if(lastMode !== context.mode) {
-            console.log(`Transition from ${lastMode} to ${context.mode}`)
+            //console.log(`Transition from ${lastMode} to ${context.mode}`)
             lastMode = context.mode;
         }
 
@@ -102,7 +113,7 @@ export const scanScene = (scene: Scene) => {
             }
             case "Prose": {
                 if(context.position === 0 && !(line.includes('*') || line.includes('#'))) {
-                    //shortcut to speed up evaluation of large prose blocks (majoriry of the text)
+                    //shortcut to speed up evaluation of large prose blocks (majority of the text)
                     context.proseBlock += line;
                     context.position = line.length;
                     continue;
@@ -137,7 +148,7 @@ export const scanScene = (scene: Scene) => {
                         context.currentTokenStartPosition = context.position;
                         var expressionTokens = handleExpression(context);
                         tokens.push(...expressionTokens);
-                        console.log('Encountered Token, switching mode to Token after expression', expressionTokens)
+                        //console.log('Encountered Token, switching mode to Token after expression', expressionTokens)
                         continue;
                     }
 
@@ -149,7 +160,7 @@ export const scanScene = (scene: Scene) => {
                     if(context.position == line.length - 1) {
                         // eol, we parse the expression
                         var expressionTokens = handleExpression(context);
-                        console.log("EOL reached, scanning expression", expressionTokens)
+                        //console.log("EOL reached, scanning expression", expressionTokens)
                         tokens.push(...expressionTokens);
                     }
 
@@ -160,7 +171,7 @@ export const scanScene = (scene: Scene) => {
                 context.currentToken += line[context.position];
                 const token = handleToken(context);
                 if(token != undefined) {
-                    console.log('Matched token', token);
+                    //console.log('Matched token', token);
                     tokens.push(token);
                 }
                 context.position++;
@@ -168,7 +179,6 @@ export const scanScene = (scene: Scene) => {
             }
             case "Comment": {
                 context.position++;
-                context.currentToken += line[context.position];
 
                 const comment = <Comment>tokens[tokens.length -1];
                 if(comment.type !== 'Comment')
@@ -177,6 +187,32 @@ export const scanScene = (scene: Scene) => {
                 }
 
                 comment.value = line.substring(context.position);
+                context.currentToken = '';
+                context.currentTokenStartPosition = undefined;
+                context.position = line.length;
+                break;
+            }
+            case "ChoiceOption": {
+                const choiceOption = <ChoiceOption>tokens[tokens.length -1];
+                if(choiceOption.type !== 'ChoiceOption')
+                {
+                    console.error("Unexpected choice option mode entry, head is not a choice option block");
+                }
+
+                choiceOption.rawText = line.substring(context.position);
+                
+                if(choiceOption.rawText.indexOf('@{') !== -1) {
+                    // multi-replace detected, this should probably be a while instead since multiple per line
+                    choiceOption.expression = tokenizeExpressionString(
+                        line.substring(context.position),
+                        context.lineNumber,
+                        context.position,
+                        context.indent.current,
+                        scene.name);
+                    
+                    tokens.push(...choiceOption.expression);
+                }
+
                 context.currentToken = '';
                 context.currentTokenStartPosition = undefined;
                 context.position = line.length;
@@ -197,7 +233,12 @@ export const scanScene = (scene: Scene) => {
 }
 
 const handleExpression = (context: ScannerContext) => {
-    return tokenizeExpressionString(context.currentToken, context.lineNumber, context.currentTokenStartPosition);
+    return tokenizeExpressionString(
+        context.currentToken,
+        context.lineNumber,
+        context.currentTokenStartPosition,
+        context.indent.current,
+        context.currentScene.name);
 };
 
 const handleToken = (context: ScannerContext) => {
@@ -217,6 +258,18 @@ const handleToken = (context: ScannerContext) => {
             context.mode = "Expression";
             return createInContextToken(<Label>{type: 'Label'});
         }
+        case '*gosub ': {
+            context.mode = "Expression";
+            return createInContextToken(<GoSub>{type: 'GoSub'});
+        }
+        case '*gosub_scene ': {
+            context.mode = "Expression";
+            return createInContextToken(<GoSubScene>{type: 'GoSubScene'});
+        }
+        case '*return ': {
+            context.mode = "Expression";
+            return createInContextToken(<Return>{type: 'Return'});
+        }
         case '*goto ': {
             context.mode = "Expression";
             return createInContextToken(<GotoLabel>{type: 'GotoLabel'});
@@ -226,7 +279,7 @@ const handleToken = (context: ScannerContext) => {
             return createInContextToken(<GotoScene>{type: 'GotoScene'});
         }
         case '#': {
-            context.mode = "Prose";
+            context.mode = "ChoiceOption";
             return createInContextToken(<ChoiceOption>{type: 'ChoiceOption'});
         }
         case '*if': {
@@ -281,6 +334,34 @@ const handleToken = (context: ScannerContext) => {
         case '*achievement': {
             context.insideMultiLineToken = true;
             break;
+        }
+        case "*image": {
+            context.mode = "Expression";
+            return createInContextToken(<Image>{type: 'Image'});
+        }
+        case "*input_text": {
+            context.mode = "Expression";
+            return createInContextToken(<InputText>{type: 'InputText'});
+        }
+        case "*author": {
+            context.mode = "Expression";
+            return createInContextToken(<Author>{type: 'Author'});
+        }
+        case "*ifid": {
+            context.mode = "Expression";
+            return createInContextToken(<GameIdentifier>{type: 'GameIdentifier'});
+        }
+        case "*page_break": {
+            context.mode = "Prose";
+            return createInContextToken(<PageBreak>{type: 'PageBreak'});
+        }
+        case "*save_checkpoint": {
+            context.mode = "Prose";
+            return createInContextToken(<SaveCheckpoint>{type: 'SaveCheckpoint'});
+        }
+        case "*restore_checkpoint": {
+            context.mode = "Prose";
+            return createInContextToken(<RestoreCheckpoint>{type: 'RestoreCheckpoint'});
         }
     }
 

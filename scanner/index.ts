@@ -1,5 +1,7 @@
 import {Scene} from "./scene";
 import {scanScene} from "./scanner";
+import { ChoiceScriptParser } from "../ai-parser/parser";
+import { renderTokensToConsole } from "./console-renderer";
 
 const execute = async () => {
     const startup = await loadScene('startup');
@@ -14,7 +16,13 @@ const execute = async () => {
     console.info(`Loaded ${scenes.length} scenes`);
 
     const tokens = await scanScenes(scenes);
-    console.log(tokens.filter(t => t.sceneName == 'covenmeeting'));
+
+    renderTokensToConsole(tokens, {
+        showLineNumbers: true,
+        showPositions: true,
+        showIndentation: true,
+        colorize: true
+    });
 }
 
 export const scanScenes = async (scenes: Scene[]) => {
@@ -51,5 +59,5 @@ export const readSceneList = (startup: Scene): string[] => {
 }
 
 
-const url = "https://www.choiceofgames.com/user-contributed/fallen-hero-rebirth";
+const url = "https://cogdemos.ink/play/izzily/drink-your-villain-juice/mygame";
 await execute();

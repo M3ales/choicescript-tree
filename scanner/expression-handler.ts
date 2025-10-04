@@ -18,7 +18,13 @@ function isAlphanumericOrUnderscore(char: string): boolean {
     return isLetter(char) || isDigit(char) || char === '_';
 }
 
-export function tokenizeExpressionString(expression: string, lineNumber: number, position: number): Token[] {
+export function tokenizeExpressionString(
+    expression: string,
+    lineNumber: number,
+    position: number,
+    indent: number,
+    sceneName: string): Token[] {
+
     const tokens: Token[] = [];
     let cursor = 0;
 
@@ -47,8 +53,8 @@ export function tokenizeExpressionString(expression: string, lineNumber: number,
                 value: parseFloat(value),
                 position: position + startPos,
                 lineNumber: lineNumber,
-                sceneName: '',
-                indent: 0
+                sceneName: sceneName,
+                indent: indent
             } as NumberLiteral);
             continue;
         }
@@ -79,8 +85,8 @@ export function tokenizeExpressionString(expression: string, lineNumber: number,
                 value: value,
                 position: position + startPos,
                 lineNumber: lineNumber,
-                sceneName: '',
-                indent: 0
+                sceneName: sceneName,
+                indent: indent
             } as StringLiteral);
             continue;
         }
@@ -91,8 +97,8 @@ export function tokenizeExpressionString(expression: string, lineNumber: number,
                 type: 'OpenParenthesis',
                 position: position + cursor,
                 lineNumber: lineNumber,
-                sceneName: '',
-                indent: 0
+                sceneName: sceneName,
+                indent: indent
             } as OpenParenthesis);
             cursor++;
             continue;
@@ -102,8 +108,8 @@ export function tokenizeExpressionString(expression: string, lineNumber: number,
                 type: 'CloseParenthesis',
                 position: position + cursor,
                 lineNumber: lineNumber,
-                sceneName: '',
-                indent: 0
+                sceneName: sceneName,
+                indent: indent
             } as CloseParenthesis);
             cursor++;
             continue;
@@ -126,8 +132,8 @@ export function tokenizeExpressionString(expression: string, lineNumber: number,
                     rawValue: twoChars as ArithmeticOperator['rawValue'],
                     position: position + startPos,
                     lineNumber: lineNumber,
-                    sceneName: '',
-                    indent: 0
+                    sceneName: sceneName,
+                    indent: indent
                 } as ArithmeticOperator);
                 cursor += 2;
                 continue;
@@ -146,8 +152,8 @@ export function tokenizeExpressionString(expression: string, lineNumber: number,
                     rawValue: twoChars as ComparisonOperator['rawValue'],
                     position: position + startPos,
                     lineNumber: lineNumber,
-                    sceneName: '',
-                    indent: 0
+                    sceneName: sceneName,
+                    indent: indent
                 } as ComparisonOperator);
                 cursor += 2;
                 continue;
@@ -170,11 +176,27 @@ export function tokenizeExpressionString(expression: string, lineNumber: number,
                 rawValue: char as ArithmeticOperator['rawValue'],
                 position: position + cursor,
                 lineNumber: lineNumber,
-                sceneName: '',
-                indent: 0
+                sceneName: sceneName,
+                indent: indent
             } as ArithmeticOperator);
             cursor++;
             continue;
+        }
+
+        if(char === '|') {
+            tokens.push({
+                type: 'MultiReplaceOr',
+                position: position + cursor,
+                lineNumber: lineNumber,
+                sceneName: sceneName,
+                indent: indent
+            });
+            cursor++;
+            continue;
+        }
+
+        if(char === '$') {
+
         }
 
         if (char === '=' || char === '>' || char === '<') {
@@ -190,8 +212,8 @@ export function tokenizeExpressionString(expression: string, lineNumber: number,
                 rawValue: char as ComparisonOperator['rawValue'],
                 position: position + cursor,
                 lineNumber: lineNumber,
-                sceneName: '',
-                indent: 0
+                sceneName: sceneName,
+                indent: indent
             } as ComparisonOperator);
             cursor++;
             continue;
@@ -215,8 +237,8 @@ export function tokenizeExpressionString(expression: string, lineNumber: number,
                     value: value === 'true',
                     position: position + startPos,
                     lineNumber: lineNumber,
-                    sceneName: '',
-                    indent: 0
+                    sceneName: sceneName,
+                    indent: indent
                 } as BooleanLiteral);
             } else if (value === 'and' || value === 'or' || value === 'not') {
                 tokens.push({
@@ -224,8 +246,8 @@ export function tokenizeExpressionString(expression: string, lineNumber: number,
                     operator: value as 'and' | 'or' | 'not',
                     position: position + startPos,
                     lineNumber: lineNumber,
-                    sceneName: '',
-                    indent: 0
+                    sceneName: sceneName,
+                    indent: indent
                 } as LogicalOperator);
             } else {
                 tokens.push({
@@ -233,8 +255,8 @@ export function tokenizeExpressionString(expression: string, lineNumber: number,
                     value: value,
                     position: position + startPos,
                     lineNumber: lineNumber,
-                    sceneName: '',
-                    indent: 0
+                    sceneName: sceneName,
+                    indent: indent
                 } as VariableReference);
             }
             continue;
