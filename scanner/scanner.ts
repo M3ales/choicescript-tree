@@ -18,7 +18,7 @@ import {
     CreateTempVariableToken,
     SetVariableToken,
     SelectableIfToken,
-    BeginMultiReplaceToken,
+    OpenMultiReplaceToken,
     ImageToken,
     InputTextToken,
     GameIdentifierToken,
@@ -28,10 +28,19 @@ import {
     RestoreCheckpointToken,
     GoSubSceneToken,
     GoSubToken,
-    ReturnToken
+    ReturnToken,
+    DeleteVariableToken,
+    InputNumberToken,
+    GenerateRandomToken,
+    FinishToken,
+    LinkToken,
+    StatChartToken,
+    GotoRandomSceneToken,
+    EndingToken,
+    LineBreakToken,
+    Prose
 } from "./tokens";
 import {tokenizeExpressionString} from './expression-handler';
-import { Prose } from "../tokens/prose";
 
 export const scanScene = (scene: Scene) => {
     const context: ScannerContext = {
@@ -139,6 +148,26 @@ export const scanScene = (scene: Scene) => {
                 }
                 context.proseBlock += line[context.position];
                 context.position++;
+                break;
+            }
+            case "ProseToEOL" : {
+                if(context.position < line.length) {
+                    if(context.proseBlock.length > 0) {
+                        console.error("Unexpected ProseToEOL mode with existing prose block");
+                    }
+                    context.proseBlock = '';
+                    const substring = line.substring(context.position);
+                    tokens.push(<Prose>{
+                        indent: context.indent.current,
+                        type: 'Prose',
+                        sceneName: scene.name,
+                        content: substring,
+                        lineNumber: context.lineNumber,
+                        position: context.position,
+                    });
+                    context.position = line.length;
+                }
+                context.mode = 'Prose';
                 break;
             }
             case "Expression":
@@ -294,6 +323,18 @@ const handleToken = (context: ScannerContext) => {
             context.mode = "Expression";
             return createInContextToken(<LabelToken>{type: 'Label'});
         }
+        case '*hide_reuse': {
+            context.mode = "Prose";
+            return createInContextToken(<HideReuseToken>{type: 'HideReuse'});
+        }
+        case '*disable_reuse': {
+            context.mode = "Prose";
+            return createInContextToken(<DisableReuseToken>{type: 'DisableReuse'});
+        }
+        case '*allow_reuse': {
+            context.mode = "Prose";
+            return createInContextToken(<AllowReuseToken>{type: 'AllowReuse'});
+        }
         case '*gosub ': {
             context.mode = "Expression";
             return createInContextToken(<GoSubToken>{type: 'GoSub'});
@@ -313,6 +354,10 @@ const handleToken = (context: ScannerContext) => {
         case '*goto_scene': {
             context.mode = "Expression";
             return createInContextToken(<GotoSceneToken>{type: 'GotoScene'});
+        }
+        case '*goto_random_scene': {
+            context.mode = "Expression";
+            return createInContextToken(<GotoRandomSceneToken>{type: 'GotoRandomScene'});
         }
         case '#': {
             context.mode = "ChoiceOption";
@@ -354,12 +399,28 @@ const handleToken = (context: ScannerContext) => {
             return createInContextToken(<FakeChoiceToken>{type: 'FakeChoice'});
         }
         case '*finish': {
-            context.mode = "Prose";
-            return createInContextToken(<SetVariableToken>{type: 'SetVariable'});
+            context.mode = "ProseToEOL";
+            return createInContextToken(<FinishToken>{type: 'Finish'});
+        }
+        case '*ending': {
+            context.mode = "ProseToEOL";
+            return createInContextToken(<EndingToken>{type: 'Ending'});
+        }
+        case "*stat_chart": {
+            context.mode = "Prose"
+            return createInContextToken(<StatChartToken>{type: 'StatChart'});
+        }
+        case "*line_break": {
+            context.mode = "Prose"
+            return createInContextToken(<LineBreakToken>{type: 'LineBreak'});
         }
         case '*selectable_if': {
             context.mode = "Expression";
             return createInContextToken(<SelectableIfToken>{ type: 'SelectableIf' });
+        }
+        case '*link': {
+            context.mode = "Expression";
+            return createInContextToken(<LinkToken>{ type: 'Link' });
         }
         case '*comment': {
             context.mode = "Comment";
@@ -377,6 +438,10 @@ const handleToken = (context: ScannerContext) => {
             context.mode = "Expression";
             return createInContextToken(<ImageToken>{type: 'Image'});
         }
+        case "*input_number": {
+            context.mode = "Expression";
+            return createInContextToken(<InputNumberToken>{type: 'InputNumber'});
+        }
         case "*input_text": {
             context.mode = "Expression";
             return createInContextToken(<InputTextToken>{type: 'InputText'});
@@ -390,7 +455,7 @@ const handleToken = (context: ScannerContext) => {
             return createInContextToken(<GameIdentifierToken>{type: 'GameIdentifier'});
         }
         case "*page_break": {
-            context.mode = "Prose";
+            context.mode = "ProseToEOL";
             return createInContextToken(<PageBreakToken>{type: 'PageBreak'});
         }
         case "*save_checkpoint": {
@@ -400,6 +465,14 @@ const handleToken = (context: ScannerContext) => {
         case "*restore_checkpoint": {
             context.mode = "Prose";
             return createInContextToken(<RestoreCheckpointToken>{type: 'RestoreCheckpoint'});
+        }
+        case "*delete": {
+            context.mode = "Expression";
+            return createInContextToken(<DeleteVariableToken>{type: 'DeleteVariable'});
+        }
+        case "*rand": {
+            context.mode = "Expression";
+            return createInContextToken(<GenerateRandomToken>{type: 'GenerateRandom'});
         }
     }
 

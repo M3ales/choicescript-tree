@@ -12,7 +12,7 @@ export interface ScannerContext {
 
     insideMultiLineToken: boolean;
 
-    mode: 'Indentation' | 'Prose' | 'Token' | 'Expression' | 'Comment' | 'ChoiceOption' | 'MultiReplace'
+    mode: 'Indentation' | 'ProseToEOL' | 'Prose' | 'Token' | 'Expression' | 'Comment' | 'ChoiceOption' | 'MultiReplace'
 
     indent: IndentationContext;
 }

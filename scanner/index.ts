@@ -15,7 +15,7 @@ const execute = async () => {
     console.info(`Loaded ${scenes.length} scenes`);
 
     const tokens = await scanScenes(scenes);
-    console.log(`Writing ${tokens.length} tokens to ./scanned-tokens.json`);
+    console.log(`Writing ${tokens.length} scenes with total of ${tokens.flatMap(t=>t).length} tokens to ./scanned-tokens.json`);
     fs.writeFileSync('./scanned-tokens.json', JSON.stringify(tokens, null, 2));
 }
 
