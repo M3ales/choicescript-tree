@@ -1,7 +1,6 @@
 import {Scene} from "./scene";
 import {scanScene} from "./scanner";
-import { ChoiceScriptParser } from "../ai-parser/parser";
-import { renderTokensToConsole } from "./console-renderer";
+import fs from 'node:fs';
 
 const execute = async () => {
     const startup = await loadScene('startup');
@@ -9,25 +8,20 @@ const execute = async () => {
     const implicitControlFlow = startup.content.indexOf('*create implicit_control_flow true') !== -1;
 
     if (implicitControlFlow) {
-        console.warn("Implicit Control Flow detected, this is unsupported at this time.");
+        console.warn("Implicit Control Flow detected");
     }
 
     let scenes = await Promise.all(sceneNames.map(scene => loadScene(scene)));
     console.info(`Loaded ${scenes.length} scenes`);
 
     const tokens = await scanScenes(scenes);
-
-    renderTokensToConsole(tokens, {
-        showLineNumbers: true,
-        showPositions: true,
-        showIndentation: true,
-        colorize: true
-    });
+    console.log(`Writing ${tokens.length} tokens to ./scanned-tokens.json`);
+    fs.writeFileSync('./scanned-tokens.json', JSON.stringify(tokens, null, 2));
 }
 
 export const scanScenes = async (scenes: Scene[]) => {
     const cleanedScenes = scenes.filter(scene => scene.content !== '{"error":"couldn\'t find scene"}\n');
-    return cleanedScenes.flatMap(scene => scanScene(scene));
+    return cleanedScenes.map(scene => scanScene(scene));
 }
 
 export const loadScene = async (name: string) => {

@@ -1,5 +1,5 @@
 import {Token} from "./token";
 
-export interface BeginMultiReplace extends Token {
+export interface BeginMultiReplaceToken extends Token {
     type: 'BeginMultiReplace';
 }

@@ -1,5 +1,5 @@
 import { Token } from './token';
 
-export interface SelectableIf extends Token {
+export interface SelectableIfToken extends Token {
     type: 'SelectableIf';
 }

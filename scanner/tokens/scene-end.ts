@@ -1,5 +1,5 @@
 import { Token } from './token';
 
-export interface SceneEnd extends Token {
+export interface SceneEndToken extends Token {
     type: 'SceneEnd';
 }

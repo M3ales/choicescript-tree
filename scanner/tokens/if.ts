@@ -1,6 +1,6 @@
 import { Token } from './token';
 
-export interface If extends Token {
+export interface IfToken extends Token {
     type: 'If';
 }
 

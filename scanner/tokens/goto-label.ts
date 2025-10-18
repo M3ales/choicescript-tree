@@ -1,5 +1,5 @@
 import { Token } from "./token";
 
-export interface GotoLabel extends Token {
+export interface GotoLabelToken extends Token {
     type: 'GotoLabel';
 }

@@ -1,5 +1,5 @@
 
 import { Token } from './token';
-export interface ElseIf extends Token {
+export interface ElseIfToken extends Token {
     type: 'ElseIf';
 }

@@ -1,5 +1,5 @@
 import { Token } from './token';
 
-export interface InputText extends Token {
+export interface InputTextToken extends Token {
     type: 'InputText';
 }

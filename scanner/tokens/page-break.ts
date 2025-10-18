@@ -1,5 +1,5 @@
 import { Token } from './token';
 
-export interface PageBreak extends Token {
+export interface PageBreakToken extends Token {
     type: 'PageBreak';
 }

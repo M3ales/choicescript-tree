@@ -4,7 +4,7 @@ export * from "./expressions/number-literal";
 export * from "./expressions/open-parenthesis";
 export * from "./expressions/operator";
 export * from "./expressions/string-literal";
-export * from "./expressions/variable-reference";
+export * from "./expressions/identifier";
 
 export * from "./author";
 export * from "./begin-multireplace";

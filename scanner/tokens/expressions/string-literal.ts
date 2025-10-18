@@ -1,5 +1,5 @@
 import { Token } from "../token";
-export interface StringLiteral extends Token {
+export interface StringLiteralToken extends Token {
     type: 'StringLiteral';
     value: string;
 }

@@ -1,5 +1,5 @@
 import { Token } from "../token";
-export interface OpenParenthesis extends Token {
+export interface OpenParenthesisToken extends Token {
     type: 'OpenParenthesis';
     value: number;
 }

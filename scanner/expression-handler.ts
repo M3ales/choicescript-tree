@@ -1,4 +1,4 @@
-import { OpenParenthesis, CloseParenthesis, Token, NumberLiteral, StringLiteral, ArithmeticOperator, LogicalOperator, ComparisonOperator, VariableReference, BooleanLiteral } from './tokens';
+import { OpenParenthesisToken, CloseParenthesisToken, Token, NumberLiteralToken, StringLiteralToken, ArithmeticOperatorToken, LogicalOperatorToken, ComparisonOperatorToken, IdentifierToken, BooleanLiteralToken } from './tokens';
 
 function isDigit(char: string): boolean {
     const code = char.charCodeAt(0);
@@ -55,7 +55,7 @@ export function tokenizeExpressionString(
                 lineNumber: lineNumber,
                 sceneName: sceneName,
                 indent: indent
-            } as NumberLiteral);
+            } as NumberLiteralToken);
             continue;
         }
 
@@ -87,7 +87,7 @@ export function tokenizeExpressionString(
                 lineNumber: lineNumber,
                 sceneName: sceneName,
                 indent: indent
-            } as StringLiteral);
+            } as StringLiteralToken);
             continue;
         }
 
@@ -99,7 +99,7 @@ export function tokenizeExpressionString(
                 lineNumber: lineNumber,
                 sceneName: sceneName,
                 indent: indent
-            } as OpenParenthesis);
+            } as OpenParenthesisToken);
             cursor++;
             continue;
         }
@@ -110,7 +110,7 @@ export function tokenizeExpressionString(
                 lineNumber: lineNumber,
                 sceneName: sceneName,
                 indent: indent
-            } as CloseParenthesis);
+            } as CloseParenthesisToken);
             cursor++;
             continue;
         }
@@ -121,7 +121,7 @@ export function tokenizeExpressionString(
             const twoChars = expression.substring(cursor, cursor + 2);
             
             if (twoChars === '%+' || twoChars === '%-') {
-                const operatorMap: Record<string, ArithmeticOperator['operator']> = {
+                const operatorMap: Record<string, ArithmeticOperatorToken['operator']> = {
                     '%+': 'fairmath_addition',
                     '%-': 'fairmath_subtraction'
                 };
@@ -129,18 +129,18 @@ export function tokenizeExpressionString(
                 tokens.push({
                     type: 'ArithmeticOperator',
                     operator: operatorMap[twoChars],
-                    rawValue: twoChars as ArithmeticOperator['rawValue'],
+                    rawValue: twoChars as ArithmeticOperatorToken['rawValue'],
                     position: position + startPos,
                     lineNumber: lineNumber,
                     sceneName: sceneName,
                     indent: indent
-                } as ArithmeticOperator);
+                } as ArithmeticOperatorToken);
                 cursor += 2;
                 continue;
             }
             
             if (twoChars === '>=' || twoChars === '<=' || twoChars === '!=') {
-                const operatorMap: Record<string, ComparisonOperator['operator']> = {
+                const operatorMap: Record<string, ComparisonOperatorToken['operator']> = {
                     '>=': 'greater_than_equals',
                     '<=': 'less_than_equals',
                     '!=': 'not_equals'
@@ -149,12 +149,12 @@ export function tokenizeExpressionString(
                 tokens.push({
                     type: 'ComparisonOperator',
                     operator: operatorMap[twoChars],
-                    rawValue: twoChars as ComparisonOperator['rawValue'],
+                    rawValue: twoChars as ComparisonOperatorToken['rawValue'],
                     position: position + startPos,
                     lineNumber: lineNumber,
                     sceneName: sceneName,
                     indent: indent
-                } as ComparisonOperator);
+                } as ComparisonOperatorToken);
                 cursor += 2;
                 continue;
             }
@@ -162,7 +162,7 @@ export function tokenizeExpressionString(
 
         // Handle single-character operators
         if (char === '+' || char === '-' || char === '*' || char === '/' || char === '%') {
-            const operatorMap: Record<string, ArithmeticOperator['operator']> = {
+            const operatorMap: Record<string, ArithmeticOperatorToken['operator']> = {
                 '+': 'addition',
                 '-': 'subtraction',
                 '*': 'multiplication',
@@ -173,12 +173,12 @@ export function tokenizeExpressionString(
             tokens.push({
                 type: 'ArithmeticOperator',
                 operator: operatorMap[char],
-                rawValue: char as ArithmeticOperator['rawValue'],
+                rawValue: char as ArithmeticOperatorToken['rawValue'],
                 position: position + cursor,
                 lineNumber: lineNumber,
                 sceneName: sceneName,
                 indent: indent
-            } as ArithmeticOperator);
+            } as ArithmeticOperatorToken);
             cursor++;
             continue;
         }
@@ -200,7 +200,7 @@ export function tokenizeExpressionString(
         }
 
         if (char === '=' || char === '>' || char === '<') {
-            const operatorMap: Record<string, ComparisonOperator['operator']> = {
+            const operatorMap: Record<string, ComparisonOperatorToken['operator']> = {
                 '=': 'equals',
                 '>': 'greater_than',
                 '<': 'less_than'
@@ -209,12 +209,12 @@ export function tokenizeExpressionString(
             tokens.push({
                 type: 'ComparisonOperator',
                 operator: operatorMap[char],
-                rawValue: char as ComparisonOperator['rawValue'],
+                rawValue: char as ComparisonOperatorToken['rawValue'],
                 position: position + cursor,
                 lineNumber: lineNumber,
                 sceneName: sceneName,
                 indent: indent
-            } as ComparisonOperator);
+            } as ComparisonOperatorToken);
             cursor++;
             continue;
         }
@@ -239,7 +239,7 @@ export function tokenizeExpressionString(
                     lineNumber: lineNumber,
                     sceneName: sceneName,
                     indent: indent
-                } as BooleanLiteral);
+                } as BooleanLiteralToken);
             } else if (value === 'and' || value === 'or' || value === 'not') {
                 tokens.push({
                     type: 'LogicalOperator',
@@ -248,16 +248,16 @@ export function tokenizeExpressionString(
                     lineNumber: lineNumber,
                     sceneName: sceneName,
                     indent: indent
-                } as LogicalOperator);
+                } as LogicalOperatorToken);
             } else {
                 tokens.push({
-                    type: 'VariableReference',
+                    type: 'Identifier',
                     value: value,
                     position: position + startPos,
                     lineNumber: lineNumber,
                     sceneName: sceneName,
                     indent: indent
-                } as VariableReference);
+                } as IdentifierToken);
             }
             continue;
         }

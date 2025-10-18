@@ -1,34 +1,34 @@
 import { Scene } from "./scene";
 import { ScannerContext } from "./scanner-context";
 import {
-    Comment,
+    CommentToken,
     Token,
-    SceneStart,
-    SceneEnd,
-    GotoScene,
-    Choice,
-    FakeChoice,
-    ChoiceOption,
-    GotoLabel,
-    Label,
-    If,
-    ElseIf,
-    Else,
-    CreateVariable,
-    CreateTempVariable,
-    SetVariable,
-    SelectableIf,
-    BeginMultiReplace,
-    Image,
-    InputText,
-    GameIdentifier,
-    Author,
-    PageBreak,
-    SaveCheckpoint,
-    RestoreCheckpoint,
-    GoSubScene,
-    GoSub,
-    Return
+    SceneStartToken,
+    SceneEndToken,
+    GotoSceneToken,
+    ChoiceToken,
+    FakeChoiceToken,
+    ChoiceOptionToken,
+    GotoLabelToken,
+    LabelToken,
+    IfToken,
+    ElseIfToken,
+    ElseToken,
+    CreateVariableToken,
+    CreateTempVariableToken,
+    SetVariableToken,
+    SelectableIfToken,
+    BeginMultiReplaceToken,
+    ImageToken,
+    InputTextToken,
+    GameIdentifierToken,
+    AuthorToken,
+    PageBreakToken,
+    SaveCheckpointToken,
+    RestoreCheckpointToken,
+    GoSubSceneToken,
+    GoSubToken,
+    ReturnToken
 } from "./tokens";
 import {tokenizeExpressionString} from './expression-handler';
 import { Prose } from "../tokens/prose";
@@ -51,7 +51,7 @@ export const scanScene = (scene: Scene) => {
     };
 
     const tokens: Token[] = [
-        <SceneStart>{
+        <SceneStartToken>{
             sceneName: scene.name,
             lineNumber: 0,
             position: 0,
@@ -154,7 +154,7 @@ export const scanScene = (scene: Scene) => {
 
                     if(context.currentTokenStartPosition == undefined)
                         context.currentTokenStartPosition = context.position;
-
+                    
                     context.currentToken += line[context.position];
 
                     if(context.position == line.length - 1) {
@@ -180,7 +180,7 @@ export const scanScene = (scene: Scene) => {
             case "Comment": {
                 context.position++;
 
-                const comment = <Comment>tokens[tokens.length -1];
+                const comment = <CommentToken>tokens[tokens.length -1];
                 if(comment.type !== 'Comment')
                 {
                     console.error("Unexpected comment mode entry, head is not a comment block");
@@ -193,35 +193,25 @@ export const scanScene = (scene: Scene) => {
                 break;
             }
             case "ChoiceOption": {
-                const choiceOption = <ChoiceOption>tokens[tokens.length -1];
+                const choiceOption = <ChoiceOptionToken>tokens[tokens.length -1];
                 if(choiceOption.type !== 'ChoiceOption')
                 {
                     console.error("Unexpected choice option mode entry, head is not a choice option block");
                 }
-
                 choiceOption.rawText = line.substring(context.position);
                 
-                if(choiceOption.rawText.indexOf('@{') !== -1) {
-                    // multi-replace detected, this should probably be a while instead since multiple per line
-                    choiceOption.expression = tokenizeExpressionString(
-                        line.substring(context.position),
-                        context.lineNumber,
-                        context.position,
-                        context.indent.current,
-                        scene.name);
-                    
-                    tokens.push(...choiceOption.expression);
-                }
-
+                const multiReplaceBegin = choiceOption.rawText.indexOf('@{');
+                choiceOption.hasMultiReplace = multiReplaceBegin !== -1;
                 context.currentToken = '';
                 context.currentTokenStartPosition = undefined;
                 context.position = line.length;
+                
                 break;
             }
         }
     }
     tokens.push(
-        <SceneEnd>{
+        <SceneEndToken>{
             lineNumber: sceneLines.length,
             indent: 0,
             position: 0,
@@ -229,6 +219,52 @@ export const scanScene = (scene: Scene) => {
             type: 'SceneEnd'
         }
     );
+    return tokens;
+}
+
+const parseMultireplaceFromProse = (proseString: string, context: ScannerContext): Token[] => {
+    const multi = proseString.split('@{');
+    const tokens = [];
+    for(let i = 0; i < multi.length; i++) {
+        if(i === 0) {
+            tokens.push(<Prose>{
+                content: multi[i],
+                type: 'Prose',
+                indent: context.indent.current,
+                lineNumber: context.indent.current,
+                position: context.position + proseString.indexOf(multi[i]),
+            });
+        }
+
+        if(multi.length === 1) {
+            continue;
+        }
+
+        const m = multi[i];
+        const multiReplaceExpression = m.split('}');
+
+        if(multiReplaceExpression.length > 1) {
+            tokens.push(<Prose>{
+                content: multiReplaceExpression[1],
+                type: 'Prose',
+                indent: context.indent.current,
+                lineNumber: context.indent.current,
+                position: context.position + proseString.indexOf(multiReplaceExpression[1]),
+            });
+        }
+
+        if(multiReplaceExpression.length === 1) continue;
+        
+        const expression = tokenizeExpressionString(
+            multiReplaceExpression[0],
+            context.lineNumber,
+            context.position,
+            context.indent.current,
+            context.currentScene.name);
+        
+        tokens.push(...expression);
+    }
+
     return tokens;
 }
 
@@ -256,76 +292,78 @@ const handleToken = (context: ScannerContext) => {
     switch(context.currentToken) {
         case '*label': {
             context.mode = "Expression";
-            return createInContextToken(<Label>{type: 'Label'});
+            return createInContextToken(<LabelToken>{type: 'Label'});
         }
         case '*gosub ': {
             context.mode = "Expression";
-            return createInContextToken(<GoSub>{type: 'GoSub'});
+            return createInContextToken(<GoSubToken>{type: 'GoSub'});
         }
         case '*gosub_scene ': {
             context.mode = "Expression";
-            return createInContextToken(<GoSubScene>{type: 'GoSubScene'});
+            return createInContextToken(<GoSubSceneToken>{type: 'GoSubScene'});
         }
         case '*return ': {
             context.mode = "Expression";
-            return createInContextToken(<Return>{type: 'Return'});
+            return createInContextToken(<ReturnToken>{type: 'Return'});
         }
         case '*goto ': {
             context.mode = "Expression";
-            return createInContextToken(<GotoLabel>{type: 'GotoLabel'});
+            return createInContextToken(<GotoLabelToken>{type: 'GotoLabel'});
         }
         case '*goto_scene': {
             context.mode = "Expression";
-            return createInContextToken(<GotoScene>{type: 'GotoScene'});
+            return createInContextToken(<GotoSceneToken>{type: 'GotoScene'});
         }
         case '#': {
             context.mode = "ChoiceOption";
-            return createInContextToken(<ChoiceOption>{type: 'ChoiceOption'});
+            return createInContextToken(<ChoiceOptionToken>{type: 'ChoiceOption'});
         }
         case '*if': {
             context.mode = "Expression";
-            return createInContextToken(<If>{type: 'If'});
+            return createInContextToken(<IfToken>{type: 'If'});
         }
+        case '*else if':
         case '*elseif':
         case '*elsif': {
             context.mode = "Expression";
-            return createInContextToken(<ElseIf>{type: 'ElseIf'});
+            return createInContextToken(<ElseIfToken>{type: 'ElseIf'});
         }
-        case '*else': {
+        case '*else\n':
+        case '*else ': {
             context.mode = "Expression";
-            return createInContextToken(<Else>{type: 'Else'});
+            return createInContextToken(<ElseToken>{type: 'Else'});
         }
         case '*create': {
             context.mode = "Expression";
-            return createInContextToken(<CreateVariable>{type: 'CreateVariable'});
+            return createInContextToken(<CreateVariableToken>{type: 'CreateVariable'});
         }
         case '*temp': {
             context.mode = "Expression";
-            return createInContextToken(<CreateTempVariable>{type: 'CreateTempVariable'});
+            return createInContextToken(<CreateTempVariableToken>{type: 'CreateTempVariable'});
         }
         case '*set': {
             context.mode = "Expression";
-            return createInContextToken(<SetVariable>{type: 'SetVariable'});
+            return createInContextToken(<SetVariableToken>{type: 'SetVariable'});
         }
         case '*choice': {
             context.mode = "Prose";
-            return createInContextToken(<Choice>{type: 'Choice'});
+            return createInContextToken(<ChoiceToken>{type: 'Choice'});
         }
         case '*fake_choice': {
             context.mode = "Prose";
-            return createInContextToken(<FakeChoice>{type: 'FakeChoice'});
+            return createInContextToken(<FakeChoiceToken>{type: 'FakeChoice'});
         }
         case '*finish': {
             context.mode = "Prose";
-            return createInContextToken(<SetVariable>{type: 'SetVariable'});
+            return createInContextToken(<SetVariableToken>{type: 'SetVariable'});
         }
         case '*selectable_if': {
             context.mode = "Expression";
-            return createInContextToken(<SelectableIf>{ type: 'SelectableIf' });
+            return createInContextToken(<SelectableIfToken>{ type: 'SelectableIf' });
         }
         case '*comment': {
             context.mode = "Comment";
-            return createInContextToken(<Comment>{ type: 'Comment' });
+            return createInContextToken(<CommentToken>{ type: 'Comment' });
         }
         case '*scene_list': {
             context.insideMultiLineToken = true;
@@ -337,31 +375,31 @@ const handleToken = (context: ScannerContext) => {
         }
         case "*image": {
             context.mode = "Expression";
-            return createInContextToken(<Image>{type: 'Image'});
+            return createInContextToken(<ImageToken>{type: 'Image'});
         }
         case "*input_text": {
             context.mode = "Expression";
-            return createInContextToken(<InputText>{type: 'InputText'});
+            return createInContextToken(<InputTextToken>{type: 'InputText'});
         }
         case "*author": {
             context.mode = "Expression";
-            return createInContextToken(<Author>{type: 'Author'});
+            return createInContextToken(<AuthorToken>{type: 'Author'});
         }
         case "*ifid": {
             context.mode = "Expression";
-            return createInContextToken(<GameIdentifier>{type: 'GameIdentifier'});
+            return createInContextToken(<GameIdentifierToken>{type: 'GameIdentifier'});
         }
         case "*page_break": {
             context.mode = "Prose";
-            return createInContextToken(<PageBreak>{type: 'PageBreak'});
+            return createInContextToken(<PageBreakToken>{type: 'PageBreak'});
         }
         case "*save_checkpoint": {
             context.mode = "Prose";
-            return createInContextToken(<SaveCheckpoint>{type: 'SaveCheckpoint'});
+            return createInContextToken(<SaveCheckpointToken>{type: 'SaveCheckpoint'});
         }
         case "*restore_checkpoint": {
             context.mode = "Prose";
-            return createInContextToken(<RestoreCheckpoint>{type: 'RestoreCheckpoint'});
+            return createInContextToken(<RestoreCheckpointToken>{type: 'RestoreCheckpoint'});
         }
     }
 

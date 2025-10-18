@@ -1,5 +1,5 @@
 import { Token } from "./token";
 
-export interface GoSub extends Token {
+export interface GoSubToken extends Token {
     type: 'GoSub';
 }

@@ -1,6 +1,6 @@
 import { Token } from './token';
 
-export interface Comment extends Token {
+export interface CommentToken extends Token {
     type: 'Comment';
     value: string;
 }

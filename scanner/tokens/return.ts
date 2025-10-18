@@ -1,5 +1,5 @@
 import { Token } from './token';
 
-export interface Return extends Token {
+export interface ReturnToken extends Token {
     type: 'Return';
 }

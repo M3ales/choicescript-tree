@@ -1,5 +1,5 @@
 import { Token } from './token';
 
-export interface GameIdentifier extends Token {
+export interface GameIdentifierToken extends Token {
     type: 'GameIdentifier';
 }

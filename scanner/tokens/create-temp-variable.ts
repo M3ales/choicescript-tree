@@ -1,5 +1,5 @@
 import { Token } from './token';
 
-export interface CreateTempVariable extends Token {
+export interface CreateTempVariableToken extends Token {
     type: 'CreateTempVariable';
 }

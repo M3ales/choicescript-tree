@@ -1,4 +1,4 @@
 import { Token } from './token';
-export interface Choice extends Token {
+export interface ChoiceToken extends Token {
     type: 'Choice';
 }

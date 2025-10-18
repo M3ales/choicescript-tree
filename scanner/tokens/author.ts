@@ -1,5 +1,5 @@
 import {Token} from "./token";
 
-export interface Author extends Token {
+export interface AuthorToken extends Token {
     type: 'Author';
 }

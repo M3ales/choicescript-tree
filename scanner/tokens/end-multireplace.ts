@@ -1,5 +1,5 @@
 import {Token} from "./token";
 
-export interface EndMultiReplace extends Token {
+export interface EndMultiReplaceToken extends Token {
     type: 'EndMultiReplace';
 }

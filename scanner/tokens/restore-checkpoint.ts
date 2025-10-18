@@ -1,5 +1,5 @@
 import { Token } from './token';
 
-export interface RestoreCheckpoint extends Token {
+export interface RestoreCheckpointToken extends Token {
     type: 'RestoreCheckpoint';
 }
