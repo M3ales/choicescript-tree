@@ -37,8 +37,11 @@ import {
     StatChartToken,
     GotoRandomSceneToken,
     EndingToken,
+    HideReuseToken,
+    DisableReuseToken,
+    AllowReuseToken,
     LineBreakToken,
-    Prose
+    ProseToken
 } from "./tokens";
 import {tokenizeExpressionString} from './expression-handler';
 
@@ -132,7 +135,7 @@ export const scanScene = (scene: Scene) => {
                     context.mode = "Token";
                     context.currentTokenStartPosition = context.position;
                     if(context.proseBlock.length > 0) {
-                        tokens.push(<Prose>{
+                        tokens.push(<ProseToken>{
                             indent: context.indent.current,
                             type: 'Prose',
                             sceneName: scene.name,
@@ -157,7 +160,7 @@ export const scanScene = (scene: Scene) => {
                     }
                     context.proseBlock = '';
                     const substring = line.substring(context.position);
-                    tokens.push(<Prose>{
+                    tokens.push(<ProseToken>{
                         indent: context.indent.current,
                         type: 'Prose',
                         sceneName: scene.name,
@@ -256,7 +259,7 @@ const parseMultireplaceFromProse = (proseString: string, context: ScannerContext
     const tokens = [];
     for(let i = 0; i < multi.length; i++) {
         if(i === 0) {
-            tokens.push(<Prose>{
+            tokens.push(<ProseToken>{
                 content: multi[i],
                 type: 'Prose',
                 indent: context.indent.current,
@@ -273,7 +276,7 @@ const parseMultireplaceFromProse = (proseString: string, context: ScannerContext
         const multiReplaceExpression = m.split('}');
 
         if(multiReplaceExpression.length > 1) {
-            tokens.push(<Prose>{
+            tokens.push(<ProseToken>{
                 content: multiReplaceExpression[1],
                 type: 'Prose',
                 indent: context.indent.current,
