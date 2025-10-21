@@ -4,6 +4,7 @@
   "type": "module",
   "main": "index.ts",
   "scripts": {
+    "generate:token-types": "tsx scanner/generate-token-types.ts",
     "scan": "tsx scanner/index.ts --watch",
     "parse": "tsx parser/index.ts --watch",
     "start": "tsx parser/index.ts --watch"

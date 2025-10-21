@@ -1,9 +1,27 @@
+import { match } from "assert";
 import {
   IdentifierToken,
+  NumberLiteralToken,
   ProseToken,
+  StringLiteralToken,
   Token,
   UnaryOperatorToken,
 } from "../scanner/tokens";
+import { TokenType } from "../scanner/tokens/token-types";
+import {
+  Binary,
+  Expression,
+  Grouping,
+  Identifier,
+  Literal,
+  Unary,
+} from "./expressions";
+import {
+  DeclareVariableStatement,
+  ExpressionStatement,
+  SetVariableStatement,
+  Statement,
+} from "./statements";
 
 export class Parser {
   tokens: Token[];
@@ -14,35 +32,69 @@ export class Parser {
     this.current = 0;
   }
 
-  check(type: string): boolean {
+  check(
+    type: TokenType,
+    sameLine: boolean = true,
+    sameIndent: boolean = true
+  ): boolean {
     if (this.isAtEnd()) return false;
+    if(sameLine && !this.peekSameLine()) return false;
+    if(sameIndent && !this.peekSameIndent()) return false;
     const peek = this.peek();
-
-    const compoundType = peek.type + peek["operator"] !== undefined ? '-' + peek["operator"] : '';
-
     return peek.type == type;
   }
 
   advance(): Token {
+    if(!this.peekSameIndent()) {
+      console.log("=========================== Indent change ===========================");
+    }
+    if(!this.peekSameLine()) {
+      console.log("---------------------------- Line change ----------------------------");
+    }
     if (!this.isAtEnd()) this.current++;
-    return this.previous();
+    const previous = this.previous();
+    
+    const detail = `${previous.type} at ${previous.sceneName}:${previous.lineNumber}:${previous.position}[${previous.indent}]`;
+    console.log("Advance to", this.current, detail);
+
+    return previous;
   }
 
   isAtEnd(): boolean {
-    return this.peek().type == "SceneEnd";
+    const peek = this.peek()?.type;
+    return peek == null || peek == "SceneEnd";
   }
 
   peek(): Token {
+    // console.log('Peek at', this.current, this.tokens[this.current].type);
     return this.tokens[this.current];
   }
 
+  peekSameLine(): boolean {
+    const peek = this.peek();
+    if (peek === null || peek === undefined) return false;
+    return peek.lineNumber == (this.previous()?.lineNumber ?? 0);
+  }
+
+  peekSameIndent(): boolean {
+    const peek = this.peek();
+    if (peek === null || peek === undefined) return false;
+    return peek.indent == (this.previous()?.indent ?? 0);
+  }
+
   previous(): Token {
+    // console.debug('Previous at', this.current - 1, this.tokens[this.current - 1].type);
     return this.tokens[this.current - 1];
   }
 
-  match(...types: string[]) {
-    for (const type in types) {
-      if (this.check(type)) {
+  match(
+    typesToMatch: TokenType[],
+    sameLine: boolean = true,
+    sameIndent: boolean = true
+  ) {
+    for (const tokenType of typesToMatch) {
+      if (this.check(tokenType, sameLine, sameIndent)) {
+        console.debug("Matched", tokenType);
         this.advance();
         return true;
       }
@@ -50,10 +102,64 @@ export class Parser {
     return false;
   }
 
+  scene(): Statement {
+    while (this.match(["SceneStart"], false, false)) {
+      this.advance(); // TODO: perhaps make this the root of the program?
+    }
+    return this.statement();
+  }
+
+  statement(): Statement {
+    if (this.match(["SceneStart"], false, false)) return this.scene();
+    if (this.match(["CreateVariable"], false, false)) return this.createVariable(false);
+    if (this.match(["CreateTempVariable"], false, false)) return this.createVariable(true);
+    if (this.match(["SetVariable"], false, false)) return this.setVariable();
+    return this.expressionStatement();
+  }
+
+  expressionStatement(): ExpressionStatement {
+    const expr = this.expression();
+    this.consumeLineChange();
+    return <ExpressionStatement>{ expression: expr };
+  }
+
+  createVariable(temporary: boolean): DeclareVariableStatement {
+    const identifier = this.consume("Identifier", "Expect variable name");
+    const peek = this.peek();
+    const expr =
+      peek.lineNumber !== identifier.lineNumber ? null : this.expression();
+    return <DeclareVariableStatement>{
+      kind: "DeclareVariable",
+      variable: identifier,
+      expression: expr,
+      scope: temporary ? "Temporary" : "Global",
+    };
+  }
+
+  setVariable(): SetVariableStatement {
+    const identifier = this.consume("Identifier", "Expect variable name");
+    const expr = this.expression();
+    this.consumeLineChange();
+    return <SetVariableStatement>{
+      kind: "SetVariable",
+      variable: identifier,
+      expression: expr,
+    };
+  }
+
   comparison(): Expression {
     let expr: Expression = this.term();
 
-    while (this.match('ArithmeticOperatorToken-greater_than', 'ArithmeticOperatorToken')) {
+    while (
+      this.match([
+        "GreaterThanOperator",
+        "GreaterThanEqualsOperator",
+        "LessThanOperator",
+        "LessThanEqualsOperator",
+        "EqualityOperator",
+        "NotEqualityOperator",
+      ])
+    ) {
       const operator: Token = this.previous();
       const right: Expression = this.term();
       expr = <Binary>{
@@ -67,9 +173,9 @@ export class Parser {
   }
 
   term(): Expression {
-    let expr: Expression = this.term();
+    let expr: Expression = this.factor();
 
-    while (this.match(GREATER, GREATER_EQUAL, LESS, LESS_EQUAL)) {
+    while (this.match(["SubtractionOperator", "AdditionOperator"])) {
       const operator: Token = this.previous();
       const right = this.term();
       expr = <Binary>{
@@ -85,7 +191,13 @@ export class Parser {
   factor(): Expression {
     let expr = this.unary();
 
-    while (this.match(SLASH, STAR)) {
+    while (
+      this.match([
+        "DivisionOperator",
+        "MultiplicationOperator",
+        "ModulusOperator",
+      ])
+    ) {
       const operator = this.previous();
       const right = this.unary();
       expr = <Binary>{
@@ -99,7 +211,9 @@ export class Parser {
   }
 
   unary(): Expression {
-    if (this.match(BANG, MINUS)) {
+    if (
+      this.match(["NotOperator", "SubtractionOperator", "AdditionOperator"])
+    ) {
       const operator = this.previous();
       const right = this.unary();
 
@@ -113,115 +227,119 @@ export class Parser {
   }
 
   primary(): Expression {
-    if (this.match(FALSE)) return <Literal> { value: false };
-    if (this.match(TRUE)) return <Literal> { value: true }
-
-    if (this.match(NUMBER, STRING)) {
-      return <Literal>{ value: this.previous() }
+    if (this.match(["NumberLiteral", "StringLiteral", "BooleanLiteral"])) {
+      return <Literal>{ value: this.previous() };
     }
 
-    if (this.match(LEFT_PAREN)) {
+    if (this.match(["Identifier"])) {
+      return <Identifier>{ token: this.previous() };
+    }
+
+    if (this.match(["OpenParenthesis"])) {
       const expr = this.expression();
-      this.consume(RIGHT_PAREN, "Expect ')' after expression.");
+      this.consume("CloseParenthesis", "Expect ')' after expression.");
       return <Grouping>{ expression: expr };
     }
+
+    throw this.error(this.peek(), "Expect expression.");
   }
 
   expression(): Expression {
+    console.log("Matching Expression at", this.current);
     return this.equality();
   }
 
   equality() {
     let expr = this.comparison();
 
-    while (this.match(BANG_EQUAL, EQUAL_EQUAL)) {
+    while (this.match(["NotEqualityOperator", "EqualityOperator"])) {
       const operator: Token = this.previous();
-      const right: Token = this.comparison();
+      const right: Expression = this.comparison();
       expr = <Binary>{ left: expr, operator: operator, right: right };
     }
 
     return expr;
   }
 
-  consume(type: string, message: string) {
+  consumeIndentChange() {
+    if (!this.peekSameIndent()) {
+      return this.advance();
+    }
+
+    const peek = this.peek();
+    throw this.error(
+      peek,
+      `Expected change in indentation, found ${peek.type} instead at ${peek.lineNumber}:${peek.position} with indentation ${peek.indent}`
+    );
+  }
+
+  consumeLineChange() {
+    if (!this.peekSameLine()) {
+      return;
+    }
+
+    const peek = this.peek();
+    throw this.error(
+      peek,
+      `Expected end of statement, found ${peek.type} instead at ${peek.lineNumber}:${peek.position}`
+    );
+  }
+
+  consume(type: TokenType, message: string, sameLine: boolean = true, sameIndent: boolean = true) {
+    console.log("Consume", type, message);
     if (this.check(type)) return this.advance();
 
-    throw error(this.peek(), message);
+    throw this.error(this.peek(), message);
   }
 
   error(token: Token, message: string) {
-    if (token.type == 'SceneEnd') {
-      this.report(token.line, " at end", message);
+    if (token.type == "SceneEnd") {
+      this.report(`at end of scene ${token.sceneName}:${token.lineNumber}:${token.position}[${token.indent}]`, message);
     } else {
-      this.report(token.line, " at '" + token.lexeme + "'", message);
+      this.report(
+        `at '${token.type}' ${token.sceneName}:${token.lineNumber}:${token.position}[${token.indent}]`,
+        message
+      );
     }
   }
-}
 
-export interface Expression {
-  kind: "Binary" | "Unary" | "Grouping" | "Literal" | "Primary";
-}
+  report(
+    location: string,
+    message: string
+  ) {
+    const err = `Error: ${message} ${location}`;
+    console.error(err);
+    throw new Error(err);
+  }
 
-export interface Grouping {
-  expression: Expression;
-  kind: "Grouping";
-}
+  synchronize(): void {
+    this.advance();
 
-export interface Unary extends Expression {
-  operator: UnaryOperatorToken;
-  value: Unary | Primary;
-  kind: "Unary";
-}
+    // TODO: tbh I have no idea how this helps us, but apparently it helps error handling?
+    // Need to read more
+    while (!this.isAtEnd()) {
+      if (this.previous().type == "Return") return;
 
-export interface Binary extends Expression {
-  left: Expression;
-  right: Expression;
-  operator: Token;
-  kind: "Binary";
-}
+      switch (this.peek()?.type) {
+        case "GotoRandomScene":
+        case "GotoScene":
+        case "GotoLabel":
+        case "Return":
+        case null:
+        case undefined:
+          return;
+      }
 
-export interface Primary extends Expression {
-  value: Literal | Identifier;
-  kind: "Primary";
-}
+      this.advance();
+    }
+  }
 
-export interface Literal extends Expression {
-  value: Token;
-  kind: "Literal";
-}
+  parse(): Statement[] {
+    const statements: Statement[] = [];
+    while (!this.isAtEnd()) {
+      statements.push(this.statement());
+    }
 
-export interface Identifier {
-  token: IdentifierToken;
-  kind: "Identifier";
-}
-
-export interface Option {
-  conditional: Expression;
-  consequences: Token[];
-  next: Node;
-}
-
-export interface Scene {
-  first: Option | Prose;
-  variables: Set<string>;
-  tempVariables: Set<string>;
-}
-
-export interface Condition {
-  expression: Expression;
-  tokens: Token[];
-}
-export interface Statement {
-  expression: Expression;
-  tokens: Token[];
-}
-export interface Choice {
-  conditional: Expression;
-  type: "Choice";
-  options: Option[];
-}
-
-export interface Prose {
-  type: "Prose";
-  content: ProseToken;
+    return statements;
+  }
 }

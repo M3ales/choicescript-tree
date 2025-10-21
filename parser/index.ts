@@ -7,7 +7,10 @@ const execute = async () => {
     for(const sceneTokens of scenes) {
         console.log(`Scene: ${sceneTokens[0].sceneName} :: Tokens: ${sceneTokens.length}`);
         const parser = new Parser(sceneTokens);
-                
+        const expression = parser.parse();
+    
+        // Stop if there was a syntax error.
+        if (expression == null) return;
     }
 };
 

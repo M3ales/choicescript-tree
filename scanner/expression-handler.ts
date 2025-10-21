@@ -142,49 +142,63 @@ export function tokenizeExpressionString(
       const twoChars = expression.substring(cursor, cursor + 2);
 
       switch (twoChars) {
-        case "%+":
-        case "%-": {
-          const operatorMap: Record<
-            string,
-            ArithmeticOperatorToken["operator"]
-          > = {
-            "%+": "fairmath_addition",
-            "%-": "fairmath_subtraction",
-          };
-
-          tokens.push({
-            type: "ArithmeticOperator",
-            operator: operatorMap[twoChars],
-            rawValue: twoChars as ArithmeticOperatorToken["rawValue"],
+        case "%+": {
+          tokens.push(<ArithmeticOperatorToken>{
+            type: "FairmathAdditionOperator",
+            rawValue: twoChars,
             position: position + startPos,
             lineNumber: lineNumber,
             sceneName: sceneName,
             indent: indent,
-          } as ArithmeticOperatorToken);
+          });
           cursor += 2;
           continue;
         }
-        case ">=":
-        case "<=":
-        case "!=": {
-          const operatorMap: Record<
-            string,
-            ComparisonOperatorToken["operator"]
-          > = {
-            ">=": "greater_than_equals",
-            "<=": "less_than_equals",
-            "!=": "not_equals",
-          };
-
-          tokens.push({
-            type: "ComparisonOperator",
-            operator: operatorMap[twoChars],
-            rawValue: twoChars as ComparisonOperatorToken["rawValue"],
+        case "%-": {
+          tokens.push(<ArithmeticOperatorToken>{
+            type: "FairmathAdditionOperator",
+            rawValue: twoChars,
             position: position + startPos,
             lineNumber: lineNumber,
             sceneName: sceneName,
             indent: indent,
-          } as ComparisonOperatorToken);
+          });
+          cursor += 2;
+          continue;
+        }
+        case ">=":{
+          tokens.push(<ComparisonOperatorToken>{
+            type: "GreaterThanEqualsOperator",
+            rawValue: twoChars,
+            position: position + startPos,
+            lineNumber: lineNumber,
+            sceneName: sceneName,
+            indent: indent,
+          });
+          cursor += 2;
+          continue;
+        }
+        case "<=":{
+          tokens.push(<ComparisonOperatorToken>{
+            type: "LessThanEqualsOperator",
+            rawValue: twoChars,
+            position: position + startPos,
+            lineNumber: lineNumber,
+            sceneName: sceneName,
+            indent: indent,
+          });
+          cursor += 2;
+          continue;
+        }
+        case "!=": {
+          tokens.push(<ComparisonOperatorToken>{
+            type: "NotEqualityOperator",
+            rawValue: twoChars,
+            position: position + startPos,
+            lineNumber: lineNumber,
+            sceneName: sceneName,
+            indent: indent,
+          });
           cursor += 2;
           continue;
         }
@@ -237,52 +251,111 @@ export function tokenizeExpressionString(
 
     // Handle single-character operators
     switch (char) {
-      case "+":
-      case "-":
-      case "*":
-      case "/":
-      case "%":
-      case "&": {
-        const operatorMap: Record<string, ArithmeticOperatorToken["operator"]> =
-          {
-            "+": "addition",
-            "-": "subtraction",
-            "*": "multiplication",
-            "/": "division",
-            "%": "modulus",
-            "&": "concatenation",
-          };
-        tokens.push({
-          type: "ArithmeticOperator",
-          operator: operatorMap[char],
-          rawValue: char as ArithmeticOperatorToken["rawValue"],
+      case "+":{
+        tokens.push(<ArithmeticOperatorToken>{
+          type: "AdditionOperator",
+          rawValue: char,
           position: position + cursor,
           lineNumber: lineNumber,
           sceneName: sceneName,
           indent: indent,
-        } as ArithmeticOperatorToken);
+        });
         cursor++;
         continue;
       }
-      case "=":
-      case ">":
-      case "<": {
-        const operatorMap: Record<string, ComparisonOperatorToken["operator"]> =
-          {
-            "=": "equals",
-            ">": "greater_than",
-            "<": "less_than",
-          };
-
-        tokens.push({
-          type: "ComparisonOperator",
-          operator: operatorMap[char],
-          rawValue: char as ComparisonOperatorToken["rawValue"],
+      case "-":{
+        tokens.push(<ArithmeticOperatorToken>{
+          type: "SubtractionOperator",
+          rawValue: char,
           position: position + cursor,
           lineNumber: lineNumber,
           sceneName: sceneName,
           indent: indent,
-        } as ComparisonOperatorToken);
+        });
+        cursor++;
+        continue;
+      }
+      case "*":{
+        tokens.push(<ArithmeticOperatorToken>{
+          type: "MultiplicationOperator",
+          rawValue: char,
+          position: position + cursor,
+          lineNumber: lineNumber,
+          sceneName: sceneName,
+          indent: indent,
+        });
+        cursor++;
+        continue;
+      }
+      case "/":{
+        tokens.push(<ArithmeticOperatorToken>{
+          type: "DivisionOperator",
+          rawValue: char,
+          position: position + cursor,
+          lineNumber: lineNumber,
+          sceneName: sceneName,
+          indent: indent,
+        });
+        cursor++;
+        continue;
+      }
+      case "%":{
+        tokens.push(<ArithmeticOperatorToken>{
+          type: "ModulusOperator",
+          rawValue: char,
+          position: position + cursor,
+          lineNumber: lineNumber,
+          sceneName: sceneName,
+          indent: indent,
+        });
+        cursor++;
+        continue;
+      }
+      case "&": {
+        tokens.push(<ArithmeticOperatorToken>{
+          type: "ConcatenationOperator",
+          rawValue: char,
+          position: position + cursor,
+          lineNumber: lineNumber,
+          sceneName: sceneName,
+          indent: indent,
+        });
+        cursor++;
+        continue;
+      }
+      case "=":{
+        tokens.push(<ComparisonOperatorToken>{
+          type: "EqualityOperator",
+          rawValue: char,
+          position: position + cursor,
+          lineNumber: lineNumber,
+          sceneName: sceneName,
+          indent: indent,
+        });
+        cursor++;
+        continue;
+      }
+      case ">":{
+        tokens.push(<ComparisonOperatorToken>{
+          type: "GreaterThanOperator",
+          rawValue: char,
+          position: position + cursor,
+          lineNumber: lineNumber,
+          sceneName: sceneName,
+          indent: indent,
+        });
+        cursor++;
+        continue;
+      }
+      case "<": {
+        tokens.push(<ComparisonOperatorToken>{
+          type: "LessThanOperator",
+          rawValue: char,
+          position: position + cursor,
+          lineNumber: lineNumber,
+          sceneName: sceneName,
+          indent: indent,
+        });
         cursor++;
         continue;
       }
@@ -338,11 +411,21 @@ export function tokenizeExpressionString(
           } as BooleanLiteralToken);
           continue;
         }
-        case "and":
+        case "and":{
+          tokens.push(<LogicalOperatorToken>{
+            type: "LogicalAnd",
+            rawValue: value,
+            position: position + startPos,
+            lineNumber: lineNumber,
+            sceneName: sceneName,
+            indent: indent,
+          });
+          continue;
+        }
         case "or": {
           tokens.push({
-            type: "LogicalOperator",
-            operator: value as "and" | "or",
+            type: "LogicalOr",
+            rawValue: value,
             position: position + startPos,
             lineNumber: lineNumber,
             sceneName: sceneName,
@@ -350,42 +433,59 @@ export function tokenizeExpressionString(
           } as LogicalOperatorToken);
           continue;
         }
-        case "not":
-        case "round": {
-          tokens.push({
-            type: "UnaryOperator",
-            value: value,
+        case "not":{
+          tokens.push(<UnaryOperatorToken>{
+            type: "NotOperator",
             position: position + startPos,
             lineNumber: lineNumber,
             sceneName: sceneName,
             indent: indent,
-            operator: value == "not" ? "not" : "round",
             rawValue: value,
-          } as UnaryOperatorToken);
+          });
+          continue;
+        }
+        case "round": {
+          tokens.push(<UnaryOperatorToken>{
+            type: "RoundOperator",
+            position: position + startPos,
+            lineNumber: lineNumber,
+            sceneName: sceneName,
+            indent: indent,
+            rawValue: value,
+          });
+          continue;
+        }
+        case "length": {
+          tokens.push(<UnaryOperatorToken>{
+            type: "LengthOperator",
+            position: position + startPos,
+            lineNumber: lineNumber,
+            sceneName: sceneName,
+            indent: indent,
+            rawValue: value,
+          });
           continue;
         }
         case "modulo": {
-          tokens.push({
-            type: "ArithmeticOperator",
-            value: value,
+          tokens.push(<ArithmeticOperatorToken>{
+            type: "ModulusOperator",
             position: position + startPos,
             lineNumber: lineNumber,
             sceneName: sceneName,
             indent: indent,
             rawValue: value,
-            operator: "modulus",
-          } as ArithmeticOperatorToken);
+          });
           continue;
         }
         default: {
-          tokens.push({
+          tokens.push(<IdentifierToken>{
             type: "Identifier",
             value: value,
             position: position + startPos,
             lineNumber: lineNumber,
             sceneName: sceneName,
             indent: indent,
-          } as IdentifierToken);
+          });
           continue;
         }
       }
