@@ -124,6 +124,7 @@ export class Parser {
   }
 
   createVariable(temporary: boolean): DeclareVariableStatement {
+    const token = this.previous();
     const identifier = this.consume("Identifier", "Expect variable name");
     const peek = this.peek();
     const expr =
@@ -133,10 +134,12 @@ export class Parser {
       variable: identifier,
       expression: expr,
       scope: temporary ? "Temporary" : "Global",
+      token: token,
     };
   }
 
   setVariable(): SetVariableStatement {
+    const token = this.previous();
     const identifier = this.consume("Identifier", "Expect variable name");
     const expr = this.expression();
     this.consumeLineChange();
@@ -144,6 +147,7 @@ export class Parser {
       kind: "SetVariable",
       variable: identifier,
       expression: expr,
+      token: token
     };
   }
 
