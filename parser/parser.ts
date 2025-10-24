@@ -1,5 +1,9 @@
 import { match } from "assert";
 import {
+  AllowReuseToken,
+  CommentToken,
+  DisableReuseToken,
+  HideReuseToken,
   IdentifierToken,
   NumberLiteralToken,
   ProseToken,
@@ -17,8 +21,24 @@ import {
   Unary,
 } from "./expressions";
 import {
+  ChoiceOptionStatement,
+  ChoiceStatement,
+  CommentBlock,
   DeclareVariableStatement,
+  ElseIfStatement,
+  ElseStatement,
   ExpressionStatement,
+  GoSubSceneStatement,
+  GoSubStatement,
+  GotoLabelStatement,
+  GotoSceneStatement,
+  IfStatement,
+  InputTextStatement,
+  LabelStatement,
+  PageBreakStatement,
+  ProseStatement,
+  ReturnStatement,
+  SelectableIfStatement,
   SetVariableStatement,
   Statement,
 } from "./statements";
@@ -38,22 +58,28 @@ export class Parser {
     sameIndent: boolean = true
   ): boolean {
     if (this.isAtEnd()) return false;
-    if(sameLine && !this.peekSameLine()) return false;
-    if(sameIndent && !this.peekSameIndent()) return false;
+    if (sameLine && !this.peekSameLine()) return false;
+    if (sameIndent && !this.peekSameIndent(this.previous()?.indent ?? 0))
+      return false;
     const peek = this.peek();
     return peek.type == type;
   }
 
   advance(): Token {
-    if(!this.peekSameIndent()) {
-      console.log("=========================== Indent change ===========================");
+    const currentIndent = this.previous()?.indent ?? 0;
+    if (!this.peekSameIndent(currentIndent)) {
+      console.log(
+        "=========================== Indent change ==========================="
+      );
     }
-    if(!this.peekSameLine()) {
-      console.log("---------------------------- Line change ----------------------------");
+    if (!this.peekSameLine()) {
+      console.log(
+        "---------------------------- Line change ----------------------------"
+      );
     }
     if (!this.isAtEnd()) this.current++;
     const previous = this.previous();
-    
+
     const detail = `${previous.type} at ${previous.sceneName}:${previous.lineNumber}:${previous.position}[${previous.indent}]`;
     console.log("Advance to", this.current, detail);
 
@@ -76,10 +102,31 @@ export class Parser {
     return peek.lineNumber == (this.previous()?.lineNumber ?? 0);
   }
 
-  peekSameIndent(): boolean {
+  peekSameIndent(desiredIndent: number): boolean {
     const peek = this.peek();
     if (peek === null || peek === undefined) return false;
-    return peek.indent == (this.previous()?.indent ?? 0);
+    return peek.indent == desiredIndent;
+  }
+
+  peekGreaterIndent(desiredIndent: number): boolean {
+    const peek = this.peek();
+    if (peek === null || peek === undefined) return false;
+    return peek.indent > desiredIndent;
+  }
+
+  peekLessIndent(desiredIndent: number): boolean {
+    const peek = this.peek();
+    if (peek === null || peek === undefined) return false;
+
+    return peek.indent < desiredIndent;
+  }
+
+  childScope(indent: number) {
+    return !this.peekSameIndent(indent) && !this.peekLessIndent(indent);
+  }
+
+  siblingScope(indent: number) {
+    return !this.peekLessIndent(indent);
   }
 
   previous(): Token {
@@ -111,24 +158,327 @@ export class Parser {
 
   statement(): Statement {
     if (this.match(["SceneStart"], false, false)) return this.scene();
-    if (this.match(["CreateVariable"], false, false)) return this.createVariable(false);
-    if (this.match(["CreateTempVariable"], false, false)) return this.createVariable(true);
+    if (this.match(["CreateVariable"], false, false))
+      return this.createVariable(false);
+    if (this.match(["CreateTempVariable"], false, false))
+      return this.createVariable(true);
     if (this.match(["SetVariable"], false, false)) return this.setVariable();
-    return this.expressionStatement();
+    if (this.match(["Prose"], false, false)) return this.proseStatement();
+    if (this.match(["Choice"], false, false)) return this.choiceStatement();
+    if (this.match(["ChoiceOption"], false, false)) return this.choiceOption();
+    if (this.match(["If"], false, false)) return this.ifStatement();
+    if (this.match(["GoSub"], false, false)) return this.goSub();
+    if (this.match(["GoSubScene"], false, false)) return this.goSubScene();
+    if (this.match(["Return"], false, false)) return this.return();
+    if (this.match(["GotoLabel"], false, false)) return this.gotoLabel();
+    if (this.match(["GotoScene"], false, false)) return this.gotoScene();
+    if (this.match(["Label"], false, false)) return this.labelDefinition();
+    if (this.match(["PageBreak"], false, false)) return this.pageBreak();
+    if (this.match(["InputText"], false, false)) return this.inputText();
+    if (this.match(["Comment"], false, false)) return this.commentBlock();
+    const peek = this.peek();
+    throw new Error(
+      `Unknown statement block starting ${peek?.type} at ${peek?.sceneName}:${peek?.lineNumber}:${peek?.position}[${peek?.indent}]`
+    );
+  }
+
+  commentBlock(): CommentBlock {
+    const collectedComments: CommentToken[] = [];
+
+    while (this.match(["Comment"], false, true)) {
+      const comment = this.advance() as CommentToken;
+      collectedComments.push(comment);
+    }
+
+    return <CommentBlock>{ content: collectedComments, kind: "Comment" };
+  }
+
+  return(): ReturnStatement {
+    const token = this.previous();
+    this.expectLineChange();
+    return <ReturnStatement>{ kind: "Return", token: token };
+  }
+
+  goSubScene(): GoSubSceneStatement {
+    const token = this.previous();
+    const scene = this.consume("Identifier", "Expect scene name.");
+
+    let identifier = null;
+    if (this.peekSameLine()) {
+      identifier = this.consume("Identifier", "Expect subroutine label name.");
+    }
+    this.expectLineChange();
+
+    return <GoSubSceneStatement>{
+      kind: "GoSubScene",
+      token: token,
+      scene: scene,
+      label: identifier,
+    };
+  }
+
+  goSub(): GoSubStatement {
+    const token = this.previous();
+    const identifier = this.consume("Identifier", "Expect subroutine name.");
+    this.expectLineChange();
+
+    return <GoSubStatement>{
+      kind: "GoSub",
+      token: token,
+      label: identifier,
+    };
+  }
+
+  inputText(): InputTextStatement {
+    const token = this.previous();
+    const variable = this.consume(
+      "Identifier",
+      "Expect variable name to store input text."
+    ) as IdentifierToken;
+    this.expectLineChange();
+    return <InputTextStatement>{
+      kind: "InputText",
+      token: token,
+      storeInto: variable,
+    };
+  }
+
+  gotoScene(): GotoSceneStatement {
+    const token = this.previous();
+    const scene = this.consume(
+      "Identifier",
+      "Expect scene name."
+    ) as IdentifierToken;
+    let label: IdentifierToken;
+
+    if (this.peekSameLine()) {
+      label = this.consume(
+        "Identifier",
+        "Expect label name."
+      ) as IdentifierToken;
+    } else {
+      label = null;
+    }
+
+    this.expectLineChange();
+    return <GotoSceneStatement>{
+      kind: "GotoScene",
+      token: token,
+      scene: scene,
+      label: label,
+    };
+  }
+
+  pageBreak(): PageBreakStatement {
+    const token = this.previous();
+    let buttonText: ProseToken | null = null;
+    if (this.peekSameLine()) {
+      buttonText = this.consume(
+        "Prose",
+        "Expect button text after page break."
+      ) as ProseToken;
+    }
+    this.expectLineChange();
+    return <PageBreakStatement>{
+      kind: "PageBreak",
+      token: token,
+      buttonText: buttonText,
+    };
+  }
+
+  ifStatement(): Statement {
+    const token = this.previous();
+    const expression = this.expression();
+    this.expectLineChange();
+    const body: Statement[] = [];
+
+    while (this.childScope(token.indent)) {
+      body.push(this.statement());
+    }
+
+    const elseIfBranches: ElseIfStatement[] = [];
+    while (
+      this.match(["ElseIf"], false, false) &&
+      this.siblingScope(token.indent)
+    ) {
+      elseIfBranches.push(this.elseIfStatement());
+    }
+
+    let elseBranch: ElseStatement | null = null;
+    if (this.match(["Else"], false, false) && this.siblingScope(token.indent)) {
+      elseBranch = this.elseStatement();
+    }
+
+    return <IfStatement>{
+      kind: "If",
+      token: token,
+      body: body,
+      expression: expression,
+      elseBranch: elseBranch,
+      elseIfBranches: elseIfBranches,
+    };
+  }
+
+  elseStatement(): ElseStatement {
+    const token = this.previous();
+    const body: Statement[] = [];
+    while (this.childScope(token.indent)) {
+      body.push(this.statement());
+    }
+    return <ElseStatement>{
+      kind: "Else",
+      token: token,
+      body: body,
+    };
+  }
+
+  elseIfStatement(): ElseIfStatement {
+    const token = this.previous();
+    const expression = this.expression();
+    const body: Statement[] = [];
+    while (this.childScope(token.indent)) {
+      body.push(this.statement());
+    }
+    return <ElseIfStatement>{
+      kind: "ElseIf",
+      token: token,
+      body: body,
+      expression: expression,
+    };
+  }
+
+  choiceStatement(): ChoiceStatement {
+    const token = this.previous();
+    const choice = <ChoiceStatement>{ kind: "Choice", token: token, body: [] };
+    const body: Statement[] = [];
+    // TODO: disable reuse
+
+    while (this.childScope(token.indent)) {
+      console.log("Parsing choice body at", this.current, this.peek());
+      if (
+        this.match(
+          [
+            "ChoiceOption",
+            "AllowReuse",
+            "DisableReuse",
+            "SelectableIf",
+            "HideReuse",
+          ],
+          false,
+          false
+        )
+      ) {
+        body.push(this.choiceOption());
+      } else if (this.match(["FakeChoice"], false, false)) {
+        // TODO: fake choice
+      } else if (this.match(["If"], false, false)) {
+        body.push(this.ifStatement());
+      } else if (this.match(["Comment"], false, false)) {
+        body.push(this.commentBlock());
+      } else {
+        throw this.error(
+          this.peek(),
+          "Expected choice option or conditional branch in choice statement."
+        );
+      }
+    }
+    choice.body = body;
+    return choice;
+  }
+
+  gotoLabel(): GotoLabelStatement {
+    const token = this.previous();
+    const label = this.consume("Identifier", "Expect label name.");
+    this.expectLineChange();
+    return <GotoLabelStatement>{
+      kind: "GotoLabel",
+      token: token,
+      label: label,
+    };
+  }
+
+  labelDefinition(): LabelStatement {
+    const token = this.previous();
+    const identifier = this.consume("Identifier", "Expect label name.");
+    return <LabelStatement>{ kind: "Label", token: token, label: identifier };
+  }
+
+  selectableIf(): SelectableIfStatement {
+    const token = this.previous();
+    const expression = this.expression();
+    return <SelectableIfStatement>{
+      kind: "SelectableIf",
+      token: token,
+      expression: expression,
+    };
+  }
+
+  choiceOption(): ChoiceOptionStatement {
+    let disableReuse: DisableReuseToken | null = null;
+    let hideReuse: HideReuseToken | null = null;
+    let allowReuse: AllowReuseToken | null = null;
+    let selectableIf: SelectableIfStatement | null = null;
+
+    while (
+      this.match(
+        ["DisableReuse", "HideReuse", "AllowReuse", "SelectableIf"],
+        false,
+        false
+      )
+    ) {
+      if (this.match(["DisableReuse"], false, false)) {
+        disableReuse = this.advance() as DisableReuseToken;
+      } else if (this.match(["HideReuse"], false, false)) {
+        hideReuse = this.advance() as HideReuseToken;
+      } else if (this.match(["AllowReuse"], false, false)) {
+        allowReuse = this.advance() as AllowReuseToken;
+      } else if (this.match(["SelectableIf"], false, false)) {
+        selectableIf = this.selectableIf(); // TODO: investigate issue with selectable if in scanner, looks like its eating the choice its related to?
+      }
+    }
+
+    const token = this.previous();
+    const body: Statement[] = [];
+    while (this.childScope(token.indent)) {
+      body.push(this.statement());
+    }
+
+    return <ChoiceOptionStatement>{
+      kind: "ChoiceOption",
+      token: token,
+      body: body,
+      reuse: disableReuse
+        ? "disable_reuse"
+        : hideReuse
+        ? "hide_reuse"
+        : allowReuse
+        ? "allow_reuse"
+        : null,
+      selectableIf: selectableIf?.expression ?? null,
+    };
+  }
+
+  proseStatement(): ProseStatement {
+    const collectedProse: ProseToken[] = [];
+
+    while (this.match(["Prose"], false, true)) {
+      const prose = this.advance() as ProseToken;
+      collectedProse.push(prose);
+    }
+
+    return <ProseStatement>{ content: collectedProse, kind: "Prose" };
   }
 
   expressionStatement(): ExpressionStatement {
     const expr = this.expression();
-    this.consumeLineChange();
     return <ExpressionStatement>{ expression: expr };
   }
 
   createVariable(temporary: boolean): DeclareVariableStatement {
     const token = this.previous();
     const identifier = this.consume("Identifier", "Expect variable name");
-    const peek = this.peek();
-    const expr =
-      peek.lineNumber !== identifier.lineNumber ? null : this.expression();
+    const expr = !this.peekSameLine() ? null : this.expression();
+    this.expectLineChange();
     return <DeclareVariableStatement>{
       kind: "DeclareVariable",
       variable: identifier,
@@ -142,12 +492,12 @@ export class Parser {
     const token = this.previous();
     const identifier = this.consume("Identifier", "Expect variable name");
     const expr = this.expression();
-    this.consumeLineChange();
+    this.expectLineChange();
     return <SetVariableStatement>{
       kind: "SetVariable",
       variable: identifier,
       expression: expr,
-      token: token
+      token: token,
     };
   }
 
@@ -179,7 +529,13 @@ export class Parser {
   term(): Expression {
     let expr: Expression = this.factor();
 
-    while (this.match(["SubtractionOperator", "AdditionOperator"])) {
+    while (
+      this.match([
+        "SubtractionOperator",
+        "AdditionOperator",
+        "ConcatenationOperator",
+      ])
+    ) {
       const operator: Token = this.previous();
       const right = this.term();
       expr = <Binary>{
@@ -216,7 +572,13 @@ export class Parser {
 
   unary(): Expression {
     if (
-      this.match(["NotOperator", "SubtractionOperator", "AdditionOperator"])
+      this.match([
+        "NotOperator",
+        "SubtractionOperator",
+        "AdditionOperator",
+        "FairmathAdditionOperator",
+        "FairmathSubtractionOperator",
+      ])
     ) {
       const operator = this.previous();
       const right = this.unary();
@@ -250,7 +612,19 @@ export class Parser {
 
   expression(): Expression {
     console.log("Matching Expression at", this.current);
-    return this.equality();
+    return this.logical();
+  }
+
+  logical() {
+    let expr = this.equality();
+
+    while (this.match(["LogicalAnd", "LogicalOr"])) {
+      const operator: Token = this.previous();
+      const right: Expression = this.equality();
+      expr = <Binary>{ left: expr, operator: operator, right: right };
+    }
+
+    return expr;
   }
 
   equality() {
@@ -265,9 +639,9 @@ export class Parser {
     return expr;
   }
 
-  consumeIndentChange() {
-    if (!this.peekSameIndent()) {
-      return this.advance();
+  expectIndentChange() {
+    if (!this.peekSameIndent(this.previous()?.indent ?? 0)) {
+      return;
     }
 
     const peek = this.peek();
@@ -277,7 +651,7 @@ export class Parser {
     );
   }
 
-  consumeLineChange() {
+  expectLineChange() {
     if (!this.peekSameLine()) {
       return;
     }
@@ -289,7 +663,12 @@ export class Parser {
     );
   }
 
-  consume(type: TokenType, message: string, sameLine: boolean = true, sameIndent: boolean = true) {
+  consume(
+    type: TokenType,
+    message: string,
+    sameLine: boolean = true,
+    sameIndent: boolean = true
+  ) {
     console.log("Consume", type, message);
     if (this.check(type)) return this.advance();
 
@@ -298,7 +677,10 @@ export class Parser {
 
   error(token: Token, message: string) {
     if (token.type == "SceneEnd") {
-      this.report(`at end of scene ${token.sceneName}:${token.lineNumber}:${token.position}[${token.indent}]`, message);
+      this.report(
+        `at end of scene ${token.sceneName}:${token.lineNumber}:${token.position}[${token.indent}]`,
+        message
+      );
     } else {
       this.report(
         `at '${token.type}' ${token.sceneName}:${token.lineNumber}:${token.position}[${token.indent}]`,
@@ -307,10 +689,7 @@ export class Parser {
     }
   }
 
-  report(
-    location: string,
-    message: string
-  ) {
+  report(location: string, message: string) {
     const err = `Error: ${message} ${location}`;
     console.error(err);
     throw new Error(err);
