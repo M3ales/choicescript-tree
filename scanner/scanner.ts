@@ -176,10 +176,16 @@ export const scanScene = (scene: Scene) => {
             case "Expression":
                 {
                     if (isStartOfToken(line[context.position])) {
+                        var expressionTokens = tokenizeExpressionString(
+                            context.currentToken,
+                            context.lineNumber,
+                            context.currentTokenStartPosition,
+                            context.indent.current,
+                            context.currentScene.name);
+                        tokens.push(...expressionTokens);
                         context.mode = "Token";
                         context.currentTokenStartPosition = context.position;
-                        var expressionTokens = handleExpression(context);
-                        tokens.push(...expressionTokens);
+                        context.currentToken = '';
                         //console.log('Encountered Token, switching mode to Token after expression', expressionTokens)
                         continue;
                     }
@@ -191,7 +197,13 @@ export const scanScene = (scene: Scene) => {
 
                     if(context.position == line.length - 1) {
                         // eol, we parse the expression
-                        var expressionTokens = handleExpression(context);
+                        var expressionTokens = tokenizeExpressionString(
+                            context.currentToken,
+                            context.lineNumber,
+                            context.currentTokenStartPosition,
+                            context.indent.current,
+                            context.currentScene.name);
+                        
                         //console.log("EOL reached, scanning expression", expressionTokens)
                         tokens.push(...expressionTokens);
                     }
@@ -299,15 +311,6 @@ const parseMultireplaceFromProse = (proseString: string, context: ScannerContext
 
     return tokens;
 }
-
-const handleExpression = (context: ScannerContext) => {
-    return tokenizeExpressionString(
-        context.currentToken,
-        context.lineNumber,
-        context.currentTokenStartPosition,
-        context.indent.current,
-        context.currentScene.name);
-};
 
 const handleToken = (context: ScannerContext) => {
       const createInContextToken = (token: Token) => {
