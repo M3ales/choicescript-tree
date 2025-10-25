@@ -94,7 +94,7 @@ export const scanScene = (scene: Scene) => {
             context.indent.previous = context.indent.current;
             context.indent.current = 0;
 
-            if(context.proseBlock.length !== 0) {
+            if(context.proseBlock.trim().length !== 0) {
                 context.proseBlock += '\n';
             }
             continue;
@@ -126,6 +126,13 @@ export const scanScene = (scene: Scene) => {
             case "Prose": {
                 if(context.position === 0 && !(line.includes('*') || line.includes('#'))) {
                     //shortcut to speed up evaluation of large prose blocks (majority of the text)
+                    if(context.proseBlockStart === undefined) {
+                        context.proseBlockStart = {
+                            position: context.position,
+                            lineNumber: context.lineNumber,
+                            indent: context.indent.current,
+                        };
+                    }
                     context.proseBlock += line;
                     context.position = line.length;
                     continue;
@@ -136,18 +143,27 @@ export const scanScene = (scene: Scene) => {
                     context.currentTokenStartPosition = context.position;
                     if(context.proseBlock.trim().length > 0) {
                         tokens.push(<ProseToken>{
-                            indent: context.indent.current,
+                            indent: context.proseBlockStart.indent,
                             type: 'Prose',
                             sceneName: scene.name,
                             content: context.proseBlock,
-                            lineNumber: context.lineNumber,
-                            position: context.position,
+                            lineNumber: context.proseBlockStart.lineNumber,
+                            position: context.proseBlockStart.position,
                         });
 
                         context.proseBlock = '';
+                        context.proseBlockStart = undefined;
                     }
 
                     continue;
+                }
+
+                if(context.proseBlockStart === undefined) {
+                    context.proseBlockStart = { 
+                        position: context.position,
+                        lineNumber: context.lineNumber,
+                        indent: context.indent.current,
+                    }
                 }
                 context.proseBlock += line[context.position];
                 context.position++;
