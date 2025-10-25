@@ -48,6 +48,7 @@ import {tokenizeExpressionString} from './expression-handler';
 export const scanScene = (scene: Scene) => {
     const context: ScannerContext = {
         proseBlock: '',
+        proseBlockStart: undefined,
         currentScene: scene,
         lineNumber: 0,
         position: 0,
@@ -124,7 +125,7 @@ export const scanScene = (scene: Scene) => {
                 break;
             }
             case "Prose": {
-                if(context.position === 0 && !(line.includes('*') || line.includes('#'))) {
+                if(context.position === (context.indent.current * 2) && !(line.includes('*') || line.includes('#'))) {
                     //shortcut to speed up evaluation of large prose blocks (majority of the text)
                     if(context.proseBlockStart === undefined) {
                         context.proseBlockStart = {
@@ -150,11 +151,10 @@ export const scanScene = (scene: Scene) => {
                             lineNumber: context.proseBlockStart.lineNumber,
                             position: context.proseBlockStart.position,
                         });
-
-                        context.proseBlock = '';
-                        context.proseBlockStart = undefined;
                     }
 
+                    context.proseBlock = '';
+                    context.proseBlockStart = undefined;
                     continue;
                 }
 
