@@ -289,10 +289,10 @@ export class Parser {
   ifStatement(): Statement {
     const token = this.previous();
     const expression = this.expression();
-    this.expectLineChange();
+    // this.expectLineChange();
     const body: Statement[] = [];
 
-    while (this.childScope(token.indent)) {
+    while (this.childScope(token.indent) || this.peekSameLine()) {
       body.push(this.statement());
     }
 
@@ -349,41 +349,23 @@ export class Parser {
 
   choiceStatement(): ChoiceStatement {
     const token = this.previous();
-    const choice = <ChoiceStatement>{ kind: "Choice", token: token, body: [] };
     const body: Statement[] = [];
-    // TODO: disable reuse
 
     while (this.childScope(token.indent)) {
       console.log("Parsing choice body at", this.current, this.peek());
-      if (
-        this.match(
-          [
-            "ChoiceOption",
-            "AllowReuse",
-            "DisableReuse",
-            "SelectableIf",
-            "HideReuse",
-          ],
-          false,
-          false
-        )
-      ) {
-        body.push(this.choiceOption());
-      } else if (this.match(["FakeChoice"], false, false)) {
-        // TODO: fake choice
-      } else if (this.match(["If"], false, false)) {
-        body.push(this.ifStatement());
-      } else if (this.match(["Comment"], false, false)) {
+      
+      if(this.match(["Comment"], false, false)){
         body.push(this.commentBlock());
-      } else {
-        throw this.error(
-          this.peek(),
-          "Expected choice option or conditional branch in choice statement."
-        );
+      }else if(this.match(["If"], false, false)) {
+        body.push(this.ifStatement());
+      }else if(this.match(["Prose"], false, false)) {
+        throw this.error(this.previous(), "Prose is not allowed directly inside Choice statements. Did you mean to put it inside a ChoiceOption?");
+      }else {
+        body.push(this.choiceOption());
       }
     }
-    choice.body = body;
-    return choice;
+
+    return <ChoiceStatement>{ kind: "Choice", token: token, body: body };;
   }
 
   gotoLabel(): GotoLabelStatement {
@@ -419,24 +401,29 @@ export class Parser {
     let allowReuse: AllowReuseToken | null = null;
     let selectableIf: SelectableIfStatement | null = null;
 
-    while (
-      this.match(
-        ["DisableReuse", "HideReuse", "AllowReuse", "SelectableIf"],
-        false,
-        false
-      )
-    ) {
+    if(this.current == 1132) {
+      console.log(this.previous());
+    }
+    
+    while([
+      'DisableReuse',
+      'HideReuse',
+      'AllowReuse',
+      'SelectableIf',
+    ].findIndex(t => t === this.peek().type) !== -1) {
       if (this.match(["DisableReuse"], false, false)) {
-        disableReuse = this.advance() as DisableReuseToken;
+        disableReuse = this.previous() as DisableReuseToken;
       } else if (this.match(["HideReuse"], false, false)) {
-        hideReuse = this.advance() as HideReuseToken;
+        hideReuse = this.previous() as HideReuseToken;
       } else if (this.match(["AllowReuse"], false, false)) {
-        allowReuse = this.advance() as AllowReuseToken;
+        allowReuse = this.previous() as AllowReuseToken;
       } else if (this.match(["SelectableIf"], false, false)) {
-        selectableIf = this.selectableIf(); // TODO: investigate issue with selectable if in scanner, looks like its eating the choice its related to?
+        selectableIf = this.selectableIf();
       }
     }
-
+    if(!this.match(["ChoiceOption"], false, false)) {
+      console.error("Expected ChoiceOption token after modifiers at", this.current, this.peek());
+    }
     const token = this.previous();
     const body: Statement[] = [];
     while (this.childScope(token.indent)) {
