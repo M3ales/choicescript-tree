@@ -134,7 +134,7 @@ export const scanScene = (scene: Scene) => {
                 if (isStartOfToken(line[context.position])) {
                     context.mode = "Token";
                     context.currentTokenStartPosition = context.position;
-                    if(context.proseBlock.length > 0) {
+                    if(context.proseBlock.trim().length > 0) {
                         tokens.push(<ProseToken>{
                             indent: context.indent.current,
                             type: 'Prose',
