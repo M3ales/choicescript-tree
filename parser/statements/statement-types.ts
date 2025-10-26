@@ -5,6 +5,7 @@ export type StatementTypes =
   | "Prose"
   | "Choice"
   | "ChoiceOption"
+  | "FakeChoice"
   | "SelectableIf"
   | "If"
   | "ElseIf"
@@ -18,4 +19,9 @@ export type StatementTypes =
   | "PageBreak"
   | "InputText"
   | "InputNumber"
-  | "Comment";
+  | "Comment"
+  | "AllowReuse"
+  | "DisableReuse"
+  | "HideReuse"
+  | "Finish"
+  | "Ending";
