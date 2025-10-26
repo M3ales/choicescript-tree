@@ -139,7 +139,13 @@ export const scanScene = (scene: Scene) => {
                     continue;
                 }
 
-                if (isStartOfToken(line[context.position])) {
+                let arraySelectorInsideMultireplace = false;
+                if(line.includes('{') && line.includes('#')) { // TODO: actually parse this so we dont deal with this hellish thing, bad fix
+                    // might be mutli replace
+                    arraySelectorInsideMultireplace = isInsideMultiReplaceOrVariable(line);
+                }
+
+                if (!arraySelectorInsideMultireplace && isStartOfToken(line[context.position])) {
                     context.mode = "Token";
                     context.currentTokenStartPosition = context.position;
                     if(context.proseBlock.trim().length > 0) {
@@ -520,4 +526,22 @@ export const isVariableName = (value: string) => {
     }
 
     return true;
+}
+
+const isInsideMultiReplaceOrVariable = (line: string) => {
+    const pos = line.indexOf('#');
+    if(pos == 0)
+        return false;
+    const left = line.slice(0, pos-1);
+    const right = line.slice(pos+1);
+    if(left.includes('#')){
+        return isInsideMultiReplaceOrVariable(left) &&
+        left.includes('{') && right.includes('}');
+    }
+    if(right.includes('#')){
+        return isInsideMultiReplaceOrVariable(right) && 
+        left.includes('{') && right.includes('}');
+    }
+
+    return left.includes('{') && right.includes('}');
 }
