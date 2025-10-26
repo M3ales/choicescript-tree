@@ -7,6 +7,8 @@ export interface ScannerContext {
 
     currentToken: string;
     currentTokenStartPosition: number | undefined;
+    
+    currentLine: string;
 
     position: number;
     lineNumber: number;

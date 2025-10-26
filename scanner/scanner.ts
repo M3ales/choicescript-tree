@@ -102,6 +102,7 @@ export const scanScene = (scene: Scene) => {
         }
 
         const line = sceneLines[context.lineNumber];
+        context.currentLine = line;
 
         switch(context.mode) {
             case "Indentation": {
@@ -121,6 +122,7 @@ export const scanScene = (scene: Scene) => {
                     && context.indent.current < context.indent.previous) {
                     context.insideMultiLineToken = false;
                 }
+                
                 context.mode = "Prose";
                 break;
             }
@@ -405,6 +407,13 @@ const handleToken = (context: ScannerContext) => {
         case '*else ': {
             context.mode = "Expression";
             return createInContextToken(<ElseToken>{type: 'Else'});
+        }
+        case '*else': {
+            if(context.position + 1 >= context.currentLine.trimEnd().length) {
+                context.mode = "Expression";
+                return createInContextToken(<ElseToken>{type: 'Else'});
+            }
+            break;
         }
         case '*create': {
             context.mode = "Expression";
