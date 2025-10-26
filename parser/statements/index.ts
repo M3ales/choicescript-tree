@@ -6,6 +6,7 @@ export * from "./declare-variable";
 export * from "./disable-reuse";
 export * from "./else-if";
 export * from "./else";
+export * from './ending';
 export * from "./expression";
 export * from "./fake-choice";
 export * from "./finish";

@@ -29,6 +29,7 @@ import {
   DisableReuseStatement,
   ElseIfStatement,
   ElseStatement,
+  EndingStatement,
   ExpressionStatement,
   FakeChoiceStatement,
   FinishStatement,
@@ -75,7 +76,7 @@ export class Parser {
     const newToken = this.peek();
 
     if (!this.isAtEnd()) this.current++;
-
+    /*
     const indent = newToken.indent == old?.indent ? newToken.indent : `${old?.indent}->${newToken.indent}`;
     const lineNumber = newToken.lineNumber == old?.lineNumber ? newToken.lineNumber : `${old?.lineNumber}->${newToken.lineNumber}`
     
@@ -93,7 +94,7 @@ export class Parser {
     const leading = changes.length > 0 ? '|--' : '|-';
     const detail = `${newToken.type} at ${newToken.sceneName}:${lineNumber}:${newToken.position}[${indent}]`;
     console.log(`${leading} Advanced to ${this.current} ${detail}`);
-
+    */
     return newToken;
   }
 
@@ -181,12 +182,13 @@ export class Parser {
     if (this.match(["CreateTempVariable"], false, false))
       return this.createVariable(true);
     if (this.match(["GoSub"], false, false)) return this.goSub();
+    if (this.match(["Finish"], false, false)) return this.finishStatement();
     if (this.match(["GoSubScene"], false, false)) return this.goSubScene();
     if (this.match(["Return"], false, false)) return this.return();
     if (this.match(["InputText"], false, false)) return this.inputText();
     if (this.match(["Comment"], false, false)) return this.commentBlock();
-    if (this.match(["Finish"], false, false)) return this.commentBlock();
     if (this.match(["SceneStart"], false, false)) return this.scene();
+    if (this.match(["Ending"], false, false)) return this.endingStatement();
     const peek = this.peek();
     
     throw new Error(
@@ -303,6 +305,9 @@ export class Parser {
       if(this.match(["ChoiceOption", "AllowReuse", "HideReuse", "DisableReuse", "SelectableIf"], false, false)) {
         return this.choiceOptionWithModifiers();
       }
+      if(this.match(["If"], false, false)) {
+        return this.choiceBoundedifStatement();
+      }
       return this.statement();
     }
     return this.ifStatement(parser);
@@ -330,7 +335,7 @@ export class Parser {
       elseBranch = this.elseStatement(bodyParser);
     }
 
-    console.log('Complete If', token);
+    //console.log('Complete If', token);
     return <IfStatement>{
       kind: "If",
       token: token,
@@ -377,69 +382,74 @@ export class Parser {
     }
     return <FinishStatement>{ kind: 'Finish', token: token, buttonText: prose }
   }
+  
+  endingStatement(): EndingStatement {
+    const token = this.previous();
+    let prose = null;
+    if(this.match(["Prose"], true, true)) {
+      prose = this.previous();
+    }
+    return <EndingStatement>{ kind: 'Ending', token: token, buttonText: prose }
+  }
 
   choiceStatement(): ChoiceStatement {
     const token = this.previous();
     const body: Statement[] = [];
 
     while (this.childScope(token.indent)) {
-      console.log("Parsing choice body at", this.current, this.peek());
-      
-      if(this.match(["Comment"], false, false)){
-        console.log('Add comment inside choice');
-        body.push(this.commentBlock());
-      }else if(this.match(["If"], false, false)) {
-        console.log('Add bounded if statement inside choice');
-        body.push(this.choiceBoundedifStatement());
-      }else if(this.match(["Prose"], false, false)) {
-        throw this.error(this.previous(), "Prose is not allowed directly inside Choice statements.");
-      }else if(this.match([
+      if(this.match([
         "ChoiceOption",
         "AllowReuse",
         "DisableReuse",
         "HideReuse",
         "SelectableIf"
       ], false, false)) {
-        console.log('Add choice with modifiers block', this.previous());
+        //console.log('Add choice with modifiers block', this.previous());
         body.push(this.choiceOptionWithModifiers());
+      }
+      else if(this.match(["If"], false, false)) {
+        body.push(this.choiceBoundedifStatement());
+      }else if(this.match(["Prose"], false, false)) {
+        throw this.error(this.previous(), "Prose is not allowed directly inside Choice statements.");
+      }else if(this.match(["Comment"], false, false)){
+        body.push(this.commentBlock());
       }
     }
 
-    console.log('Complete Choice');
+    //console.log('Complete Choice');
 
     return <ChoiceStatement>{ kind: "Choice", token: token, body: body };
   }
 
   
   fakeChoiceStatement(): FakeChoiceStatement {
-    console.log('Fake Choice Starting');
     const token = this.previous();
     const body: Statement[] = [];
 
     while (this.childScope(token.indent)) {
-      console.log("Parsing fake choice body at", this.current, this.peek());
-      
-      if(this.match(["Comment"], false, false)){
-        console.log('Add comment inside choice');
-        body.push(this.commentBlock());
-      }else if(this.match(["If"], false, false)) {
-        console.log('Add bounded if statement inside choice');
-        body.push(this.choiceBoundedifStatement());
-      }else if(this.match(["Prose"], false, false)) {
-        throw this.error(this.previous(), "Prose is not allowed directly inside Choice statements.");
-      }else if(this.match([
+
+      if(this.match([
         "ChoiceOption",
         "AllowReuse",
         "DisableReuse",
         "HideReuse",
         "SelectableIf"
       ], false, false)) {
-        console.log('Add choice with modifiers block', this.previous());
+        //console.log('Add choice with modifiers block', this.previous());
         body.push(this.choiceOptionWithModifiers());
       }
+      else if(this.match(["If"], false, false)) {
+        body.push(this.choiceBoundedifStatement());
+      }else if(this.match(["Label"], false, false)) {
+        body.push(this.labelDefinition());
+      }else if(this.match(["Prose"], false, false)) {
+        throw this.error(this.previous(), "Prose is not allowed directly inside Choice statements.");
+      }else if(this.match(["Comment"], false, false)){
+        body.push(this.commentBlock());
+      }
     }
-
-    console.log('Complete Fake Choice');
+    
+    //console.log('Complete Fake Choice');
 
     return <FakeChoiceStatement>{ kind: "FakeChoice", token: token, body: body };;
   }
@@ -513,6 +523,9 @@ export class Parser {
       else if(this.match(["ChoiceOption"], false, false)) {
         return this.choiceOption(modififers);
       }
+      else if(this.match(["If"], true, true)) {
+        return this.choiceBoundedifStatement();
+      }
       else {
         break;
       }
@@ -541,9 +554,11 @@ export class Parser {
     const body: Statement[] = [];
 
     while (this.childScope(token.indent)) {
-      console.log('Read child', this.peek());
+      // console.log('Read child', this.peek());
       body.push(this.statement());
     }
+
+    //console.log('Exited child scope', token.lineNumber);
 
     const disableReuse = (modifiers.find(m => m.kind === "DisableReuse") as DisableReuseStatement) !== undefined ? true : false;
     const hideReuse = (modifiers.find(m => m.kind === "HideReuse") as HideReuseStatement) !== undefined ? true : false;
@@ -575,7 +590,7 @@ export class Parser {
       collectedProse.push(prose);
     }
 
-    console.log('Collected Prose', collectedProse.length, this.current)
+    //console.log('Collected Prose', collectedProse.length, this.current)
     return <ProseStatement>{ content: collectedProse, kind: "Prose" };
   }
 
@@ -721,7 +736,7 @@ export class Parser {
   }
 
   expression(): Expression {
-    console.log("Matching Expression at", this.current);
+    //console.log("Matching Expression at", this.current);
     return this.logical();
   }
 
@@ -779,7 +794,7 @@ export class Parser {
     sameLine: boolean = true,
     sameIndent: boolean = true
   ) {
-    console.log("Consume", type, message);
+    //console.log("Consume", type, message);
     if (this.check(type)) return this.advance();
 
     throw this.error(this.peek(), message);
