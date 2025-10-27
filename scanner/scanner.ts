@@ -41,7 +41,8 @@ import {
     DisableReuseToken,
     AllowReuseToken,
     LineBreakToken,
-    ProseToken
+    ProseToken,
+    SceneListToken
 } from "./tokens";
 import {tokenizeExpressionString} from './expression-handler';
 
@@ -196,6 +197,9 @@ export const scanScene = (scene: Scene) => {
                 }
                 context.mode = 'Prose';
                 break;
+            }
+            case "SceneList":{
+                // TODO: write impl to parse all the scene list identifiers here
             }
             case "Expression":
                 {
@@ -464,8 +468,9 @@ const handleToken = (context: ScannerContext) => {
             return createInContextToken(<CommentToken>{ type: 'Comment' });
         }
         case '*scene_list': {
+            context.mode = 'SceneList';
             context.insideMultiLineToken = true;
-            break;
+            return createInContextToken(<SceneListToken>{ type: 'SceneList' });
         }
         case '*achievement': {
             context.insideMultiLineToken = true;

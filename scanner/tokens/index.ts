@@ -48,6 +48,7 @@ export * from "./save-checkpoint";
 export * from "./restore-checkpoint";
 export * from "./scene-end";
 export * from "./scene-start";
+export * from "./scene-list";
 export * from "./selectable-if";
 export * from "./set-variable";
 export * from "./stat-chart";
