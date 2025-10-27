@@ -136,7 +136,7 @@ export const scanScene = (scene: Scene) => {
                             indent: context.indent.current,
                         };
                     }
-                    context.proseBlock += line;
+                    context.proseBlock += line.trimStart();
                     context.position = line.length;
                     continue;
                 }
@@ -155,7 +155,7 @@ export const scanScene = (scene: Scene) => {
                             indent: context.proseBlockStart.indent,
                             type: 'Prose',
                             sceneName: scene.name,
-                            content: context.proseBlock,
+                            content: context.proseBlock.trimStart(),
                             lineNumber: context.proseBlockStart.lineNumber,
                             position: context.proseBlockStart.position,
                         });
@@ -484,11 +484,11 @@ const handleToken = (context: ScannerContext) => {
             return createInContextToken(<InputTextToken>{type: 'InputText'});
         }
         case "*author": {
-            context.mode = "Expression";
+            context.mode = "ProseToEOL";
             return createInContextToken(<AuthorToken>{type: 'Author'});
         }
         case "*ifid": {
-            context.mode = "Expression";
+            context.mode = "ProseToEOL";
             return createInContextToken(<GameIdentifierToken>{type: 'GameIdentifier'});
         }
         case "*page_break": {
