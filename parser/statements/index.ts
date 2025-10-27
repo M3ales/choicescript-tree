@@ -1,4 +1,5 @@
 export * from "./allow-reuse";
+export * from "./author";
 export * from './comment-block';
 export * from "./choice-option";
 export * from "./choice";

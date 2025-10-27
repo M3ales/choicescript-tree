@@ -1,4 +1,5 @@
 export type StatementTypes =
+  | "Author"
   | "DeclareVariable"
   | "SetVariable"
   | "Expression"

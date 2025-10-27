@@ -7,6 +7,8 @@ import {
   IdentifierToken,
   NumberLiteralToken,
   ProseToken,
+  SceneEndToken,
+  SceneStartToken,
   StringLiteralToken,
   Token,
   UnaryOperatorToken,
@@ -22,6 +24,7 @@ import {
 } from "./expressions";
 import {
   AllowReuseStatement,
+  AuthorStatement,
   ChoiceOptionStatement,
   ChoiceStatement,
   CommentBlock,
@@ -48,6 +51,7 @@ import {
   SetVariableStatement,
   Statement,
 } from "./statements";
+import { Scene } from "./scene";
 
 export class Parser {
   tokens: Token[];
@@ -160,11 +164,26 @@ export class Parser {
     return false;
   }
 
-  scene(): Statement {
-    while (this.match(["SceneStart"], false, false)) {
-      this.advance(); // TODO: perhaps make this the root of the program?
+  parseScene(): Scene {
+    if (this.match(["SceneStart"], false, false)) {
+      const sceneStart = this.previous() as SceneStartToken;
+      const statements: Statement[] = [];
+      while (!this.isAtEnd() && !this.match(["SceneEnd"], false, false)) {
+        statements.push(this.statement());
+      }
+      const sceneEnd = this.previous() as SceneEndToken;
+
+      return <Scene>{
+        name: sceneStart.sceneName,
+
+        statements: statements,
+
+        start: sceneStart,
+        end: sceneEnd,
+      };
     }
-    return this.statement();
+
+    return null;
   }
 
   statement(): Statement {
@@ -187,13 +206,20 @@ export class Parser {
     if (this.match(["Return"], false, false)) return this.return();
     if (this.match(["InputText"], false, false)) return this.inputText();
     if (this.match(["Comment"], false, false)) return this.commentBlock();
-    if (this.match(["SceneStart"], false, false)) return this.scene();
     if (this.match(["Ending"], false, false)) return this.endingStatement();
+    if (this.match(["Author"], false, false)) return this.authorStatement();
     const peek = this.peek();
     
     throw new Error(
       `Unknown statement block starting ${peek?.type} at ${peek?.sceneName}:${peek?.lineNumber}:${peek?.position}[${peek?.indent}]`
     );
+  }
+
+  authorStatement(): AuthorStatement {
+    const token = this.previous();
+    const name = this.consume("Prose", "Expect author name.");
+    this.expectLineChange();
+    return <AuthorStatement>{ kind: "Author", token: token };
   }
 
   commentBlock(): CommentBlock {
