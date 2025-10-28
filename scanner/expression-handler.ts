@@ -13,7 +13,9 @@ import {
   MultiReplaceElseToken,
   OpenMultiReplaceToken,
   CloseBraceToken,
+  IndexerToken,
 } from "./tokens";
+import { DollarToken } from "./tokens/expressions/dollar";
 import { OpenPrintToken } from "./tokens/expressions/open-print";
 import { OpenPrintCapitaliseAllToken } from "./tokens/expressions/open-print-caps-all";
 import { OpenPrintCapitaliseFirstToken } from "./tokens/expressions/open-print-caps-first";
@@ -378,6 +380,28 @@ export function tokenizeExpressionString(
           sceneName: sceneName,
           indent: indent,
         } as CloseBraceToken);
+        cursor++;
+        continue;
+      }
+      case "#": {
+        tokens.push({
+          type: "Indexer",
+          position: position + cursor,
+          lineNumber: lineNumber,
+          sceneName: sceneName,
+          indent: indent,
+        } as IndexerToken);
+        cursor++;
+        continue;
+      }
+      case "$": {
+        tokens.push({
+          type: "Dollar",
+          position: position + cursor,
+          lineNumber: lineNumber,
+          sceneName: sceneName,
+          indent: indent,
+        } as DollarToken);
         cursor++;
         continue;
       }

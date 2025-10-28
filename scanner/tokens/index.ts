@@ -11,6 +11,8 @@ export * from "./expressions/open-print-caps-first";
 export * from "./expressions/operator";
 export * from "./expressions/string-literal";
 export * from "./expressions/identifier";
+export * from "./expressions/indexer";
+export * from "./expressions/dollar";
 
 export * from "./allow-reuse";
 export * from "./author";

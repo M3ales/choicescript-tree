@@ -124,6 +124,10 @@ export const scanScene = (scene: Scene) => {
                     context.insideMultiLineToken = false;
                 }
                 
+                if(context.insideMultiLineToken) {
+                    context.mode = "Expression";
+                    break;
+                }
                 context.mode = "Prose";
                 break;
             }
@@ -189,7 +193,7 @@ export const scanScene = (scene: Scene) => {
                         indent: context.indent.current,
                         type: 'Prose',
                         sceneName: scene.name,
-                        content: substring,
+                        content: substring.trimStart(),
                         lineNumber: context.lineNumber,
                         position: context.position,
                     });
@@ -197,9 +201,6 @@ export const scanScene = (scene: Scene) => {
                 }
                 context.mode = 'Prose';
                 break;
-            }
-            case "SceneList":{
-                // TODO: write impl to parse all the scene list identifiers here
             }
             case "Expression":
                 {
