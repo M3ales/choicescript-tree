@@ -14,9 +14,13 @@ export * from "./expressions/identifier";
 export * from "./expressions/indexer";
 export * from "./expressions/dollar";
 
+export * from "./achieve";
+export * from "./achievement";
+export * from "./allow-reuse";
 export * from "./allow-reuse";
 export * from "./author";
 export * from "./comment";
+export * from "./check-achievements";
 export * from "./choice-option";
 export * from "./choice";
 export * from "./create-temp-variable";

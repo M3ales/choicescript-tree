@@ -1,4 +1,5 @@
 export type StatementTypes =
+  | "Achievement"
   | "Author"
   | "DeclareVariable"
   | "SetVariable"
@@ -25,4 +26,5 @@ export type StatementTypes =
   | "DisableReuse"
   | "HideReuse"
   | "Finish"
-  | "Ending";
+  | "Ending"
+  | "SceneList";

@@ -14,6 +14,7 @@ import {
   OpenMultiReplaceToken,
   CloseBraceToken,
   IndexerToken,
+  ProseToken,
 } from "./tokens";
 import { DollarToken } from "./tokens/expressions/dollar";
 import { OpenPrintToken } from "./tokens/expressions/open-print";
@@ -27,7 +28,7 @@ function isDigit(char: string): boolean {
 
 function isLetter(char: string): boolean {
   const code = char.charCodeAt(0);
-  return (code >= 65 && code <= 90) || (code >= 97 && code <= 122); // 'A'-'Z' or 'a'-'z'
+  return (code >= 97 && code <= 122) || (code >= 65 && code <= 90); // 'A'-'Z' or 'a'-'z'
 }
 
 function isLetterOrUnderscore(char: string): boolean {
@@ -36,6 +37,15 @@ function isLetterOrUnderscore(char: string): boolean {
 
 function isAlphanumericOrUnderscore(char: string): boolean {
   return isLetter(char) || isDigit(char) || char === "_";
+}
+
+function isUppercaseLetter(char: string) {
+  const code = char.charCodeAt(0);
+  return (code >= 65 && code <= 90);
+}
+
+function isPunctuation(char: string): boolean {
+  return [".", ",", "!", "?", ";", ":", "'"].includes(char);
 }
 
 export function tokenizeExpressionString(
@@ -510,6 +520,7 @@ export function tokenizeExpressionString(
             sceneName: sceneName,
             indent: indent,
           });
+
           continue;
         }
       }

@@ -1,3 +1,4 @@
+export * from "./achievement";
 export * from "./allow-reuse";
 export * from "./author";
 export * from './comment-block';

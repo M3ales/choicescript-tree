@@ -42,9 +42,16 @@ import {
     AllowReuseToken,
     LineBreakToken,
     ProseToken,
-    SceneListToken
+    SceneListToken,
+    AchieveToken,
+    AchievementToken,
+    CheckAchievementsToken,
+    StringLiteralToken,
+    IdentifierToken,
+    NumberLiteralToken
 } from "./tokens";
 import {tokenizeExpressionString} from './expression-handler';
+import { parseAchievementBlock as scanAchievementBlock } from "./achievement-handler";
 
 export const scanScene = (scene: Scene) => {
     const context: ScannerContext = {
@@ -107,27 +114,29 @@ export const scanScene = (scene: Scene) => {
 
         switch(context.mode) {
             case "Indentation": {
-                const indentation  = context.indent;
                 if (line[context.position] === '\t') {
-                    indentation.current++;
+                    context.indent.current++;
                     context.position++;
                     continue;
                 }
                 if (line[context.position] === ' ') {
-                    indentation.current += 0.5;
+                    context.indent.current += 0.5;
                     context.position++;
                     continue;
                 }
-
-                if(context.insideMultiLineToken
-                    && context.indent.current < context.indent.previous) {
+                
+                if(context.insideMultiLineToken && context.indent.current < context.indent.previous) {
                     context.insideMultiLineToken = false;
                 }
                 
                 if(context.insideMultiLineToken) {
-                    context.mode = "Expression";
-                    break;
+                    const probablyExpression = isLikelyExpression(line);
+                    if(probablyExpression){
+                        context.mode = "Expression";
+                        break;
+                    }
                 }
+                
                 context.mode = "Prose";
                 break;
             }
@@ -244,7 +253,6 @@ export const scanScene = (scene: Scene) => {
                 context.currentToken += line[context.position];
                 const token = handleToken(context);
                 if(token != undefined) {
-                    //console.log('Matched token', token);
                     tokens.push(token);
                 }
                 context.position++;
@@ -279,6 +287,28 @@ export const scanScene = (scene: Scene) => {
                 context.currentTokenStartPosition = undefined;
                 context.position = line.length;
                 
+                break;
+            }
+            case "Achievement": {
+                const preLine = sceneLines[context.lineNumber + 1];
+                const postLine = sceneLines[context.lineNumber + 2];
+                //console.log('Reading Achievement', line, preLine, postLine);
+                const scanned = scanAchievementBlock(
+                    line,
+                    context.position,
+                    preLine,
+                    postLine,
+                    context.lineNumber,
+                    context.indent.current,
+                    context.currentScene.name
+                );
+
+                tokens.push(...scanned);
+                context.position = postLine.length;
+                context.lineNumber += 2;
+                context.insideMultiLineToken = false;
+
+                context.mode = "Prose";
                 break;
             }
         }
@@ -469,13 +499,20 @@ const handleToken = (context: ScannerContext) => {
             return createInContextToken(<CommentToken>{ type: 'Comment' });
         }
         case '*scene_list': {
-            context.mode = 'SceneList';
             context.insideMultiLineToken = true;
             return createInContextToken(<SceneListToken>{ type: 'SceneList' });
         }
         case '*achievement': {
-            context.insideMultiLineToken = true;
-            break;
+            context.mode = "Achievement";
+            return createInContextToken(<AchievementToken>{type: 'Achievement'});
+        }
+        case '*check_achievements': {
+            context.mode = "Prose";
+            return createInContextToken(<CheckAchievementsToken>{type: 'CheckAchievements'});
+        }
+        case '*achieve ': {
+            context.mode = "Expression";
+            return createInContextToken(<AchieveToken>{type: 'Achieve'});
         }
         case "*image": {
             context.mode = "Expression";
@@ -497,6 +534,11 @@ const handleToken = (context: ScannerContext) => {
             context.mode = "ProseToEOL";
             return createInContextToken(<GameIdentifierToken>{type: 'GameIdentifier'});
         }
+        case "*purchase_discount": {
+            context.mode = "Prose";
+            break;
+        }
+        case "*page_break_advertisement":
         case "*page_break": {
             context.mode = "ProseToEOL";
             return createInContextToken(<PageBreakToken>{type: 'PageBreak'});
@@ -559,4 +601,38 @@ const isInsideMultiReplaceOrVariable = (line: string) => {
     }
 
     return left.includes('{') && right.includes('}');
+}
+
+const parseAchievement = (
+    line: string,
+    lineNumber: number,
+    sceneName: string,
+    beforeDescription: string,
+    afterDescription: string) => {
+    const parts = line.split(' ');
+    if(parts.length < 2) {
+        return null;
+    }
+}
+
+const isLikelyExpression = (line: string) => {
+    const expression = tokenizeExpressionString(line, 0, 0, 0, 'none');
+    const literals: StringLiteralToken[] = expression.filter(e => e.type === 'StringLiteral').map(e => e as StringLiteralToken);
+
+    if(line.includes("'") && !literals.some(l => l.value.includes("'"))) {
+        return false;
+    }
+    if(line.includes(".") && !literals.some(l => l.value.includes("."))) {
+        return false;
+    }
+    if(line.includes(",") && !literals.some(l => l.value.includes(","))) {
+        return false;
+    }
+
+    if(expression.length > 1 && 
+        expression.every(e => e.type == 'Identifier')) {
+        return false;
+    }
+
+    return true;
 }

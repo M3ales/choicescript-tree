@@ -1,5 +1,6 @@
 import { match } from "assert";
 import {
+  AchievementToken,
   AllowReuseToken,
   CommentToken,
   DisableReuseToken,
@@ -8,6 +9,7 @@ import {
   NumberLiteralToken,
   ProseToken,
   SceneEndToken,
+  SceneListToken,
   SceneStartToken,
   StringLiteralToken,
   Token,
@@ -23,6 +25,7 @@ import {
   Unary,
 } from "./expressions";
 import {
+  AchievementStatement,
   AllowReuseStatement,
   AuthorStatement,
   ChoiceOptionStatement,
@@ -52,6 +55,7 @@ import {
   Statement,
 } from "./statements";
 import { Scene } from "./scene";
+import { SceneIdentifier as SceneIdentifierToken, SceneListStatement } from "./statements/scene-list";
 
 export class Parser {
   tokens: Token[];
@@ -64,8 +68,8 @@ export class Parser {
 
   check(
     type: TokenType,
-    sameLine: boolean = true,
-    sameIndent: boolean = true
+    sameLine: boolean = false,
+    sameIndent: boolean = false
   ): boolean {
     if (this.isAtEnd()) return false;
     if (sameLine && !this.peekSameLine()) return false;
@@ -208,6 +212,8 @@ export class Parser {
     if (this.match(["Comment"], false, false)) return this.commentBlock();
     if (this.match(["Ending"], false, false)) return this.endingStatement();
     if (this.match(["Author"], false, false)) return this.authorStatement();
+    if (this.match(["SceneList"], false, false)) return this.sceneList();
+    if (this.match(["Achievement"], false, false)) return this.achievementDefinition();
     const peek = this.peek();
     
     throw new Error(
@@ -215,11 +221,67 @@ export class Parser {
     );
   }
 
+  achievementDefinition(): AchievementStatement {
+    const token: AchievementToken = this.previous() as AchievementToken;
+
+    const codename: IdentifierToken = this.consume(
+      "Identifier",
+      "Expect achievement codename."
+    ) as IdentifierToken;
+
+    const visibility: IdentifierToken = this.consume(
+      "Identifier",
+      "Expect achievement visibility."
+    ) as IdentifierToken;
+
+    const points: NumberLiteralToken = this.consume(
+      "NumberLiteral",
+      "Expect achievement points."
+    ) as NumberLiteralToken;
+
+    const title: ProseToken = this.consume(
+      "Prose", 
+      "Expect achievement title."
+    ) as ProseToken;
+
+    let preDescription : IdentifierToken | ProseToken;
+    if(this.match(["Identifier"], false, false)) {
+      preDescription = this.previous() as IdentifierToken;
+    }
+    else if(this.match(["Prose"], false, false)) {
+      preDescription = this.previous() as ProseToken;
+    }
+
+    const postDescription: ProseToken = this.consume(
+      "Prose",
+      "Expect unlocked achievement description."
+    ) as ProseToken;
+
+    return <AchievementStatement>{ kind: 'Achievement', token: token, hidden: visibility.value === "hidden" };
+  }
+
+  sceneList(): SceneListStatement {
+    const token: SceneListToken = this.previous() as SceneListToken;
+    const identifiers: SceneIdentifierToken[] = [];
+    while (this.childScope(token.indent)) {
+      const paid = this.match(["Dollar"], false, false);
+      const id = this.consume(
+        "Identifier",
+        "Expect scene identifier in scene list.",
+        false,
+        false
+      ) as IdentifierToken;
+      identifiers.push({ paid: paid, ...id });
+    }
+
+    return <SceneListStatement>{ kind: 'SceneList', token: token, identifiers: identifiers };
+  }
+
   authorStatement(): AuthorStatement {
     const token = this.previous();
     const name = this.consume("Prose", "Expect author name.");
     this.expectLineChange();
-    return <AuthorStatement>{ kind: "Author", token: token };
+    return <AuthorStatement>{ kind: "Author", token: token, value: name };
   }
 
   commentBlock(): CommentBlock {
