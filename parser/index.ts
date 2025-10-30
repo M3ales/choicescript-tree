@@ -11,13 +11,17 @@ const execute = async () => {
     const sceneAsts: SceneAst[] = [];
     const tokenStream: Token[] = scenes.flatMap(s => s);
     console.log(`Parsing AST from: ${tokenStream.length} tokens`);
-    const parser = new Parser(tokenStream);
-    const ast = parser.parseScene();
-    
-    sceneAsts.push(ast);
-    // Stop if there was a syntax error.
-    if (ast == null) return;
 
+    for(const scene of scenes) {
+        const parser = new Parser(scene);
+        const ast = parser.parseScene();
+    
+        sceneAsts.push(ast);
+        // Stop if there was a syntax error.
+        if (ast == null) {
+            console.log('Null AST returned from parser, stopping further parsing.', scene[0].sceneName);
+        };    
+    }
     
     console.log(`Writing ${scenes.length} scenes with total of ${sceneAsts.flatMap(f => f).length} statements to ./parsed.json`);
     fs.writeFileSync('./parsed.json', JSON.stringify(sceneAsts, null, 2));
