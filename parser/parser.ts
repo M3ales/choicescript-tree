@@ -2,6 +2,7 @@ import { match } from "assert";
 import {
   AchievementToken,
   AllowReuseToken,
+  CheckAchievementsToken,
   CommentToken,
   DisableReuseToken,
   HideReuseToken,
@@ -28,6 +29,7 @@ import {
   AchievementStatement,
   AllowReuseStatement,
   AuthorStatement,
+  CheckAchievementsStatement,
   ChoiceOptionStatement,
   ChoiceStatement,
   CommentBlock,
@@ -56,6 +58,7 @@ import {
 } from "./statements";
 import { Scene } from "./scene";
 import { SceneIdentifier as SceneIdentifierToken, SceneListStatement } from "./statements/scene-list";
+import { AchieveStatement } from "./statements/achieve";
 
 export class Parser {
   tokens: Token[];
@@ -214,11 +217,29 @@ export class Parser {
     if (this.match(["Author"], false, false)) return this.authorStatement();
     if (this.match(["SceneList"], false, false)) return this.sceneList();
     if (this.match(["Achievement"], false, false)) return this.achievementDefinition();
+    if (this.match(["Achieve"], false, false)) return this.achieveStatement();
+    if (this.match(["CheckAchievements"], false, false)) return this.checkAchievementsStatement();
     const peek = this.peek();
     
     throw new Error(
       `Unknown statement block starting ${peek?.type} at ${peek?.sceneName}:${peek?.lineNumber}:${peek?.position}[${peek?.indent}]`
     );
+  }
+  
+  checkAchievementsStatement(): Statement {
+    const token = this.previous() as CheckAchievementsToken;
+    this.expectLineChange();
+    return <CheckAchievementsStatement>{ kind: "CheckAchievements", token: token };
+  }
+
+  achieveStatement(): Statement {
+    const token = this.previous();
+    const codename: IdentifierToken = this.consume(
+      "Identifier",
+      "Expect achievement codename."
+    ) as IdentifierToken;
+    this.expectLineChange();
+    return <AchieveStatement>{ kind: "Achieve", token: token, codename: codename };
   }
 
   achievementDefinition(): AchievementStatement {

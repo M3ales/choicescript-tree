@@ -1,5 +1,7 @@
 export type StatementTypes =
+  | "Achieve"
   | "Achievement"
+  | "CheckAchievements"
   | "Author"
   | "DeclareVariable"
   | "SetVariable"
