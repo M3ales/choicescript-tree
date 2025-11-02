@@ -330,7 +330,7 @@ export class Parser {
 
     let identifier = null;
     if (this.peekSameLine()) {
-      identifier = this.consume("Identifier", "Expect subroutine label name.");
+      identifier = this.consumeOneOf(["Identifier", "NumberLiteral"], "Expect subroutine label name.");
     }
     this.expectLineChange();
 
@@ -374,13 +374,13 @@ export class Parser {
       "Identifier",
       "Expect scene name."
     ) as IdentifierToken;
-    let label: IdentifierToken;
+    let label: IdentifierToken | NumberLiteralToken;
 
     if (this.peekSameLine()) {
-      label = this.consume(
-        "Identifier",
+      label = this.consumeOneOf(
+        ["Identifier", "NumberLiteral"],
         "Expect label name."
-      ) as IdentifierToken;
+      ) as IdentifierToken | NumberLiteralToken;
     } else {
       label = null;
     }
@@ -575,7 +575,7 @@ export class Parser {
 
   gotoLabel(): GotoLabelStatement {
     const token = this.previous();
-    const label = this.consume("Identifier", "Expect label name.");
+    const label = this.consumeOneOf(["Identifier", "NumberLiteral"], "Expect label name.");
     this.expectLineChange();
     return <GotoLabelStatement>{
       kind: "GotoLabel",
@@ -586,7 +586,7 @@ export class Parser {
 
   labelDefinition(): LabelStatement {
     const token = this.previous();
-    const identifier = this.consume("Identifier", "Expect label name.");
+    const identifier = this.consumeOneOf(["Identifier", "NumberLiteral"], "Expect label name.");
     return <LabelStatement>{ kind: "Label", token: token, label: identifier };
   }
 
@@ -915,6 +915,22 @@ export class Parser {
   ) {
     //console.log("Consume", type, message);
     if (this.check(type)) return this.advance();
+
+    throw this.error(this.peek(), message);
+  }
+
+  consumeOneOf(
+    type: TokenType[],
+    message: string,
+    sameLine: boolean = true,
+    sameIndent: boolean = true
+  ) {
+    //console.log("Consume", type, message);
+    for(const t of type) {
+      if(this.check(t)) {
+        return this.advance();
+      }
+    }
 
     throw this.error(this.peek(), message);
   }
