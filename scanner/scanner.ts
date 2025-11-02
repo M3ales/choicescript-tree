@@ -48,7 +48,10 @@ import {
     CheckAchievementsToken,
     StringLiteralToken,
     IdentifierToken,
-    NumberLiteralToken
+    NumberLiteralToken,
+    DeleteArrayToken,
+    CreateTempArrayToken,
+    CreateArrayToken
 } from "./tokens";
 import {tokenizeExpressionString} from './expression-handler';
 import { parseAchievementBlock as scanAchievementBlock } from "./achievement-handler";
@@ -596,6 +599,18 @@ const handleCommand = (context: ScannerContext) => {
         case "*rand": {
             context.mode = "Expression";
             return createInContextToken(<GenerateRandomToken>{type: 'GenerateRandom'});
+        }
+        case "*create_array": {
+            context.mode = "Expression";
+            return createInContextToken(<CreateArrayToken>{type: 'CreateArray'});
+        }
+        case "*temp_array": {
+            context.mode = "Expression";
+            return createInContextToken(<CreateTempArrayToken>{type: 'CreateTempArray'});
+        }
+        case "*delete_array": {
+            context.mode = "Expression";
+            return createInContextToken(<DeleteArrayToken>{type: 'DeleteArray'});
         }
     }
 
