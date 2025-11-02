@@ -5,6 +5,6 @@ export interface GoSubSceneStatement extends Statement {
     kind: "GoSubScene";
     token: GoSubToken;
     scene: IdentifierToken;
-    label: IdentifierToken | NumberLiteralToken | null;
+    label: (IdentifierToken | NumberLiteralToken)[];
 }
   
