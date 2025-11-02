@@ -271,6 +271,28 @@ export const scanScene = (scene: Scene) => {
                     context.position = line.length;
                     
                     break;
+                }    
+                case "Achievement": {
+                    const preLine = context.sceneLines[context.lineNumber + 1];
+                    const postLine = context.sceneLines[context.lineNumber + 2];
+                    //console.log('Reading Achievement', line, preLine, postLine);
+                    const scanned = scanAchievementBlock(
+                        line,
+                        context.position,
+                        preLine,
+                        postLine,
+                        context.lineNumber,
+                        context.indent.current,
+                        context.scene.name
+                    );
+
+                    tokens.push(...scanned);
+                    context.position = postLine.length;
+                    context.lineNumber += 2;
+                    context.insideMultiLineToken = false;
+
+                    context.mode = "Prose";
+                    break;
                 }
             }
         }
@@ -278,28 +300,6 @@ export const scanScene = (scene: Scene) => {
         switch(context.mode) {
             case "SceneList": {
                 tokens.push(...handleSceneList(context));
-                break;
-            }
-            case "Achievement": {
-                const preLine = context.sceneLines[context.lineNumber + 1];
-                const postLine = context.sceneLines[context.lineNumber + 2];
-                //console.log('Reading Achievement', line, preLine, postLine);
-                const scanned = scanAchievementBlock(
-                    line,
-                    context.position,
-                    preLine,
-                    postLine,
-                    context.lineNumber,
-                    context.indent.current,
-                    context.scene.name
-                );
-
-                tokens.push(...scanned);
-                context.position = postLine.length;
-                context.lineNumber += 2;
-                context.insideMultiLineToken = false;
-
-                context.mode = "Prose";
                 break;
             }
         }
