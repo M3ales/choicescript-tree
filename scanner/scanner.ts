@@ -92,6 +92,9 @@ export const scanScene = (scene: Scene) => {
             lastMode = context.mode;
         }
 
+        if(scene.name === 'chapter8' && context.lineNumber == 2571){
+            console.log(context.indent.current);
+        }
         // Line end reached case
         if(context.position >= context.sceneLines[context.lineNumber].length) {
             context.lineNumber++;
@@ -112,6 +115,12 @@ export const scanScene = (scene: Scene) => {
 
         const line = context.sceneLines[context.lineNumber];
         context.currentLine = line;
+
+        if(line.trim().length === 0) {
+            context.position = line.length;
+            context.indent.current = context.indent.previous;
+            continue;
+        }
 
         const lineIndent = countIndentation(line);
         
