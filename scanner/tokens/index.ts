@@ -48,6 +48,7 @@ export * from "./label";
 export * from "./line-break";
 export * from "./link";
 export * from "./page-break";
+export * from "./parameters";
 export * from "./prose";
 export * from "./return";
 export * from "./save-checkpoint";

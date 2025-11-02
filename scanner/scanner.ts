@@ -54,6 +54,7 @@ import {tokenizeExpressionString} from './expression-handler';
 import { parseAchievementBlock as scanAchievementBlock } from "./achievement-handler";
 import { handleSceneList } from "./scene-list-handler";
 import { countIndentation, scanIndentCharacter } from "./indent";
+import { ParametersToken } from "./tokens/parameters";
 
 export const scanScene = (scene: Scene) => {
     const context: ScannerContext = {
@@ -424,6 +425,10 @@ const handleCommand = (context: ScannerContext) => {
         case '*label': {
             context.mode = "Expression";
             return createInContextToken(<LabelToken>{type: 'Label'});
+        }
+        case '*params': {
+            context.mode = "Expression";
+            return createInContextToken(<ParametersToken>{type: 'Parameters'});
         }
         case '*hide_reuse': {
             context.mode = "Prose";

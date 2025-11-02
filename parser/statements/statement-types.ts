@@ -24,6 +24,7 @@ export type StatementTypes =
   | "GoSubScene"
   | "Return"
   | "PageBreak"
+  | "Parameters"
   | "InputText"
   | "InputNumber"
   | "Comment"

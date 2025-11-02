@@ -54,6 +54,7 @@ import {
   LineBreakStatement,
   LinkStatement,
   PageBreakStatement,
+  ParametersStatement,
   ProseStatement,
   ReturnStatement,
   SelectableIfStatement,
@@ -227,11 +228,26 @@ export class Parser {
     if (this.match(["GenerateRandom"], false, false)) return this.generateRandomStatement();
     if (this.match(["InputText"], false, false)) return this.inputText();
     if (this.match(["InputNumber"], false, false)) return this.inputNumber();
+    if (this.match(["Parameters"], false, false)) return this.parametersStatement();
     const peek = this.peek();
     
     throw new Error(
       `Unknown statement block starting ${peek?.type} at ${peek?.sceneName}:${peek?.lineNumber}:${peek?.position}[${peek?.indent}]`
     );
+  }
+  parametersStatement(): ParametersStatement {
+    const token = this.previous();
+    const identifiers = [];
+    while(this.peekSameLine()) {
+      identifiers.push(
+        this.consume("Identifier", "Expect identifier following *params statement", true, true)
+      );
+    }
+    return <ParametersStatement> {
+      kind: "Parameters",
+      token: token,
+      identifiers: identifiers,
+    }
   }
 
   generateRandomStatement(): GenerateRandomStatement {

@@ -28,6 +28,7 @@ export * from "./line-break";
 export * from "./link";
 export * from './prose';
 export * from "./page-break";
+export * from "./parameters";
 export * from "./return";
 export * from "./selectable-if";
 export * from "./set-variable";
