@@ -50,6 +50,7 @@ import {
   InputTextStatement,
   LabelStatement,
   LineBreakStatement,
+  LinkStatement,
   PageBreakStatement,
   ProseStatement,
   ReturnStatement,
@@ -221,11 +222,22 @@ export class Parser {
     if (this.match(["Achievement"], false, false)) return this.achievementDefinition();
     if (this.match(["Achieve"], false, false)) return this.achieveStatement();
     if (this.match(["CheckAchievements"], false, false)) return this.checkAchievementsStatement();
+    if (this.match(["Link"], false, false)) return this.linkStatement();
     const peek = this.peek();
     
     throw new Error(
       `Unknown statement block starting ${peek?.type} at ${peek?.sceneName}:${peek?.lineNumber}:${peek?.position}[${peek?.indent}]`
     );
+  }
+
+  linkStatement(): LinkStatement {
+    const token = this.previous();
+    let url: ProseToken | null = null;
+    if (this.peekSameLine()) {
+      url = this.consume("Prose", "Expect URL after Link.") as ProseToken;
+    }
+    this.expectLineChange();
+    return <LinkStatement>{ kind: "Link", token: token, url: url };
   }
   
   checkAchievementsStatement(): Statement {

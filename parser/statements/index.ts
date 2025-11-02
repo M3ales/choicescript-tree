@@ -23,6 +23,7 @@ export * from "./if";
 export * from "./input-text";
 export * from "./label";
 export * from "./line-break";
+export * from "./link";
 export * from './prose';
 export * from "./page-break";
 export * from "./return";

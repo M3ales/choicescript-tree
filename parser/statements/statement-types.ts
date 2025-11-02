@@ -16,6 +16,7 @@ export type StatementTypes =
   | "Else"
   | "Label"
   | "LineBreak"
+  | "Link"
   | "GotoLabel"
   | "GotoScene"
   | "GoSub"

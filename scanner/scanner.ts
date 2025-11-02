@@ -70,6 +70,8 @@ export const scanScene = (scene: Scene) => {
             current: 0,
             previous: undefined,
         },
+        currentLine: "",
+        sceneLines: []
     };
 
     const tokens: Token[] = [
@@ -92,9 +94,6 @@ export const scanScene = (scene: Scene) => {
             lastMode = context.mode;
         }
 
-        if(scene.name === 'chapter8' && context.lineNumber == 2571){
-            console.log(context.indent.current);
-        }
         // Line end reached case
         if(context.position >= context.sceneLines[context.lineNumber].length) {
             context.lineNumber++;
@@ -491,7 +490,7 @@ const handleToken = (context: ScannerContext) => {
             return createInContextToken(<SelectableIfToken>{ type: 'SelectableIf' });
         }
         case '*link': {
-            context.mode = "Expression";
+            context.mode = "ProseToEOL";
             return createInContextToken(<LinkToken>{ type: 'Link' });
         }
         case '*comment': {

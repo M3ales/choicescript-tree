@@ -4,6 +4,6 @@ import { Statement } from "./statement";
 export interface LabelStatement extends Statement {
     kind: "Label";
     token: LabelToken;
-    label: IdentifierToken | NumberLiteralToken;
+    label: (IdentifierToken | NumberLiteralToken)[];
 }
   
