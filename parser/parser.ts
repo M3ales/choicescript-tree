@@ -41,6 +41,7 @@ import {
   ExpressionStatement,
   FakeChoiceStatement,
   FinishStatement,
+  GenerateRandomStatement,
   GoSubSceneStatement,
   GoSubStatement,
   GotoLabelStatement,
@@ -223,11 +224,42 @@ export class Parser {
     if (this.match(["Achieve"], false, false)) return this.achieveStatement();
     if (this.match(["CheckAchievements"], false, false)) return this.checkAchievementsStatement();
     if (this.match(["Link"], false, false)) return this.linkStatement();
+    if (this.match(["GenerateRandom"], false, false)) return this.generateRandomStatement();
     const peek = this.peek();
     
     throw new Error(
       `Unknown statement block starting ${peek?.type} at ${peek?.sceneName}:${peek?.lineNumber}:${peek?.position}[${peek?.indent}]`
     );
+  }
+
+  generateRandomStatement(): GenerateRandomStatement {
+    const token = this.previous();
+    const identifier: IdentifierToken = this.consume(
+      "Identifier",
+      "Expect variable name to store random number.",
+      true,
+      true
+    ) as IdentifierToken;
+    const min: NumberLiteralToken = this.consume(
+      "NumberLiteral",
+      "Expect minimum number.",
+      true,
+      true
+    ) as NumberLiteralToken;
+    const max: NumberLiteralToken = this.consume(
+      "NumberLiteral",
+      "Expect maximum number.",
+      true,
+      true
+    ) as NumberLiteralToken;
+    this.expectLineChange();
+    return <GenerateRandomStatement>{
+      kind: "GenerateRandom",
+      token: token,
+      identifier: identifier,
+      min: min,
+      max: max,
+    };
   }
 
   linkStatement(): LinkStatement {
@@ -538,6 +570,11 @@ export class Parser {
     const token = this.previous();
     const body: Statement[] = [];
 
+    const noteTokens: ProseToken[] = [];
+    while(this.peekSameLine()) {
+      noteTokens.push(this.consume("Prose", "Note elements on same line after choice") as ProseToken);
+    }
+
     while (this.childScope(token.indent)) {
       if(this.match([
         "ChoiceOption",
@@ -707,7 +744,11 @@ export class Parser {
     const body: Statement[] = [];
 
     while (this.childScope(token.indent)) {
-      // console.log('Read child', this.peek());
+      //console.log('Read child', this.peek());
+      if(this.match(['ChoiceOption'], false, false)) {
+        body.push(this.choiceOptionWithModifiers());
+        continue;
+      }
       body.push(this.statement());
     }
 

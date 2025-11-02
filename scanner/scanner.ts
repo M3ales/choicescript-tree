@@ -462,7 +462,7 @@ const handleToken = (context: ScannerContext) => {
             return createInContextToken(<SetVariableToken>{type: 'SetVariable'});
         }
         case '*choice': {
-            context.mode = "Prose";
+            context.mode = "ProseToEOL";
             return createInContextToken(<ChoiceToken>{type: 'Choice'});
         }
         case '*fake_choice': {

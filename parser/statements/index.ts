@@ -14,6 +14,7 @@ export * from './ending';
 export * from "./expression";
 export * from "./fake-choice";
 export * from "./finish";
+export * from "./generate-random";
 export * from "./gosub";
 export * from "./gosub-scene";
 export * from "./goto-label";

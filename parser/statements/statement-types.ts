@@ -17,6 +17,7 @@ export type StatementTypes =
   | "Label"
   | "LineBreak"
   | "Link"
+  | "GenerateRandom"
   | "GotoLabel"
   | "GotoScene"
   | "GoSub"
