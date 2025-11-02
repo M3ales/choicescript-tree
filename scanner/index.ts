@@ -11,6 +11,9 @@ const execute = async () => {
         console.warn("Implicit Control Flow detected");
     }
 
+    if(sceneNames.every(name => name !== 'startup')) {
+        sceneNames.unshift('startup');
+    }
     let scenes = await Promise.all(sceneNames.map(scene => loadScene(scene)));
     console.info(`Loaded ${scenes.length} scenes`);
 
