@@ -1,6 +1,7 @@
 export * from "./expressions/boolean-literal";
 export * from "./expressions/close-parenthesis";
 export * from "./expressions/close-brace";
+export * from "./expressions/close-square-bracket";
 export * from "./expressions/multireplace-else";
 export * from "./expressions/number-literal";
 export * from "./expressions/open-multireplace";
@@ -8,6 +9,7 @@ export * from "./expressions/open-parenthesis";
 export * from "./expressions/open-print";
 export * from "./expressions/open-print-caps-all";
 export * from "./expressions/open-print-caps-first";
+export * from "./expressions/open-square-bracket";
 export * from "./expressions/operator";
 export * from "./expressions/string-literal";
 export * from "./expressions/identifier";

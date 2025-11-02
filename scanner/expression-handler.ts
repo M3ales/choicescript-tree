@@ -15,6 +15,8 @@ import {
   CloseBraceToken,
   IndexerToken,
   ProseToken,
+  OpenSquareBracketToken,
+  CloseSquareBracketToken,
 } from "./tokens";
 import { DollarToken } from "./tokens/expressions/dollar";
 import { OpenPrintToken } from "./tokens/expressions/open-print";
@@ -41,7 +43,7 @@ function isAlphanumericOrUnderscore(char: string): boolean {
 
 function isUppercaseLetter(char: string) {
   const code = char.charCodeAt(0);
-  return (code >= 65 && code <= 90);
+  return code >= 65 && code <= 90;
 }
 
 function isPunctuation(char: string): boolean {
@@ -125,29 +127,53 @@ export function tokenizeExpressionString(
     }
 
     // Handle parentheses
-    if (char === "(") {
-      tokens.push({
-        type: "OpenParenthesis",
-        position: position + cursor,
-        lineNumber: lineNumber,
-        sceneName: sceneName,
-        indent: indent,
-      } as OpenParenthesisToken);
-      cursor++;
-      continue;
+    switch (char) {
+      case "(": {
+        tokens.push({
+          type: "OpenParenthesis",
+          position: position + cursor,
+          lineNumber: lineNumber,
+          sceneName: sceneName,
+          indent: indent,
+        } as OpenParenthesisToken);
+        cursor++;
+        continue;
+      }
+      case ")": {
+        tokens.push({
+          type: "CloseParenthesis",
+          position: position + cursor,
+          lineNumber: lineNumber,
+          sceneName: sceneName,
+          indent: indent,
+        } as CloseParenthesisToken);
+        cursor++;
+        continue;
+      }
+      
+      case "[": {
+        tokens.push({
+          type: "OpenSquareBracket",
+          position: position + cursor,
+          lineNumber: lineNumber,
+          sceneName: sceneName,
+          indent: indent,
+        } as OpenSquareBracketToken);
+        cursor++;
+        continue;
+      }
+      case "]": {
+        tokens.push({
+          type: "CloseSquareBracket",
+          position: position + cursor,
+          lineNumber: lineNumber,
+          sceneName: sceneName,
+          indent: indent,
+        } as CloseSquareBracketToken);
+        cursor++;
+        continue;
+      }
     }
-    if (char === ")") {
-      tokens.push({
-        type: "CloseParenthesis",
-        position: position + cursor,
-        lineNumber: lineNumber,
-        sceneName: sceneName,
-        indent: indent,
-      } as CloseParenthesisToken);
-      cursor++;
-      continue;
-    }
-
     // Handle multi-character operators
     if (cursor + 1 < expression.length) {
       const startPos = cursor;
@@ -178,7 +204,7 @@ export function tokenizeExpressionString(
           cursor += 2;
           continue;
         }
-        case ">=":{
+        case ">=": {
           tokens.push(<ComparisonOperatorToken>{
             type: "GreaterThanEqualsOperator",
             rawValue: twoChars,
@@ -190,7 +216,7 @@ export function tokenizeExpressionString(
           cursor += 2;
           continue;
         }
-        case "<=":{
+        case "<=": {
           tokens.push(<ComparisonOperatorToken>{
             type: "LessThanEqualsOperator",
             rawValue: twoChars,
@@ -215,55 +241,55 @@ export function tokenizeExpressionString(
           continue;
         }
         case "@{": {
-            tokens.push({
-                type: "OpenMultiReplace",
-                position: position + startPos,
-                lineNumber: lineNumber,
-                sceneName: sceneName,
-                indent: indent,
-            } as OpenMultiReplaceToken);
-            cursor += 2;
-            continue;
+          tokens.push({
+            type: "OpenMultiReplace",
+            position: position + startPos,
+            lineNumber: lineNumber,
+            sceneName: sceneName,
+            indent: indent,
+          } as OpenMultiReplaceToken);
+          cursor += 2;
+          continue;
         }
         case "${": {
-            tokens.push({
-                type: "OpenPrint",
-                position: position + startPos,
-                lineNumber: lineNumber,
-                sceneName: sceneName,
-                indent: indent,
-            } as OpenPrintToken);
-            cursor += 2;
-            continue;
+          tokens.push({
+            type: "OpenPrint",
+            position: position + startPos,
+            lineNumber: lineNumber,
+            sceneName: sceneName,
+            indent: indent,
+          } as OpenPrintToken);
+          cursor += 2;
+          continue;
         }
         case "$!{": {
-            tokens.push({
-                type: "OpenPrintCapitaliseFirst",
-                position: position + startPos,
-                lineNumber: lineNumber,
-                sceneName: sceneName,
-                indent: indent,
-            } as OpenPrintCapitaliseFirstToken);
-            cursor += 2;
-            continue;
+          tokens.push({
+            type: "OpenPrintCapitaliseFirst",
+            position: position + startPos,
+            lineNumber: lineNumber,
+            sceneName: sceneName,
+            indent: indent,
+          } as OpenPrintCapitaliseFirstToken);
+          cursor += 2;
+          continue;
         }
         case "$!!{": {
-            tokens.push({
-                type: "OpenPrintCapitaliseAll",
-                position: position + startPos,
-                lineNumber: lineNumber,
-                sceneName: sceneName,
-                indent: indent,
-            } as OpenPrintCapitaliseAllToken);
-            cursor += 2;
-            continue;
+          tokens.push({
+            type: "OpenPrintCapitaliseAll",
+            position: position + startPos,
+            lineNumber: lineNumber,
+            sceneName: sceneName,
+            indent: indent,
+          } as OpenPrintCapitaliseAllToken);
+          cursor += 2;
+          continue;
         }
       }
     }
 
     // Handle single-character operators
     switch (char) {
-      case "+":{
+      case "+": {
         tokens.push(<ArithmeticOperatorToken>{
           type: "AdditionOperator",
           rawValue: char,
@@ -275,7 +301,7 @@ export function tokenizeExpressionString(
         cursor++;
         continue;
       }
-      case "-":{
+      case "-": {
         tokens.push(<ArithmeticOperatorToken>{
           type: "SubtractionOperator",
           rawValue: char,
@@ -287,7 +313,7 @@ export function tokenizeExpressionString(
         cursor++;
         continue;
       }
-      case "*":{
+      case "*": {
         tokens.push(<ArithmeticOperatorToken>{
           type: "MultiplicationOperator",
           rawValue: char,
@@ -299,7 +325,7 @@ export function tokenizeExpressionString(
         cursor++;
         continue;
       }
-      case "/":{
+      case "/": {
         tokens.push(<ArithmeticOperatorToken>{
           type: "DivisionOperator",
           rawValue: char,
@@ -311,7 +337,7 @@ export function tokenizeExpressionString(
         cursor++;
         continue;
       }
-      case "%":{
+      case "%": {
         tokens.push(<ArithmeticOperatorToken>{
           type: "ModulusOperator",
           rawValue: char,
@@ -335,7 +361,7 @@ export function tokenizeExpressionString(
         cursor++;
         continue;
       }
-      case "=":{
+      case "=": {
         tokens.push(<ComparisonOperatorToken>{
           type: "EqualityOperator",
           rawValue: char,
@@ -347,7 +373,7 @@ export function tokenizeExpressionString(
         cursor++;
         continue;
       }
-      case ">":{
+      case ">": {
         tokens.push(<ComparisonOperatorToken>{
           type: "GreaterThanOperator",
           rawValue: char,
@@ -445,7 +471,7 @@ export function tokenizeExpressionString(
           } as BooleanLiteralToken);
           continue;
         }
-        case "and":{
+        case "and": {
           tokens.push(<LogicalOperatorToken>{
             type: "LogicalAnd",
             rawValue: value,
@@ -467,7 +493,7 @@ export function tokenizeExpressionString(
           } as LogicalOperatorToken);
           continue;
         }
-        case "not":{
+        case "not": {
           tokens.push(<UnaryOperatorToken>{
             type: "NotOperator",
             position: position + startPos,
