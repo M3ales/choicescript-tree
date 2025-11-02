@@ -49,6 +49,7 @@ import {
   IfStatement,
   InputTextStatement,
   LabelStatement,
+  LineBreakStatement,
   PageBreakStatement,
   ProseStatement,
   ReturnStatement,
@@ -202,6 +203,7 @@ export class Parser {
     if (this.match(["GotoScene"], false, false)) return this.gotoScene();
     if (this.match(["Label"], false, false)) return this.labelDefinition();
     if (this.match(["PageBreak"], false, false)) return this.pageBreak();
+    if (this.match(["LineBreak"], false, false)) return this.lineBreak();
     if (this.match(["SetVariable"], false, false)) return this.setVariable();
     if (this.match(["CreateVariable"], false, false))
       return this.createVariable(false);
@@ -389,6 +391,14 @@ export class Parser {
       token: token,
       scene: scene,
       label: label,
+    };
+  }
+
+  lineBreak(): LineBreakStatement {
+    const token = this.previous();
+    return <LineBreakStatement>{
+      kind: "LineBreak",
+      token: token,
     };
   }
 

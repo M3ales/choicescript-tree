@@ -22,6 +22,7 @@ export * from "./hide-reuse";
 export * from "./if";
 export * from "./input-text";
 export * from "./label";
+export * from "./line-break";
 export * from './prose';
 export * from "./page-break";
 export * from "./return";

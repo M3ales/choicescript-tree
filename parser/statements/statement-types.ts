@@ -15,6 +15,7 @@ export type StatementTypes =
   | "ElseIf"
   | "Else"
   | "Label"
+  | "LineBreak"
   | "GotoLabel"
   | "GotoScene"
   | "GoSub"
