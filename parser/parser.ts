@@ -602,13 +602,14 @@ export class Parser {
 
   labelDefinition(): LabelStatement {
     const token = this.previous();
-    const identifier = this.consumeOneOf(["Identifier", "NumberLiteral"], "Expect label name.");
-    if(this.peekSameLine() && identifier.type === "NumberLiteral") {
+    const label = [];
+    label.push(this.consumeOneOf(["Identifier", "NumberLiteral"], "Expect label name."));
+    if(this.peekSameLine() && label[0].type === "NumberLiteral") {
       console.log('Parsing compound label name');
-      this.consume("Identifier", "Labels cannot have spaces in their names.");
+      label.push(this.consume("Identifier", "Labels cannot have spaces in their names."));
     }
     this.expectLineChange();
-    return <LabelStatement>{ kind: "Label", token: token, label: identifier };
+    return <LabelStatement>{ kind: "Label", token: token, label: label };
   }
 
   selectableIf(): SelectableIfStatement {
