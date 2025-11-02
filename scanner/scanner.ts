@@ -52,18 +52,19 @@ import {
 } from "./tokens";
 import {tokenizeExpressionString} from './expression-handler';
 import { parseAchievementBlock as scanAchievementBlock } from "./achievement-handler";
+import { handleSceneList } from "./scene-list-handler";
+import { countIndentation, scanIndentCharacter } from "./indent";
 
 export const scanScene = (scene: Scene) => {
     const context: ScannerContext = {
         proseBlock: '',
         proseBlockStart: undefined,
-        currentScene: scene,
+        scene: scene,
         lineNumber: 0,
         position: 0,
-        mode: 'Indentation',
+        mode: 'Prose',
         currentToken: '',
         currentTokenStartPosition: undefined,
-
         insideMultiLineToken: false,
         indent: {
             current: 0,
@@ -81,10 +82,10 @@ export const scanScene = (scene: Scene) => {
         }
     ];
 
-    const sceneLines = scene.content.replace('\r\n', '\n').split('\n');
+    context.sceneLines = scene.content.replace('\r\n', '\n').split('\n');
 
     let lastMode = 'Initial';
-    while (context.lineNumber < sceneLines.length) {
+    while (context.lineNumber < context.sceneLines.length) {
 
         if(lastMode !== context.mode) {
             //console.log(`Transition from ${lastMode} to ${context.mode}`)
@@ -92,12 +93,12 @@ export const scanScene = (scene: Scene) => {
         }
 
         // Line end reached case
-        if(context.position >= sceneLines[context.lineNumber].length) {
+        if(context.position >= context.sceneLines[context.lineNumber].length) {
             context.lineNumber++;
             context.position = 0;
 
             context.currentTokenStartPosition = undefined;
-            context.mode = 'Indentation';
+            context.mode = 'Prose';
             context.currentTokenStartPosition = 0;
             context.currentToken = '';
             context.indent.previous = context.indent.current;
@@ -109,189 +110,179 @@ export const scanScene = (scene: Scene) => {
             continue;
         }
 
-        const line = sceneLines[context.lineNumber];
+        const line = context.sceneLines[context.lineNumber];
         context.currentLine = line;
 
-        switch(context.mode) {
-            case "Indentation": {
-                if (line[context.position] === '\t') {
-                    context.indent.current++;
-                    context.position++;
-                    continue;
-                }
-                if (line[context.position] === ' ') {
-                    context.indent.current += 0.5;
-                    context.position++;
-                    continue;
-                }
-                
-                if(context.insideMultiLineToken && context.indent.current < context.indent.previous) {
-                    context.insideMultiLineToken = false;
-                }
-                
-                if(context.insideMultiLineToken) {
-                    const probablyExpression = isLikelyExpression(line);
-                    if(probablyExpression){
-                        context.mode = "Expression";
-                        break;
-                    }
-                }
-                
-                context.mode = "Prose";
-                break;
-            }
-            case "Prose": {
-                if(context.position === (context.indent.current * 2) && !(line.includes('*') || line.includes('#'))) {
-                    //shortcut to speed up evaluation of large prose blocks (majority of the text)
-                    if(context.proseBlockStart === undefined) {
-                        context.proseBlockStart = {
-                            position: context.position,
-                            lineNumber: context.lineNumber,
-                            indent: context.indent.current,
-                        };
-                    }
-                    context.proseBlock += line.trimStart();
-                    context.position = line.length;
-                    continue;
-                }
+        const lineIndent = countIndentation(line);
+        
+        context.indent.current = lineIndent.indent;
+        context.position = lineIndent.position;
 
-                let arraySelectorInsideMultireplace = false;
-                if(line.includes('{') && line.includes('#')) { // TODO: actually parse this so we dont deal with this hellish thing, bad fix
-                    // might be mutli replace
-                    arraySelectorInsideMultireplace = isInsideMultiReplaceOrVariable(line);
-                }
+        if(context.insideMultiLineToken && context.indent.previous > context.indent.current) {
+            context.insideMultiLineToken = false;
+        }
 
-                if (!arraySelectorInsideMultireplace && isStartOfToken(line[context.position])) {
-                    context.mode = "Token";
-                    context.currentTokenStartPosition = context.position;
-                    if(context.proseBlock.trim().length > 0) {
-                        tokens.push(<ProseToken>{
-                            indent: context.proseBlockStart.indent,
-                            type: 'Prose',
-                            sceneName: scene.name,
-                            content: context.proseBlock.trimStart(),
-                            lineNumber: context.proseBlockStart.lineNumber,
-                            position: context.proseBlockStart.position,
-                        });
-                    }
-
-                    context.proseBlock = '';
-                    context.proseBlockStart = undefined;
-                    continue;
-                }
-
-                if(context.proseBlockStart === undefined) {
-                    context.proseBlockStart = { 
-                        position: context.position,
-                        lineNumber: context.lineNumber,
-                        indent: context.indent.current,
-                    }
-                }
-                context.proseBlock += line[context.position];
-                context.position++;
-                break;
-            }
-            case "ProseToEOL" : {
-                if(context.position < line.length) {
-                    if(context.proseBlock.length > 0) {
-                        console.error("Unexpected ProseToEOL mode with existing prose block");
-                    }
-                    context.proseBlock = '';
-                    const substring = line.substring(context.position);
-                    tokens.push(<ProseToken>{
-                        indent: context.indent.current,
-                        type: 'Prose',
-                        sceneName: scene.name,
-                        content: substring.trimStart(),
-                        lineNumber: context.lineNumber,
-                        position: context.position,
-                    });
-                    context.position = line.length;
-                }
-                context.mode = 'Prose';
-                break;
-            }
-            case "Expression":
-                {
-                    if (isStartOfToken(line[context.position])) {
-                        var expressionTokens = tokenizeExpressionString(
-                            context.currentToken,
-                            context.lineNumber,
-                            context.currentTokenStartPosition,
-                            context.indent.current,
-                            context.currentScene.name);
-                        tokens.push(...expressionTokens);
-                        context.mode = "Token";
-                        context.currentTokenStartPosition = context.position;
-                        context.currentToken = '';
-                        //console.log('Encountered Token, switching mode to Token after expression', expressionTokens)
+        while(context.position < line.length) {
+            switch(context.mode) {
+                case "Prose": {
+                    if(context.position === (context.indent.current * 2) && !(line.includes('*') || line.includes('#'))) {
+                        //shortcut to speed up evaluation of large prose blocks (majority of the text)
+                        if(context.proseBlockStart === undefined) {
+                            context.proseBlockStart = {
+                                position: context.position,
+                                lineNumber: context.lineNumber,
+                                indent: context.indent.current,
+                            };
+                        }
+                        context.proseBlock += line.trimStart();
+                        context.position = line.length;
                         continue;
                     }
 
-                    if(context.currentTokenStartPosition == undefined)
-                        context.currentTokenStartPosition = context.position;
-                    
-                    context.currentToken += line[context.position];
-
-                    if(context.position == line.length - 1) {
-                        // eol, we parse the expression
-                        var expressionTokens = tokenizeExpressionString(
-                            context.currentToken,
-                            context.lineNumber,
-                            context.currentTokenStartPosition,
-                            context.indent.current,
-                            context.currentScene.name);
-                        
-                        //console.log("EOL reached, scanning expression", expressionTokens)
-                        tokens.push(...expressionTokens);
+                    let arraySelectorInsideMultireplace = false;
+                    if(line.includes('{') && line.includes('#')) { // TODO: actually parse this so we dont deal with this hellish thing, bad fix
+                        // might be mutli replace
+                        arraySelectorInsideMultireplace = isInsideMultiReplaceOrVariable(line);
                     }
 
+                    if (!arraySelectorInsideMultireplace && isStartOfToken(line[context.position])) {
+                        context.mode = "Token";
+                        context.currentTokenStartPosition = context.position;
+                        if(context.proseBlock.trim().length > 0) {
+                            tokens.push(<ProseToken>{
+                                indent: context.proseBlockStart.indent,
+                                type: 'Prose',
+                                sceneName: scene.name,
+                                content: context.proseBlock.trimStart(),
+                                lineNumber: context.proseBlockStart.lineNumber,
+                                position: context.proseBlockStart.position,
+                            });
+                        }
+
+                        context.proseBlock = '';
+                        context.proseBlockStart = undefined;
+                        continue;
+                    }
+
+                    if(context.proseBlockStart === undefined) {
+                        context.proseBlockStart = { 
+                            position: context.position,
+                            lineNumber: context.lineNumber,
+                            indent: context.indent.current,
+                        }
+                    }
+                    context.proseBlock += line[context.position];
                     context.position++;
                     break;
                 }
-            case "Token": {
-                context.currentToken += line[context.position];
-                const token = handleToken(context);
-                if(token != undefined) {
-                    tokens.push(token);
+                case "ProseToEOL" : {
+                    if(context.position < line.length) {
+                        if(context.proseBlock.length > 0) {
+                            console.error("Unexpected ProseToEOL mode with existing prose block");
+                        }
+                        context.proseBlock = '';
+                        const substring = line.substring(context.position);
+                        tokens.push(<ProseToken>{
+                            indent: context.indent.current,
+                            type: 'Prose',
+                            sceneName: scene.name,
+                            content: substring.trimStart(),
+                            lineNumber: context.lineNumber,
+                            position: context.position,
+                        });
+                        context.position = line.length;
+                    }
+                    context.mode = 'Prose';
+                    break;
                 }
-                context.position++;
-                break;
-            }
-            case "Comment": {
-                context.position++;
+                case "Expression": {
+                        if (isStartOfToken(line[context.position])) {
+                            var expressionTokens = tokenizeExpressionString(
+                                context.currentToken,
+                                context.lineNumber,
+                                context.currentTokenStartPosition,
+                                context.indent.current,
+                                context.scene.name);
+                            tokens.push(...expressionTokens);
+                            context.mode = "Token";
+                            context.currentTokenStartPosition = context.position;
+                            context.currentToken = '';
+                            //console.log('Encountered Token, switching mode to Token after expression', expressionTokens)
+                            continue;
+                        }
 
-                const comment = <CommentToken>tokens[tokens.length -1];
-                if(comment.type !== 'Comment')
-                {
-                    console.error("Unexpected comment mode entry, head is not a comment block");
-                }
+                        if(context.currentTokenStartPosition == undefined)
+                            context.currentTokenStartPosition = context.position;
+                        
+                        context.currentToken += line[context.position];
 
-                comment.value = line.substring(context.position);
-                context.currentToken = '';
-                context.currentTokenStartPosition = undefined;
-                context.position = line.length;
-                break;
-            }
-            case "ChoiceOption": {
-                const choiceOption = <ChoiceOptionToken>tokens[tokens.length -1];
-                if(choiceOption.type !== 'ChoiceOption')
-                {
-                    console.error("Unexpected choice option mode entry, head is not a choice option block");
+                        if(context.position == line.length - 1) {
+                            // eol, we parse the expression
+                            var expressionTokens = tokenizeExpressionString(
+                                context.currentToken,
+                                context.lineNumber,
+                                context.currentTokenStartPosition,
+                                context.indent.current,
+                                context.scene.name);
+                            
+                            //console.log("EOL reached, scanning expression", expressionTokens)
+                            tokens.push(...expressionTokens);
+                        }
+
+                        context.position++;
+                        break;
+                    }
+                case "Token": {
+                    context.currentToken += line[context.position];
+                    const token = handleToken(context);
+                    if(token != undefined) {
+                        tokens.push(token);
+                    }
+                    context.position++;
+                    break;
                 }
-                choiceOption.rawText = line.substring(context.position);
-                
-                const multiReplaceBegin = choiceOption.rawText.indexOf('@{');
-                choiceOption.hasMultiReplace = multiReplaceBegin !== -1;
-                context.currentToken = '';
-                context.currentTokenStartPosition = undefined;
-                context.position = line.length;
-                
+                case "Comment": {
+                    context.position++;
+
+                    const comment = <CommentToken>tokens[tokens.length -1];
+                    if(comment.type !== 'Comment')
+                    {
+                        console.error("Unexpected comment mode entry, head is not a comment block");
+                    }
+
+                    comment.value = line.substring(context.position).trimEnd();
+                    context.currentToken = '';
+                    context.currentTokenStartPosition = undefined;
+                    context.position = line.length;
+                    break;
+                }
+                case "ChoiceOption": {
+                    const choiceOption = <ChoiceOptionToken>tokens[tokens.length -1];
+                    if(choiceOption.type !== 'ChoiceOption')
+                    {
+                        console.error("Unexpected choice option mode entry, head is not a choice option block");
+                    }
+                    choiceOption.rawText = line.substring(context.position);
+                    
+                    const multiReplaceBegin = choiceOption.rawText.indexOf('@{');
+                    choiceOption.hasMultiReplace = multiReplaceBegin !== -1;
+                    context.currentToken = '';
+                    context.currentTokenStartPosition = undefined;
+                    context.position = line.length;
+                    
+                    break;
+                }
+            }
+        }
+        // Handle multi line blocks
+        switch(context.mode) {
+            case "SceneList": {
+                tokens.push(...handleSceneList(context));
                 break;
             }
             case "Achievement": {
-                const preLine = sceneLines[context.lineNumber + 1];
-                const postLine = sceneLines[context.lineNumber + 2];
+                const preLine = context.sceneLines[context.lineNumber + 1];
+                const postLine = context.sceneLines[context.lineNumber + 2];
                 //console.log('Reading Achievement', line, preLine, postLine);
                 const scanned = scanAchievementBlock(
                     line,
@@ -300,7 +291,7 @@ export const scanScene = (scene: Scene) => {
                     postLine,
                     context.lineNumber,
                     context.indent.current,
-                    context.currentScene.name
+                    context.scene.name
                 );
 
                 tokens.push(...scanned);
@@ -315,7 +306,7 @@ export const scanScene = (scene: Scene) => {
     }
     tokens.push(
         <SceneEndToken>{
-            lineNumber: sceneLines.length,
+            lineNumber: context.sceneLines.length,
             indent: 0,
             position: 0,
             sceneName: scene.name,
@@ -363,7 +354,7 @@ const parseMultireplaceFromProse = (proseString: string, context: ScannerContext
             context.lineNumber,
             context.position,
             context.indent.current,
-            context.currentScene.name);
+            context.scene.name);
         
         tokens.push(...expression);
     }
@@ -373,7 +364,7 @@ const parseMultireplaceFromProse = (proseString: string, context: ScannerContext
 
 const handleToken = (context: ScannerContext) => {
       const createInContextToken = (token: Token) => {
-        token.sceneName = context.currentScene.name;
+        token.sceneName = context.scene.name;
         token.indent = context.indent.current;
         token.lineNumber = context.lineNumber;
         token.position = context.currentTokenStartPosition;
@@ -499,7 +490,7 @@ const handleToken = (context: ScannerContext) => {
             return createInContextToken(<CommentToken>{ type: 'Comment' });
         }
         case '*scene_list': {
-            context.insideMultiLineToken = true;
+            context.mode = "SceneList";
             return createInContextToken(<SceneListToken>{ type: 'SceneList' });
         }
         case '*achievement': {

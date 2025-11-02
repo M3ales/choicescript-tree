@@ -1,22 +1,35 @@
-import {IndentationContext} from "./indentation-context";
-import {Scene} from "./scene";
+import { IndentationContext } from "./indentation-context";
+import { Scene } from "./scene";
+import { Token } from "./tokens";
 
 export interface ScannerContext {
-    proseBlock: string;
-    proseBlockStart: {position: number, lineNumber: number, indent: number} | undefined;
+  proseBlock: string;
+  proseBlockStart:
+    | { position: number; lineNumber: number; indent: number }
+    | undefined;
 
-    currentToken: string;
-    currentTokenStartPosition: number | undefined;
-    
-    currentLine: string;
+  currentToken: string;
+  currentTokenStartPosition: number | undefined;
 
-    position: number;
-    lineNumber: number;
-    currentScene: Scene;
+  currentLine: string;
 
-    insideMultiLineToken: boolean;
+  position: number;
+  lineNumber: number;
+  scene: Scene;
+  sceneLines: string[];
 
-    mode: 'Indentation' | 'ProseToEOL' | 'Prose' | 'Token' | 'Expression' | 'Comment' | 'ChoiceOption' | 'MultiReplace' | 'Achievement'
+  insideMultiLineToken: boolean;
 
-    indent: IndentationContext;
+  mode:
+    | "ProseToEOL"
+    | "Prose"
+    | "Token"
+    | "Expression"
+    | "Comment"
+    | "ChoiceOption"
+    | "MultiReplace"
+    | "Achievement"
+    | "SceneList";
+
+  indent: IndentationContext;
 }
