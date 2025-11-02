@@ -23,7 +23,7 @@ export interface ScannerContext {
   mode:
     | "ProseToEOL"
     | "Prose"
-    | "Token"
+    | "Command"
     | "Expression"
     | "Comment"
     | "ChoiceOption"

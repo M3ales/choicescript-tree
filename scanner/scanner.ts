@@ -147,15 +147,31 @@ export const scanScene = (scene: Scene) => {
                         continue;
                     }
 
-                    let arraySelectorInsideMultireplace = false;
-                    if(line.includes('{') && line.includes('#')) { // TODO: actually parse this so we dont deal with this hellish thing, bad fix
-                        // might be mutli replace
-                        arraySelectorInsideMultireplace = isInsideMultiReplaceOrVariable(line);
+                    if (isStartOfCommand(line[context.position])) {
+                        context.mode = "Command";
+                        context.currentTokenStartPosition = context.position;
+                        if(context.proseBlock.trim().length > 0) {
+                            tokens.push(<ProseToken>{
+                                indent: context.proseBlockStart.indent,
+                                type: 'Prose',
+                                sceneName: scene.name,
+                                content: context.proseBlock.trimStart(),
+                                lineNumber: context.proseBlockStart.lineNumber,
+                                position: context.proseBlockStart.position,
+                            });
+                        }
+
+                        context.proseBlock = '';
+                        context.proseBlockStart = undefined;
+                        continue;
                     }
 
-                    if (!arraySelectorInsideMultireplace && isStartOfToken(line[context.position])) {
-                        context.mode = "Token";
-                        context.currentTokenStartPosition = context.position;
+                    
+                    if(context.position > 0 && isStartOfChoiceOption(line[context.position], line[context.position-1]))
+                    {
+                        context.currentTokenStartPosition = undefined;
+                        context.currentToken = '';
+                        context.mode = "ChoiceOption";
                         if(context.proseBlock.trim().length > 0) {
                             tokens.push(<ProseToken>{
                                 indent: context.proseBlockStart.indent,
@@ -204,7 +220,7 @@ export const scanScene = (scene: Scene) => {
                     break;
                 }
                 case "Expression": {
-                        if (isStartOfToken(line[context.position])) {
+                        if (isStartOfCommand(line[context.position])) {
                             var expressionTokens = tokenizeExpressionString(
                                 context.currentToken,
                                 context.lineNumber,
@@ -212,9 +228,23 @@ export const scanScene = (scene: Scene) => {
                                 context.indent.current,
                                 context.scene.name);
                             tokens.push(...expressionTokens);
-                            context.mode = "Token";
+                            context.mode = "Command";
                             context.currentTokenStartPosition = context.position;
                             context.currentToken = '';
+                            //console.log('Encountered Token, switching mode to Token after expression', expressionTokens)
+                            continue;
+                        }
+
+                        if(isStartOfChoiceOption(line[context.position], line[context.position-1]))
+                        {
+                            var expressionTokens = tokenizeExpressionString(
+                                context.currentToken,
+                                context.lineNumber,
+                                context.currentTokenStartPosition,
+                                context.indent.current,
+                                context.scene.name);
+                            tokens.push(...expressionTokens);
+                            context.mode = "ChoiceOption";
                             //console.log('Encountered Token, switching mode to Token after expression', expressionTokens)
                             continue;
                         }
@@ -240,9 +270,9 @@ export const scanScene = (scene: Scene) => {
                         context.position++;
                         break;
                     }
-                case "Token": {
+                case "Command": {
                     context.currentToken += line[context.position];
-                    const token = handleToken(context);
+                    const token = handleCommand(context);
                     if(token != undefined) {
                         tokens.push(token);
                     }
@@ -265,11 +295,9 @@ export const scanScene = (scene: Scene) => {
                     break;
                 }
                 case "ChoiceOption": {
-                    const choiceOption = <ChoiceOptionToken>tokens[tokens.length -1];
-                    if(choiceOption.type !== 'ChoiceOption')
-                    {
-                        console.error("Unexpected choice option mode entry, head is not a choice option block");
-                    }
+                    const choiceOption = handleChoiceOption(context);
+                    tokens.push(choiceOption);
+                    context.position++;
                     choiceOption.rawText = line.substring(context.position);
                     
                     const multiReplaceBegin = choiceOption.rawText.indexOf('@{');
@@ -277,9 +305,8 @@ export const scanScene = (scene: Scene) => {
                     context.currentToken = '';
                     context.currentTokenStartPosition = undefined;
                     context.position = line.length;
-                    
                     break;
-                }    
+                }
                 case "Achievement": {
                     const preLine = context.sceneLines[context.lineNumber + 1];
                     const postLine = context.sceneLines[context.lineNumber + 2];
@@ -370,7 +397,18 @@ const parseMultireplaceFromProse = (proseString: string, context: ScannerContext
     return tokens;
 }
 
-const handleToken = (context: ScannerContext) => {
+const handleChoiceOption = (context: ScannerContext): ChoiceOptionToken => {
+    context.mode = "ChoiceOption";
+    return <ChoiceOptionToken>{
+        type: 'ChoiceOption',
+        sceneName: context.scene.name,
+        indent: context.indent.current,
+        lineNumber: context.lineNumber,
+        position: context.currentTokenStartPosition,
+    };
+}
+
+const handleCommand = (context: ScannerContext) => {
       const createInContextToken = (token: Token) => {
         token.sceneName = context.scene.name;
         token.indent = context.indent.current;
@@ -422,10 +460,6 @@ const handleToken = (context: ScannerContext) => {
         case '*goto_random_scene': {
             context.mode = "Expression";
             return createInContextToken(<GotoRandomSceneToken>{type: 'GotoRandomScene'});
-        }
-        case '#': {
-            context.mode = "ChoiceOption";
-            return createInContextToken(<ChoiceOptionToken>{type: 'ChoiceOption'});
         }
         case '*if': {
             context.mode = "Expression";
@@ -563,8 +597,12 @@ const handleToken = (context: ScannerContext) => {
     return undefined;
 }
 
-const isStartOfToken = (char: string) : boolean => {
-    return char == "*" || char == "#";
+const isStartOfCommand = (char: string) : boolean => {
+    return char == "*";
+}
+
+const isStartOfChoiceOption = (char:string, before: string | undefined): boolean => {
+    return char == "#" && (before === undefined || (before === ' ' || before === '\t'));
 }
 
 export const isVariableName = (value: string) => {
@@ -600,38 +638,4 @@ const isInsideMultiReplaceOrVariable = (line: string) => {
     }
 
     return left.includes('{') && right.includes('}');
-}
-
-const parseAchievement = (
-    line: string,
-    lineNumber: number,
-    sceneName: string,
-    beforeDescription: string,
-    afterDescription: string) => {
-    const parts = line.split(' ');
-    if(parts.length < 2) {
-        return null;
-    }
-}
-
-const isLikelyExpression = (line: string) => {
-    const expression = tokenizeExpressionString(line, 0, 0, 0, 'none');
-    const literals: StringLiteralToken[] = expression.filter(e => e.type === 'StringLiteral').map(e => e as StringLiteralToken);
-
-    if(line.includes("'") && !literals.some(l => l.value.includes("'"))) {
-        return false;
-    }
-    if(line.includes(".") && !literals.some(l => l.value.includes("."))) {
-        return false;
-    }
-    if(line.includes(",") && !literals.some(l => l.value.includes(","))) {
-        return false;
-    }
-
-    if(expression.length > 1 && 
-        expression.every(e => e.type == 'Identifier')) {
-        return false;
-    }
-
-    return true;
 }

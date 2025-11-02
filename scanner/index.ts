@@ -55,6 +55,8 @@ export const readSceneList = (startup: Scene): string[] => {
     return scenes;
 }
 
-
-const url = "https://cogdemos.ink/play/izzily/drink-your-villain-juice/mygame";
+//"https://cogdemos.ink/play/nutellaqueen/the-sword-of-rhivenia-public-demo/mygame"
+//"https://cogdemos.ink/play/izzily/drink-your-villain-juice/mygame";
+//https://www.choiceofgames.com/user-contributed/fallen-hero-retribution/
+const url = "https://www.choiceofgames.com/user-contributed/fallen-hero-retribution/";
 await execute();
