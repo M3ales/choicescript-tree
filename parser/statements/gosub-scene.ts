@@ -1,4 +1,5 @@
 import { GoSubToken, IdentifierToken, NumberLiteralToken } from "../../scanner/tokens";
+import { Expression } from "../expressions";
 import { Statement } from "./statement";
 
 export interface GoSubSceneStatement extends Statement {
@@ -6,5 +7,6 @@ export interface GoSubSceneStatement extends Statement {
     token: GoSubToken;
     scene: IdentifierToken;
     label: (IdentifierToken | NumberLiteralToken)[];
+    args: Expression[];
 }
   

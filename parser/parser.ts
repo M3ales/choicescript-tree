@@ -48,6 +48,7 @@ import {
   GotoSceneStatement,
   HideReuseStatement,
   IfStatement,
+  InputNumberStatement,
   InputTextStatement,
   LabelStatement,
   LineBreakStatement,
@@ -215,7 +216,6 @@ export class Parser {
     if (this.match(["Finish"], false, false)) return this.finishStatement();
     if (this.match(["GoSubScene"], false, false)) return this.goSubScene();
     if (this.match(["Return"], false, false)) return this.return();
-    if (this.match(["InputText"], false, false)) return this.inputText();
     if (this.match(["Comment"], false, false)) return this.commentBlock();
     if (this.match(["Ending"], false, false)) return this.endingStatement();
     if (this.match(["Author"], false, false)) return this.authorStatement();
@@ -225,6 +225,8 @@ export class Parser {
     if (this.match(["CheckAchievements"], false, false)) return this.checkAchievementsStatement();
     if (this.match(["Link"], false, false)) return this.linkStatement();
     if (this.match(["GenerateRandom"], false, false)) return this.generateRandomStatement();
+    if (this.match(["InputText"], false, false)) return this.inputText();
+    if (this.match(["InputNumber"], false, false)) return this.inputNumber();
     const peek = this.peek();
     
     throw new Error(
@@ -381,6 +383,11 @@ export class Parser {
       }
     }
 
+    const args: Expression[] = [];
+    while(this.peekSameLine()) {
+      args.push(this.expression());
+    }
+
     this.expectLineChange();
 
     return <GoSubSceneStatement>{
@@ -388,6 +395,7 @@ export class Parser {
       token: token,
       scene: scene,
       label: label,
+      args: args,
     };
   }
 
@@ -401,12 +409,36 @@ export class Parser {
       label.push(this.consume("Identifier", "Labels cannot have spaces in their names."));
     }
     
+    const args: Expression[] = [];
+    while(this.peekSameLine()) {
+      args.push(this.expression());
+    }
+
     this.expectLineChange();
 
     return <GoSubStatement>{
       kind: "GoSub",
       token: token,
       label: label,
+      args: args,
+    };
+  }
+
+  inputNumber(): InputNumberStatement {
+    const token = this.previous();
+    const variable = this.consume(
+      "Identifier",
+      "Expect variable name to store input text."
+    ) as IdentifierToken;
+    const min = this.consume("NumberLiteral", "Expect minimum valid input") as NumberLiteralToken;
+    const max = this.consume("NumberLiteral", "Expect maximum valid input") as NumberLiteralToken;
+    this.expectLineChange();
+    return <InputNumberStatement>{
+      kind: "InputNumber",
+      token: token,
+      storeInto: variable,
+      min: min,
+      max: max,
     };
   }
 
@@ -430,7 +462,7 @@ export class Parser {
       "Identifier",
       "Expect scene name."
     ) as IdentifierToken;
-    let label: (IdentifierToken | NumberLiteralToken)[];
+    let label: (IdentifierToken | NumberLiteralToken)[] = [];
 
     if (this.peekSameLine()) {
       label.push(this.consumeOneOf(["Identifier", "NumberLiteral"], "Expect label name.") as IdentifierToken | NumberLiteralToken);
@@ -868,13 +900,34 @@ export class Parser {
   }
 
   factor(): Expression {
-    let expr = this.unary();
+    let expr = this.indexing();
 
     while (
       this.match([
         "DivisionOperator",
         "MultiplicationOperator",
         "ModulusOperator",
+      ])
+    ) {
+      const operator = this.previous();
+      const right = this.indexing();
+      expr = <Binary>{
+        left: expr,
+        operator: operator,
+        right: right,
+      };
+    }
+
+    return expr;
+  }
+
+  indexing(): Expression {
+    let expr = this.unary();
+
+    while (
+      this.match([
+        "Indexer",
+        "StringIndexerOperator"
       ])
     ) {
       const operator = this.previous();
