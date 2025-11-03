@@ -334,10 +334,13 @@ export const scanScene = (scene: Scene) => {
                     context.mode = "Prose";
                     break;
                 }
-            }
-            if(context.currentLine.substring(context.position).trim().length === 0) {
-                context.position = context.currentLine.length;
-                console.log("Skipping trailing whitespace on", context.lineNumber)
+                case "StatChart": {
+                    if(context.currentLine.substring(context.position).trim().length === 0) {
+                        context.position = context.currentLine.length;
+                        //console.log("Skipping trailing whitespace on", context.lineNumber)
+                    }
+                    break;
+                }
             }
         }
         // Handle multi line blocks
