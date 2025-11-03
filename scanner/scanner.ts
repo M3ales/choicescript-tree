@@ -335,10 +335,20 @@ export const scanScene = (scene: Scene) => {
                     break;
                 }
                 case "StatChart": {
-                    if(context.currentLine.substring(context.position).trim().length === 0) {
+                    const lineRemaining = context.currentLine.substring(context.position).trim();
+                    if(lineRemaining.length === 0) {
                         context.position = context.currentLine.length;
                         //console.log("Skipping trailing whitespace on", context.lineNumber)
                     }
+                    tokens.push(<ProseToken>{
+                        indent: context.indent.current,
+                        type: 'Prose',
+                        sceneName: scene.name,
+                        content: lineRemaining,
+                        lineNumber: context.lineNumber,
+                        position: context.position,
+                    });
+                    context.position = line.length;
                     break;
                 }
             }

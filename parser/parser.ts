@@ -254,6 +254,11 @@ export class Parser {
     const token = this.previous();
 
     const stats: Stat[] = [];
+    let title: ProseToken | undefined = undefined;
+    if(this.peekSameLine() && this.match(["Prose"], true, true)){
+      title = this.previous() as ProseToken;
+    }
+    
     while (this.childScope(token.indent)) {
       if (this.match(["Identifier"], false, false)) {
         const type = this.previous() as IdentifierToken;
@@ -314,6 +319,8 @@ export class Parser {
     return <StatChartStatement>{
       kind: "StatChart",
       token: token,
+      title: title,
+      stats: stats,
     };
   }
   parametersStatement(): ParametersStatement {
