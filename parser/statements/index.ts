@@ -32,4 +32,5 @@ export * from "./parameters";
 export * from "./return";
 export * from "./selectable-if";
 export * from "./set-variable";
+export * from "./stat-chart";
 export * from "./statement";

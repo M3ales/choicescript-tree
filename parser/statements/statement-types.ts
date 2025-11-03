@@ -11,6 +11,7 @@ export type StatementTypes =
   | "ChoiceOption"
   | "FakeChoice"
   | "SelectableIf"
+  | "StatChart"
   | "If"
   | "ElseIf"
   | "Else"

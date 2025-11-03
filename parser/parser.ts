@@ -54,16 +54,24 @@ import {
   LabelStatement,
   LineBreakStatement,
   LinkStatement,
+  OpposedPairStat,
   PageBreakStatement,
   ParametersStatement,
+  PercentStat,
   ProseStatement,
   ReturnStatement,
   SelectableIfStatement,
   SetVariableStatement,
+  Stat,
+  StatChartStatement,
   Statement,
+  TextStat,
 } from "./statements";
 import { Scene } from "./scene";
-import { SceneIdentifier as SceneIdentifierToken, SceneListStatement } from "./statements/scene-list";
+import {
+  SceneIdentifier as SceneIdentifierToken,
+  SceneListStatement,
+} from "./statements/scene-list";
 import { AchieveStatement } from "./statements/achieve";
 
 export class Parser {
@@ -202,7 +210,8 @@ export class Parser {
   statement(): Statement {
     if (this.match(["Prose"], false, false)) return this.proseStatement();
     if (this.match(["Choice"], false, false)) return this.choiceStatement();
-    if (this.match(["FakeChoice"], false, false)) return this.fakeChoiceStatement();
+    if (this.match(["FakeChoice"], false, false))
+      return this.fakeChoiceStatement();
     if (this.match(["If"], false, false)) return this.ifStatement();
     if (this.match(["GotoLabel"], false, false)) return this.gotoLabel();
     if (this.match(["GotoScene"], false, false)) return this.gotoScene();
@@ -222,33 +231,109 @@ export class Parser {
     if (this.match(["Ending"], false, false)) return this.endingStatement();
     if (this.match(["Author"], false, false)) return this.authorStatement();
     if (this.match(["SceneList"], false, false)) return this.sceneList();
-    if (this.match(["Achievement"], false, false)) return this.achievementDefinition();
+    if (this.match(["Achievement"], false, false))
+      return this.achievementDefinition();
     if (this.match(["Achieve"], false, false)) return this.achieveStatement();
-    if (this.match(["CheckAchievements"], false, false)) return this.checkAchievementsStatement();
+    if (this.match(["CheckAchievements"], false, false))
+      return this.checkAchievementsStatement();
     if (this.match(["Link"], false, false)) return this.linkStatement();
-    if (this.match(["GenerateRandom"], false, false)) return this.generateRandomStatement();
+    if (this.match(["GenerateRandom"], false, false))
+      return this.generateRandomStatement();
     if (this.match(["InputText"], false, false)) return this.inputText();
     if (this.match(["InputNumber"], false, false)) return this.inputNumber();
-    if (this.match(["Parameters"], false, false)) return this.parametersStatement();
+    if (this.match(["Parameters"], false, false))
+      return this.parametersStatement();
+    if (this.match(["StatChart"], false, false)) return this.statChart();
     const peek = this.peek();
-    
+
     throw new Error(
       `Unknown statement block starting ${peek?.type} at ${peek?.sceneName}:${peek?.lineNumber}:${peek?.position}[${peek?.indent}]`
     );
   }
+  statChart(): StatChartStatement {
+    const token = this.previous();
+
+    const stats: Stat[] = [];
+    while (this.childScope(token.indent)) {
+      if (this.match(["Identifier"], false, false)) {
+        const type = this.previous() as IdentifierToken;
+        const identifier = this.consume(
+          "Identifier",
+          "Expect variable name for stat entry"
+        );
+        let displayName: ProseToken | undefined = undefined;
+
+        if (this.peekSameIndent(type.indent) && this.match(["Prose"], false, false)) {
+          displayName = this.previous() as ProseToken;
+        }
+
+        if (type.value === "text") {
+          stats.push(<TextStat>{
+            kind: "Text",
+            token: type,
+            variable: identifier,
+            displayName: displayName,
+          });
+          continue;
+        }
+
+        if (type.value === "percent") {
+          stats.push(<PercentStat>{
+            kind: "Percent",
+            variable: identifier,
+            displayName: displayName,
+          });
+          continue;
+        }
+
+        let opposedDisplayName = undefined;
+        if (this.peekGreaterIndent(type.indent) && this.match(["Prose"], false, false)) {
+          opposedDisplayName = this.previous() as ProseToken;
+        }
+
+        if (
+          displayName === undefined &&
+          this.peekGreaterIndent(type.indent) &&
+          this.match(["Prose"], false, false)
+        ) {
+          const temp = this.previous() as ProseToken;
+          displayName = opposedDisplayName;
+          opposedDisplayName = temp;
+        }
+
+        stats.push(<OpposedPairStat>{
+          kind: "OpposedPair",
+          token: token,
+          variable: identifier,
+          displayName: displayName,
+          opposingDisplayName: opposedDisplayName,
+        });
+      }
+    }
+
+    return <StatChartStatement>{
+      kind: "StatChart",
+      token: token,
+    };
+  }
   parametersStatement(): ParametersStatement {
     const token = this.previous();
     const identifiers = [];
-    while(this.peekSameLine()) {
+    while (this.peekSameLine()) {
       identifiers.push(
-        this.consume("Identifier", "Expect identifier following *params statement", true, true)
+        this.consume(
+          "Identifier",
+          "Expect identifier following *params statement",
+          true,
+          true
+        )
       );
     }
-    return <ParametersStatement> {
+    return <ParametersStatement>{
       kind: "Parameters",
       token: token,
       identifiers: identifiers,
-    }
+    };
   }
 
   generateRandomStatement(): GenerateRandomStatement {
@@ -290,11 +375,14 @@ export class Parser {
     this.expectLineChange();
     return <LinkStatement>{ kind: "Link", token: token, url: url };
   }
-  
+
   checkAchievementsStatement(): Statement {
     const token = this.previous() as CheckAchievementsToken;
     this.expectLineChange();
-    return <CheckAchievementsStatement>{ kind: "CheckAchievements", token: token };
+    return <CheckAchievementsStatement>{
+      kind: "CheckAchievements",
+      token: token,
+    };
   }
 
   achieveStatement(): Statement {
@@ -304,7 +392,11 @@ export class Parser {
       "Expect achievement codename."
     ) as IdentifierToken;
     this.expectLineChange();
-    return <AchieveStatement>{ kind: "Achieve", token: token, codename: codename };
+    return <AchieveStatement>{
+      kind: "Achieve",
+      token: token,
+      codename: codename,
+    };
   }
 
   achievementDefinition(): AchievementStatement {
@@ -326,15 +418,14 @@ export class Parser {
     ) as NumberLiteralToken;
 
     const title: ProseToken = this.consume(
-      "Prose", 
+      "Prose",
       "Expect achievement title."
     ) as ProseToken;
 
-    let preDescription : IdentifierToken | ProseToken;
-    if(this.match(["Identifier"], false, false)) {
+    let preDescription: IdentifierToken | ProseToken;
+    if (this.match(["Identifier"], false, false)) {
       preDescription = this.previous() as IdentifierToken;
-    }
-    else if(this.match(["Prose"], false, false)) {
+    } else if (this.match(["Prose"], false, false)) {
       preDescription = this.previous() as ProseToken;
     }
 
@@ -343,7 +434,11 @@ export class Parser {
       "Expect unlocked achievement description."
     ) as ProseToken;
 
-    return <AchievementStatement>{ kind: 'Achievement', token: token, hidden: visibility.value === "hidden" };
+    return <AchievementStatement>{
+      kind: "Achievement",
+      token: token,
+      hidden: visibility.value === "hidden",
+    };
   }
 
   sceneList(): SceneListStatement {
@@ -360,7 +455,11 @@ export class Parser {
       identifiers.push({ paid: paid, ...id });
     }
 
-    return <SceneListStatement>{ kind: 'SceneList', token: token, identifiers: identifiers };
+    return <SceneListStatement>{
+      kind: "SceneList",
+      token: token,
+      identifiers: identifiers,
+    };
   }
 
   authorStatement(): AuthorStatement {
@@ -393,15 +492,22 @@ export class Parser {
 
     const label = [];
     if (this.peekSameLine()) {
-      label.push(this.consumeOneOf(["Identifier", "NumberLiteral"], "Expect label name."));
-      if(label[0].type === "NumberLiteral" && this.peekSameLine()) {
+      label.push(
+        this.consumeOneOf(["Identifier", "NumberLiteral"], "Expect label name.")
+      );
+      if (label[0].type === "NumberLiteral" && this.peekSameLine()) {
         // console.log('Parsing compound label name');
-        label.push(this.consume("Identifier", "Labels cannot have spaces in their names."));
+        label.push(
+          this.consume(
+            "Identifier",
+            "Labels cannot have spaces in their names."
+          )
+        );
       }
     }
 
     const args: Expression[] = [];
-    while(this.peekSameLine()) {
+    while (this.peekSameLine()) {
       args.push(this.expression());
     }
 
@@ -418,16 +524,20 @@ export class Parser {
 
   goSub(): GoSubStatement {
     const token = this.previous();
-    
+
     const label = [];
-    label.push(this.consumeOneOf(["Identifier", "NumberLiteral"], "Expect label name."));
-    if(label[0].type === "NumberLiteral" && this.peekSameLine()) {
+    label.push(
+      this.consumeOneOf(["Identifier", "NumberLiteral"], "Expect label name.")
+    );
+    if (label[0].type === "NumberLiteral" && this.peekSameLine()) {
       // console.log('Parsing compound label name');
-      label.push(this.consume("Identifier", "Labels cannot have spaces in their names."));
+      label.push(
+        this.consume("Identifier", "Labels cannot have spaces in their names.")
+      );
     }
-    
+
     const args: Expression[] = [];
-    while(this.peekSameLine()) {
+    while (this.peekSameLine()) {
       args.push(this.expression());
     }
 
@@ -447,8 +557,14 @@ export class Parser {
       "Identifier",
       "Expect variable name to store input text."
     ) as IdentifierToken;
-    const min = this.consume("NumberLiteral", "Expect minimum valid input") as NumberLiteralToken;
-    const max = this.consume("NumberLiteral", "Expect maximum valid input") as NumberLiteralToken;
+    const min = this.consume(
+      "NumberLiteral",
+      "Expect minimum valid input"
+    ) as NumberLiteralToken;
+    const max = this.consume(
+      "NumberLiteral",
+      "Expect maximum valid input"
+    ) as NumberLiteralToken;
     this.expectLineChange();
     return <InputNumberStatement>{
       kind: "InputNumber",
@@ -482,10 +598,20 @@ export class Parser {
     let label: (IdentifierToken | NumberLiteralToken)[] = [];
 
     if (this.peekSameLine()) {
-      label.push(this.consumeOneOf(["Identifier", "NumberLiteral"], "Expect label name.") as IdentifierToken | NumberLiteralToken);
-      if(label[0].type === "NumberLiteral" && this.peekSameLine()) {
+      label.push(
+        this.consumeOneOf(
+          ["Identifier", "NumberLiteral"],
+          "Expect label name."
+        ) as IdentifierToken | NumberLiteralToken
+      );
+      if (label[0].type === "NumberLiteral" && this.peekSameLine()) {
         // console.log('Parsing compound label name');
-        label.push(this.consume("Identifier", "Labels cannot have spaces in their names.") as IdentifierToken);
+        label.push(
+          this.consume(
+            "Identifier",
+            "Labels cannot have spaces in their names."
+          ) as IdentifierToken
+        );
       }
     }
 
@@ -522,17 +648,29 @@ export class Parser {
       buttonText: buttonText,
     };
   }
-  
+
   choiceBoundedifStatement(): Statement {
     const parser = () => {
-      if(this.match(["ChoiceOption", "AllowReuse", "HideReuse", "DisableReuse", "SelectableIf"], false, false)) {
+      if (
+        this.match(
+          [
+            "ChoiceOption",
+            "AllowReuse",
+            "HideReuse",
+            "DisableReuse",
+            "SelectableIf",
+          ],
+          false,
+          false
+        )
+      ) {
         return this.choiceOptionWithModifiers();
       }
-      if(this.match(["If"], false, false)) {
+      if (this.match(["If"], false, false)) {
         return this.choiceBoundedifStatement();
       }
       return this.statement();
-    }
+    };
     return this.ifStatement(parser);
   }
 
@@ -569,7 +707,9 @@ export class Parser {
     };
   }
 
-  elseStatement(bodyParser: () => Statement = () => this.statement()): ElseStatement {
+  elseStatement(
+    bodyParser: () => Statement = () => this.statement()
+  ): ElseStatement {
     const token = this.previous();
     const body: Statement[] = [];
     while (this.childScope(token.indent)) {
@@ -582,7 +722,9 @@ export class Parser {
     };
   }
 
-  elseIfStatement(bodyParser: () => Statement = () => this.statement()): ElseIfStatement {
+  elseIfStatement(
+    bodyParser: () => Statement = () => this.statement()
+  ): ElseIfStatement {
     const token = this.previous();
     const expression = this.expression();
     const body: Statement[] = [];
@@ -600,19 +742,19 @@ export class Parser {
   finishStatement(): FinishStatement {
     const token = this.previous();
     let prose = null;
-    if(this.match(["Prose"], true, true)) {
+    if (this.match(["Prose"], true, true)) {
       prose = this.previous();
     }
-    return <FinishStatement>{ kind: 'Finish', token: token, buttonText: prose }
+    return <FinishStatement>{ kind: "Finish", token: token, buttonText: prose };
   }
-  
+
   endingStatement(): EndingStatement {
     const token = this.previous();
     let prose = null;
-    if(this.match(["Prose"], true, true)) {
+    if (this.match(["Prose"], true, true)) {
       prose = this.previous();
     }
-    return <EndingStatement>{ kind: 'Ending', token: token, buttonText: prose }
+    return <EndingStatement>{ kind: "Ending", token: token, buttonText: prose };
   }
 
   choiceStatement(): ChoiceStatement {
@@ -620,26 +762,39 @@ export class Parser {
     const body: Statement[] = [];
 
     const noteTokens: ProseToken[] = [];
-    while(this.peekSameLine()) {
-      noteTokens.push(this.consume("Prose", "Note elements on same line after choice") as ProseToken);
+    while (this.peekSameLine()) {
+      noteTokens.push(
+        this.consume(
+          "Prose",
+          "Note elements on same line after choice"
+        ) as ProseToken
+      );
     }
 
     while (this.childScope(token.indent)) {
-      if(this.match([
-        "ChoiceOption",
-        "AllowReuse",
-        "DisableReuse",
-        "HideReuse",
-        "SelectableIf"
-      ], false, false)) {
+      if (
+        this.match(
+          [
+            "ChoiceOption",
+            "AllowReuse",
+            "DisableReuse",
+            "HideReuse",
+            "SelectableIf",
+          ],
+          false,
+          false
+        )
+      ) {
         //console.log('Add choice with modifiers block', this.previous());
         body.push(this.choiceOptionWithModifiers());
-      }
-      else if(this.match(["If"], false, false)) {
+      } else if (this.match(["If"], false, false)) {
         body.push(this.choiceBoundedifStatement());
-      }else if(this.match(["Prose"], false, false)) {
-        throw this.error(this.previous(), "Prose is not allowed directly inside Choice statements.");
-      }else if(this.match(["Comment"], false, false)){
+      } else if (this.match(["Prose"], false, false)) {
+        throw this.error(
+          this.previous(),
+          "Prose is not allowed directly inside Choice statements."
+        );
+      } else if (this.match(["Comment"], false, false)) {
         body.push(this.commentBlock());
       }
     }
@@ -649,46 +804,60 @@ export class Parser {
     return <ChoiceStatement>{ kind: "Choice", token: token, body: body };
   }
 
-  
   fakeChoiceStatement(): FakeChoiceStatement {
     const token = this.previous();
     const body: Statement[] = [];
 
     while (this.childScope(token.indent)) {
-
-      if(this.match([
-        "ChoiceOption",
-        "AllowReuse",
-        "DisableReuse",
-        "HideReuse",
-        "SelectableIf"
-      ], false, false)) {
+      if (
+        this.match(
+          [
+            "ChoiceOption",
+            "AllowReuse",
+            "DisableReuse",
+            "HideReuse",
+            "SelectableIf",
+          ],
+          false,
+          false
+        )
+      ) {
         //console.log('Add choice with modifiers block', this.previous());
         body.push(this.choiceOptionWithModifiers());
-      }
-      else if(this.match(["If"], false, false)) {
+      } else if (this.match(["If"], false, false)) {
         body.push(this.choiceBoundedifStatement());
-      }else if(this.match(["Label"], false, false)) {
+      } else if (this.match(["Label"], false, false)) {
         body.push(this.labelDefinition());
-      }else if(this.match(["Prose"], false, false)) {
-        throw this.error(this.previous(), "Prose is not allowed directly inside Choice statements.");
-      }else if(this.match(["Comment"], false, false)){
+      } else if (this.match(["Prose"], false, false)) {
+        throw this.error(
+          this.previous(),
+          "Prose is not allowed directly inside Choice statements."
+        );
+      } else if (this.match(["Comment"], false, false)) {
         body.push(this.commentBlock());
       }
     }
-    
+
     //console.log('Complete Fake Choice');
 
-    return <FakeChoiceStatement>{ kind: "FakeChoice", token: token, body: body };;
+    return <FakeChoiceStatement>{
+      kind: "FakeChoice",
+      token: token,
+      body: body,
+    };
   }
 
   gotoLabel(): GotoLabelStatement {
     const token = this.previous();
     const label = [];
-    label.push(this.consumeOneOf(["Identifier", "NumberLiteral"], "Expect label name."));
-    if(label[0].type === "NumberLiteral" && this.peekSameLine()) {
+    label.push(
+      this.consumeOneOf(["Identifier", "NumberLiteral"], "Expect label name.")
+    );
+    if (label[0].type === "NumberLiteral" && this.peekSameLine()) {
       // console.log('Parsing compound label name');
-      label.push(this.consume("Identifier", "Labels cannot have spaces in their names."));
+      label.push(
+        this.consume("Identifier", "Labels cannot have spaces in their names.")
+      );
     }
     this.expectLineChange();
     return <GotoLabelStatement>{
@@ -701,10 +870,14 @@ export class Parser {
   labelDefinition(): LabelStatement {
     const token = this.previous();
     const label = [];
-    label.push(this.consumeOneOf(["Identifier", "NumberLiteral"], "Expect label name."));
-    if(this.peekSameLine() && label[0].type === "NumberLiteral") {
+    label.push(
+      this.consumeOneOf(["Identifier", "NumberLiteral"], "Expect label name.")
+    );
+    if (this.peekSameLine() && label[0].type === "NumberLiteral") {
       // console.log('Parsing compound label name');
-      label.push(this.consume("Identifier", "Labels cannot have spaces in their names."));
+      label.push(
+        this.consume("Identifier", "Labels cannot have spaces in their names.")
+      );
     }
     this.expectLineChange();
     return <LabelStatement>{ kind: "Label", token: token, label: label };
@@ -724,7 +897,7 @@ export class Parser {
     const token = this.previous();
     const modififers: Statement[] = [];
 
-    switch(token.type) {
+    switch (token.type) {
       case "AllowReuse": {
         modififers.push(this.allowReuse());
         break;
@@ -746,26 +919,20 @@ export class Parser {
       }
     }
 
-    while(true) {
-      if(this.match(["AllowReuse"], false, false)) {
+    while (true) {
+      if (this.match(["AllowReuse"], false, false)) {
         modififers.push(this.allowReuse());
-      }
-      else if(this.match(["DisableReuse"], false, false)) {
+      } else if (this.match(["DisableReuse"], false, false)) {
         modififers.push(this.disableReuse());
-      }
-      else if(this.match(["HideReuse"], false, false)) {
+      } else if (this.match(["HideReuse"], false, false)) {
         modififers.push(this.hideReuse());
-      }
-      else if(this.match(["SelectableIf"], false, false)) {
+      } else if (this.match(["SelectableIf"], false, false)) {
         modififers.push(this.selectableIf());
-      }
-      else if(this.match(["ChoiceOption"], false, false)) {
+      } else if (this.match(["ChoiceOption"], false, false)) {
         return this.choiceOption(modififers);
-      }
-      else if(this.match(["If"], true, true)) {
+      } else if (this.match(["If"], true, true)) {
         return this.choiceBoundedifStatement();
-      }
-      else {
+      } else {
         break;
       }
     }
@@ -777,7 +944,7 @@ export class Parser {
     const token = this.previous();
     return <HideReuseStatement>{ kind: "HideReuse", token: token };
   }
-  
+
   disableReuse() {
     const token = this.previous();
     return <DisableReuseStatement>{ kind: "DisableReuse", token: token };
@@ -794,7 +961,7 @@ export class Parser {
 
     while (this.childScope(token.indent)) {
       //console.log('Read child', this.peek());
-      if(this.match(['ChoiceOption'], false, false)) {
+      if (this.match(["ChoiceOption"], false, false)) {
         body.push(this.choiceOptionWithModifiers());
         continue;
       }
@@ -803,24 +970,42 @@ export class Parser {
 
     //console.log('Exited child scope', token.lineNumber);
 
-    const disableReuse = (modifiers.find(m => m.kind === "DisableReuse") as DisableReuseStatement) !== undefined ? true : false;
-    const hideReuse = (modifiers.find(m => m.kind === "HideReuse") as HideReuseStatement) !== undefined ? true : false;
-    const allowReuse = (modifiers.find(m => m.kind === "AllowReuse") as AllowReuseStatement) !== undefined ? true : false;
-    const selectableIf = (modifiers.find(m => m.kind === "SelectableIf") as SelectableIfStatement)?.expression ?? null;
-    
+    const disableReuse =
+      (modifiers.find(
+        (m) => m.kind === "DisableReuse"
+      ) as DisableReuseStatement) !== undefined
+        ? true
+        : false;
+    const hideReuse =
+      (modifiers.find((m) => m.kind === "HideReuse") as HideReuseStatement) !==
+      undefined
+        ? true
+        : false;
+    const allowReuse =
+      (modifiers.find(
+        (m) => m.kind === "AllowReuse"
+      ) as AllowReuseStatement) !== undefined
+        ? true
+        : false;
+    const selectableIf =
+      (
+        modifiers.find(
+          (m) => m.kind === "SelectableIf"
+        ) as SelectableIfStatement
+      )?.expression ?? null;
+
     return <ChoiceOptionStatement>{
       kind: "ChoiceOption",
       token: token,
       body: body,
-      reuse: disableReuse ? "disable_reuse" : 
-                (
-                  hideReuse ? "hide_reuse" : 
-                    (
-                      allowReuse ? "allow_reuse" :
-                        null
-                    )
-                ),
-      selectableIf: selectableIf
+      reuse: disableReuse
+        ? "disable_reuse"
+        : hideReuse
+        ? "hide_reuse"
+        : allowReuse
+        ? "allow_reuse"
+        : null,
+      selectableIf: selectableIf,
     };
   }
 
@@ -860,11 +1045,11 @@ export class Parser {
     const token = this.previous();
     const identifierOrAssignment = this.expression();
     let assignment = undefined;
-    if(this.peekSameLine()) {
+    if (this.peekSameLine()) {
       assignment = this.expression();
     }
     this.expectLineChange();
-    
+
     // console.log('Set Expression', identifierOrAssignment, 'to', assignment);
 
     return <SetVariableStatement>{
@@ -947,12 +1132,7 @@ export class Parser {
   indexing(): Expression {
     let expr = this.unary();
 
-    while (
-      this.match([
-        "Indexer",
-        "StringIndexerOperator"
-      ])
-    ) {
+    while (this.match(["Indexer", "StringIndexerOperator"])) {
       const operator = this.previous();
       const right = this.unary();
       expr = <Binary>{
@@ -994,12 +1174,19 @@ export class Parser {
 
     if (this.match(["Identifier"])) {
       const identifier = this.previous();
-      if(this.match(["OpenSquareBracket"])) {
+      if (this.match(["OpenSquareBracket"])) {
         const accessExpression = this.expression();
-        this.consume("CloseSquareBracket", "Expect ']' after accessor expression");
-        return <ArrayIndexer>{ kind: "ArrayIndexer", expression: accessExpression, identifier: identifier }
+        this.consume(
+          "CloseSquareBracket",
+          "Expect ']' after accessor expression"
+        );
+        return <ArrayIndexer>{
+          kind: "ArrayIndexer",
+          expression: accessExpression,
+          identifier: identifier,
+        };
       }
-      
+
       return <Identifier>{ token: identifier };
     }
 
@@ -1092,8 +1279,8 @@ export class Parser {
     sameIndent: boolean = true
   ) {
     //console.log("Consume", type, message);
-    for(const t of type) {
-      if(this.check(t)) {
+    for (const t of type) {
+      if (this.check(t)) {
         return this.advance();
       }
     }
