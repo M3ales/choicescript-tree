@@ -5,6 +5,7 @@ import fs from 'node:fs';
 const execute = async () => {
     const startup = await loadScene('startup');
     const sceneNames = readSceneList(startup);
+    sceneNames.unshift('choicescript_stats');
     const implicitControlFlow = startup.content.indexOf('*create implicit_control_flow true') !== -1;
 
     if (implicitControlFlow) {
