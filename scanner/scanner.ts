@@ -58,6 +58,7 @@ import { parseAchievementBlock as scanAchievementBlock } from "./achievement-han
 import { handleSceneList } from "./scene-list-handler";
 import { countIndentation, scanIndentCharacter } from "./indent";
 import { ParametersToken } from "./tokens/parameters";
+import { handleStatChart } from "./stat-chart-handler";
 
 export const scanScene = (scene: Scene) => {
     const context: ScannerContext = {
@@ -334,11 +335,19 @@ export const scanScene = (scene: Scene) => {
                     break;
                 }
             }
+            if(context.currentLine.substring(context.position).trim().length === 0) {
+                context.position = context.currentLine.length;
+                console.log("Skipping trailing whitespace on", context.lineNumber)
+            }
         }
         // Handle multi line blocks
         switch(context.mode) {
             case "SceneList": {
                 tokens.push(...handleSceneList(context));
+                break;
+            }
+            case "StatChart": {
+                tokens.push(...handleStatChart(context));
                 break;
             }
         }
@@ -520,7 +529,7 @@ const handleCommand = (context: ScannerContext) => {
             return createInContextToken(<EndingToken>{type: 'Ending'});
         }
         case "*stat_chart": {
-            context.mode = "Prose"
+            context.mode = "StatChart"
             return createInContextToken(<StatChartToken>{type: 'StatChart'});
         }
         case "*line_break": {

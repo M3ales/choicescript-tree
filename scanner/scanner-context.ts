@@ -29,7 +29,8 @@ export interface ScannerContext {
     | "ChoiceOption"
     | "MultiReplace"
     | "Achievement"
-    | "SceneList";
+    | "SceneList"
+    | "StatChart";
 
   indent: IndentationContext;
 }
