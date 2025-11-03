@@ -4,6 +4,7 @@ export * from "./expressions/close-brace";
 export * from "./expressions/close-square-bracket";
 export * from "./expressions/multireplace-else";
 export * from "./expressions/number-literal";
+export * from "./expressions/open-brace";
 export * from "./expressions/open-multireplace";
 export * from "./expressions/open-parenthesis";
 export * from "./expressions/open-print";

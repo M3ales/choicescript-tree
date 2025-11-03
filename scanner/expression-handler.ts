@@ -17,6 +17,7 @@ import {
   ProseToken,
   OpenSquareBracketToken,
   CloseSquareBracketToken,
+  OpenBraceToken,
 } from "./tokens";
 import { DollarToken } from "./tokens/expressions/dollar";
 import { OpenPrintToken } from "./tokens/expressions/open-print";
@@ -170,6 +171,17 @@ export function tokenizeExpressionString(
           sceneName: sceneName,
           indent: indent,
         } as CloseSquareBracketToken);
+        cursor++;
+        continue;
+      }
+      case "{": {
+        tokens.push({
+          type: "OpenBrace",
+          position: position + cursor,
+          lineNumber: lineNumber,
+          sceneName: sceneName,
+          indent: indent,
+        } as OpenBraceToken);
         cursor++;
         continue;
       }
