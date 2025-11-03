@@ -18,6 +18,7 @@ import {
 } from "../scanner/tokens";
 import { TokenType } from "../scanner/tokens/token-types";
 import {
+  ArrayIndexer,
   Binary,
   Expression,
   Grouping,
@@ -394,7 +395,7 @@ export class Parser {
     if (this.peekSameLine()) {
       label.push(this.consumeOneOf(["Identifier", "NumberLiteral"], "Expect label name."));
       if(label[0].type === "NumberLiteral" && this.peekSameLine()) {
-        console.log('Parsing compound label name');
+        // console.log('Parsing compound label name');
         label.push(this.consume("Identifier", "Labels cannot have spaces in their names."));
       }
     }
@@ -421,7 +422,7 @@ export class Parser {
     const label = [];
     label.push(this.consumeOneOf(["Identifier", "NumberLiteral"], "Expect label name."));
     if(label[0].type === "NumberLiteral" && this.peekSameLine()) {
-      console.log('Parsing compound label name');
+      // console.log('Parsing compound label name');
       label.push(this.consume("Identifier", "Labels cannot have spaces in their names."));
     }
     
@@ -483,7 +484,7 @@ export class Parser {
     if (this.peekSameLine()) {
       label.push(this.consumeOneOf(["Identifier", "NumberLiteral"], "Expect label name.") as IdentifierToken | NumberLiteralToken);
       if(label[0].type === "NumberLiteral" && this.peekSameLine()) {
-        console.log('Parsing compound label name');
+        // console.log('Parsing compound label name');
         label.push(this.consume("Identifier", "Labels cannot have spaces in their names.") as IdentifierToken);
       }
     }
@@ -686,7 +687,7 @@ export class Parser {
     const label = [];
     label.push(this.consumeOneOf(["Identifier", "NumberLiteral"], "Expect label name."));
     if(label[0].type === "NumberLiteral" && this.peekSameLine()) {
-      console.log('Parsing compound label name');
+      // console.log('Parsing compound label name');
       label.push(this.consume("Identifier", "Labels cannot have spaces in their names."));
     }
     this.expectLineChange();
@@ -702,7 +703,7 @@ export class Parser {
     const label = [];
     label.push(this.consumeOneOf(["Identifier", "NumberLiteral"], "Expect label name."));
     if(this.peekSameLine() && label[0].type === "NumberLiteral") {
-      console.log('Parsing compound label name');
+      // console.log('Parsing compound label name');
       label.push(this.consume("Identifier", "Labels cannot have spaces in their names."));
     }
     this.expectLineChange();
@@ -857,13 +858,19 @@ export class Parser {
 
   setVariable(): SetVariableStatement {
     const token = this.previous();
-    const identifier = this.consume("Identifier", "Expect variable name");
-    const expr = this.expression();
+    const identifierOrAssignment = this.expression();
+    let assignment = undefined;
+    if(this.peekSameLine()) {
+      assignment = this.expression();
+    }
     this.expectLineChange();
+    
+    // console.log('Set Expression', identifierOrAssignment, 'to', assignment);
+
     return <SetVariableStatement>{
       kind: "SetVariable",
-      variable: identifier,
-      expression: expr,
+      expression: identifierOrAssignment,
+      assignment: assignment,
       token: token,
     };
   }
@@ -986,7 +993,14 @@ export class Parser {
     }
 
     if (this.match(["Identifier"])) {
-      return <Identifier>{ token: this.previous() };
+      const identifier = this.previous();
+      if(this.match(["OpenSquareBracket"])) {
+        const accessExpression = this.expression();
+        this.consume("CloseSquareBracket", "Expect ']' after accessor expression");
+        return <ArrayIndexer>{ kind: "ArrayIndexer", expression: accessExpression, identifier: identifier }
+      }
+      
+      return <Identifier>{ token: identifier };
     }
 
     if (this.match(["OpenParenthesis"])) {
@@ -995,7 +1009,15 @@ export class Parser {
       return <Grouping>{ expression: expr };
     }
 
-    throw this.error(this.peek(), "Expect expression.");
+    if (this.match(["OpenBrace"])) {
+      const expr = this.expression();
+      this.consume("CloseBrace", "Expect '}' after expression.");
+      return <Grouping>{ expression: expr };
+    }
+    // TODO: something similar to parenthesis, but one level higher than primary, maybe the precendence needs to be low as possible?
+    // could be an expression inside [] which needs to be evaluated first, thought needed here
+
+    throw this.error(this.peek(), "Expect expression");
   }
 
   expression(): Expression {

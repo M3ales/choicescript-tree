@@ -1,10 +1,10 @@
-import { IdentifierToken, SetVariableToken } from "../../scanner/tokens";
+import { IdentifierToken, NumberLiteralToken, SetVariableToken } from "../../scanner/tokens";
 import { Expression } from "../expressions";
 import { Statement } from "./statement";
 
 export interface SetVariableStatement extends Statement {
   kind: "SetVariable";
-  variable: IdentifierToken;
   expression: Expression;
+  assignment: Expression;
   token: SetVariableToken;
 }
