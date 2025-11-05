@@ -656,6 +656,8 @@ const knownCommands = [
     "*label",
     "*if",
     "*elseif",
+    "*elsif",
+    "*else if",
     "*else",
     "*finish",
     "*params",
