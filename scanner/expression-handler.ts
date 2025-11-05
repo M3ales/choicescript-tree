@@ -34,17 +34,16 @@ function isLetter(char: string): boolean {
   return (code >= 97 && code <= 122) || (code >= 65 && code <= 90); // 'A'-'Z' or 'a'-'z'
 }
 
-function isLetterOrUnderscore(char: string): boolean {
+const isLetterOrUnderscore = (char: string): boolean => {
   return isLetter(char) || char === "_";
 }
 
-function isAlphanumericOrUnderscore(char: string): boolean {
-  return isLetter(char) || isDigit(char) || char === "_";
+const isValidVariablePunctuation = (char: string) :boolean => {
+  return char === `'`;
 }
 
-function isUppercaseLetter(char: string) {
-  const code = char.charCodeAt(0);
-  return code >= 65 && code <= 90;
+const isAlphanumericOrUnderscore = (char: string): boolean => {
+  return isLetter(char) || isDigit(char) || char === "_";
 }
 
 function isPunctuation(char: string): boolean {
@@ -96,7 +95,7 @@ export function tokenizeExpressionString(
     }
 
     // Handle string literals
-    if (char === '"' || char === "'") {
+    if (char === '"') {
       const startPos = cursor;
       const quote = char;
       let value = "";
@@ -459,11 +458,14 @@ export function tokenizeExpressionString(
     if (isLetterOrUnderscore(char)) {
       const startPos = cursor;
       let value = "";
-
+      
       // Collect all letters, numbers, and underscores
       while (
         cursor < expression.length &&
-        isAlphanumericOrUnderscore(expression[cursor])
+        (
+          isAlphanumericOrUnderscore(expression[cursor]) || 
+          isValidVariablePunctuation(expression[cursor])
+        )
       ) {
         value += expression[cursor];
         cursor++;
