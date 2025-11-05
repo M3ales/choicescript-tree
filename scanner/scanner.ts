@@ -500,6 +500,9 @@ const handleCommand = (context: ScannerContext) => {
             return createInContextToken(<GotoRandomSceneToken>{type: 'GotoRandomScene'});
         }
         case '*if': {
+            if(context.currentLine[context.position+1] === 'i') {
+                break;
+            }
             context.mode = "Expression";
             return createInContextToken(<IfToken>{type: 'If'});
         }
@@ -647,11 +650,54 @@ const handleCommand = (context: ScannerContext) => {
     return undefined;
 }
 
-const isStartOfCommand = (context: ScannerContext) : boolean => {
-    if(context.currentLine[context.position] == "*") {
-        if(context.position + 1 >= context.currentLine.length) return false;
+const knownCommands = [
+    "*choice",
+    "*label",
+    "*if",
+    "*elseif",
+    "*else",
+    "*finish",
+    "*params",
+    "*stat_chart",
+    "*delete",
+    "*set",
+    "*create",
+    "*selectable_if",
+    "*hide_reuse",
+    "*allow_reuse",
+    "*disable_reuse",
+    "*gosub_scene",
+    "*gosub",
+    "*goto",
+    "*goto_scene",
+    "*comment"
+];
 
-        return isVariableName(context.currentLine[context.position + 1]);
+const isStartOfCommand = (context: ScannerContext) : boolean => {
+    if(context.currentLine[context.position] === "*") {
+        if(context.position === 0) return true;
+        if(context.position + 1 >= context.currentLine.length) return false;
+        const nextChar = context.currentLine[context.position + 1];
+        if(nextChar === ' ') return false;
+        if(Number.isInteger(nextChar)) return false;
+
+        if(context.position > 0) {
+            if(![" ", "\t"].includes(context.currentLine[context.position-1])){
+                return false;
+            }
+        }
+
+        const lineRemaining = context.currentLine.substring(context.position);
+        let endOfCommand = lineRemaining.indexOf(' ');
+        if(endOfCommand === -1) {
+            endOfCommand = lineRemaining.indexOf(')');
+        }
+        let possibleCommand = lineRemaining;
+        if(endOfCommand !== -1) {
+            possibleCommand = lineRemaining.substring(0, endOfCommand);
+        }
+
+        return knownCommands.includes(possibleCommand);
     }
     return false;
 }
