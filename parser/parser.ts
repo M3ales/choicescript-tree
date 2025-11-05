@@ -250,6 +250,10 @@ export class Parser {
       return this.parametersStatement();
     if (this.match(["StatChart"], false, false)) return this.statChart();
     if (this.match(["GameIdentifier"], false, false)) return this.gameIdentifierStatement();
+    if (this.match(["Else"], false, false)) {
+      console.error("Dangling Else statement with no related *if found at", this.current, this.previous());
+      return this.elseStatement();
+    }
     const peek = this.peek();
 
     throw new Error(
@@ -521,24 +525,33 @@ export class Parser {
     return <ReturnStatement>{ kind: "Return", token: token };
   }
 
+  parseLabel() {
+    let label = [];
+    if(this.peek().type != "Identifier" && this.peek().type !== "NumberLiteral")  {
+      return this.expression();
+    }
+
+    label.push(
+      this.consumeOneOf(["Identifier", "NumberLiteral"], "Expect label name.")
+    );
+    if (label[0].type === "NumberLiteral" && this.peekSameLine()) {
+      // console.log('Parsing compound label name');
+      label.push(
+        this.consume(
+          "Identifier",
+          "Labels cannot have spaces in their names."
+        )
+      );
+    }
+  }
+
   goSubScene(): GoSubSceneStatement {
     const token = this.previous();
     const scene = this.consume("Identifier", "Expect scene name.");
 
-    const label = [];
+    let label:(IdentifierToken | NumberLiteralToken)[] | Expression = [];
     if (this.peekSameLine()) {
-      label.push(
-        this.consumeOneOf(["Identifier", "NumberLiteral"], "Expect label name.")
-      );
-      if (label[0].type === "NumberLiteral" && this.peekSameLine()) {
-        // console.log('Parsing compound label name');
-        label.push(
-          this.consume(
-            "Identifier",
-            "Labels cannot have spaces in their names."
-          )
-        );
-      }
+      label = this.parseLabel();
     }
 
     const args: Expression[] = [];
@@ -547,6 +560,17 @@ export class Parser {
     }
 
     this.expectLineChange();
+
+    // real meme jank used by chapter 6 of aura clash
+    const elseIfBranches = [];
+    let elseBranch = null;
+    while(this.match(["ElseIf", "Else"], false, true)) {
+      const branch = this.previous();
+      if(branch.type === "ElseIf") {
+        elseIfBranches.push(this.elseIfStatement());
+      }
+      elseBranch = this.elseStatement();
+    }
 
     return <GoSubSceneStatement>{
       kind: "GoSubScene",
@@ -554,22 +578,15 @@ export class Parser {
       scene: scene,
       label: label,
       args: args,
+      jankContinuedElseBranch: elseBranch,
+      jankContinuedElseIfBranches: elseIfBranches,
     };
   }
 
   goSub(): GoSubStatement {
     const token = this.previous();
 
-    const label = [];
-    label.push(
-      this.consumeOneOf(["Identifier", "NumberLiteral"], "Expect label name.")
-    );
-    if (label[0].type === "NumberLiteral" && this.peekSameLine()) {
-      // console.log('Parsing compound label name');
-      label.push(
-        this.consume("Identifier", "Labels cannot have spaces in their names.")
-      );
-    }
+    const label = this.parseLabel();
 
     const args: Expression[] = [];
     while (this.peekSameLine()) {
@@ -578,11 +595,24 @@ export class Parser {
 
     this.expectLineChange();
 
+    // real meme jank used by chapter 6 of aura clash
+    const elseIfBranches = [];
+    let elseBranch = null;
+    while(this.match(["ElseIf", "Else"], false, true)) {
+      const branch = this.previous();
+      if(branch.type === "ElseIf") {
+        elseIfBranches.push(this.elseIfStatement());
+      }
+      elseBranch = this.elseStatement();
+    }
+
     return <GoSubStatement>{
       kind: "GoSub",
       token: token,
       label: label,
       args: args,
+      jankContinuedElseBranch: elseBranch,
+      jankContinuedElseIfBranches: elseIfBranches,
     };
   }
 
@@ -627,21 +657,7 @@ export class Parser {
     let label: (IdentifierToken | NumberLiteralToken)[] = [];
 
     if (this.peekSameLine()) {
-      label.push(
-        this.consumeOneOf(
-          ["Identifier", "NumberLiteral"],
-          "Expect label name."
-        ) as IdentifierToken | NumberLiteralToken
-      );
-      if (label[0].type === "NumberLiteral" && this.peekSameLine()) {
-        // console.log('Parsing compound label name');
-        label.push(
-          this.consume(
-            "Identifier",
-            "Labels cannot have spaces in their names."
-          ) as IdentifierToken
-        );
-      }
+      label = this.parseLabel();
     }
 
     this.expectLineChange();
@@ -878,16 +894,7 @@ export class Parser {
 
   gotoLabel(): GotoLabelStatement {
     const token = this.previous();
-    const label = [];
-    label.push(
-      this.consumeOneOf(["Identifier", "NumberLiteral"], "Expect label name.")
-    );
-    if (label[0].type === "NumberLiteral" && this.peekSameLine()) {
-      // console.log('Parsing compound label name');
-      label.push(
-        this.consume("Identifier", "Labels cannot have spaces in their names.")
-      );
-    }
+    const label = this.parseLabel();
     this.expectLineChange();
     return <GotoLabelStatement>{
       kind: "GotoLabel",
