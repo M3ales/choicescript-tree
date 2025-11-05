@@ -652,6 +652,7 @@ const handleCommand = (context: ScannerContext) => {
 
 const knownCommands = [
     "*choice",
+    "*fake_choice",
     "*label",
     "*if",
     "*elseif",
@@ -662,6 +663,7 @@ const knownCommands = [
     "*delete",
     "*set",
     "*create",
+    "*temp",
     "*selectable_if",
     "*hide_reuse",
     "*allow_reuse",
@@ -670,12 +672,37 @@ const knownCommands = [
     "*gosub",
     "*goto",
     "*goto_scene",
-    "*comment"
+    "*comment",
+    "*ifid",
+    "*rand",
+    "*line_break",
+    "*page_break",
+    "*page_break_advertisement",
+    "*input_text",
+    "*input_number",
+    "*finish",
+    "*ending",
+    "*return",
+    "*achievement",
+    "*achieve",
+    "*check_achievements",
+    "*link",
+    "*image",
+    "*purchase_discount",
+    "save_checkpoint",
+    "restore_checkpoint",
+    "*delete",
+    "*create_array",
+    "*delete_array",
+    "*temp_array",
+    "*scene_list",
+    "*author"
 ];
 
 const isStartOfCommand = (context: ScannerContext) : boolean => {
     if(context.currentLine[context.position] === "*") {
         if(context.position === 0) return true;
+        if(context.position === context.currentLine.trimStart().indexOf("*")) return true;
         if(context.position + 1 >= context.currentLine.length) return false;
         const nextChar = context.currentLine[context.position + 1];
         if(nextChar === ' ') return false;
