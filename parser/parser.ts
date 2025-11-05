@@ -5,6 +5,7 @@ import {
   CheckAchievementsToken,
   CommentToken,
   DisableReuseToken,
+  GameIdentifierToken,
   HideReuseToken,
   IdentifierToken,
   ImageToken,
@@ -43,6 +44,7 @@ import {
   ExpressionStatement,
   FakeChoiceStatement,
   FinishStatement,
+  GameIdentifierStatement,
   GenerateRandomStatement,
   GoSubSceneStatement,
   GoSubStatement,
@@ -247,11 +249,21 @@ export class Parser {
     if (this.match(["Parameters"], false, false))
       return this.parametersStatement();
     if (this.match(["StatChart"], false, false)) return this.statChart();
+    if (this.match(["GameIdentifier"], false, false)) return this.gameIdentifierStatement();
     const peek = this.peek();
 
     throw new Error(
       `Unknown statement block starting ${peek?.type} at ${peek?.sceneName}:${peek?.lineNumber}:${peek?.position}[${peek?.indent}]`
     );
+  }
+  gameIdentifierStatement(): GameIdentifierStatement {
+    const token = this.previous() as GameIdentifierToken;
+    const id = this.consume("Prose", "Expect identifier uuid following *ifid");
+    return <GameIdentifierStatement> {
+      kind: "GameIdentifier",
+      token: token,
+      uuid: id,
+    }
   }
 
   imageStatement(): ImageStatement {

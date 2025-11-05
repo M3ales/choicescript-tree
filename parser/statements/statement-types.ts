@@ -37,4 +37,5 @@ export type StatementTypes =
   | "SceneList"
   | "Image"
   | "Round"
-  | "Length";
+  | "Length"
+  | "GameIdentifier";
