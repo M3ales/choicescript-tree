@@ -153,7 +153,7 @@ export const scanScene = (scene: Scene) => {
                         continue;
                     }
 
-                    if (isStartOfCommand(line[context.position])) {
+                    if (isStartOfCommand(context)) {
                         context.mode = "Command";
                         context.currentTokenStartPosition = context.position;
                         if(context.proseBlock.trim().length > 0) {
@@ -226,7 +226,7 @@ export const scanScene = (scene: Scene) => {
                     break;
                 }
                 case "Expression": {
-                        if (isStartOfCommand(line[context.position])) {
+                        if (isStartOfCommand(context)) {
                             var expressionTokens = tokenizeExpressionString(
                                 context.currentToken,
                                 context.lineNumber,
@@ -647,8 +647,13 @@ const handleCommand = (context: ScannerContext) => {
     return undefined;
 }
 
-const isStartOfCommand = (char: string) : boolean => {
-    return char == "*";
+const isStartOfCommand = (context: ScannerContext) : boolean => {
+    if(context.currentLine[context.position] == "*") {
+        if(context.position + 1 >= context.currentLine.length) return false;
+
+        return isVariableName(context.currentLine[context.position + 1]);
+    }
+    return false;
 }
 
 const isStartOfChoiceOption = (char:string, before: string | undefined): boolean => {
