@@ -1,4 +1,4 @@
-import { GotoSceneToken, IdentifierToken, ReturnToken } from "../../scanner/tokens";
+import { ReturnToken } from "../../scanner/tokens";
 import { Statement } from "./statement";
 
 export interface ReturnStatement extends Statement {

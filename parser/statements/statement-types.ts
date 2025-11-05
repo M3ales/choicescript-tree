@@ -35,4 +35,6 @@ export type StatementTypes =
   | "Finish"
   | "Ending"
   | "SceneList"
-  | "Image";
+  | "Image"
+  | "Round"
+  | "Length";

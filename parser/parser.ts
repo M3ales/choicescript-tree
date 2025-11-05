@@ -1125,6 +1125,8 @@ export class Parser {
         "SubtractionOperator",
         "AdditionOperator",
         "ConcatenationOperator",
+        "FairmathAdditionOperator",
+        "FairmathSubtractionOperator"
       ])
     ) {
       const operator: Token = this.previous();
@@ -1185,6 +1187,8 @@ export class Parser {
         "AdditionOperator",
         "FairmathAdditionOperator",
         "FairmathSubtractionOperator",
+        "RoundOperator",
+        "LengthOperator"
       ])
     ) {
       const operator = this.previous();
