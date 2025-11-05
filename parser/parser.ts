@@ -7,6 +7,7 @@ import {
   DisableReuseToken,
   HideReuseToken,
   IdentifierToken,
+  ImageToken,
   NumberLiteralToken,
   ProseToken,
   SceneEndToken,
@@ -49,6 +50,7 @@ import {
   GotoSceneStatement,
   HideReuseStatement,
   IfStatement,
+  ImageStatement,
   InputNumberStatement,
   InputTextStatement,
   LabelStatement,
@@ -223,6 +225,7 @@ export class Parser {
       return this.createVariable(false);
     if (this.match(["CreateTempVariable"], false, false))
       return this.createVariable(true);
+    if (this.match(["Image"], false, false)) return this.imageStatement();
     if (this.match(["GoSub"], false, false)) return this.goSub();
     if (this.match(["Finish"], false, false)) return this.finishStatement();
     if (this.match(["GoSubScene"], false, false)) return this.goSubScene();
@@ -250,6 +253,28 @@ export class Parser {
       `Unknown statement block starting ${peek?.type} at ${peek?.sceneName}:${peek?.lineNumber}:${peek?.position}[${peek?.indent}]`
     );
   }
+
+  imageStatement(): ImageStatement {
+    const token = this.previous() as ImageToken;
+    const path = this.consume("Prose", "Expect path after *image.");
+    let alignment = undefined;
+    let altText = undefined;
+    if(this.peekSameLine()) {
+      alignment = this.consume("Identifier", "Expect alignment after image path.", true, true) as IdentifierToken;
+      if(this.peekSameLine()) {
+        altText = this.consume("Prose", "Expect alt text after image alignement.", true, true) as ProseToken;
+      }
+    }
+
+    return <ImageStatement>{
+      kind: "Image",
+      token: token,
+      path: path,
+      alignment: alignment,
+      altText: altText,
+    }
+  }
+
   statChart(): StatChartStatement {
     const token = this.previous();
 

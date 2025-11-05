@@ -21,6 +21,7 @@ export * from "./goto-label";
 export * from "./goto-scene";
 export * from "./hide-reuse";
 export * from "./if";
+export * from "./image";
 export * from "./input-number";
 export * from "./input-text";
 export * from "./label";

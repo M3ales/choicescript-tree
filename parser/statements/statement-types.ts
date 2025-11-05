@@ -34,4 +34,5 @@ export type StatementTypes =
   | "HideReuse"
   | "Finish"
   | "Ending"
-  | "SceneList";
+  | "SceneList"
+  | "Image";
