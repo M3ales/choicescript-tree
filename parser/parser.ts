@@ -256,6 +256,7 @@ export class Parser {
       `Unknown statement block starting ${peek?.type} at ${peek?.sceneName}:${peek?.lineNumber}:${peek?.position}[${peek?.indent}]`
     );
   }
+
   gameIdentifierStatement(): GameIdentifierStatement {
     const token = this.previous() as GameIdentifierToken;
     const id = this.consume("Prose", "Expect identifier uuid following *ifid");
@@ -388,18 +389,8 @@ export class Parser {
       true,
       true
     ) as IdentifierToken;
-    const min: NumberLiteralToken = this.consume(
-      "NumberLiteral",
-      "Expect minimum number.",
-      true,
-      true
-    ) as NumberLiteralToken;
-    const max: NumberLiteralToken = this.consume(
-      "NumberLiteral",
-      "Expect maximum number.",
-      true,
-      true
-    ) as NumberLiteralToken;
+    const min = this.expression();
+    const max = this.expression();
     this.expectLineChange();
     return <GenerateRandomStatement>{
       kind: "GenerateRandom",
@@ -601,14 +592,8 @@ export class Parser {
       "Identifier",
       "Expect variable name to store input text."
     ) as IdentifierToken;
-    const min = this.consume(
-      "NumberLiteral",
-      "Expect minimum valid input"
-    ) as NumberLiteralToken;
-    const max = this.consume(
-      "NumberLiteral",
-      "Expect maximum valid input"
-    ) as NumberLiteralToken;
+    const min = this.expression();
+    const max = this.expression();
     this.expectLineChange();
     return <InputNumberStatement>{
       kind: "InputNumber",

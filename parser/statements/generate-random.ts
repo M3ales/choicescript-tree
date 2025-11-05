@@ -1,10 +1,11 @@
-import { GenerateRandomToken, IdentifierToken, NumberLiteralToken, ProseToken } from "../../scanner/tokens";
+import { GenerateRandomToken, IdentifierToken } from "../../scanner/tokens";
+import { Expression } from "../expressions";
 import { Statement } from "./statement";
 
 export interface GenerateRandomStatement extends Statement {
     kind: "GenerateRandom";
     token: GenerateRandomToken;
     identifier: IdentifierToken,
-    min: NumberLiteralToken,
-    max: NumberLiteralToken,
+    min: Expression,
+    max: Expression,
 }
