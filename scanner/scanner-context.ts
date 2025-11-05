@@ -30,7 +30,8 @@ export interface ScannerContext {
     | "MultiReplace"
     | "Achievement"
     | "SceneList"
-    | "StatChart";
+    | "StatChart"
+    | "Image";
 
   indent: IndentationContext;
 }

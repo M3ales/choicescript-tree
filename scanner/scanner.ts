@@ -59,6 +59,7 @@ import { handleSceneList } from "./scene-list-handler";
 import { countIndentation, scanIndentCharacter } from "./indent";
 import { ParametersToken } from "./tokens/parameters";
 import { handleStatChart } from "./stat-chart-handler";
+import { handleImage } from "./image-handler";
 
 export const scanScene = (scene: Scene) => {
     const context: ScannerContext = {
@@ -351,6 +352,13 @@ export const scanScene = (scene: Scene) => {
                     context.position = line.length;
                     break;
                 }
+                case "Image": {
+                    const imageTokens = handleImage(context);
+                    // console.log('Image', imageTokens)
+                    tokens.push(...imageTokens);
+                    context.mode = "Prose";
+                    break;
+                }
             }
         }
         // Handle multi line blocks
@@ -578,7 +586,7 @@ const handleCommand = (context: ScannerContext) => {
             return createInContextToken(<AchieveToken>{type: 'Achieve'});
         }
         case "*image": {
-            context.mode = "Expression";
+            context.mode = "Image";
             return createInContextToken(<ImageToken>{type: 'Image'});
         }
         case "*input_number": {
