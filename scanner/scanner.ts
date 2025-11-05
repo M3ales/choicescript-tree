@@ -618,11 +618,11 @@ const handleCommand = (context: ScannerContext) => {
             return createInContextToken(<PageBreakToken>{type: 'PageBreak'});
         }
         case "*save_checkpoint": {
-            context.mode = "Prose";
+            context.mode = "ProseToEOL";
             return createInContextToken(<SaveCheckpointToken>{type: 'SaveCheckpoint'});
         }
         case "*restore_checkpoint": {
-            context.mode = "Prose";
+            context.mode = "ProseToEOL";
             return createInContextToken(<RestoreCheckpointToken>{type: 'RestoreCheckpoint'});
         }
         case "*delete": {
@@ -704,7 +704,8 @@ const knownCommands = [
 const isStartOfCommand = (context: ScannerContext) : boolean => {
     if(context.currentLine[context.position] === "*") {
         if(context.position === 0) return true;
-        if(context.position === context.currentLine.trimStart().indexOf("*")) return true;
+        const intent = countIndentation(context.currentLine);
+        if(context.position === intent.position) return true;
         if(context.position + 1 >= context.currentLine.length) return false;
         const nextChar = context.currentLine[context.position + 1];
         if(nextChar === ' ') return false;

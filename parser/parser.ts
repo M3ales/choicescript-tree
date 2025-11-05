@@ -11,6 +11,8 @@ import {
   ImageToken,
   NumberLiteralToken,
   ProseToken,
+  RestoreCheckpointToken,
+  SaveCheckpointToken,
   SceneEndToken,
   SceneListToken,
   SceneStartToken,
@@ -63,7 +65,9 @@ import {
   ParametersStatement,
   PercentStat,
   ProseStatement,
+  RestoreCheckpointStatement,
   ReturnStatement,
+  SaveCheckpointStatement,
   SelectableIfStatement,
   SetVariableStatement,
   Stat,
@@ -250,6 +254,12 @@ export class Parser {
       return this.parametersStatement();
     if (this.match(["StatChart"], false, false)) return this.statChart();
     if (this.match(["GameIdentifier"], false, false)) return this.gameIdentifierStatement();
+    if (this.match(["SaveCheckpoint"], false, false)) return this.saveCheckpointStatement();
+    if (this.match(["RestoreCheckpoint"], false, false)) return this.restoreCheckpointStatement();
+    //if (this.match(["DisableReuse"])) return this.disableReuse();
+    //if (this.match(["HideReuse"])) return this.hideReuse();
+    //if (this.match(["AllowReuse"])) return this.allowReuse();
+    // TODO: make these operators work in generalist context too ^
     if (this.match(["Else"], false, false)) {
       console.error("Dangling Else statement with no related *if found at", this.current, this.previous());
       return this.elseStatement();
@@ -259,6 +269,30 @@ export class Parser {
     throw new Error(
       `Unknown statement block starting ${peek?.type} at ${peek?.sceneName}:${peek?.lineNumber}:${peek?.position}[${peek?.indent}]`
     );
+  }
+  restoreCheckpointStatement(): RestoreCheckpointStatement {
+    const token = this.previous() as RestoreCheckpointToken;
+    let identifier = undefined;
+    if(this.peekSameLine()) {
+      identifier = this.consume("Prose", "Expect identifier for checkpoint after *restore_checkpoint");
+    }
+    return <RestoreCheckpointStatement>{
+      kind: "RestoreCheckpoint",
+      token: token,
+      identifier: identifier,
+    }
+  }
+  saveCheckpointStatement(): SaveCheckpointStatement {
+    const token = this.previous() as SaveCheckpointToken;
+    let identifier = undefined;
+    if(this.peekSameLine()) {
+      identifier = this.consume("Prose", "Expect identifier for checkpoint after *restore_checkpoint");
+    }
+    return <SaveCheckpointStatement>{
+      kind: "SaveCheckpoint",
+      token: token,
+      identifier: identifier,
+    }
   }
 
   gameIdentifierStatement(): GameIdentifierStatement {

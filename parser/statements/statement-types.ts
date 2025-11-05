@@ -38,4 +38,6 @@ export type StatementTypes =
   | "Image"
   | "Round"
   | "Length"
-  | "GameIdentifier";
+  | "GameIdentifier"
+  | "SaveCheckpoint"
+  | "RestoreCheckpoint";
