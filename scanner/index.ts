@@ -1,6 +1,7 @@
 import {Scene} from "./scene";
 import {scanScene} from "./scanner";
 import fs from 'node:fs';
+import { scanLabelNames } from "./scan-label-names";
 
 const execute = async () => {
     const startup = await loadScene('startup');
@@ -25,7 +26,11 @@ const execute = async () => {
 
 export const scanScenes = async (scenes: Scene[]) => {
     const cleanedScenes = scenes.filter(scene => scene.content !== '{"error":"couldn\'t find scene"}\n');
-    return cleanedScenes.map(scene => scanScene(scene));
+    // scan labels
+    const knownLabels = cleanedScenes.map(scene => scanLabelNames(scene)).flatMap(s => s);
+    const sceneNames = scenes.map(scene => scene.name);
+    console.log(`Found ${knownLabels.length} labels, and ${sceneNames.length} scenes`,sceneNames);
+    return cleanedScenes.map(scene => scanScene(scene, knownLabels, sceneNames));
 }
 
 export const loadScene = async (name: string) => {
@@ -58,6 +63,10 @@ export const readSceneList = (startup: Scene): string[] => {
 
 //"https://cogdemos.ink/play/nutellaqueen/the-sword-of-rhivenia-public-demo/mygame"
 //"https://cogdemos.ink/play/izzily/drink-your-villain-juice/mygame";
-//https://www.choiceofgames.com/user-contributed/fallen-hero-retribution/
-const url = "https://www.choiceofgames.com/user-contributed/fallen-hero-retribution/";
+//"https://www.choiceofgames.com/user-contributed/fallen-hero-retribution/";
+//"https://cogdemos.ink/play/cultivator-anon/aura-clash/mygame";
+//"https://www.choiceofgames.com/user-contributed/eldritch-tales-inheritance/";
+//"https://www.choiceofgames.com/user-contributed/blood-moon/";
+// "https://cogdemos.ink/play/keeper/keeper-of-life-and-death/mygame";
+let url = "https://cogdemos.ink/play/allie-%28monsoon-games%29/college-tennis-origin-story/mygame";;
 await execute();

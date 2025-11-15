@@ -46,16 +46,14 @@ const isAlphanumericOrUnderscore = (char: string): boolean => {
   return isLetter(char) || isDigit(char) || char === "_";
 }
 
-function isPunctuation(char: string): boolean {
-  return [".", ",", "!", "?", ";", ":", "'"].includes(char);
-}
-
 export function tokenizeExpressionString(
   expression: string,
   lineNumber: number,
   position: number,
   indent: number,
-  sceneName: string
+  sceneName: string,
+  knownLabels: string[],
+  sceneNames: string[],
 ): Token[] {
   const tokens: Token[] = [];
   let cursor = 0;
@@ -67,6 +65,105 @@ export function tokenizeExpressionString(
     if (char === " " || char === "\t") {
       cursor++;
       continue;
+    }
+    sceneNames ??= [];
+    knownLabels ??= [];
+    if(sceneNames.length > 0) {
+      let possibleScenes = sceneNames.filter(sceneName => sceneName.startsWith(char));
+
+      let sceneCompareValue = expression[cursor];
+      const startPos = cursor;
+      let foundScene = false;
+      let nextCharIsValidVariable = false;
+      
+      cursor++;
+
+      while(possibleScenes.length > 0 && cursor < expression.length) {
+        const tempValue = sceneCompareValue + expression[cursor];
+        
+        const previousPossibleScenes = possibleScenes;
+        possibleScenes = sceneNames.filter(scene => scene.startsWith(tempValue));
+        if(previousPossibleScenes.length > 0 && possibleScenes.length === 0) {
+          possibleScenes = previousPossibleScenes;
+          if(isAlphanumericOrUnderscore(expression[cursor])) {
+            nextCharIsValidVariable = true;
+          }
+          break;
+        }
+
+        sceneCompareValue = tempValue;
+        cursor++;
+        if(cursor >= expression.length) {
+          break;
+        }
+      }
+      
+      foundScene = possibleScenes.some(scene => scene === sceneCompareValue);
+
+      if(foundScene && !nextCharIsValidVariable) {
+        // console.log('Matched Scene', sceneCompareValue, possibleScenes.length);
+        const isAlsoLabelName = knownLabels.some(label => label === sceneCompareValue);
+        tokens.push({
+          type: "Identifier",
+          value: sceneCompareValue,
+          position: position + startPos,
+          lineNumber: lineNumber,
+          sceneName: sceneName,
+          indent: indent,
+          isSceneName: true,
+          isLabelName: isAlsoLabelName,
+        } as IdentifierToken);
+        continue;
+      }
+      else {
+        cursor = startPos;
+      }
+    }
+
+    if(knownLabels.length > 0) {
+      let possibleLabels = knownLabels.filter(label => label.startsWith(char));
+
+      let labelCompareValue = "";
+      const startPos = cursor;
+      let foundLabel = false;
+      let nextCharIsValidVariable = false;
+      while(possibleLabels.length > 0 && cursor < expression.length) {
+        const tempValue = labelCompareValue + expression[cursor];
+        
+        const previousPossibleLabels = possibleLabels;
+        possibleLabels = knownLabels.filter(label => label.startsWith(tempValue));
+        if(previousPossibleLabels.length > 0 && possibleLabels.length === 0) {
+          possibleLabels = previousPossibleLabels;
+          if(isAlphanumericOrUnderscore(expression[cursor])) {
+            nextCharIsValidVariable = true;
+          }
+          break;
+        }
+
+        labelCompareValue = tempValue;
+        cursor++;
+        if(cursor >= expression.length) {
+          break;
+        }
+      }
+      
+      foundLabel = possibleLabels.some(label => label === labelCompareValue);
+      if(foundLabel && !nextCharIsValidVariable) {
+        // console.log('Matched Label', labelCompareValue, possibleLabels.length, possibleLabels);
+        tokens.push({
+          type: "Identifier",
+          value: labelCompareValue,
+          position: position + startPos,
+          lineNumber: lineNumber,
+          sceneName: sceneName,
+          indent: indent,
+          isLabelName: true
+        } as IdentifierToken);
+        continue;
+      }
+      else {
+        cursor = startPos;
+      }
     }
 
     // Handle numbers
@@ -463,8 +560,7 @@ export function tokenizeExpressionString(
       while (
         cursor < expression.length &&
         (
-          isAlphanumericOrUnderscore(expression[cursor]) || 
-          isValidVariablePunctuation(expression[cursor])
+          isAlphanumericOrUnderscore(expression[cursor])
         )
       ) {
         value += expression[cursor];

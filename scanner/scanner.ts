@@ -56,12 +56,12 @@ import {
 import {tokenizeExpressionString} from './expression-handler';
 import { parseAchievementBlock as scanAchievementBlock } from "./achievement-handler";
 import { handleSceneList } from "./scene-list-handler";
-import { countIndentation, scanIndentCharacter } from "./indent";
+import { countIndentation } from "./indent";
 import { ParametersToken } from "./tokens/parameters";
 import { handleStatChart } from "./stat-chart-handler";
 import { handleImage } from "./image-handler";
 
-export const scanScene = (scene: Scene) => {
+export const scanScene = (scene: Scene, knownLabels: string[], knownSceneNames: string[]) => {
     const context: ScannerContext = {
         proseBlock: '',
         proseBlockStart: undefined,
@@ -232,7 +232,9 @@ export const scanScene = (scene: Scene) => {
                                 context.lineNumber,
                                 context.currentTokenStartPosition,
                                 context.indent.current,
-                                context.scene.name);
+                                context.scene.name,
+                                knownLabels,
+                                knownSceneNames);
                             tokens.push(...expressionTokens);
                             context.mode = "Command";
                             context.currentTokenStartPosition = context.position;
@@ -248,7 +250,9 @@ export const scanScene = (scene: Scene) => {
                                 context.lineNumber,
                                 context.currentTokenStartPosition,
                                 context.indent.current,
-                                context.scene.name);
+                                context.scene.name,
+                                knownLabels,
+                                knownSceneNames);
                             tokens.push(...expressionTokens);
                             context.mode = "ChoiceOption";
                             //console.log('Encountered Token, switching mode to Token after expression', expressionTokens)
@@ -267,7 +271,9 @@ export const scanScene = (scene: Scene) => {
                                 context.lineNumber,
                                 context.currentTokenStartPosition,
                                 context.indent.current,
-                                context.scene.name);
+                                context.scene.name,
+                                knownLabels,
+                                knownSceneNames);
                             
                             //console.log("EOL reached, scanning expression", expressionTokens)
                             tokens.push(...expressionTokens);
@@ -382,52 +388,6 @@ export const scanScene = (scene: Scene) => {
             type: 'SceneEnd'
         }
     );
-    return tokens;
-}
-
-const parseMultireplaceFromProse = (proseString: string, context: ScannerContext): Token[] => {
-    const multi = proseString.split('@{');
-    const tokens = [];
-    for(let i = 0; i < multi.length; i++) {
-        if(i === 0) {
-            tokens.push(<ProseToken>{
-                content: multi[i],
-                type: 'Prose',
-                indent: context.indent.current,
-                lineNumber: context.indent.current,
-                position: context.position + proseString.indexOf(multi[i]),
-            });
-        }
-
-        if(multi.length === 1) {
-            continue;
-        }
-
-        const m = multi[i];
-        const multiReplaceExpression = m.split('}');
-
-        if(multiReplaceExpression.length > 1) {
-            tokens.push(<ProseToken>{
-                content: multiReplaceExpression[1],
-                type: 'Prose',
-                indent: context.indent.current,
-                lineNumber: context.indent.current,
-                position: context.position + proseString.indexOf(multiReplaceExpression[1]),
-            });
-        }
-
-        if(multiReplaceExpression.length === 1) continue;
-        
-        const expression = tokenizeExpressionString(
-            multiReplaceExpression[0],
-            context.lineNumber,
-            context.position,
-            context.indent.current,
-            context.scene.name);
-        
-        tokens.push(...expression);
-    }
-
     return tokens;
 }
 
