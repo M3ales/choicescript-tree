@@ -5,6 +5,6 @@ import { Expression } from "../expressions";
 export interface GotoLabelStatement extends Statement {
     kind: "GotoLabel";
     token: GotoLabelToken;
-    label: (IdentifierToken | NumberLiteralToken)[] | Expression;
+    label: IdentifierToken | Expression;
 }
   

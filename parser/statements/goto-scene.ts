@@ -6,6 +6,6 @@ export interface GotoSceneStatement extends Statement {
     kind: "GotoScene";
     token: GotoSceneToken;
     scene: IdentifierToken;
-    label: (IdentifierToken | NumberLiteralToken)[] | Expression;
+    label: IdentifierToken | Expression | undefined;
 }
   

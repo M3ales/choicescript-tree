@@ -560,30 +560,21 @@ export class Parser {
   }
 
   parseLabel() {
-    let label = [];
-    if(this.peek().type != "Identifier" && this.peek().type !== "NumberLiteral")  {
+    if(this.peek().type != "Identifier")  {
       return this.expression();
     }
 
-    label.push(
-      this.consumeOneOf(["Identifier", "NumberLiteral"], "Expect label name.")
-    );
-    if (label[0].type === "NumberLiteral" && this.peekSameLine()) {
-      // console.log('Parsing compound label name');
-      label.push(
-        this.consume(
+    this.consume(
           "Identifier",
-          "Labels cannot have spaces in their names."
+          "Expect valid label name"
         )
-      );
-    }
   }
 
   goSubScene(): GoSubSceneStatement {
     const token = this.previous();
     const scene = this.consume("Identifier", "Expect scene name.");
 
-    let label:(IdentifierToken | NumberLiteralToken)[] | Expression = [];
+    let label: IdentifierToken | Expression;
     if (this.peekSameLine()) {
       label = this.parseLabel();
     }
@@ -684,11 +675,19 @@ export class Parser {
 
   gotoScene(): GotoSceneStatement {
     const token = this.previous();
-    const scene = this.consume(
-      "Identifier",
-      "Expect scene name."
-    ) as IdentifierToken;
-    let label: (IdentifierToken | NumberLiteralToken)[] = [];
+
+    let scene : IdentifierToken | Expression;
+    if(this.peek().type !== "Identifier") {
+      scene = this.parseLabel();
+    }
+    else {
+      scene = this.consume(
+        "Identifier",
+        "Expect scene name."
+      ) as IdentifierToken;
+    }
+
+    let label: IdentifierToken | Expression;
 
     if (this.peekSameLine()) {
       label = this.parseLabel();

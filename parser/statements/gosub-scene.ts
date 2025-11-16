@@ -8,7 +8,7 @@ export interface GoSubSceneStatement extends Statement {
     kind: "GoSubScene";
     token: GoSubToken;
     scene: IdentifierToken;
-    label: (IdentifierToken | NumberLiteralToken)[] | Expression;
+    label: IdentifierToken | Expression;
     args: Expression[];
     // courtesy of novel usage in aura clash chpt 6
     jankContinuedElseIfBranches: ElseIfStatement[];
