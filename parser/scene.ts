@@ -1,6 +1,6 @@
 import { Statement } from "./statements";
 
-export interface Scene {
+export interface SceneAst {
     name: string;
     statements: Statement[];
 }

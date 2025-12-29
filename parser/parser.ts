@@ -75,7 +75,7 @@ import {
   Statement,
   TextStat,
 } from "./statements";
-import { Scene } from "./scene";
+import { SceneAst } from "./scene";
 import {
   SceneIdentifier as SceneIdentifierToken,
   SceneListStatement,
@@ -193,7 +193,12 @@ export class Parser {
     return false;
   }
 
-  parseScene(): Scene {
+  statementId = 0;
+  generateStatementId() {
+    return this.statementId++;
+  }
+
+  parseScene(): SceneAst {
     if (this.match(["SceneStart"], false, false)) {
       const sceneStart = this.previous() as SceneStartToken;
       const statements: Statement[] = [];
@@ -202,7 +207,7 @@ export class Parser {
       }
       const sceneEnd = this.previous() as SceneEndToken;
 
-      return <Scene>{
+      return <SceneAst>{
         name: sceneStart.sceneName,
 
         statements: statements,
@@ -270,6 +275,7 @@ export class Parser {
       `Unknown statement block starting ${peek?.type} at ${peek?.sceneName}:${peek?.lineNumber}:${peek?.position}[${peek?.indent}]`
     );
   }
+
   restoreCheckpointStatement(): RestoreCheckpointStatement {
     const token = this.previous() as RestoreCheckpointToken;
     let identifier = undefined;
@@ -397,6 +403,7 @@ export class Parser {
       token: token,
       title: title,
       stats: stats,
+      statementId: this.generateStatementId()
     };
   }
   parametersStatement(): ParametersStatement {
@@ -416,6 +423,7 @@ export class Parser {
       kind: "Parameters",
       token: token,
       identifiers: identifiers,
+      statementId: this.generateStatementId()
     };
   }
 
@@ -436,6 +444,7 @@ export class Parser {
       identifier: identifier,
       min: min,
       max: max,
+      statementId: this.generateStatementId()
     };
   }
 
@@ -455,6 +464,7 @@ export class Parser {
     return <CheckAchievementsStatement>{
       kind: "CheckAchievements",
       token: token,
+      statementId: this.generateStatementId()
     };
   }
 
@@ -469,6 +479,7 @@ export class Parser {
       kind: "Achieve",
       token: token,
       codename: codename,
+      statementId: this.generateStatementId()
     };
   }
 
@@ -511,6 +522,7 @@ export class Parser {
       kind: "Achievement",
       token: token,
       hidden: visibility.value === "hidden",
+      statementId: this.generateStatementId()
     };
   }
 
@@ -532,6 +544,7 @@ export class Parser {
       kind: "SceneList",
       token: token,
       identifiers: identifiers,
+      statementId: this.generateStatementId()
     };
   }
 
@@ -539,7 +552,12 @@ export class Parser {
     const token = this.previous();
     const name = this.consume("Prose", "Expect author name.");
     this.expectLineChange();
-    return <AuthorStatement>{ kind: "Author", token: token, value: name };
+    return <AuthorStatement>{ 
+      kind: "Author",
+      token: token,
+      value: name,
+      statementId: this.generateStatementId()
+    };
   }
 
   commentBlock(): CommentBlock {
@@ -556,7 +574,10 @@ export class Parser {
   return(): ReturnStatement {
     const token = this.previous();
     this.expectLineChange();
-    return <ReturnStatement>{ kind: "Return", token: token };
+    return <ReturnStatement>{ 
+      kind: "Return",
+      token: token,
+      statementId: this.generateStatementId() };
   }
 
   parseLabel() {
@@ -564,10 +585,10 @@ export class Parser {
       return this.expression();
     }
 
-    this.consume(
+    return this.consume(
           "Identifier",
           "Expect valid label name"
-        )
+        ) as IdentifierToken;
   }
 
   goSubScene(): GoSubSceneStatement {
@@ -605,6 +626,7 @@ export class Parser {
       args: args,
       jankContinuedElseBranch: elseBranch,
       jankContinuedElseIfBranches: elseIfBranches,
+      statementId: this.generateStatementId()
     };
   }
 
@@ -638,6 +660,7 @@ export class Parser {
       args: args,
       jankContinuedElseBranch: elseBranch,
       jankContinuedElseIfBranches: elseIfBranches,
+      statementId: this.generateStatementId()
     };
   }
 
@@ -656,6 +679,7 @@ export class Parser {
       storeInto: variable,
       min: min,
       max: max,
+      statementId: this.generateStatementId()
     };
   }
 
@@ -670,6 +694,7 @@ export class Parser {
       kind: "InputText",
       token: token,
       storeInto: variable,
+      statementId: this.generateStatementId()
     };
   }
 
@@ -699,6 +724,7 @@ export class Parser {
       token: token,
       scene: scene,
       label: label,
+      statementId: this.generateStatementId()
     };
   }
 
@@ -707,6 +733,7 @@ export class Parser {
     return <LineBreakStatement>{
       kind: "LineBreak",
       token: token,
+      statementId: this.generateStatementId()
     };
   }
 
@@ -724,6 +751,7 @@ export class Parser {
       kind: "PageBreak",
       token: token,
       buttonText: buttonText,
+      statementId: this.generateStatementId()
     };
   }
 
@@ -782,6 +810,7 @@ export class Parser {
       expression: expression,
       elseBranch: elseBranch,
       elseIfBranches: elseIfBranches,
+      statementId: this.generateStatementId()
     };
   }
 
@@ -797,6 +826,7 @@ export class Parser {
       kind: "Else",
       token: token,
       body: body,
+      statementId: this.generateStatementId()
     };
   }
 
@@ -814,6 +844,7 @@ export class Parser {
       token: token,
       body: body,
       expression: expression,
+      statementId: this.generateStatementId()
     };
   }
 
@@ -823,7 +854,11 @@ export class Parser {
     if (this.match(["Prose"], true, true)) {
       prose = this.previous();
     }
-    return <FinishStatement>{ kind: "Finish", token: token, buttonText: prose };
+    return <FinishStatement>{
+      kind: "Finish",
+      token: token,
+      buttonText: prose,
+      statementId: this.generateStatementId() };
   }
 
   endingStatement(): EndingStatement {
@@ -832,7 +867,11 @@ export class Parser {
     if (this.match(["Prose"], true, true)) {
       prose = this.previous();
     }
-    return <EndingStatement>{ kind: "Ending", token: token, buttonText: prose };
+    return <EndingStatement>{
+      kind: "Ending",
+      token: token,
+      buttonText: prose,
+      statementId: this.generateStatementId() };
   }
 
   choiceStatement(): ChoiceStatement {
@@ -879,7 +918,11 @@ export class Parser {
 
     //console.log('Complete Choice');
 
-    return <ChoiceStatement>{ kind: "Choice", token: token, body: body };
+    return <ChoiceStatement>{
+      kind: "Choice",
+      token: token,
+      body: body,
+      statementId: this.generateStatementId() };
   }
 
   fakeChoiceStatement(): FakeChoiceStatement {
@@ -922,6 +965,7 @@ export class Parser {
       kind: "FakeChoice",
       token: token,
       body: body,
+      statementId: this.generateStatementId()
     };
   }
 
@@ -933,23 +977,20 @@ export class Parser {
       kind: "GotoLabel",
       token: token,
       label: label,
+      statementId: this.generateStatementId()
     };
   }
 
   labelDefinition(): LabelStatement {
     const token = this.previous();
-    const label = [];
-    label.push(
-      this.consumeOneOf(["Identifier", "NumberLiteral"], "Expect label name.")
-    );
-    if (this.peekSameLine() && label[0].type === "NumberLiteral") {
-      // console.log('Parsing compound label name');
-      label.push(
-        this.consume("Identifier", "Labels cannot have spaces in their names.")
-      );
-    }
+    const label = this.consume("Identifier", "Expect label name.");
     this.expectLineChange();
-    return <LabelStatement>{ kind: "Label", token: token, label: label };
+    return <LabelStatement>{ 
+      kind: "Label",
+      token: token,
+      label: label,
+      statementId: this.generateStatementId()
+    };
   }
 
   selectableIf(): SelectableIfStatement {
@@ -959,6 +1000,7 @@ export class Parser {
       kind: "SelectableIf",
       token: token,
       expression: expression,
+      statementId: this.generateStatementId()
     };
   }
 
@@ -1011,17 +1053,29 @@ export class Parser {
 
   hideReuse() {
     const token = this.previous();
-    return <HideReuseStatement>{ kind: "HideReuse", token: token };
+    return <HideReuseStatement>{ 
+      kind: "HideReuse",
+      token: token,
+      statementId: this.generateStatementId()
+    };
   }
 
   disableReuse() {
     const token = this.previous();
-    return <DisableReuseStatement>{ kind: "DisableReuse", token: token };
+    return <DisableReuseStatement>{
+      kind: "DisableReuse",
+      token: token,
+      statementId: this.generateStatementId()
+    };
   }
 
   allowReuse() {
     const token = this.previous();
-    return <AllowReuseStatement>{ kind: "AllowReuse", token: token };
+    return <AllowReuseStatement>{
+      kind: "AllowReuse",
+      token: token,
+      statementId: this.generateStatementId()
+    };
   }
 
   choiceOption(modifiers: Statement[] = []): ChoiceOptionStatement {
@@ -1088,12 +1142,19 @@ export class Parser {
     }
 
     //console.log('Collected Prose', collectedProse.length, this.current)
-    return <ProseStatement>{ content: collectedProse, kind: "Prose" };
+    return <ProseStatement>{
+      content: collectedProse,
+      kind: "Prose",
+      statementId: this.generateStatementId()
+    };
   }
 
   expressionStatement(): ExpressionStatement {
     const expr = this.expression();
-    return <ExpressionStatement>{ expression: expr };
+    return <ExpressionStatement>{ 
+      expression: expr,
+      statementId: this.generateStatementId()
+    };
   }
 
   createVariable(temporary: boolean): DeclareVariableStatement {
@@ -1107,6 +1168,7 @@ export class Parser {
       expression: expr,
       scope: temporary ? "Temporary" : "Global",
       token: token,
+      statementId: this.generateStatementId()
     };
   }
 
@@ -1126,6 +1188,7 @@ export class Parser {
       expression: identifierOrAssignment,
       assignment: assignment,
       token: token,
+      statementId: this.generateStatementId()
     };
   }
 
