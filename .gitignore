@@ -6,3 +6,5 @@ node_modules/
 scanned-tokens.json
 parsed.json
 .vscode/
+
+raw-scenes.json

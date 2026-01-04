@@ -5,9 +5,10 @@
   "main": "index.ts",
   "scripts": {
     "generate:token-types": "tsx scanner/generate-token-types.ts",
+    "fetch": "tsx fetch/index.ts --watch",
     "scan": "tsx scanner/index.ts --watch",
     "parse": "tsx parser/index.ts --watch",
-    "start": "npm run scan && npm run parse"
+    "start": "npm run fetch && npm run scan && npm run parse"
   },
   "author": "",
   "license": "ISC",
