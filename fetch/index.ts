@@ -26,6 +26,7 @@ export const loadScene = async (name: string) => {
         name: name,
         sourceUrl: sourceUrl,
         content: content,
+        timestamp: new Date(new Date().getTime())
     }
 }
 
