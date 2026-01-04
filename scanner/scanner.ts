@@ -129,6 +129,7 @@ export const scanScene = (scene: Scene, knownLabels: string[], knownSceneNames: 
 
         const lineIndent = countIndentation(line);
         
+        const afterIndentation = context.position === lineIndent.position;
         context.indent.current = lineIndent.indent;
         context.position = lineIndent.position;
 
@@ -139,7 +140,28 @@ export const scanScene = (scene: Scene, knownLabels: string[], knownSceneNames: 
         while(context.position < line.length) {
             switch(context.mode) {
                 case "Prose": {
-                    if(context.position === (context.indent.current * 2) && !(line.includes('*') || line.includes('#'))) {
+                    if(context.proseBlockStart !== undefined) {
+                        const indentChangedInProseBlock = lineIndent.indent !== context.proseBlockStart.indent;
+                        if(indentChangedInProseBlock) {
+                            if(context.proseBlock.trim().length > 0) {
+                                tokens.push(<ProseToken>{
+                                    indent: context.proseBlockStart.indent,
+                                    type: 'Prose',
+                                    sceneName: scene.name,
+                                    content: context.proseBlock.trimStart(),
+                                    lineNumber: context.proseBlockStart.lineNumber,
+                                    position: context.proseBlockStart.position,
+                                });
+                            }
+
+                            context.proseBlock = '';
+                            context.proseBlockStart = undefined;
+                            continue;
+                        }
+                    }
+
+
+                    if(afterIndentation && !(line.includes('*') || line.includes('#'))) {
                         //shortcut to speed up evaluation of large prose blocks (majority of the text)
                         if(context.proseBlockStart === undefined) {
                             context.proseBlockStart = {
