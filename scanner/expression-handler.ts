@@ -1,3 +1,4 @@
+import exp from "node:constants";
 import {
   OpenParenthesisToken,
   CloseParenthesisToken,
@@ -38,10 +39,6 @@ const isLetterOrUnderscore = (char: string): boolean => {
   return isLetter(char) || char === "_";
 }
 
-const isValidVariablePunctuation = (char: string) :boolean => {
-  return char === `'`;
-}
-
 const isAlphanumericOrUnderscore = (char: string): boolean => {
   return isLetter(char) || isDigit(char) || char === "_";
 }
@@ -55,6 +52,22 @@ export function tokenizeExpressionString(
   knownLabels: string[],
   sceneNames: string[],
 ): Token[] {
+  if(knownLabels.map(l => l.toLowerCase()).includes(expression.trim().toLowerCase())) {
+    const caseMismatch = !knownLabels.includes(expression.trim());
+    if(caseMismatch) {
+      console.warn('Case mismatch between label and label reference', expression.trim(), sceneName, lineNumber, position);
+    }
+    return [{
+          type: "Identifier",
+          value: expression.trim(),
+          position: position,
+          lineNumber: lineNumber,
+          sceneName: sceneName,
+          indent: indent,
+          isLabelName: true
+        } as IdentifierToken];
+  }
+
   const tokens: Token[] = [];
   let cursor = 0;
 
