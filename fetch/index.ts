@@ -1,9 +1,17 @@
+import { remote } from "./remote";
 import {Scene} from "./scene";
 import fs from 'node:fs';
 
 const execute = async () => {
-    const startup = await loadScene('startup');
+    const startup = await loader.loadScene('startup', location);
     const sceneNames = readSceneList(startup);
+
+    for(let scene of unreferencedScenes) {
+        if(sceneNames.find(s => s === scene)) {
+            continue;
+        }
+        sceneNames.push(scene);
+    }
 
     if(sceneNames.every(name => name !== 'startup')) {
         sceneNames.unshift('startup');
@@ -11,23 +19,10 @@ const execute = async () => {
 
     sceneNames.push('choicescript_stats');
 
-    let scenes = await Promise.all(sceneNames.map(scene => loadScene(scene)));
+    let scenes = await Promise.all(sceneNames.map(scene => loader.loadScene(scene, location)));
     console.info(`Loaded ${scenes.length} scenes`);
     console.log(`Writing ${scenes.length} to ./raw-scenes.json`);
     fs.writeFileSync('./raw-scenes.json', JSON.stringify(scenes, null, 2));
-}
-
-export const loadScene = async (name: string) => {
-    const sourceUrl = `${url}/scenes/${name}.txt`;
-    const request = await fetch(sourceUrl);
-    const content = await request.text();
-    console.info(`Loaded Scene '${name}' from ${sourceUrl}, read ${content.length} characters.`)
-    return <Scene>{
-        name: name,
-        sourceUrl: sourceUrl,
-        content: content,
-        timestamp: new Date(new Date().getTime())
-    }
 }
 
 export const readSceneList = (startup: Scene): string[] => {
@@ -42,7 +37,7 @@ export const readSceneList = (startup: Scene): string[] => {
         .split('\n')
         .map(scene => scene.trim())
         .filter(scene => scene.length > 0);
-    console.info(`Found ${scenes.length} scenes`, scenes);
+    console.info(`Found ${scenes.length} scenes in *scene_list`, scenes);
     return scenes;
 }
 
@@ -53,5 +48,10 @@ export const readSceneList = (startup: Scene): string[] => {
 //"https://www.choiceofgames.com/user-contributed/eldritch-tales-inheritance/";
 //"https://www.choiceofgames.com/user-contributed/blood-moon/";
 // "https://cogdemos.ink/play/keeper/keeper-of-life-and-death/mygame";
-let url = "https://cogdemos.ink/play/barbara-truelove/thicker-than-demo/mygame" // "https://cogdemos.ink/play/allie-%28monsoon-games%29/college-tennis-origin-story/mygame";;
+// "https://cogdemos.ink/play/allie-%28monsoon-games%29/college-tennis-origin-story/mygame";;
+
+const loader = remote;
+const location = "https://cogdemos.ink/play/barbara-truelove/thicker-than-demo/mygame";
+let unreferencedScenes = ['death', 'altpath'];
+
 await execute();
