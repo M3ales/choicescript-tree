@@ -6,4 +6,5 @@ export interface Token {
     lineNumber: number;
     position: number;
     indent: number;
+    id?: number;
 }

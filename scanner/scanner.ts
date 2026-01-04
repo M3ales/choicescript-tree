@@ -388,9 +388,7 @@ export const scanScene = (scene: Scene, knownLabels: string[], knownSceneNames: 
             type: 'SceneEnd'
         }
     );
-    return tokens.map((t, i) => {
-        return {...t, id: i};
-    });
+    return tokens;
 }
 
 const handleChoiceOption = (context: ScannerContext): ChoiceOptionToken => {

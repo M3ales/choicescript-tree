@@ -2,11 +2,11 @@ import {Scene} from "./scene";
 import {scanScene} from "./scanner";
 import fs from 'node:fs';
 import { scanLabelNames } from "./scan-label-names";
+import { Token } from "./tokens";
 
 const execute = async () => {
     const startup = await loadScene('startup');
     const sceneNames = readSceneList(startup);
-    sceneNames.unshift('choicescript_stats');
     const implicitControlFlow = startup.content.indexOf('*create implicit_control_flow true') !== -1;
 
     if (implicitControlFlow) {
@@ -16,6 +16,9 @@ const execute = async () => {
     if(sceneNames.every(name => name !== 'startup')) {
         sceneNames.unshift('startup');
     }
+
+    sceneNames.push('choicescript_stats');
+
     let scenes = await Promise.all(sceneNames.map(scene => loadScene(scene)));
     console.info(`Loaded ${scenes.length} scenes`);
 
@@ -30,7 +33,22 @@ export const scanScenes = async (scenes: Scene[]) => {
     const knownLabels = cleanedScenes.map(scene => scanLabelNames(scene)).flatMap(s => s);
     const sceneNames = scenes.map(scene => scene.name);
     console.log(`Found ${knownLabels.length} labels, and ${sceneNames.length} scenes`,sceneNames);
-    return cleanedScenes.map(scene => scanScene(scene, knownLabels, sceneNames));
+    const tokens = cleanedScenes
+        .map(scene => scanScene(scene, knownLabels, sceneNames));
+    return addIds(tokens);
+}
+
+const addIds = (scenes: Token[][]) => {
+    let currentId = 0;
+    
+    for (let scene of scenes) {
+        for(let token of scene) {
+            token.id = currentId;
+            currentId++;
+        }
+    }
+
+    return scenes;
 }
 
 export const loadScene = async (name: string) => {
