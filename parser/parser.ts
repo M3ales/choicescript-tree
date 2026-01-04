@@ -1427,12 +1427,12 @@ export class Parser {
   error(token: Token, message: string) {
     if (token.type == "SceneEnd") {
       this.report(
-        `at end of scene ${token.sceneName}:${token.lineNumber}:${token.position}[${token.indent}]`,
+        `at end of scene ${token.sceneName}:${token.lineNumber}:${token.position}[Indent ${token.indent}]`,
         message
       );
     } else {
       this.report(
-        `at '${token.type}' ${token.sceneName}:${token.lineNumber}:${token.position}[${token.indent}]`,
+        `at '${token.type}' ${token.sceneName}:${token.lineNumber}:${token.position}[Indent ${token.indent}, Id: ${token.id}]`,
         message
       );
     }
