@@ -1,4 +1,5 @@
 import { match } from "assert";
+import { ParseError } from "./parse-error";
 import {
   AchievementToken,
   AllowReuseToken,
@@ -43,6 +44,7 @@ import {
   ElseIfStatement,
   ElseStatement,
   EndingStatement,
+  ErrorStatement,
   ExpressionStatement,
   FakeChoiceStatement,
   FinishStatement,
@@ -82,13 +84,23 @@ import {
 } from "./statements/scene-list";
 import { AchieveStatement } from "./statements/achieve";
 
+class ParseErrorSignal extends Error {
+  parseError: ParseError;
+  constructor(parseError: ParseError) {
+    super(parseError.message);
+    this.parseError = parseError;
+  }
+}
+
 export class Parser {
   tokens: Token[];
   current: number;
+  errors: ParseError[];
 
   constructor(tokens: Token[]) {
     this.tokens = tokens;
     this.current = 0;
+    this.errors = [];
   }
 
   check(
@@ -203,7 +215,21 @@ export class Parser {
       const sceneStart = this.previous() as SceneStartToken;
       const statements: Statement[] = [];
       while (!this.isAtEnd() && !this.match(["SceneEnd"], false, false)) {
-        statements.push(this.statement());
+        try {
+          statements.push(this.statement());
+        } catch (e) {
+          if (e instanceof ParseErrorSignal) {
+            statements.push(<ErrorStatement>{
+              kind: "Error",
+              token: e.parseError.token,
+              message: e.parseError.message,
+              statementId: this.generateStatementId(),
+            });
+            this.synchronize();
+          } else {
+            throw e;
+          }
+        }
       }
       const sceneEnd = this.previous() as SceneEndToken;
 
@@ -211,6 +237,7 @@ export class Parser {
         name: sceneStart.sceneName,
 
         statements: statements,
+        parseErrors: this.errors,
 
         start: sceneStart,
         end: sceneEnd,
@@ -266,13 +293,14 @@ export class Parser {
     //if (this.match(["AllowReuse"])) return this.allowReuse();
     // TODO: make these operators work in generalist context too ^
     if (this.match(["Else"], false, false)) {
-      console.error("Dangling Else statement with no related *if found at", this.current, this.previous());
+      this.error(this.previous(), "Dangling *else with no related *if");
       return this.elseStatement();
     }
     const peek = this.peek();
 
-    throw new Error(
-      `Unknown statement block starting ${peek?.type} at ${peek?.sceneName}:${peek?.lineNumber}:${peek?.position}[${peek?.indent}]`
+    throw this.error(
+      peek,
+      `Unknown statement starting with ${peek?.type}`
     );
   }
 
@@ -1424,41 +1452,67 @@ export class Parser {
     throw this.error(this.peek(), message);
   }
 
-  error(token: Token, message: string) {
-    if (token.type == "SceneEnd") {
-      this.report(
-        `at end of scene ${token.sceneName}:${token.lineNumber}:${token.position}[Indent ${token.indent}]`,
-        message
-      );
-    } else {
-      this.report(
-        `at '${token.type}' ${token.sceneName}:${token.lineNumber}:${token.position}[Indent ${token.indent}, Id: ${token.id}]`,
-        message
-      );
-    }
-  }
+  error(token: Token, message: string): ParseErrorSignal {
+    const location =
+      token.type == "SceneEnd"
+        ? `at end of scene ${token.sceneName}:${token.lineNumber}:${token.position}[Indent ${token.indent}]`
+        : `at '${token.type}' ${token.sceneName}:${token.lineNumber}:${token.position}[Indent ${token.indent}, Id: ${token.id}]`;
 
-  report(location: string, message: string) {
-    const err = `Error: ${message} ${location}`;
-    console.error(err);
-    throw new Error(err);
+    const fullMessage = `${message} ${location}`;
+    console.error(`Error: ${fullMessage}`);
+
+    const parseError: ParseError = { token, message: fullMessage };
+    this.errors.push(parseError);
+    return new ParseErrorSignal(parseError);
   }
 
   synchronize(): void {
+    if (this.isAtEnd()) return;
+
+    const errorIndent = this.peek().indent;
     this.advance();
 
-    // TODO: tbh I have no idea how this helps us, but apparently it helps error handling?
-    // Need to read more
     while (!this.isAtEnd()) {
-      if (this.previous().type == "Return") return;
+      const next = this.peek();
+      if (next.indent > errorIndent) {
+        this.advance();
+        continue;
+      }
 
-      switch (this.peek()?.type) {
-        case "GotoRandomScene":
-        case "GotoScene":
+      switch (next.type) {
+        case "Prose":
+        case "Choice":
+        case "FakeChoice":
+        case "If":
         case "GotoLabel":
+        case "GotoScene":
+        case "Label":
+        case "PageBreak":
+        case "LineBreak":
+        case "SetVariable":
+        case "CreateVariable":
+        case "CreateTempVariable":
+        case "Image":
+        case "GoSub":
+        case "GoSubScene":
+        case "Finish":
         case "Return":
-        case null:
-        case undefined:
+        case "Comment":
+        case "Ending":
+        case "Author":
+        case "SceneList":
+        case "Achievement":
+        case "Achieve":
+        case "CheckAchievements":
+        case "Link":
+        case "GenerateRandom":
+        case "InputText":
+        case "InputNumber":
+        case "Parameters":
+        case "StatChart":
+        case "GameIdentifier":
+        case "SaveCheckpoint":
+        case "RestoreCheckpoint":
           return;
       }
 

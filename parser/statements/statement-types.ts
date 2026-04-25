@@ -1,4 +1,5 @@
 export type StatementTypes =
+  | "Error"
   | "Achieve"
   | "Achievement"
   | "CheckAchievements"

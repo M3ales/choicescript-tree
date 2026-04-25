@@ -39,4 +39,5 @@ export * from "./save-checkpoint";
 export * from "./selectable-if";
 export * from "./set-variable";
 export * from "./stat-chart";
+export * from "./error";
 export * from "./statement";
