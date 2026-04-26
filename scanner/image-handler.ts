@@ -20,7 +20,7 @@ export const handleImage = (context: ScannerContext): Token[] => {
     }
 
     if(alignment) {
-      context.position = context.currentLine.substring(context.position).indexOf(alignment);
+      context.position = context.currentLine.indexOf(alignment, context.position);
       tokens.push(<IdentifierToken>{
         type: 'Identifier',
         sceneName: context.scene.name,
@@ -33,7 +33,7 @@ export const handleImage = (context: ScannerContext): Token[] => {
     }
 
     if(altText && altText.length > 0) {
-      context.position = context.currentLine.substring(context.position).indexOf(altText[0]);
+      context.position = context.currentLine.indexOf(altText[0], context.position);
       tokens.push(<ProseToken>{
         type: 'Prose',
         sceneName: context.scene.name,

@@ -52,10 +52,13 @@ export function tokenizeExpressionString(
   knownLabels: string[],
   sceneNames: string[],
 ): Token[] {
-  if(knownLabels.map(l => l.toLowerCase()).includes(expression.trim().toLowerCase())) {
+  const lowerCaseKnown = knownLabels.map(l => l.toLowerCase());
+  const caseInsensitiveMatchIndex = lowerCaseKnown.indexOf(expression.trim().toLowerCase());
+  if(caseInsensitiveMatchIndex !== -1) {
     const caseMismatch = !knownLabels.includes(expression.trim());
+    const original = knownLabels[caseInsensitiveMatchIndex];
     if(caseMismatch) {
-      console.warn('Case mismatch between label and label reference', expression.trim(), sceneName, lineNumber, position);
+      console.warn(`Case mismatch between label '${original}' and reference '${expression.trim()}' at ${sceneName}:${lineNumber}:${position}`);
     }
     return [{
           type: "Identifier",

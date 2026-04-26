@@ -20,6 +20,7 @@ const execute = async () => {
     sceneNames.push('choicescript_stats');
 
     let scenes = await Promise.all(sceneNames.map(scene => loader.loadScene(scene, location)));
+    
     console.info(`Loaded ${scenes.length} scenes`);
     console.log(`Writing ${scenes.length} to ./raw-scenes.json`);
     fs.writeFileSync('./raw-scenes.json', JSON.stringify(scenes, null, 2));
@@ -52,6 +53,6 @@ export const readSceneList = (startup: Scene): string[] => {
 
 const loader = remote;
 const location = "https://cogdemos.ink/play/barbara-truelove/thicker-than-demo/mygame";
-let unreferencedScenes = ['death', 'altpath'];
+let unreferencedScenes = [];
 
 await execute();
