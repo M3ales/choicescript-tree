@@ -40,11 +40,11 @@ export const handleImage = (context: ScannerContext): Token[] => {
         position: context.position,
         lineNumber: context.lineNumber,
         indent: context.indent.current,
-        content: altText.join(" "),
+        content: context.currentLine.substring(context.position),
       });
-      context.position += altText.length;
     }
 
+    context.position = context.currentLine.length;
     return tokens;
 }
 
