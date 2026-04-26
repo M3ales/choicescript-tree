@@ -195,7 +195,9 @@ export const scanScene = (scene: Scene, knownLabels: string[], knownSceneNames: 
                     }
 
                     
-                    if(context.position > 0 && isStartOfChoiceOption(line[context.position], line[context.position-1]))
+                    if(context.position > 0
+                        && line[context.position] === '#'
+                        && line.substring(0, context.position).trim().length === 0)
                     {
                         context.currentTokenStartPosition = undefined;
                         context.currentToken = '';
