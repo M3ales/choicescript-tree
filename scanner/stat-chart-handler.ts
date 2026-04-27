@@ -108,10 +108,7 @@ export const handleStatChart = (context: ScannerContext): Token[] => {
                         tokens.push(<ProseToken>{
                             type: "Prose",
                             content: displayName.join(" "),
-                            sceneName: context.scene.name,
-                            lineNumber: context.lineNumber + 1,
-                            position: context.position,
-                            indent: context.indent.current,
+                            ...here(),
                         });
                     }
                     break;
