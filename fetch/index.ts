@@ -1,5 +1,7 @@
 import { remote } from "./remote";
+import { local } from "./local";
 import {Scene} from "./scene";
+import { SceneLoader } from "./scene-loader";
 import fs from 'node:fs';
 
 const execute = async () => {
@@ -42,17 +44,20 @@ export const readSceneList = (startup: Scene): string[] => {
     return scenes;
 }
 
-//"https://cogdemos.ink/play/nutellaqueen/the-sword-of-rhivenia-public-demo/mygame"
-//"https://cogdemos.ink/play/izzily/drink-your-villain-juice/mygame";
-//"https://www.choiceofgames.com/user-contributed/fallen-hero-retribution/";
-//"https://cogdemos.ink/play/cultivator-anon/aura-clash/mygame";
-//"https://www.choiceofgames.com/user-contributed/eldritch-tales-inheritance/";
-//"https://www.choiceofgames.com/user-contributed/blood-moon/";
-// "https://cogdemos.ink/play/keeper/keeper-of-life-and-death/mygame";
-// "https://cogdemos.ink/play/allie-%28monsoon-games%29/college-tennis-origin-story/mygame";;
+const [typeArg, locationArg] = process.argv.slice(2);
+if (!typeArg || !locationArg) {
+    console.error('Usage: npm run fetch -- <remote|local> <location>');
+    process.exit(1);
+}
 
-const loader = remote;
-const location = "https://cogdemos.ink/play/barbara-truelove/thicker-than-demo/mygame";
+const loaders: Record<string, SceneLoader> = { remote, local };
+const loader = loaders[typeArg];
+if (!loader) {
+    console.error(`Unknown loader type '${typeArg}'. Expected 'remote' or 'local'.`);
+    process.exit(1);
+}
+
+const location = locationArg;
 let unreferencedScenes = [];
 
 await execute();

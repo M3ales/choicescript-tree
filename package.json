@@ -5,9 +5,9 @@
   "main": "index.ts",
   "scripts": {
     "generate:token-types": "tsx scanner/generate-token-types.ts",
-    "fetch": "tsx fetch/index.ts --watch",
-    "scan": "tsx scanner/index.ts --watch",
-    "parse": "tsx parser/index.ts --watch",
+    "fetch": "tsx fetch/index.ts",
+    "scan": "tsx scanner/index.ts",
+    "parse": "tsx parser/index.ts",
     "start": "npm run fetch && npm run scan && npm run parse"
   },
   "author": "",
