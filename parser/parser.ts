@@ -1,9 +1,9 @@
-import { match } from "assert";
-import { ParseError } from "./parse-error";
+import { ParseContext, ParseError } from "./parse-error";
 import {
   AchievementToken,
   AllowReuseToken,
   CheckAchievementsToken,
+  ChoiceOptionToken,
   CommentToken,
   DisableReuseToken,
   GameIdentifierToken,
@@ -25,6 +25,7 @@ import { TokenType } from "../scanner/tokens/token-types";
 import {
   ArrayIndexer,
   Binary,
+  Dereference,
   Expression,
   Grouping,
   Identifier,
@@ -66,6 +67,10 @@ import {
   PageBreakStatement,
   ParametersStatement,
   PercentStat,
+  ProseLiteral,
+  ProseSegmentStatement,
+  ProseValue,
+  MultiReplaceBranchStatement,
   ProseStatement,
   RestoreCheckpointStatement,
   ReturnStatement,
@@ -76,31 +81,50 @@ import {
   StatChartStatement,
   Statement,
   TextStat,
+  AchieveStatement,
 } from "./statements";
 import { SceneAst } from "./scene";
 import {
   SceneIdentifier as SceneIdentifierToken,
   SceneListStatement,
 } from "./statements/scene-list";
-import { AchieveStatement } from "./statements/achieve";
 
-class ParseErrorSignal extends Error {
+export class ParseErrorSignal extends Error {
   parseError: ParseError;
   constructor(parseError: ParseError) {
     super(parseError.message);
     this.parseError = parseError;
+    this.name = "ParseErrorSignal";
   }
 }
+const choiceScopeOnlyTokenTypes: Set<TokenType> = new Set([
+  "ChoiceOption",
+  "AllowReuse",
+  "DisableReuse",
+  "HideReuse",
+  "SelectableIf",
+]);
 
 export class Parser {
   tokens: Token[];
   current: number;
   errors: ParseError[];
+  contextStack: ParseContext[];
 
   constructor(tokens: Token[]) {
     this.tokens = tokens;
     this.current = 0;
     this.errors = [];
+    this.contextStack = [];
+  }
+
+  withContext<T>(ctx: ParseContext, f: () => T): T {
+    this.contextStack.push(ctx);
+    try {
+      return f();
+    } finally {
+      this.contextStack.pop();
+    }
   }
 
   check(
@@ -174,7 +198,6 @@ export class Parser {
   peekLessIndent(desiredIndent: number): boolean {
     const peek = this.peek();
     if (peek === null || peek === undefined) return false;
-
     return peek.indent < desiredIndent;
   }
 
@@ -205,6 +228,236 @@ export class Parser {
     return false;
   }
 
+  consume(
+    type: TokenType,
+    message: string,
+    sameLine: boolean = true,
+    sameIndent: boolean = true
+  ) {
+    if (this.check(type)) return this.advance();
+    throw this.error(this.peek(), message);
+  }
+
+  consumeOneOf(
+    type: TokenType[],
+    message: string,
+    sameLine: boolean = true,
+    sameIndent: boolean = true
+  ) {
+    for (const t of type) {
+      if (this.check(t)) return this.advance();
+    }
+    throw this.error(this.peek(), message);
+  }
+
+  error(token: Token, message: string): ParseErrorSignal {
+    const location =
+      token.type == "SceneEnd"
+        ? `at end of scene ${token.sceneName}:${token.lineNumber}:${token.position}[Indent ${token.indent}]`
+        : `at '${token.type}' ${token.sceneName}:${token.lineNumber}:${token.position}[Indent ${token.indent}, Id: ${token.id}]`;
+
+    const fullMessage = `${message} ${location}`;
+    const parseError: ParseError = {
+      token,
+      message: fullMessage,
+      context: [...this.contextStack],
+    };
+    this.errors.push(parseError);
+    return new ParseErrorSignal(parseError);
+  }
+
+  expectIndentChange() {
+    if (!this.peekSameIndent(this.previous()?.indent ?? 0)) return;
+    const peek = this.peek();
+    throw this.error(
+      peek,
+      `Expected change in indentation, found ${peek.type} instead at ${peek.lineNumber}:${peek.position} with indentation ${peek.indent}`
+    );
+  }
+
+  expectLineChange() {
+    if (!this.peekSameLine()) return;
+    const peek = this.peek();
+    throw this.error(
+      peek,
+      `Expected end of statement, found ${peek.type} instead at ${peek.lineNumber}:${peek.position}`
+    );
+  }
+
+  expression(): Expression {
+    return this.logical();
+  }
+
+  logical(): Expression {
+    let expr = this.equality();
+    while (this.match(["LogicalAnd", "LogicalOr"])) {
+      const operator: Token = this.previous();
+      const right: Expression = this.equality();
+      expr = <Binary>{ left: expr, operator: operator, right: right };
+    }
+    return expr;
+  }
+
+  equality(): Expression {
+    let expr = this.comparison();
+    while (this.match(["NotEqualityOperator", "EqualityOperator"])) {
+      const operator: Token = this.previous();
+      const right: Expression = this.comparison();
+      expr = <Binary>{ left: expr, operator: operator, right: right };
+    }
+    return expr;
+  }
+
+  comparison(): Expression {
+    let expr: Expression = this.term();
+    while (
+      this.match([
+        "GreaterThanOperator",
+        "GreaterThanEqualsOperator",
+        "LessThanOperator",
+        "LessThanEqualsOperator",
+        "EqualityOperator",
+        "NotEqualityOperator",
+      ])
+    ) {
+      const operator: Token = this.previous();
+      const right: Expression = this.term();
+      expr = <Binary>{ left: expr, operator: operator, right: right };
+    }
+    return expr;
+  }
+
+  term(): Expression {
+    let expr: Expression = this.factor();
+    while (
+      this.match([
+        "SubtractionOperator",
+        "AdditionOperator",
+        "ConcatenationOperator",
+        "FairmathAdditionOperator",
+        "FairmathSubtractionOperator",
+      ])
+    ) {
+      const operator: Token = this.previous();
+      const right = this.term();
+      expr = <Binary>{ left: expr, operator: operator, right: right };
+    }
+    return expr;
+  }
+
+  factor(): Expression {
+    let expr = this.indexing();
+    while (
+      this.match([
+        "DivisionOperator",
+        "MultiplicationOperator",
+        "ModulusOperator",
+      ])
+    ) {
+      const operator = this.previous();
+      const right = this.indexing();
+      expr = <Binary>{ left: expr, operator: operator, right: right };
+    }
+    return expr;
+  }
+
+  indexing(): Expression {
+    let expr = this.unary();
+    while (this.match(["Indexer", "StringIndexerOperator"])) {
+      const operator = this.previous();
+      const right = this.unary();
+      expr = <Binary>{ left: expr, operator: operator, right: right };
+    }
+    return expr;
+  }
+
+  unary(): Expression {
+    if (
+      this.match([
+        "NotOperator",
+        "SubtractionOperator",
+        "AdditionOperator",
+        "FairmathAdditionOperator",
+        "FairmathSubtractionOperator",
+        "RoundOperator",
+        "LengthOperator",
+      ])
+    ) {
+      const operator = this.previous();
+      const right = this.unary();
+      return <Unary>{ operator: operator, value: right };
+    }
+    return this.primary();
+  }
+
+  primary(): Expression {
+    if (this.match(["NumberLiteral", "StringLiteral", "BooleanLiteral"])) {
+      return <Literal>{ value: this.previous() };
+    }
+
+    if (this.match(["Identifier"])) {
+      const identifier = this.previous();
+      if (this.match(["OpenSquareBracket"])) {
+        const accessExpression = this.expression();
+        this.consume(
+          "CloseSquareBracket",
+          "Expect ']' after accessor expression"
+        );
+        return <ArrayIndexer>{
+          kind: "ArrayIndexer",
+          expression: accessExpression,
+          identifier: identifier,
+        };
+      }
+      return <Identifier>{ token: identifier };
+    }
+
+    if (this.match(["OpenParenthesis"])) {
+      const expr = this.expression();
+      this.consume("CloseParenthesis", "Expect ')' after expression.");
+      return <Grouping>{ expression: expr };
+    }
+
+    if (this.match(["OpenBrace"])) {
+      const expr = this.expression();
+      this.consume("CloseBrace", "Expect '}' after dereference expression.");
+      return <Dereference>{ kind: "Dereference", expression: expr };
+    }
+
+    throw this.error(this.peek(), "Expect expression");
+  }
+
+  parseExpressionFromTokens(tokens: Token[]): Expression {
+    const savedTokens = this.tokens;
+    const savedCurrent = this.current;
+    const sentinel: SceneEndToken = {
+      type: "SceneEnd",
+      sceneName: tokens[0]?.sceneName ?? "",
+      lineNumber: tokens[tokens.length - 1]?.lineNumber ?? 0,
+      position: tokens[tokens.length - 1]?.position ?? 0,
+      indent: tokens[tokens.length - 1]?.indent ?? 0,
+    };
+    this.tokens = [...tokens, sentinel];
+    this.current = 0;
+    try {
+      return this.expression();
+    } finally {
+      this.tokens = savedTokens;
+      this.current = savedCurrent;
+    }
+  }
+
+  recoverInto(body: Statement[], e: unknown): void {
+    if (!(e instanceof ParseErrorSignal)) throw e;
+    body.push(<ErrorStatement>{
+      kind: "Error",
+      token: e.parseError.token,
+      message: e.parseError.message,
+      statementId: this.generateStatementId(),
+    });
+    this.synchronize();
+  }
+
   statementId = 0;
   generateStatementId() {
     return this.statementId++;
@@ -213,90 +466,91 @@ export class Parser {
   parseScene(): SceneAst {
     if (this.match(["SceneStart"], false, false)) {
       const sceneStart = this.previous() as SceneStartToken;
-      const statements: Statement[] = [];
-      while (!this.isAtEnd() && !this.match(["SceneEnd"], false, false)) {
-        try {
-          statements.push(this.statement());
-        } catch (e) {
-          if (e instanceof ParseErrorSignal) {
-            statements.push(<ErrorStatement>{
-              kind: "Error",
-              token: e.parseError.token,
-              message: e.parseError.message,
-              statementId: this.generateStatementId(),
-            });
-            this.synchronize();
-          } else {
-            throw e;
+      return this.withContext({ kind: `Scene '${sceneStart.sceneName}'`, token: sceneStart }, () => {
+        const statements: Statement[] = [];
+        while (!this.isAtEnd() && !this.match(["SceneEnd"], false, false)) {
+          try {
+            statements.push(this.statement());
+          } catch (e) {
+            this.recoverInto(statements, e);
           }
         }
-      }
-      const sceneEnd = this.previous() as SceneEndToken;
+        const sceneEnd = this.previous() as SceneEndToken;
 
-      return <SceneAst>{
-        name: sceneStart.sceneName,
+        return <SceneAst>{
+          name: sceneStart.sceneName,
 
-        statements: statements,
-        parseErrors: this.errors,
+          statements: statements,
+          parseErrors: this.errors,
 
-        start: sceneStart,
-        end: sceneEnd,
-      };
+          start: sceneStart,
+          end: sceneEnd,
+        };
+      });
     }
 
     return null;
   }
 
+  statementDispatch: Array<[TokenType, () => Statement]> = [
+    ["Prose", () => this.proseStatement()],
+    ["Choice", () => this.choiceStatement()],
+    ["FakeChoice", () => this.fakeChoiceStatement()],
+    ["If", () => this.ifStatement()],
+    ["GotoLabel", () => this.gotoLabel()],
+    ["GotoScene", () => this.gotoScene()],
+    ["Label", () => this.labelDefinition()],
+    ["PageBreak", () => this.pageBreak()],
+    ["LineBreak", () => this.lineBreak()],
+    ["SetVariable", () => this.setVariable()],
+    ["CreateVariable", () => this.createVariable(false)],
+    ["CreateTempVariable", () => this.createVariable(true)],
+    ["Image", () => this.imageStatement()],
+    ["GoSub", () => this.goSub()],
+    ["Finish", () => this.finishStatement()],
+    ["GoSubScene", () => this.goSubScene()],
+    ["Return", () => this.return()],
+    ["Comment", () => this.commentBlock()],
+    ["Ending", () => this.endingStatement()],
+    ["Author", () => this.authorStatement()],
+    ["SceneList", () => this.sceneList()],
+    ["Achievement", () => this.achievementDefinition()],
+    ["Achieve", () => this.achieveStatement()],
+    ["CheckAchievements", () => this.checkAchievementsStatement()],
+    ["Link", () => this.linkStatement()],
+    ["GenerateRandom", () => this.generateRandomStatement()],
+    ["InputText", () => this.inputText()],
+    ["InputNumber", () => this.inputNumber()],
+    ["Parameters", () => this.parametersStatement()],
+    ["StatChart", () => this.statChart()],
+    ["GameIdentifier", () => this.gameIdentifierStatement()],
+    ["SaveCheckpoint", () => this.saveCheckpointStatement()],
+    ["RestoreCheckpoint", () => this.restoreCheckpointStatement()],
+  ];
+
   statement(): Statement {
-    if (this.match(["Prose"], false, false)) return this.proseStatement();
-    if (this.match(["Choice"], false, false)) return this.choiceStatement();
-    if (this.match(["FakeChoice"], false, false))
-      return this.fakeChoiceStatement();
-    if (this.match(["If"], false, false)) return this.ifStatement();
-    if (this.match(["GotoLabel"], false, false)) return this.gotoLabel();
-    if (this.match(["GotoScene"], false, false)) return this.gotoScene();
-    if (this.match(["Label"], false, false)) return this.labelDefinition();
-    if (this.match(["PageBreak"], false, false)) return this.pageBreak();
-    if (this.match(["LineBreak"], false, false)) return this.lineBreak();
-    if (this.match(["SetVariable"], false, false)) return this.setVariable();
-    if (this.match(["CreateVariable"], false, false))
-      return this.createVariable(false);
-    if (this.match(["CreateTempVariable"], false, false))
-      return this.createVariable(true);
-    if (this.match(["Image"], false, false)) return this.imageStatement();
-    if (this.match(["GoSub"], false, false)) return this.goSub();
-    if (this.match(["Finish"], false, false)) return this.finishStatement();
-    if (this.match(["GoSubScene"], false, false)) return this.goSubScene();
-    if (this.match(["Return"], false, false)) return this.return();
-    if (this.match(["Comment"], false, false)) return this.commentBlock();
-    if (this.match(["Ending"], false, false)) return this.endingStatement();
-    if (this.match(["Author"], false, false)) return this.authorStatement();
-    if (this.match(["SceneList"], false, false)) return this.sceneList();
-    if (this.match(["Achievement"], false, false))
-      return this.achievementDefinition();
-    if (this.match(["Achieve"], false, false)) return this.achieveStatement();
-    if (this.match(["CheckAchievements"], false, false))
-      return this.checkAchievementsStatement();
-    if (this.match(["Link"], false, false)) return this.linkStatement();
-    if (this.match(["GenerateRandom"], false, false))
-      return this.generateRandomStatement();
-    if (this.match(["InputText"], false, false)) return this.inputText();
-    if (this.match(["InputNumber"], false, false)) return this.inputNumber();
-    if (this.match(["Parameters"], false, false))
-      return this.parametersStatement();
-    if (this.match(["StatChart"], false, false)) return this.statChart();
-    if (this.match(["GameIdentifier"], false, false)) return this.gameIdentifierStatement();
-    if (this.match(["SaveCheckpoint"], false, false)) return this.saveCheckpointStatement();
-    if (this.match(["RestoreCheckpoint"], false, false)) return this.restoreCheckpointStatement();
+    for (const [tokenType, fn] of this.statementDispatch) {
+      if (this.match([tokenType], false, false)) {
+        return this.withContext({ kind: tokenType, token: this.previous() }, fn);
+      }
+    }
+
     //if (this.match(["DisableReuse"])) return this.disableReuse();
     //if (this.match(["HideReuse"])) return this.hideReuse();
     //if (this.match(["AllowReuse"])) return this.allowReuse();
     // TODO: make these operators work in generalist context too ^
     if (this.match(["Else"], false, false)) {
       this.error(this.previous(), "Dangling *else with no related *if");
-      return this.elseStatement();
+      return this.withContext({ kind: "Else", token: this.previous() }, () => this.elseStatement());
     }
     const peek = this.peek();
+
+    if (peek !== undefined && choiceScopeOnlyTokenTypes.has(peek.type)) {
+      throw this.error(
+        peek,
+        `'${peek.type}' is only valid at choice scope (inside *choice or *fake_choice). Found at indent ${peek.indent}.`
+      );
+    }
 
     throw this.error(
       peek,
@@ -306,9 +560,9 @@ export class Parser {
 
   restoreCheckpointStatement(): RestoreCheckpointStatement {
     const token = this.previous() as RestoreCheckpointToken;
-    let identifier = undefined;
+    let identifier: ProseLiteral | undefined = undefined;
     if(this.peekSameLine()) {
-      identifier = this.consume("Prose", "Expect identifier for checkpoint after *restore_checkpoint");
+      identifier = this.consumeProseLiteral("Expect identifier for checkpoint after *restore_checkpoint");
     }
     return <RestoreCheckpointStatement>{
       kind: "RestoreCheckpoint",
@@ -318,9 +572,9 @@ export class Parser {
   }
   saveCheckpointStatement(): SaveCheckpointStatement {
     const token = this.previous() as SaveCheckpointToken;
-    let identifier = undefined;
+    let identifier: ProseLiteral | undefined = undefined;
     if(this.peekSameLine()) {
-      identifier = this.consume("Prose", "Expect identifier for checkpoint after *restore_checkpoint");
+      identifier = this.consumeProseLiteral("Expect identifier for checkpoint after *save_checkpoint");
     }
     return <SaveCheckpointStatement>{
       kind: "SaveCheckpoint",
@@ -331,7 +585,7 @@ export class Parser {
 
   gameIdentifierStatement(): GameIdentifierStatement {
     const token = this.previous() as GameIdentifierToken;
-    const id = this.consume("Prose", "Expect identifier uuid following *ifid");
+    const id = this.consumeProseLiteral("Expect identifier uuid following *ifid");
     return <GameIdentifierStatement> {
       kind: "GameIdentifier",
       token: token,
@@ -341,13 +595,13 @@ export class Parser {
 
   imageStatement(): ImageStatement {
     const token = this.previous() as ImageToken;
-    const path = this.consume("Prose", "Expect path after *image.");
-    let alignment = undefined;
-    let altText = undefined;
+    const path = this.consumeProseValue("Expect path after *image.");
+    let alignment: IdentifierToken | undefined = undefined;
+    let altText: ProseValue | undefined = undefined;
     if(this.peekSameLine()) {
       alignment = this.consume("Identifier", "Expect alignment after image path.", true, true) as IdentifierToken;
       if(this.peekSameLine()) {
-        altText = this.consume("Prose", "Expect alt text after image alignement.", true, true) as ProseToken;
+        altText = this.consumeProseValue("Expect alt text after image alignement.");
       }
     }
 
@@ -364,22 +618,23 @@ export class Parser {
     const token = this.previous();
 
     const stats: Stat[] = [];
-    let title: ProseToken | undefined = undefined;
-    if(this.peekSameLine() && this.match(["Prose"], true, true)){
-      title = this.previous() as ProseToken;
+    let title: ProseValue | undefined = undefined;
+    if(this.peekSameLine() && this.check("Prose")){
+      title = this.matchProseValue();
     }
-    
+
     while (this.childScope(token.indent)) {
+      try {
       if (this.match(["Identifier"], false, false)) {
         const type = this.previous() as IdentifierToken;
         const identifier = this.consume(
           "Identifier",
           "Expect variable name for stat entry"
         );
-        let displayName: ProseToken | undefined = undefined;
+        let displayName: ProseValue | undefined = undefined;
 
-        if (this.peekSameIndent(type.indent) && this.match(["Prose"], false, false)) {
-          displayName = this.previous() as ProseToken;
+        if (this.peekSameIndent(type.indent) && this.check("Prose")) {
+          displayName = this.matchProseValue();
         }
 
         if (type.value === "text") {
@@ -401,17 +656,17 @@ export class Parser {
           continue;
         }
 
-        let opposedDisplayName = undefined;
-        if (this.peekGreaterIndent(type.indent) && this.match(["Prose"], false, false)) {
-          opposedDisplayName = this.previous() as ProseToken;
+        let opposedDisplayName: ProseValue | undefined = undefined;
+        if (this.peekGreaterIndent(type.indent) && this.check("Prose")) {
+          opposedDisplayName = this.matchProseValue();
         }
 
         if (
           displayName === undefined &&
           this.peekGreaterIndent(type.indent) &&
-          this.match(["Prose"], false, false)
+          this.check("Prose")
         ) {
-          const temp = this.previous() as ProseToken;
+          const temp = this.matchProseValue();
           displayName = opposedDisplayName;
           opposedDisplayName = temp;
         }
@@ -423,6 +678,10 @@ export class Parser {
           displayName: displayName,
           opposingDisplayName: opposedDisplayName,
         });
+      }
+      } catch (e) {
+        if (!(e instanceof ParseErrorSignal)) throw e;
+        this.synchronize();
       }
     }
 
@@ -478,9 +737,9 @@ export class Parser {
 
   linkStatement(): LinkStatement {
     const token = this.previous();
-    let url: ProseToken | null = null;
+    let url: ProseValue | null = null;
     if (this.peekSameLine()) {
-      url = this.consume("Prose", "Expect URL after Link.") as ProseToken;
+      url = this.consumeProseValue("Expect URL after Link.");
     }
     this.expectLineChange();
     return <LinkStatement>{ kind: "Link", token: token, url: url };
@@ -529,26 +788,25 @@ export class Parser {
       "Expect achievement points."
     ) as NumberLiteralToken;
 
-    const title: ProseToken = this.consume(
-      "Prose",
-      "Expect achievement title."
-    ) as ProseToken;
+    const title = this.consumeProseLiteral("Expect achievement title.");
 
-    let preDescription: IdentifierToken | ProseToken;
+    let preDescription: IdentifierToken | ProseLiteral | null = null;
     if (this.match(["Identifier"], false, false)) {
       preDescription = this.previous() as IdentifierToken;
-    } else if (this.match(["Prose"], false, false)) {
-      preDescription = this.previous() as ProseToken;
+    } else if (this.check("Prose")) {
+      preDescription = this.consumeProseLiteral("Expect achievement description.");
     }
 
-    const postDescription: ProseToken = this.consume(
-      "Prose",
-      "Expect unlocked achievement description."
-    ) as ProseToken;
+    const postDescription = this.consumeProseLiteral("Expect unlocked achievement description.");
 
     return <AchievementStatement>{
       kind: "Achievement",
       token: token,
+      codename,
+      visibility,
+      title,
+      preDescription,
+      postDescription,
       hidden: visibility.value === "hidden",
       statementId: this.generateStatementId()
     };
@@ -578,9 +836,9 @@ export class Parser {
 
   authorStatement(): AuthorStatement {
     const token = this.previous();
-    const name = this.consume("Prose", "Expect author name.");
+    const name = this.consumeProseLiteral("Expect author name.");
     this.expectLineChange();
-    return <AuthorStatement>{ 
+    return <AuthorStatement>{
       kind: "Author",
       token: token,
       value: name,
@@ -767,12 +1025,9 @@ export class Parser {
 
   pageBreak(): PageBreakStatement {
     const token = this.previous();
-    let buttonText: ProseToken | null = null;
+    let buttonText: ProseValue | null = null;
     if (this.peekSameLine()) {
-      buttonText = this.consume(
-        "Prose",
-        "Expect button text after page break."
-      ) as ProseToken;
+      buttonText = this.consumeProseValue("Expect button text after page break.");
     }
     this.expectLineChange();
     return <PageBreakStatement>{
@@ -785,6 +1040,12 @@ export class Parser {
 
   choiceBoundedifStatement(): Statement {
     const parser = () => {
+      if (this.check("SelectableIf")) {
+        this.error(
+          this.peek(),
+          "*selectable_if cannot be combined with *if on a choice option. Use one or the other."
+        );
+      }
       if (
         this.match(
           [
@@ -814,7 +1075,11 @@ export class Parser {
     const body: Statement[] = [];
 
     while (this.childScope(token.indent) || this.peekSameLine()) {
-      body.push(bodyParser());
+      try {
+        body.push(bodyParser());
+      } catch (e) {
+        this.recoverInto(body, e);
+      }
     }
 
     const elseIfBranches: ElseIfStatement[] = [];
@@ -848,7 +1113,11 @@ export class Parser {
     const token = this.previous();
     const body: Statement[] = [];
     while (this.childScope(token.indent)) {
-      body.push(bodyParser());
+      try {
+        body.push(bodyParser());
+      } catch (e) {
+        this.recoverInto(body, e);
+      }
     }
     return <ElseStatement>{
       kind: "Else",
@@ -865,7 +1134,11 @@ export class Parser {
     const expression = this.expression();
     const body: Statement[] = [];
     while (this.childScope(token.indent)) {
-      body.push(bodyParser());
+      try {
+        body.push(bodyParser());
+      } catch (e) {
+        this.recoverInto(body, e);
+      }
     }
     return <ElseIfStatement>{
       kind: "ElseIf",
@@ -878,9 +1151,9 @@ export class Parser {
 
   finishStatement(): FinishStatement {
     const token = this.previous();
-    let prose = null;
-    if (this.match(["Prose"], true, true)) {
-      prose = this.previous();
+    let prose: ProseValue | null = null;
+    if (this.check("Prose", true, true)) {
+      prose = this.matchProseValue() ?? null;
     }
     return <FinishStatement>{
       kind: "Finish",
@@ -891,9 +1164,9 @@ export class Parser {
 
   endingStatement(): EndingStatement {
     const token = this.previous();
-    let prose = null;
-    if (this.match(["Prose"], true, true)) {
-      prose = this.previous();
+    let prose: ProseValue | null = null;
+    if (this.check("Prose", true, true)) {
+      prose = this.matchProseValue() ?? null;
     }
     return <EndingStatement>{
       kind: "Ending",
@@ -906,41 +1179,42 @@ export class Parser {
     const token = this.previous();
     const body: Statement[] = [];
 
-    const noteTokens: ProseToken[] = [];
+    const noteTokens: ProseValue[] = [];
     while (this.peekSameLine()) {
       noteTokens.push(
-        this.consume(
-          "Prose",
-          "Note elements on same line after choice"
-        ) as ProseToken
+        this.consumeProseValue("Note elements on same line after choice")
       );
     }
 
     while (this.childScope(token.indent)) {
-      if (
-        this.match(
-          [
-            "ChoiceOption",
-            "AllowReuse",
-            "DisableReuse",
-            "HideReuse",
-            "SelectableIf",
-          ],
-          false,
-          false
-        )
-      ) {
-        //console.log('Add choice with modifiers block', this.previous());
-        body.push(this.choiceOptionWithModifiers());
-      } else if (this.match(["If"], false, false)) {
-        body.push(this.choiceBoundedifStatement());
-      } else if (this.match(["Prose"], false, false)) {
-        throw this.error(
-          this.previous(),
-          "Prose is not allowed directly inside Choice statements."
-        );
-      } else if (this.match(["Comment"], false, false)) {
-        body.push(this.commentBlock());
+      try {
+        if (
+          this.match(
+            [
+              "ChoiceOption",
+              "AllowReuse",
+              "DisableReuse",
+              "HideReuse",
+              "SelectableIf",
+            ],
+            false,
+            false
+          )
+        ) {
+          //console.log('Add choice with modifiers block', this.previous());
+          body.push(this.choiceOptionWithModifiers());
+        } else if (this.match(["If"], false, false)) {
+          body.push(this.choiceBoundedifStatement());
+        } else if (this.match(["Prose"], false, false)) {
+          throw this.error(
+            this.previous(),
+            "Prose is not allowed directly inside Choice statements."
+          );
+        } else if (this.match(["Comment"], false, false)) {
+          body.push(this.commentBlock());
+        }
+      } catch (e) {
+        this.recoverInto(body, e);
       }
     }
 
@@ -958,32 +1232,36 @@ export class Parser {
     const body: Statement[] = [];
 
     while (this.childScope(token.indent)) {
-      if (
-        this.match(
-          [
-            "ChoiceOption",
-            "AllowReuse",
-            "DisableReuse",
-            "HideReuse",
-            "SelectableIf",
-          ],
-          false,
-          false
-        )
-      ) {
-        //console.log('Add choice with modifiers block', this.previous());
-        body.push(this.choiceOptionWithModifiers());
-      } else if (this.match(["If"], false, false)) {
-        body.push(this.choiceBoundedifStatement());
-      } else if (this.match(["Label"], false, false)) {
-        body.push(this.labelDefinition());
-      } else if (this.match(["Prose"], false, false)) {
-        throw this.error(
-          this.previous(),
-          "Prose is not allowed directly inside Choice statements."
-        );
-      } else if (this.match(["Comment"], false, false)) {
-        body.push(this.commentBlock());
+      try {
+        if (
+          this.match(
+            [
+              "ChoiceOption",
+              "AllowReuse",
+              "DisableReuse",
+              "HideReuse",
+              "SelectableIf",
+            ],
+            false,
+            false
+          )
+        ) {
+          //console.log('Add choice with modifiers block', this.previous());
+          body.push(this.choiceOptionWithModifiers());
+        } else if (this.match(["If"], false, false)) {
+          body.push(this.choiceBoundedifStatement());
+        } else if (this.match(["Label"], false, false)) {
+          body.push(this.labelDefinition());
+        } else if (this.match(["Prose"], false, false)) {
+          throw this.error(
+            this.previous(),
+            "Prose is not allowed directly inside Choice statements."
+          );
+        } else if (this.match(["Comment"], false, false)) {
+          body.push(this.commentBlock());
+        }
+      } catch (e) {
+        this.recoverInto(body, e);
       }
     }
 
@@ -1058,12 +1336,24 @@ export class Parser {
       }
     }
 
+    const rejectReuseAfterSelectableIf = () => {
+      if (modififers.some((m) => m.kind === "SelectableIf")) {
+        this.error(
+          this.previous(),
+          "Reuse modifiers (*hide_reuse, *disable_reuse, *allow_reuse) must appear before *selectable_if on a choice option."
+        );
+      }
+    };
+
     while (true) {
       if (this.match(["AllowReuse"], false, false)) {
+        rejectReuseAfterSelectableIf();
         modififers.push(this.allowReuse());
       } else if (this.match(["DisableReuse"], false, false)) {
+        rejectReuseAfterSelectableIf();
         modififers.push(this.disableReuse());
       } else if (this.match(["HideReuse"], false, false)) {
+        rejectReuseAfterSelectableIf();
         modififers.push(this.hideReuse());
       } else if (this.match(["SelectableIf"], false, false)) {
         modififers.push(this.selectableIf());
@@ -1107,16 +1397,24 @@ export class Parser {
   }
 
   choiceOption(modifiers: Statement[] = []): ChoiceOptionStatement {
-    const token = this.previous();
+    const token = this.previous() as ChoiceOptionToken;
     const body: Statement[] = [];
 
+    const parsedSegments: ProseSegmentStatement[] = [];
+    const proseAccumulator: ProseToken[] = [];
+    this.collectProseSegments(parsedSegments, proseAccumulator, token.indent);
+
     while (this.childScope(token.indent)) {
-      //console.log('Read child', this.peek());
-      if (this.match(["ChoiceOption"], false, false)) {
-        body.push(this.choiceOptionWithModifiers());
-        continue;
+      try {
+        //console.log('Read child', this.peek());
+        if (this.match(["ChoiceOption"], false, false)) {
+          body.push(this.choiceOptionWithModifiers());
+          continue;
+        }
+        body.push(this.statement());
+      } catch (e) {
+        this.recoverInto(body, e);
       }
-      body.push(this.statement());
     }
 
     //console.log('Exited child scope', token.lineNumber);
@@ -1149,6 +1447,7 @@ export class Parser {
       kind: "ChoiceOption",
       token: token,
       body: body,
+      parsedSegments: parsedSegments,
       reuse: disableReuse
         ? "disable_reuse"
         : hideReuse
@@ -1161,20 +1460,212 @@ export class Parser {
   }
 
   proseStatement(): ProseStatement {
-    const token = this.previous();
-    const collectedProse: ProseToken[] = [token as ProseToken];
+    const startToken = this.previous() as ProseToken;
+    const content: ProseToken[] = [startToken];
+    const parsedSegments: ProseSegmentStatement[] = [];
 
-    while (this.match(["Prose"], false, true)) {
-      const prose = this.previous() as ProseToken;
-      collectedProse.push(prose);
-    }
+    this.appendTextSegment(parsedSegments, startToken);
+    this.collectProseSegments(parsedSegments, content, startToken.indent);
 
-    //console.log('Collected Prose', collectedProse.length, this.current)
     return <ProseStatement>{
-      content: collectedProse,
+      content,
       kind: "Prose",
-      statementId: this.generateStatementId()
+      parsedSegments,
+      statementId: this.generateStatementId(),
     };
+  }
+
+  consumeProseValue(message: string): ProseValue {
+    const anchor = this.consume("Prose", message) as ProseToken;
+    return this.proseValueFrom(anchor);
+  }
+
+  consumeProseLiteral(message: string): ProseLiteral {
+    const anchor = this.consume("Prose", message) as ProseToken;
+    this.rejectInlineProse();
+    return {
+      token: anchor,
+      content: anchor.content,
+      lineNumber: anchor.lineNumber,
+      position: anchor.position,
+      indent: anchor.indent,
+      sceneName: anchor.sceneName,
+    };
+  }
+
+  private rejectInlineProse(): void {
+    while (true) {
+      const peek = this.peek();
+      if (!peek) return;
+      const t = peek.type;
+      if (
+        t === "OpenPrint" ||
+        t === "OpenPrintCapitaliseFirst" ||
+        t === "OpenPrintCapitaliseAll" ||
+        t === "OpenMultiReplace"
+      ) {
+        try {
+          this.error(
+            peek,
+            "${...} / @{...} not allowed in literal context — runtime treats this as plain text.",
+          );
+        } catch (e) {
+          if (!(e instanceof ParseErrorSignal)) throw e;
+        }
+        this.advance();
+        let depth = 1;
+        while (!this.isAtEnd() && depth > 0) {
+          const next = this.advance();
+          if (
+            next.type === "OpenPrint" ||
+            next.type === "OpenPrintCapitaliseFirst" ||
+            next.type === "OpenPrintCapitaliseAll" ||
+            next.type === "OpenMultiReplace"
+          ) {
+            depth++;
+          } else if (next.type === "CloseBrace") {
+            depth--;
+          }
+        }
+        continue;
+      }
+      return;
+    }
+  }
+
+  matchProseValue(): ProseValue | undefined {
+    if (!this.match(["Prose"], false, false)) return undefined;
+    const anchor = this.previous() as ProseToken;
+    return this.proseValueFrom(anchor);
+  }
+
+  private proseValueFrom(anchor: ProseToken): ProseValue {
+    const parsedSegments: ProseSegmentStatement[] = [];
+    const content: ProseToken[] = [anchor];
+    this.appendTextSegment(parsedSegments, anchor);
+    this.collectProseSegments(parsedSegments, content, anchor.indent);
+    const joined = content.map(t => t.content).join("");
+    return {
+      token: anchor,
+      content: joined,
+      parsedSegments,
+      lineNumber: anchor.lineNumber,
+      position: anchor.position,
+      indent: anchor.indent,
+      sceneName: anchor.sceneName,
+    };
+  }
+
+  private appendTextSegment(out: ProseSegmentStatement[], token: ProseToken): void {
+    if (!token.content || token.content.length === 0) return;
+    out.push({
+      kind: "Text",
+      start: 0,
+      end: token.content.length,
+      lineNumber: token.lineNumber,
+      position: token.position,
+      text: token.content,
+    });
+  }
+
+  private collectProseSegments(
+    out: ProseSegmentStatement[],
+    content: ProseToken[],
+    sameIndent: number,
+    stopAt: TokenType[] = [],
+  ): void {
+    while (!this.isAtEnd()) {
+      const peek = this.peek();
+      if (stopAt.includes(peek.type)) return;
+
+      if (peek.type === "Prose" && peek.indent === sameIndent) {
+        this.advance();
+        const prose = this.previous() as ProseToken;
+        content.push(prose);
+        this.appendTextSegment(out, prose);
+        continue;
+      }
+
+      if (
+        peek.type === "OpenPrint" ||
+        peek.type === "OpenPrintCapitaliseFirst" ||
+        peek.type === "OpenPrintCapitaliseAll"
+      ) {
+        const opener = this.advance();
+        let expr: Expression | undefined = undefined;
+        try {
+          expr = this.expression();
+        } catch (e) {
+          if (!(e instanceof ParseErrorSignal)) throw e;
+        }
+        try {
+          this.consume("CloseBrace", "Expect '}' after print expression.");
+        } catch (e) {
+          if (!(e instanceof ParseErrorSignal)) throw e;
+        }
+        out.push({
+          ...this.printKindFor(opener.type),
+          start: 0,
+          end: 0,
+          lineNumber: opener.lineNumber,
+          position: opener.position,
+          expression: expr,
+        });
+        continue;
+      }
+
+      if (peek.type === "OpenMultiReplace") {
+        const opener = this.advance();
+        let selector: Expression | undefined = undefined;
+        try {
+          selector = this.expression();
+        } catch (e) {
+          if (!(e instanceof ParseErrorSignal)) throw e;
+        }
+
+        const alternatives: MultiReplaceBranchStatement[] = [];
+        while (true) {
+          const altSegments: ProseSegmentStatement[] = [];
+          this.collectProseSegments(altSegments, content, sameIndent, [
+            "MultiReplaceElse",
+            "CloseBrace",
+          ]);
+          alternatives.push({
+            start: 0,
+            end: 0,
+            segments: altSegments,
+          });
+          if (this.match(["MultiReplaceElse"], false, false)) continue;
+          break;
+        }
+        try {
+          this.consume("CloseBrace", "Expect '}' after multireplace.");
+        } catch (e) {
+          if (!(e instanceof ParseErrorSignal)) throw e;
+        }
+        out.push({
+          kind: "MultiReplace",
+          start: 0,
+          end: 0,
+          lineNumber: opener.lineNumber,
+          position: opener.position,
+          selector,
+          alternatives,
+        });
+        continue;
+      }
+
+      return;
+    }
+  }
+
+  private printKindFor(type: TokenType): {
+    kind: "Print" | "PrintCapitaliseFirst" | "PrintCapitaliseAll";
+  } {
+    if (type === "OpenPrintCapitaliseFirst")
+      return { kind: "PrintCapitaliseFirst" };
+    if (type === "OpenPrintCapitaliseAll") return { kind: "PrintCapitaliseAll" };
+    return { kind: "Print" };
   }
 
   expressionStatement(): ExpressionStatement {
@@ -1218,252 +1709,6 @@ export class Parser {
       token: token,
       statementId: this.generateStatementId()
     };
-  }
-
-  comparison(): Expression {
-    let expr: Expression = this.term();
-
-    while (
-      this.match([
-        "GreaterThanOperator",
-        "GreaterThanEqualsOperator",
-        "LessThanOperator",
-        "LessThanEqualsOperator",
-        "EqualityOperator",
-        "NotEqualityOperator",
-      ])
-    ) {
-      const operator: Token = this.previous();
-      const right: Expression = this.term();
-      expr = <Binary>{
-        left: expr,
-        operator: operator,
-        right: right,
-      };
-    }
-
-    return expr;
-  }
-
-  term(): Expression {
-    let expr: Expression = this.factor();
-
-    while (
-      this.match([
-        "SubtractionOperator",
-        "AdditionOperator",
-        "ConcatenationOperator",
-        "FairmathAdditionOperator",
-        "FairmathSubtractionOperator"
-      ])
-    ) {
-      const operator: Token = this.previous();
-      const right = this.term();
-      expr = <Binary>{
-        left: expr,
-        operator: operator,
-        right: right,
-      };
-    }
-
-    return expr;
-  }
-
-  factor(): Expression {
-    let expr = this.indexing();
-
-    while (
-      this.match([
-        "DivisionOperator",
-        "MultiplicationOperator",
-        "ModulusOperator",
-      ])
-    ) {
-      const operator = this.previous();
-      const right = this.indexing();
-      expr = <Binary>{
-        left: expr,
-        operator: operator,
-        right: right,
-      };
-    }
-
-    return expr;
-  }
-
-  indexing(): Expression {
-    let expr = this.unary();
-
-    while (this.match(["Indexer", "StringIndexerOperator"])) {
-      const operator = this.previous();
-      const right = this.unary();
-      expr = <Binary>{
-        left: expr,
-        operator: operator,
-        right: right,
-      };
-    }
-
-    return expr;
-  }
-
-  unary(): Expression {
-    if (
-      this.match([
-        "NotOperator",
-        "SubtractionOperator",
-        "AdditionOperator",
-        "FairmathAdditionOperator",
-        "FairmathSubtractionOperator",
-        "RoundOperator",
-        "LengthOperator"
-      ])
-    ) {
-      const operator = this.previous();
-      const right = this.unary();
-
-      return <Unary>{
-        operator: operator,
-        value: right,
-      };
-    }
-
-    return this.primary();
-  }
-
-  primary(): Expression {
-    if (this.match(["NumberLiteral", "StringLiteral", "BooleanLiteral"])) {
-      return <Literal>{ value: this.previous() };
-    }
-
-    if (this.match(["Identifier"])) {
-      const identifier = this.previous();
-      if (this.match(["OpenSquareBracket"])) {
-        const accessExpression = this.expression();
-        this.consume(
-          "CloseSquareBracket",
-          "Expect ']' after accessor expression"
-        );
-        return <ArrayIndexer>{
-          kind: "ArrayIndexer",
-          expression: accessExpression,
-          identifier: identifier,
-        };
-      }
-
-      return <Identifier>{ token: identifier };
-    }
-
-    if (this.match(["OpenParenthesis"])) {
-      const expr = this.expression();
-      this.consume("CloseParenthesis", "Expect ')' after expression.");
-      return <Grouping>{ expression: expr };
-    }
-
-    if (this.match(["OpenBrace"])) {
-      const expr = this.expression();
-      this.consume("CloseBrace", "Expect '}' after expression.");
-      return <Grouping>{ expression: expr };
-    }
-    // TODO: something similar to parenthesis, but one level higher than primary, maybe the precendence needs to be low as possible?
-    // could be an expression inside [] which needs to be evaluated first, thought needed here
-
-    throw this.error(this.peek(), "Expect expression");
-  }
-
-  expression(): Expression {
-    //console.log("Matching Expression at", this.current);
-    return this.logical();
-  }
-
-  logical() {
-    let expr = this.equality();
-
-    while (this.match(["LogicalAnd", "LogicalOr"])) {
-      const operator: Token = this.previous();
-      const right: Expression = this.equality();
-      expr = <Binary>{ left: expr, operator: operator, right: right };
-    }
-
-    return expr;
-  }
-
-  equality() {
-    let expr = this.comparison();
-
-    while (this.match(["NotEqualityOperator", "EqualityOperator"])) {
-      const operator: Token = this.previous();
-      const right: Expression = this.comparison();
-      expr = <Binary>{ left: expr, operator: operator, right: right };
-    }
-
-    return expr;
-  }
-
-  expectIndentChange() {
-    if (!this.peekSameIndent(this.previous()?.indent ?? 0)) {
-      return;
-    }
-
-    const peek = this.peek();
-    throw this.error(
-      peek,
-      `Expected change in indentation, found ${peek.type} instead at ${peek.lineNumber}:${peek.position} with indentation ${peek.indent}`
-    );
-  }
-
-  expectLineChange() {
-    if (!this.peekSameLine()) {
-      return;
-    }
-
-    const peek = this.peek();
-    throw this.error(
-      peek,
-      `Expected end of statement, found ${peek.type} instead at ${peek.lineNumber}:${peek.position}`
-    );
-  }
-
-  consume(
-    type: TokenType,
-    message: string,
-    sameLine: boolean = true,
-    sameIndent: boolean = true
-  ) {
-    //console.log("Consume", type, message);
-    if (this.check(type)) return this.advance();
-
-    throw this.error(this.peek(), message);
-  }
-
-  consumeOneOf(
-    type: TokenType[],
-    message: string,
-    sameLine: boolean = true,
-    sameIndent: boolean = true
-  ) {
-    //console.log("Consume", type, message);
-    for (const t of type) {
-      if (this.check(t)) {
-        return this.advance();
-      }
-    }
-
-    throw this.error(this.peek(), message);
-  }
-
-  error(token: Token, message: string): ParseErrorSignal {
-    const location =
-      token.type == "SceneEnd"
-        ? `at end of scene ${token.sceneName}:${token.lineNumber}:${token.position}[Indent ${token.indent}]`
-        : `at '${token.type}' ${token.sceneName}:${token.lineNumber}:${token.position}[Indent ${token.indent}, Id: ${token.id}]`;
-
-    const fullMessage = `${message} ${location}`;
-    console.error(`Error: ${fullMessage}`);
-
-    const parseError: ParseError = { token, message: fullMessage };
-    this.errors.push(parseError);
-    return new ParseErrorSignal(parseError);
   }
 
   synchronize(): void {
@@ -1513,6 +1758,11 @@ export class Parser {
         case "GameIdentifier":
         case "SaveCheckpoint":
         case "RestoreCheckpoint":
+        case "ChoiceOption":
+        case "AllowReuse":
+        case "DisableReuse":
+        case "HideReuse":
+        case "SelectableIf":
           return;
       }
 
@@ -1528,4 +1778,5 @@ export class Parser {
 
     return statements;
   }
+
 }

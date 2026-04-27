@@ -143,19 +143,7 @@ export const scanScene = (scene: Scene, knownLabels: string[], knownSceneNames: 
                     if(context.proseBlockStart !== undefined) {
                         const indentChangedInProseBlock = lineIndent.indent !== context.proseBlockStart.indent;
                         if(indentChangedInProseBlock) {
-                            if(context.proseBlock.trim().length > 0) {
-                                tokens.push(<ProseToken>{
-                                    indent: context.proseBlockStart.indent,
-                                    type: 'Prose',
-                                    sceneName: scene.name,
-                                    content: context.proseBlock.trimStart(),
-                                    lineNumber: context.proseBlockStart.lineNumber,
-                                    position: context.proseBlockStart.position,
-                                });
-                            }
-
-                            context.proseBlock = '';
-                            context.proseBlockStart = undefined;
+                            flushProseBlock(tokens, context);
                             continue;
                         }
                     }
@@ -178,43 +166,20 @@ export const scanScene = (scene: Scene, knownLabels: string[], knownSceneNames: 
                     if (isStartOfCommand(context)) {
                         context.mode = "Command";
                         context.currentTokenStartPosition = context.position;
-                        if(context.proseBlock.trim().length > 0) {
-                            tokens.push(<ProseToken>{
-                                indent: context.proseBlockStart.indent,
-                                type: 'Prose',
-                                sceneName: scene.name,
-                                content: context.proseBlock.trimStart(),
-                                lineNumber: context.proseBlockStart.lineNumber,
-                                position: context.proseBlockStart.position,
-                            });
-                        }
-
-                        context.proseBlock = '';
-                        context.proseBlockStart = undefined;
+                        flushProseBlock(tokens, context);
                         continue;
                     }
 
                     
                     if(context.position > 0
                         && line[context.position] === '#'
-                        && line.substring(0, context.position).trim().length === 0)
+                        && (line.substring(0, context.position).trim().length === 0
+                            || isAfterChoiceModifierOnSameLine(tokens, context.lineNumber)))
                     {
                         context.currentTokenStartPosition = undefined;
                         context.currentToken = '';
                         context.mode = "ChoiceOption";
-                        if(context.proseBlock.trim().length > 0) {
-                            tokens.push(<ProseToken>{
-                                indent: context.proseBlockStart.indent,
-                                type: 'Prose',
-                                sceneName: scene.name,
-                                content: context.proseBlock.trimStart(),
-                                lineNumber: context.proseBlockStart.lineNumber,
-                                position: context.proseBlockStart.position,
-                            });
-                        }
-
-                        context.proseBlock = '';
-                        context.proseBlockStart = undefined;
+                        flushProseBlock(tokens, context);
                         continue;
                     }
 
@@ -413,6 +378,29 @@ export const scanScene = (scene: Scene, knownLabels: string[], knownSceneNames: 
         }
     );
     return tokens;
+}
+
+const choiceModifierTokenTypes = new Set(["HideReuse", "DisableReuse", "AllowReuse"]);
+const isAfterChoiceModifierOnSameLine = (tokens: Token[], lineNumber: number): boolean => {
+    const last = tokens[tokens.length - 1];
+    return last !== undefined
+        && last.lineNumber === lineNumber
+        && choiceModifierTokenTypes.has(last.type);
+}
+
+const flushProseBlock = (tokens: Token[], context: ScannerContext): void => {
+    if(context.proseBlockStart !== undefined && context.proseBlock.trim().length > 0) {
+        tokens.push(<ProseToken>{
+            indent: context.proseBlockStart.indent,
+            type: 'Prose',
+            sceneName: context.scene.name,
+            content: context.proseBlock.trimStart(),
+            lineNumber: context.proseBlockStart.lineNumber,
+            position: context.proseBlockStart.position,
+        });
+    }
+    context.proseBlock = '';
+    context.proseBlockStart = undefined;
 }
 
 const handleChoiceOption = (context: ScannerContext): ChoiceOptionToken => {
@@ -675,8 +663,8 @@ const knownCommands = [
     "*link",
     "*image",
     "*purchase_discount",
-    "save_checkpoint",
-    "restore_checkpoint",
+    "*save_checkpoint",
+    "*restore_checkpoint",
     "*delete",
     "*create_array",
     "*delete_array",
@@ -703,6 +691,10 @@ const isStartOfCommand = (context: ScannerContext) : boolean => {
 
         const lineRemaining = context.currentLine.substring(context.position);
         let endOfCommand = lineRemaining.indexOf(' ');
+        const parenIndex = lineRemaining.indexOf('(');
+        if (endOfCommand === -1 || (parenIndex !== -1 && parenIndex < endOfCommand)) {
+            endOfCommand = parenIndex;
+        }
         if(endOfCommand === -1) {
             endOfCommand = lineRemaining.indexOf(')');
         }

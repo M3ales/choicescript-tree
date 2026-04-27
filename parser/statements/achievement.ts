@@ -1,4 +1,5 @@
-import { AchievementToken, IdentifierToken, ProseToken } from "../../scanner/tokens";
+import { AchievementToken, IdentifierToken } from "../../scanner/tokens";
+import { ProseLiteral } from "./prose-literal";
 import { Statement } from "./statement";
 
 export interface AchievementStatement extends Statement {
@@ -6,8 +7,8 @@ export interface AchievementStatement extends Statement {
   token: AchievementToken;
   codename: IdentifierToken;
   hidden: boolean;
-  title: ProseToken;
+  title: ProseLiteral;
   visibility: IdentifierToken;
-  preDescription: ProseToken | null;
-  postDescription: ProseToken;
+  preDescription: ProseLiteral | IdentifierToken | null;
+  postDescription: ProseLiteral;
 }

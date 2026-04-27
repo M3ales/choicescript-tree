@@ -3,5 +3,6 @@ export type ExpressionTypes =
   | "Binary"
   | "Unary"
   | "Grouping"
+  | "Dereference"
   | "Literal"
   | "Identifier";

@@ -5,6 +5,12 @@ import { IdentifierToken, ProseToken, Token } from "./tokens"
 export const handleStatChart = (context: ScannerContext): Token[] => {
     let startingIndent = context.indent.current;
     const tokens = [];
+    const here = () => ({
+        sceneName: context.scene.name,
+        lineNumber: context.lineNumber,
+        position: context.position,
+        indent: context.indent.current,
+    });
     while(true) {
         const countIndent = countIndentation(context.sceneLines[context.lineNumber + 1]);
         if(countIndent.indent <= startingIndent) {
@@ -24,10 +30,7 @@ export const handleStatChart = (context: ScannerContext): Token[] => {
             tokens.push(<IdentifierToken>{
                 type: "Identifier",
                 value: type,
-                sceneName: context.scene.name,
-                lineNumber: context.lineNumber,
-                position: context.position,
-                indent: context.indent.current,
+                ...here(),
             });
             context.position += type.length + 1;
             switch(type) {
@@ -35,20 +38,14 @@ export const handleStatChart = (context: ScannerContext): Token[] => {
                     tokens.push(<IdentifierToken>{
                         type: "Identifier",
                         value: identifier,
-                        sceneName: context.scene.name,
-                        lineNumber: context.lineNumber,
-                        position: context.position,
-                        indent: context.indent.current,
+                        ...here(),
                     });
                     context.position += identifier.length + 1;
                     if(displayName !== undefined) {
                         tokens.push(<ProseToken>{
                             type: "Prose",
                             content: displayName.join(" "),
-                            sceneName: context.scene.name,
-                            lineNumber: context.lineNumber,
-                            position: context.position,
-                            indent: context.indent.current,
+                            ...here(),
                         });
                         context.position += displayName.join(" ").length + 1;
                     }
@@ -58,20 +55,14 @@ export const handleStatChart = (context: ScannerContext): Token[] => {
                     tokens.push(<IdentifierToken>{
                         type: "Identifier",
                         value: identifier,
-                        sceneName: context.scene.name,
-                        lineNumber: context.lineNumber,
-                        position: context.position,
-                        indent: context.indent.current,
+                        ...here(),
                     });
                     context.position += identifier.length + 1;
                     if(displayName !== undefined && displayName.length > 0) {
                         tokens.push(<ProseToken>{
                             type: "Prose",
                             content: displayName.join(" "),
-                            sceneName: context.scene.name,
-                            lineNumber: context.lineNumber,
-                            position: context.position,
-                            indent: context.indent.current,
+                            ...here(),
                         });
                         context.position += displayName.join(" ").length + 1;
                     }
@@ -111,10 +102,7 @@ export const handleStatChart = (context: ScannerContext): Token[] => {
                     tokens.push(<IdentifierToken>{
                         type: "Identifier",
                         value: identifier,
-                        sceneName: context.scene.name,
-                        lineNumber: context.lineNumber,
-                        position: context.position,
-                        indent: context.indent.current,
+                        ...here(),
                     });
                     if(displayName !== undefined) {
                         tokens.push(<ProseToken>{

@@ -2,7 +2,8 @@ import {Scene} from "./scene";
 import {scanScene} from "./scanner";
 import fs from 'node:fs';
 import { scanLabelNames } from "./scan-label-names";
-import { Token } from "./tokens";
+import { flattenProse } from "./flatten-prose";
+import { ChoiceOptionToken, ProseToken, Token } from "./tokens";
 import scenesRaw from '../raw-scenes.json';
 
 const execute = async () => {
@@ -37,11 +38,63 @@ export const scanScenes = async (scenes: Scene[]) => {
         .map(scene => {
             console.time(`scan ${scene.name}`);
             const t = scanScene(scene, knownLabels, sceneNames);
+            const flat = expandProse(t, knownLabels, sceneNames);
             console.timeEnd(`scan ${scene.name}`);
-            return t;
+            return flat;
         });
     return addIds(tokens);
 }
+
+const expandProse = (
+    sceneTokens: Token[],
+    knownLabels: string[],
+    sceneNames: string[],
+): Token[] => {
+    const out: Token[] = [];
+    for (const token of sceneTokens) {
+        if (token.type === "Prose") {
+            const prose = token as ProseToken;
+            const flat = flattenProse(prose.content, {
+                sceneName: token.sceneName,
+                lineNumber: token.lineNumber,
+                position: token.position,
+                indent: token.indent,
+                knownLabels,
+                sceneNames,
+            });
+            // Ensure a leading Prose anchor token even if the content starts
+            // with an inline opener, so dispatch on Prose still triggers.
+            if (flat.length > 0 && flat[0].type !== "Prose") {
+                out.push(<ProseToken>{
+                    type: "Prose",
+                    sceneName: token.sceneName,
+                    lineNumber: token.lineNumber,
+                    position: token.position,
+                    indent: token.indent,
+                    content: "",
+                });
+            }
+            out.push(...flat);
+        } else if (token.type === "ChoiceOption") {
+            const opt = token as ChoiceOptionToken;
+            out.push(opt);
+            if (opt.rawText && opt.rawText.length > 0) {
+                const flat = flattenProse(opt.rawText, {
+                    sceneName: token.sceneName,
+                    lineNumber: token.lineNumber,
+                    position: token.position + 1,
+                    indent: token.indent,
+                    knownLabels,
+                    sceneNames,
+                });
+                out.push(...flat);
+            }
+        } else {
+            out.push(token);
+        }
+    }
+    return out;
+};
 
 const addIds = (scenes: Token[][]) => {
     let currentId = 0;

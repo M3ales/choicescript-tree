@@ -1,3 +1,4 @@
+import { countIndentation } from "./indent";
 import { IdentifierToken, NumberLiteralToken, ProseToken, Token } from "./tokens";
 
 export const parseAchievementBlock = (
@@ -23,53 +24,48 @@ export const parseAchievementBlock = (
   const title = titleParts.join(" ").trim();
   // console.log(declaration,codename,visibility,points,title)
 
+  const headerLoc = (position: number) => ({
+    lineNumber: lineNumber,
+    position: position,
+    indent: indent,
+    sceneName: sceneName,
+  });
+
   tokens.push(<IdentifierToken>{
     type: "Identifier",
     value: codename,
-    lineNumber: lineNumber,
-    position: headerLine.indexOf(codename, startPosition),
-    indent: indent,
-    sceneName: sceneName,
+    ...headerLoc(headerLine.indexOf(codename, startPosition)),
   });
 
   tokens.push(<IdentifierToken>{
     type: "Identifier",
     value: visibility,
-    lineNumber: lineNumber,
-    position: headerLine.indexOf(
+    ...headerLoc(headerLine.indexOf(
       visibility,
       startPosition + codename.length + 1 // +1 for whitespace
-    ),
-    indent: indent,
-    sceneName: sceneName,
+    )),
   });
 
   tokens.push(<NumberLiteralToken>{
     type: "NumberLiteral",
     value: parseInt(points),
-    lineNumber: lineNumber,
-    position: headerLine.indexOf(
+    ...headerLoc(headerLine.indexOf(
       points,
       startPosition + codename.length + visibility.length + 2 // +2 for whitespace
-    ),
-    indent: indent,
-    sceneName: sceneName,
+    )),
   });
 
   tokens.push(<ProseToken>{
     type: "Prose",
     content: title,
-    lineNumber: lineNumber,
-    position: headerLine.indexOf(
+    ...headerLoc(headerLine.indexOf(
         title,
         startPosition + codename.length + visibility.length + points.length + 3 // +3 for whitespace
-    ),
-    indent: indent,
-    sceneName: sceneName,
+    )),
   });
 
   // Parse description lines
-  const preAchieveIndent = countIndentation(preAchieveDescription);
+  const preAchieveIndent = countIndentation(preAchieveDescription).indent;
   if(preAchieveDescription.trim() === "hidden") {
     tokens.push(<IdentifierToken>{
         type: "Identifier",
@@ -91,7 +87,7 @@ export const parseAchievementBlock = (
     });
   }
 
-  const postAchieveIndent = countIndentation(preAchieveDescription);
+  const postAchieveIndent = countIndentation(postAchieveDescription).indent;
 
   tokens.push(<ProseToken>{
     type: "Prose",
@@ -102,26 +98,7 @@ export const parseAchievementBlock = (
     sceneName: sceneName,
   })
   // Post-earned description
-  
+
 
   return tokens;
 };
-
-function countIndentation(line: string): number {
-  let count = 0;
-
-  for (const char of line) {
-    const increment = scanIndent(char);
-    if(increment === 0)
-        break;
-    count += increment;
-  }
-
-  return count;
-}
-
-export const scanIndent = (char: string) => {
-    return char === "\t" ? 1 
-         : char === " "  ? 0.5 
-         : 0;
-}

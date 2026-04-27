@@ -1,8 +1,9 @@
-import { EndingToken, ProseToken } from "../../scanner/tokens";
+import { EndingToken } from "../../scanner/tokens";
+import { ProseValue } from "./prose-value";
 import { Statement } from "./statement";
 
 export interface EndingStatement extends Statement {
     kind: "Ending";
     token: EndingToken;
-    buttonText: ProseToken | null;
+    buttonText: ProseValue | null;
 }

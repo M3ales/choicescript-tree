@@ -27,7 +27,6 @@ export interface ScannerContext {
     | "Expression"
     | "Comment"
     | "ChoiceOption"
-    | "MultiReplace"
     | "Achievement"
     | "SceneList"
     | "StatChart"

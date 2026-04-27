@@ -5,14 +5,17 @@ export const handleImage = (context: ScannerContext): Token[] => {
     const tokens = [];
     const args = context.currentLine.replace('*image ', '').trim()
     const {path, alignment, altText} = lineToSegments(args);
-    if(path) {
-    context.position = context.currentLine.indexOf(path);
-      tokens.push(<ProseToken>{
-        type: 'Prose',
+    const at = (position: number) => ({
         sceneName: context.scene.name,
-        position: context.position,
+        position: position,
         lineNumber: context.lineNumber,
         indent: context.indent.current,
+    });
+    if(path) {
+      context.position = context.currentLine.indexOf(path);
+      tokens.push(<ProseToken>{
+        type: 'Prose',
+        ...at(context.position),
         content: path,
       });
 
@@ -23,10 +26,7 @@ export const handleImage = (context: ScannerContext): Token[] => {
       context.position = context.currentLine.indexOf(alignment, context.position);
       tokens.push(<IdentifierToken>{
         type: 'Identifier',
-        sceneName: context.scene.name,
-        position: context.position,
-        lineNumber: context.lineNumber,
-        indent: context.indent.current,
+        ...at(context.position),
         value: alignment,
       });
       context.position += alignment.length + 1;
@@ -36,10 +36,7 @@ export const handleImage = (context: ScannerContext): Token[] => {
       context.position = context.currentLine.indexOf(altText[0], context.position);
       tokens.push(<ProseToken>{
         type: 'Prose',
-        sceneName: context.scene.name,
-        position: context.position,
-        lineNumber: context.lineNumber,
-        indent: context.indent.current,
+        ...at(context.position),
         content: context.currentLine.substring(context.position),
       });
     }

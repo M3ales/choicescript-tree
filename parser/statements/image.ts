@@ -1,10 +1,11 @@
-import { IdentifierToken, ImageToken, ProseToken } from "../../scanner/tokens";
+import { IdentifierToken, ImageToken } from "../../scanner/tokens";
+import { ProseValue } from "./prose-value";
 import { Statement } from "./statement";
 
 export interface ImageStatement extends Statement {
   kind: "Image";
   token: ImageToken;
-  path: ProseToken;
+  path: ProseValue;
   alignment: IdentifierToken | undefined;
-  altText: ProseToken | undefined;
+  altText: ProseValue | undefined;
 }

@@ -8,3 +8,7 @@ parsed.json
 .vscode/
 
 raw-scenes.json
+
+symbol-table.json
+
+test/
