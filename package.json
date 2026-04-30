@@ -8,7 +8,9 @@
     "fetch": "tsx fetch/index.ts",
     "scan": "tsx scanner/index.ts",
     "parse": "tsx parser/index.ts",
-    "start": "npm run fetch && npm run scan && npm run parse"
+    "start": "npm run fetch && npm run scan && npm run parse",
+    "analyse:symbols": "tsx analysis/symbol-table/index.ts",
+    "analyse:scope": "tsx analysis/scope/index.ts"
   },
   "author": "",
   "license": "ISC",
