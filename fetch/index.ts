@@ -44,9 +44,9 @@ export const readSceneList = (startup: Scene): string[] => {
     return scenes;
 }
 
-const [typeArg, locationArg] = process.argv.slice(2);
+const [typeArg, locationArg, unreferencedScenesRaw] = process.argv.slice(2);
 if (!typeArg || !locationArg) {
-    console.error('Usage: npm run fetch -- <remote|local> <location>');
+    console.error('Usage: npm run fetch -- <remote|local> <location> <unreferencedScenes>');
     process.exit(1);
 }
 
@@ -58,6 +58,6 @@ if (!loader) {
 }
 
 const location = locationArg;
-let unreferencedScenes = [];
+let unreferencedScenes = unreferencedScenesRaw.split(',');
 
 await execute();
