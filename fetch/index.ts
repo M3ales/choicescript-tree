@@ -58,6 +58,6 @@ if (!loader) {
 }
 
 const location = locationArg;
-let unreferencedScenes = unreferencedScenesRaw.split(',');
+let unreferencedScenes = unreferencedScenesRaw?.split(',') ?? [];
 
 await execute();
