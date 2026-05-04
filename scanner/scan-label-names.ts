@@ -11,5 +11,6 @@ export const scanLabelNames = (scene: Scene): string[] => {
                 return line.split(' ')[0]
             return line;
         })
-        .filter(label => label.length > 0);
+        .filter(label => label.length > 0)
+        .map(label => label.toLowerCase());
 }

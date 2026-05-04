@@ -28,6 +28,7 @@ export const handleImage = (context: ScannerContext): Token[] => {
         type: 'Identifier',
         ...at(context.position),
         value: alignment,
+        rawValue: alignment,
       });
       context.position += alignment.length + 1;
     }

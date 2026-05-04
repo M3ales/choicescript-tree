@@ -30,6 +30,7 @@ export const handleStatChart = (context: ScannerContext): Token[] => {
             tokens.push(<IdentifierToken>{
                 type: "Identifier",
                 value: type,
+                rawValue: type,
                 ...here(),
             });
             context.position += type.length + 1;
@@ -37,7 +38,8 @@ export const handleStatChart = (context: ScannerContext): Token[] => {
                 case 'text': {
                     tokens.push(<IdentifierToken>{
                         type: "Identifier",
-                        value: identifier,
+                        value: identifier.toLowerCase(),
+                        rawValue: identifier,
                         ...here(),
                     });
                     context.position += identifier.length + 1;
@@ -54,7 +56,8 @@ export const handleStatChart = (context: ScannerContext): Token[] => {
                 case 'opposed_pair': {
                     tokens.push(<IdentifierToken>{
                         type: "Identifier",
-                        value: identifier,
+                        value: identifier.toLowerCase(),
+                        rawValue: identifier,
                         ...here(),
                     });
                     context.position += identifier.length + 1;
@@ -101,7 +104,8 @@ export const handleStatChart = (context: ScannerContext): Token[] => {
                 case 'percent': {
                     tokens.push(<IdentifierToken>{
                         type: "Identifier",
-                        value: identifier,
+                        value: identifier.toLowerCase(),
+                        rawValue: identifier,
                         ...here(),
                     });
                     if(displayName !== undefined) {

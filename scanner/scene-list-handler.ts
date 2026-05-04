@@ -24,6 +24,7 @@ export const handleSceneList = (context: ScannerContext): Token[] => {
             const token: IdentifierToken = {
                 type: "Identifier",
                 value: sceneName,
+                rawValue: sceneName,
                 sceneName: context.scene.name,
                 lineNumber: context.lineNumber + 1,
                 position: context.position,

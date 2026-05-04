@@ -455,8 +455,8 @@ const handleCommand = (context: ScannerContext) => {
             context.mode = "Expression";
             return createInContextToken(<GoSubSceneToken>{type: 'GoSubScene'});
         }
-        case '*return ': {
-            context.mode = "Expression";
+        case '*return': {
+            context.mode = "Prose";
             return createInContextToken(<ReturnToken>{type: 'Return'});
         }
         case '*goto ': {

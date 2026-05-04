@@ -47,14 +47,16 @@ const matchKnownIdentifier = (
   expression: string,
   cursor: number,
   names: string[],
-): { matched: string | null, newCursor: number } => {
-  let possible = names.filter(n => n.startsWith(expression[cursor]));
+): { matched: string | null, rawValue: string, newCursor: number } => {
+  const lowerChar = expression[cursor].toLowerCase();
+  let possible = names.filter(n => n.startsWith(lowerChar));
   let value = "";
+  let rawExtracted = "";
   const startPos = cursor;
   let nextCharIsValidVariable = false;
 
   while(possible.length > 0 && cursor < expression.length) {
-    const tempValue = value + expression[cursor];
+    const tempValue = value + expression[cursor].toLowerCase();
     const previousPossible = possible;
     possible = names.filter(n => n.startsWith(tempValue));
     if(previousPossible.length > 0 && possible.length === 0) {
@@ -65,14 +67,15 @@ const matchKnownIdentifier = (
       break;
     }
     value = tempValue;
+    rawExtracted += expression[cursor];
     cursor++;
   }
 
   const found = possible.some(n => n === value);
   if(found && !nextCharIsValidVariable) {
-    return { matched: value, newCursor: cursor };
+    return { matched: value, rawValue: rawExtracted, newCursor: cursor };
   }
-  return { matched: null, newCursor: startPos };
+  return { matched: null, rawValue: "", newCursor: startPos };
 }
 
 export function tokenizeExpressionString(
@@ -84,17 +87,13 @@ export function tokenizeExpressionString(
   knownLabels: string[],
   sceneNames: string[],
 ): Token[] {
-  const lowerCaseKnown = knownLabels.map(l => l.toLowerCase());
-  const caseInsensitiveMatchIndex = lowerCaseKnown.indexOf(expression.trim().toLowerCase());
-  if(caseInsensitiveMatchIndex !== -1) {
-    const caseMismatch = !knownLabels.includes(expression.trim());
-    const original = knownLabels[caseInsensitiveMatchIndex];
-    if(caseMismatch) {
-      console.warn(`Case mismatch between label '${original}' and reference '${expression.trim()}' at ${sceneName}:${lineNumber}:${position}`);
-    }
+  const trimmed = expression.trim();
+  const lowerValue = trimmed.toLowerCase();
+  if(knownLabels.includes(lowerValue)) {
     return [{
           type: "Identifier",
-          value: expression.trim(),
+          value: lowerValue,
+          rawValue: trimmed,
           position: position,
           lineNumber: lineNumber,
           sceneName: sceneName,
@@ -129,6 +128,7 @@ export function tokenizeExpressionString(
         tokens.push({
           type: "Identifier",
           value: sceneMatch.matched,
+          rawValue: sceneMatch.rawValue,
           ...baseAt(cursor),
           isSceneName: true,
           isLabelName: isAlsoLabelName,
@@ -144,6 +144,7 @@ export function tokenizeExpressionString(
         tokens.push({
           type: "Identifier",
           value: labelMatch.matched,
+          rawValue: labelMatch.rawValue,
           ...baseAt(cursor),
           isLabelName: true
         } as IdentifierToken);
@@ -174,19 +175,56 @@ export function tokenizeExpressionString(
       continue;
     }
 
-    // Handle string literals
+    // Handle string literals (with ${} interpolation support)
     if (char === '"') {
       const startPos = cursor;
-      const quote = char;
-      let value = "";
       cursor++; // Skip opening quote
 
-      while (cursor < expression.length && expression[cursor] !== quote) {
-        // Handle escape sequences
-        if (expression[cursor] === "\\" && cursor + 1 < expression.length) {
+      const segments: { kind: "text"; value: string; pos: number }[] | { kind: "expr"; value: string; pos: number }[] = [];
+      let textBuf = "";
+      let textPos = cursor;
+
+      while (cursor < expression.length && expression[cursor] !== '"') {
+        const c = expression[cursor];
+        // Detect ${, $!{, $!!{ interpolation openers
+        if (c === "$") {
+          let openerLen = 0;
+          if (expression[cursor + 1] === "{") openerLen = 2;
+          else if (expression[cursor + 1] === "!" && expression[cursor + 2] === "{") openerLen = 3;
+          else if (expression[cursor + 1] === "!" && expression[cursor + 2] === "!" && expression[cursor + 3] === "{") openerLen = 4;
+
+          if (openerLen > 0) {
+            if (textBuf) {
+              segments.push({ kind: "text", value: textBuf, pos: textPos } as any);
+              textBuf = "";
+            }
+            const exprStart = cursor + openerLen;
+            // Find matching closing brace
+            let depth = 1;
+            let ei = exprStart;
+            while (ei < expression.length && depth > 0) {
+              if (expression[ei] === "{") depth++;
+              else if (expression[ei] === "}") { depth--; if (depth === 0) break; }
+              else if (expression[ei] === '"') {
+                ei++;
+                while (ei < expression.length && expression[ei] !== '"') {
+                  if (expression[ei] === "\\" && ei + 1 < expression.length) ei++;
+                  ei++;
+                }
+              }
+              ei++;
+            }
+            const exprBody = expression.substring(exprStart, ei);
+            segments.push({ kind: "expr", value: exprBody, pos: exprStart } as any);
+            cursor = ei < expression.length ? ei + 1 : ei; // skip closing }
+            textPos = cursor;
+            continue;
+          }
+        }
+        if (c === "\\" && cursor + 1 < expression.length) {
           cursor++;
         }
-        value += expression[cursor];
+        textBuf += expression[cursor];
         cursor++;
       }
 
@@ -195,11 +233,44 @@ export function tokenizeExpressionString(
         cursor++;
       }
 
-      tokens.push({
-        type: "StringLiteral",
-        value: value,
-        ...baseAt(startPos),
-      } as StringLiteralToken);
+      if (textBuf) {
+        segments.push({ kind: "text", value: textBuf, pos: textPos } as any);
+      }
+
+      const hasInterpolation = segments.some((s: any) => s.kind === "expr");
+      if (!hasInterpolation) {
+        const fullText = segments.length > 0 ? (segments[0] as any).value : "";
+        tokens.push({
+          type: "StringLiteral",
+          value: fullText,
+          ...baseAt(startPos),
+        } as StringLiteralToken);
+      } else {
+        for (let si = 0; si < segments.length; si++) {
+          const seg = segments[si] as any;
+          if (si > 0) {
+            tokens.push(<ArithmeticOperatorToken>{
+              type: "ConcatenationOperator",
+              rawValue: "&",
+              ...baseAt(seg.pos),
+            });
+          }
+          if (seg.kind === "text") {
+            tokens.push({
+              type: "StringLiteral",
+              value: seg.value,
+              ...baseAt(seg.pos),
+            } as StringLiteralToken);
+          } else {
+            tokens.push({ type: "OpenParenthesis", ...baseAt(seg.pos) } as OpenParenthesisToken);
+            const innerTokens = tokenizeExpressionString(
+              seg.value, lineNumber, position + seg.pos, indent, sceneName, knownLabels, sceneNames
+            );
+            tokens.push(...innerTokens);
+            tokens.push({ type: "CloseParenthesis", ...baseAt(seg.pos + seg.value.length) } as CloseParenthesisToken);
+          }
+        }
+      }
       continue;
     }
 
@@ -488,7 +559,8 @@ export function tokenizeExpressionString(
         default: {
           tokens.push(<IdentifierToken>{
             type: "Identifier",
-            value: value,
+            value: value.toLowerCase(),
+            rawValue: value,
             ...baseAt(startPos),
           });
 

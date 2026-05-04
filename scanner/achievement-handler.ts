@@ -34,12 +34,14 @@ export const parseAchievementBlock = (
   tokens.push(<IdentifierToken>{
     type: "Identifier",
     value: codename,
+    rawValue: codename,
     ...headerLoc(headerLine.indexOf(codename, startPosition)),
   });
 
   tokens.push(<IdentifierToken>{
     type: "Identifier",
     value: visibility,
+    rawValue: visibility,
     ...headerLoc(headerLine.indexOf(
       visibility,
       startPosition + codename.length + 1 // +1 for whitespace
@@ -70,6 +72,7 @@ export const parseAchievementBlock = (
     tokens.push(<IdentifierToken>{
         type: "Identifier",
         value: "hidden",
+        rawValue: "hidden",
         lineNumber: lineNumber + 1,
         position: preAchieveDescription.indexOf("hidden"),
         indent: preAchieveIndent,
