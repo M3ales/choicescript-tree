@@ -1040,12 +1040,6 @@ export class Parser {
 
   choiceBoundedifStatement(): Statement {
     const parser = () => {
-      if (this.check("SelectableIf")) {
-        this.error(
-          this.peek(),
-          "*selectable_if cannot be combined with *if on a choice option. Use one or the other."
-        );
-      }
       if (
         this.match(
           [
@@ -1445,6 +1439,7 @@ export class Parser {
 
     return <ChoiceOptionStatement>{
       kind: "ChoiceOption",
+      statementId: this.generateStatementId(),
       token: token,
       body: body,
       parsedSegments: parsedSegments,
