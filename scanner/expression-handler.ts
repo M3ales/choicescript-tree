@@ -319,7 +319,7 @@ export function tokenizeExpressionString(
         }
         case "%-": {
           tokens.push(<ArithmeticOperatorToken>{
-            type: "FairmathAdditionOperator",
+            type: "FairmathSubtractionOperator",
             rawValue: twoChars,
             ...baseAt(startPos),
           });

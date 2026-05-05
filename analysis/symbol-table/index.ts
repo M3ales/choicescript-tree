@@ -7,6 +7,7 @@ import {
   GotoSceneStatement,
   LabelStatement,
   SaveCheckpointStatement,
+  SetVariableStatement,
 } from "../../parser/statements";
 import { Visitor, walk } from "../traversal";
 import { SceneAstWithSymbolTable } from "./scene-ast-with-symbol-table";
@@ -74,12 +75,24 @@ const buildSymbolTable = (scene: SceneAst) : SceneAstWithSymbolTable => {
     }
   };
 
+  const implicitControlFlow: SetVariableStatement[] = [];
+  const implicitControlFlowVisitor = <Visitor>{
+    predicate: stmt => stmt.kind === "SetVariable",
+    visit: stmt => {
+      const set = stmt as SetVariableStatement;
+      if ((set.expression as any)?.token?.value === "implicit_control_flow") {
+        implicitControlFlow.push(set);
+      }
+    }
+  };
+
   const visitors = [
     labelVisitor,
     variableVisitor,
     checkpointVisitor,
     gotoVisitor,
     gosubVisitor,
+    implicitControlFlowVisitor,
   ];
 
   walk(
@@ -96,6 +109,7 @@ const buildSymbolTable = (scene: SceneAst) : SceneAstWithSymbolTable => {
       checkpoints: Object.fromEntries(checkpoints),
       gosubs: gosubs,
       gotos: gotos,
+      implicitControlFlow: implicitControlFlow,
     }
   };
 }

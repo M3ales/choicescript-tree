@@ -8,10 +8,7 @@ import fs from 'node:fs';
 import { tokenPosition } from "../debug";
 
 const findLabel = (labels: Record<string, LabelStatement>, name: string): boolean => {
-  if(labels[name] !== undefined) return true;
-  return Object
-    .getOwnPropertyNames(labels)
-    .some(m => m.toLowerCase() === name.toLowerCase());
+  return labels[name] !== undefined;
 }
 
 const checkSceneLabel = (
