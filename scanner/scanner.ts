@@ -90,8 +90,10 @@ export const scanScene = (scene: Scene, knownLabels: string[], knownSceneNames: 
         }
     ];
 
-    context.sceneLines = scene.content.replace('\r\n', '\n').split('\n');
-
+    context.sceneLines = scene.content
+        .replaceAll('\r\n', '\n')
+        .replaceAll('\r','\n')
+        .split('\n');
     let lastMode = 'Initial';
     while (context.lineNumber < context.sceneLines.length) {
 
