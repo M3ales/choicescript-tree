@@ -293,7 +293,7 @@ export class Parser {
     while (this.match(["LogicalAnd", "LogicalOr"])) {
       const operator: Token = this.previous();
       const right: Expression = this.equality();
-      expr = <Binary>{ left: expr, operator: operator, right: right };
+      expr = <Binary>{ kind: "Binary", left: expr, operator: operator, right: right };
     }
     return expr;
   }
@@ -303,7 +303,7 @@ export class Parser {
     while (this.match(["NotEqualityOperator", "EqualityOperator"])) {
       const operator: Token = this.previous();
       const right: Expression = this.comparison();
-      expr = <Binary>{ left: expr, operator: operator, right: right };
+      expr = <Binary>{ kind: "Binary", left: expr, operator: operator, right: right };
     }
     return expr;
   }
@@ -322,7 +322,7 @@ export class Parser {
     ) {
       const operator: Token = this.previous();
       const right: Expression = this.term();
-      expr = <Binary>{ left: expr, operator: operator, right: right };
+      expr = <Binary>{ kind: "Binary", left: expr, operator: operator, right: right };
     }
     return expr;
   }
@@ -340,7 +340,7 @@ export class Parser {
     ) {
       const operator: Token = this.previous();
       const right = this.term();
-      expr = <Binary>{ left: expr, operator: operator, right: right };
+      expr = <Binary>{ kind: "Binary", left: expr, operator: operator, right: right };
     }
     return expr;
   }
@@ -356,7 +356,7 @@ export class Parser {
     ) {
       const operator = this.previous();
       const right = this.indexing();
-      expr = <Binary>{ left: expr, operator: operator, right: right };
+      expr = <Binary>{ kind: "Binary", left: expr, operator: operator, right: right };
     }
     return expr;
   }
@@ -366,7 +366,7 @@ export class Parser {
     while (this.match(["Indexer", "StringIndexerOperator"])) {
       const operator = this.previous();
       const right = this.unary();
-      expr = <Binary>{ left: expr, operator: operator, right: right };
+      expr = <Binary>{ kind: "Binary", left: expr, operator: operator, right: right };
     }
     return expr;
   }
@@ -385,14 +385,14 @@ export class Parser {
     ) {
       const operator = this.previous();
       const right = this.unary();
-      return <Unary>{ operator: operator, value: right };
+      return <Unary>{ kind: "Unary", operator: operator, value: right };
     }
     return this.primary();
   }
 
   primary(): Expression {
     if (this.match(["NumberLiteral", "StringLiteral", "BooleanLiteral"])) {
-      return <Literal>{ value: this.previous() };
+      return <Literal>{ kind: "Literal", value: this.previous() };
     }
 
     if (this.match(["Identifier"])) {
@@ -409,13 +409,13 @@ export class Parser {
           identifier: identifier,
         };
       }
-      return <Identifier>{ token: identifier };
+      return <Identifier>{ kind: "Identifier", token: identifier };
     }
 
     if (this.match(["OpenParenthesis"])) {
       const expr = this.expression();
       this.consume("CloseParenthesis", "Expect ')' after expression.");
-      return <Grouping>{ expression: expr };
+      return <Grouping>{ kind: "Grouping", expression: expr };
     }
 
     if (this.match(["OpenBrace"])) {
