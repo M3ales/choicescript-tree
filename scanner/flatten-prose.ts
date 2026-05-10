@@ -75,12 +75,6 @@ const findMatchingBrace = (content: string, openCursor: number): number => {
         } else if (c === "}") {
             depth--;
             if (depth === 0) return i;
-        } else if (c === '"') {
-            i++;
-            while (i < content.length && content[i] !== '"') {
-                if (content[i] === "\\" && i + 1 < content.length) i++;
-                i++;
-            }
         }
         i++;
     }
@@ -256,13 +250,7 @@ const emitMultiReplaceBody = (
         const c = content[cursor];
         if (c === "{" || c === "(" || c === "[") depth++;
         else if (c === "}" || c === ")" || c === "]") depth--;
-        else if (c === '"') {
-            cursor++;
-            while (cursor < bodyEnd && content[cursor] !== '"') {
-                if (content[cursor] === "\\" && cursor + 1 < bodyEnd) cursor++;
-                cursor++;
-            }
-        } else if (c === "|" && depth === 0) {
+        else if (c === "|" && depth === 0) {
             emitRange(out, content, altStart, cursor, base);
             const elsePos = positionAt(content, cursor, base);
             out.push(<MultiReplaceElseToken>{

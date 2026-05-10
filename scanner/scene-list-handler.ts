@@ -29,6 +29,8 @@ export const handleSceneList = (context: ScannerContext): Token[] => {
                 lineNumber: context.lineNumber + 1,
                 position: context.position,
                 indent: context.indent.current,
+                isLabelName: undefined,
+                isSceneName: true,
             };
             tokens.push(token);
         }

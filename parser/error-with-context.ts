@@ -1,7 +1,7 @@
-import * as fs from 'node:fs';
 import { Scene } from '../fetch/scene';
 import { countIndentation } from '../scanner/indent';
 import { ParseError } from './parse-error';
+import { outPath, getIO } from '../out-dir';
 
 const CONTEXT_LINES = 2;
 
@@ -46,7 +46,7 @@ let cachedScenes: Map<string, string> | null = null;
 
 const loadScenes = (): Map<string, string> => {
     if (cachedScenes) return cachedScenes;
-    const raw = fs.readFileSync('./raw-scenes.json', 'utf-8');
+    const raw = getIO().readFile(outPath('raw-scenes.json'));
     const scenes = JSON.parse(raw) as Scene[];
     cachedScenes = new Map(scenes.map(s => [s.name, s.content]));
     return cachedScenes;

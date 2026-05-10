@@ -522,7 +522,8 @@ const handleCommand = (context: ScannerContext) => {
             context.mode = "ProseToEOL";
             return createInContextToken(<FinishToken>{type: 'Finish'});
         }
-        case '*ending': {
+        case '*ending':
+        case '*delay_ending': {
             context.mode = "ProseToEOL";
             return createInContextToken(<EndingToken>{type: 'Ending'});
         }
@@ -658,6 +659,7 @@ const knownCommands = [
     "*input_number",
     "*finish",
     "*ending",
+    "*delay_ending",
     "*return",
     "*achievement",
     "*achieve",

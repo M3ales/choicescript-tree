@@ -1,18 +1,19 @@
+import "../bootstrap";
 import {Scene} from "./scene";
 import {scanScene} from "./scanner";
-import fs from 'node:fs';
 import { scanLabelNames } from "./scan-label-names";
 import { flattenProse } from "./flatten-prose";
 import { ChoiceOptionToken, ProseToken, Token } from "./tokens";
-import scenesRaw from '../raw-scenes.json';
+import { outPath, ensureOutDir, getIO } from '../out-dir';
 
 const execute = async () => {
-    const scenes = scenesRaw as unknown as Scene[];
+    ensureOutDir();
+    const scenes = JSON.parse(getIO().readFile(outPath('raw-scenes.json'))) as Scene[];
     console.info(`Loaded ${scenes.length} scenes`);
 
     const tokens = await scanScenes(scenes);
-    console.log(`Writing ${tokens.length} scenes with total of ${tokens.flatMap(t=>t).length} tokens to ./scanned-tokens.json`);
-    fs.writeFileSync('./scanned-tokens.json', JSON.stringify(tokens, null, 2));
+    console.log(`Writing ${tokens.length} scenes with total of ${tokens.flatMap(t=>t).length} tokens to ${outPath('scanned-tokens.json')}`);
+    getIO().writeFile(outPath('scanned-tokens.json'), JSON.stringify(tokens, null, 2));
 }
 
 export const scanScenes = async (scenes: Scene[]) => {

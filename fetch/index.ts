@@ -1,10 +1,12 @@
+import "../bootstrap";
 import { remote } from "./remote";
 import { local } from "./local";
 import {Scene} from "./scene";
 import { SceneLoader } from "./scene-loader";
-import fs from 'node:fs';
+import { outPath, ensureOutDir, getIO } from '../out-dir';
 
 const execute = async () => {
+    ensureOutDir();
     const startup = await loader.loadScene('startup', location);
     const sceneNames = readSceneList(startup);
 
@@ -24,8 +26,8 @@ const execute = async () => {
     let scenes = await Promise.all(sceneNames.map(scene => loader.loadScene(scene, location)));
     
     console.info(`Loaded ${scenes.length} scenes`);
-    console.log(`Writing ${scenes.length} to ./raw-scenes.json`);
-    fs.writeFileSync('./raw-scenes.json', JSON.stringify(scenes, null, 2));
+    console.log(`Writing ${scenes.length} to ${outPath('raw-scenes.json')}`);
+    getIO().writeFile(outPath('raw-scenes.json'), JSON.stringify(scenes, null, 2));
 }
 
 export const readSceneList = (startup: Scene): string[] => {

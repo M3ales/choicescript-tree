@@ -97,11 +97,8 @@ export class ParseErrorSignal extends Error {
     this.name = "ParseErrorSignal";
   }
 }
-const choiceScopeOnlyTokenTypes: Set<TokenType> = new Set([
+const choiceScopeOnlyTokenTypes: Set<TokenType> = new Set<TokenType>([
   "ChoiceOption",
-  "AllowReuse",
-  "DisableReuse",
-  "HideReuse",
   "SelectableIf",
 ]);
 
@@ -526,6 +523,9 @@ export class Parser {
     ["GameIdentifier", () => this.gameIdentifierStatement()],
     ["SaveCheckpoint", () => this.saveCheckpointStatement()],
     ["RestoreCheckpoint", () => this.restoreCheckpointStatement()],
+    ["HideReuse", () => this.hideReuse()],
+    ["DisableReuse", () => this.disableReuse()],
+    ["AllowReuse", () => this.allowReuse()],
   ];
 
   statement(): Statement {
@@ -535,10 +535,6 @@ export class Parser {
       }
     }
 
-    //if (this.match(["DisableReuse"])) return this.disableReuse();
-    //if (this.match(["HideReuse"])) return this.hideReuse();
-    //if (this.match(["AllowReuse"])) return this.allowReuse();
-    // TODO: make these operators work in generalist context too ^
     if (this.match(["Else"], false, false)) {
       this.error(this.previous(), "Dangling *else with no related *if");
       return this.withContext({ kind: "Else", token: this.previous() }, () => this.elseStatement());
@@ -1403,6 +1399,10 @@ export class Parser {
         //console.log('Read child', this.peek());
         if (this.match(["ChoiceOption"], false, false)) {
           body.push(this.choiceOptionWithModifiers());
+          continue;
+        }
+        if (this.match(["If"], false, false)) {
+          body.push(this.choiceBoundedifStatement());
           continue;
         }
         body.push(this.statement());

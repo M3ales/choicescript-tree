@@ -1,12 +1,12 @@
-import sceneTokens from '../scanned-tokens.json';
+import '../bootstrap';
 import { Token } from '../scanner/tokens';
 import { formatErrorWithContext } from './error-with-context';
 import { Parser } from './parser';
 import { SceneAst } from './scene';
-import * as fs from 'node:fs';
 import { ChoiceOptionStatement, ProseStatement, Statement } from './statements';
+import { outPath, ensureOutDir, getIO } from '../out-dir';
 
-const scenes = <Token[][]>sceneTokens;
+const scenes = JSON.parse(getIO().readFile(outPath('scanned-tokens.json'))) as Token[][];
 const tokensByScene = new Map<string, Token[]>();
 for (const sceneToks of scenes) {
     if (sceneToks.length === 0) continue;
@@ -45,8 +45,9 @@ const execute = async () => {
     if (totalErrors > 0) {
         console.error(`Parse completed with ${totalErrors} error(s) across ${sceneAsts.filter(s => (s.parseErrors?.length ?? 0) > 0).length} scene(s)`);
     }
-    console.log(`Writing ${sceneAsts.length} scenes with total of ${countStatements(sceneAsts)} statements to ./parsed.json`);
-    fs.writeFileSync('./parsed.json', JSON.stringify(sceneAsts, null, 2));
+    ensureOutDir();
+    console.log(`Writing ${sceneAsts.length} scenes with total of ${countStatements(sceneAsts)} statements to ${outPath('parsed.json')}`);
+    getIO().writeFile(outPath('parsed.json'), JSON.stringify(sceneAsts, null, 2));
 };
 
 const countStatements = (sceneAsts: SceneAst[]) => {

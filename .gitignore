@@ -2,13 +2,8 @@
 node_modules/
 
 .idea/
-
-scanned-tokens.json
-parsed.json
 .vscode/
 
-raw-scenes.json
-
-symbol-table.json
-
 test/
+
+out/

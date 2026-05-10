@@ -1,3 +1,4 @@
+import "../../bootstrap";
 import { SceneAst } from "../../parser/scene";
 import {
   DeclareVariableStatement,
@@ -11,8 +12,7 @@ import {
 } from "../../parser/statements";
 import { Visitor, walk } from "../traversal";
 import { SceneAstWithSymbolTable } from "./scene-ast-with-symbol-table";
-import parsedOutput from "../../parsed.json";
-import fs from 'node:fs';
+import { outPath, ensureOutDir, getIO } from '../../out-dir';
 
 const buildSymbolTable = (scene: SceneAst) : SceneAstWithSymbolTable => {
   const labels = new Map<string, LabelStatement>();
@@ -117,9 +117,10 @@ const buildSymbolTable = (scene: SceneAst) : SceneAstWithSymbolTable => {
 // Step 1: Collect Definitions of Labels, Variables and Save Checkpoints
 // Step 2: Collect all references to variables and labels
 
-const scenes = parsedOutput as SceneAst[];
+const scenes = JSON.parse(getIO().readFile(outPath('parsed.json'))) as SceneAst[];
 let result = scenes
   .map(buildSymbolTable);
 
-fs.writeFileSync('./symbol-table.json', JSON.stringify(result, null, 2));
+ensureOutDir();
+getIO().writeFile(outPath('symbol-table.json'), JSON.stringify(result, null, 2));
 console.log(`Symbol Tables created for ${result.length} scenes`);

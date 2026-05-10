@@ -13,7 +13,7 @@
     "analyse:scope": "tsx analysis/scope/index.ts"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "description": "",
   "devDependencies": {
     "@types/node": "^22.7.3",
@@ -21,8 +21,5 @@
     "typescript": "^5.6.2"
   },
   "dependencies": {
-    "graphology": "^0.25.4",
-    "graphology-canvas": "^0.4.2",
-    "sigma": "^3.0.0-beta.30"
   }
 }

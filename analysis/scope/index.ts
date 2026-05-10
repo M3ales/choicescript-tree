@@ -1,11 +1,55 @@
+import "../../bootstrap";
 import { GotoSceneStatement, GoSubSceneStatement, Statement } from "../../parser/statements";
 import { LabelStatement } from "../../parser/statements";
 import { IdentifierToken } from "../../scanner/tokens";
+import { Expression } from "../../parser/expressions";
+import { Binary } from "../../parser/expressions/binary";
+import { Literal } from "../../parser/expressions/literal";
+import { Identifier } from "../../parser/expressions/identifier";
+import { Unary } from "../../parser/expressions/unary";
+import { Dereference } from "../../parser/expressions/derefererence";
+import { Grouping } from "../../parser/expressions/grouping";
 import { AnalysisError } from "../errors";
 import { SceneAstWithSymbolTable } from "../symbol-table/scene-ast-with-symbol-table";
-import input from '../../symbol-table.json';
-import fs from 'node:fs';
+import { outPath, getIO } from '../../out-dir';
 import { tokenPosition } from "../debug";
+
+const stringifyExpression = (expr: Expression): string => {
+  switch (expr.kind) {
+    case "Literal": return String((expr as Literal).value.value);
+    case "Identifier": return (expr as Identifier).token.value;
+    case "Binary": {
+      const b = expr as Binary;
+      return `${stringifyExpression(b.left)}${(b.operator as any).rawValue}${stringifyExpression(b.right)}`;
+    }
+    case "Unary": {
+      const u = expr as Unary;
+      return `${u.operator.rawValue} ${stringifyExpression(u.value)}`;
+    }
+    case "Dereference": return `{${stringifyExpression((expr as Dereference).expression)}}`;
+    case "Grouping": return `(${stringifyExpression((expr as Grouping).expression)})`;
+    default: return "(dynamic)";
+  }
+}
+
+const sceneName = (scene: IdentifierToken | Expression): string | undefined => {
+  if ("type" in scene && scene.type === "Identifier") return (scene as IdentifierToken).value;
+  return undefined;
+}
+
+const labelDisplayName = (label: IdentifierToken | Expression | undefined): string => {
+  if (label === undefined) return '';
+  if ("type" in label && label.type === "Identifier") return (label as IdentifierToken).value;
+  return stringifyExpression(label as Expression);
+}
+
+const sceneDisplayName = (scene: IdentifierToken | Expression, label?: IdentifierToken | Expression): string => {
+  const name = sceneName(scene);
+  if (name !== undefined) return name;
+  const scenePart = stringifyExpression(scene as Expression);
+  const labelPart = label !== undefined ? labelDisplayName(label) : '';
+  return `${scenePart}${labelPart}`;
+}
 
 const findLabel = (labels: Record<string, LabelStatement>, name: string): boolean => {
   return labels[name] !== undefined;
@@ -71,9 +115,15 @@ export const checkNavigation = (scene: SceneAstWithSymbolTable, index: number, s
   scene.symbolTable.gotos = scene.symbolTable.gotos?.map(goto => {
     if(goto.kind === 'GotoScene') {
       const sceneGoto = goto as GotoSceneStatement;
-      const targetScene = checkSceneExists(sceneGoto.scene.value, scenes, goto, errors);
-      if(targetScene) {
-        checkSceneLabel(sceneGoto.label as IdentifierToken | undefined, targetScene, goto, errors);
+      const name = sceneName(sceneGoto.scene);
+      if (name !== undefined) {
+        const targetScene = checkSceneExists(name, scenes, goto, errors);
+        if(targetScene) {
+          checkSceneLabel(sceneGoto.label as IdentifierToken | undefined, targetScene, goto, errors);
+        }
+      } else {
+        const displayName = sceneDisplayName(sceneGoto.scene, sceneGoto.label);
+        checkSceneExists(displayName, scenes, goto, errors);
       }
       return goto;
     }
@@ -86,9 +136,15 @@ export const checkNavigation = (scene: SceneAstWithSymbolTable, index: number, s
   scene.symbolTable.gosubs = scene.symbolTable.gosubs?.map(gosub => {
     if(gosub.kind === 'GoSubScene') {
       const sceneGosub = gosub as GoSubSceneStatement;
-      const targetScene = checkSceneExists(sceneGosub.scene.value, scenes, gosub, errors);
-      if(targetScene && sceneGosub.label["type"] !== undefined) {
-        checkSceneLabel(sceneGosub.label as IdentifierToken, targetScene, gosub, errors);
+      const name = sceneName(sceneGosub.scene);
+      if (name !== undefined) {
+        const targetScene = checkSceneExists(name, scenes, gosub, errors);
+        if(targetScene && sceneGosub.label["type"] !== undefined) {
+          checkSceneLabel(sceneGosub.label as IdentifierToken, targetScene, gosub, errors);
+        }
+      } else {
+        const displayName = sceneDisplayName(sceneGosub.scene, sceneGosub.label);
+        checkSceneExists(displayName, scenes, gosub, errors);
       }
       return gosub;
     }
@@ -102,17 +158,15 @@ export const checkNavigation = (scene: SceneAstWithSymbolTable, index: number, s
 }
 
 
-const scenes = input as SceneAstWithSymbolTable[];
+const scenes = JSON.parse(getIO().readFile(outPath('symbol-table.json'))) as SceneAstWithSymbolTable[];
 let result = scenes
   .map(scene => {
-    if(scene.symbolTable.errors === undefined) {
-        scene.symbolTable.errors = [];
-    }
+    scene.symbolTable.errors = [];
     return scene;
   })
   .map(checkNavigation);
 
-fs.writeFileSync('./symbol-table.json', JSON.stringify(result, null, 2));
+getIO().writeFile(outPath('symbol-table.json'), JSON.stringify(result, null, 2));
 const errors = result.flatMap(r => r.symbolTable.errors);
 console.log(`Scope Analysis completed for ${result.length} scenes, found ${errors.length} errors`);
 console.table(errors.map(e => ({...e, statementId: e.statement.statementId, location: tokenPosition(e.statement['token']) })), ['message','statementId','severity','location']);
