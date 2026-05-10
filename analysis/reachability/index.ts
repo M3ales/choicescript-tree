@@ -14,10 +14,12 @@ import {
 import { Statement } from "../../parser/statements";
 import { writeNdjson } from "../ndjson";
 import { outPath } from "../../out-dir";
+import { BlockRecord, readBlockStates } from "../dataflow/block-states";
 
 const cfg = readInlineCfg(outPath("inline-cfg.ndjson"));
 const resolver = new BlockResolver(outPath("block-index.ndjson"));
 const statements = readStatements(outPath("game-statements.ndjson"));
+const blockStates = readBlockStates(outPath("block-states.ndjson"));
 
 // --- Build adjacency structures ---
 
@@ -326,8 +328,10 @@ function findGoSubStatement(blockId: string, statements: Record<string, Statemen
 
 // --- Results ---
 
+const skipScenes = new Set(["choicescript_stats"]);
+
 const allBlockIds = Object.keys(cfg.blocks);
-const unreachableBlocks = allBlockIds.filter((id) => !reachableBlocks.has(id));
+const unreachableBlocks = allBlockIds.filter((id) => !reachableBlocks.has(id) && !skipScenes.has(sceneOf(id)));
 
 // Edges from unreachable source blocks are unreachable
 for (const edge of cfg.edges) {
@@ -345,23 +349,119 @@ for (const edge of cfg.edges) {
   else edgeStats.unclassified++;
 }
 
-// Dedup unreachable blocks by source block id — inlined copies map back to their original
+// Group all block ids by source block id to check partial reachability
+const blocksBySource = new Map<string, string[]>();
+for (const id of allBlockIds) {
+  const ref = cfg.blocks[id];
+  if (!ref) continue;
+  const sourceId = ref.sourceBlockId ?? id;
+  const list = blocksBySource.get(sourceId) ?? [];
+  list.push(id);
+  blocksBySource.set(sourceId, list);
+}
+
+// Dedup unreachable blocks by source block id — only flag if NO copy is reachable
 const dedupedUnreachable = new Map<string, { sourceId: string; inlineIds: string[]; sourceBlockId: string }>();
 for (const id of unreachableBlocks) {
   const ref = cfg.blocks[id];
   if (!ref) continue;
   const sourceId = ref.sourceBlockId ?? id;
-  const existing = dedupedUnreachable.get(sourceId);
-  if (existing) {
-    existing.inlineIds.push(id);
-  } else {
-    dedupedUnreachable.set(sourceId, { sourceId, inlineIds: [id], sourceBlockId: id });
+  if (dedupedUnreachable.has(sourceId)) {
+    dedupedUnreachable.get(sourceId)!.inlineIds.push(id);
+    continue;
   }
+  const siblings = blocksBySource.get(sourceId) ?? [id];
+  const anyReachable = siblings.some((sid) => reachableBlocks.has(sid));
+  if (anyReachable) continue;
+  dedupedUnreachable.set(sourceId, { sourceId, inlineIds: [id], sourceBlockId: id });
+}
+
+// Partial unreachability — blocks reachable in some iterations but not others
+interface PartialUnreachable {
+  sourceBlockId: string;
+  scene: string;
+  line: number | undefined;
+  reachableIn: string[];
+  unreachableIn: { id: string; iteration: number | undefined; reason: string; state: Record<string, unknown> }[];
+}
+
+const partialUnreachables: PartialUnreachable[] = [];
+for (const [sourceId, siblings] of blocksBySource) {
+  if (skipScenes.has(sceneOf(sourceId))) continue;
+  if (siblings.length < 2) continue;
+  const reached = siblings.filter((id) => reachableBlocks.has(id));
+  const unreached = siblings.filter((id) => !reachableBlocks.has(id));
+  if (reached.length === 0 || unreached.length === 0) continue;
+
+  const sourceRef = cfg.blocks[sourceId];
+  const sourceBlock = sourceRef ? resolver.resolve(sourceRef) : undefined;
+  const firstStmtId = sourceBlock?.statementIds[0];
+  const firstStmt = firstStmtId ? statements[firstStmtId] as any : undefined;
+  const line = firstStmt?.token?.lineNumber;
+
+  const unreachableDetails = unreached.map((id) => {
+    const ref = cfg.blocks[id];
+    const iteration = ref?.clonedFrom?.iteration;
+
+    const inEdges = predecessorEdges.get(id) ?? [];
+    const condEdge = inEdges.find((e) =>
+      e.kind === "IfBranch" || e.kind === "ElseIfBranch" || e.kind === "ElseBranch"
+    );
+    const condId = condEdge?.metadata?.conditionStatementId;
+    const condStmt = condId ? statements[condId] as any : undefined;
+
+    const parentBlockId = condEdge?.sourceBlockId;
+    const parentState = parentBlockId ? blockStates.get(parentBlockId) : undefined;
+
+    const relevantState: Record<string, unknown> = {};
+    if (condStmt?.expression && parentState?.stmts?.[condId!]) {
+      const reads = parentState.stmts[condId!].reads;
+      if (reads) {
+        for (const [varName, value] of Object.entries(reads)) {
+          relevantState[varName] = value;
+        }
+      }
+    }
+
+    let reason = "unreachable in this iteration";
+    if (condStmt?.expression) {
+      const varNames = Object.keys(relevantState);
+      if (varNames.length > 0) {
+        const parts = varNames.map((v) => {
+          const val = relevantState[v] as any;
+          if (val.kind === "constant") return `${v}=${JSON.stringify(val.value)}`;
+          if (val.kind === "set") return `${v}∈{${val.values.join(",")}}`;
+          if (val.kind === "range") return `${v}∈[${val.min},${val.max}]`;
+          return `${v}=${val.kind}`;
+        });
+        reason = `condition false: ${parts.join(", ")}`;
+      }
+    }
+
+    return { id, iteration, reason, state: relevantState };
+  });
+
+  partialUnreachables.push({
+    sourceBlockId: sourceId,
+    scene: sceneOf(sourceId),
+    line,
+    reachableIn: reached,
+    unreachableIn: unreachableDetails,
+  });
 }
 
 console.log();
 console.log(`Blocks: ${reachableBlocks.size} reachable, ${unreachableBlocks.length} unreachable (of ${allBlockIds.length})`);
 console.log(`  Deduped: ${dedupedUnreachable.size} unique source blocks (${unreachableBlocks.length} including inlined copies)`);
+if (partialUnreachables.length > 0) {
+  console.log(`  Partially unreachable: ${partialUnreachables.length} source blocks (reachable in some iterations, not others)`);
+  for (const p of partialUnreachables) {
+    console.log(`    ${p.sourceBlockId} (line ${p.line ?? "?"}): ${p.reachableIn.length} reachable, ${p.unreachableIn.length} unreachable`);
+    for (const u of p.unreachableIn) {
+      console.log(`      iter ${u.iteration ?? "?"}: ${u.reason}`);
+    }
+  }
+}
 console.log(`Edges: ${edgeStats.reachable} reachable, ${edgeStats.unreachable} unreachable, ${edgeStats.conditional} conditional, ${edgeStats.unclassified} unclassified`);
 
 // Group deduped unreachable blocks by scene
@@ -448,6 +548,7 @@ function* records() {
     unreachableBlocksDeduped: dedupedUnreachable.size,
     edges: edgeStats,
     unreachableChoiceOptions: unreachableChoices.length,
+    partialUnreachableBlocks: partialUnreachables.length,
     deadEndBlocks: deadEnds.length,
   };
 
@@ -479,6 +580,22 @@ function* records() {
           : undefined,
       };
     }
+  }
+
+  for (const p of partialUnreachables) {
+    yield {
+      type: "partial-unreachable",
+      sourceBlockId: p.sourceBlockId,
+      scene: p.scene,
+      line: p.line,
+      reachableIterations: p.reachableIn.length,
+      unreachableIterations: p.unreachableIn.map((u) => ({
+        id: u.id,
+        iteration: u.iteration,
+        reason: u.reason,
+        state: u.state,
+      })),
+    };
   }
 
   for (const blockId of deadEnds) {
