@@ -1,0 +1,13 @@
+export { analysePaths, readPathAnalysis } from "./analyse-paths";
+export type { BranchRecord } from "./branch-record";
+export type { DivergenceRecord } from "./divergence-record";
+export type { PathAnalysis } from "./path-analysis-result";
+export { buildChoiceMap } from "./choice-map";
+export type {
+  ChoiceMap,
+  ChoiceMapEntry,
+  MappedChoice,
+  ChoiceMapBranch,
+  ChoiceMapRef,
+  ChoiceMapConditionalSplit,
+} from "./choice-map";
