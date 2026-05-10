@@ -26,8 +26,7 @@ interface DebugBlock {
   exitType: string;
   label?: string;
   sourceBlockId?: string;
-  unrolled?: boolean;
-  inlined?: boolean;
+  clonePurpose?: string;
   loopHeaderId?: string;
   iterationHeaderId?: string;
 }
@@ -42,6 +41,7 @@ const toDebugBlock = (ref: BlockRef): DebugBlock => {
     exitType: ref.exitType,
     label: resolved?.label,
     sourceBlockId: ref.sourceBlockId,
+    clonePurpose: ref.clonedFrom?.purpose,
     loopHeaderId: ref.loopHeaderId,
     iterationHeaderId: ref.iterationHeaderId,
   };
@@ -67,7 +67,7 @@ const parseBlockOrigin = (
   const id = block.id;
   const origId = block.sourceBlockId;
 
-  if (block.unrolled && origId) {
+  if (block.clonePurpose === "unroll" && origId) {
     const iterMatch = id.match(/\.iter_(\d+)$/);
     const iter = iterMatch ? parseInt(iterMatch[1], 10) + 1 : null;
     const headerNote = block.loopHeaderId
@@ -81,7 +81,7 @@ const parseBlockOrigin = (
     };
   }
 
-  if (block.inlined && origId) {
+  if (block.clonePurpose === "inline" && origId) {
     return {
       annotation: `inlined from ${origId}`,
       originalBlockId: origId,
@@ -153,10 +153,10 @@ const renderScene = (sceneName: string, emit: (line: string) => void) => {
     stmtCount += block.statementIds.length;
     if (block.label && !block.sourceBlockId) labels.add(block.label);
 
-    if (block.unrolled) {
+    if (block.clonePurpose === "unroll") {
       unrolledBlocks++;
       if (block.loopHeaderId) loopHeaders.add(block.loopHeaderId);
-    } else if (block.inlined) {
+    } else if (block.clonePurpose === "inline") {
       inlinedBlocks++;
       if (block.sourceBlockId) inlinedSources.add(block.sourceBlockId);
     } else {

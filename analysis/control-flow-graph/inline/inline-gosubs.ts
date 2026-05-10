@@ -145,7 +145,7 @@ const inlineLeafPass = (
         refMap.set(clonedId, {
           id: clonedId,
           sourceBlockId: ref.sourceBlockId ?? origId,
-          inlined: true,
+          clonedFrom: { parentId: origId, purpose: "inline", parent: ref.clonedFrom },
           exitType: ref.exitType,
         });
       }

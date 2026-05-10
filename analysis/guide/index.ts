@@ -52,22 +52,7 @@ for (const edge of cfg.edges) {
   edgesBySource.set(edge.sourceBlockId, list);
 }
 
-const canonicalIdMap = new Map<string, string>();
-for (const id of Object.keys(cfg.refs)) {
-  const ref = cfg.refs[id];
-  canonicalIdMap.set(id, ref.sourceBlockId ?? id);
-}
-// Resolve transitive canonicals (e.g. iter_1.iter_1 → iter_1 → original)
-for (const [id, canonical] of canonicalIdMap) {
-  let resolved = canonical;
-  const seen = new Set<string>();
-  while (canonicalIdMap.has(resolved) && canonicalIdMap.get(resolved) !== resolved && !seen.has(resolved)) {
-    seen.add(resolved);
-    resolved = canonicalIdMap.get(resolved)!;
-  }
-  if (resolved !== canonical) canonicalIdMap.set(id, resolved);
-}
-const canonicalBlockId = (id: string) => canonicalIdMap.get(id) ?? id;
+const canonicalBlockId = (id: string) => cfg.refs[id]?.sourceBlockId ?? id;
 
 const choiceBlockIds = new Set<string>();
 for (const id of Object.keys(cfg.refs)) {

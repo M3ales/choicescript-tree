@@ -70,21 +70,7 @@ export function buildChoiceMap(
     edgesBySource.set(edge.sourceBlockId, list);
   }
 
-  const canonMap = new Map<string, string>();
-  for (const id of Object.keys(cfg.refs)) {
-    const ref = cfg.refs[id];
-    canonMap.set(id, ref.sourceBlockId ?? id);
-  }
-  for (const [id, c] of canonMap) {
-    let resolved = c;
-    const seen = new Set<string>();
-    while (canonMap.has(resolved) && canonMap.get(resolved) !== resolved && !seen.has(resolved)) {
-      seen.add(resolved);
-      resolved = canonMap.get(resolved)!;
-    }
-    if (resolved !== c) canonMap.set(id, resolved);
-  }
-  const canon = (id: string) => canonMap.get(id) ?? id;
+  const canon = (id: string) => cfg.refs[id]?.sourceBlockId ?? id;
 
   const choiceIds = new Set<string>();
   for (const id of Object.keys(cfg.refs)) {

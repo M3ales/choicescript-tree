@@ -78,7 +78,7 @@ export const unrollLoops = (
     for (let iter = 1; iter < K; iter++) {
       const suffix = `iter_${++globalIterCounter}`;
       const { blocks: cloned, edges: clonedEdges, blockIdMap } = cloneSubgraph(
-        bodySet, blocks, edgesBySource, suffix, "unrolled",
+        bodySet, blocks, edgesBySource, suffix, "unroll",
       );
 
       const iterHeaderId = blockIdMap.get(headerId)!;

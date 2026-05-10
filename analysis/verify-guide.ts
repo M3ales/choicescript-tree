@@ -191,17 +191,7 @@ for (const blockId of Object.keys(cfg.refs)) {
 }
 
 const missingFromGuide = allChoiceBlocks.filter((id) => !guideBlockIds.has(id));
-const resolveCanonical = (id: string): string => {
-  let current = id;
-  const seen = new Set<string>();
-  while (!seen.has(current)) {
-    seen.add(current);
-    const r = cfg.refs[current];
-    if (r?.sourceBlockId) current = r.sourceBlockId;
-    else break;
-  }
-  return current;
-};
+const resolveCanonical = (id: string): string => cfg.refs[id]?.sourceBlockId ?? id;
 
 const guideCanonicals = new Set(guideChoices.map((c: any) => resolveCanonical(c.blockId)));
 

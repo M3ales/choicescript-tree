@@ -223,8 +223,7 @@ const flattenOne = (
 ): { sub: FlattenedSubroutine } => {
   const refsByIdMap = new Map<string, BlockRef>();
   for (const [bid, ref] of Object.entries(body.blocks)) {
-    const origId = (ref.sourceBlockId ?? bid).replace(/\.iter_\d+/g, "");
-    refsByIdMap.set(bid, { ...ref, id: bid, sourceBlockId: origId });
+    refsByIdMap.set(bid, { ...ref, id: bid, clonedFrom: ref.clonedFrom ?? { parentId: bid, purpose: "flatten" }, sourceBlockId: ref.sourceBlockId ?? bid });
   }
 
   const edges = [...body.edges];

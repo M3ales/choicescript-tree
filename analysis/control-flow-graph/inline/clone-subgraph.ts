@@ -1,4 +1,4 @@
-import { BlockRef, Transition } from "../data";
+import { BlockRef, ClonePurpose, Transition } from "../data";
 import { getOrSet } from "../graph-utils";
 
 export interface CloneResult {
@@ -7,14 +7,12 @@ export interface CloneResult {
   blockIdMap: Map<string, string>;
 }
 
-export type CloneSource = "inlined" | "unrolled";
-
 export const cloneSubgraph = (
   blockIds: Set<string>,
   allBlocks: Record<string, BlockRef>,
   edgesBySource: Map<string, Transition[]>,
   suffix: string,
-  source: CloneSource,
+  purpose: ClonePurpose,
 ): CloneResult => {
   const blockIdMap = new Map<string, string>();
   const clonedBlocks: Record<string, BlockRef> = {};
@@ -31,7 +29,7 @@ export const cloneSubgraph = (
       ...original,
       id: newId,
       sourceBlockId: original.sourceBlockId ?? id,
-      [source]: true,
+      clonedFrom: { parentId: id, purpose, parent: original.clonedFrom },
     };
   }
 
