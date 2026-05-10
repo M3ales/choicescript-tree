@@ -89,6 +89,7 @@ export const unrollLoops = (
         if (block) {
           block.loopHeaderId = headerId;
           block.iterationHeaderId = iterHeaderId;
+          if (block.clonedFrom) block.clonedFrom.iteration = iter;
           blocks[newId] = block;
           blocksAdded++;
         }

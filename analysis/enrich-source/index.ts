@@ -49,6 +49,7 @@ interface DebugBlock {
   id: string;
   sourceBlockId?: string;
   clonePurpose?: string;
+  iteration?: number;
   loopHeaderId?: string;
   iterationHeaderId?: string;
   exitType: string;
@@ -64,6 +65,7 @@ const toDebugBlock = (ref: BlockRef): DebugBlock => {
     id: ref.id,
     sourceBlockId: ref.sourceBlockId,
     clonePurpose: ref.clonedFrom?.purpose,
+    iteration: ref.clonedFrom?.iteration,
     loopHeaderId: ref.loopHeaderId,
     iterationHeaderId: ref.iterationHeaderId,
     exitType: ref.exitType,
@@ -95,12 +97,10 @@ const parseBlockOrigin = (
   const src = block.sourceBlockId;
 
   if (block.clonePurpose === "unroll") {
-    const iterMatch = id.match(/\.iter_(\d+)$/);
-    const iter = iterMatch ? parseInt(iterMatch[1], 10) + 1 : null;
     const headerNote = block.loopHeaderId ? ` loop=${block.loopHeaderId}` : "";
     return {
-      annotation: iter !== null
-        ? `iteration ${iter}${headerNote}`
+      annotation: block.iteration !== undefined
+        ? `iteration ${block.iteration}${headerNote}`
         : `unrolled${headerNote}`,
     };
   }

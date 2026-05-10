@@ -131,7 +131,8 @@ const inlineLeafPass = (
       if (!returnEdge) continue;
 
       const continuation = returnEdge.targetBlockId!;
-      const suffix = `call_${callSiteCounterStart + newCallSites++}`;
+      const callNumber = callSiteCounterStart + newCallSites++;
+      const suffix = `call_${callNumber}`;
 
       // Build a rename map: original block ID → cloned block ID.
       const blockIdMap = new Map<string, string>();
@@ -145,7 +146,7 @@ const inlineLeafPass = (
         refMap.set(clonedId, {
           id: clonedId,
           sourceBlockId: ref.sourceBlockId ?? origId,
-          clonedFrom: { parentId: origId, purpose: "inline", parent: ref.clonedFrom },
+          clonedFrom: { parentId: origId, purpose: "inline", call: callNumber, parent: ref.clonedFrom },
           exitType: ref.exitType,
         });
       }

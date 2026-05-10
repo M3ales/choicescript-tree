@@ -5,6 +5,8 @@ export type ClonePurpose = "unroll" | "inline" | "flatten";
 export interface ClonedFrom {
   parentId: string;
   purpose: ClonePurpose;
+  iteration?: number;
+  call?: number;
   parent?: ClonedFrom;
 }
 
