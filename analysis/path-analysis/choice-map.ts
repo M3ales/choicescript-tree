@@ -57,6 +57,25 @@ export interface ChoiceMap {
   warnings: string[];
 }
 
+interface ChoiceMapJson {
+  entries: ChoiceMapEntry[];
+  choiceCount: number;
+  numByCanonical: Record<string, number>;
+  splitBlockIds: string[];
+  warnings: string[];
+}
+
+export function readChoiceMap(raw: string): ChoiceMap {
+  const json: ChoiceMapJson = JSON.parse(raw);
+  return {
+    entries: json.entries,
+    choiceCount: json.choiceCount,
+    numByCanonical: new Map(Object.entries(json.numByCanonical)),
+    splitBlockIds: new Set(json.splitBlockIds),
+    warnings: json.warnings,
+  };
+}
+
 export function buildChoiceMap(
   cfg: InlineCfg,
   pathAnalysis: PathAnalysis,

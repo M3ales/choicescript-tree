@@ -8,7 +8,7 @@
     "fetch": "tsx fetch/index.ts",
     "scan": "tsx scanner/index.ts",
     "parse": "tsx parser/index.ts",
-    "start": "npm run scan && npm run parse && npm run analyse:symbols && npm run analyse:scope && npm run analyse:cfg && npm run analyse:statements && npm run analyse:flatten-gosubs && npm run analyse:inline-cfg && npm run analyse:variable-casing && npm run analyse:dataflow && npm run analyse:reachability && npm run guide",
+    "start": "npm run scan && npm run parse && npm run analyse:symbols && npm run analyse:scope && npm run analyse:cfg && npm run analyse:statements && npm run analyse:flatten-gosubs && npm run analyse:inline-cfg && npm run analyse:variable-casing && npm run analyse:dataflow && npm run analyse:reachability && npm run guide && npm run graph",
     "analyse:symbols": "tsx analysis/symbol-table/index.ts",
     "analyse:scope": "tsx analysis/scope/index.ts",
     "analyse:variable-casing": "tsx analysis/variable-casing/index.ts",
@@ -22,10 +22,11 @@
     "analyse:reachability": "tsx analysis/reachability/index.ts",
     "analyse:variables": "tsx analysis/variable-analysis/index.ts",
     "analyse:paths": "tsx analysis/path-analysis/run.ts",
-    "analyse": "npm run scan && npm run parse && npm run analyse:symbols && npm run analyse:scope && npm run analyse:cfg && npm run analyse:statements && npm run analyse:flatten-gosubs && npm run analyse:inline-cfg && npm run analyse:variable-casing && npm run analyse:dataflow && npm run analyse:reachability",
+    "analyse": "npm run scan && npm run parse && npm run analyse:symbols && npm run analyse:scope && npm run analyse:cfg && npm run analyse:statements && npm run analyse:flatten-gosubs && npm run analyse:inline-cfg && npm run analyse:variable-casing && npm run analyse:dataflow && npm run analyse:reachability && npm run paths",
     "enrich-source": "tsx analysis/enrich-source/index.ts",
-    "guide": "tsx analysis/guide/index.ts",
-    "verify:guide": "tsx analysis/verify-guide.ts"
+    "guide": "tsx renderer/guide/index.ts",
+    "verify:guide": "tsx analysis/verify-guide.ts",
+    "graph": "tsx renderer/graph/index.ts"
   },
   "author": "",
   "license": "MIT",
@@ -36,5 +37,6 @@
     "typescript": "^5.6.2"
   },
   "dependencies": {
+    "@hpcc-js/wasm-graphviz": "^1.21.5"
   }
 }

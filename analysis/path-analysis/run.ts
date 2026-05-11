@@ -1,5 +1,6 @@
 import "../../bootstrap";
-import { readInlineCfgRefs, readStatements } from "../control-flow-graph/cfg-io";
+import { readInlineCfgRefs, readStatements, BlockResolver } from "../control-flow-graph/cfg-io";
+import { buildChoiceTraces } from "./choice-trace";
 import { analysePaths } from "./analyse-paths";
 import { buildChoiceMap, ChoiceMapEntry } from "./choice-map";
 import { DivergenceRecord } from "./divergence-record";
@@ -132,3 +133,23 @@ function* flattenEntries(entries: ChoiceMapEntry[], path: string[] = []): Iterab
 
 const choiceMapCount = writeNdjson(outPath("choice-map.ndjson"), flattenEntries(choiceMap.entries));
 console.log(`Wrote choice-map.ndjson (${choiceMapCount} records)`);
+
+const choiceMapJson = {
+  entries: choiceMap.entries,
+  choiceCount: choiceMap.choiceCount,
+  numByCanonical: Object.fromEntries(choiceMap.numByCanonical),
+  splitBlockIds: [...choiceMap.splitBlockIds],
+  warnings: choiceMap.warnings,
+};
+getIO().writeFile(outPath("choice-map.json"), JSON.stringify(choiceMapJson));
+console.log(`Wrote choice-map.json`);
+
+// --- Pass 3: Choice traces ---
+
+console.log("\nBuilding choice traces...");
+const resolver = new BlockResolver(outPath("block-index.ndjson"));
+const traceResult = buildChoiceTraces(cfg, resolver, statements, result, choiceMap, loopHeaderIds);
+console.log(`  ${traceResult.choices.length} choice traces, ${traceResult.splits.length} split traces`);
+
+getIO().writeFile(outPath("choice-trace.json"), JSON.stringify(traceResult));
+console.log(`Wrote choice-trace.json`);

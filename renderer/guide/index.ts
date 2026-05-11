@@ -1,8 +1,8 @@
 import "../../bootstrap";
-import { readInlineCfgRefs, readStatements, BlockResolver, sceneOf } from "../control-flow-graph/cfg-io";
-import { readPathAnalysis, buildChoiceMap, ChoiceMapEntry } from "../path-analysis";
-import { writeNdjson } from "../ndjson";
-import { Transition, isChoiceOptionEdge, CodeBlock } from "../control-flow-graph/data";
+import { readInlineCfgRefs, readStatements, BlockResolver, sceneOf } from "../../analysis/control-flow-graph/cfg-io";
+import { readPathAnalysis, readChoiceMap, ChoiceMapEntry } from "../../analysis/path-analysis";
+import { writeNdjson } from "../../analysis/ndjson";
+import { Transition, isChoiceOptionEdge, CodeBlock } from "../../analysis/control-flow-graph/data";
 import {
   SetVariableStatement,
   AchieveStatement,
@@ -21,8 +21,8 @@ import {
   Literal,
   Identifier,
 } from "../../parser/expressions";
-import { AbstractValue, join as joinValues } from "../dataflow/abstract-value";
-import { BlockRecord, BlockVariableEntry } from "../dataflow/block-states";
+import { AbstractValue, join as joinValues } from "../../analysis/dataflow/abstract-value";
+import { BlockRecord, BlockVariableEntry } from "../../analysis/dataflow/block-states";
 import { outPath, getIO } from "../../out-dir";
 
 console.log("Loading CFG...");
@@ -596,12 +596,9 @@ const collectConsequences = (startBlockId: string): OptionConsequences => {
 
 // --- Build guide tree (driven by choice map) ---
 
-console.log("Building choice map...");
-const choiceMap = buildChoiceMap(cfg, pathAnalysis, loopHeaderIds, statements);
-console.log(`  ${choiceMap.choiceCount} choices mapped`);
-if (choiceMap.warnings.length > 0) {
-  for (const w of choiceMap.warnings) console.log(`  ⚠ ${w}`);
-}
+console.log("Loading choice map...");
+const choiceMap = readChoiceMap(getIO().readFile(outPath("choice-map.json")));
+console.log(`  ${choiceMap.choiceCount} choices loaded`);
 
 const choiceLabels = new Map<string, string>();
 for (const [canonical, num] of choiceMap.numByCanonical) {
