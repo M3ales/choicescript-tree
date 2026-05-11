@@ -35,6 +35,27 @@ for (const [name, cfg] of cfgs) {
 
 const cfg = mergeScenes(scenes, cfgs);
 
+const reachableBlockIds = new Set<string>();
+reachableBlockIds.add(cfg.entryBlockId);
+for (const edge of cfg.edges) {
+  if (edge.targetBlockId) reachableBlockIds.add(edge.targetBlockId);
+}
+for (const entry of Object.values(cfg.statementIndex)) {
+  reachableBlockIds.add(entry.blockId);
+}
+
+let pruned = 0;
+for (const id of Object.keys(cfg.blocks)) {
+  if (!reachableBlockIds.has(id)) {
+    delete cfg.blocks[id];
+    pruned++;
+  }
+}
+if (pruned > 0) {
+  cfg.edges = cfg.edges.filter(e => reachableBlockIds.has(e.sourceBlockId));
+  console.log(`Pruned ${pruned} disconnected empty blocks`);
+}
+
 writeNdjson(outPath('cfg.ndjson'), serialiseCfg(cfg));
 
 const totalBlocks2 = Object.keys(cfg.blocks).length;

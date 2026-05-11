@@ -5,6 +5,7 @@ import {
 } from "../data";
 import { buildEdgesBySource } from "./clone-subgraph";
 import { getOrSet, reachableFrom, walkGraph } from "../graph-utils";
+import { FlattenedSubroutine } from "./flatten-gosubs";
 
 export interface InlineResult {
   blockRefs: BlockRef[];
@@ -17,7 +18,8 @@ export interface InlineResult {
 }
 
 export type InlineError =
-  | { kind: "unreachable-block"; blockId: string; sourceBlockId?: string }
+  | { kind: "unreachable-block"; blockId: string }
+  | { kind: "inlined-original"; blockId: string }
   | { kind: "unresolved-gosub"; callerBlockId: string; targetBlockId: string | null; label?: string };
 
 interface SubroutineBody {
@@ -278,6 +280,7 @@ const pruneUnreachable = (
   refMap: Map<string, BlockRef>,
   edges: Transition[],
   errors: InlineError[],
+  gosubReturnTargets?: Set<string>,
 ): { refs: BlockRef[]; edges: Transition[] } => {
   const succs = new Map<string, Set<string>>();
   for (const e of edges) {
@@ -296,12 +299,52 @@ const pruneUnreachable = (
     if (ref?.sourceBlockId) inlinedOriginals.add(ref.sourceBlockId);
   }
 
+  const allCloneSources = new Set<string>();
+  for (const ref of refMap.values()) {
+    if (ref.sourceBlockId) allCloneSources.add(ref.sourceBlockId);
+  }
+
+  const subroutineRelated = new Set<string>();
+  for (const id of allCloneSources) subroutineRelated.add(id);
+  if (gosubReturnTargets) {
+    for (const id of gosubReturnTargets) {
+      if (!visited.has(id)) subroutineRelated.add(id);
+    }
+  }
+
+  if (subroutineRelated.size > 0) {
+    const unreachable = new Set<string>();
+    for (const id of refMap.keys()) {
+      if (!visited.has(id)) unreachable.add(id);
+    }
+    const unreachableSuccs = new Map<string, Set<string>>();
+    for (const e of edges) {
+      if (!e.targetBlockId) continue;
+      if (unreachable.has(e.sourceBlockId) && unreachable.has(e.targetBlockId)) {
+        getOrSet(unreachableSuccs, e.sourceBlockId, () => new Set()).add(e.targetBlockId);
+      }
+    }
+    const queue = [...subroutineRelated];
+    while (queue.length > 0) {
+      const id = queue.pop()!;
+      for (const next of unreachableSuccs.get(id) ?? []) {
+        if (!subroutineRelated.has(next)) {
+          subroutineRelated.add(next);
+          queue.push(next);
+        }
+      }
+    }
+  }
+
   const refs: BlockRef[] = [];
   for (const [id, ref] of refMap) {
     if (visited.has(id)) {
       refs.push(ref);
     } else {
-      if (!ref.sourceBlockId && !inlinedOriginals.has(id)) {
+      if (ref.sourceBlockId || inlinedOriginals.has(id)) continue;
+      if (subroutineRelated.has(id)) {
+        errors.push({ kind: "inlined-original", blockId: id });
+      } else {
         errors.push({ kind: "unreachable-block", blockId: id });
       }
     }
@@ -309,4 +352,135 @@ const pruneUnreachable = (
 
   const liveEdges = edges.filter(e => visited.has(e.sourceBlockId));
   return { refs, edges: liveEdges };
+};
+
+export const inlineFlattened = (
+  cfg: ControlFlowGraph,
+  subroutines: FlattenedSubroutine[],
+): InlineResult => {
+  const subByEntry = new Map<string, FlattenedSubroutine>();
+  for (const sub of subroutines) {
+    subByEntry.set(sub.entryBlockId, sub);
+  }
+
+  const refMap = new Map<string, BlockRef>();
+  for (const [id, block] of Object.entries(cfg.blocks)) {
+    refMap.set(id, { id, sourceBlockId: block.sourceBlockId, exitType: block.exitType });
+  }
+
+  const edges: Transition[] = cfg.edges.map(e => ({ ...e, metadata: { ...e.metadata } }));
+  const edgesBySource = buildEdgesBySource(edges);
+
+  const originalGoSubReturnTargets = new Set<string>();
+  for (const e of cfg.edges) {
+    if (isAnyGoSubReturn(e.kind) && e.targetBlockId) {
+      originalGoSubReturnTargets.add(e.targetBlockId);
+    }
+  }
+
+  let gosubsInlined = 0;
+  let callSiteCounter = 0;
+  const errors: InlineError[] = [];
+  const removedEdges = new Set<string>();
+
+  for (const edge of [...edges]) {
+    if (!isGoSubCall(edge.kind) || !edge.targetBlockId) continue;
+
+    const sub = subByEntry.get(edge.targetBlockId);
+    if (!sub) continue;
+
+    const callerEdges = edgesBySource.get(edge.sourceBlockId) ?? [];
+    let returnEdge: Transition | undefined;
+    for (const e of callerEdges) {
+      if (isGoSubReturn(e.kind) && e.targetBlockId) {
+        returnEdge = e;
+        break;
+      }
+    }
+    if (!returnEdge) continue;
+
+    const continuation = returnEdge.targetBlockId!;
+    const callNumber = callSiteCounter++;
+    const suffix = `call_${callNumber}`;
+
+    const blockIdMap = new Map<string, string>();
+    for (const ref of sub.blockRefs) {
+      const clonedId = `${ref.id}.${suffix}`;
+      blockIdMap.set(ref.id, clonedId);
+      refMap.set(clonedId, {
+        id: clonedId,
+        sourceBlockId: ref.sourceBlockId ?? ref.id,
+        clonedFrom: { parentId: ref.id, purpose: "inline", call: callNumber, parent: ref.clonedFrom },
+        exitType: ref.exitType,
+      });
+    }
+
+    for (const e of sub.edges) {
+      edges.push({
+        id: `${e.id}.${suffix}`,
+        kind: e.kind,
+        sourceBlockId: blockIdMap.get(e.sourceBlockId) ?? e.sourceBlockId,
+        targetBlockId: e.targetBlockId ? (blockIdMap.get(e.targetBlockId) ?? e.targetBlockId) : null,
+        metadata: { ...e.metadata },
+      });
+    }
+
+    for (const retId of sub.returnBlockIds) {
+      const clonedRetId = blockIdMap.get(retId)!;
+      const ref = refMap.get(clonedRetId);
+      if (ref) ref.exitType = "InlinedReturn";
+      edges.push({
+        id: `${clonedRetId}.ret`,
+        kind: "InlinedReturn" as Transition["kind"],
+        sourceBlockId: clonedRetId,
+        targetBlockId: continuation,
+        metadata: {},
+      });
+    }
+
+    removedEdges.add(edge.id);
+    removedEdges.add(returnEdge.id);
+    edges.push({
+      id: `${edge.id}.${suffix}`,
+      kind: goSubCallToInlined(edge.kind),
+      sourceBlockId: edge.sourceBlockId,
+      targetBlockId: blockIdMap.get(sub.entryBlockId)!,
+      metadata: { ...edge.metadata },
+    });
+
+    gosubsInlined++;
+  }
+
+  if (removedEdges.size > 0) {
+    let write = 0;
+    for (let read = 0; read < edges.length; read++) {
+      if (!removedEdges.has(edges[read].id)) edges[write++] = edges[read];
+    }
+    edges.length = write;
+  }
+
+  const { refs, edges: prunedEdges } = pruneUnreachable(
+    cfg.entryBlockId, refMap, edges, errors, originalGoSubReturnTargets,
+  );
+
+  for (const e of prunedEdges) {
+    if (isGoSubCall(e.kind)) {
+      errors.push({
+        kind: "unresolved-gosub",
+        callerBlockId: e.sourceBlockId,
+        targetBlockId: e.targetBlockId,
+        label: e.metadata.label as string | undefined,
+      });
+    }
+  }
+
+  return {
+    blockRefs: refs,
+    edges: prunedEdges,
+    entryBlockId: cfg.entryBlockId,
+    sceneOrder: cfg.sceneOrder,
+    statementIndex: cfg.statementIndex,
+    gosubsInlined,
+    errors,
+  };
 };

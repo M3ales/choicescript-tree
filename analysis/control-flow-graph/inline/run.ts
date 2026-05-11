@@ -13,8 +13,9 @@ const originalEdges = cfg.edges.length;
 
 console.log(`Inline CFG: starting with ${originalBlocks} blocks, ${originalEdges} edges`);
 
-const { inline: inlined, unroll: unrolled, loopResult } = inlineCfg(cfg, statements, resolver);
+const { flatten: flattened, inline: inlined, unroll: unrolled, loopResult } = inlineCfg(cfg, statements, resolver);
 
+console.log(`  Flatten: ${flattened.totalEntries} subroutines, ${flattened.totalLoopsUnrolled} loops unrolled in subroutine bodies`);
 console.log(`  Gosub inlining: ${inlined.gosubsInlined} call sites inlined`);
 
 const unresolvedGosubs = inlined.errors.filter(e => e.kind === "unresolved-gosub");
@@ -29,7 +30,11 @@ if (unresolvedGosubs.length > 0) {
   process.exit(1);
 }
 
+const inlinedOriginals = inlined.errors.filter(e => e.kind === "inlined-original");
 const unreachableErrors = inlined.errors.filter(e => e.kind === "unreachable-block");
+if (inlinedOriginals.length > 0) {
+  console.log(`  ${inlinedOriginals.length} original subroutine block(s) pruned (inlined)`);
+}
 if (unreachableErrors.length > 0) {
   console.log(`  ${unreachableErrors.length} unreachable block(s) pruned`);
 }

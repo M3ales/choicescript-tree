@@ -7,6 +7,7 @@ export interface ClonedFrom {
   purpose: ClonePurpose;
   iteration?: number;
   call?: number;
+  subroutine?: string;
   parent?: ClonedFrom;
 }
 
