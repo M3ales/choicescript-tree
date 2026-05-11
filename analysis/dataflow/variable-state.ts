@@ -66,6 +66,35 @@ export const updateVariable = (
   return next;
 };
 
+export const setVariableMut = (
+  state: VariableState,
+  name: string,
+  value: AbstractValue,
+  scope: "Global" | "Temporary",
+  scene: string
+): void => {
+  if (scope === "Global") {
+    state.globals.set(name, value);
+  } else {
+    if (!state.temps.has(scene)) state.temps.set(scene, new Map());
+    state.temps.get(scene)!.set(name, value);
+  }
+};
+
+export const updateVariableMut = (
+  state: VariableState,
+  name: string,
+  value: AbstractValue,
+  scene: string
+): void => {
+  const sceneTempVars = state.temps.get(scene);
+  if (sceneTempVars?.has(name)) {
+    sceneTempVars.set(name, value);
+    return;
+  }
+  state.globals.set(name, value);
+};
+
 export const joinStates = (a: VariableState, b: VariableState): VariableState => {
   const result = emptyState();
 

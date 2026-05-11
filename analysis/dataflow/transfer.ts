@@ -8,6 +8,8 @@ import {
   getVariable,
   setVariable,
   updateVariable,
+  setVariableMut,
+  updateVariableMut,
 } from "./variable-state";
 
 export const applyStatement = (
@@ -74,14 +76,83 @@ export const applyStatement = (
   }
 };
 
+const applyStatementMut = (
+  state: VariableState,
+  stmt: Statement,
+  scene: string
+): void => {
+  const effect = extractEffect(stmt);
+  if (!effect.defines) return;
+
+  const def = effect.defines;
+  const varName = def.variable;
+
+  let value: AbstractValue;
+
+  switch (stmt.kind) {
+    case "DeclareVariable":
+      value = def.valueExpression
+        ? evaluateExpression(def.valueExpression, state, scene)
+        : constant("");
+      setVariableMut(state, varName, value, def.scope, scene);
+      return;
+
+    case "SetVariable":
+      if (def.isCompoundAssignment && def.compoundExpression) {
+        value = evaluateExpression(def.compoundExpression, state, scene);
+      } else if (def.valueExpression) {
+        value = evaluateExpression(def.valueExpression, state, scene);
+      } else {
+        value = top;
+      }
+      updateVariableMut(state, varName, value, scene);
+      return;
+
+    case "GenerateRandom": {
+      const s = stmt as any;
+      const minVal = evaluateExpression(s.min, state, scene);
+      const maxVal = evaluateExpression(s.max, state, scene);
+      if (minVal.kind === "constant" && maxVal.kind === "constant" &&
+          typeof minVal.value === "number" && typeof maxVal.value === "number") {
+        value = range(minVal.value, maxVal.value);
+      } else {
+        value = top;
+      }
+      updateVariableMut(state, varName, value, scene);
+      return;
+    }
+
+    case "InputText":
+      updateVariableMut(state, varName, input, scene);
+      return;
+
+    case "InputNumber": {
+      const s = stmt as any;
+      const minVal = evaluateExpression(s.min, state, scene);
+      const maxVal = evaluateExpression(s.max, state, scene);
+      if (minVal.kind === "constant" && maxVal.kind === "constant" &&
+          typeof minVal.value === "number" && typeof maxVal.value === "number") {
+        value = range(minVal.value, maxVal.value);
+      } else {
+        value = input;
+      }
+      updateVariableMut(state, varName, value, scene);
+      return;
+    }
+
+    default:
+      return;
+  }
+};
+
 export const applyBlock = (
   state: VariableState,
   statements: Statement[],
   scene: string
 ): VariableState => {
-  let current = state;
+  const current = cloneState(state);
   for (const stmt of statements) {
-    current = applyStatement(current, stmt, scene);
+    applyStatementMut(current, stmt, scene);
   }
   return current;
 };

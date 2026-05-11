@@ -107,6 +107,114 @@ const collectReferencedVars = (
   return vars;
 };
 
+export const buildEdgeMaps = (
+  cfg: ControlFlowGraph,
+): { incoming: Map<string, Transition[]>; outgoing: Map<string, Transition[]> } => {
+  const incoming = new Map<string, Transition[]>();
+  const outgoing = new Map<string, Transition[]>();
+  for (const edge of cfg.edges) {
+    if (edge.targetBlockId) {
+      let list = incoming.get(edge.targetBlockId);
+      if (!list) { list = []; incoming.set(edge.targetBlockId, list); }
+      list.push(edge);
+    }
+    let out = outgoing.get(edge.sourceBlockId);
+    if (!out) { out = []; outgoing.set(edge.sourceBlockId, out); }
+    out.push(edge);
+  }
+  return { incoming, outgoing };
+};
+
+export const computeBlockRecord = (
+  blockId: string,
+  scene: string,
+  entryState: VariableState,
+  exitState: VariableState,
+  cfg: ControlFlowGraph,
+  statements: Record<string, Statement>,
+  resolver: BlockResolver,
+  inEdges: Transition[],
+  outEdges: Transition[],
+): BlockRecord | null => {
+  const referenced = collectReferencedVars(
+    blockId, scene, cfg, statements, resolver, inEdges, outEdges,
+  );
+
+  const vars: Record<string, BlockVariableEntry> = {};
+  for (const name of referenced) {
+    const entryVal = getVariable(entryState, name, scene);
+    const exitVal = getVariable(exitState, name, scene);
+    if (entryVal.kind === "bottom" && exitVal.kind === "bottom") continue;
+    vars[name] = valueEquals(entryVal, exitVal)
+      ? exitVal
+      : { entry: entryVal, exit: exitVal };
+  }
+
+  const stmts: Record<string, StatementRecord> = {};
+  const blockRef = cfg.blocks[blockId];
+  const block = blockRef ? resolver.resolve(blockRef) : undefined;
+  if (block) {
+    let currentState = entryState;
+    for (const stmtId of block.statementIds) {
+      const stmt = statements[stmtId];
+      if (!stmt) continue;
+
+      const effect = extractEffect(stmt);
+      const s = stmt as any;
+      const rec: StatementRecord = {};
+
+      const readVars = new Set<string>();
+      if (effect.defines) {
+        if (effect.defines.valueExpression) {
+          for (const v of extractVariableReads(effect.defines.valueExpression))
+            readVars.add(v);
+        }
+        if (effect.defines.compoundExpression) {
+          for (const v of extractVariableReads(effect.defines.compoundExpression))
+            readVars.add(v);
+        }
+      }
+      if (s.expression && !effect.defines?.compoundExpression) {
+        for (const v of extractVariableReads(s.expression)) readVars.add(v);
+      }
+      if (s.selectableIf) {
+        for (const v of extractVariableReads(s.selectableIf)) readVars.add(v);
+      }
+
+      const writtenVar = effect.defines?.variable;
+      if (writtenVar) readVars.delete(writtenVar);
+
+      const reads: Record<string, AbstractValue> = {};
+      for (const name of readVars) {
+        const val = getVariable(currentState, name, scene);
+        if (val.kind !== "bottom") reads[name] = val;
+      }
+      if (Object.keys(reads).length > 0) rec.reads = reads;
+
+      if (writtenVar) {
+        const before = getVariable(currentState, writtenVar, scene);
+        const nextState = applyStatement(currentState, stmt, scene);
+        const after = getVariable(nextState, writtenVar, scene);
+        rec.write = { variable: writtenVar, before, after };
+        currentState = nextState;
+      } else {
+        currentState = applyStatement(currentState, stmt, scene);
+      }
+
+      if (rec.write && rec.write.before.kind === "bottom" && rec.write.after.kind === "bottom") {
+        delete rec.write;
+      }
+      if (rec.reads || rec.write) {
+        stmts[stmtId] = rec;
+      }
+    }
+  }
+
+  const record: BlockRecord = { id: blockId, scene, vars };
+  if (Object.keys(stmts).length > 0) record.stmts = stmts;
+  return record;
+};
+
 export const writeBlockStates = (
   path: string,
   blocks: Map<
@@ -117,108 +225,19 @@ export const writeBlockStates = (
   statements: Record<string, Statement>,
   resolver: BlockResolver
 ): number => {
-  // Build incoming and outgoing edges per block
-  const incomingEdges = new Map<string, Transition[]>();
-  const outgoingEdges = new Map<string, Transition[]>();
-  for (const edge of cfg.edges) {
-    if (edge.targetBlockId) {
-      let list = incomingEdges.get(edge.targetBlockId);
-      if (!list) { list = []; incomingEdges.set(edge.targetBlockId, list); }
-      list.push(edge);
-    }
-    let out = outgoingEdges.get(edge.sourceBlockId);
-    if (!out) { out = []; outgoingEdges.set(edge.sourceBlockId, out); }
-    out.push(edge);
-  }
-
+  const { incoming, outgoing } = buildEdgeMaps(cfg);
   const chunks: string[] = [];
   let count = 0;
 
   for (const [blockId, { scene, entryState, exitState }] of blocks) {
-    const referenced = collectReferencedVars(
-      blockId,
-      scene,
-      cfg,
-      statements,
-      resolver,
-      incomingEdges.get(blockId) ?? [],
-      outgoingEdges.get(blockId) ?? []
+    const record = computeBlockRecord(
+      blockId, scene, entryState, exitState, cfg, statements, resolver,
+      incoming.get(blockId) ?? [], outgoing.get(blockId) ?? [],
     );
-
-    const vars: Record<string, BlockVariableEntry> = {};
-    for (const name of referenced) {
-      const entryVal = getVariable(entryState, name, scene);
-      const exitVal = getVariable(exitState, name, scene);
-      if (entryVal.kind === "bottom" && exitVal.kind === "bottom") continue;
-      vars[name] = valueEquals(entryVal, exitVal)
-        ? exitVal
-        : { entry: entryVal, exit: exitVal };
+    if (record) {
+      chunks.push(JSON.stringify(record));
+      count++;
     }
-
-    const stmts: Record<string, StatementRecord> = {};
-    const blockRef = cfg.blocks[blockId];
-    const block = blockRef ? resolver.resolve(blockRef) : undefined;
-    if (block) {
-      let currentState = entryState;
-      for (const stmtId of block.statementIds) {
-        const stmt = statements[stmtId];
-        if (!stmt) continue;
-
-        const effect = extractEffect(stmt);
-        const s = stmt as any;
-        const rec: StatementRecord = {};
-
-        const readVars = new Set<string>();
-        if (effect.defines) {
-          if (effect.defines.valueExpression) {
-            for (const v of extractVariableReads(effect.defines.valueExpression))
-              readVars.add(v);
-          }
-          if (effect.defines.compoundExpression) {
-            for (const v of extractVariableReads(effect.defines.compoundExpression))
-              readVars.add(v);
-          }
-        }
-        if (s.expression && !effect.defines?.compoundExpression) {
-          for (const v of extractVariableReads(s.expression)) readVars.add(v);
-        }
-        if (s.selectableIf) {
-          for (const v of extractVariableReads(s.selectableIf)) readVars.add(v);
-        }
-
-        const writtenVar = effect.defines?.variable;
-        if (writtenVar) readVars.delete(writtenVar);
-
-        const reads: Record<string, AbstractValue> = {};
-        for (const name of readVars) {
-          const val = getVariable(currentState, name, scene);
-          if (val.kind !== "bottom") reads[name] = val;
-        }
-        if (Object.keys(reads).length > 0) rec.reads = reads;
-
-        if (writtenVar) {
-          const before = getVariable(currentState, writtenVar, scene);
-          const nextState = applyStatement(currentState, stmt, scene);
-          const after = getVariable(nextState, writtenVar, scene);
-          rec.write = { variable: writtenVar, before, after };
-          currentState = nextState;
-        } else {
-          currentState = applyStatement(currentState, stmt, scene);
-        }
-
-        if (rec.write && rec.write.before.kind === "bottom" && rec.write.after.kind === "bottom") {
-          delete rec.write;
-        }
-        if (rec.reads || rec.write) {
-          stmts[stmtId] = rec;
-        }
-      }
-    }
-
-    const record: BlockRecord = { id: blockId, scene, vars };
-    if (Object.keys(stmts).length > 0) record.stmts = stmts;
-    chunks.push(JSON.stringify(record));
-    count++;
   }
 
   getIO().writeFile(path, chunks.join("\n") + "\n");

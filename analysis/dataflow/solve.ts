@@ -12,8 +12,12 @@ import {
   setVariable,
 } from "./variable-state";
 
+export interface SolverCallbacks {
+  onBlock?: (blockId: string, entryState: VariableState, exitState: VariableState) => void;
+  pinnedBlocks?: Set<string>;
+}
+
 export interface SolverResult {
-  entryStates: Map<string, VariableState>;
   exitStates: Map<string, VariableState>;
   iterations: number;
 }
@@ -22,13 +26,30 @@ export const solve = (
   cfg: ControlFlowGraph,
   statements: Record<string, Statement>,
   resolver: BlockResolver,
+  callbacks?: SolverCallbacks,
 ): SolverResult => {
   const successors = buildSuccessors(cfg);
   const order = computeTopologicalOrder(cfg.entryBlockId, successors, Object.keys(cfg.blocks), cfg.sceneOrder);
   const predecessors = buildPredecessors(cfg);
 
   const exitStates = new Map<string, VariableState>();
-  const entryStates = new Map<string, VariableState>();
+
+  const orderSet = new Set(order);
+  const remainingSuccessors = new Map<string, number>();
+  for (const blockId of order) {
+    const succs = successors.get(blockId);
+    let count = 0;
+    if (succs) {
+      for (const s of succs) {
+        if (orderSet.has(s)) count++;
+      }
+    }
+    remainingSuccessors.set(blockId, count);
+  }
+
+  const pinned = callbacks?.pinnedBlocks;
+  const onBlock = callbacks?.onBlock;
+  let evicted = 0;
 
   for (const blockId of order) {
     if (!cfg.blocks[blockId]) continue;
@@ -46,11 +67,26 @@ export const solve = (
     const blockStmts = resolveStatements(blockId, cfg, resolver, statements);
     const exitState = applyBlock(incoming, blockStmts, sceneOf(blockId));
 
-    entryStates.set(blockId, incoming);
+    if (onBlock) onBlock(blockId, incoming, exitState);
+
     exitStates.set(blockId, exitState);
+
+    const preds = predecessors.get(blockId);
+    if (preds) {
+      for (const pred of preds) {
+        const rem = (remainingSuccessors.get(pred.blockId) ?? 0) - 1;
+        remainingSuccessors.set(pred.blockId, rem);
+        if (rem <= 0 && (!pinned || !pinned.has(pred.blockId))) {
+          exitStates.delete(pred.blockId);
+          evicted++;
+        }
+      }
+    }
   }
 
-  return { entryStates, exitStates, iterations: order.length };
+  console.log(`  Evicted ${evicted} intermediate states`);
+
+  return { exitStates, iterations: order.length };
 };
 
 const buildSuccessors = (cfg: ControlFlowGraph): Map<string, Set<string>> => {
@@ -117,7 +153,6 @@ const computeIncomingState = (
         stateForEdge = crossSceneState;
       }
 
-      // Bind gosub args to parameter names as temp variables
       if (block?.parameterNames && block.parameterNames.length > 0) {
         const gosubStmt = findGoSubStatement(pred.blockId, resolver, cfg, statements);
         if (gosubStmt?.args) {

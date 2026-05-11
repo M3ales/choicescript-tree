@@ -1,12 +1,12 @@
 import "../../bootstrap";
-import { ControlFlowGraph } from "../control-flow-graph/data";
+import { Transition } from "../control-flow-graph/data";
 import { Statement } from "../../parser/statements";
 import { solve } from "./solve";
 import { resolveEdges } from "./resolve-edges";
 import { VariableSummary } from "./dataflow-result";
 import { AbstractValue, join as joinValue, equals as valueEquals, bottom } from "./abstract-value";
 import { VariableState } from "./variable-state";
-import { writeBlockStates } from "./block-states";
+import { buildEdgeMaps, computeBlockRecord } from "./block-states";
 import { readInlineCfg, readStatements, BlockResolver, sceneOf } from "../control-flow-graph/cfg-io";
 import { outPath, getIO } from "../../out-dir";
 
@@ -19,10 +19,93 @@ console.log(
   `  ${Object.keys(cfg.blocks).length} blocks, ${cfg.edges.length} edges`
 );
 
-const { entryStates, exitStates, iterations } = solve(cfg, statements, resolver);
+const { incoming: incomingEdges, outgoing: outgoingEdges } = buildEdgeMaps(cfg);
+
+const variableSummary: Record<string, VariableSummary> = {};
+const changedScenes = new Map<string, Set<string>>();
+const blockStateChunks: string[] = [];
+
+for (const [, stmt] of Object.entries(statements)) {
+  if (stmt.kind !== "DeclareVariable") continue;
+  const decl = stmt as any;
+  const name = decl.variable?.value;
+  if (!name || variableSummary[name]) continue;
+  variableSummary[name] = {
+    name,
+    scope: decl.scope ?? "Global",
+    possibleValues: bottom,
+    perScene: {},
+  };
+}
+
+const onBlock = (blockId: string, entryState: VariableState, exitState: VariableState) => {
+  if (!cfg.blocks[blockId]) return;
+  const scene = sceneOf(blockId);
+
+  for (const [name, exitValue] of exitState.globals) {
+    if (!variableSummary[name]) {
+      variableSummary[name] = { name, scope: "Global", possibleValues: bottom, perScene: {} };
+    }
+    variableSummary[name].possibleValues = joinValue(
+      variableSummary[name].possibleValues,
+      exitValue
+    );
+    variableSummary[name].perScene[scene] = variableSummary[name].perScene[scene]
+      ? joinValue(variableSummary[name].perScene[scene], exitValue)
+      : exitValue;
+
+    const entryValue = entryState.globals.get(name) ?? bottom;
+    if (!valueEquals(entryValue, exitValue)) {
+      if (!changedScenes.has(name)) changedScenes.set(name, new Set());
+      changedScenes.get(name)!.add(scene);
+    }
+  }
+  for (const [tempScene, temps] of exitState.temps) {
+    for (const [name, exitValue] of temps) {
+      const key = `${tempScene}:${name}`;
+      if (!variableSummary[key]) {
+        variableSummary[key] = {
+          name,
+          scope: "Temporary",
+          scene: tempScene,
+          possibleValues: bottom,
+          perScene: {},
+        };
+      }
+      variableSummary[key].possibleValues = joinValue(
+        variableSummary[key].possibleValues,
+        exitValue
+      );
+      variableSummary[key].perScene[tempScene] = variableSummary[key].perScene[tempScene]
+        ? joinValue(variableSummary[key].perScene[tempScene], exitValue)
+        : exitValue;
+
+      const entryValue = entryState.temps.get(tempScene)?.get(name) ?? bottom;
+      if (!valueEquals(entryValue, exitValue)) {
+        if (!changedScenes.has(key)) changedScenes.set(key, new Set());
+        changedScenes.get(key)!.add(tempScene);
+      }
+    }
+  }
+
+  const record = computeBlockRecord(
+    blockId, scene, entryState, exitState, cfg, statements, resolver,
+    incomingEdges.get(blockId) ?? [], outgoingEdges.get(blockId) ?? [],
+  );
+  if (record) blockStateChunks.push(JSON.stringify(record));
+};
+
+const pinnedBlocks = new Set<string>();
+for (const edge of cfg.edges) {
+  if (edge.targetBlockId === null && edge.metadata.dynamicExpression) {
+    pinnedBlocks.add(edge.sourceBlockId);
+  }
+}
+
+const { exitStates, iterations } = solve(cfg, statements, resolver, { onBlock, pinnedBlocks });
 
 console.log(`  Walk completed in ${iterations} steps`);
-console.log(`  ${exitStates.size} blocks with computed states`);
+console.log(`  ${exitStates.size} retained exit states`);
 
 const { resolved, unresolved } = resolveEdges(
   cfg,
@@ -52,34 +135,27 @@ for (const edge of resolved) {
   console.log(`    ${edge.sourceBlockId}: ${targets.join(", ")}`);
 }
 
-// Write per-block states as NDJSON (entry + delta to exit)
-const blockEntries = new Map<
-  string,
-  { scene: string; entryState: VariableState; exitState: VariableState }
->();
-for (const [blockId, exitState] of exitStates) {
-  if (!cfg.blocks[blockId]) continue;
-  const entry = entryStates.get(blockId);
-  if (!entry) continue;
-  blockEntries.set(blockId, { scene: sceneOf(blockId), entryState: entry, exitState });
+getIO().writeFile(
+  outPath("block-states.ndjson"),
+  blockStateChunks.join("\n") + "\n",
+);
+console.log(`  Wrote ${blockStateChunks.length} block states to block-states.ndjson`);
+
+for (const [key, vs] of Object.entries(variableSummary)) {
+  const changed = changedScenes.get(key);
+  if (!changed) {
+    vs.perScene = {};
+    continue;
+  }
+  for (const scene of Object.keys(vs.perScene)) {
+    if (!changed.has(scene)) delete vs.perScene[scene];
+  }
 }
 
-const blockCount = writeBlockStates(
-  outPath("block-states.ndjson"),
-  blockEntries,
-  cfg,
-  statements,
-  resolver
-);
-console.log(`  Wrote ${blockCount} block states to block-states.ndjson`);
-
-// Build variable summary from per-block entry/exit states
-const variableSummary = buildVariableSummary(cfg, entryStates, exitStates, statements);
 console.log(
   `  ${Object.keys(variableSummary).length} variables tracked`
 );
 
-// Write NDJSON: meta, resolved edges, unresolved edges, variables
 const lines: string[] = [];
 lines.push(JSON.stringify({ type: "meta", iterations }));
 for (const edge of resolved) {
@@ -93,94 +169,3 @@ for (const vs of Object.values(variableSummary)) {
 }
 getIO().writeFile(outPath("dataflow.ndjson"), lines.join("\n") + "\n");
 console.log(`Wrote dataflow.ndjson (${lines.length} records)`);
-
-function buildVariableSummary(
-  cfg: ControlFlowGraph,
-  entryStates: Map<string, VariableState>,
-  exitStates: Map<string, VariableState>,
-  statements: Record<string, Statement>
-): Record<string, VariableSummary> {
-  const summary: Record<string, VariableSummary> = {};
-
-  for (const [, stmt] of Object.entries(statements)) {
-    if (stmt.kind !== "DeclareVariable") continue;
-    const decl = stmt as any;
-    const name = decl.variable?.value;
-    if (!name || summary[name]) continue;
-    summary[name] = {
-      name,
-      scope: decl.scope ?? "Global",
-      possibleValues: bottom,
-      perScene: {},
-    };
-  }
-
-  // Track which scenes actually change each variable (entry != exit)
-  const changedScenes = new Map<string, Set<string>>();
-
-  for (const [blockId, exitState] of exitStates) {
-    if (!cfg.blocks[blockId]) continue;
-    const scene = sceneOf(blockId);
-    const entryState = entryStates.get(blockId);
-
-    for (const [name, exitValue] of exitState.globals) {
-      if (!summary[name]) {
-        summary[name] = { name, scope: "Global", possibleValues: bottom, perScene: {} };
-      }
-      summary[name].possibleValues = joinValue(
-        summary[name].possibleValues,
-        exitValue
-      );
-      summary[name].perScene[scene] = summary[name].perScene[scene]
-        ? joinValue(summary[name].perScene[scene], exitValue)
-        : exitValue;
-
-      const entryValue = entryState?.globals.get(name) ?? bottom;
-      if (!valueEquals(entryValue, exitValue)) {
-        if (!changedScenes.has(name)) changedScenes.set(name, new Set());
-        changedScenes.get(name)!.add(scene);
-      }
-    }
-    for (const [tempScene, temps] of exitState.temps) {
-      for (const [name, exitValue] of temps) {
-        const key = `${tempScene}:${name}`;
-        if (!summary[key]) {
-          summary[key] = {
-            name,
-            scope: "Temporary",
-            scene: tempScene,
-            possibleValues: bottom,
-            perScene: {},
-          };
-        }
-        summary[key].possibleValues = joinValue(
-          summary[key].possibleValues,
-          exitValue
-        );
-        summary[key].perScene[tempScene] = summary[key].perScene[tempScene]
-          ? joinValue(summary[key].perScene[tempScene], exitValue)
-          : exitValue;
-
-        const entryValue = entryState?.temps.get(tempScene)?.get(name) ?? bottom;
-        if (!valueEquals(entryValue, exitValue)) {
-          if (!changedScenes.has(key)) changedScenes.set(key, new Set());
-          changedScenes.get(key)!.add(tempScene);
-        }
-      }
-    }
-  }
-
-  // Filter perScene to only scenes that change the variable
-  for (const [key, vs] of Object.entries(summary)) {
-    const changed = changedScenes.get(key);
-    if (!changed) {
-      vs.perScene = {};
-      continue;
-    }
-    for (const scene of Object.keys(vs.perScene)) {
-      if (!changed.has(scene)) delete vs.perScene[scene];
-    }
-  }
-
-  return summary;
-}
