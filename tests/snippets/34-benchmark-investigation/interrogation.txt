@@ -1,0 +1,83 @@
+*temp current_suspect ""
+*temp question_count 0
+*temp caught_contradiction false
+
+The suspects wait in separate rooms at the station.
+
+*label suspect_select
+
+Who do you want to interview?
+
+*choice
+  *hide_reuse #The butler, Mr. Graves
+    *set current_suspect "Graves"
+    *set question_count 0
+    *set caught_contradiction false
+    *gosub interview_loop
+    *goto suspect_select
+  *hide_reuse #The spouse, Lady Blackwood
+    *set current_suspect "Blackwood"
+    *set question_count 0
+    *set caught_contradiction false
+    *gosub interview_loop
+    *goto suspect_select
+  *hide_reuse #The business partner, Mr. Cole
+    *set current_suspect "Cole"
+    *set question_count 0
+    *set caught_contradiction false
+    *gosub interview_loop
+    *goto suspect_select
+  #Return to case hub
+    *goto interrogation_exit
+
+*label interview_loop
+*set question_count + 1
+
+You sit across from @{(current_suspect = "Graves") Mr. Graves|@{(current_suspect = "Blackwood") Lady Blackwood|Mr. Cole}}.
+
+*if question_count > 4
+  The suspect's lawyer intervenes. "My client has answered enough questions."
+  *set suspects_interviewed + 1
+  *return
+
+Question ${question_count} of 4.
+
+*choice
+  #"Where were you that night?"
+    *if current_suspect = "Blackwood"
+      "I was at the opera. I have my ticket stub."
+      *if has_weapon
+        But the timeline doesn't add up with the forensic evidence.
+        *set caught_contradiction true
+        *set has_alibi_broken true
+        *set clues_found + 1
+    *elseif current_suspect = "Graves"
+      "Polishing the silver in the pantry, as I do every evening."
+    *else
+      "Working late at the office. My secretary can confirm."
+    *goto interview_loop
+  #"Did you have any grievances with the victim?"
+    *if current_suspect = "Cole"
+      "We had our disagreements, but nothing beyond business."
+      His eye twitches. He's hiding something.
+      *set clues_found + 1
+    *elseif current_suspect = "Blackwood"
+      "We were happily married." She dabs her eyes with a handkerchief.
+    *else
+      "Lord Blackwood was a fair employer. I had no complaints."
+    *goto interview_loop
+  #"Do you know anyone who would want the victim dead?"
+    *if current_suspect = "Graves"
+      "I... perhaps shouldn't say. But Lady Blackwood and Lord Blackwood argued frequently about money."
+      *set clues_found + 1
+    *else
+      "I can't imagine anyone wanting to harm Lord Blackwood."
+    *goto interview_loop
+  #End the interview early
+    *set suspects_interviewed + 1
+    "That will be all for now."
+    *return
+
+*label interrogation_exit
+You leave the interview rooms.
+*goto_scene startup case_hub

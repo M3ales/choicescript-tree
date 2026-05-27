@@ -1,0 +1,77 @@
+[
+  {
+    "name": "startup",
+    "statements": [
+      {
+        "content": [],
+        "kind": "Comment"
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 2,
+            "position": 0,
+            "indent": 0,
+            "content": "Some prose here.\n\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 18,
+            "lineNumber": 2,
+            "position": 0,
+            "text": "Some prose here.\n\n"
+          }
+        ]
+      },
+      {
+        "content": [],
+        "kind": "Comment"
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 5,
+            "position": 2,
+            "indent": 1,
+            "content": "This is a multi-line\ncomment block that should\nbe ignored by the game.\n\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 72,
+            "lineNumber": 5,
+            "position": 2,
+            "text": "This is a multi-line\ncomment block that should\nbe ignored by the game.\n\n"
+          }
+        ]
+      }
+    ],
+    "parseErrors": [],
+    "start": {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    "end": {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 5,
+      "position": 2,
+      "indent": 1,
+      "content": "This is a multi-line\ncomment block that should\nbe ignored by the game.\n\n"
+    }
+  }
+]

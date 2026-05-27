@@ -1,0 +1,115 @@
+*create val 0
+*create marker ""
+*create implicit_control_flow true
+
+*label top
+*temp local_bonus 0
+*set local_bonus (val + 1)
+
+=== TEST 1: val=100 (if matches) ===
+*set val 100
+*set marker ""
+*if (val >= 100)
+  IF-BODY
+  *goto t1cont
+*set marker (marker & "A")
+Prose-between-if-and-elseif.
+*elseif (val >= 50)
+  ELSEIF-BODY
+  *goto t1cont
+*set marker (marker & "B")
+Prose-between-elseif-and-else.
+*else
+  ELSE-BODY
+  *goto t1cont
+*set marker (marker & "C")
+Prose-after-else.
+*label t1cont
+Marker1: ${marker}
+
+=== TEST 2: val=75 (elseif matches) ===
+*set val 75
+*set marker ""
+*if (val >= 100)
+  IF-BODY
+  *goto t2cont
+*set marker (marker & "A")
+Prose-between-if-and-elseif.
+*elseif (val >= 50)
+  ELSEIF-BODY
+  *goto t2cont
+*set marker (marker & "B")
+Prose-between-elseif-and-else.
+*else
+  ELSE-BODY
+  *goto t2cont
+*set marker (marker & "C")
+Prose-after-else.
+*label t2cont
+Marker2: ${marker}
+
+=== TEST 3: val=10 (else matches) ===
+*set val 10
+*set marker ""
+*if (val >= 100)
+  IF-BODY
+  *goto t3cont
+*set marker (marker & "A")
+Prose-between-if-and-elseif.
+*elseif (val >= 50)
+  ELSEIF-BODY
+  *goto t3cont
+*set marker (marker & "B")
+Prose-between-elseif-and-else.
+*else
+  ELSE-BODY
+  *goto t3cont
+*set marker (marker & "C")
+Prose-after-else.
+*label t3cont
+Marker3: ${marker}
+
+=== TEST 4: val=0, no else branch ===
+*set val 0
+*set marker ""
+*if (val >= 100)
+  IF-BODY
+  *goto t4cont
+*set marker (marker & "A")
+Prose-after-if-no-else.
+*label t4cont
+Marker4: ${marker}
+
+=== TEST 5: ICF, val=100 (if matches, no goto) ===
+*set val 100
+*set marker ""
+*if (val >= 100)
+  IF-BODY-ICF
+*set marker (marker & "A")
+Prose-between-if-and-elseif-icf.
+*elseif (val >= 50)
+  ELSEIF-BODY-ICF
+*set marker (marker & "B")
+Prose-between-elseif-and-else-icf.
+*else
+  ELSE-BODY-ICF
+*set marker (marker & "C")
+Prose-after-else-icf.
+Marker5: ${marker}
+
+=== TEST 6: ICF, val=10 (else matches, no goto) ===
+*set val 10
+*set marker ""
+*if (val >= 100)
+  IF-BODY-ICF
+*set marker (marker & "A")
+Prose-between-if-and-elseif-icf.
+*elseif (val >= 50)
+  ELSEIF-BODY-ICF
+*set marker (marker & "B")
+Prose-between-elseif-and-else-icf.
+*else
+  ELSE-BODY-ICF
+*set marker (marker & "C")
+Prose-after-else-icf.
+Marker6: ${marker}

@@ -1,0 +1,4161 @@
+[
+  [
+    {
+      "sceneName": "crime_scene",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "crime_scene",
+      "indent": 0,
+      "lineNumber": 0,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "areas_searched",
+      "rawValue": "areas_searched",
+      "position": 6,
+      "lineNumber": 0,
+      "sceneName": "crime_scene",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 21,
+      "lineNumber": 0,
+      "sceneName": "crime_scene",
+      "indent": 0
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "crime_scene",
+      "indent": 0,
+      "lineNumber": 1,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "found_weapon_here",
+      "rawValue": "found_weapon_here",
+      "position": 6,
+      "lineNumber": 1,
+      "sceneName": "crime_scene",
+      "indent": 0
+    },
+    {
+      "type": "BooleanLiteral",
+      "value": false,
+      "position": 24,
+      "lineNumber": 1,
+      "sceneName": "crime_scene",
+      "indent": 0
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "crime_scene",
+      "indent": 0,
+      "lineNumber": 2,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "found_documents_here",
+      "rawValue": "found_documents_here",
+      "position": 6,
+      "lineNumber": 2,
+      "sceneName": "crime_scene",
+      "indent": 0
+    },
+    {
+      "type": "BooleanLiteral",
+      "value": false,
+      "position": 27,
+      "lineNumber": 2,
+      "sceneName": "crime_scene",
+      "indent": 0
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "crime_scene",
+      "indent": 0,
+      "lineNumber": 3,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "found_glass_here",
+      "rawValue": "found_glass_here",
+      "position": 6,
+      "lineNumber": 3,
+      "sceneName": "crime_scene",
+      "indent": 0
+    },
+    {
+      "type": "BooleanLiteral",
+      "value": false,
+      "position": 23,
+      "lineNumber": 3,
+      "sceneName": "crime_scene",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "crime_scene",
+      "lineNumber": 5,
+      "position": 0,
+      "indent": 0,
+      "content": "You arrive at Blackwood Manor's study. The chalk outline is still on the floor.\n\n"
+    },
+    {
+      "type": "Label",
+      "sceneName": "crime_scene",
+      "indent": 0,
+      "lineNumber": 7,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "scene_hub",
+      "rawValue": "scene_hub",
+      "position": 6,
+      "lineNumber": 7,
+      "sceneName": "crime_scene",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "If",
+      "sceneName": "crime_scene",
+      "indent": 0,
+      "lineNumber": 9,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "areas_searched",
+      "rawValue": "areas_searched",
+      "position": 4,
+      "lineNumber": 9,
+      "sceneName": "crime_scene",
+      "indent": 0
+    },
+    {
+      "type": "GreaterThanEqualsOperator",
+      "rawValue": ">=",
+      "position": 19,
+      "lineNumber": 9,
+      "sceneName": "crime_scene",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 4,
+      "position": 22,
+      "lineNumber": 9,
+      "sceneName": "crime_scene",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "crime_scene",
+      "lineNumber": 10,
+      "position": 2,
+      "indent": 1,
+      "content": "You've thoroughly searched the area. Nothing more to find.\n"
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "crime_scene",
+      "indent": 1,
+      "lineNumber": 11,
+      "position": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "scene_exit",
+      "rawValue": "scene_exit",
+      "position": 8,
+      "lineNumber": 11,
+      "sceneName": "crime_scene",
+      "indent": 1,
+      "isLabelName": true
+    },
+    {
+      "type": "Prose",
+      "sceneName": "crime_scene",
+      "lineNumber": 13,
+      "position": 0,
+      "indent": 0,
+      "content": "Areas searched: "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "crime_scene",
+      "lineNumber": 13,
+      "position": 16,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "areas_searched",
+      "rawValue": "areas_searched",
+      "position": 18,
+      "lineNumber": 13,
+      "sceneName": "crime_scene",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "crime_scene",
+      "lineNumber": 13,
+      "position": 32,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "crime_scene",
+      "lineNumber": 13,
+      "position": 33,
+      "indent": 0,
+      "content": " of 4.\n\n"
+    },
+    {
+      "type": "Choice",
+      "sceneName": "crime_scene",
+      "indent": 0,
+      "lineNumber": 15,
+      "position": 0
+    },
+    {
+      "type": "HideReuse",
+      "sceneName": "crime_scene",
+      "indent": 1,
+      "lineNumber": 16,
+      "position": 2
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "crime_scene",
+      "indent": 1,
+      "lineNumber": 16,
+      "rawText": "Search the desk",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "crime_scene",
+      "lineNumber": 16,
+      "position": null,
+      "indent": 1,
+      "content": "Search the desk"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "crime_scene",
+      "indent": 2,
+      "lineNumber": 17,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "areas_searched",
+      "rawValue": "areas_searched",
+      "position": 9,
+      "lineNumber": 17,
+      "sceneName": "crime_scene",
+      "indent": 2
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 24,
+      "lineNumber": 17,
+      "sceneName": "crime_scene",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 1,
+      "position": 26,
+      "lineNumber": 17,
+      "sceneName": "crime_scene",
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "crime_scene",
+      "lineNumber": 18,
+      "position": 4,
+      "indent": 2,
+      "content": "You rifle through the drawers.\n"
+    },
+    {
+      "type": "If",
+      "sceneName": "crime_scene",
+      "indent": 2,
+      "lineNumber": 19,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "areas_searched",
+      "rawValue": "areas_searched",
+      "position": 8,
+      "lineNumber": 19,
+      "sceneName": "crime_scene",
+      "indent": 2
+    },
+    {
+      "type": "EqualityOperator",
+      "rawValue": "=",
+      "position": 23,
+      "lineNumber": 19,
+      "sceneName": "crime_scene",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 1,
+      "position": 25,
+      "lineNumber": 19,
+      "sceneName": "crime_scene",
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "crime_scene",
+      "lineNumber": 20,
+      "position": 6,
+      "indent": 3,
+      "content": "You find insurance documents worth a fortune. Motive!\n"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "crime_scene",
+      "indent": 3,
+      "lineNumber": 21,
+      "position": 6
+    },
+    {
+      "type": "Identifier",
+      "value": "has_motive",
+      "rawValue": "has_motive",
+      "position": 11,
+      "lineNumber": 21,
+      "sceneName": "crime_scene",
+      "indent": 3
+    },
+    {
+      "type": "BooleanLiteral",
+      "value": true,
+      "position": 22,
+      "lineNumber": 21,
+      "sceneName": "crime_scene",
+      "indent": 3
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "crime_scene",
+      "indent": 3,
+      "lineNumber": 22,
+      "position": 6
+    },
+    {
+      "type": "Identifier",
+      "value": "clues_found",
+      "rawValue": "clues_found",
+      "position": 11,
+      "lineNumber": 22,
+      "sceneName": "crime_scene",
+      "indent": 3
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 23,
+      "lineNumber": 22,
+      "sceneName": "crime_scene",
+      "indent": 3
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 1,
+      "position": 25,
+      "lineNumber": 22,
+      "sceneName": "crime_scene",
+      "indent": 3
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "crime_scene",
+      "indent": 3,
+      "lineNumber": 23,
+      "position": 6
+    },
+    {
+      "type": "Identifier",
+      "value": "notes",
+      "rawValue": "notes",
+      "position": 11,
+      "lineNumber": 23,
+      "sceneName": "crime_scene",
+      "indent": 3
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "position": 17,
+      "lineNumber": 23,
+      "sceneName": "crime_scene",
+      "indent": 3
+    },
+    {
+      "type": "StringLiteral",
+      "value": " Motive found.",
+      "position": 19,
+      "lineNumber": 23,
+      "sceneName": "crime_scene",
+      "indent": 3
+    },
+    {
+      "type": "Else",
+      "sceneName": "crime_scene",
+      "indent": 2,
+      "lineNumber": 24,
+      "position": 4
+    },
+    {
+      "type": "Prose",
+      "sceneName": "crime_scene",
+      "lineNumber": 25,
+      "position": 6,
+      "indent": 3,
+      "content": "Nothing else of interest in the desk.\n"
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "crime_scene",
+      "indent": 2,
+      "lineNumber": 26,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "scene_hub",
+      "rawValue": "scene_hub",
+      "position": 10,
+      "lineNumber": 26,
+      "sceneName": "crime_scene",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "HideReuse",
+      "sceneName": "crime_scene",
+      "indent": 1,
+      "lineNumber": 27,
+      "position": 2
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "crime_scene",
+      "indent": 1,
+      "lineNumber": 27,
+      "rawText": "Examine the bookshelf",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "crime_scene",
+      "lineNumber": 27,
+      "position": null,
+      "indent": 1,
+      "content": "Examine the bookshelf"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "crime_scene",
+      "indent": 2,
+      "lineNumber": 28,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "areas_searched",
+      "rawValue": "areas_searched",
+      "position": 9,
+      "lineNumber": 28,
+      "sceneName": "crime_scene",
+      "indent": 2
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 24,
+      "lineNumber": 28,
+      "sceneName": "crime_scene",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 1,
+      "position": 26,
+      "lineNumber": 28,
+      "sceneName": "crime_scene",
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "crime_scene",
+      "lineNumber": 29,
+      "position": 4,
+      "indent": 2,
+      "content": "A book is out of place. Behind it, a hidden compartment.\n"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "crime_scene",
+      "indent": 2,
+      "lineNumber": 30,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "clues_found",
+      "rawValue": "clues_found",
+      "position": 9,
+      "lineNumber": 30,
+      "sceneName": "crime_scene",
+      "indent": 2
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 21,
+      "lineNumber": 30,
+      "sceneName": "crime_scene",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 1,
+      "position": 23,
+      "lineNumber": 30,
+      "sceneName": "crime_scene",
+      "indent": 2
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "crime_scene",
+      "indent": 2,
+      "lineNumber": 31,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "notes",
+      "rawValue": "notes",
+      "position": 9,
+      "lineNumber": 31,
+      "sceneName": "crime_scene",
+      "indent": 2
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "position": 15,
+      "lineNumber": 31,
+      "sceneName": "crime_scene",
+      "indent": 2
+    },
+    {
+      "type": "StringLiteral",
+      "value": " Hidden compartment found.",
+      "position": 17,
+      "lineNumber": 31,
+      "sceneName": "crime_scene",
+      "indent": 2
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "crime_scene",
+      "indent": 2,
+      "lineNumber": 32,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "scene_hub",
+      "rawValue": "scene_hub",
+      "position": 10,
+      "lineNumber": 32,
+      "sceneName": "crime_scene",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "HideReuse",
+      "sceneName": "crime_scene",
+      "indent": 1,
+      "lineNumber": 33,
+      "position": 2
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "crime_scene",
+      "indent": 1,
+      "lineNumber": 33,
+      "rawText": "Check near the window",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "crime_scene",
+      "lineNumber": 33,
+      "position": null,
+      "indent": 1,
+      "content": "Check near the window"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "crime_scene",
+      "indent": 2,
+      "lineNumber": 34,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "areas_searched",
+      "rawValue": "areas_searched",
+      "position": 9,
+      "lineNumber": 34,
+      "sceneName": "crime_scene",
+      "indent": 2
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 24,
+      "lineNumber": 34,
+      "sceneName": "crime_scene",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 1,
+      "position": 26,
+      "lineNumber": 34,
+      "sceneName": "crime_scene",
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "crime_scene",
+      "lineNumber": 35,
+      "position": 4,
+      "indent": 2,
+      "content": "Broken glass on the inside. Staged break-in?\n"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "crime_scene",
+      "indent": 2,
+      "lineNumber": 36,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "found_glass_here",
+      "rawValue": "found_glass_here",
+      "position": 9,
+      "lineNumber": 36,
+      "sceneName": "crime_scene",
+      "indent": 2
+    },
+    {
+      "type": "BooleanLiteral",
+      "value": true,
+      "position": 26,
+      "lineNumber": 36,
+      "sceneName": "crime_scene",
+      "indent": 2
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "crime_scene",
+      "indent": 2,
+      "lineNumber": 37,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "clues_found",
+      "rawValue": "clues_found",
+      "position": 9,
+      "lineNumber": 37,
+      "sceneName": "crime_scene",
+      "indent": 2
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 21,
+      "lineNumber": 37,
+      "sceneName": "crime_scene",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 1,
+      "position": 23,
+      "lineNumber": 37,
+      "sceneName": "crime_scene",
+      "indent": 2
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "crime_scene",
+      "indent": 2,
+      "lineNumber": 38,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "notes",
+      "rawValue": "notes",
+      "position": 9,
+      "lineNumber": 38,
+      "sceneName": "crime_scene",
+      "indent": 2
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "position": 15,
+      "lineNumber": 38,
+      "sceneName": "crime_scene",
+      "indent": 2
+    },
+    {
+      "type": "StringLiteral",
+      "value": " Staged break-in evidence.",
+      "position": 17,
+      "lineNumber": 38,
+      "sceneName": "crime_scene",
+      "indent": 2
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "crime_scene",
+      "indent": 2,
+      "lineNumber": 39,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "scene_hub",
+      "rawValue": "scene_hub",
+      "position": 10,
+      "lineNumber": 39,
+      "sceneName": "crime_scene",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "HideReuse",
+      "sceneName": "crime_scene",
+      "indent": 1,
+      "lineNumber": 40,
+      "position": 2
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "crime_scene",
+      "indent": 1,
+      "lineNumber": 40,
+      "rawText": "Look under the furniture",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "crime_scene",
+      "lineNumber": 40,
+      "position": null,
+      "indent": 1,
+      "content": "Look under the furniture"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "crime_scene",
+      "indent": 2,
+      "lineNumber": 41,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "areas_searched",
+      "rawValue": "areas_searched",
+      "position": 9,
+      "lineNumber": 41,
+      "sceneName": "crime_scene",
+      "indent": 2
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 24,
+      "lineNumber": 41,
+      "sceneName": "crime_scene",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 1,
+      "position": 26,
+      "lineNumber": 41,
+      "sceneName": "crime_scene",
+      "indent": 2
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "crime_scene",
+      "indent": 2,
+      "lineNumber": 42,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "found_weapon_here",
+      "rawValue": "found_weapon_here",
+      "position": 9,
+      "lineNumber": 42,
+      "sceneName": "crime_scene",
+      "indent": 2
+    },
+    {
+      "type": "BooleanLiteral",
+      "value": true,
+      "position": 27,
+      "lineNumber": 42,
+      "sceneName": "crime_scene",
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "crime_scene",
+      "lineNumber": 43,
+      "position": 4,
+      "indent": 2,
+      "content": "A letter opener with stains. The murder weapon!\n"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "crime_scene",
+      "indent": 2,
+      "lineNumber": 44,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "has_weapon",
+      "rawValue": "has_weapon",
+      "position": 9,
+      "lineNumber": 44,
+      "sceneName": "crime_scene",
+      "indent": 2
+    },
+    {
+      "type": "BooleanLiteral",
+      "value": true,
+      "position": 20,
+      "lineNumber": 44,
+      "sceneName": "crime_scene",
+      "indent": 2
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "crime_scene",
+      "indent": 2,
+      "lineNumber": 45,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "clues_found",
+      "rawValue": "clues_found",
+      "position": 9,
+      "lineNumber": 45,
+      "sceneName": "crime_scene",
+      "indent": 2
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 21,
+      "lineNumber": 45,
+      "sceneName": "crime_scene",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 1,
+      "position": 23,
+      "lineNumber": 45,
+      "sceneName": "crime_scene",
+      "indent": 2
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "crime_scene",
+      "indent": 2,
+      "lineNumber": 46,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "notes",
+      "rawValue": "notes",
+      "position": 9,
+      "lineNumber": 46,
+      "sceneName": "crime_scene",
+      "indent": 2
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "position": 15,
+      "lineNumber": 46,
+      "sceneName": "crime_scene",
+      "indent": 2
+    },
+    {
+      "type": "StringLiteral",
+      "value": " Weapon found.",
+      "position": 17,
+      "lineNumber": 46,
+      "sceneName": "crime_scene",
+      "indent": 2
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "crime_scene",
+      "indent": 2,
+      "lineNumber": 47,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "scene_hub",
+      "rawValue": "scene_hub",
+      "position": 10,
+      "lineNumber": 47,
+      "sceneName": "crime_scene",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "crime_scene",
+      "indent": 1,
+      "lineNumber": 48,
+      "rawText": "Return to case hub",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "crime_scene",
+      "lineNumber": 48,
+      "position": null,
+      "indent": 1,
+      "content": "Return to case hub"
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "crime_scene",
+      "indent": 2,
+      "lineNumber": 49,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "scene_exit",
+      "rawValue": "scene_exit",
+      "position": 10,
+      "lineNumber": 49,
+      "sceneName": "crime_scene",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "Label",
+      "sceneName": "crime_scene",
+      "indent": 0,
+      "lineNumber": 51,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "scene_exit",
+      "rawValue": "scene_exit",
+      "position": 6,
+      "lineNumber": 51,
+      "sceneName": "crime_scene",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "Prose",
+      "sceneName": "crime_scene",
+      "lineNumber": 52,
+      "position": 0,
+      "indent": 0,
+      "content": "You step back from the crime scene.\n"
+    },
+    {
+      "type": "GotoScene",
+      "sceneName": "crime_scene",
+      "indent": 0,
+      "lineNumber": 53,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "startup",
+      "rawValue": "startup",
+      "position": 12,
+      "lineNumber": 53,
+      "sceneName": "crime_scene",
+      "indent": 0,
+      "isSceneName": true,
+      "isLabelName": false
+    },
+    {
+      "type": "Identifier",
+      "value": "case_hub",
+      "rawValue": "case_hub",
+      "position": 20,
+      "lineNumber": 53,
+      "sceneName": "crime_scene",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "lineNumber": 55,
+      "indent": 0,
+      "position": 0,
+      "sceneName": "crime_scene",
+      "type": "SceneEnd"
+    }
+  ],
+  [
+    {
+      "sceneName": "interrogation",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "interrogation",
+      "indent": 0,
+      "lineNumber": 0,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "current_suspect",
+      "rawValue": "current_suspect",
+      "position": 6,
+      "lineNumber": 0,
+      "sceneName": "interrogation",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "",
+      "position": 22,
+      "lineNumber": 0,
+      "sceneName": "interrogation",
+      "indent": 0
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "interrogation",
+      "indent": 0,
+      "lineNumber": 1,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "question_count",
+      "rawValue": "question_count",
+      "position": 6,
+      "lineNumber": 1,
+      "sceneName": "interrogation",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 21,
+      "lineNumber": 1,
+      "sceneName": "interrogation",
+      "indent": 0
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "interrogation",
+      "indent": 0,
+      "lineNumber": 2,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "caught_contradiction",
+      "rawValue": "caught_contradiction",
+      "position": 6,
+      "lineNumber": 2,
+      "sceneName": "interrogation",
+      "indent": 0
+    },
+    {
+      "type": "BooleanLiteral",
+      "value": false,
+      "position": 27,
+      "lineNumber": 2,
+      "sceneName": "interrogation",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "interrogation",
+      "lineNumber": 4,
+      "position": 0,
+      "indent": 0,
+      "content": "The suspects wait in separate rooms at the station.\n\n"
+    },
+    {
+      "type": "Label",
+      "sceneName": "interrogation",
+      "indent": 0,
+      "lineNumber": 6,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "suspect_select",
+      "rawValue": "suspect_select",
+      "position": 6,
+      "lineNumber": 6,
+      "sceneName": "interrogation",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "Prose",
+      "sceneName": "interrogation",
+      "lineNumber": 8,
+      "position": 0,
+      "indent": 0,
+      "content": "Who do you want to interview?\n\n"
+    },
+    {
+      "type": "Choice",
+      "sceneName": "interrogation",
+      "indent": 0,
+      "lineNumber": 10,
+      "position": 0
+    },
+    {
+      "type": "HideReuse",
+      "sceneName": "interrogation",
+      "indent": 1,
+      "lineNumber": 11,
+      "position": 2
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "interrogation",
+      "indent": 1,
+      "lineNumber": 11,
+      "rawText": "The butler, Mr. Graves",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "interrogation",
+      "lineNumber": 11,
+      "position": null,
+      "indent": 1,
+      "content": "The butler, Mr. Graves"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "interrogation",
+      "indent": 2,
+      "lineNumber": 12,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "current_suspect",
+      "rawValue": "current_suspect",
+      "position": 9,
+      "lineNumber": 12,
+      "sceneName": "interrogation",
+      "indent": 2
+    },
+    {
+      "type": "StringLiteral",
+      "value": "Graves",
+      "position": 25,
+      "lineNumber": 12,
+      "sceneName": "interrogation",
+      "indent": 2
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "interrogation",
+      "indent": 2,
+      "lineNumber": 13,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "question_count",
+      "rawValue": "question_count",
+      "position": 9,
+      "lineNumber": 13,
+      "sceneName": "interrogation",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 24,
+      "lineNumber": 13,
+      "sceneName": "interrogation",
+      "indent": 2
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "interrogation",
+      "indent": 2,
+      "lineNumber": 14,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "caught_contradiction",
+      "rawValue": "caught_contradiction",
+      "position": 9,
+      "lineNumber": 14,
+      "sceneName": "interrogation",
+      "indent": 2
+    },
+    {
+      "type": "BooleanLiteral",
+      "value": false,
+      "position": 30,
+      "lineNumber": 14,
+      "sceneName": "interrogation",
+      "indent": 2
+    },
+    {
+      "type": "GoSub",
+      "sceneName": "interrogation",
+      "indent": 2,
+      "lineNumber": 15,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "interview_loop",
+      "rawValue": "interview_loop",
+      "position": 11,
+      "lineNumber": 15,
+      "sceneName": "interrogation",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "interrogation",
+      "indent": 2,
+      "lineNumber": 16,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "suspect_select",
+      "rawValue": "suspect_select",
+      "position": 10,
+      "lineNumber": 16,
+      "sceneName": "interrogation",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "HideReuse",
+      "sceneName": "interrogation",
+      "indent": 1,
+      "lineNumber": 17,
+      "position": 2
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "interrogation",
+      "indent": 1,
+      "lineNumber": 17,
+      "rawText": "The spouse, Lady Blackwood",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "interrogation",
+      "lineNumber": 17,
+      "position": null,
+      "indent": 1,
+      "content": "The spouse, Lady Blackwood"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "interrogation",
+      "indent": 2,
+      "lineNumber": 18,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "current_suspect",
+      "rawValue": "current_suspect",
+      "position": 9,
+      "lineNumber": 18,
+      "sceneName": "interrogation",
+      "indent": 2
+    },
+    {
+      "type": "StringLiteral",
+      "value": "Blackwood",
+      "position": 25,
+      "lineNumber": 18,
+      "sceneName": "interrogation",
+      "indent": 2
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "interrogation",
+      "indent": 2,
+      "lineNumber": 19,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "question_count",
+      "rawValue": "question_count",
+      "position": 9,
+      "lineNumber": 19,
+      "sceneName": "interrogation",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 24,
+      "lineNumber": 19,
+      "sceneName": "interrogation",
+      "indent": 2
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "interrogation",
+      "indent": 2,
+      "lineNumber": 20,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "caught_contradiction",
+      "rawValue": "caught_contradiction",
+      "position": 9,
+      "lineNumber": 20,
+      "sceneName": "interrogation",
+      "indent": 2
+    },
+    {
+      "type": "BooleanLiteral",
+      "value": false,
+      "position": 30,
+      "lineNumber": 20,
+      "sceneName": "interrogation",
+      "indent": 2
+    },
+    {
+      "type": "GoSub",
+      "sceneName": "interrogation",
+      "indent": 2,
+      "lineNumber": 21,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "interview_loop",
+      "rawValue": "interview_loop",
+      "position": 11,
+      "lineNumber": 21,
+      "sceneName": "interrogation",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "interrogation",
+      "indent": 2,
+      "lineNumber": 22,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "suspect_select",
+      "rawValue": "suspect_select",
+      "position": 10,
+      "lineNumber": 22,
+      "sceneName": "interrogation",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "HideReuse",
+      "sceneName": "interrogation",
+      "indent": 1,
+      "lineNumber": 23,
+      "position": 2
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "interrogation",
+      "indent": 1,
+      "lineNumber": 23,
+      "rawText": "The business partner, Mr. Cole",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "interrogation",
+      "lineNumber": 23,
+      "position": null,
+      "indent": 1,
+      "content": "The business partner, Mr. Cole"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "interrogation",
+      "indent": 2,
+      "lineNumber": 24,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "current_suspect",
+      "rawValue": "current_suspect",
+      "position": 9,
+      "lineNumber": 24,
+      "sceneName": "interrogation",
+      "indent": 2
+    },
+    {
+      "type": "StringLiteral",
+      "value": "Cole",
+      "position": 25,
+      "lineNumber": 24,
+      "sceneName": "interrogation",
+      "indent": 2
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "interrogation",
+      "indent": 2,
+      "lineNumber": 25,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "question_count",
+      "rawValue": "question_count",
+      "position": 9,
+      "lineNumber": 25,
+      "sceneName": "interrogation",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 24,
+      "lineNumber": 25,
+      "sceneName": "interrogation",
+      "indent": 2
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "interrogation",
+      "indent": 2,
+      "lineNumber": 26,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "caught_contradiction",
+      "rawValue": "caught_contradiction",
+      "position": 9,
+      "lineNumber": 26,
+      "sceneName": "interrogation",
+      "indent": 2
+    },
+    {
+      "type": "BooleanLiteral",
+      "value": false,
+      "position": 30,
+      "lineNumber": 26,
+      "sceneName": "interrogation",
+      "indent": 2
+    },
+    {
+      "type": "GoSub",
+      "sceneName": "interrogation",
+      "indent": 2,
+      "lineNumber": 27,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "interview_loop",
+      "rawValue": "interview_loop",
+      "position": 11,
+      "lineNumber": 27,
+      "sceneName": "interrogation",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "interrogation",
+      "indent": 2,
+      "lineNumber": 28,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "suspect_select",
+      "rawValue": "suspect_select",
+      "position": 10,
+      "lineNumber": 28,
+      "sceneName": "interrogation",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "interrogation",
+      "indent": 1,
+      "lineNumber": 29,
+      "rawText": "Return to case hub",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "interrogation",
+      "lineNumber": 29,
+      "position": null,
+      "indent": 1,
+      "content": "Return to case hub"
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "interrogation",
+      "indent": 2,
+      "lineNumber": 30,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "interrogation_exit",
+      "rawValue": "interrogation_exit",
+      "position": 10,
+      "lineNumber": 30,
+      "sceneName": "interrogation",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "Label",
+      "sceneName": "interrogation",
+      "indent": 0,
+      "lineNumber": 32,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "interview_loop",
+      "rawValue": "interview_loop",
+      "position": 6,
+      "lineNumber": 32,
+      "sceneName": "interrogation",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "interrogation",
+      "indent": 0,
+      "lineNumber": 33,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "question_count",
+      "rawValue": "question_count",
+      "position": 5,
+      "lineNumber": 33,
+      "sceneName": "interrogation",
+      "indent": 0
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 20,
+      "lineNumber": 33,
+      "sceneName": "interrogation",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 1,
+      "position": 22,
+      "lineNumber": 33,
+      "sceneName": "interrogation",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "interrogation",
+      "lineNumber": 35,
+      "position": 0,
+      "indent": 0,
+      "content": "You sit across from "
+    },
+    {
+      "type": "OpenMultiReplace",
+      "sceneName": "interrogation",
+      "lineNumber": 35,
+      "position": 20,
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 22,
+      "lineNumber": 35,
+      "sceneName": "interrogation",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "current_suspect",
+      "rawValue": "current_suspect",
+      "position": 23,
+      "lineNumber": 35,
+      "sceneName": "interrogation",
+      "indent": 0
+    },
+    {
+      "type": "EqualityOperator",
+      "rawValue": "=",
+      "position": 39,
+      "lineNumber": 35,
+      "sceneName": "interrogation",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "Graves",
+      "position": 41,
+      "lineNumber": 35,
+      "sceneName": "interrogation",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 49,
+      "lineNumber": 35,
+      "sceneName": "interrogation",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "interrogation",
+      "lineNumber": 35,
+      "position": 51,
+      "indent": 0,
+      "content": "Mr. Graves"
+    },
+    {
+      "type": "MultiReplaceElse",
+      "sceneName": "interrogation",
+      "lineNumber": 35,
+      "position": 61,
+      "indent": 0
+    },
+    {
+      "type": "OpenMultiReplace",
+      "sceneName": "interrogation",
+      "lineNumber": 35,
+      "position": 62,
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 64,
+      "lineNumber": 35,
+      "sceneName": "interrogation",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "current_suspect",
+      "rawValue": "current_suspect",
+      "position": 65,
+      "lineNumber": 35,
+      "sceneName": "interrogation",
+      "indent": 0
+    },
+    {
+      "type": "EqualityOperator",
+      "rawValue": "=",
+      "position": 81,
+      "lineNumber": 35,
+      "sceneName": "interrogation",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "Blackwood",
+      "position": 83,
+      "lineNumber": 35,
+      "sceneName": "interrogation",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 94,
+      "lineNumber": 35,
+      "sceneName": "interrogation",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "interrogation",
+      "lineNumber": 35,
+      "position": 96,
+      "indent": 0,
+      "content": "Lady Blackwood"
+    },
+    {
+      "type": "MultiReplaceElse",
+      "sceneName": "interrogation",
+      "lineNumber": 35,
+      "position": 110,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "interrogation",
+      "lineNumber": 35,
+      "position": 111,
+      "indent": 0,
+      "content": "Mr. Cole"
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "interrogation",
+      "lineNumber": 35,
+      "position": 119,
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "interrogation",
+      "lineNumber": 35,
+      "position": 120,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "interrogation",
+      "lineNumber": 35,
+      "position": 121,
+      "indent": 0,
+      "content": ".\n\n"
+    },
+    {
+      "type": "If",
+      "sceneName": "interrogation",
+      "indent": 0,
+      "lineNumber": 37,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "question_count",
+      "rawValue": "question_count",
+      "position": 4,
+      "lineNumber": 37,
+      "sceneName": "interrogation",
+      "indent": 0
+    },
+    {
+      "type": "GreaterThanOperator",
+      "rawValue": ">",
+      "position": 19,
+      "lineNumber": 37,
+      "sceneName": "interrogation",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 4,
+      "position": 21,
+      "lineNumber": 37,
+      "sceneName": "interrogation",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "interrogation",
+      "lineNumber": 38,
+      "position": 2,
+      "indent": 1,
+      "content": "The suspect's lawyer intervenes. \"My client has answered enough questions.\"\n"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "interrogation",
+      "indent": 1,
+      "lineNumber": 39,
+      "position": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "suspects_interviewed",
+      "rawValue": "suspects_interviewed",
+      "position": 7,
+      "lineNumber": 39,
+      "sceneName": "interrogation",
+      "indent": 1
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 28,
+      "lineNumber": 39,
+      "sceneName": "interrogation",
+      "indent": 1
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 1,
+      "position": 30,
+      "lineNumber": 39,
+      "sceneName": "interrogation",
+      "indent": 1
+    },
+    {
+      "type": "Return",
+      "sceneName": "interrogation",
+      "indent": 1,
+      "lineNumber": 40,
+      "position": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "interrogation",
+      "lineNumber": 42,
+      "position": 0,
+      "indent": 0,
+      "content": "Question "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "interrogation",
+      "lineNumber": 42,
+      "position": 9,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "question_count",
+      "rawValue": "question_count",
+      "position": 11,
+      "lineNumber": 42,
+      "sceneName": "interrogation",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "interrogation",
+      "lineNumber": 42,
+      "position": 25,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "interrogation",
+      "lineNumber": 42,
+      "position": 26,
+      "indent": 0,
+      "content": " of 4.\n\n"
+    },
+    {
+      "type": "Choice",
+      "sceneName": "interrogation",
+      "indent": 0,
+      "lineNumber": 44,
+      "position": 0
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "interrogation",
+      "indent": 1,
+      "lineNumber": 45,
+      "rawText": "\"Where were you that night?\"",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "interrogation",
+      "lineNumber": 45,
+      "position": null,
+      "indent": 1,
+      "content": "\"Where were you that night?\""
+    },
+    {
+      "type": "If",
+      "sceneName": "interrogation",
+      "indent": 2,
+      "lineNumber": 46,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "current_suspect",
+      "rawValue": "current_suspect",
+      "position": 8,
+      "lineNumber": 46,
+      "sceneName": "interrogation",
+      "indent": 2
+    },
+    {
+      "type": "EqualityOperator",
+      "rawValue": "=",
+      "position": 24,
+      "lineNumber": 46,
+      "sceneName": "interrogation",
+      "indent": 2
+    },
+    {
+      "type": "StringLiteral",
+      "value": "Blackwood",
+      "position": 26,
+      "lineNumber": 46,
+      "sceneName": "interrogation",
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "interrogation",
+      "lineNumber": 47,
+      "position": 6,
+      "indent": 3,
+      "content": "\"I was at the opera. I have my ticket stub.\"\n"
+    },
+    {
+      "type": "If",
+      "sceneName": "interrogation",
+      "indent": 3,
+      "lineNumber": 48,
+      "position": 6
+    },
+    {
+      "type": "Identifier",
+      "value": "has_weapon",
+      "rawValue": "has_weapon",
+      "position": 10,
+      "lineNumber": 48,
+      "sceneName": "interrogation",
+      "indent": 3
+    },
+    {
+      "type": "Prose",
+      "sceneName": "interrogation",
+      "lineNumber": 49,
+      "position": 8,
+      "indent": 4,
+      "content": "But the timeline doesn't add up with the forensic evidence.\n"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "interrogation",
+      "indent": 4,
+      "lineNumber": 50,
+      "position": 8
+    },
+    {
+      "type": "Identifier",
+      "value": "caught_contradiction",
+      "rawValue": "caught_contradiction",
+      "position": 13,
+      "lineNumber": 50,
+      "sceneName": "interrogation",
+      "indent": 4
+    },
+    {
+      "type": "BooleanLiteral",
+      "value": true,
+      "position": 34,
+      "lineNumber": 50,
+      "sceneName": "interrogation",
+      "indent": 4
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "interrogation",
+      "indent": 4,
+      "lineNumber": 51,
+      "position": 8
+    },
+    {
+      "type": "Identifier",
+      "value": "has_alibi_broken",
+      "rawValue": "has_alibi_broken",
+      "position": 13,
+      "lineNumber": 51,
+      "sceneName": "interrogation",
+      "indent": 4
+    },
+    {
+      "type": "BooleanLiteral",
+      "value": true,
+      "position": 30,
+      "lineNumber": 51,
+      "sceneName": "interrogation",
+      "indent": 4
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "interrogation",
+      "indent": 4,
+      "lineNumber": 52,
+      "position": 8
+    },
+    {
+      "type": "Identifier",
+      "value": "clues_found",
+      "rawValue": "clues_found",
+      "position": 13,
+      "lineNumber": 52,
+      "sceneName": "interrogation",
+      "indent": 4
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 25,
+      "lineNumber": 52,
+      "sceneName": "interrogation",
+      "indent": 4
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 1,
+      "position": 27,
+      "lineNumber": 52,
+      "sceneName": "interrogation",
+      "indent": 4
+    },
+    {
+      "type": "ElseIf",
+      "sceneName": "interrogation",
+      "indent": 2,
+      "lineNumber": 53,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "current_suspect",
+      "rawValue": "current_suspect",
+      "position": 12,
+      "lineNumber": 53,
+      "sceneName": "interrogation",
+      "indent": 2
+    },
+    {
+      "type": "EqualityOperator",
+      "rawValue": "=",
+      "position": 28,
+      "lineNumber": 53,
+      "sceneName": "interrogation",
+      "indent": 2
+    },
+    {
+      "type": "StringLiteral",
+      "value": "Graves",
+      "position": 30,
+      "lineNumber": 53,
+      "sceneName": "interrogation",
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "interrogation",
+      "lineNumber": 54,
+      "position": 6,
+      "indent": 3,
+      "content": "\"Polishing the silver in the pantry, as I do every evening.\"\n"
+    },
+    {
+      "type": "Else",
+      "sceneName": "interrogation",
+      "indent": 2,
+      "lineNumber": 55,
+      "position": 4
+    },
+    {
+      "type": "Prose",
+      "sceneName": "interrogation",
+      "lineNumber": 56,
+      "position": 6,
+      "indent": 3,
+      "content": "\"Working late at the office. My secretary can confirm.\"\n"
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "interrogation",
+      "indent": 2,
+      "lineNumber": 57,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "interview_loop",
+      "rawValue": "interview_loop",
+      "position": 10,
+      "lineNumber": 57,
+      "sceneName": "interrogation",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "interrogation",
+      "indent": 1,
+      "lineNumber": 58,
+      "rawText": "\"Did you have any grievances with the victim?\"",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "interrogation",
+      "lineNumber": 58,
+      "position": null,
+      "indent": 1,
+      "content": "\"Did you have any grievances with the victim?\""
+    },
+    {
+      "type": "If",
+      "sceneName": "interrogation",
+      "indent": 2,
+      "lineNumber": 59,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "current_suspect",
+      "rawValue": "current_suspect",
+      "position": 8,
+      "lineNumber": 59,
+      "sceneName": "interrogation",
+      "indent": 2
+    },
+    {
+      "type": "EqualityOperator",
+      "rawValue": "=",
+      "position": 24,
+      "lineNumber": 59,
+      "sceneName": "interrogation",
+      "indent": 2
+    },
+    {
+      "type": "StringLiteral",
+      "value": "Cole",
+      "position": 26,
+      "lineNumber": 59,
+      "sceneName": "interrogation",
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "interrogation",
+      "lineNumber": 60,
+      "position": 6,
+      "indent": 3,
+      "content": "\"We had our disagreements, but nothing beyond business.\"\nHis eye twitches. He's hiding something.\n"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "interrogation",
+      "indent": 3,
+      "lineNumber": 62,
+      "position": 6
+    },
+    {
+      "type": "Identifier",
+      "value": "clues_found",
+      "rawValue": "clues_found",
+      "position": 11,
+      "lineNumber": 62,
+      "sceneName": "interrogation",
+      "indent": 3
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 23,
+      "lineNumber": 62,
+      "sceneName": "interrogation",
+      "indent": 3
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 1,
+      "position": 25,
+      "lineNumber": 62,
+      "sceneName": "interrogation",
+      "indent": 3
+    },
+    {
+      "type": "ElseIf",
+      "sceneName": "interrogation",
+      "indent": 2,
+      "lineNumber": 63,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "current_suspect",
+      "rawValue": "current_suspect",
+      "position": 12,
+      "lineNumber": 63,
+      "sceneName": "interrogation",
+      "indent": 2
+    },
+    {
+      "type": "EqualityOperator",
+      "rawValue": "=",
+      "position": 28,
+      "lineNumber": 63,
+      "sceneName": "interrogation",
+      "indent": 2
+    },
+    {
+      "type": "StringLiteral",
+      "value": "Blackwood",
+      "position": 30,
+      "lineNumber": 63,
+      "sceneName": "interrogation",
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "interrogation",
+      "lineNumber": 64,
+      "position": 6,
+      "indent": 3,
+      "content": "\"We were happily married.\" She dabs her eyes with a handkerchief.\n"
+    },
+    {
+      "type": "Else",
+      "sceneName": "interrogation",
+      "indent": 2,
+      "lineNumber": 65,
+      "position": 4
+    },
+    {
+      "type": "Prose",
+      "sceneName": "interrogation",
+      "lineNumber": 66,
+      "position": 6,
+      "indent": 3,
+      "content": "\"Lord Blackwood was a fair employer. I had no complaints.\"\n"
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "interrogation",
+      "indent": 2,
+      "lineNumber": 67,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "interview_loop",
+      "rawValue": "interview_loop",
+      "position": 10,
+      "lineNumber": 67,
+      "sceneName": "interrogation",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "interrogation",
+      "indent": 1,
+      "lineNumber": 68,
+      "rawText": "\"Do you know anyone who would want the victim dead?\"",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "interrogation",
+      "lineNumber": 68,
+      "position": null,
+      "indent": 1,
+      "content": "\"Do you know anyone who would want the victim dead?\""
+    },
+    {
+      "type": "If",
+      "sceneName": "interrogation",
+      "indent": 2,
+      "lineNumber": 69,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "current_suspect",
+      "rawValue": "current_suspect",
+      "position": 8,
+      "lineNumber": 69,
+      "sceneName": "interrogation",
+      "indent": 2
+    },
+    {
+      "type": "EqualityOperator",
+      "rawValue": "=",
+      "position": 24,
+      "lineNumber": 69,
+      "sceneName": "interrogation",
+      "indent": 2
+    },
+    {
+      "type": "StringLiteral",
+      "value": "Graves",
+      "position": 26,
+      "lineNumber": 69,
+      "sceneName": "interrogation",
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "interrogation",
+      "lineNumber": 70,
+      "position": 6,
+      "indent": 3,
+      "content": "\"I... perhaps shouldn't say. But Lady Blackwood and Lord Blackwood argued frequently about money.\"\n"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "interrogation",
+      "indent": 3,
+      "lineNumber": 71,
+      "position": 6
+    },
+    {
+      "type": "Identifier",
+      "value": "clues_found",
+      "rawValue": "clues_found",
+      "position": 11,
+      "lineNumber": 71,
+      "sceneName": "interrogation",
+      "indent": 3
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 23,
+      "lineNumber": 71,
+      "sceneName": "interrogation",
+      "indent": 3
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 1,
+      "position": 25,
+      "lineNumber": 71,
+      "sceneName": "interrogation",
+      "indent": 3
+    },
+    {
+      "type": "Else",
+      "sceneName": "interrogation",
+      "indent": 2,
+      "lineNumber": 72,
+      "position": 4
+    },
+    {
+      "type": "Prose",
+      "sceneName": "interrogation",
+      "lineNumber": 73,
+      "position": 6,
+      "indent": 3,
+      "content": "\"I can't imagine anyone wanting to harm Lord Blackwood.\"\n"
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "interrogation",
+      "indent": 2,
+      "lineNumber": 74,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "interview_loop",
+      "rawValue": "interview_loop",
+      "position": 10,
+      "lineNumber": 74,
+      "sceneName": "interrogation",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "interrogation",
+      "indent": 1,
+      "lineNumber": 75,
+      "rawText": "End the interview early",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "interrogation",
+      "lineNumber": 75,
+      "position": null,
+      "indent": 1,
+      "content": "End the interview early"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "interrogation",
+      "indent": 2,
+      "lineNumber": 76,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "suspects_interviewed",
+      "rawValue": "suspects_interviewed",
+      "position": 9,
+      "lineNumber": 76,
+      "sceneName": "interrogation",
+      "indent": 2
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 30,
+      "lineNumber": 76,
+      "sceneName": "interrogation",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 1,
+      "position": 32,
+      "lineNumber": 76,
+      "sceneName": "interrogation",
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "interrogation",
+      "lineNumber": 77,
+      "position": 4,
+      "indent": 2,
+      "content": "\"That will be all for now.\"\n"
+    },
+    {
+      "type": "Return",
+      "sceneName": "interrogation",
+      "indent": 2,
+      "lineNumber": 78,
+      "position": 4
+    },
+    {
+      "type": "Label",
+      "sceneName": "interrogation",
+      "indent": 0,
+      "lineNumber": 80,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "interrogation_exit",
+      "rawValue": "interrogation_exit",
+      "position": 6,
+      "lineNumber": 80,
+      "sceneName": "interrogation",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "Prose",
+      "sceneName": "interrogation",
+      "lineNumber": 81,
+      "position": 0,
+      "indent": 0,
+      "content": "You leave the interview rooms.\n"
+    },
+    {
+      "type": "GotoScene",
+      "sceneName": "interrogation",
+      "indent": 0,
+      "lineNumber": 82,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "startup",
+      "rawValue": "startup",
+      "position": 12,
+      "lineNumber": 82,
+      "sceneName": "interrogation",
+      "indent": 0,
+      "isSceneName": true,
+      "isLabelName": false
+    },
+    {
+      "type": "Identifier",
+      "value": "case_hub",
+      "rawValue": "case_hub",
+      "position": 20,
+      "lineNumber": 82,
+      "sceneName": "interrogation",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "lineNumber": 84,
+      "indent": 0,
+      "position": 0,
+      "sceneName": "interrogation",
+      "type": "SceneEnd"
+    }
+  ],
+  [
+    {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 0,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "clues_found",
+      "rawValue": "clues_found",
+      "position": 8,
+      "lineNumber": 0,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 20,
+      "lineNumber": 0,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 1,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "suspects_interviewed",
+      "rawValue": "suspects_interviewed",
+      "position": 8,
+      "lineNumber": 1,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 29,
+      "lineNumber": 1,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 2,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "confidence",
+      "rawValue": "confidence",
+      "position": 8,
+      "lineNumber": 2,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 19,
+      "lineNumber": 2,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 3,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "has_weapon",
+      "rawValue": "has_weapon",
+      "position": 8,
+      "lineNumber": 3,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "BooleanLiteral",
+      "value": false,
+      "position": 19,
+      "lineNumber": 3,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 4,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "has_motive",
+      "rawValue": "has_motive",
+      "position": 8,
+      "lineNumber": 4,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "BooleanLiteral",
+      "value": false,
+      "position": 19,
+      "lineNumber": 4,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 5,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "has_alibi_broken",
+      "rawValue": "has_alibi_broken",
+      "position": 8,
+      "lineNumber": 5,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "BooleanLiteral",
+      "value": false,
+      "position": 25,
+      "lineNumber": 5,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 6,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "detective_rank",
+      "rawValue": "detective_rank",
+      "position": 8,
+      "lineNumber": 6,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "Junior",
+      "position": 23,
+      "lineNumber": 6,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 7,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "case_closed",
+      "rawValue": "case_closed",
+      "position": 8,
+      "lineNumber": 7,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "BooleanLiteral",
+      "value": false,
+      "position": 20,
+      "lineNumber": 7,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 8,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "notes",
+      "rawValue": "notes",
+      "position": 8,
+      "lineNumber": 8,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "",
+      "position": 14,
+      "lineNumber": 8,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 10,
+      "position": 0,
+      "indent": 0,
+      "content": "You are Detective "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "startup",
+      "lineNumber": 10,
+      "position": 18,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "detective_rank",
+      "rawValue": "detective_rank",
+      "position": 20,
+      "lineNumber": 10,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "startup",
+      "lineNumber": 10,
+      "position": 34,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 10,
+      "position": 35,
+      "indent": 0,
+      "content": ", assigned to the Blackwood Manor case.\n\nA body was found in the study. Three suspects. No witnesses.\n\n"
+    },
+    {
+      "type": "Label",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 14,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "case_hub",
+      "rawValue": "case_hub",
+      "position": 6,
+      "lineNumber": 14,
+      "sceneName": "startup",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 16,
+      "position": 0,
+      "indent": 0,
+      "content": "Case progress: "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "startup",
+      "lineNumber": 16,
+      "position": 15,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "clues_found",
+      "rawValue": "clues_found",
+      "position": 17,
+      "lineNumber": 16,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "startup",
+      "lineNumber": 16,
+      "position": 28,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 16,
+      "position": 29,
+      "indent": 0,
+      "content": " clues found. "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "startup",
+      "lineNumber": 16,
+      "position": 43,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "suspects_interviewed",
+      "rawValue": "suspects_interviewed",
+      "position": 45,
+      "lineNumber": 16,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "startup",
+      "lineNumber": 16,
+      "position": 65,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 16,
+      "position": 66,
+      "indent": 0,
+      "content": " suspects interviewed.\n\n"
+    },
+    {
+      "type": "If",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 18,
+      "position": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 4,
+      "lineNumber": 18,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "clues_found",
+      "rawValue": "clues_found",
+      "position": 5,
+      "lineNumber": 18,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "GreaterThanEqualsOperator",
+      "rawValue": ">=",
+      "position": 17,
+      "lineNumber": 18,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 3,
+      "position": 20,
+      "lineNumber": 18,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 21,
+      "lineNumber": 18,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "LogicalAnd",
+      "rawValue": "and",
+      "position": 23,
+      "lineNumber": 18,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 27,
+      "lineNumber": 18,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "suspects_interviewed",
+      "rawValue": "suspects_interviewed",
+      "position": 28,
+      "lineNumber": 18,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "GreaterThanEqualsOperator",
+      "rawValue": ">=",
+      "position": 49,
+      "lineNumber": 18,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 2,
+      "position": 52,
+      "lineNumber": 18,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 53,
+      "lineNumber": 18,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 19,
+      "position": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "confidence",
+      "rawValue": "confidence",
+      "position": 7,
+      "lineNumber": 19,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 18,
+      "lineNumber": 19,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 20,
+      "position": 20,
+      "lineNumber": 19,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 20,
+      "position": 2,
+      "indent": 1,
+      "content": "You feel ready to make an accusation.\n\n"
+    },
+    {
+      "type": "Choice",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 22,
+      "position": 0
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 23,
+      "rawText": "Investigate the crime scene",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 23,
+      "position": null,
+      "indent": 1,
+      "content": "Investigate the crime scene"
+    },
+    {
+      "type": "GotoScene",
+      "sceneName": "startup",
+      "indent": 2,
+      "lineNumber": 24,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "crime_scene",
+      "rawValue": "crime_scene",
+      "position": 16,
+      "lineNumber": 24,
+      "sceneName": "startup",
+      "indent": 2,
+      "isSceneName": true,
+      "isLabelName": false
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 25,
+      "rawText": "Interview suspects",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 25,
+      "position": null,
+      "indent": 1,
+      "content": "Interview suspects"
+    },
+    {
+      "type": "GotoScene",
+      "sceneName": "startup",
+      "indent": 2,
+      "lineNumber": 26,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "interrogation",
+      "rawValue": "interrogation",
+      "position": 16,
+      "lineNumber": 26,
+      "sceneName": "startup",
+      "indent": 2,
+      "isSceneName": true,
+      "isLabelName": false
+    },
+    {
+      "type": "SelectableIf",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 27,
+      "position": 2
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 17,
+      "lineNumber": 27,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "Identifier",
+      "value": "confidence",
+      "rawValue": "confidence",
+      "position": 18,
+      "lineNumber": 27,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "GreaterThanEqualsOperator",
+      "rawValue": ">=",
+      "position": 29,
+      "lineNumber": 27,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 50,
+      "position": 32,
+      "lineNumber": 27,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 34,
+      "lineNumber": 27,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 27,
+      "position": 16,
+      "rawText": "Make an accusation",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 27,
+      "position": 17,
+      "indent": 1,
+      "content": "Make an accusation"
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "startup",
+      "indent": 2,
+      "lineNumber": 28,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "accusation",
+      "rawValue": "accusation",
+      "position": 10,
+      "lineNumber": 28,
+      "sceneName": "startup",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 29,
+      "rawText": "Review your notes",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 29,
+      "position": null,
+      "indent": 1,
+      "content": "Review your notes"
+    },
+    {
+      "type": "GoSub",
+      "sceneName": "startup",
+      "indent": 2,
+      "lineNumber": 30,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "review_notes",
+      "rawValue": "review_notes",
+      "position": 11,
+      "lineNumber": 30,
+      "sceneName": "startup",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "startup",
+      "indent": 2,
+      "lineNumber": 31,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "case_hub",
+      "rawValue": "case_hub",
+      "position": 10,
+      "lineNumber": 31,
+      "sceneName": "startup",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "SelectableIf",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 32,
+      "position": 2
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 17,
+      "lineNumber": 32,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "Identifier",
+      "value": "clues_found",
+      "rawValue": "clues_found",
+      "position": 18,
+      "lineNumber": 32,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "GreaterThanEqualsOperator",
+      "rawValue": ">=",
+      "position": 30,
+      "lineNumber": 32,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 5,
+      "position": 33,
+      "lineNumber": 32,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 34,
+      "lineNumber": 32,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 32,
+      "position": 16,
+      "rawText": "Request forensic analysis",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 32,
+      "position": 17,
+      "indent": 1,
+      "content": "Request forensic analysis"
+    },
+    {
+      "type": "GoSub",
+      "sceneName": "startup",
+      "indent": 2,
+      "lineNumber": 33,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "forensics",
+      "rawValue": "forensics",
+      "position": 11,
+      "lineNumber": 33,
+      "sceneName": "startup",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "startup",
+      "indent": 2,
+      "lineNumber": 34,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "case_hub",
+      "rawValue": "case_hub",
+      "position": 10,
+      "lineNumber": 34,
+      "sceneName": "startup",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "Label",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 36,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "accusation",
+      "rawValue": "accusation",
+      "position": 6,
+      "lineNumber": 36,
+      "sceneName": "startup",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 37,
+      "position": 0,
+      "indent": 0,
+      "content": "You gather the suspects in the drawing room.\n\n\"I have solved this case.\"\n\n"
+    },
+    {
+      "type": "Choice",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 41,
+      "position": 0
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 42,
+      "rawText": "Accuse the butler",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 42,
+      "position": null,
+      "indent": 1,
+      "content": "Accuse the butler"
+    },
+    {
+      "type": "If",
+      "sceneName": "startup",
+      "indent": 2,
+      "lineNumber": 43,
+      "position": 4
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 8,
+      "lineNumber": 43,
+      "sceneName": "startup",
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "has_weapon",
+      "rawValue": "has_weapon",
+      "position": 9,
+      "lineNumber": 43,
+      "sceneName": "startup",
+      "indent": 2
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 19,
+      "lineNumber": 43,
+      "sceneName": "startup",
+      "indent": 2
+    },
+    {
+      "type": "LogicalAnd",
+      "rawValue": "and",
+      "position": 21,
+      "lineNumber": 43,
+      "sceneName": "startup",
+      "indent": 2
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 25,
+      "lineNumber": 43,
+      "sceneName": "startup",
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "has_motive",
+      "rawValue": "has_motive",
+      "position": 26,
+      "lineNumber": 43,
+      "sceneName": "startup",
+      "indent": 2
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 36,
+      "lineNumber": 43,
+      "sceneName": "startup",
+      "indent": 2
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "startup",
+      "indent": 3,
+      "lineNumber": 44,
+      "position": 6
+    },
+    {
+      "type": "Identifier",
+      "value": "correct_accusation",
+      "rawValue": "correct_accusation",
+      "position": 12,
+      "lineNumber": 44,
+      "sceneName": "startup",
+      "indent": 3,
+      "isLabelName": true
+    },
+    {
+      "type": "Else",
+      "sceneName": "startup",
+      "indent": 2,
+      "lineNumber": 45,
+      "position": 4
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "startup",
+      "indent": 3,
+      "lineNumber": 46,
+      "position": 6
+    },
+    {
+      "type": "Identifier",
+      "value": "wrong_accusation",
+      "rawValue": "wrong_accusation",
+      "position": 12,
+      "lineNumber": 46,
+      "sceneName": "startup",
+      "indent": 3,
+      "isLabelName": true
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 47,
+      "rawText": "Accuse the spouse",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 47,
+      "position": null,
+      "indent": 1,
+      "content": "Accuse the spouse"
+    },
+    {
+      "type": "If",
+      "sceneName": "startup",
+      "indent": 2,
+      "lineNumber": 48,
+      "position": 4
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 8,
+      "lineNumber": 48,
+      "sceneName": "startup",
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "has_alibi_broken",
+      "rawValue": "has_alibi_broken",
+      "position": 9,
+      "lineNumber": 48,
+      "sceneName": "startup",
+      "indent": 2
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 25,
+      "lineNumber": 48,
+      "sceneName": "startup",
+      "indent": 2
+    },
+    {
+      "type": "LogicalAnd",
+      "rawValue": "and",
+      "position": 27,
+      "lineNumber": 48,
+      "sceneName": "startup",
+      "indent": 2
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 31,
+      "lineNumber": 48,
+      "sceneName": "startup",
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "has_motive",
+      "rawValue": "has_motive",
+      "position": 32,
+      "lineNumber": 48,
+      "sceneName": "startup",
+      "indent": 2
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 42,
+      "lineNumber": 48,
+      "sceneName": "startup",
+      "indent": 2
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "startup",
+      "indent": 3,
+      "lineNumber": 49,
+      "position": 6
+    },
+    {
+      "type": "Identifier",
+      "value": "correct_accusation",
+      "rawValue": "correct_accusation",
+      "position": 12,
+      "lineNumber": 49,
+      "sceneName": "startup",
+      "indent": 3,
+      "isLabelName": true
+    },
+    {
+      "type": "Else",
+      "sceneName": "startup",
+      "indent": 2,
+      "lineNumber": 50,
+      "position": 4
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "startup",
+      "indent": 3,
+      "lineNumber": 51,
+      "position": 6
+    },
+    {
+      "type": "Identifier",
+      "value": "wrong_accusation",
+      "rawValue": "wrong_accusation",
+      "position": 12,
+      "lineNumber": 51,
+      "sceneName": "startup",
+      "indent": 3,
+      "isLabelName": true
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 52,
+      "rawText": "Accuse the business partner",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 52,
+      "position": null,
+      "indent": 1,
+      "content": "Accuse the business partner"
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "startup",
+      "indent": 2,
+      "lineNumber": 53,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "wrong_accusation",
+      "rawValue": "wrong_accusation",
+      "position": 10,
+      "lineNumber": 53,
+      "sceneName": "startup",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "Label",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 55,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "correct_accusation",
+      "rawValue": "correct_accusation",
+      "position": 6,
+      "lineNumber": 55,
+      "sceneName": "startup",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 56,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "case_closed",
+      "rawValue": "case_closed",
+      "position": 5,
+      "lineNumber": 56,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "BooleanLiteral",
+      "value": true,
+      "position": 17,
+      "lineNumber": 56,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 57,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "detective_rank",
+      "rawValue": "detective_rank",
+      "position": 5,
+      "lineNumber": 57,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "Senior",
+      "position": 20,
+      "lineNumber": 57,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 59,
+      "position": 0,
+      "indent": 0,
+      "content": "\"The evidence speaks clearly,\" you declare, laying out each clue.\n\nThe guilty party breaks down. Case closed.\n\nCongratulations, Detective. You've been promoted to "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "startup",
+      "lineNumber": 63,
+      "position": 52,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "detective_rank",
+      "rawValue": "detective_rank",
+      "position": 54,
+      "lineNumber": 63,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "startup",
+      "lineNumber": 63,
+      "position": 68,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 63,
+      "position": 69,
+      "indent": 0,
+      "content": ".\n"
+    },
+    {
+      "type": "Finish",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 64,
+      "position": 0
+    },
+    {
+      "type": "Label",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 66,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "wrong_accusation",
+      "rawValue": "wrong_accusation",
+      "position": 6,
+      "lineNumber": 66,
+      "sceneName": "startup",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 68,
+      "position": 0,
+      "indent": 0,
+      "content": "The accused produces an airtight defense. Your evidence crumbles.\n\n"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 70,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "confidence",
+      "rawValue": "confidence",
+      "position": 5,
+      "lineNumber": 70,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "SubtractionOperator",
+      "rawValue": "-",
+      "position": 16,
+      "lineNumber": 70,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 30,
+      "position": 18,
+      "lineNumber": 70,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Choice",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 72,
+      "position": 0
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 73,
+      "rawText": "Return to investigating",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 73,
+      "position": null,
+      "indent": 1,
+      "content": "Return to investigating"
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 74,
+      "position": 4,
+      "indent": 2,
+      "content": "Embarrassed, you resolve to find more evidence.\n"
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "startup",
+      "indent": 2,
+      "lineNumber": 75,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "case_hub",
+      "rawValue": "case_hub",
+      "position": 10,
+      "lineNumber": 75,
+      "sceneName": "startup",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 76,
+      "rawText": "Give up the case",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 76,
+      "position": null,
+      "indent": 1,
+      "content": "Give up the case"
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 77,
+      "position": 4,
+      "indent": 2,
+      "content": "The case goes cold. A failure on your record.\n"
+    },
+    {
+      "type": "Ending",
+      "sceneName": "startup",
+      "indent": 2,
+      "lineNumber": 78,
+      "position": 4
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 78,
+      "position": 11,
+      "indent": 2,
+      "content": "\"Case Unsolved\""
+    },
+    {
+      "type": "Label",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 80,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "review_notes",
+      "rawValue": "review_notes",
+      "position": 6,
+      "lineNumber": 80,
+      "sceneName": "startup",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 81,
+      "position": 0,
+      "indent": 0,
+      "content": "Your case file reads:\n\n"
+    },
+    {
+      "type": "If",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 83,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "has_weapon",
+      "rawValue": "has_weapon",
+      "position": 4,
+      "lineNumber": 83,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 84,
+      "position": 2,
+      "indent": 1,
+      "content": "- Murder weapon identified: letter opener from the study.\n"
+    },
+    {
+      "type": "If",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 85,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "has_motive",
+      "rawValue": "has_motive",
+      "position": 4,
+      "lineNumber": 85,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 86,
+      "position": 2,
+      "indent": 1,
+      "content": "- Financial motive confirmed via insurance documents.\n"
+    },
+    {
+      "type": "If",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 87,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "has_alibi_broken",
+      "rawValue": "has_alibi_broken",
+      "position": 4,
+      "lineNumber": 87,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 88,
+      "position": 2,
+      "indent": 1,
+      "content": "- Spouse's alibi has inconsistencies.\n"
+    },
+    {
+      "type": "If",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 89,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "clues_found",
+      "rawValue": "clues_found",
+      "position": 4,
+      "lineNumber": 89,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "EqualityOperator",
+      "rawValue": "=",
+      "position": 16,
+      "lineNumber": 89,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 18,
+      "lineNumber": 89,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 90,
+      "position": 2,
+      "indent": 1,
+      "content": "- No evidence collected yet.\n\n"
+    },
+    {
+      "type": "Return",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 92,
+      "position": 0
+    },
+    {
+      "type": "Label",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 94,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "forensics",
+      "rawValue": "forensics",
+      "position": 6,
+      "lineNumber": 94,
+      "sceneName": "startup",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 95,
+      "position": 0,
+      "indent": 0,
+      "content": "The lab results come back.\n\n"
+    },
+    {
+      "type": "If",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 97,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "has_weapon",
+      "rawValue": "has_weapon",
+      "position": 4,
+      "lineNumber": 97,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 98,
+      "position": 2,
+      "indent": 1,
+      "content": "Fingerprints on the weapon match one of the suspects.\n"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 99,
+      "position": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "confidence",
+      "rawValue": "confidence",
+      "position": 7,
+      "lineNumber": 99,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 18,
+      "lineNumber": 99,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 15,
+      "position": 20,
+      "lineNumber": 99,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "Else",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 100,
+      "position": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 101,
+      "position": 2,
+      "indent": 1,
+      "content": "No weapon submitted for analysis.\n\n"
+    },
+    {
+      "type": "Return",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 103,
+      "position": 0
+    },
+    {
+      "lineNumber": 105,
+      "indent": 0,
+      "position": 0,
+      "sceneName": "startup",
+      "type": "SceneEnd"
+    }
+  ]
+]

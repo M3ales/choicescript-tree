@@ -1,0 +1,188 @@
+[
+  {
+    "sceneName": "market",
+    "blocks": {
+      "market:b_0": {
+        "exitType": "ImplicitEnd"
+      }
+    },
+    "blockIndex": {
+      "market:b_0": {
+        "scene": "market",
+        "statementIds": [],
+        "entryType": "SceneEntry",
+        "exitType": "ImplicitEnd"
+      }
+    },
+    "edges": [
+      {
+        "kind": "SceneExit",
+        "sourceBlockId": "market:b_0",
+        "targetBlockId": null,
+        "metadata": {}
+      }
+    ],
+    "entryBlockId": "market:b_0",
+    "labelToBlockId": {},
+    "unresolvedEdges": []
+  },
+  {
+    "sceneName": "startup",
+    "blocks": {
+      "startup:b_0": {
+        "exitType": "GotoScene"
+      },
+      "startup:b_1": {
+        "exitType": "FallThrough"
+      }
+    },
+    "blockIndex": {
+      "startup:b_0": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:0",
+          "startup:1",
+          "startup:2"
+        ],
+        "entryType": "SceneEntry",
+        "exitType": "GotoScene"
+      },
+      "startup:b_1": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      }
+    },
+    "edges": [
+      {
+        "kind": "GotoScene",
+        "sourceBlockId": "startup:b_0",
+        "targetBlockId": null,
+        "metadata": {
+          "targetScene": "tavern"
+        }
+      }
+    ],
+    "entryBlockId": "startup:b_0",
+    "labelToBlockId": {},
+    "unresolvedEdges": []
+  },
+  {
+    "sceneName": "tavern",
+    "blocks": {
+      "tavern:b_0": {
+        "exitType": "Choice"
+      },
+      "tavern:b_1": {
+        "exitType": "ImplicitEnd"
+      },
+      "tavern:b_2": {
+        "exitType": "GotoScene"
+      },
+      "tavern:b_3": {
+        "exitType": "FallThrough"
+      },
+      "tavern:b_4": {
+        "exitType": "Finish"
+      },
+      "tavern:b_5": {
+        "exitType": "FallThrough"
+      }
+    },
+    "blockIndex": {
+      "tavern:b_0": {
+        "scene": "tavern",
+        "statementIds": [
+          "tavern:0",
+          "tavern:7"
+        ],
+        "entryType": "SceneEntry",
+        "exitType": "Choice"
+      },
+      "tavern:b_1": {
+        "scene": "tavern",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "ImplicitEnd"
+      },
+      "tavern:b_2": {
+        "scene": "tavern",
+        "statementIds": [
+          "tavern:1",
+          "tavern:2"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "GotoScene"
+      },
+      "tavern:b_3": {
+        "scene": "tavern",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "tavern:b_4": {
+        "scene": "tavern",
+        "statementIds": [
+          "tavern:4",
+          "tavern:5"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "Finish"
+      },
+      "tavern:b_5": {
+        "scene": "tavern",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      }
+    },
+    "edges": [
+      {
+        "kind": "GotoScene",
+        "sourceBlockId": "tavern:b_2",
+        "targetBlockId": null,
+        "metadata": {
+          "targetScene": "market"
+        }
+      },
+      {
+        "kind": "ChoiceOption",
+        "sourceBlockId": "tavern:b_0",
+        "targetBlockId": "tavern:b_2",
+        "metadata": {
+          "optionStatementId": "tavern:3"
+        }
+      },
+      {
+        "kind": "SceneExit",
+        "sourceBlockId": "tavern:b_4",
+        "targetBlockId": null,
+        "metadata": {}
+      },
+      {
+        "kind": "ChoiceOption",
+        "sourceBlockId": "tavern:b_0",
+        "targetBlockId": "tavern:b_4",
+        "metadata": {
+          "optionStatementId": "tavern:6"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "tavern:b_0",
+        "targetBlockId": "tavern:b_1",
+        "metadata": {}
+      },
+      {
+        "kind": "SceneExit",
+        "sourceBlockId": "tavern:b_1",
+        "targetBlockId": null,
+        "metadata": {}
+      }
+    ],
+    "entryBlockId": "tavern:b_0",
+    "labelToBlockId": {},
+    "unresolvedEdges": []
+  }
+]

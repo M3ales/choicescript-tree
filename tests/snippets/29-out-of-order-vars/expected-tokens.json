@@ -1,0 +1,344 @@
+[
+  [
+    {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    {
+      "type": "SceneList",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 0,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "a",
+      "rawValue": "a",
+      "sceneName": "startup",
+      "lineNumber": 2,
+      "position": 4,
+      "indent": 2,
+      "isSceneName": true
+    },
+    {
+      "type": "Identifier",
+      "value": "b",
+      "rawValue": "b",
+      "sceneName": "startup",
+      "lineNumber": 3,
+      "position": 4,
+      "indent": 2,
+      "isSceneName": true
+    },
+    {
+      "type": "GameIdentifier",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 4,
+      "position": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 4,
+      "position": 5,
+      "indent": 0,
+      "content": "30dd879c-ee2f-11db-8314-0800200c9a66"
+    },
+    {
+      "type": "Author",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 5,
+      "position": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 5,
+      "position": 7,
+      "indent": 0,
+      "content": "m3ales"
+    },
+    {
+      "type": "Achievement",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 6,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "an_achivement",
+      "rawValue": "an_achivement",
+      "lineNumber": 6,
+      "position": 13,
+      "indent": 0,
+      "sceneName": "startup"
+    },
+    {
+      "type": "Identifier",
+      "value": "hidden",
+      "rawValue": "hidden",
+      "lineNumber": 6,
+      "position": 27,
+      "indent": 0,
+      "sceneName": "startup"
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 2,
+      "lineNumber": 6,
+      "position": 34,
+      "indent": 0,
+      "sceneName": "startup"
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 6,
+      "position": 36,
+      "indent": 0,
+      "content": "one"
+    },
+    {
+      "type": "Identifier",
+      "value": "hidden",
+      "rawValue": "hidden",
+      "lineNumber": 7,
+      "position": 4,
+      "indent": 2,
+      "sceneName": "startup"
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 8,
+      "position": 4,
+      "indent": 2,
+      "content": "note that it works"
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 8,
+      "position": 22,
+      "indent": 0,
+      "content": "ment hidden 2 one\n"
+    },
+    {
+      "type": "Comment",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 9,
+      "position": 0,
+      "value": "all header statements above are valid before *create"
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 10,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "score",
+      "rawValue": "score",
+      "position": 8,
+      "lineNumber": 10,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 14,
+      "lineNumber": 10,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 11,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "name",
+      "rawValue": "name",
+      "position": 8,
+      "lineNumber": 11,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "Nobody",
+      "position": 13,
+      "lineNumber": 11,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 12,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "bottom_label",
+      "rawValue": "bottom_label",
+      "position": 6,
+      "lineNumber": 12,
+      "sceneName": "startup",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "Label",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 14,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "top_label",
+      "rawValue": "top_label",
+      "position": 6,
+      "lineNumber": 14,
+      "sceneName": "startup",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 15,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "score",
+      "rawValue": "score",
+      "position": 5,
+      "lineNumber": 15,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 100,
+      "position": 11,
+      "lineNumber": 15,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 16,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "name",
+      "rawValue": "name",
+      "position": 5,
+      "lineNumber": 16,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "Winner",
+      "position": 10,
+      "lineNumber": 16,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Return",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 17,
+      "position": 0
+    },
+    {
+      "type": "Label",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 19,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "bottom_label",
+      "rawValue": "bottom_label",
+      "position": 6,
+      "lineNumber": 19,
+      "sceneName": "startup",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 20,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "local_bonus",
+      "rawValue": "local_bonus",
+      "position": 6,
+      "lineNumber": 20,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 10,
+      "position": 18,
+      "lineNumber": 20,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "GoSub",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 21,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "top_label",
+      "rawValue": "top_label",
+      "position": 7,
+      "lineNumber": 21,
+      "sceneName": "startup",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "lineNumber": 23,
+      "indent": 0,
+      "position": 0,
+      "sceneName": "startup",
+      "type": "SceneEnd"
+    }
+  ]
+]

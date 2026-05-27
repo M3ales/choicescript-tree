@@ -1,0 +1,19 @@
+*create weapon "none"
+
+What do you do?
+*choice
+  #Go to the armory.
+    *set weapon "sword"
+    Which weapon?
+    *choice
+      #Take the sword.
+        *set weapon "sword"
+        A fine blade.
+        *finish
+      #Take the axe.
+        *set weapon "axe"
+        Heavy but powerful.
+        *finish
+  #Go to the market.
+    You browse the stalls.
+    *finish

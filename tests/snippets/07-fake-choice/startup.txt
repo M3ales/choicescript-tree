@@ -1,0 +1,10 @@
+The door opens before you.
+*fake_choice
+  #Enter boldly.
+    You stride in.
+  #Sneak inside.
+    You creep through the door.
+  #Knock first.
+    You knock politely.
+
+Either way, you're inside now.

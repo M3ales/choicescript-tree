@@ -1,0 +1,43 @@
+[
+  {
+    "labels": {},
+    "globalVariables": {
+      "weapon": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "weapon",
+          "rawValue": "weapon",
+          "position": 8,
+          "lineNumber": 0,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "StringLiteral",
+            "value": "none",
+            "position": 15,
+            "lineNumber": 0,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 0,
+          "position": 0
+        }
+      }
+    },
+    "tempVariables": {},
+    "checkpoints": {},
+    "gosubs": [],
+    "gotos": [],
+    "implicitControlFlow": []
+  }
+]

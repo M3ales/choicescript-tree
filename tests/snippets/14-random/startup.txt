@@ -1,0 +1,7 @@
+*create dice_roll 0
+*create damage 0
+
+*rand dice_roll 1 6
+*rand damage 5 20
+
+You rolled a ${dice_roll} and dealt ${damage} damage.

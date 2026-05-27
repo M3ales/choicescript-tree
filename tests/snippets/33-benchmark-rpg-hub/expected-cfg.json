@@ -1,0 +1,2623 @@
+[
+  {
+    "sceneName": "arena",
+    "blocks": {
+      "arena:b_0": {
+        "exitType": "FallThrough"
+      },
+      "arena:b_1": {
+        "exitType": "Branch"
+      },
+      "arena:b_2": {
+        "exitType": "Branch"
+      },
+      "arena:b_3": {
+        "exitType": "Goto"
+      },
+      "arena:b_4": {
+        "exitType": "FallThrough"
+      },
+      "arena:b_5": {
+        "exitType": "Branch"
+      },
+      "arena:b_6": {
+        "exitType": "Goto"
+      },
+      "arena:b_7": {
+        "exitType": "FallThrough"
+      },
+      "arena:b_8": {
+        "exitType": "Choice"
+      },
+      "arena:b_9": {
+        "exitType": "Goto"
+      },
+      "arena:b_10": {
+        "exitType": "FallThrough"
+      },
+      "arena:b_11": {
+        "exitType": "FallThrough"
+      },
+      "arena:b_12": {
+        "exitType": "Goto"
+      },
+      "arena:b_13": {
+        "exitType": "FallThrough"
+      },
+      "arena:b_14": {
+        "exitType": "Goto"
+      },
+      "arena:b_15": {
+        "exitType": "FallThrough"
+      },
+      "arena:b_16": {
+        "exitType": "Goto"
+      },
+      "arena:b_17": {
+        "exitType": "FallThrough"
+      },
+      "arena:b_18": {
+        "exitType": "Choice"
+      },
+      "arena:b_19": {
+        "exitType": "FallThrough"
+      },
+      "arena:b_20": {
+        "exitType": "Goto"
+      },
+      "arena:b_21": {
+        "exitType": "FallThrough"
+      },
+      "arena:b_22": {
+        "exitType": "Goto"
+      },
+      "arena:b_23": {
+        "exitType": "FallThrough"
+      },
+      "arena:b_24": {
+        "exitType": "Goto"
+      },
+      "arena:b_25": {
+        "exitType": "FallThrough"
+      },
+      "arena:b_26": {
+        "exitType": "Goto"
+      },
+      "arena:b_27": {
+        "exitType": "FallThrough"
+      },
+      "arena:b_28": {
+        "exitType": "GotoScene"
+      },
+      "arena:b_29": {
+        "exitType": "FallThrough"
+      }
+    },
+    "blockIndex": {
+      "arena:b_0": {
+        "scene": "arena",
+        "statementIds": [
+          "arena:0",
+          "arena:1",
+          "arena:2",
+          "arena:3",
+          "arena:4"
+        ],
+        "entryType": "SceneEntry",
+        "exitType": "FallThrough"
+      },
+      "arena:b_1": {
+        "scene": "arena",
+        "statementIds": [
+          "arena:5",
+          "arena:6",
+          "arena:7",
+          "arena:9"
+        ],
+        "entryType": "Label",
+        "exitType": "Branch",
+        "label": "combat_loop"
+      },
+      "arena:b_2": {
+        "scene": "arena",
+        "statementIds": [
+          "arena:11"
+        ],
+        "entryType": "Continuation",
+        "exitType": "Branch"
+      },
+      "arena:b_3": {
+        "scene": "arena",
+        "statementIds": [
+          "arena:8"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "Goto"
+      },
+      "arena:b_4": {
+        "scene": "arena",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "arena:b_5": {
+        "scene": "arena",
+        "statementIds": [
+          "arena:13"
+        ],
+        "entryType": "Continuation",
+        "exitType": "Branch"
+      },
+      "arena:b_6": {
+        "scene": "arena",
+        "statementIds": [
+          "arena:10"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "Goto"
+      },
+      "arena:b_7": {
+        "scene": "arena",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "arena:b_8": {
+        "scene": "arena",
+        "statementIds": [
+          "arena:45"
+        ],
+        "entryType": "Continuation",
+        "exitType": "Choice"
+      },
+      "arena:b_9": {
+        "scene": "arena",
+        "statementIds": [
+          "arena:12"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "Goto"
+      },
+      "arena:b_10": {
+        "scene": "arena",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "arena:b_11": {
+        "scene": "arena",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "arena:b_12": {
+        "scene": "arena",
+        "statementIds": [
+          "arena:14",
+          "arena:15",
+          "arena:16",
+          "arena:17",
+          "arena:18",
+          "arena:19",
+          "arena:20",
+          "arena:21",
+          "arena:22"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "Goto"
+      },
+      "arena:b_13": {
+        "scene": "arena",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "arena:b_14": {
+        "scene": "arena",
+        "statementIds": [
+          "arena:24",
+          "arena:25",
+          "arena:26",
+          "arena:27",
+          "arena:28",
+          "arena:29",
+          "arena:30",
+          "arena:31",
+          "arena:32"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "Goto"
+      },
+      "arena:b_15": {
+        "scene": "arena",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "arena:b_16": {
+        "scene": "arena",
+        "statementIds": [
+          "arena:35",
+          "arena:36",
+          "arena:37",
+          "arena:38",
+          "arena:39",
+          "arena:40",
+          "arena:41",
+          "arena:42",
+          "arena:43"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "Goto"
+      },
+      "arena:b_17": {
+        "scene": "arena",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "arena:b_18": {
+        "scene": "arena",
+        "statementIds": [
+          "arena:46",
+          "arena:47",
+          "arena:48",
+          "arena:49",
+          "arena:50",
+          "arena:60"
+        ],
+        "entryType": "Label",
+        "exitType": "Choice",
+        "label": "victory"
+      },
+      "arena:b_19": {
+        "scene": "arena",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "arena:b_20": {
+        "scene": "arena",
+        "statementIds": [
+          "arena:51",
+          "arena:52",
+          "arena:53"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "Goto"
+      },
+      "arena:b_21": {
+        "scene": "arena",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "arena:b_22": {
+        "scene": "arena",
+        "statementIds": [
+          "arena:55",
+          "arena:56",
+          "arena:57",
+          "arena:58"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "Goto"
+      },
+      "arena:b_23": {
+        "scene": "arena",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "arena:b_24": {
+        "scene": "arena",
+        "statementIds": [
+          "arena:61",
+          "arena:62",
+          "arena:63",
+          "arena:64"
+        ],
+        "entryType": "Label",
+        "exitType": "Goto",
+        "label": "defeat"
+      },
+      "arena:b_25": {
+        "scene": "arena",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "arena:b_26": {
+        "scene": "arena",
+        "statementIds": [
+          "arena:65",
+          "arena:66",
+          "arena:67",
+          "arena:68",
+          "arena:69"
+        ],
+        "entryType": "Label",
+        "exitType": "Goto",
+        "label": "draw"
+      },
+      "arena:b_27": {
+        "scene": "arena",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "arena:b_28": {
+        "scene": "arena",
+        "statementIds": [
+          "arena:70",
+          "arena:71",
+          "arena:72"
+        ],
+        "entryType": "Label",
+        "exitType": "GotoScene",
+        "label": "arena_exit"
+      },
+      "arena:b_29": {
+        "scene": "arena",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      }
+    },
+    "edges": [
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "arena:b_0",
+        "targetBlockId": "arena:b_1",
+        "metadata": {}
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "arena:b_3",
+        "targetBlockId": "arena:b_18",
+        "metadata": {
+          "label": "victory"
+        }
+      },
+      {
+        "kind": "IfBranch",
+        "sourceBlockId": "arena:b_1",
+        "targetBlockId": "arena:b_3",
+        "metadata": {
+          "conditionStatementId": "arena:9"
+        }
+      },
+      {
+        "kind": "IfFallThrough",
+        "sourceBlockId": "arena:b_1",
+        "targetBlockId": "arena:b_2",
+        "metadata": {}
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "arena:b_6",
+        "targetBlockId": "arena:b_24",
+        "metadata": {
+          "label": "defeat"
+        }
+      },
+      {
+        "kind": "IfBranch",
+        "sourceBlockId": "arena:b_2",
+        "targetBlockId": "arena:b_6",
+        "metadata": {
+          "conditionStatementId": "arena:11"
+        }
+      },
+      {
+        "kind": "IfFallThrough",
+        "sourceBlockId": "arena:b_2",
+        "targetBlockId": "arena:b_5",
+        "metadata": {}
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "arena:b_9",
+        "targetBlockId": "arena:b_26",
+        "metadata": {
+          "label": "draw"
+        }
+      },
+      {
+        "kind": "IfBranch",
+        "sourceBlockId": "arena:b_5",
+        "targetBlockId": "arena:b_9",
+        "metadata": {
+          "conditionStatementId": "arena:13"
+        }
+      },
+      {
+        "kind": "IfFallThrough",
+        "sourceBlockId": "arena:b_5",
+        "targetBlockId": "arena:b_8",
+        "metadata": {}
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "arena:b_12",
+        "targetBlockId": "arena:b_1",
+        "metadata": {
+          "label": "combat_loop"
+        }
+      },
+      {
+        "kind": "ChoiceOption",
+        "sourceBlockId": "arena:b_8",
+        "targetBlockId": "arena:b_12",
+        "metadata": {
+          "optionStatementId": "arena:23"
+        }
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "arena:b_14",
+        "targetBlockId": "arena:b_1",
+        "metadata": {
+          "label": "combat_loop"
+        }
+      },
+      {
+        "kind": "ChoiceOption",
+        "sourceBlockId": "arena:b_8",
+        "targetBlockId": "arena:b_14",
+        "metadata": {
+          "optionStatementId": "arena:33"
+        }
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "arena:b_16",
+        "targetBlockId": "arena:b_1",
+        "metadata": {
+          "label": "combat_loop"
+        }
+      },
+      {
+        "kind": "ChoiceOptionCheck",
+        "sourceBlockId": "arena:b_8",
+        "targetBlockId": "arena:b_16",
+        "metadata": {
+          "optionStatementId": "arena:44",
+          "conditionStatementId": "arena:44",
+          "choiceConditionKind": "selectable_if"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "arena:b_8",
+        "targetBlockId": "arena:b_11",
+        "metadata": {}
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "arena:b_11",
+        "targetBlockId": "arena:b_18",
+        "metadata": {}
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "arena:b_20",
+        "targetBlockId": "arena:b_28",
+        "metadata": {
+          "label": "arena_exit"
+        }
+      },
+      {
+        "kind": "ChoiceOption",
+        "sourceBlockId": "arena:b_18",
+        "targetBlockId": "arena:b_20",
+        "metadata": {
+          "optionStatementId": "arena:54"
+        }
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "arena:b_22",
+        "targetBlockId": "arena:b_28",
+        "metadata": {
+          "label": "arena_exit"
+        }
+      },
+      {
+        "kind": "ChoiceOption",
+        "sourceBlockId": "arena:b_18",
+        "targetBlockId": "arena:b_22",
+        "metadata": {
+          "optionStatementId": "arena:59"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "arena:b_18",
+        "targetBlockId": "arena:b_19",
+        "metadata": {}
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "arena:b_19",
+        "targetBlockId": "arena:b_24",
+        "metadata": {}
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "arena:b_24",
+        "targetBlockId": "arena:b_28",
+        "metadata": {
+          "label": "arena_exit"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "arena:b_25",
+        "targetBlockId": "arena:b_26",
+        "metadata": {}
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "arena:b_26",
+        "targetBlockId": "arena:b_28",
+        "metadata": {
+          "label": "arena_exit"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "arena:b_27",
+        "targetBlockId": "arena:b_28",
+        "metadata": {}
+      },
+      {
+        "kind": "GotoScene",
+        "sourceBlockId": "arena:b_28",
+        "targetBlockId": null,
+        "metadata": {
+          "targetScene": "startup",
+          "targetSceneLabel": "village_hub"
+        }
+      }
+    ],
+    "entryBlockId": "arena:b_0",
+    "labelToBlockId": {
+      "combat_loop": "arena:b_1",
+      "victory": "arena:b_18",
+      "defeat": "arena:b_24",
+      "draw": "arena:b_26",
+      "arena_exit": "arena:b_28"
+    },
+    "unresolvedEdges": []
+  },
+  {
+    "sceneName": "shop",
+    "blocks": {
+      "shop:b_0": {
+        "exitType": "FallThrough"
+      },
+      "shop:b_1": {
+        "exitType": "Branch"
+      },
+      "shop:b_2": {
+        "exitType": "Choice"
+      },
+      "shop:b_3": {
+        "exitType": "FallThrough"
+      },
+      "shop:b_4": {
+        "exitType": "FallThrough"
+      },
+      "shop:b_5": {
+        "exitType": "GoSub"
+      },
+      "shop:b_6": {
+        "exitType": "Branch"
+      },
+      "shop:b_7": {
+        "exitType": "Goto"
+      },
+      "shop:b_8": {
+        "exitType": "Goto"
+      },
+      "shop:b_9": {
+        "exitType": "FallThrough"
+      },
+      "shop:b_10": {
+        "exitType": "FallThrough"
+      },
+      "shop:b_11": {
+        "exitType": "GoSub"
+      },
+      "shop:b_12": {
+        "exitType": "Branch"
+      },
+      "shop:b_13": {
+        "exitType": "Goto"
+      },
+      "shop:b_14": {
+        "exitType": "Goto"
+      },
+      "shop:b_15": {
+        "exitType": "FallThrough"
+      },
+      "shop:b_16": {
+        "exitType": "FallThrough"
+      },
+      "shop:b_17": {
+        "exitType": "GoSub"
+      },
+      "shop:b_18": {
+        "exitType": "Branch"
+      },
+      "shop:b_19": {
+        "exitType": "Goto"
+      },
+      "shop:b_20": {
+        "exitType": "Goto"
+      },
+      "shop:b_21": {
+        "exitType": "FallThrough"
+      },
+      "shop:b_22": {
+        "exitType": "FallThrough"
+      },
+      "shop:b_23": {
+        "exitType": "GoSub"
+      },
+      "shop:b_24": {
+        "exitType": "Branch"
+      },
+      "shop:b_25": {
+        "exitType": "Goto"
+      },
+      "shop:b_26": {
+        "exitType": "Goto"
+      },
+      "shop:b_27": {
+        "exitType": "FallThrough"
+      },
+      "shop:b_28": {
+        "exitType": "FallThrough"
+      },
+      "shop:b_29": {
+        "exitType": "Goto"
+      },
+      "shop:b_30": {
+        "exitType": "FallThrough"
+      },
+      "shop:b_31": {
+        "exitType": "GotoScene"
+      },
+      "shop:b_32": {
+        "exitType": "FallThrough"
+      },
+      "shop:b_33": {
+        "exitType": "Choice"
+      },
+      "shop:b_34": {
+        "exitType": "FallThrough"
+      },
+      "shop:b_35": {
+        "exitType": "Branch"
+      },
+      "shop:b_36": {
+        "exitType": "Branch"
+      },
+      "shop:b_37": {
+        "exitType": "FallThrough"
+      },
+      "shop:b_38": {
+        "exitType": "Branch"
+      },
+      "shop:b_39": {
+        "exitType": "FallThrough"
+      },
+      "shop:b_40": {
+        "exitType": "Goto"
+      },
+      "shop:b_41": {
+        "exitType": "FallThrough"
+      },
+      "shop:b_42": {
+        "exitType": "FallThrough"
+      },
+      "shop:b_43": {
+        "exitType": "Goto"
+      },
+      "shop:b_44": {
+        "exitType": "FallThrough"
+      },
+      "shop:b_45": {
+        "exitType": "Choice"
+      },
+      "shop:b_46": {
+        "exitType": "ImplicitEnd"
+      },
+      "shop:b_47": {
+        "exitType": "Return"
+      },
+      "shop:b_48": {
+        "exitType": "FallThrough"
+      },
+      "shop:b_49": {
+        "exitType": "Return"
+      },
+      "shop:b_50": {
+        "exitType": "FallThrough"
+      }
+    },
+    "blockIndex": {
+      "shop:b_0": {
+        "scene": "shop",
+        "statementIds": [
+          "shop:0",
+          "shop:1",
+          "shop:2",
+          "shop:3"
+        ],
+        "entryType": "SceneEntry",
+        "exitType": "FallThrough"
+      },
+      "shop:b_1": {
+        "scene": "shop",
+        "statementIds": [
+          "shop:4",
+          "shop:6"
+        ],
+        "entryType": "Label",
+        "exitType": "Branch",
+        "label": "shop_hub"
+      },
+      "shop:b_2": {
+        "scene": "shop",
+        "statementIds": [
+          "shop:7",
+          "shop:42"
+        ],
+        "entryType": "Continuation",
+        "exitType": "Choice"
+      },
+      "shop:b_3": {
+        "scene": "shop",
+        "statementIds": [
+          "shop:5"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "FallThrough"
+      },
+      "shop:b_4": {
+        "scene": "shop",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "shop:b_5": {
+        "scene": "shop",
+        "statementIds": [
+          "shop:9",
+          "shop:10",
+          "shop:11"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "GoSub"
+      },
+      "shop:b_6": {
+        "scene": "shop",
+        "statementIds": [
+          "shop:13"
+        ],
+        "entryType": "GoSubContinuation",
+        "exitType": "Branch"
+      },
+      "shop:b_7": {
+        "scene": "shop",
+        "statementIds": [
+          "shop:14"
+        ],
+        "entryType": "Continuation",
+        "exitType": "Goto"
+      },
+      "shop:b_8": {
+        "scene": "shop",
+        "statementIds": [
+          "shop:12"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "Goto"
+      },
+      "shop:b_9": {
+        "scene": "shop",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "shop:b_10": {
+        "scene": "shop",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "shop:b_11": {
+        "scene": "shop",
+        "statementIds": [
+          "shop:17",
+          "shop:18",
+          "shop:19"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "GoSub"
+      },
+      "shop:b_12": {
+        "scene": "shop",
+        "statementIds": [
+          "shop:21"
+        ],
+        "entryType": "GoSubContinuation",
+        "exitType": "Branch"
+      },
+      "shop:b_13": {
+        "scene": "shop",
+        "statementIds": [
+          "shop:22"
+        ],
+        "entryType": "Continuation",
+        "exitType": "Goto"
+      },
+      "shop:b_14": {
+        "scene": "shop",
+        "statementIds": [
+          "shop:20"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "Goto"
+      },
+      "shop:b_15": {
+        "scene": "shop",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "shop:b_16": {
+        "scene": "shop",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "shop:b_17": {
+        "scene": "shop",
+        "statementIds": [
+          "shop:25",
+          "shop:26",
+          "shop:27"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "GoSub"
+      },
+      "shop:b_18": {
+        "scene": "shop",
+        "statementIds": [
+          "shop:29"
+        ],
+        "entryType": "GoSubContinuation",
+        "exitType": "Branch"
+      },
+      "shop:b_19": {
+        "scene": "shop",
+        "statementIds": [
+          "shop:30"
+        ],
+        "entryType": "Continuation",
+        "exitType": "Goto"
+      },
+      "shop:b_20": {
+        "scene": "shop",
+        "statementIds": [
+          "shop:28"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "Goto"
+      },
+      "shop:b_21": {
+        "scene": "shop",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "shop:b_22": {
+        "scene": "shop",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "shop:b_23": {
+        "scene": "shop",
+        "statementIds": [
+          "shop:33",
+          "shop:34",
+          "shop:35"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "GoSub"
+      },
+      "shop:b_24": {
+        "scene": "shop",
+        "statementIds": [
+          "shop:37"
+        ],
+        "entryType": "GoSubContinuation",
+        "exitType": "Branch"
+      },
+      "shop:b_25": {
+        "scene": "shop",
+        "statementIds": [
+          "shop:38"
+        ],
+        "entryType": "Continuation",
+        "exitType": "Goto"
+      },
+      "shop:b_26": {
+        "scene": "shop",
+        "statementIds": [
+          "shop:36"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "Goto"
+      },
+      "shop:b_27": {
+        "scene": "shop",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "shop:b_28": {
+        "scene": "shop",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "shop:b_29": {
+        "scene": "shop",
+        "statementIds": [
+          "shop:40"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "Goto"
+      },
+      "shop:b_30": {
+        "scene": "shop",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "shop:b_31": {
+        "scene": "shop",
+        "statementIds": [
+          "shop:43",
+          "shop:44",
+          "shop:45"
+        ],
+        "entryType": "Label",
+        "exitType": "GotoScene",
+        "label": "shop_exit"
+      },
+      "shop:b_32": {
+        "scene": "shop",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "shop:b_33": {
+        "scene": "shop",
+        "statementIds": [
+          "shop:46",
+          "shop:47",
+          "shop:62"
+        ],
+        "entryType": "Label",
+        "exitType": "Choice",
+        "label": "confirm_purchase"
+      },
+      "shop:b_34": {
+        "scene": "shop",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "shop:b_35": {
+        "scene": "shop",
+        "statementIds": [
+          "shop:48",
+          "shop:49",
+          "shop:51"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "Branch"
+      },
+      "shop:b_36": {
+        "scene": "shop",
+        "statementIds": [
+          "shop:53"
+        ],
+        "entryType": "Continuation",
+        "exitType": "Branch"
+      },
+      "shop:b_37": {
+        "scene": "shop",
+        "statementIds": [
+          "shop:50"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "FallThrough"
+      },
+      "shop:b_38": {
+        "scene": "shop",
+        "statementIds": [
+          "shop:55"
+        ],
+        "entryType": "Continuation",
+        "exitType": "Branch"
+      },
+      "shop:b_39": {
+        "scene": "shop",
+        "statementIds": [
+          "shop:52"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "FallThrough"
+      },
+      "shop:b_40": {
+        "scene": "shop",
+        "statementIds": [
+          "shop:56",
+          "shop:57"
+        ],
+        "entryType": "Continuation",
+        "exitType": "Goto"
+      },
+      "shop:b_41": {
+        "scene": "shop",
+        "statementIds": [
+          "shop:54"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "FallThrough"
+      },
+      "shop:b_42": {
+        "scene": "shop",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "shop:b_43": {
+        "scene": "shop",
+        "statementIds": [
+          "shop:59",
+          "shop:60"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "Goto"
+      },
+      "shop:b_44": {
+        "scene": "shop",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "shop:b_45": {
+        "scene": "shop",
+        "statementIds": [
+          "shop:63",
+          "shop:69"
+        ],
+        "entryType": "Label",
+        "exitType": "Choice",
+        "label": "confirm_continue"
+      },
+      "shop:b_46": {
+        "scene": "shop",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "ImplicitEnd"
+      },
+      "shop:b_47": {
+        "scene": "shop",
+        "statementIds": [
+          "shop:64"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "Return"
+      },
+      "shop:b_48": {
+        "scene": "shop",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "shop:b_49": {
+        "scene": "shop",
+        "statementIds": [
+          "shop:66",
+          "shop:67"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "Return"
+      },
+      "shop:b_50": {
+        "scene": "shop",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      }
+    },
+    "edges": [
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "shop:b_0",
+        "targetBlockId": "shop:b_1",
+        "metadata": {}
+      },
+      {
+        "kind": "IfBranch",
+        "sourceBlockId": "shop:b_1",
+        "targetBlockId": "shop:b_3",
+        "metadata": {
+          "conditionStatementId": "shop:6"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "shop:b_3",
+        "targetBlockId": "shop:b_2",
+        "metadata": {}
+      },
+      {
+        "kind": "IfFallThrough",
+        "sourceBlockId": "shop:b_1",
+        "targetBlockId": "shop:b_2",
+        "metadata": {}
+      },
+      {
+        "kind": "GoSubCall",
+        "sourceBlockId": "shop:b_5",
+        "targetBlockId": "shop:b_33",
+        "metadata": {
+          "label": "confirm_purchase"
+        }
+      },
+      {
+        "kind": "GoSubReturn",
+        "sourceBlockId": "shop:b_5",
+        "targetBlockId": "shop:b_6",
+        "metadata": {}
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "shop:b_8",
+        "targetBlockId": "shop:b_1",
+        "metadata": {
+          "label": "shop_hub"
+        }
+      },
+      {
+        "kind": "IfBranch",
+        "sourceBlockId": "shop:b_6",
+        "targetBlockId": "shop:b_8",
+        "metadata": {
+          "conditionStatementId": "shop:13"
+        }
+      },
+      {
+        "kind": "IfFallThrough",
+        "sourceBlockId": "shop:b_6",
+        "targetBlockId": "shop:b_7",
+        "metadata": {}
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "shop:b_7",
+        "targetBlockId": "shop:b_31",
+        "metadata": {
+          "label": "shop_exit"
+        }
+      },
+      {
+        "kind": "ChoiceOptionCheck",
+        "sourceBlockId": "shop:b_2",
+        "targetBlockId": "shop:b_5",
+        "metadata": {
+          "optionStatementId": "shop:15",
+          "conditionStatementId": "shop:15",
+          "choiceConditionKind": "selectable_if"
+        }
+      },
+      {
+        "kind": "GoSubCall",
+        "sourceBlockId": "shop:b_11",
+        "targetBlockId": "shop:b_33",
+        "metadata": {
+          "label": "confirm_purchase"
+        }
+      },
+      {
+        "kind": "GoSubReturn",
+        "sourceBlockId": "shop:b_11",
+        "targetBlockId": "shop:b_12",
+        "metadata": {}
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "shop:b_14",
+        "targetBlockId": "shop:b_1",
+        "metadata": {
+          "label": "shop_hub"
+        }
+      },
+      {
+        "kind": "IfBranch",
+        "sourceBlockId": "shop:b_12",
+        "targetBlockId": "shop:b_14",
+        "metadata": {
+          "conditionStatementId": "shop:21"
+        }
+      },
+      {
+        "kind": "IfFallThrough",
+        "sourceBlockId": "shop:b_12",
+        "targetBlockId": "shop:b_13",
+        "metadata": {}
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "shop:b_13",
+        "targetBlockId": "shop:b_31",
+        "metadata": {
+          "label": "shop_exit"
+        }
+      },
+      {
+        "kind": "ChoiceOptionCheck",
+        "sourceBlockId": "shop:b_2",
+        "targetBlockId": "shop:b_11",
+        "metadata": {
+          "optionStatementId": "shop:23",
+          "conditionStatementId": "shop:23",
+          "choiceConditionKind": "selectable_if"
+        }
+      },
+      {
+        "kind": "GoSubCall",
+        "sourceBlockId": "shop:b_17",
+        "targetBlockId": "shop:b_33",
+        "metadata": {
+          "label": "confirm_purchase"
+        }
+      },
+      {
+        "kind": "GoSubReturn",
+        "sourceBlockId": "shop:b_17",
+        "targetBlockId": "shop:b_18",
+        "metadata": {}
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "shop:b_20",
+        "targetBlockId": "shop:b_1",
+        "metadata": {
+          "label": "shop_hub"
+        }
+      },
+      {
+        "kind": "IfBranch",
+        "sourceBlockId": "shop:b_18",
+        "targetBlockId": "shop:b_20",
+        "metadata": {
+          "conditionStatementId": "shop:29"
+        }
+      },
+      {
+        "kind": "IfFallThrough",
+        "sourceBlockId": "shop:b_18",
+        "targetBlockId": "shop:b_19",
+        "metadata": {}
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "shop:b_19",
+        "targetBlockId": "shop:b_31",
+        "metadata": {
+          "label": "shop_exit"
+        }
+      },
+      {
+        "kind": "ChoiceOptionCheck",
+        "sourceBlockId": "shop:b_2",
+        "targetBlockId": "shop:b_17",
+        "metadata": {
+          "optionStatementId": "shop:31",
+          "conditionStatementId": "shop:31",
+          "choiceConditionKind": "selectable_if"
+        }
+      },
+      {
+        "kind": "GoSubCall",
+        "sourceBlockId": "shop:b_23",
+        "targetBlockId": "shop:b_33",
+        "metadata": {
+          "label": "confirm_purchase"
+        }
+      },
+      {
+        "kind": "GoSubReturn",
+        "sourceBlockId": "shop:b_23",
+        "targetBlockId": "shop:b_24",
+        "metadata": {}
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "shop:b_26",
+        "targetBlockId": "shop:b_1",
+        "metadata": {
+          "label": "shop_hub"
+        }
+      },
+      {
+        "kind": "IfBranch",
+        "sourceBlockId": "shop:b_24",
+        "targetBlockId": "shop:b_26",
+        "metadata": {
+          "conditionStatementId": "shop:37"
+        }
+      },
+      {
+        "kind": "IfFallThrough",
+        "sourceBlockId": "shop:b_24",
+        "targetBlockId": "shop:b_25",
+        "metadata": {}
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "shop:b_25",
+        "targetBlockId": "shop:b_31",
+        "metadata": {
+          "label": "shop_exit"
+        }
+      },
+      {
+        "kind": "ChoiceOptionCheck",
+        "sourceBlockId": "shop:b_2",
+        "targetBlockId": "shop:b_23",
+        "metadata": {
+          "optionStatementId": "shop:39",
+          "conditionStatementId": "shop:39",
+          "choiceConditionKind": "selectable_if"
+        }
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "shop:b_29",
+        "targetBlockId": "shop:b_31",
+        "metadata": {
+          "label": "shop_exit"
+        }
+      },
+      {
+        "kind": "ChoiceOption",
+        "sourceBlockId": "shop:b_2",
+        "targetBlockId": "shop:b_29",
+        "metadata": {
+          "optionStatementId": "shop:41"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "shop:b_2",
+        "targetBlockId": "shop:b_4",
+        "metadata": {}
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "shop:b_4",
+        "targetBlockId": "shop:b_31",
+        "metadata": {}
+      },
+      {
+        "kind": "GotoScene",
+        "sourceBlockId": "shop:b_31",
+        "targetBlockId": null,
+        "metadata": {
+          "targetScene": "startup",
+          "targetSceneLabel": "village_hub"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "shop:b_32",
+        "targetBlockId": "shop:b_33",
+        "metadata": {}
+      },
+      {
+        "kind": "IfBranch",
+        "sourceBlockId": "shop:b_35",
+        "targetBlockId": "shop:b_37",
+        "metadata": {
+          "conditionStatementId": "shop:51"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "shop:b_37",
+        "targetBlockId": "shop:b_36",
+        "metadata": {}
+      },
+      {
+        "kind": "IfFallThrough",
+        "sourceBlockId": "shop:b_35",
+        "targetBlockId": "shop:b_36",
+        "metadata": {}
+      },
+      {
+        "kind": "IfBranch",
+        "sourceBlockId": "shop:b_36",
+        "targetBlockId": "shop:b_39",
+        "metadata": {
+          "conditionStatementId": "shop:53"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "shop:b_39",
+        "targetBlockId": "shop:b_38",
+        "metadata": {}
+      },
+      {
+        "kind": "IfFallThrough",
+        "sourceBlockId": "shop:b_36",
+        "targetBlockId": "shop:b_38",
+        "metadata": {}
+      },
+      {
+        "kind": "IfBranch",
+        "sourceBlockId": "shop:b_38",
+        "targetBlockId": "shop:b_41",
+        "metadata": {
+          "conditionStatementId": "shop:55"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "shop:b_41",
+        "targetBlockId": "shop:b_40",
+        "metadata": {}
+      },
+      {
+        "kind": "IfFallThrough",
+        "sourceBlockId": "shop:b_38",
+        "targetBlockId": "shop:b_40",
+        "metadata": {}
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "shop:b_40",
+        "targetBlockId": "shop:b_45",
+        "metadata": {
+          "label": "confirm_continue"
+        }
+      },
+      {
+        "kind": "ChoiceOption",
+        "sourceBlockId": "shop:b_33",
+        "targetBlockId": "shop:b_35",
+        "metadata": {
+          "optionStatementId": "shop:58"
+        }
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "shop:b_43",
+        "targetBlockId": "shop:b_45",
+        "metadata": {
+          "label": "confirm_continue"
+        }
+      },
+      {
+        "kind": "ChoiceOption",
+        "sourceBlockId": "shop:b_33",
+        "targetBlockId": "shop:b_43",
+        "metadata": {
+          "optionStatementId": "shop:61"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "shop:b_33",
+        "targetBlockId": "shop:b_34",
+        "metadata": {}
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "shop:b_34",
+        "targetBlockId": "shop:b_45",
+        "metadata": {}
+      },
+      {
+        "kind": "Return",
+        "sourceBlockId": "shop:b_47",
+        "targetBlockId": null,
+        "metadata": {}
+      },
+      {
+        "kind": "ChoiceOption",
+        "sourceBlockId": "shop:b_45",
+        "targetBlockId": "shop:b_47",
+        "metadata": {
+          "optionStatementId": "shop:65"
+        }
+      },
+      {
+        "kind": "Return",
+        "sourceBlockId": "shop:b_49",
+        "targetBlockId": null,
+        "metadata": {}
+      },
+      {
+        "kind": "ChoiceOption",
+        "sourceBlockId": "shop:b_45",
+        "targetBlockId": "shop:b_49",
+        "metadata": {
+          "optionStatementId": "shop:68"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "shop:b_45",
+        "targetBlockId": "shop:b_46",
+        "metadata": {}
+      },
+      {
+        "kind": "SceneExit",
+        "sourceBlockId": "shop:b_46",
+        "targetBlockId": null,
+        "metadata": {}
+      }
+    ],
+    "entryBlockId": "shop:b_0",
+    "labelToBlockId": {
+      "shop_hub": "shop:b_1",
+      "shop_exit": "shop:b_31",
+      "confirm_purchase": "shop:b_33",
+      "confirm_continue": "shop:b_45"
+    },
+    "unresolvedEdges": []
+  },
+  {
+    "sceneName": "startup",
+    "blocks": {
+      "startup:b_0": {
+        "exitType": "Input"
+      },
+      "startup:b_1": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_2": {
+        "exitType": "Choice"
+      },
+      "startup:b_3": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_4": {
+        "exitType": "GotoScene"
+      },
+      "startup:b_5": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_6": {
+        "exitType": "GotoScene"
+      },
+      "startup:b_7": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_8": {
+        "exitType": "GotoScene"
+      },
+      "startup:b_9": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_10": {
+        "exitType": "GoSub"
+      },
+      "startup:b_11": {
+        "exitType": "Goto"
+      },
+      "startup:b_12": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_13": {
+        "exitType": "Goto"
+      },
+      "startup:b_14": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_15": {
+        "exitType": "Branch"
+      },
+      "startup:b_16": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_17": {
+        "exitType": "Goto"
+      },
+      "startup:b_18": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_19": {
+        "exitType": "Goto"
+      },
+      "startup:b_20": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_21": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_22": {
+        "exitType": "Ending"
+      },
+      "startup:b_23": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_24": {
+        "exitType": "Return"
+      },
+      "startup:b_25": {
+        "exitType": "FallThrough"
+      }
+    },
+    "blockIndex": {
+      "startup:b_0": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:0",
+          "startup:1",
+          "startup:2",
+          "startup:3",
+          "startup:4",
+          "startup:5",
+          "startup:6",
+          "startup:7",
+          "startup:8",
+          "startup:9",
+          "startup:10"
+        ],
+        "entryType": "SceneEntry",
+        "exitType": "Input"
+      },
+      "startup:b_1": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:11"
+        ],
+        "entryType": "InputContinuation",
+        "exitType": "FallThrough"
+      },
+      "startup:b_2": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:12",
+          "startup:13",
+          "startup:14",
+          "startup:29"
+        ],
+        "entryType": "Label",
+        "exitType": "Choice",
+        "label": "village_hub"
+      },
+      "startup:b_3": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "startup:b_4": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:16"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "GotoScene"
+      },
+      "startup:b_5": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "startup:b_6": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:18"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "GotoScene"
+      },
+      "startup:b_7": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "startup:b_8": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:21"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "GotoScene"
+      },
+      "startup:b_9": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "startup:b_10": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:23"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "GoSub"
+      },
+      "startup:b_11": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:24"
+        ],
+        "entryType": "GoSubContinuation",
+        "exitType": "Goto"
+      },
+      "startup:b_12": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "startup:b_13": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:27"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "Goto"
+      },
+      "startup:b_14": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "startup:b_15": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:30",
+          "startup:31",
+          "startup:39"
+        ],
+        "entryType": "Label",
+        "exitType": "Branch",
+        "label": "ending"
+      },
+      "startup:b_16": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "startup:b_17": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:32",
+          "startup:33"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "Goto"
+      },
+      "startup:b_18": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "startup:b_19": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:34",
+          "startup:35"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "Goto"
+      },
+      "startup:b_20": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "startup:b_21": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:37"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "FallThrough"
+      },
+      "startup:b_22": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:40",
+          "startup:41",
+          "startup:42"
+        ],
+        "entryType": "Label",
+        "exitType": "Ending",
+        "label": "final"
+      },
+      "startup:b_23": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "startup:b_24": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:43",
+          "startup:44",
+          "startup:45"
+        ],
+        "entryType": "Label",
+        "exitType": "Return",
+        "label": "show_stats"
+      },
+      "startup:b_25": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      }
+    },
+    "edges": [
+      {
+        "kind": "InputReturn",
+        "sourceBlockId": "startup:b_0",
+        "targetBlockId": "startup:b_1",
+        "metadata": {}
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "startup:b_1",
+        "targetBlockId": "startup:b_2",
+        "metadata": {}
+      },
+      {
+        "kind": "GotoScene",
+        "sourceBlockId": "startup:b_4",
+        "targetBlockId": null,
+        "metadata": {
+          "targetScene": "shop"
+        }
+      },
+      {
+        "kind": "ChoiceOptionCheck",
+        "sourceBlockId": "startup:b_2",
+        "targetBlockId": "startup:b_4",
+        "metadata": {
+          "optionStatementId": "startup:17",
+          "conditionStatementId": "startup:17",
+          "choiceConditionKind": "selectable_if"
+        }
+      },
+      {
+        "kind": "GotoScene",
+        "sourceBlockId": "startup:b_6",
+        "targetBlockId": null,
+        "metadata": {
+          "targetScene": "tavern"
+        }
+      },
+      {
+        "kind": "ChoiceOption",
+        "sourceBlockId": "startup:b_2",
+        "targetBlockId": "startup:b_6",
+        "metadata": {
+          "optionStatementId": "startup:19"
+        }
+      },
+      {
+        "kind": "GotoScene",
+        "sourceBlockId": "startup:b_8",
+        "targetBlockId": null,
+        "metadata": {
+          "targetScene": "arena"
+        }
+      },
+      {
+        "kind": "ChoiceOptionCheck",
+        "sourceBlockId": "startup:b_2",
+        "targetBlockId": "startup:b_8",
+        "metadata": {
+          "optionStatementId": "startup:22",
+          "conditionStatementId": "startup:22",
+          "choiceConditionKind": "selectable_if"
+        }
+      },
+      {
+        "kind": "GoSubCall",
+        "sourceBlockId": "startup:b_10",
+        "targetBlockId": "startup:b_24",
+        "metadata": {
+          "label": "show_stats"
+        }
+      },
+      {
+        "kind": "GoSubReturn",
+        "sourceBlockId": "startup:b_10",
+        "targetBlockId": "startup:b_11",
+        "metadata": {}
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "startup:b_11",
+        "targetBlockId": "startup:b_2",
+        "metadata": {
+          "label": "village_hub"
+        }
+      },
+      {
+        "kind": "ChoiceOption",
+        "sourceBlockId": "startup:b_2",
+        "targetBlockId": "startup:b_10",
+        "metadata": {
+          "optionStatementId": "startup:25"
+        }
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "startup:b_13",
+        "targetBlockId": "startup:b_15",
+        "metadata": {
+          "label": "ending"
+        }
+      },
+      {
+        "kind": "ChoiceOptionCheck",
+        "sourceBlockId": "startup:b_2",
+        "targetBlockId": "startup:b_13",
+        "metadata": {
+          "optionStatementId": "startup:28",
+          "conditionStatementId": "startup:28",
+          "choiceConditionKind": "selectable_if"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "startup:b_2",
+        "targetBlockId": "startup:b_3",
+        "metadata": {}
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "startup:b_3",
+        "targetBlockId": "startup:b_15",
+        "metadata": {}
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "startup:b_17",
+        "targetBlockId": "startup:b_22",
+        "metadata": {
+          "label": "final"
+        }
+      },
+      {
+        "kind": "IfBranch",
+        "sourceBlockId": "startup:b_15",
+        "targetBlockId": "startup:b_17",
+        "metadata": {
+          "conditionStatementId": "startup:39"
+        }
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "startup:b_19",
+        "targetBlockId": "startup:b_22",
+        "metadata": {
+          "label": "final"
+        }
+      },
+      {
+        "kind": "ElseIfBranch",
+        "sourceBlockId": "startup:b_15",
+        "targetBlockId": "startup:b_19",
+        "metadata": {
+          "conditionStatementId": "startup:36"
+        }
+      },
+      {
+        "kind": "ElseBranch",
+        "sourceBlockId": "startup:b_15",
+        "targetBlockId": "startup:b_21",
+        "metadata": {}
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "startup:b_21",
+        "targetBlockId": "startup:b_16",
+        "metadata": {}
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "startup:b_16",
+        "targetBlockId": "startup:b_22",
+        "metadata": {}
+      },
+      {
+        "kind": "GameEnd",
+        "sourceBlockId": "startup:b_22",
+        "targetBlockId": null,
+        "metadata": {}
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "startup:b_23",
+        "targetBlockId": "startup:b_24",
+        "metadata": {}
+      },
+      {
+        "kind": "Return",
+        "sourceBlockId": "startup:b_24",
+        "targetBlockId": null,
+        "metadata": {}
+      }
+    ],
+    "entryBlockId": "startup:b_0",
+    "labelToBlockId": {
+      "village_hub": "startup:b_2",
+      "ending": "startup:b_15",
+      "final": "startup:b_22",
+      "show_stats": "startup:b_24"
+    },
+    "unresolvedEdges": []
+  },
+  {
+    "sceneName": "tavern",
+    "blocks": {
+      "tavern:b_0": {
+        "exitType": "FallThrough"
+      },
+      "tavern:b_1": {
+        "exitType": "Choice"
+      },
+      "tavern:b_2": {
+        "exitType": "FallThrough"
+      },
+      "tavern:b_3": {
+        "exitType": "Branch"
+      },
+      "tavern:b_4": {
+        "exitType": "Goto"
+      },
+      "tavern:b_5": {
+        "exitType": "FallThrough"
+      },
+      "tavern:b_6": {
+        "exitType": "FallThrough"
+      },
+      "tavern:b_7": {
+        "exitType": "GoSub"
+      },
+      "tavern:b_8": {
+        "exitType": "Goto"
+      },
+      "tavern:b_9": {
+        "exitType": "FallThrough"
+      },
+      "tavern:b_10": {
+        "exitType": "Goto"
+      },
+      "tavern:b_11": {
+        "exitType": "FallThrough"
+      },
+      "tavern:b_12": {
+        "exitType": "Goto"
+      },
+      "tavern:b_13": {
+        "exitType": "FallThrough"
+      },
+      "tavern:b_14": {
+        "exitType": "GotoScene"
+      },
+      "tavern:b_15": {
+        "exitType": "FallThrough"
+      },
+      "tavern:b_16": {
+        "exitType": "Choice"
+      },
+      "tavern:b_17": {
+        "exitType": "ImplicitEnd"
+      },
+      "tavern:b_18": {
+        "exitType": "Return"
+      },
+      "tavern:b_19": {
+        "exitType": "FallThrough"
+      },
+      "tavern:b_20": {
+        "exitType": "Return"
+      },
+      "tavern:b_21": {
+        "exitType": "FallThrough"
+      },
+      "tavern:b_22": {
+        "exitType": "Branch"
+      },
+      "tavern:b_23": {
+        "exitType": "Return"
+      },
+      "tavern:b_24": {
+        "exitType": "FallThrough"
+      },
+      "tavern:b_25": {
+        "exitType": "FallThrough"
+      },
+      "tavern:b_26": {
+        "exitType": "FallThrough"
+      }
+    },
+    "blockIndex": {
+      "tavern:b_0": {
+        "scene": "tavern",
+        "statementIds": [
+          "tavern:0",
+          "tavern:1",
+          "tavern:2"
+        ],
+        "entryType": "SceneEntry",
+        "exitType": "FallThrough"
+      },
+      "tavern:b_1": {
+        "scene": "tavern",
+        "statementIds": [
+          "tavern:3",
+          "tavern:24"
+        ],
+        "entryType": "Label",
+        "exitType": "Choice",
+        "label": "tavern_hub"
+      },
+      "tavern:b_2": {
+        "scene": "tavern",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "tavern:b_3": {
+        "scene": "tavern",
+        "statementIds": [
+          "tavern:5",
+          "tavern:6",
+          "tavern:7",
+          "tavern:8",
+          "tavern:11"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "Branch"
+      },
+      "tavern:b_4": {
+        "scene": "tavern",
+        "statementIds": [
+          "tavern:12"
+        ],
+        "entryType": "Continuation",
+        "exitType": "Goto"
+      },
+      "tavern:b_5": {
+        "scene": "tavern",
+        "statementIds": [
+          "tavern:9",
+          "tavern:10"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "FallThrough"
+      },
+      "tavern:b_6": {
+        "scene": "tavern",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "tavern:b_7": {
+        "scene": "tavern",
+        "statementIds": [
+          "tavern:14"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "GoSub"
+      },
+      "tavern:b_8": {
+        "scene": "tavern",
+        "statementIds": [
+          "tavern:15"
+        ],
+        "entryType": "GoSubContinuation",
+        "exitType": "Goto"
+      },
+      "tavern:b_9": {
+        "scene": "tavern",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "tavern:b_10": {
+        "scene": "tavern",
+        "statementIds": [
+          "tavern:18",
+          "tavern:19",
+          "tavern:20"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "Goto"
+      },
+      "tavern:b_11": {
+        "scene": "tavern",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "tavern:b_12": {
+        "scene": "tavern",
+        "statementIds": [
+          "tavern:22"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "Goto"
+      },
+      "tavern:b_13": {
+        "scene": "tavern",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "tavern:b_14": {
+        "scene": "tavern",
+        "statementIds": [
+          "tavern:25",
+          "tavern:26",
+          "tavern:27"
+        ],
+        "entryType": "Label",
+        "exitType": "GotoScene",
+        "label": "tavern_exit"
+      },
+      "tavern:b_15": {
+        "scene": "tavern",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "tavern:b_16": {
+        "scene": "tavern",
+        "statementIds": [
+          "tavern:28",
+          "tavern:29",
+          "tavern:46"
+        ],
+        "entryType": "Label",
+        "exitType": "Choice",
+        "label": "bard_conversation"
+      },
+      "tavern:b_17": {
+        "scene": "tavern",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "ImplicitEnd"
+      },
+      "tavern:b_18": {
+        "scene": "tavern",
+        "statementIds": [
+          "tavern:30",
+          "tavern:31",
+          "tavern:32"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "Return"
+      },
+      "tavern:b_19": {
+        "scene": "tavern",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "tavern:b_20": {
+        "scene": "tavern",
+        "statementIds": [
+          "tavern:34",
+          "tavern:35"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "Return"
+      },
+      "tavern:b_21": {
+        "scene": "tavern",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "tavern:b_22": {
+        "scene": "tavern",
+        "statementIds": [
+          "tavern:43"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "Branch"
+      },
+      "tavern:b_23": {
+        "scene": "tavern",
+        "statementIds": [
+          "tavern:44"
+        ],
+        "entryType": "Continuation",
+        "exitType": "Return"
+      },
+      "tavern:b_24": {
+        "scene": "tavern",
+        "statementIds": [
+          "tavern:37",
+          "tavern:38",
+          "tavern:39"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "FallThrough"
+      },
+      "tavern:b_25": {
+        "scene": "tavern",
+        "statementIds": [
+          "tavern:40",
+          "tavern:41"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "FallThrough"
+      },
+      "tavern:b_26": {
+        "scene": "tavern",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      }
+    },
+    "edges": [
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "tavern:b_0",
+        "targetBlockId": "tavern:b_1",
+        "metadata": {}
+      },
+      {
+        "kind": "IfBranch",
+        "sourceBlockId": "tavern:b_3",
+        "targetBlockId": "tavern:b_5",
+        "metadata": {
+          "conditionStatementId": "tavern:11"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "tavern:b_5",
+        "targetBlockId": "tavern:b_4",
+        "metadata": {}
+      },
+      {
+        "kind": "IfFallThrough",
+        "sourceBlockId": "tavern:b_3",
+        "targetBlockId": "tavern:b_4",
+        "metadata": {}
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "tavern:b_4",
+        "targetBlockId": "tavern:b_1",
+        "metadata": {
+          "label": "tavern_hub"
+        }
+      },
+      {
+        "kind": "ChoiceOptionCheck",
+        "sourceBlockId": "tavern:b_1",
+        "targetBlockId": "tavern:b_3",
+        "metadata": {
+          "optionStatementId": "tavern:13",
+          "conditionStatementId": "tavern:13",
+          "choiceConditionKind": "selectable_if"
+        }
+      },
+      {
+        "kind": "GoSubCall",
+        "sourceBlockId": "tavern:b_7",
+        "targetBlockId": "tavern:b_16",
+        "metadata": {
+          "label": "bard_conversation"
+        }
+      },
+      {
+        "kind": "GoSubReturn",
+        "sourceBlockId": "tavern:b_7",
+        "targetBlockId": "tavern:b_8",
+        "metadata": {}
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "tavern:b_8",
+        "targetBlockId": "tavern:b_1",
+        "metadata": {
+          "label": "tavern_hub"
+        }
+      },
+      {
+        "kind": "ChoiceOption",
+        "sourceBlockId": "tavern:b_1",
+        "targetBlockId": "tavern:b_7",
+        "metadata": {
+          "optionStatementId": "tavern:16"
+        }
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "tavern:b_10",
+        "targetBlockId": "tavern:b_1",
+        "metadata": {
+          "label": "tavern_hub"
+        }
+      },
+      {
+        "kind": "ChoiceOptionCheck",
+        "sourceBlockId": "tavern:b_1",
+        "targetBlockId": "tavern:b_10",
+        "metadata": {
+          "optionStatementId": "tavern:21",
+          "conditionStatementId": "tavern:21",
+          "choiceConditionKind": "selectable_if"
+        }
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "tavern:b_12",
+        "targetBlockId": "tavern:b_14",
+        "metadata": {
+          "label": "tavern_exit"
+        }
+      },
+      {
+        "kind": "ChoiceOption",
+        "sourceBlockId": "tavern:b_1",
+        "targetBlockId": "tavern:b_12",
+        "metadata": {
+          "optionStatementId": "tavern:23"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "tavern:b_1",
+        "targetBlockId": "tavern:b_2",
+        "metadata": {}
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "tavern:b_2",
+        "targetBlockId": "tavern:b_14",
+        "metadata": {}
+      },
+      {
+        "kind": "GotoScene",
+        "sourceBlockId": "tavern:b_14",
+        "targetBlockId": null,
+        "metadata": {
+          "targetScene": "startup",
+          "targetSceneLabel": "village_hub"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "tavern:b_15",
+        "targetBlockId": "tavern:b_16",
+        "metadata": {}
+      },
+      {
+        "kind": "Return",
+        "sourceBlockId": "tavern:b_18",
+        "targetBlockId": null,
+        "metadata": {}
+      },
+      {
+        "kind": "ChoiceOption",
+        "sourceBlockId": "tavern:b_16",
+        "targetBlockId": "tavern:b_18",
+        "metadata": {
+          "optionStatementId": "tavern:33"
+        }
+      },
+      {
+        "kind": "Return",
+        "sourceBlockId": "tavern:b_20",
+        "targetBlockId": null,
+        "metadata": {}
+      },
+      {
+        "kind": "ChoiceOption",
+        "sourceBlockId": "tavern:b_16",
+        "targetBlockId": "tavern:b_20",
+        "metadata": {
+          "optionStatementId": "tavern:36"
+        }
+      },
+      {
+        "kind": "IfBranch",
+        "sourceBlockId": "tavern:b_22",
+        "targetBlockId": "tavern:b_24",
+        "metadata": {
+          "conditionStatementId": "tavern:43"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "tavern:b_24",
+        "targetBlockId": "tavern:b_23",
+        "metadata": {}
+      },
+      {
+        "kind": "ElseBranch",
+        "sourceBlockId": "tavern:b_22",
+        "targetBlockId": "tavern:b_25",
+        "metadata": {}
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "tavern:b_25",
+        "targetBlockId": "tavern:b_23",
+        "metadata": {}
+      },
+      {
+        "kind": "Return",
+        "sourceBlockId": "tavern:b_23",
+        "targetBlockId": null,
+        "metadata": {}
+      },
+      {
+        "kind": "ChoiceOption",
+        "sourceBlockId": "tavern:b_16",
+        "targetBlockId": "tavern:b_22",
+        "metadata": {
+          "optionStatementId": "tavern:45"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "tavern:b_16",
+        "targetBlockId": "tavern:b_17",
+        "metadata": {}
+      },
+      {
+        "kind": "SceneExit",
+        "sourceBlockId": "tavern:b_17",
+        "targetBlockId": null,
+        "metadata": {}
+      }
+    ],
+    "entryBlockId": "tavern:b_0",
+    "labelToBlockId": {
+      "tavern_hub": "tavern:b_1",
+      "tavern_exit": "tavern:b_14",
+      "bard_conversation": "tavern:b_16"
+    },
+    "unresolvedEdges": []
+  }
+]

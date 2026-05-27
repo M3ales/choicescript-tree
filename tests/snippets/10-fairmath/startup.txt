@@ -1,0 +1,9 @@
+*create morale 50
+*create fear 30
+
+*set morale %+ 20
+*set morale %- 10
+*set fear %+ 40
+*set fear %- 25
+
+Your morale is ${morale} and fear is ${fear}.

@@ -1,0 +1,261 @@
+[
+  {
+    "name": "startup",
+    "statements": [
+      {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "morale",
+          "rawValue": "morale",
+          "position": 8,
+          "lineNumber": 0,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 50,
+            "position": 15,
+            "lineNumber": 0,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 0,
+          "position": 0
+        }
+      },
+      {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "fear",
+          "rawValue": "fear",
+          "position": 8,
+          "lineNumber": 1,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 30,
+            "position": 13,
+            "lineNumber": 1,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 1,
+          "position": 0
+        }
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Binary",
+          "left": {
+            "kind": "Identifier",
+            "token": {
+              "type": "Identifier",
+              "value": "morale",
+              "rawValue": "morale",
+              "position": 5,
+              "lineNumber": 3,
+              "sceneName": "startup",
+              "indent": 0
+            }
+          },
+          "operator": {
+            "type": "FairmathAdditionOperator",
+            "rawValue": "%+",
+            "position": 12,
+            "lineNumber": 3,
+            "sceneName": "startup",
+            "indent": 0
+          },
+          "right": {
+            "kind": "Literal",
+            "value": {
+              "type": "NumberLiteral",
+              "value": 20,
+              "position": 15,
+              "lineNumber": 3,
+              "sceneName": "startup",
+              "indent": 0
+            }
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 3,
+          "position": 0
+        }
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Binary",
+          "left": {
+            "kind": "Identifier",
+            "token": {
+              "type": "Identifier",
+              "value": "morale",
+              "rawValue": "morale",
+              "position": 5,
+              "lineNumber": 4,
+              "sceneName": "startup",
+              "indent": 0
+            }
+          },
+          "operator": {
+            "type": "FairmathSubtractionOperator",
+            "rawValue": "%-",
+            "position": 12,
+            "lineNumber": 4,
+            "sceneName": "startup",
+            "indent": 0
+          },
+          "right": {
+            "kind": "Literal",
+            "value": {
+              "type": "NumberLiteral",
+              "value": 10,
+              "position": 15,
+              "lineNumber": 4,
+              "sceneName": "startup",
+              "indent": 0
+            }
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 4,
+          "position": 0
+        }
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Binary",
+          "left": {
+            "kind": "Identifier",
+            "token": {
+              "type": "Identifier",
+              "value": "fear",
+              "rawValue": "fear",
+              "position": 5,
+              "lineNumber": 5,
+              "sceneName": "startup",
+              "indent": 0
+            }
+          },
+          "operator": {
+            "type": "FairmathAdditionOperator",
+            "rawValue": "%+",
+            "position": 10,
+            "lineNumber": 5,
+            "sceneName": "startup",
+            "indent": 0
+          },
+          "right": {
+            "kind": "Literal",
+            "value": {
+              "type": "NumberLiteral",
+              "value": 40,
+              "position": 13,
+              "lineNumber": 5,
+              "sceneName": "startup",
+              "indent": 0
+            }
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 5,
+          "position": 0
+        }
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Binary",
+          "left": {
+            "kind": "Identifier",
+            "token": {
+              "type": "Identifier",
+              "value": "fear",
+              "rawValue": "fear",
+              "position": 5,
+              "lineNumber": 6,
+              "sceneName": "startup",
+              "indent": 0
+            }
+          },
+          "operator": {
+            "type": "FairmathSubtractionOperator",
+            "rawValue": "%-",
+            "position": 10,
+            "lineNumber": 6,
+            "sceneName": "startup",
+            "indent": 0
+          },
+          "right": {
+            "kind": "Literal",
+            "value": {
+              "type": "NumberLiteral",
+              "value": 25,
+              "position": 13,
+              "lineNumber": 6,
+              "sceneName": "startup",
+              "indent": 0
+            }
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 6,
+          "position": 0
+        }
+      }
+    ],
+    "parseErrors": [],
+    "start": {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    "end": {
+      "type": "NumberLiteral",
+      "value": 25,
+      "position": 13,
+      "lineNumber": 6,
+      "sceneName": "startup",
+      "indent": 0
+    }
+  }
+]

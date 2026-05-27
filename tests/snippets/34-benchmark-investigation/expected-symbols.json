@@ -1,0 +1,1405 @@
+[
+  {
+    "labels": {
+      "scene_hub": {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "crime_scene",
+          "indent": 0,
+          "lineNumber": 7,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "scene_hub",
+          "rawValue": "scene_hub",
+          "position": 6,
+          "lineNumber": 7,
+          "sceneName": "crime_scene",
+          "indent": 0,
+          "isLabelName": true
+        }
+      },
+      "scene_exit": {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "crime_scene",
+          "indent": 0,
+          "lineNumber": 51,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "scene_exit",
+          "rawValue": "scene_exit",
+          "position": 6,
+          "lineNumber": 51,
+          "sceneName": "crime_scene",
+          "indent": 0,
+          "isLabelName": true
+        }
+      }
+    },
+    "globalVariables": {},
+    "tempVariables": {
+      "areas_searched": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "areas_searched",
+          "rawValue": "areas_searched",
+          "position": 6,
+          "lineNumber": 0,
+          "sceneName": "crime_scene",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 0,
+            "position": 21,
+            "lineNumber": 0,
+            "sceneName": "crime_scene",
+            "indent": 0
+          }
+        },
+        "scope": "Temporary",
+        "token": {
+          "type": "CreateTempVariable",
+          "sceneName": "crime_scene",
+          "indent": 0,
+          "lineNumber": 0,
+          "position": 0
+        }
+      },
+      "found_weapon_here": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "found_weapon_here",
+          "rawValue": "found_weapon_here",
+          "position": 6,
+          "lineNumber": 1,
+          "sceneName": "crime_scene",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "BooleanLiteral",
+            "value": false,
+            "position": 24,
+            "lineNumber": 1,
+            "sceneName": "crime_scene",
+            "indent": 0
+          }
+        },
+        "scope": "Temporary",
+        "token": {
+          "type": "CreateTempVariable",
+          "sceneName": "crime_scene",
+          "indent": 0,
+          "lineNumber": 1,
+          "position": 0
+        }
+      },
+      "found_documents_here": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "found_documents_here",
+          "rawValue": "found_documents_here",
+          "position": 6,
+          "lineNumber": 2,
+          "sceneName": "crime_scene",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "BooleanLiteral",
+            "value": false,
+            "position": 27,
+            "lineNumber": 2,
+            "sceneName": "crime_scene",
+            "indent": 0
+          }
+        },
+        "scope": "Temporary",
+        "token": {
+          "type": "CreateTempVariable",
+          "sceneName": "crime_scene",
+          "indent": 0,
+          "lineNumber": 2,
+          "position": 0
+        }
+      },
+      "found_glass_here": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "found_glass_here",
+          "rawValue": "found_glass_here",
+          "position": 6,
+          "lineNumber": 3,
+          "sceneName": "crime_scene",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "BooleanLiteral",
+            "value": false,
+            "position": 23,
+            "lineNumber": 3,
+            "sceneName": "crime_scene",
+            "indent": 0
+          }
+        },
+        "scope": "Temporary",
+        "token": {
+          "type": "CreateTempVariable",
+          "sceneName": "crime_scene",
+          "indent": 0,
+          "lineNumber": 3,
+          "position": 0
+        }
+      }
+    },
+    "checkpoints": {},
+    "gosubs": [],
+    "gotos": [
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "crime_scene",
+          "indent": 1,
+          "lineNumber": 11,
+          "position": 2
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "scene_exit",
+          "rawValue": "scene_exit",
+          "position": 8,
+          "lineNumber": 11,
+          "sceneName": "crime_scene",
+          "indent": 1,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "crime_scene",
+          "indent": 2,
+          "lineNumber": 26,
+          "position": 4
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "scene_hub",
+          "rawValue": "scene_hub",
+          "position": 10,
+          "lineNumber": 26,
+          "sceneName": "crime_scene",
+          "indent": 2,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "crime_scene",
+          "indent": 2,
+          "lineNumber": 32,
+          "position": 4
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "scene_hub",
+          "rawValue": "scene_hub",
+          "position": 10,
+          "lineNumber": 32,
+          "sceneName": "crime_scene",
+          "indent": 2,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "crime_scene",
+          "indent": 2,
+          "lineNumber": 39,
+          "position": 4
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "scene_hub",
+          "rawValue": "scene_hub",
+          "position": 10,
+          "lineNumber": 39,
+          "sceneName": "crime_scene",
+          "indent": 2,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "crime_scene",
+          "indent": 2,
+          "lineNumber": 47,
+          "position": 4
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "scene_hub",
+          "rawValue": "scene_hub",
+          "position": 10,
+          "lineNumber": 47,
+          "sceneName": "crime_scene",
+          "indent": 2,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "crime_scene",
+          "indent": 2,
+          "lineNumber": 49,
+          "position": 4
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "scene_exit",
+          "rawValue": "scene_exit",
+          "position": 10,
+          "lineNumber": 49,
+          "sceneName": "crime_scene",
+          "indent": 2,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "GotoScene",
+        "token": {
+          "type": "GotoScene",
+          "sceneName": "crime_scene",
+          "indent": 0,
+          "lineNumber": 53,
+          "position": 0
+        },
+        "scene": {
+          "type": "Identifier",
+          "value": "startup",
+          "rawValue": "startup",
+          "position": 12,
+          "lineNumber": 53,
+          "sceneName": "crime_scene",
+          "indent": 0,
+          "isSceneName": true,
+          "isLabelName": false
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "case_hub",
+          "rawValue": "case_hub",
+          "position": 20,
+          "lineNumber": 53,
+          "sceneName": "crime_scene",
+          "indent": 0,
+          "isLabelName": true
+        }
+      }
+    ],
+    "implicitControlFlow": []
+  },
+  {
+    "labels": {
+      "suspect_select": {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "interrogation",
+          "indent": 0,
+          "lineNumber": 6,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "suspect_select",
+          "rawValue": "suspect_select",
+          "position": 6,
+          "lineNumber": 6,
+          "sceneName": "interrogation",
+          "indent": 0,
+          "isLabelName": true
+        }
+      },
+      "interview_loop": {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "interrogation",
+          "indent": 0,
+          "lineNumber": 32,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "interview_loop",
+          "rawValue": "interview_loop",
+          "position": 6,
+          "lineNumber": 32,
+          "sceneName": "interrogation",
+          "indent": 0,
+          "isLabelName": true
+        }
+      },
+      "interrogation_exit": {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "interrogation",
+          "indent": 0,
+          "lineNumber": 80,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "interrogation_exit",
+          "rawValue": "interrogation_exit",
+          "position": 6,
+          "lineNumber": 80,
+          "sceneName": "interrogation",
+          "indent": 0,
+          "isLabelName": true
+        }
+      }
+    },
+    "globalVariables": {},
+    "tempVariables": {
+      "current_suspect": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "current_suspect",
+          "rawValue": "current_suspect",
+          "position": 6,
+          "lineNumber": 0,
+          "sceneName": "interrogation",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "StringLiteral",
+            "value": "",
+            "position": 22,
+            "lineNumber": 0,
+            "sceneName": "interrogation",
+            "indent": 0
+          }
+        },
+        "scope": "Temporary",
+        "token": {
+          "type": "CreateTempVariable",
+          "sceneName": "interrogation",
+          "indent": 0,
+          "lineNumber": 0,
+          "position": 0
+        }
+      },
+      "question_count": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "question_count",
+          "rawValue": "question_count",
+          "position": 6,
+          "lineNumber": 1,
+          "sceneName": "interrogation",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 0,
+            "position": 21,
+            "lineNumber": 1,
+            "sceneName": "interrogation",
+            "indent": 0
+          }
+        },
+        "scope": "Temporary",
+        "token": {
+          "type": "CreateTempVariable",
+          "sceneName": "interrogation",
+          "indent": 0,
+          "lineNumber": 1,
+          "position": 0
+        }
+      },
+      "caught_contradiction": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "caught_contradiction",
+          "rawValue": "caught_contradiction",
+          "position": 6,
+          "lineNumber": 2,
+          "sceneName": "interrogation",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "BooleanLiteral",
+            "value": false,
+            "position": 27,
+            "lineNumber": 2,
+            "sceneName": "interrogation",
+            "indent": 0
+          }
+        },
+        "scope": "Temporary",
+        "token": {
+          "type": "CreateTempVariable",
+          "sceneName": "interrogation",
+          "indent": 0,
+          "lineNumber": 2,
+          "position": 0
+        }
+      }
+    },
+    "checkpoints": {},
+    "gosubs": [
+      {
+        "kind": "GoSub",
+        "token": {
+          "type": "GoSub",
+          "sceneName": "interrogation",
+          "indent": 2,
+          "lineNumber": 15,
+          "position": 4
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "interview_loop",
+          "rawValue": "interview_loop",
+          "position": 11,
+          "lineNumber": 15,
+          "sceneName": "interrogation",
+          "indent": 2,
+          "isLabelName": true
+        },
+        "args": []
+      },
+      {
+        "kind": "GoSub",
+        "token": {
+          "type": "GoSub",
+          "sceneName": "interrogation",
+          "indent": 2,
+          "lineNumber": 21,
+          "position": 4
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "interview_loop",
+          "rawValue": "interview_loop",
+          "position": 11,
+          "lineNumber": 21,
+          "sceneName": "interrogation",
+          "indent": 2,
+          "isLabelName": true
+        },
+        "args": []
+      },
+      {
+        "kind": "GoSub",
+        "token": {
+          "type": "GoSub",
+          "sceneName": "interrogation",
+          "indent": 2,
+          "lineNumber": 27,
+          "position": 4
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "interview_loop",
+          "rawValue": "interview_loop",
+          "position": 11,
+          "lineNumber": 27,
+          "sceneName": "interrogation",
+          "indent": 2,
+          "isLabelName": true
+        },
+        "args": []
+      }
+    ],
+    "gotos": [
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "interrogation",
+          "indent": 2,
+          "lineNumber": 16,
+          "position": 4
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "suspect_select",
+          "rawValue": "suspect_select",
+          "position": 10,
+          "lineNumber": 16,
+          "sceneName": "interrogation",
+          "indent": 2,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "interrogation",
+          "indent": 2,
+          "lineNumber": 22,
+          "position": 4
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "suspect_select",
+          "rawValue": "suspect_select",
+          "position": 10,
+          "lineNumber": 22,
+          "sceneName": "interrogation",
+          "indent": 2,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "interrogation",
+          "indent": 2,
+          "lineNumber": 28,
+          "position": 4
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "suspect_select",
+          "rawValue": "suspect_select",
+          "position": 10,
+          "lineNumber": 28,
+          "sceneName": "interrogation",
+          "indent": 2,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "interrogation",
+          "indent": 2,
+          "lineNumber": 30,
+          "position": 4
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "interrogation_exit",
+          "rawValue": "interrogation_exit",
+          "position": 10,
+          "lineNumber": 30,
+          "sceneName": "interrogation",
+          "indent": 2,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "interrogation",
+          "indent": 2,
+          "lineNumber": 57,
+          "position": 4
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "interview_loop",
+          "rawValue": "interview_loop",
+          "position": 10,
+          "lineNumber": 57,
+          "sceneName": "interrogation",
+          "indent": 2,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "interrogation",
+          "indent": 2,
+          "lineNumber": 67,
+          "position": 4
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "interview_loop",
+          "rawValue": "interview_loop",
+          "position": 10,
+          "lineNumber": 67,
+          "sceneName": "interrogation",
+          "indent": 2,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "interrogation",
+          "indent": 2,
+          "lineNumber": 74,
+          "position": 4
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "interview_loop",
+          "rawValue": "interview_loop",
+          "position": 10,
+          "lineNumber": 74,
+          "sceneName": "interrogation",
+          "indent": 2,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "GotoScene",
+        "token": {
+          "type": "GotoScene",
+          "sceneName": "interrogation",
+          "indent": 0,
+          "lineNumber": 82,
+          "position": 0
+        },
+        "scene": {
+          "type": "Identifier",
+          "value": "startup",
+          "rawValue": "startup",
+          "position": 12,
+          "lineNumber": 82,
+          "sceneName": "interrogation",
+          "indent": 0,
+          "isSceneName": true,
+          "isLabelName": false
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "case_hub",
+          "rawValue": "case_hub",
+          "position": 20,
+          "lineNumber": 82,
+          "sceneName": "interrogation",
+          "indent": 0,
+          "isLabelName": true
+        }
+      }
+    ],
+    "implicitControlFlow": []
+  },
+  {
+    "labels": {
+      "case_hub": {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 14,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "case_hub",
+          "rawValue": "case_hub",
+          "position": 6,
+          "lineNumber": 14,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        }
+      },
+      "accusation": {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 36,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "accusation",
+          "rawValue": "accusation",
+          "position": 6,
+          "lineNumber": 36,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        }
+      },
+      "correct_accusation": {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 55,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "correct_accusation",
+          "rawValue": "correct_accusation",
+          "position": 6,
+          "lineNumber": 55,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        }
+      },
+      "wrong_accusation": {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 66,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "wrong_accusation",
+          "rawValue": "wrong_accusation",
+          "position": 6,
+          "lineNumber": 66,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        }
+      },
+      "review_notes": {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 80,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "review_notes",
+          "rawValue": "review_notes",
+          "position": 6,
+          "lineNumber": 80,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        }
+      },
+      "forensics": {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 94,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "forensics",
+          "rawValue": "forensics",
+          "position": 6,
+          "lineNumber": 94,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        }
+      }
+    },
+    "globalVariables": {
+      "clues_found": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "clues_found",
+          "rawValue": "clues_found",
+          "position": 8,
+          "lineNumber": 0,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 0,
+            "position": 20,
+            "lineNumber": 0,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 0,
+          "position": 0
+        }
+      },
+      "suspects_interviewed": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "suspects_interviewed",
+          "rawValue": "suspects_interviewed",
+          "position": 8,
+          "lineNumber": 1,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 0,
+            "position": 29,
+            "lineNumber": 1,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 1,
+          "position": 0
+        }
+      },
+      "confidence": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "confidence",
+          "rawValue": "confidence",
+          "position": 8,
+          "lineNumber": 2,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 0,
+            "position": 19,
+            "lineNumber": 2,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 2,
+          "position": 0
+        }
+      },
+      "has_weapon": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "has_weapon",
+          "rawValue": "has_weapon",
+          "position": 8,
+          "lineNumber": 3,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "BooleanLiteral",
+            "value": false,
+            "position": 19,
+            "lineNumber": 3,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 3,
+          "position": 0
+        }
+      },
+      "has_motive": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "has_motive",
+          "rawValue": "has_motive",
+          "position": 8,
+          "lineNumber": 4,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "BooleanLiteral",
+            "value": false,
+            "position": 19,
+            "lineNumber": 4,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 4,
+          "position": 0
+        }
+      },
+      "has_alibi_broken": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "has_alibi_broken",
+          "rawValue": "has_alibi_broken",
+          "position": 8,
+          "lineNumber": 5,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "BooleanLiteral",
+            "value": false,
+            "position": 25,
+            "lineNumber": 5,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 5,
+          "position": 0
+        }
+      },
+      "detective_rank": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "detective_rank",
+          "rawValue": "detective_rank",
+          "position": 8,
+          "lineNumber": 6,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "StringLiteral",
+            "value": "Junior",
+            "position": 23,
+            "lineNumber": 6,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 6,
+          "position": 0
+        }
+      },
+      "case_closed": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "case_closed",
+          "rawValue": "case_closed",
+          "position": 8,
+          "lineNumber": 7,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "BooleanLiteral",
+            "value": false,
+            "position": 20,
+            "lineNumber": 7,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 7,
+          "position": 0
+        }
+      },
+      "notes": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "notes",
+          "rawValue": "notes",
+          "position": 8,
+          "lineNumber": 8,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "StringLiteral",
+            "value": "",
+            "position": 14,
+            "lineNumber": 8,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 8,
+          "position": 0
+        }
+      }
+    },
+    "tempVariables": {},
+    "checkpoints": {},
+    "gosubs": [
+      {
+        "kind": "GoSub",
+        "token": {
+          "type": "GoSub",
+          "sceneName": "startup",
+          "indent": 2,
+          "lineNumber": 30,
+          "position": 4
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "review_notes",
+          "rawValue": "review_notes",
+          "position": 11,
+          "lineNumber": 30,
+          "sceneName": "startup",
+          "indent": 2,
+          "isLabelName": true
+        },
+        "args": []
+      },
+      {
+        "kind": "GoSub",
+        "token": {
+          "type": "GoSub",
+          "sceneName": "startup",
+          "indent": 2,
+          "lineNumber": 33,
+          "position": 4
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "forensics",
+          "rawValue": "forensics",
+          "position": 11,
+          "lineNumber": 33,
+          "sceneName": "startup",
+          "indent": 2,
+          "isLabelName": true
+        },
+        "args": []
+      }
+    ],
+    "gotos": [
+      {
+        "kind": "GotoScene",
+        "token": {
+          "type": "GotoScene",
+          "sceneName": "startup",
+          "indent": 2,
+          "lineNumber": 24,
+          "position": 4
+        },
+        "scene": {
+          "type": "Identifier",
+          "value": "crime_scene",
+          "rawValue": "crime_scene",
+          "position": 16,
+          "lineNumber": 24,
+          "sceneName": "startup",
+          "indent": 2,
+          "isSceneName": true,
+          "isLabelName": false
+        }
+      },
+      {
+        "kind": "GotoScene",
+        "token": {
+          "type": "GotoScene",
+          "sceneName": "startup",
+          "indent": 2,
+          "lineNumber": 26,
+          "position": 4
+        },
+        "scene": {
+          "type": "Identifier",
+          "value": "interrogation",
+          "rawValue": "interrogation",
+          "position": 16,
+          "lineNumber": 26,
+          "sceneName": "startup",
+          "indent": 2,
+          "isSceneName": true,
+          "isLabelName": false
+        }
+      },
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "startup",
+          "indent": 2,
+          "lineNumber": 28,
+          "position": 4
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "accusation",
+          "rawValue": "accusation",
+          "position": 10,
+          "lineNumber": 28,
+          "sceneName": "startup",
+          "indent": 2,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "startup",
+          "indent": 2,
+          "lineNumber": 31,
+          "position": 4
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "case_hub",
+          "rawValue": "case_hub",
+          "position": 10,
+          "lineNumber": 31,
+          "sceneName": "startup",
+          "indent": 2,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "startup",
+          "indent": 2,
+          "lineNumber": 34,
+          "position": 4
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "case_hub",
+          "rawValue": "case_hub",
+          "position": 10,
+          "lineNumber": 34,
+          "sceneName": "startup",
+          "indent": 2,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "startup",
+          "indent": 3,
+          "lineNumber": 44,
+          "position": 6
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "correct_accusation",
+          "rawValue": "correct_accusation",
+          "position": 12,
+          "lineNumber": 44,
+          "sceneName": "startup",
+          "indent": 3,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "startup",
+          "indent": 3,
+          "lineNumber": 46,
+          "position": 6
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "wrong_accusation",
+          "rawValue": "wrong_accusation",
+          "position": 12,
+          "lineNumber": 46,
+          "sceneName": "startup",
+          "indent": 3,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "startup",
+          "indent": 3,
+          "lineNumber": 49,
+          "position": 6
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "correct_accusation",
+          "rawValue": "correct_accusation",
+          "position": 12,
+          "lineNumber": 49,
+          "sceneName": "startup",
+          "indent": 3,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "startup",
+          "indent": 3,
+          "lineNumber": 51,
+          "position": 6
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "wrong_accusation",
+          "rawValue": "wrong_accusation",
+          "position": 12,
+          "lineNumber": 51,
+          "sceneName": "startup",
+          "indent": 3,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "startup",
+          "indent": 2,
+          "lineNumber": 53,
+          "position": 4
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "wrong_accusation",
+          "rawValue": "wrong_accusation",
+          "position": 10,
+          "lineNumber": 53,
+          "sceneName": "startup",
+          "indent": 2,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "startup",
+          "indent": 2,
+          "lineNumber": 75,
+          "position": 4
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "case_hub",
+          "rawValue": "case_hub",
+          "position": 10,
+          "lineNumber": 75,
+          "sceneName": "startup",
+          "indent": 2,
+          "isLabelName": true
+        }
+      }
+    ],
+    "implicitControlFlow": []
+  }
+]

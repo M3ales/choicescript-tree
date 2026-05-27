@@ -1,0 +1,73 @@
+[
+  {
+    "labels": {
+      "shop": {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 0,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "shop",
+          "rawValue": "shop",
+          "position": 6,
+          "lineNumber": 0,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        }
+      }
+    },
+    "globalVariables": {},
+    "tempVariables": {},
+    "checkpoints": {},
+    "gosubs": [],
+    "gotos": [
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "startup",
+          "indent": 2,
+          "lineNumber": 5,
+          "position": 4
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "shop",
+          "rawValue": "shop",
+          "position": 10,
+          "lineNumber": 5,
+          "sceneName": "startup",
+          "indent": 2,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "startup",
+          "indent": 2,
+          "lineNumber": 8,
+          "position": 4
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "shop",
+          "rawValue": "shop",
+          "position": 10,
+          "lineNumber": 8,
+          "sceneName": "startup",
+          "indent": 2,
+          "isLabelName": true
+        }
+      }
+    ],
+    "implicitControlFlow": []
+  }
+]

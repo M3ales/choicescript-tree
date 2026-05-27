@@ -1,0 +1,12 @@
+*label shop
+What would you like to buy?
+*choice
+  *hide_reuse #Buy a sword.
+    You buy a sword.
+    *goto shop
+  *hide_reuse #Buy a shield.
+    You buy a shield.
+    *goto shop
+  #Leave the shop.
+    You leave.
+    *finish

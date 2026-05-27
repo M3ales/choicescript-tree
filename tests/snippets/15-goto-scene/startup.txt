@@ -1,0 +1,8 @@
+*create player_ready true
+
+Welcome to the adventure.
+
+*if (player_ready)
+  *goto_scene chapter1
+
+You are not ready yet.

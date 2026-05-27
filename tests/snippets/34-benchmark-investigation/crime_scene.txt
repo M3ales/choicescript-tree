@@ -1,0 +1,54 @@
+*temp areas_searched 0
+*temp found_weapon_here false
+*temp found_documents_here false
+*temp found_glass_here false
+
+You arrive at Blackwood Manor's study. The chalk outline is still on the floor.
+
+*label scene_hub
+
+*if areas_searched >= 4
+  You've thoroughly searched the area. Nothing more to find.
+  *goto scene_exit
+
+Areas searched: ${areas_searched} of 4.
+
+*choice
+  *hide_reuse #Search the desk
+    *set areas_searched + 1
+    You rifle through the drawers.
+    *if areas_searched = 1
+      You find insurance documents worth a fortune. Motive!
+      *set has_motive true
+      *set clues_found + 1
+      *set notes & " Motive found."
+    *else
+      Nothing else of interest in the desk.
+    *goto scene_hub
+  *hide_reuse #Examine the bookshelf
+    *set areas_searched + 1
+    A book is out of place. Behind it, a hidden compartment.
+    *set clues_found + 1
+    *set notes & " Hidden compartment found."
+    *goto scene_hub
+  *hide_reuse #Check near the window
+    *set areas_searched + 1
+    Broken glass on the inside. Staged break-in?
+    *set found_glass_here true
+    *set clues_found + 1
+    *set notes & " Staged break-in evidence."
+    *goto scene_hub
+  *hide_reuse #Look under the furniture
+    *set areas_searched + 1
+    *set found_weapon_here true
+    A letter opener with stains. The murder weapon!
+    *set has_weapon true
+    *set clues_found + 1
+    *set notes & " Weapon found."
+    *goto scene_hub
+  #Return to case hub
+    *goto scene_exit
+
+*label scene_exit
+You step back from the crime scene.
+*goto_scene startup case_hub

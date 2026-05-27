@@ -1,0 +1,106 @@
+[
+  {
+    "labels": {
+      "add_rep": {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "helpers",
+          "indent": 0,
+          "lineNumber": 0,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "add_rep",
+          "rawValue": "add_rep",
+          "position": 6,
+          "lineNumber": 0,
+          "sceneName": "helpers",
+          "indent": 0,
+          "isLabelName": true
+        }
+      }
+    },
+    "globalVariables": {},
+    "tempVariables": {},
+    "checkpoints": {},
+    "gosubs": [],
+    "gotos": [],
+    "implicitControlFlow": []
+  },
+  {
+    "labels": {},
+    "globalVariables": {
+      "reputation": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "reputation",
+          "rawValue": "reputation",
+          "position": 8,
+          "lineNumber": 0,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 0,
+            "position": 19,
+            "lineNumber": 0,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 0,
+          "position": 0
+        }
+      }
+    },
+    "tempVariables": {},
+    "checkpoints": {},
+    "gosubs": [
+      {
+        "kind": "GoSubScene",
+        "token": {
+          "type": "GoSubScene",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 3,
+          "position": 0
+        },
+        "scene": {
+          "type": "Identifier",
+          "value": "helpers",
+          "rawValue": "helpers",
+          "position": 13,
+          "lineNumber": 3,
+          "sceneName": "startup",
+          "indent": 0,
+          "isSceneName": true,
+          "isLabelName": false
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "add_rep",
+          "rawValue": "add_rep",
+          "position": 21,
+          "lineNumber": 3,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        },
+        "args": []
+      }
+    ],
+    "gotos": [],
+    "implicitControlFlow": []
+  }
+]

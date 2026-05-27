@@ -1,0 +1,93 @@
+[
+  {
+    "labels": {
+      "start_adventure": {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 3,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "start_adventure",
+          "rawValue": "start_adventure",
+          "position": 6,
+          "lineNumber": 3,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        }
+      },
+      "the_end": {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 7,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "the_end",
+          "rawValue": "the_end",
+          "position": 6,
+          "lineNumber": 7,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        }
+      }
+    },
+    "globalVariables": {},
+    "tempVariables": {},
+    "checkpoints": {},
+    "gosubs": [],
+    "gotos": [
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 1,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "start_adventure",
+          "rawValue": "start_adventure",
+          "position": 6,
+          "lineNumber": 1,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 5,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "the_end",
+          "rawValue": "the_end",
+          "position": 6,
+          "lineNumber": 5,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        }
+      }
+    ],
+    "implicitControlFlow": []
+  }
+]

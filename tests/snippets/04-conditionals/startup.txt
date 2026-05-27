@@ -1,0 +1,11 @@
+*create strength 50
+*create charm 30
+
+*if (strength > 40)
+  You are strong.
+*elseif (charm > 25)
+  You are charming.
+*else
+  You are average.
+
+Moving on.

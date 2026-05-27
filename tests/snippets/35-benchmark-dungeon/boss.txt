@@ -1,0 +1,123 @@
+*temp boss_hp 200
+*temp phase 1
+*temp fight_round 0
+*temp boss_attack 20
+*temp enraged false
+
+The iron door groans open. A massive stone golem stirs to life.
+
+"INTRUDER. YOU SHALL NOT PASS."
+
+*label boss_fight
+*set fight_round + 1
+
+*if boss_hp <= 100
+  *if phase = 1
+    *set phase 2
+    *set boss_attack + 10
+    *set enraged true
+    The golem's eyes flare red! It enters a berserk rage!
+
+Round ${fight_round}. @{enraged ENRAGED |} Boss HP: ${boss_hp}. Your HP: ${hp}.
+
+*if boss_hp <= 0
+  *goto boss_victory
+*if hp <= 0
+  *goto boss_defeat
+
+*choice
+  #Heavy attack
+    *temp damage 0
+    *rand damage (attack) (attack + 10)
+    *set boss_hp - damage
+    You smash the golem for ${damage} damage!
+    *temp hit 0
+    *rand hit boss_attack (boss_attack + 15)
+    *temp mitigated (hit - defense)
+    *if mitigated < 0
+      *set mitigated 0
+    *set hp - mitigated
+    The golem retaliates! ${mitigated} damage!
+    *goto boss_fight
+  #Aim for the cracks
+    *temp precision_roll 0
+    *rand precision_roll 1 10
+    *if precision_roll > 5
+      *temp damage 0
+      *rand damage (attack + 5) (attack + 20)
+      *set boss_hp - damage
+      You find a weak point! ${damage} critical damage!
+    *else
+      Your attack glances off solid stone.
+    *temp hit 0
+    *rand hit boss_attack (boss_attack + 10)
+    *temp mitigated (hit - defense)
+    *if mitigated < 0
+      *set mitigated 0
+    *set hp - mitigated
+    The golem swings! ${mitigated} damage!
+    *goto boss_fight
+  *selectable_if (potions > 0) #Heal with a potion
+    *set potions - 1
+    *temp heal 0
+    *rand heal 30 50
+    *set hp + heal
+    *if hp > max_hp
+      *set hp max_hp
+    You drink a potion. HP: ${hp}/${max_hp}.
+    *temp hit 0
+    *rand hit (boss_attack - 5) boss_attack
+    *temp mitigated (hit - defense)
+    *if mitigated < 0
+      *set mitigated 0
+    *set hp - mitigated
+    The golem strikes while you heal! ${mitigated} damage!
+    *goto boss_fight
+  *selectable_if (enraged) #Wait for an opening
+    *temp dodge_roll 0
+    *rand dodge_roll 1 10
+    *if dodge_roll > 3
+      The berserk golem overextends!
+      *temp damage 0
+      *rand damage (attack + 10) (attack + 25)
+      *set boss_hp - damage
+      A devastating counter for ${damage}!
+    *else
+      You mistime it! The golem crushes you.
+      *temp hit 0
+      *rand hit (boss_attack + 5) (boss_attack + 20)
+      *set hp - hit
+      ${hit} unmitigated damage!
+    *goto boss_fight
+
+*label boss_victory
+*set boss_defeated true
+*set treasure_collected + 10
+
+The golem crumbles into rubble. Behind it, a hoard of ancient treasure.
+
+Victory in ${fight_round} rounds!
+
+*choice
+  #Claim the treasure and leave
+    You gather armfuls of gold and gems.
+    *goto boss_exit
+  #Search for something special
+    *set attack + 5
+    *set defense + 5
+    Among the rubble you find an enchanted ring. Its power flows into you.
+    *goto boss_exit
+
+*label boss_defeat
+The golem's fist comes down one final time.
+
+You lasted ${fight_round} rounds against the dungeon boss. A valiant effort.
+*ending "Fallen to the Guardian"
+
+*label boss_exit
+You emerge from the dungeon, victorious.
+
+Final stats: ${encounters} encounters, ${rooms_cleared} rooms explored, ${treasure_collected} treasure collected.
+
+The Irondelve Dungeon is conquered!
+*finish

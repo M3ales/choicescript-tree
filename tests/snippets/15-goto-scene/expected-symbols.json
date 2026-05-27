@@ -1,0 +1,74 @@
+[
+  {
+    "labels": {},
+    "globalVariables": {},
+    "tempVariables": {},
+    "checkpoints": {},
+    "gosubs": [],
+    "gotos": [],
+    "implicitControlFlow": []
+  },
+  {
+    "labels": {},
+    "globalVariables": {
+      "player_ready": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "player_ready",
+          "rawValue": "player_ready",
+          "position": 8,
+          "lineNumber": 0,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "BooleanLiteral",
+            "value": true,
+            "position": 21,
+            "lineNumber": 0,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 0,
+          "position": 0
+        }
+      }
+    },
+    "tempVariables": {},
+    "checkpoints": {},
+    "gosubs": [],
+    "gotos": [
+      {
+        "kind": "GotoScene",
+        "token": {
+          "type": "GotoScene",
+          "sceneName": "startup",
+          "indent": 1,
+          "lineNumber": 5,
+          "position": 2
+        },
+        "scene": {
+          "type": "Identifier",
+          "value": "chapter1",
+          "rawValue": "chapter1",
+          "position": 14,
+          "lineNumber": 5,
+          "sceneName": "startup",
+          "indent": 1,
+          "isSceneName": true,
+          "isLabelName": false
+        }
+      }
+    ],
+    "implicitControlFlow": []
+  }
+]

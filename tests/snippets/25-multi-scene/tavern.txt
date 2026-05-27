@@ -1,0 +1,8 @@
+You enter the tavern.
+*choice
+  #Order a drink.
+    You sit at the bar.
+    *goto_scene market
+  #Talk to the bartender.
+    The bartender nods.
+    *finish

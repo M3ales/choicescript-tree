@@ -1,0 +1,133 @@
+[
+  {
+    "sceneName": "startup",
+    "blocks": {
+      "startup:b_0": {
+        "exitType": "Goto"
+      },
+      "startup:b_1": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_2": {
+        "exitType": "Return"
+      },
+      "startup:b_3": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_4": {
+        "exitType": "GoSub"
+      },
+      "startup:b_5": {
+        "exitType": "ImplicitEnd"
+      }
+    },
+    "blockIndex": {
+      "startup:b_0": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:0",
+          "startup:1",
+          "startup:2",
+          "startup:3"
+        ],
+        "entryType": "SceneEntry",
+        "exitType": "Goto"
+      },
+      "startup:b_1": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "startup:b_2": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:4",
+          "startup:5",
+          "startup:6",
+          "startup:7"
+        ],
+        "entryType": "Label",
+        "exitType": "Return",
+        "label": "top_label"
+      },
+      "startup:b_3": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "startup:b_4": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:8",
+          "startup:9",
+          "startup:10"
+        ],
+        "entryType": "Label",
+        "exitType": "GoSub",
+        "label": "bottom_label"
+      },
+      "startup:b_5": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "GoSubContinuation",
+        "exitType": "ImplicitEnd"
+      }
+    },
+    "edges": [
+      {
+        "kind": "Goto",
+        "sourceBlockId": "startup:b_0",
+        "targetBlockId": "startup:b_4",
+        "metadata": {
+          "label": "bottom_label"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "startup:b_1",
+        "targetBlockId": "startup:b_2",
+        "metadata": {}
+      },
+      {
+        "kind": "Return",
+        "sourceBlockId": "startup:b_2",
+        "targetBlockId": null,
+        "metadata": {}
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "startup:b_3",
+        "targetBlockId": "startup:b_4",
+        "metadata": {}
+      },
+      {
+        "kind": "GoSubCall",
+        "sourceBlockId": "startup:b_4",
+        "targetBlockId": "startup:b_2",
+        "metadata": {
+          "label": "top_label"
+        }
+      },
+      {
+        "kind": "GoSubReturn",
+        "sourceBlockId": "startup:b_4",
+        "targetBlockId": "startup:b_5",
+        "metadata": {}
+      },
+      {
+        "kind": "SceneExit",
+        "sourceBlockId": "startup:b_5",
+        "targetBlockId": null,
+        "metadata": {}
+      }
+    ],
+    "entryBlockId": "startup:b_0",
+    "labelToBlockId": {
+      "top_label": "startup:b_2",
+      "bottom_label": "startup:b_4"
+    },
+    "unresolvedEdges": []
+  }
+]

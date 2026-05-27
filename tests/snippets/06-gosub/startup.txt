@@ -1,0 +1,10 @@
+*create gold 100
+
+You check your inventory.
+*gosub check_gold
+Moving on.
+*finish
+
+*label check_gold
+You have ${gold} gold.
+*return

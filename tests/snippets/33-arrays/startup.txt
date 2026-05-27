@@ -1,0 +1,71 @@
+*create inventory_1 "sword"
+*create inventory_2 "shield"
+*create inventory_3 "potion"
+*create inventory_count 3
+*create i 0
+*create found ""
+
+*comment create_array with numeric default
+*create_array stats 5 0
+*comment create_array with string default
+*create_array colors 3 "red"
+
+Item 1: ${inventory_1}
+Item 2: ${inventory_2}
+Item 3: ${inventory_3}
+
+*comment direct array index access
+*set inventory_1 "axe"
+Replaced item 1: ${inventory_1}
+
+*comment dynamic index access via bracket notation
+*set i 2
+*set inventory[i] "helm"
+Updated item ${i}: ${inventory[i]}
+
+*comment loop through array
+*set found ""
+*temp idx 1
+*label search_loop
+*if (idx <= inventory_count)
+  *if (inventory[idx] = "potion")
+    *set found "potion"
+    *goto search_done
+  *set idx + 1
+  *goto search_loop
+*label search_done
+Found: ${found}
+
+*comment create_array access and mutation
+*set stats_1 10
+*set stats_2 20
+*temp si 3
+*set stats[si] 30
+Stats: ${stats_1}, ${stats_2}, ${stats[si]}
+
+*set colors_1 "blue"
+*set colors[2] "green"
+Colors: ${colors_1}, ${colors[2]}, ${colors_3}
+
+*comment temp_array usage
+*temp_array scores 4 0
+*set scores_1 100
+*set scores_2 85
+*temp ti 3
+*set scores[ti] 72
+*set scores_4 91
+Scores: ${scores_1}, ${scores_2}, ${scores[ti]}, ${scores_4}
+
+*temp_array labels 2 "none"
+*set labels_1 "alpha"
+*set labels_2 "beta"
+Labels: ${labels_1}, ${labels_2}
+
+*comment delete_array usage
+*delete_array scores
+*delete_array labels
+
+*comment nested index expression
+*temp slot 3
+*set inventory[slot] "elixir"
+Slot ${slot}: ${inventory[slot]}

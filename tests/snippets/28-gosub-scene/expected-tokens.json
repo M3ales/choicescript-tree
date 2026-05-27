@@ -1,0 +1,196 @@
+[
+  [
+    {
+      "sceneName": "helpers",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    {
+      "type": "Label",
+      "sceneName": "helpers",
+      "indent": 0,
+      "lineNumber": 0,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "add_rep",
+      "rawValue": "add_rep",
+      "position": 6,
+      "lineNumber": 0,
+      "sceneName": "helpers",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "helpers",
+      "indent": 0,
+      "lineNumber": 1,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "reputation",
+      "rawValue": "reputation",
+      "position": 5,
+      "lineNumber": 1,
+      "sceneName": "helpers",
+      "indent": 0
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 16,
+      "lineNumber": 1,
+      "sceneName": "helpers",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 10,
+      "position": 18,
+      "lineNumber": 1,
+      "sceneName": "helpers",
+      "indent": 0
+    },
+    {
+      "type": "Return",
+      "sceneName": "helpers",
+      "indent": 0,
+      "lineNumber": 2,
+      "position": 0
+    },
+    {
+      "lineNumber": 3,
+      "indent": 0,
+      "position": 0,
+      "sceneName": "helpers",
+      "type": "SceneEnd"
+    }
+  ],
+  [
+    {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 0,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "reputation",
+      "rawValue": "reputation",
+      "position": 8,
+      "lineNumber": 0,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 19,
+      "lineNumber": 0,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 2,
+      "position": 0,
+      "indent": 0,
+      "content": "You arrive in town.\n"
+    },
+    {
+      "type": "GoSubScene",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 3,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "helpers",
+      "rawValue": "helpers",
+      "position": 13,
+      "lineNumber": 3,
+      "sceneName": "startup",
+      "indent": 0,
+      "isSceneName": true,
+      "isLabelName": false
+    },
+    {
+      "type": "Identifier",
+      "value": "add_rep",
+      "rawValue": "add_rep",
+      "position": 21,
+      "lineNumber": 3,
+      "sceneName": "startup",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 4,
+      "position": 0,
+      "indent": 0,
+      "content": "Your reputation is "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "startup",
+      "lineNumber": 4,
+      "position": 19,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "reputation",
+      "rawValue": "reputation",
+      "position": 21,
+      "lineNumber": 4,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "startup",
+      "lineNumber": 4,
+      "position": 31,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 4,
+      "position": 32,
+      "indent": 0,
+      "content": ".\n"
+    },
+    {
+      "type": "Finish",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 5,
+      "position": 0
+    },
+    {
+      "lineNumber": 6,
+      "indent": 0,
+      "position": 0,
+      "sceneName": "startup",
+      "type": "SceneEnd"
+    }
+  ]
+]

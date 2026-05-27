@@ -1,0 +1,253 @@
+[
+  [
+    {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 0,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "weapon",
+      "rawValue": "weapon",
+      "position": 8,
+      "lineNumber": 0,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "none",
+      "position": 15,
+      "lineNumber": 0,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 2,
+      "position": 0,
+      "indent": 0,
+      "content": "What do you do?\n"
+    },
+    {
+      "type": "Choice",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 3,
+      "position": 0
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 4,
+      "rawText": "Go to the armory.",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 4,
+      "position": null,
+      "indent": 1,
+      "content": "Go to the armory."
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 2,
+      "lineNumber": 5,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "weapon",
+      "rawValue": "weapon",
+      "position": 9,
+      "lineNumber": 5,
+      "sceneName": "startup",
+      "indent": 2
+    },
+    {
+      "type": "StringLiteral",
+      "value": "sword",
+      "position": 16,
+      "lineNumber": 5,
+      "sceneName": "startup",
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 6,
+      "position": 4,
+      "indent": 2,
+      "content": "Which weapon?\n"
+    },
+    {
+      "type": "Choice",
+      "sceneName": "startup",
+      "indent": 2,
+      "lineNumber": 7,
+      "position": 4
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "startup",
+      "indent": 3,
+      "lineNumber": 8,
+      "rawText": "Take the sword.",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 8,
+      "position": null,
+      "indent": 3,
+      "content": "Take the sword."
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 4,
+      "lineNumber": 9,
+      "position": 8
+    },
+    {
+      "type": "Identifier",
+      "value": "weapon",
+      "rawValue": "weapon",
+      "position": 13,
+      "lineNumber": 9,
+      "sceneName": "startup",
+      "indent": 4
+    },
+    {
+      "type": "StringLiteral",
+      "value": "sword",
+      "position": 20,
+      "lineNumber": 9,
+      "sceneName": "startup",
+      "indent": 4
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 10,
+      "position": 8,
+      "indent": 4,
+      "content": "A fine blade.\n"
+    },
+    {
+      "type": "Finish",
+      "sceneName": "startup",
+      "indent": 4,
+      "lineNumber": 11,
+      "position": 8
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "startup",
+      "indent": 3,
+      "lineNumber": 12,
+      "rawText": "Take the axe.",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 12,
+      "position": null,
+      "indent": 3,
+      "content": "Take the axe."
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 4,
+      "lineNumber": 13,
+      "position": 8
+    },
+    {
+      "type": "Identifier",
+      "value": "weapon",
+      "rawValue": "weapon",
+      "position": 13,
+      "lineNumber": 13,
+      "sceneName": "startup",
+      "indent": 4
+    },
+    {
+      "type": "StringLiteral",
+      "value": "axe",
+      "position": 20,
+      "lineNumber": 13,
+      "sceneName": "startup",
+      "indent": 4
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 14,
+      "position": 8,
+      "indent": 4,
+      "content": "Heavy but powerful.\n"
+    },
+    {
+      "type": "Finish",
+      "sceneName": "startup",
+      "indent": 4,
+      "lineNumber": 15,
+      "position": 8
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 16,
+      "rawText": "Go to the market.",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 16,
+      "position": null,
+      "indent": 1,
+      "content": "Go to the market."
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 17,
+      "position": 4,
+      "indent": 2,
+      "content": "You browse the stalls.\n"
+    },
+    {
+      "type": "Finish",
+      "sceneName": "startup",
+      "indent": 2,
+      "lineNumber": 18,
+      "position": 4
+    },
+    {
+      "lineNumber": 19,
+      "indent": 0,
+      "position": 0,
+      "sceneName": "startup",
+      "type": "SceneEnd"
+    }
+  ]
+]

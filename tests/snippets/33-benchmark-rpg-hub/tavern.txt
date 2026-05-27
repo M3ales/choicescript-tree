@@ -1,0 +1,51 @@
+*temp drink_count 0
+*temp heard_rumor false
+
+The tavern is warm and bustling. A bard plays in the corner.
+
+*label tavern_hub
+
+*choice
+  *selectable_if (gold >= 5) #Buy a drink (5 gold)
+    *set gold - 5
+    *set drink_count + 1
+    *set reputation %+ 5
+    You enjoy a cold ale.
+    *if drink_count >= 3
+      The barkeep leans in. "You seem trustworthy. There's an arena champion looking for a real fight."
+      *set heard_rumor true
+    *goto tavern_hub
+  #Talk to the bard
+    *gosub bard_conversation
+    *goto tavern_hub
+  *selectable_if (charm >= 50) #Charm the barmaid for information
+    She whispers, "The shopkeeper has a special sword. Pricey, but worth it."
+    *set reputation %+ 10
+    *goto tavern_hub
+  #Leave the tavern
+    *goto tavern_exit
+
+*label tavern_exit
+You step back out into the village square.
+*goto_scene startup village_hub
+
+*label bard_conversation
+The bard pauses between songs.
+
+*choice
+  #Request a heroic ballad
+    *set reputation %+ 5
+    The bard sings of ancient heroes. The crowd raises their mugs.
+    *return
+  #Ask about local news
+    "Strange things happening near the old dungeon," the bard says quietly.
+    *return
+  #Toss a coin (1 gold)
+    *if gold >= 1
+      *set gold - 1
+      *set reputation %+ 10
+      The bard nods gratefully and plays your favorite tune.
+    *else
+      You reach for your purse but find it empty. Embarrassing.
+      *set reputation %- 5
+    *return

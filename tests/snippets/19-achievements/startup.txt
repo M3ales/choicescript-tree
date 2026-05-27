@@ -1,0 +1,8 @@
+*achievement first_blood visible 10 First Blood
+  Draw blood for the first time.
+*achievement secret_room hidden 20 Secret Room
+  Find the hidden room.
+
+*achieve first_blood
+
+*check_achievements

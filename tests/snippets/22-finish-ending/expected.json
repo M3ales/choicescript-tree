@@ -1,0 +1,258 @@
+[
+  {
+    "name": "startup",
+    "statements": [
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 0,
+            "position": 0,
+            "indent": 0,
+            "content": "The final battle is upon you.\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 30,
+            "lineNumber": 0,
+            "position": 0,
+            "text": "The final battle is upon you.\n"
+          }
+        ]
+      },
+      {
+        "kind": "Choice",
+        "token": {
+          "type": "Choice",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 1,
+          "position": 0
+        },
+        "body": [
+          {
+            "kind": "ChoiceOption",
+            "token": {
+              "type": "ChoiceOption",
+              "sceneName": "startup",
+              "indent": 1,
+              "lineNumber": 2,
+              "rawText": "Fight to the end.",
+              "hasMultiReplace": false
+            },
+            "body": [
+              {
+                "content": [
+                  {
+                    "type": "Prose",
+                    "sceneName": "startup",
+                    "lineNumber": 3,
+                    "position": 4,
+                    "indent": 2,
+                    "content": "You fight valiantly.\n"
+                  }
+                ],
+                "kind": "Prose",
+                "parsedSegments": [
+                  {
+                    "kind": "Text",
+                    "start": 0,
+                    "end": 21,
+                    "lineNumber": 3,
+                    "position": 4,
+                    "text": "You fight valiantly.\n"
+                  }
+                ]
+              },
+              {
+                "kind": "Ending",
+                "token": {
+                  "type": "Ending",
+                  "sceneName": "startup",
+                  "indent": 2,
+                  "lineNumber": 4,
+                  "position": 4
+                },
+                "buttonText": {
+                  "token": {
+                    "type": "Prose",
+                    "sceneName": "startup",
+                    "lineNumber": 4,
+                    "position": 11,
+                    "indent": 2,
+                    "content": "Victory!"
+                  },
+                  "content": "Victory!",
+                  "parsedSegments": [
+                    {
+                      "kind": "Text",
+                      "start": 0,
+                      "end": 8,
+                      "lineNumber": 4,
+                      "position": 11,
+                      "text": "Victory!"
+                    }
+                  ],
+                  "lineNumber": 4,
+                  "position": 11,
+                  "indent": 2,
+                  "sceneName": "startup"
+                }
+              }
+            ],
+            "parsedSegments": [
+              {
+                "kind": "Text",
+                "start": 0,
+                "end": 17,
+                "lineNumber": 2,
+                "position": null,
+                "text": "Fight to the end."
+              }
+            ],
+            "reuse": null,
+            "selectableIf": null
+          },
+          {
+            "kind": "ChoiceOption",
+            "token": {
+              "type": "ChoiceOption",
+              "sceneName": "startup",
+              "indent": 1,
+              "lineNumber": 5,
+              "rawText": "Surrender.",
+              "hasMultiReplace": false
+            },
+            "body": [
+              {
+                "content": [
+                  {
+                    "type": "Prose",
+                    "sceneName": "startup",
+                    "lineNumber": 6,
+                    "position": 4,
+                    "indent": 2,
+                    "content": "You lay down your arms.\n"
+                  }
+                ],
+                "kind": "Prose",
+                "parsedSegments": [
+                  {
+                    "kind": "Text",
+                    "start": 0,
+                    "end": 24,
+                    "lineNumber": 6,
+                    "position": 4,
+                    "text": "You lay down your arms.\n"
+                  }
+                ]
+              },
+              {
+                "kind": "Finish",
+                "token": {
+                  "type": "Finish",
+                  "sceneName": "startup",
+                  "indent": 2,
+                  "lineNumber": 7,
+                  "position": 4
+                },
+                "buttonText": null
+              }
+            ],
+            "parsedSegments": [
+              {
+                "kind": "Text",
+                "start": 0,
+                "end": 10,
+                "lineNumber": 5,
+                "position": null,
+                "text": "Surrender."
+              }
+            ],
+            "reuse": null,
+            "selectableIf": null
+          },
+          {
+            "kind": "ChoiceOption",
+            "token": {
+              "type": "ChoiceOption",
+              "sceneName": "startup",
+              "indent": 1,
+              "lineNumber": 8,
+              "rawText": "Negotiate peace.",
+              "hasMultiReplace": false
+            },
+            "body": [
+              {
+                "content": [
+                  {
+                    "type": "Prose",
+                    "sceneName": "startup",
+                    "lineNumber": 9,
+                    "position": 4,
+                    "indent": 2,
+                    "content": "You broker a deal.\n"
+                  }
+                ],
+                "kind": "Prose",
+                "parsedSegments": [
+                  {
+                    "kind": "Text",
+                    "start": 0,
+                    "end": 19,
+                    "lineNumber": 9,
+                    "position": 4,
+                    "text": "You broker a deal.\n"
+                  }
+                ]
+              },
+              {
+                "kind": "Finish",
+                "token": {
+                  "type": "Finish",
+                  "sceneName": "startup",
+                  "indent": 2,
+                  "lineNumber": 10,
+                  "position": 4
+                },
+                "buttonText": null
+              }
+            ],
+            "parsedSegments": [
+              {
+                "kind": "Text",
+                "start": 0,
+                "end": 16,
+                "lineNumber": 8,
+                "position": null,
+                "text": "Negotiate peace."
+              }
+            ],
+            "reuse": null,
+            "selectableIf": null
+          }
+        ]
+      }
+    ],
+    "parseErrors": [],
+    "start": {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    "end": {
+      "type": "Finish",
+      "sceneName": "startup",
+      "indent": 2,
+      "lineNumber": 10,
+      "position": 4
+    }
+  }
+]

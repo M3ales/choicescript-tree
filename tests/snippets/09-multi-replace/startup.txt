@@ -1,0 +1,5 @@
+*create gender "male"
+
+@{gender He|She|They} walked into the room.
+
+Good @{gender morning sir|morning ma'am|day}.

@@ -1,0 +1,343 @@
+[
+  {
+    "labels": {
+      "search_loop": {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 23,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "search_loop",
+          "rawValue": "search_loop",
+          "position": 6,
+          "lineNumber": 23,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        }
+      },
+      "search_done": {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 30,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "search_done",
+          "rawValue": "search_done",
+          "position": 6,
+          "lineNumber": 30,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        }
+      }
+    },
+    "globalVariables": {
+      "inventory_1": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "inventory_1",
+          "rawValue": "inventory_1",
+          "position": 8,
+          "lineNumber": 0,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "StringLiteral",
+            "value": "sword",
+            "position": 20,
+            "lineNumber": 0,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 0,
+          "position": 0
+        }
+      },
+      "inventory_2": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "inventory_2",
+          "rawValue": "inventory_2",
+          "position": 8,
+          "lineNumber": 1,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "StringLiteral",
+            "value": "shield",
+            "position": 20,
+            "lineNumber": 1,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 1,
+          "position": 0
+        }
+      },
+      "inventory_3": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "inventory_3",
+          "rawValue": "inventory_3",
+          "position": 8,
+          "lineNumber": 2,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "StringLiteral",
+            "value": "potion",
+            "position": 20,
+            "lineNumber": 2,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 2,
+          "position": 0
+        }
+      },
+      "inventory_count": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "inventory_count",
+          "rawValue": "inventory_count",
+          "position": 8,
+          "lineNumber": 3,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 3,
+            "position": 24,
+            "lineNumber": 3,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 3,
+          "position": 0
+        }
+      },
+      "i": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "i",
+          "rawValue": "i",
+          "position": 8,
+          "lineNumber": 4,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 0,
+            "position": 10,
+            "lineNumber": 4,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 4,
+          "position": 0
+        }
+      },
+      "found": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "found",
+          "rawValue": "found",
+          "position": 8,
+          "lineNumber": 5,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "StringLiteral",
+            "value": "",
+            "position": 14,
+            "lineNumber": 5,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 5,
+          "position": 0
+        }
+      }
+    },
+    "tempVariables": {
+      "idx": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "idx",
+          "rawValue": "idx",
+          "position": 6,
+          "lineNumber": 22,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 1,
+            "position": 10,
+            "lineNumber": 22,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Temporary",
+        "token": {
+          "type": "CreateTempVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 22,
+          "position": 0
+        }
+      },
+      "slot": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "slot",
+          "rawValue": "slot",
+          "position": 6,
+          "lineNumber": 34,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 3,
+            "position": 11,
+            "lineNumber": 34,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Temporary",
+        "token": {
+          "type": "CreateTempVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 34,
+          "position": 0
+        }
+      }
+    },
+    "checkpoints": {},
+    "gosubs": [],
+    "gotos": [
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "startup",
+          "indent": 2,
+          "lineNumber": 27,
+          "position": 4
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "search_done",
+          "rawValue": "search_done",
+          "position": 10,
+          "lineNumber": 27,
+          "sceneName": "startup",
+          "indent": 2,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "startup",
+          "indent": 1,
+          "lineNumber": 29,
+          "position": 2
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "search_loop",
+          "rawValue": "search_loop",
+          "position": 8,
+          "lineNumber": 29,
+          "sceneName": "startup",
+          "indent": 1,
+          "isLabelName": true
+        }
+      }
+    ],
+    "implicitControlFlow": []
+  }
+]

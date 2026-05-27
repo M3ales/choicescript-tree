@@ -1,0 +1,189 @@
+[
+  [
+    {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 0,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "strength",
+      "rawValue": "strength",
+      "position": 8,
+      "lineNumber": 0,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 50,
+      "position": 17,
+      "lineNumber": 0,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 1,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "charm",
+      "rawValue": "charm",
+      "position": 8,
+      "lineNumber": 1,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 30,
+      "position": 14,
+      "lineNumber": 1,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "If",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 3,
+      "position": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 4,
+      "lineNumber": 3,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "strength",
+      "rawValue": "strength",
+      "position": 5,
+      "lineNumber": 3,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "GreaterThanOperator",
+      "rawValue": ">",
+      "position": 14,
+      "lineNumber": 3,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 40,
+      "position": 16,
+      "lineNumber": 3,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 18,
+      "lineNumber": 3,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 4,
+      "position": 2,
+      "indent": 1,
+      "content": "You are strong.\n"
+    },
+    {
+      "type": "ElseIf",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 5,
+      "position": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 8,
+      "lineNumber": 5,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "charm",
+      "rawValue": "charm",
+      "position": 9,
+      "lineNumber": 5,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "GreaterThanOperator",
+      "rawValue": ">",
+      "position": 15,
+      "lineNumber": 5,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 25,
+      "position": 17,
+      "lineNumber": 5,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 19,
+      "lineNumber": 5,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 6,
+      "position": 2,
+      "indent": 1,
+      "content": "You are charming.\n"
+    },
+    {
+      "type": "Else",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 7,
+      "position": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 8,
+      "position": 2,
+      "indent": 1,
+      "content": "You are average.\n\n"
+    },
+    {
+      "lineNumber": 11,
+      "indent": 0,
+      "position": 0,
+      "sceneName": "startup",
+      "type": "SceneEnd"
+    }
+  ]
+]

@@ -1,0 +1,3 @@
+*label add_rep
+*set reputation + 10
+*return

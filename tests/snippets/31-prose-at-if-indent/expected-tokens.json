@@ -1,0 +1,3651 @@
+[
+  [
+    {
+      "sceneName": "equivalent",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "equivalent",
+      "indent": 0,
+      "lineNumber": 0,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "val",
+      "rawValue": "val",
+      "position": 5,
+      "lineNumber": 0,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 100,
+      "position": 9,
+      "lineNumber": 0,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "equivalent",
+      "indent": 0,
+      "lineNumber": 1,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "nested",
+      "rawValue": "nested",
+      "position": 5,
+      "lineNumber": 1,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 50,
+      "position": 12,
+      "lineNumber": 1,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "equivalent",
+      "indent": 0,
+      "lineNumber": 2,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "deep",
+      "rawValue": "deep",
+      "position": 5,
+      "lineNumber": 2,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 25,
+      "position": 10,
+      "lineNumber": 2,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "equivalent",
+      "indent": 0,
+      "lineNumber": 3,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "implicit_control_flow",
+      "rawValue": "implicit_control_flow",
+      "position": 5,
+      "lineNumber": 3,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "BooleanLiteral",
+      "value": true,
+      "position": 27,
+      "lineNumber": 3,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "equivalent",
+      "indent": 0,
+      "lineNumber": 4,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "matched_deep",
+      "rawValue": "matched_deep",
+      "position": 6,
+      "lineNumber": 4,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "BooleanLiteral",
+      "value": false,
+      "position": 19,
+      "lineNumber": 4,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "equivalent",
+      "indent": 0,
+      "lineNumber": 5,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "matched_nested",
+      "rawValue": "matched_nested",
+      "position": 6,
+      "lineNumber": 5,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "BooleanLiteral",
+      "value": false,
+      "position": 21,
+      "lineNumber": 5,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "equivalent",
+      "indent": 0,
+      "lineNumber": 6,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "matched_outer",
+      "rawValue": "matched_outer",
+      "position": 6,
+      "lineNumber": 6,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "BooleanLiteral",
+      "value": false,
+      "position": 20,
+      "lineNumber": 6,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "equivalent",
+      "lineNumber": 8,
+      "position": 0,
+      "indent": 0,
+      "content": "Prose at indent 0 before if.\n\n"
+    },
+    {
+      "type": "If",
+      "sceneName": "equivalent",
+      "indent": 0,
+      "lineNumber": 10,
+      "position": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 4,
+      "lineNumber": 10,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "val",
+      "rawValue": "val",
+      "position": 5,
+      "lineNumber": 10,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "GreaterThanEqualsOperator",
+      "rawValue": ">=",
+      "position": 9,
+      "lineNumber": 10,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 100,
+      "position": 12,
+      "lineNumber": 10,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 15,
+      "lineNumber": 10,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "equivalent",
+      "lineNumber": 11,
+      "position": 2,
+      "indent": 1,
+      "content": "Inside if body indent 1.\n"
+    },
+    {
+      "type": "If",
+      "sceneName": "equivalent",
+      "indent": 1,
+      "lineNumber": 12,
+      "position": 2
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 6,
+      "lineNumber": 12,
+      "sceneName": "equivalent",
+      "indent": 1
+    },
+    {
+      "type": "Identifier",
+      "value": "nested",
+      "rawValue": "nested",
+      "position": 7,
+      "lineNumber": 12,
+      "sceneName": "equivalent",
+      "indent": 1
+    },
+    {
+      "type": "GreaterThanEqualsOperator",
+      "rawValue": ">=",
+      "position": 14,
+      "lineNumber": 12,
+      "sceneName": "equivalent",
+      "indent": 1
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 50,
+      "position": 17,
+      "lineNumber": 12,
+      "sceneName": "equivalent",
+      "indent": 1
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 19,
+      "lineNumber": 12,
+      "sceneName": "equivalent",
+      "indent": 1
+    },
+    {
+      "type": "Prose",
+      "sceneName": "equivalent",
+      "lineNumber": 13,
+      "position": 4,
+      "indent": 2,
+      "content": "Inside nested if indent 2.\n"
+    },
+    {
+      "type": "If",
+      "sceneName": "equivalent",
+      "indent": 2,
+      "lineNumber": 14,
+      "position": 4
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 8,
+      "lineNumber": 14,
+      "sceneName": "equivalent",
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "deep",
+      "rawValue": "deep",
+      "position": 9,
+      "lineNumber": 14,
+      "sceneName": "equivalent",
+      "indent": 2
+    },
+    {
+      "type": "GreaterThanEqualsOperator",
+      "rawValue": ">=",
+      "position": 14,
+      "lineNumber": 14,
+      "sceneName": "equivalent",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 25,
+      "position": 17,
+      "lineNumber": 14,
+      "sceneName": "equivalent",
+      "indent": 2
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 19,
+      "lineNumber": 14,
+      "sceneName": "equivalent",
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "equivalent",
+      "lineNumber": 15,
+      "position": 6,
+      "indent": 3,
+      "content": "Inside deep if indent 3.\n"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "equivalent",
+      "indent": 3,
+      "lineNumber": 16,
+      "position": 6
+    },
+    {
+      "type": "Identifier",
+      "value": "matched_deep",
+      "rawValue": "matched_deep",
+      "position": 11,
+      "lineNumber": 16,
+      "sceneName": "equivalent",
+      "indent": 3
+    },
+    {
+      "type": "BooleanLiteral",
+      "value": true,
+      "position": 24,
+      "lineNumber": 16,
+      "sceneName": "equivalent",
+      "indent": 3
+    },
+    {
+      "type": "Prose",
+      "sceneName": "equivalent",
+      "lineNumber": 18,
+      "position": 0,
+      "indent": 0,
+      "content": "Deep prose at indent 2.\n\n"
+    },
+    {
+      "type": "If",
+      "sceneName": "equivalent",
+      "indent": 0,
+      "lineNumber": 20,
+      "position": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 4,
+      "lineNumber": 20,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 5,
+      "lineNumber": 20,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "matched_deep",
+      "rawValue": "matched_deep",
+      "position": 6,
+      "lineNumber": 20,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "EqualityOperator",
+      "rawValue": "=",
+      "position": 19,
+      "lineNumber": 20,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "BooleanLiteral",
+      "value": false,
+      "position": 21,
+      "lineNumber": 20,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 26,
+      "lineNumber": 20,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "LogicalAnd",
+      "rawValue": "and",
+      "position": 28,
+      "lineNumber": 20,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 32,
+      "lineNumber": 20,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "deep",
+      "rawValue": "deep",
+      "position": 33,
+      "lineNumber": 20,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "LessThanOperator",
+      "rawValue": "<",
+      "position": 38,
+      "lineNumber": 20,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 25,
+      "position": 40,
+      "lineNumber": 20,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 42,
+      "lineNumber": 20,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 43,
+      "lineNumber": 20,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "equivalent",
+      "lineNumber": 21,
+      "position": 2,
+      "indent": 1,
+      "content": "Deep else indent 3.\n\n"
+    },
+    {
+      "type": "Prose",
+      "sceneName": "equivalent",
+      "lineNumber": 23,
+      "position": 0,
+      "indent": 0,
+      "content": "Deep prose after else at indent 2.\n\n"
+    },
+    {
+      "type": "If",
+      "sceneName": "equivalent",
+      "indent": 0,
+      "lineNumber": 25,
+      "position": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 4,
+      "lineNumber": 25,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "nested",
+      "rawValue": "nested",
+      "position": 5,
+      "lineNumber": 25,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "GreaterThanEqualsOperator",
+      "rawValue": ">=",
+      "position": 12,
+      "lineNumber": 25,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 50,
+      "position": 15,
+      "lineNumber": 25,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 17,
+      "lineNumber": 25,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "equivalent",
+      "indent": 1,
+      "lineNumber": 26,
+      "position": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "matched_nested",
+      "rawValue": "matched_nested",
+      "position": 7,
+      "lineNumber": 26,
+      "sceneName": "equivalent",
+      "indent": 1
+    },
+    {
+      "type": "BooleanLiteral",
+      "value": true,
+      "position": 22,
+      "lineNumber": 26,
+      "sceneName": "equivalent",
+      "indent": 1
+    },
+    {
+      "type": "Prose",
+      "sceneName": "equivalent",
+      "lineNumber": 28,
+      "position": 0,
+      "indent": 0,
+      "content": "Nested prose at indent 1.\n\n"
+    },
+    {
+      "type": "If",
+      "sceneName": "equivalent",
+      "indent": 0,
+      "lineNumber": 30,
+      "position": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 4,
+      "lineNumber": 30,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 5,
+      "lineNumber": 30,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "matched_nested",
+      "rawValue": "matched_nested",
+      "position": 6,
+      "lineNumber": 30,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "EqualityOperator",
+      "rawValue": "=",
+      "position": 21,
+      "lineNumber": 30,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "BooleanLiteral",
+      "value": false,
+      "position": 23,
+      "lineNumber": 30,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 28,
+      "lineNumber": 30,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "LogicalAnd",
+      "rawValue": "and",
+      "position": 30,
+      "lineNumber": 30,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 34,
+      "lineNumber": 30,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "nested",
+      "rawValue": "nested",
+      "position": 35,
+      "lineNumber": 30,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "GreaterThanEqualsOperator",
+      "rawValue": ">=",
+      "position": 42,
+      "lineNumber": 30,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 25,
+      "position": 45,
+      "lineNumber": 30,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 47,
+      "lineNumber": 30,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 48,
+      "lineNumber": 30,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "equivalent",
+      "lineNumber": 31,
+      "position": 2,
+      "indent": 1,
+      "content": "Nested elseif indent 2.\n"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "equivalent",
+      "indent": 1,
+      "lineNumber": 32,
+      "position": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "matched_nested",
+      "rawValue": "matched_nested",
+      "position": 7,
+      "lineNumber": 32,
+      "sceneName": "equivalent",
+      "indent": 1
+    },
+    {
+      "type": "BooleanLiteral",
+      "value": true,
+      "position": 22,
+      "lineNumber": 32,
+      "sceneName": "equivalent",
+      "indent": 1
+    },
+    {
+      "type": "Prose",
+      "sceneName": "equivalent",
+      "lineNumber": 34,
+      "position": 0,
+      "indent": 0,
+      "content": "Nested prose after elseif at indent 1.\n\n"
+    },
+    {
+      "type": "If",
+      "sceneName": "equivalent",
+      "indent": 0,
+      "lineNumber": 36,
+      "position": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 4,
+      "lineNumber": 36,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "matched_nested",
+      "rawValue": "matched_nested",
+      "position": 5,
+      "lineNumber": 36,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "EqualityOperator",
+      "rawValue": "=",
+      "position": 20,
+      "lineNumber": 36,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "BooleanLiteral",
+      "value": false,
+      "position": 22,
+      "lineNumber": 36,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 27,
+      "lineNumber": 36,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "equivalent",
+      "lineNumber": 37,
+      "position": 2,
+      "indent": 1,
+      "content": "Nested else indent 2.\n\n"
+    },
+    {
+      "type": "Prose",
+      "sceneName": "equivalent",
+      "lineNumber": 39,
+      "position": 0,
+      "indent": 0,
+      "content": "Nested prose after else at indent 1.\n\n"
+    },
+    {
+      "type": "If",
+      "sceneName": "equivalent",
+      "indent": 0,
+      "lineNumber": 41,
+      "position": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 4,
+      "lineNumber": 41,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "val",
+      "rawValue": "val",
+      "position": 5,
+      "lineNumber": 41,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "GreaterThanEqualsOperator",
+      "rawValue": ">=",
+      "position": 9,
+      "lineNumber": 41,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 100,
+      "position": 12,
+      "lineNumber": 41,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 15,
+      "lineNumber": 41,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "equivalent",
+      "indent": 1,
+      "lineNumber": 42,
+      "position": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "matched_outer",
+      "rawValue": "matched_outer",
+      "position": 7,
+      "lineNumber": 42,
+      "sceneName": "equivalent",
+      "indent": 1
+    },
+    {
+      "type": "BooleanLiteral",
+      "value": true,
+      "position": 21,
+      "lineNumber": 42,
+      "sceneName": "equivalent",
+      "indent": 1
+    },
+    {
+      "type": "Prose",
+      "sceneName": "equivalent",
+      "lineNumber": 44,
+      "position": 0,
+      "indent": 0,
+      "content": "Prose at indent 0 after if body.\n\n"
+    },
+    {
+      "type": "If",
+      "sceneName": "equivalent",
+      "indent": 0,
+      "lineNumber": 46,
+      "position": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 4,
+      "lineNumber": 46,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 5,
+      "lineNumber": 46,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "matched_outer",
+      "rawValue": "matched_outer",
+      "position": 6,
+      "lineNumber": 46,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "EqualityOperator",
+      "rawValue": "=",
+      "position": 20,
+      "lineNumber": 46,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "BooleanLiteral",
+      "value": false,
+      "position": 22,
+      "lineNumber": 46,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 27,
+      "lineNumber": 46,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "LogicalAnd",
+      "rawValue": "and",
+      "position": 29,
+      "lineNumber": 46,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 33,
+      "lineNumber": 46,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "val",
+      "rawValue": "val",
+      "position": 34,
+      "lineNumber": 46,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "GreaterThanEqualsOperator",
+      "rawValue": ">=",
+      "position": 38,
+      "lineNumber": 46,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 50,
+      "position": 41,
+      "lineNumber": 46,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 43,
+      "lineNumber": 46,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 44,
+      "lineNumber": 46,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "equivalent",
+      "lineNumber": 47,
+      "position": 2,
+      "indent": 1,
+      "content": "Elseif body indent 1.\n"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "equivalent",
+      "indent": 1,
+      "lineNumber": 48,
+      "position": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "matched_outer",
+      "rawValue": "matched_outer",
+      "position": 7,
+      "lineNumber": 48,
+      "sceneName": "equivalent",
+      "indent": 1
+    },
+    {
+      "type": "BooleanLiteral",
+      "value": true,
+      "position": 21,
+      "lineNumber": 48,
+      "sceneName": "equivalent",
+      "indent": 1
+    },
+    {
+      "type": "Prose",
+      "sceneName": "equivalent",
+      "lineNumber": 50,
+      "position": 0,
+      "indent": 0,
+      "content": "Prose at indent 0 after elseif.\n\n"
+    },
+    {
+      "type": "If",
+      "sceneName": "equivalent",
+      "indent": 0,
+      "lineNumber": 52,
+      "position": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 4,
+      "lineNumber": 52,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "matched_outer",
+      "rawValue": "matched_outer",
+      "position": 5,
+      "lineNumber": 52,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "EqualityOperator",
+      "rawValue": "=",
+      "position": 19,
+      "lineNumber": 52,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "BooleanLiteral",
+      "value": false,
+      "position": 21,
+      "lineNumber": 52,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 26,
+      "lineNumber": 52,
+      "sceneName": "equivalent",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "equivalent",
+      "lineNumber": 53,
+      "position": 2,
+      "indent": 1,
+      "content": "Else body indent 1.\n\n"
+    },
+    {
+      "lineNumber": 58,
+      "indent": 0,
+      "position": 0,
+      "sceneName": "equivalent",
+      "type": "SceneEnd"
+    }
+  ],
+  [
+    {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 0,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "val",
+      "rawValue": "val",
+      "position": 8,
+      "lineNumber": 0,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 12,
+      "lineNumber": 0,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 1,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "marker",
+      "rawValue": "marker",
+      "position": 8,
+      "lineNumber": 1,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "",
+      "position": 15,
+      "lineNumber": 1,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 2,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "implicit_control_flow",
+      "rawValue": "implicit_control_flow",
+      "position": 8,
+      "lineNumber": 2,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "BooleanLiteral",
+      "value": true,
+      "position": 30,
+      "lineNumber": 2,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Label",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 4,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "top",
+      "rawValue": "top",
+      "position": 6,
+      "lineNumber": 4,
+      "sceneName": "startup",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 5,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "local_bonus",
+      "rawValue": "local_bonus",
+      "position": 6,
+      "lineNumber": 5,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 18,
+      "lineNumber": 5,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 6,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "local_bonus",
+      "rawValue": "local_bonus",
+      "position": 5,
+      "lineNumber": 6,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 17,
+      "lineNumber": 6,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "val",
+      "rawValue": "val",
+      "position": 18,
+      "lineNumber": 6,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 22,
+      "lineNumber": 6,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 1,
+      "position": 24,
+      "lineNumber": 6,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 25,
+      "lineNumber": 6,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 8,
+      "position": 0,
+      "indent": 0,
+      "content": "=== TEST 1: val=100 (if matches) ===\n"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 9,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "val",
+      "rawValue": "val",
+      "position": 5,
+      "lineNumber": 9,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 100,
+      "position": 9,
+      "lineNumber": 9,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 10,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "marker",
+      "rawValue": "marker",
+      "position": 5,
+      "lineNumber": 10,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "",
+      "position": 12,
+      "lineNumber": 10,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "If",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 11,
+      "position": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 4,
+      "lineNumber": 11,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "val",
+      "rawValue": "val",
+      "position": 5,
+      "lineNumber": 11,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "GreaterThanEqualsOperator",
+      "rawValue": ">=",
+      "position": 9,
+      "lineNumber": 11,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 100,
+      "position": 12,
+      "lineNumber": 11,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 15,
+      "lineNumber": 11,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 12,
+      "position": 2,
+      "indent": 1,
+      "content": "IF-BODY\n"
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 13,
+      "position": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "t1cont",
+      "rawValue": "t1cont",
+      "position": 8,
+      "lineNumber": 13,
+      "sceneName": "startup",
+      "indent": 1,
+      "isLabelName": true
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 14,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "marker",
+      "rawValue": "marker",
+      "position": 5,
+      "lineNumber": 14,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 12,
+      "lineNumber": 14,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "marker",
+      "rawValue": "marker",
+      "position": 13,
+      "lineNumber": 14,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "position": 20,
+      "lineNumber": 14,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "A",
+      "position": 22,
+      "lineNumber": 14,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 25,
+      "lineNumber": 14,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 15,
+      "position": 0,
+      "indent": 0,
+      "content": "Prose-between-if-and-elseif.\n"
+    },
+    {
+      "type": "ElseIf",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 16,
+      "position": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 8,
+      "lineNumber": 16,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "val",
+      "rawValue": "val",
+      "position": 9,
+      "lineNumber": 16,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "GreaterThanEqualsOperator",
+      "rawValue": ">=",
+      "position": 13,
+      "lineNumber": 16,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 50,
+      "position": 16,
+      "lineNumber": 16,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 18,
+      "lineNumber": 16,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 17,
+      "position": 2,
+      "indent": 1,
+      "content": "ELSEIF-BODY\n"
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 18,
+      "position": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "t1cont",
+      "rawValue": "t1cont",
+      "position": 8,
+      "lineNumber": 18,
+      "sceneName": "startup",
+      "indent": 1,
+      "isLabelName": true
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 19,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "marker",
+      "rawValue": "marker",
+      "position": 5,
+      "lineNumber": 19,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 12,
+      "lineNumber": 19,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "marker",
+      "rawValue": "marker",
+      "position": 13,
+      "lineNumber": 19,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "position": 20,
+      "lineNumber": 19,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "B",
+      "position": 22,
+      "lineNumber": 19,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 25,
+      "lineNumber": 19,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 20,
+      "position": 0,
+      "indent": 0,
+      "content": "Prose-between-elseif-and-else.\n"
+    },
+    {
+      "type": "Else",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 21,
+      "position": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 22,
+      "position": 2,
+      "indent": 1,
+      "content": "ELSE-BODY\n"
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 23,
+      "position": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "t1cont",
+      "rawValue": "t1cont",
+      "position": 8,
+      "lineNumber": 23,
+      "sceneName": "startup",
+      "indent": 1,
+      "isLabelName": true
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 24,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "marker",
+      "rawValue": "marker",
+      "position": 5,
+      "lineNumber": 24,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 12,
+      "lineNumber": 24,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "marker",
+      "rawValue": "marker",
+      "position": 13,
+      "lineNumber": 24,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "position": 20,
+      "lineNumber": 24,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "C",
+      "position": 22,
+      "lineNumber": 24,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 25,
+      "lineNumber": 24,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 25,
+      "position": 0,
+      "indent": 0,
+      "content": "Prose-after-else.\n"
+    },
+    {
+      "type": "Label",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 26,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "t1cont",
+      "rawValue": "t1cont",
+      "position": 6,
+      "lineNumber": 26,
+      "sceneName": "startup",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 27,
+      "position": 0,
+      "indent": 0,
+      "content": "Marker1: "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "startup",
+      "lineNumber": 27,
+      "position": 9,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "marker",
+      "rawValue": "marker",
+      "position": 11,
+      "lineNumber": 27,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "startup",
+      "lineNumber": 27,
+      "position": 17,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 27,
+      "position": 18,
+      "indent": 0,
+      "content": "\n\n=== TEST 2: val=75 (elseif matches) ===\n"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 30,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "val",
+      "rawValue": "val",
+      "position": 5,
+      "lineNumber": 30,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 75,
+      "position": 9,
+      "lineNumber": 30,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 31,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "marker",
+      "rawValue": "marker",
+      "position": 5,
+      "lineNumber": 31,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "",
+      "position": 12,
+      "lineNumber": 31,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "If",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 32,
+      "position": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 4,
+      "lineNumber": 32,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "val",
+      "rawValue": "val",
+      "position": 5,
+      "lineNumber": 32,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "GreaterThanEqualsOperator",
+      "rawValue": ">=",
+      "position": 9,
+      "lineNumber": 32,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 100,
+      "position": 12,
+      "lineNumber": 32,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 15,
+      "lineNumber": 32,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 33,
+      "position": 2,
+      "indent": 1,
+      "content": "IF-BODY\n"
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 34,
+      "position": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "t2cont",
+      "rawValue": "t2cont",
+      "position": 8,
+      "lineNumber": 34,
+      "sceneName": "startup",
+      "indent": 1,
+      "isLabelName": true
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 35,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "marker",
+      "rawValue": "marker",
+      "position": 5,
+      "lineNumber": 35,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 12,
+      "lineNumber": 35,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "marker",
+      "rawValue": "marker",
+      "position": 13,
+      "lineNumber": 35,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "position": 20,
+      "lineNumber": 35,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "A",
+      "position": 22,
+      "lineNumber": 35,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 25,
+      "lineNumber": 35,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 36,
+      "position": 0,
+      "indent": 0,
+      "content": "Prose-between-if-and-elseif.\n"
+    },
+    {
+      "type": "ElseIf",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 37,
+      "position": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 8,
+      "lineNumber": 37,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "val",
+      "rawValue": "val",
+      "position": 9,
+      "lineNumber": 37,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "GreaterThanEqualsOperator",
+      "rawValue": ">=",
+      "position": 13,
+      "lineNumber": 37,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 50,
+      "position": 16,
+      "lineNumber": 37,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 18,
+      "lineNumber": 37,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 38,
+      "position": 2,
+      "indent": 1,
+      "content": "ELSEIF-BODY\n"
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 39,
+      "position": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "t2cont",
+      "rawValue": "t2cont",
+      "position": 8,
+      "lineNumber": 39,
+      "sceneName": "startup",
+      "indent": 1,
+      "isLabelName": true
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 40,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "marker",
+      "rawValue": "marker",
+      "position": 5,
+      "lineNumber": 40,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 12,
+      "lineNumber": 40,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "marker",
+      "rawValue": "marker",
+      "position": 13,
+      "lineNumber": 40,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "position": 20,
+      "lineNumber": 40,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "B",
+      "position": 22,
+      "lineNumber": 40,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 25,
+      "lineNumber": 40,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 41,
+      "position": 0,
+      "indent": 0,
+      "content": "Prose-between-elseif-and-else.\n"
+    },
+    {
+      "type": "Else",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 42,
+      "position": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 43,
+      "position": 2,
+      "indent": 1,
+      "content": "ELSE-BODY\n"
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 44,
+      "position": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "t2cont",
+      "rawValue": "t2cont",
+      "position": 8,
+      "lineNumber": 44,
+      "sceneName": "startup",
+      "indent": 1,
+      "isLabelName": true
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 45,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "marker",
+      "rawValue": "marker",
+      "position": 5,
+      "lineNumber": 45,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 12,
+      "lineNumber": 45,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "marker",
+      "rawValue": "marker",
+      "position": 13,
+      "lineNumber": 45,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "position": 20,
+      "lineNumber": 45,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "C",
+      "position": 22,
+      "lineNumber": 45,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 25,
+      "lineNumber": 45,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 46,
+      "position": 0,
+      "indent": 0,
+      "content": "Prose-after-else.\n"
+    },
+    {
+      "type": "Label",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 47,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "t2cont",
+      "rawValue": "t2cont",
+      "position": 6,
+      "lineNumber": 47,
+      "sceneName": "startup",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 48,
+      "position": 0,
+      "indent": 0,
+      "content": "Marker2: "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "startup",
+      "lineNumber": 48,
+      "position": 9,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "marker",
+      "rawValue": "marker",
+      "position": 11,
+      "lineNumber": 48,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "startup",
+      "lineNumber": 48,
+      "position": 17,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 48,
+      "position": 18,
+      "indent": 0,
+      "content": "\n\n=== TEST 3: val=10 (else matches) ===\n"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 51,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "val",
+      "rawValue": "val",
+      "position": 5,
+      "lineNumber": 51,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 10,
+      "position": 9,
+      "lineNumber": 51,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 52,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "marker",
+      "rawValue": "marker",
+      "position": 5,
+      "lineNumber": 52,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "",
+      "position": 12,
+      "lineNumber": 52,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "If",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 53,
+      "position": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 4,
+      "lineNumber": 53,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "val",
+      "rawValue": "val",
+      "position": 5,
+      "lineNumber": 53,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "GreaterThanEqualsOperator",
+      "rawValue": ">=",
+      "position": 9,
+      "lineNumber": 53,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 100,
+      "position": 12,
+      "lineNumber": 53,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 15,
+      "lineNumber": 53,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 54,
+      "position": 2,
+      "indent": 1,
+      "content": "IF-BODY\n"
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 55,
+      "position": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "t3cont",
+      "rawValue": "t3cont",
+      "position": 8,
+      "lineNumber": 55,
+      "sceneName": "startup",
+      "indent": 1,
+      "isLabelName": true
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 56,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "marker",
+      "rawValue": "marker",
+      "position": 5,
+      "lineNumber": 56,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 12,
+      "lineNumber": 56,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "marker",
+      "rawValue": "marker",
+      "position": 13,
+      "lineNumber": 56,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "position": 20,
+      "lineNumber": 56,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "A",
+      "position": 22,
+      "lineNumber": 56,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 25,
+      "lineNumber": 56,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 57,
+      "position": 0,
+      "indent": 0,
+      "content": "Prose-between-if-and-elseif.\n"
+    },
+    {
+      "type": "ElseIf",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 58,
+      "position": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 8,
+      "lineNumber": 58,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "val",
+      "rawValue": "val",
+      "position": 9,
+      "lineNumber": 58,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "GreaterThanEqualsOperator",
+      "rawValue": ">=",
+      "position": 13,
+      "lineNumber": 58,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 50,
+      "position": 16,
+      "lineNumber": 58,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 18,
+      "lineNumber": 58,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 59,
+      "position": 2,
+      "indent": 1,
+      "content": "ELSEIF-BODY\n"
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 60,
+      "position": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "t3cont",
+      "rawValue": "t3cont",
+      "position": 8,
+      "lineNumber": 60,
+      "sceneName": "startup",
+      "indent": 1,
+      "isLabelName": true
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 61,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "marker",
+      "rawValue": "marker",
+      "position": 5,
+      "lineNumber": 61,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 12,
+      "lineNumber": 61,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "marker",
+      "rawValue": "marker",
+      "position": 13,
+      "lineNumber": 61,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "position": 20,
+      "lineNumber": 61,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "B",
+      "position": 22,
+      "lineNumber": 61,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 25,
+      "lineNumber": 61,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 62,
+      "position": 0,
+      "indent": 0,
+      "content": "Prose-between-elseif-and-else.\n"
+    },
+    {
+      "type": "Else",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 63,
+      "position": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 64,
+      "position": 2,
+      "indent": 1,
+      "content": "ELSE-BODY\n"
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 65,
+      "position": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "t3cont",
+      "rawValue": "t3cont",
+      "position": 8,
+      "lineNumber": 65,
+      "sceneName": "startup",
+      "indent": 1,
+      "isLabelName": true
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 66,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "marker",
+      "rawValue": "marker",
+      "position": 5,
+      "lineNumber": 66,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 12,
+      "lineNumber": 66,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "marker",
+      "rawValue": "marker",
+      "position": 13,
+      "lineNumber": 66,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "position": 20,
+      "lineNumber": 66,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "C",
+      "position": 22,
+      "lineNumber": 66,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 25,
+      "lineNumber": 66,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 67,
+      "position": 0,
+      "indent": 0,
+      "content": "Prose-after-else.\n"
+    },
+    {
+      "type": "Label",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 68,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "t3cont",
+      "rawValue": "t3cont",
+      "position": 6,
+      "lineNumber": 68,
+      "sceneName": "startup",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 69,
+      "position": 0,
+      "indent": 0,
+      "content": "Marker3: "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "startup",
+      "lineNumber": 69,
+      "position": 9,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "marker",
+      "rawValue": "marker",
+      "position": 11,
+      "lineNumber": 69,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "startup",
+      "lineNumber": 69,
+      "position": 17,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 69,
+      "position": 18,
+      "indent": 0,
+      "content": "\n\n=== TEST 4: val=0, no else branch ===\n"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 72,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "val",
+      "rawValue": "val",
+      "position": 5,
+      "lineNumber": 72,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 9,
+      "lineNumber": 72,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 73,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "marker",
+      "rawValue": "marker",
+      "position": 5,
+      "lineNumber": 73,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "",
+      "position": 12,
+      "lineNumber": 73,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "If",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 74,
+      "position": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 4,
+      "lineNumber": 74,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "val",
+      "rawValue": "val",
+      "position": 5,
+      "lineNumber": 74,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "GreaterThanEqualsOperator",
+      "rawValue": ">=",
+      "position": 9,
+      "lineNumber": 74,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 100,
+      "position": 12,
+      "lineNumber": 74,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 15,
+      "lineNumber": 74,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 75,
+      "position": 2,
+      "indent": 1,
+      "content": "IF-BODY\n"
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 76,
+      "position": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "t4cont",
+      "rawValue": "t4cont",
+      "position": 8,
+      "lineNumber": 76,
+      "sceneName": "startup",
+      "indent": 1,
+      "isLabelName": true
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 77,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "marker",
+      "rawValue": "marker",
+      "position": 5,
+      "lineNumber": 77,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 12,
+      "lineNumber": 77,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "marker",
+      "rawValue": "marker",
+      "position": 13,
+      "lineNumber": 77,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "position": 20,
+      "lineNumber": 77,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "A",
+      "position": 22,
+      "lineNumber": 77,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 25,
+      "lineNumber": 77,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 78,
+      "position": 0,
+      "indent": 0,
+      "content": "Prose-after-if-no-else.\n"
+    },
+    {
+      "type": "Label",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 79,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "t4cont",
+      "rawValue": "t4cont",
+      "position": 6,
+      "lineNumber": 79,
+      "sceneName": "startup",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 80,
+      "position": 0,
+      "indent": 0,
+      "content": "Marker4: "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "startup",
+      "lineNumber": 80,
+      "position": 9,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "marker",
+      "rawValue": "marker",
+      "position": 11,
+      "lineNumber": 80,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "startup",
+      "lineNumber": 80,
+      "position": 17,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 80,
+      "position": 18,
+      "indent": 0,
+      "content": "\n\n=== TEST 5: ICF, val=100 (if matches, no goto) ===\n"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 83,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "val",
+      "rawValue": "val",
+      "position": 5,
+      "lineNumber": 83,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 100,
+      "position": 9,
+      "lineNumber": 83,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 84,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "marker",
+      "rawValue": "marker",
+      "position": 5,
+      "lineNumber": 84,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "",
+      "position": 12,
+      "lineNumber": 84,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "If",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 85,
+      "position": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 4,
+      "lineNumber": 85,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "val",
+      "rawValue": "val",
+      "position": 5,
+      "lineNumber": 85,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "GreaterThanEqualsOperator",
+      "rawValue": ">=",
+      "position": 9,
+      "lineNumber": 85,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 100,
+      "position": 12,
+      "lineNumber": 85,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 15,
+      "lineNumber": 85,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 86,
+      "position": 2,
+      "indent": 1,
+      "content": "IF-BODY-ICF\n"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 87,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "marker",
+      "rawValue": "marker",
+      "position": 5,
+      "lineNumber": 87,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 12,
+      "lineNumber": 87,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "marker",
+      "rawValue": "marker",
+      "position": 13,
+      "lineNumber": 87,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "position": 20,
+      "lineNumber": 87,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "A",
+      "position": 22,
+      "lineNumber": 87,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 25,
+      "lineNumber": 87,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 88,
+      "position": 0,
+      "indent": 0,
+      "content": "Prose-between-if-and-elseif-icf.\n"
+    },
+    {
+      "type": "ElseIf",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 89,
+      "position": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 8,
+      "lineNumber": 89,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "val",
+      "rawValue": "val",
+      "position": 9,
+      "lineNumber": 89,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "GreaterThanEqualsOperator",
+      "rawValue": ">=",
+      "position": 13,
+      "lineNumber": 89,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 50,
+      "position": 16,
+      "lineNumber": 89,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 18,
+      "lineNumber": 89,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 90,
+      "position": 2,
+      "indent": 1,
+      "content": "ELSEIF-BODY-ICF\n"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 91,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "marker",
+      "rawValue": "marker",
+      "position": 5,
+      "lineNumber": 91,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 12,
+      "lineNumber": 91,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "marker",
+      "rawValue": "marker",
+      "position": 13,
+      "lineNumber": 91,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "position": 20,
+      "lineNumber": 91,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "B",
+      "position": 22,
+      "lineNumber": 91,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 25,
+      "lineNumber": 91,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 92,
+      "position": 0,
+      "indent": 0,
+      "content": "Prose-between-elseif-and-else-icf.\n"
+    },
+    {
+      "type": "Else",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 93,
+      "position": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 94,
+      "position": 2,
+      "indent": 1,
+      "content": "ELSE-BODY-ICF\n"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 95,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "marker",
+      "rawValue": "marker",
+      "position": 5,
+      "lineNumber": 95,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 12,
+      "lineNumber": 95,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "marker",
+      "rawValue": "marker",
+      "position": 13,
+      "lineNumber": 95,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "position": 20,
+      "lineNumber": 95,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "C",
+      "position": 22,
+      "lineNumber": 95,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 25,
+      "lineNumber": 95,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 96,
+      "position": 0,
+      "indent": 0,
+      "content": "Prose-after-else-icf.\nMarker5: "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "startup",
+      "lineNumber": 97,
+      "position": 9,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "marker",
+      "rawValue": "marker",
+      "position": 11,
+      "lineNumber": 97,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "startup",
+      "lineNumber": 97,
+      "position": 17,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 97,
+      "position": 18,
+      "indent": 0,
+      "content": "\n\n=== TEST 6: ICF, val=10 (else matches, no goto) ===\n"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 100,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "val",
+      "rawValue": "val",
+      "position": 5,
+      "lineNumber": 100,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 10,
+      "position": 9,
+      "lineNumber": 100,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 101,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "marker",
+      "rawValue": "marker",
+      "position": 5,
+      "lineNumber": 101,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "",
+      "position": 12,
+      "lineNumber": 101,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "If",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 102,
+      "position": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 4,
+      "lineNumber": 102,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "val",
+      "rawValue": "val",
+      "position": 5,
+      "lineNumber": 102,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "GreaterThanEqualsOperator",
+      "rawValue": ">=",
+      "position": 9,
+      "lineNumber": 102,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 100,
+      "position": 12,
+      "lineNumber": 102,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 15,
+      "lineNumber": 102,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 103,
+      "position": 2,
+      "indent": 1,
+      "content": "IF-BODY-ICF\n"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 104,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "marker",
+      "rawValue": "marker",
+      "position": 5,
+      "lineNumber": 104,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 12,
+      "lineNumber": 104,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "marker",
+      "rawValue": "marker",
+      "position": 13,
+      "lineNumber": 104,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "position": 20,
+      "lineNumber": 104,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "A",
+      "position": 22,
+      "lineNumber": 104,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 25,
+      "lineNumber": 104,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 105,
+      "position": 0,
+      "indent": 0,
+      "content": "Prose-between-if-and-elseif-icf.\n"
+    },
+    {
+      "type": "ElseIf",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 106,
+      "position": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 8,
+      "lineNumber": 106,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "val",
+      "rawValue": "val",
+      "position": 9,
+      "lineNumber": 106,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "GreaterThanEqualsOperator",
+      "rawValue": ">=",
+      "position": 13,
+      "lineNumber": 106,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 50,
+      "position": 16,
+      "lineNumber": 106,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 18,
+      "lineNumber": 106,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 107,
+      "position": 2,
+      "indent": 1,
+      "content": "ELSEIF-BODY-ICF\n"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 108,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "marker",
+      "rawValue": "marker",
+      "position": 5,
+      "lineNumber": 108,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 12,
+      "lineNumber": 108,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "marker",
+      "rawValue": "marker",
+      "position": 13,
+      "lineNumber": 108,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "position": 20,
+      "lineNumber": 108,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "B",
+      "position": 22,
+      "lineNumber": 108,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 25,
+      "lineNumber": 108,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 109,
+      "position": 0,
+      "indent": 0,
+      "content": "Prose-between-elseif-and-else-icf.\n"
+    },
+    {
+      "type": "Else",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 110,
+      "position": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 111,
+      "position": 2,
+      "indent": 1,
+      "content": "ELSE-BODY-ICF\n"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 112,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "marker",
+      "rawValue": "marker",
+      "position": 5,
+      "lineNumber": 112,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 12,
+      "lineNumber": 112,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "marker",
+      "rawValue": "marker",
+      "position": 13,
+      "lineNumber": 112,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "position": 20,
+      "lineNumber": 112,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "C",
+      "position": 22,
+      "lineNumber": 112,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 25,
+      "lineNumber": 112,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "lineNumber": 115,
+      "indent": 0,
+      "position": 0,
+      "sceneName": "startup",
+      "type": "SceneEnd"
+    }
+  ]
+]

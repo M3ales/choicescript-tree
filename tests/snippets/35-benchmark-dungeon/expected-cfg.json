@@ -1,0 +1,2964 @@
+[
+  {
+    "sceneName": "boss",
+    "blocks": {
+      "boss:b_0": {
+        "exitType": "FallThrough"
+      },
+      "boss:b_1": {
+        "exitType": "Branch"
+      },
+      "boss:b_2": {
+        "exitType": "Branch"
+      },
+      "boss:b_3": {
+        "exitType": "Branch"
+      },
+      "boss:b_4": {
+        "exitType": "FallThrough"
+      },
+      "boss:b_5": {
+        "exitType": "FallThrough"
+      },
+      "boss:b_6": {
+        "exitType": "Branch"
+      },
+      "boss:b_7": {
+        "exitType": "Goto"
+      },
+      "boss:b_8": {
+        "exitType": "FallThrough"
+      },
+      "boss:b_9": {
+        "exitType": "Choice"
+      },
+      "boss:b_10": {
+        "exitType": "Goto"
+      },
+      "boss:b_11": {
+        "exitType": "FallThrough"
+      },
+      "boss:b_12": {
+        "exitType": "FallThrough"
+      },
+      "boss:b_13": {
+        "exitType": "Branch"
+      },
+      "boss:b_14": {
+        "exitType": "Goto"
+      },
+      "boss:b_15": {
+        "exitType": "FallThrough"
+      },
+      "boss:b_16": {
+        "exitType": "FallThrough"
+      },
+      "boss:b_17": {
+        "exitType": "Branch"
+      },
+      "boss:b_18": {
+        "exitType": "Branch"
+      },
+      "boss:b_19": {
+        "exitType": "FallThrough"
+      },
+      "boss:b_20": {
+        "exitType": "FallThrough"
+      },
+      "boss:b_21": {
+        "exitType": "Goto"
+      },
+      "boss:b_22": {
+        "exitType": "FallThrough"
+      },
+      "boss:b_23": {
+        "exitType": "FallThrough"
+      },
+      "boss:b_24": {
+        "exitType": "Branch"
+      },
+      "boss:b_25": {
+        "exitType": "Branch"
+      },
+      "boss:b_26": {
+        "exitType": "FallThrough"
+      },
+      "boss:b_27": {
+        "exitType": "Goto"
+      },
+      "boss:b_28": {
+        "exitType": "FallThrough"
+      },
+      "boss:b_29": {
+        "exitType": "FallThrough"
+      },
+      "boss:b_30": {
+        "exitType": "Branch"
+      },
+      "boss:b_31": {
+        "exitType": "Goto"
+      },
+      "boss:b_32": {
+        "exitType": "FallThrough"
+      },
+      "boss:b_33": {
+        "exitType": "FallThrough"
+      },
+      "boss:b_34": {
+        "exitType": "FallThrough"
+      },
+      "boss:b_35": {
+        "exitType": "Choice"
+      },
+      "boss:b_36": {
+        "exitType": "FallThrough"
+      },
+      "boss:b_37": {
+        "exitType": "Goto"
+      },
+      "boss:b_38": {
+        "exitType": "FallThrough"
+      },
+      "boss:b_39": {
+        "exitType": "Goto"
+      },
+      "boss:b_40": {
+        "exitType": "FallThrough"
+      },
+      "boss:b_41": {
+        "exitType": "Ending"
+      },
+      "boss:b_42": {
+        "exitType": "FallThrough"
+      },
+      "boss:b_43": {
+        "exitType": "Finish"
+      },
+      "boss:b_44": {
+        "exitType": "FallThrough"
+      }
+    },
+    "blockIndex": {
+      "boss:b_0": {
+        "scene": "boss",
+        "statementIds": [
+          "boss:0",
+          "boss:1",
+          "boss:2",
+          "boss:3",
+          "boss:4",
+          "boss:5"
+        ],
+        "entryType": "SceneEntry",
+        "exitType": "FallThrough"
+      },
+      "boss:b_1": {
+        "scene": "boss",
+        "statementIds": [
+          "boss:6",
+          "boss:7",
+          "boss:13"
+        ],
+        "entryType": "Label",
+        "exitType": "Branch",
+        "label": "boss_fight"
+      },
+      "boss:b_2": {
+        "scene": "boss",
+        "statementIds": [
+          "boss:14",
+          "boss:16"
+        ],
+        "entryType": "Continuation",
+        "exitType": "Branch"
+      },
+      "boss:b_3": {
+        "scene": "boss",
+        "statementIds": [
+          "boss:12"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "Branch"
+      },
+      "boss:b_4": {
+        "scene": "boss",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "boss:b_5": {
+        "scene": "boss",
+        "statementIds": [
+          "boss:8",
+          "boss:9",
+          "boss:10",
+          "boss:11"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "FallThrough"
+      },
+      "boss:b_6": {
+        "scene": "boss",
+        "statementIds": [
+          "boss:18"
+        ],
+        "entryType": "Continuation",
+        "exitType": "Branch"
+      },
+      "boss:b_7": {
+        "scene": "boss",
+        "statementIds": [
+          "boss:15"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "Goto"
+      },
+      "boss:b_8": {
+        "scene": "boss",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "boss:b_9": {
+        "scene": "boss",
+        "statementIds": [
+          "boss:84"
+        ],
+        "entryType": "Continuation",
+        "exitType": "Choice"
+      },
+      "boss:b_10": {
+        "scene": "boss",
+        "statementIds": [
+          "boss:17"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "Goto"
+      },
+      "boss:b_11": {
+        "scene": "boss",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "boss:b_12": {
+        "scene": "boss",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "boss:b_13": {
+        "scene": "boss",
+        "statementIds": [
+          "boss:19",
+          "boss:20",
+          "boss:21",
+          "boss:22",
+          "boss:23",
+          "boss:24",
+          "boss:25",
+          "boss:27"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "Branch"
+      },
+      "boss:b_14": {
+        "scene": "boss",
+        "statementIds": [
+          "boss:28",
+          "boss:29",
+          "boss:30"
+        ],
+        "entryType": "Continuation",
+        "exitType": "Goto"
+      },
+      "boss:b_15": {
+        "scene": "boss",
+        "statementIds": [
+          "boss:26"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "FallThrough"
+      },
+      "boss:b_16": {
+        "scene": "boss",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "boss:b_17": {
+        "scene": "boss",
+        "statementIds": [
+          "boss:32",
+          "boss:33",
+          "boss:40"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "Branch"
+      },
+      "boss:b_18": {
+        "scene": "boss",
+        "statementIds": [
+          "boss:41",
+          "boss:42",
+          "boss:43",
+          "boss:45"
+        ],
+        "entryType": "Continuation",
+        "exitType": "Branch"
+      },
+      "boss:b_19": {
+        "scene": "boss",
+        "statementIds": [
+          "boss:34",
+          "boss:35",
+          "boss:36",
+          "boss:37"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "FallThrough"
+      },
+      "boss:b_20": {
+        "scene": "boss",
+        "statementIds": [
+          "boss:38"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "FallThrough"
+      },
+      "boss:b_21": {
+        "scene": "boss",
+        "statementIds": [
+          "boss:46",
+          "boss:47",
+          "boss:48"
+        ],
+        "entryType": "Continuation",
+        "exitType": "Goto"
+      },
+      "boss:b_22": {
+        "scene": "boss",
+        "statementIds": [
+          "boss:44"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "FallThrough"
+      },
+      "boss:b_23": {
+        "scene": "boss",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "boss:b_24": {
+        "scene": "boss",
+        "statementIds": [
+          "boss:51",
+          "boss:52",
+          "boss:53",
+          "boss:54",
+          "boss:56"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "Branch"
+      },
+      "boss:b_25": {
+        "scene": "boss",
+        "statementIds": [
+          "boss:57",
+          "boss:58",
+          "boss:59",
+          "boss:60",
+          "boss:62"
+        ],
+        "entryType": "Continuation",
+        "exitType": "Branch"
+      },
+      "boss:b_26": {
+        "scene": "boss",
+        "statementIds": [
+          "boss:55"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "FallThrough"
+      },
+      "boss:b_27": {
+        "scene": "boss",
+        "statementIds": [
+          "boss:63",
+          "boss:64",
+          "boss:65"
+        ],
+        "entryType": "Continuation",
+        "exitType": "Goto"
+      },
+      "boss:b_28": {
+        "scene": "boss",
+        "statementIds": [
+          "boss:61"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "FallThrough"
+      },
+      "boss:b_29": {
+        "scene": "boss",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "boss:b_30": {
+        "scene": "boss",
+        "statementIds": [
+          "boss:68",
+          "boss:69",
+          "boss:81"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "Branch"
+      },
+      "boss:b_31": {
+        "scene": "boss",
+        "statementIds": [
+          "boss:82"
+        ],
+        "entryType": "Continuation",
+        "exitType": "Goto"
+      },
+      "boss:b_32": {
+        "scene": "boss",
+        "statementIds": [
+          "boss:70",
+          "boss:71",
+          "boss:72",
+          "boss:73",
+          "boss:74"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "FallThrough"
+      },
+      "boss:b_33": {
+        "scene": "boss",
+        "statementIds": [
+          "boss:75",
+          "boss:76",
+          "boss:77",
+          "boss:78",
+          "boss:79"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "FallThrough"
+      },
+      "boss:b_34": {
+        "scene": "boss",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "boss:b_35": {
+        "scene": "boss",
+        "statementIds": [
+          "boss:85",
+          "boss:86",
+          "boss:87",
+          "boss:88",
+          "boss:97"
+        ],
+        "entryType": "Label",
+        "exitType": "Choice",
+        "label": "boss_victory"
+      },
+      "boss:b_36": {
+        "scene": "boss",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "boss:b_37": {
+        "scene": "boss",
+        "statementIds": [
+          "boss:89",
+          "boss:90"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "Goto"
+      },
+      "boss:b_38": {
+        "scene": "boss",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "boss:b_39": {
+        "scene": "boss",
+        "statementIds": [
+          "boss:92",
+          "boss:93",
+          "boss:94",
+          "boss:95"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "Goto"
+      },
+      "boss:b_40": {
+        "scene": "boss",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "boss:b_41": {
+        "scene": "boss",
+        "statementIds": [
+          "boss:98",
+          "boss:99",
+          "boss:100"
+        ],
+        "entryType": "Label",
+        "exitType": "Ending",
+        "label": "boss_defeat"
+      },
+      "boss:b_42": {
+        "scene": "boss",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "boss:b_43": {
+        "scene": "boss",
+        "statementIds": [
+          "boss:101",
+          "boss:102",
+          "boss:103"
+        ],
+        "entryType": "Label",
+        "exitType": "Finish",
+        "label": "boss_exit"
+      },
+      "boss:b_44": {
+        "scene": "boss",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      }
+    },
+    "edges": [
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "boss:b_0",
+        "targetBlockId": "boss:b_1",
+        "metadata": {}
+      },
+      {
+        "kind": "IfBranch",
+        "sourceBlockId": "boss:b_3",
+        "targetBlockId": "boss:b_5",
+        "metadata": {
+          "conditionStatementId": "boss:12"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "boss:b_5",
+        "targetBlockId": "boss:b_4",
+        "metadata": {}
+      },
+      {
+        "kind": "IfFallThrough",
+        "sourceBlockId": "boss:b_3",
+        "targetBlockId": "boss:b_4",
+        "metadata": {}
+      },
+      {
+        "kind": "IfBranch",
+        "sourceBlockId": "boss:b_1",
+        "targetBlockId": "boss:b_3",
+        "metadata": {
+          "conditionStatementId": "boss:13"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "boss:b_4",
+        "targetBlockId": "boss:b_2",
+        "metadata": {}
+      },
+      {
+        "kind": "IfFallThrough",
+        "sourceBlockId": "boss:b_1",
+        "targetBlockId": "boss:b_2",
+        "metadata": {}
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "boss:b_7",
+        "targetBlockId": "boss:b_35",
+        "metadata": {
+          "label": "boss_victory"
+        }
+      },
+      {
+        "kind": "IfBranch",
+        "sourceBlockId": "boss:b_2",
+        "targetBlockId": "boss:b_7",
+        "metadata": {
+          "conditionStatementId": "boss:16"
+        }
+      },
+      {
+        "kind": "IfFallThrough",
+        "sourceBlockId": "boss:b_2",
+        "targetBlockId": "boss:b_6",
+        "metadata": {}
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "boss:b_10",
+        "targetBlockId": "boss:b_41",
+        "metadata": {
+          "label": "boss_defeat"
+        }
+      },
+      {
+        "kind": "IfBranch",
+        "sourceBlockId": "boss:b_6",
+        "targetBlockId": "boss:b_10",
+        "metadata": {
+          "conditionStatementId": "boss:18"
+        }
+      },
+      {
+        "kind": "IfFallThrough",
+        "sourceBlockId": "boss:b_6",
+        "targetBlockId": "boss:b_9",
+        "metadata": {}
+      },
+      {
+        "kind": "IfBranch",
+        "sourceBlockId": "boss:b_13",
+        "targetBlockId": "boss:b_15",
+        "metadata": {
+          "conditionStatementId": "boss:27"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "boss:b_15",
+        "targetBlockId": "boss:b_14",
+        "metadata": {}
+      },
+      {
+        "kind": "IfFallThrough",
+        "sourceBlockId": "boss:b_13",
+        "targetBlockId": "boss:b_14",
+        "metadata": {}
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "boss:b_14",
+        "targetBlockId": "boss:b_1",
+        "metadata": {
+          "label": "boss_fight"
+        }
+      },
+      {
+        "kind": "ChoiceOption",
+        "sourceBlockId": "boss:b_9",
+        "targetBlockId": "boss:b_13",
+        "metadata": {
+          "optionStatementId": "boss:31"
+        }
+      },
+      {
+        "kind": "IfBranch",
+        "sourceBlockId": "boss:b_17",
+        "targetBlockId": "boss:b_19",
+        "metadata": {
+          "conditionStatementId": "boss:40"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "boss:b_19",
+        "targetBlockId": "boss:b_18",
+        "metadata": {}
+      },
+      {
+        "kind": "ElseBranch",
+        "sourceBlockId": "boss:b_17",
+        "targetBlockId": "boss:b_20",
+        "metadata": {}
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "boss:b_20",
+        "targetBlockId": "boss:b_18",
+        "metadata": {}
+      },
+      {
+        "kind": "IfBranch",
+        "sourceBlockId": "boss:b_18",
+        "targetBlockId": "boss:b_22",
+        "metadata": {
+          "conditionStatementId": "boss:45"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "boss:b_22",
+        "targetBlockId": "boss:b_21",
+        "metadata": {}
+      },
+      {
+        "kind": "IfFallThrough",
+        "sourceBlockId": "boss:b_18",
+        "targetBlockId": "boss:b_21",
+        "metadata": {}
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "boss:b_21",
+        "targetBlockId": "boss:b_1",
+        "metadata": {
+          "label": "boss_fight"
+        }
+      },
+      {
+        "kind": "ChoiceOption",
+        "sourceBlockId": "boss:b_9",
+        "targetBlockId": "boss:b_17",
+        "metadata": {
+          "optionStatementId": "boss:49"
+        }
+      },
+      {
+        "kind": "IfBranch",
+        "sourceBlockId": "boss:b_24",
+        "targetBlockId": "boss:b_26",
+        "metadata": {
+          "conditionStatementId": "boss:56"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "boss:b_26",
+        "targetBlockId": "boss:b_25",
+        "metadata": {}
+      },
+      {
+        "kind": "IfFallThrough",
+        "sourceBlockId": "boss:b_24",
+        "targetBlockId": "boss:b_25",
+        "metadata": {}
+      },
+      {
+        "kind": "IfBranch",
+        "sourceBlockId": "boss:b_25",
+        "targetBlockId": "boss:b_28",
+        "metadata": {
+          "conditionStatementId": "boss:62"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "boss:b_28",
+        "targetBlockId": "boss:b_27",
+        "metadata": {}
+      },
+      {
+        "kind": "IfFallThrough",
+        "sourceBlockId": "boss:b_25",
+        "targetBlockId": "boss:b_27",
+        "metadata": {}
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "boss:b_27",
+        "targetBlockId": "boss:b_1",
+        "metadata": {
+          "label": "boss_fight"
+        }
+      },
+      {
+        "kind": "ChoiceOptionCheck",
+        "sourceBlockId": "boss:b_9",
+        "targetBlockId": "boss:b_24",
+        "metadata": {
+          "optionStatementId": "boss:66",
+          "conditionStatementId": "boss:66",
+          "choiceConditionKind": "selectable_if"
+        }
+      },
+      {
+        "kind": "IfBranch",
+        "sourceBlockId": "boss:b_30",
+        "targetBlockId": "boss:b_32",
+        "metadata": {
+          "conditionStatementId": "boss:81"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "boss:b_32",
+        "targetBlockId": "boss:b_31",
+        "metadata": {}
+      },
+      {
+        "kind": "ElseBranch",
+        "sourceBlockId": "boss:b_30",
+        "targetBlockId": "boss:b_33",
+        "metadata": {}
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "boss:b_33",
+        "targetBlockId": "boss:b_31",
+        "metadata": {}
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "boss:b_31",
+        "targetBlockId": "boss:b_1",
+        "metadata": {
+          "label": "boss_fight"
+        }
+      },
+      {
+        "kind": "ChoiceOptionCheck",
+        "sourceBlockId": "boss:b_9",
+        "targetBlockId": "boss:b_30",
+        "metadata": {
+          "optionStatementId": "boss:83",
+          "conditionStatementId": "boss:83",
+          "choiceConditionKind": "selectable_if"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "boss:b_9",
+        "targetBlockId": "boss:b_12",
+        "metadata": {}
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "boss:b_12",
+        "targetBlockId": "boss:b_35",
+        "metadata": {}
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "boss:b_37",
+        "targetBlockId": "boss:b_43",
+        "metadata": {
+          "label": "boss_exit"
+        }
+      },
+      {
+        "kind": "ChoiceOption",
+        "sourceBlockId": "boss:b_35",
+        "targetBlockId": "boss:b_37",
+        "metadata": {
+          "optionStatementId": "boss:91"
+        }
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "boss:b_39",
+        "targetBlockId": "boss:b_43",
+        "metadata": {
+          "label": "boss_exit"
+        }
+      },
+      {
+        "kind": "ChoiceOption",
+        "sourceBlockId": "boss:b_35",
+        "targetBlockId": "boss:b_39",
+        "metadata": {
+          "optionStatementId": "boss:96"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "boss:b_35",
+        "targetBlockId": "boss:b_36",
+        "metadata": {}
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "boss:b_36",
+        "targetBlockId": "boss:b_41",
+        "metadata": {}
+      },
+      {
+        "kind": "GameEnd",
+        "sourceBlockId": "boss:b_41",
+        "targetBlockId": null,
+        "metadata": {}
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "boss:b_42",
+        "targetBlockId": "boss:b_43",
+        "metadata": {}
+      },
+      {
+        "kind": "SceneExit",
+        "sourceBlockId": "boss:b_43",
+        "targetBlockId": null,
+        "metadata": {}
+      }
+    ],
+    "entryBlockId": "boss:b_0",
+    "labelToBlockId": {
+      "boss_fight": "boss:b_1",
+      "boss_victory": "boss:b_35",
+      "boss_defeat": "boss:b_41",
+      "boss_exit": "boss:b_43"
+    },
+    "unresolvedEdges": []
+  },
+  {
+    "sceneName": "dungeon",
+    "blocks": {
+      "dungeon:b_0": {
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_1": {
+        "exitType": "Branch"
+      },
+      "dungeon:b_2": {
+        "exitType": "Choice"
+      },
+      "dungeon:b_3": {
+        "exitType": "Branch"
+      },
+      "dungeon:b_4": {
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_5": {
+        "exitType": "Choice"
+      },
+      "dungeon:b_6": {
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_7": {
+        "exitType": "GotoScene"
+      },
+      "dungeon:b_8": {
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_9": {
+        "exitType": "GoSub"
+      },
+      "dungeon:b_10": {
+        "exitType": "Goto"
+      },
+      "dungeon:b_11": {
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_12": {
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_13": {
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_14": {
+        "exitType": "GoSub"
+      },
+      "dungeon:b_15": {
+        "exitType": "Goto"
+      },
+      "dungeon:b_16": {
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_17": {
+        "exitType": "GoSub"
+      },
+      "dungeon:b_18": {
+        "exitType": "Goto"
+      },
+      "dungeon:b_19": {
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_20": {
+        "exitType": "GoSub"
+      },
+      "dungeon:b_21": {
+        "exitType": "Goto"
+      },
+      "dungeon:b_22": {
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_23": {
+        "exitType": "GoSub"
+      },
+      "dungeon:b_24": {
+        "exitType": "Goto"
+      },
+      "dungeon:b_25": {
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_26": {
+        "exitType": "GoSub"
+      },
+      "dungeon:b_27": {
+        "exitType": "Goto"
+      },
+      "dungeon:b_28": {
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_29": {
+        "exitType": "GoSub"
+      },
+      "dungeon:b_30": {
+        "exitType": "Goto"
+      },
+      "dungeon:b_31": {
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_32": {
+        "exitType": "GoSub"
+      },
+      "dungeon:b_33": {
+        "exitType": "Goto"
+      },
+      "dungeon:b_34": {
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_35": {
+        "exitType": "Goto"
+      },
+      "dungeon:b_36": {
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_37": {
+        "exitType": "Branch"
+      },
+      "dungeon:b_38": {
+        "exitType": "Return"
+      },
+      "dungeon:b_39": {
+        "exitType": "GoSub"
+      },
+      "dungeon:b_40": {
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_41": {
+        "exitType": "GoSub"
+      },
+      "dungeon:b_42": {
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_43": {
+        "exitType": "GoSub"
+      },
+      "dungeon:b_44": {
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_45": {
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_46": {
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_47": {
+        "exitType": "Branch"
+      },
+      "dungeon:b_48": {
+        "exitType": "Branch"
+      },
+      "dungeon:b_49": {
+        "exitType": "Goto"
+      },
+      "dungeon:b_50": {
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_51": {
+        "exitType": "Choice"
+      },
+      "dungeon:b_52": {
+        "exitType": "Goto"
+      },
+      "dungeon:b_53": {
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_54": {
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_55": {
+        "exitType": "Branch"
+      },
+      "dungeon:b_56": {
+        "exitType": "Goto"
+      },
+      "dungeon:b_57": {
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_58": {
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_59": {
+        "exitType": "Branch"
+      },
+      "dungeon:b_60": {
+        "exitType": "Goto"
+      },
+      "dungeon:b_61": {
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_62": {
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_63": {
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_64": {
+        "exitType": "GoSub"
+      },
+      "dungeon:b_65": {
+        "exitType": "Goto"
+      },
+      "dungeon:b_66": {
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_67": {
+        "exitType": "Branch"
+      },
+      "dungeon:b_68": {
+        "exitType": "Branch"
+      },
+      "dungeon:b_69": {
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_70": {
+        "exitType": "Return"
+      },
+      "dungeon:b_71": {
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_72": {
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_73": {
+        "exitType": "Choice"
+      },
+      "dungeon:b_74": {
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_75": {
+        "exitType": "Return"
+      },
+      "dungeon:b_76": {
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_77": {
+        "exitType": "Branch"
+      },
+      "dungeon:b_78": {
+        "exitType": "Return"
+      },
+      "dungeon:b_79": {
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_80": {
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_81": {
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_82": {
+        "exitType": "Return"
+      },
+      "dungeon:b_83": {
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_84": {
+        "exitType": "Branch"
+      },
+      "dungeon:b_85": {
+        "exitType": "Return"
+      },
+      "dungeon:b_86": {
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_87": {
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_88": {
+        "exitType": "Branch"
+      },
+      "dungeon:b_89": {
+        "exitType": "Return"
+      },
+      "dungeon:b_90": {
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_91": {
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_92": {
+        "exitType": "Ending"
+      },
+      "dungeon:b_93": {
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_94": {
+        "exitType": "Branch"
+      },
+      "dungeon:b_95": {
+        "exitType": "Finish"
+      },
+      "dungeon:b_96": {
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_97": {
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_98": {
+        "exitType": "FallThrough"
+      }
+    },
+    "blockIndex": {
+      "dungeon:b_0": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:0",
+          "dungeon:1",
+          "dungeon:2",
+          "dungeon:3"
+        ],
+        "entryType": "SceneEntry",
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_1": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:4",
+          "dungeon:5",
+          "dungeon:17"
+        ],
+        "entryType": "Label",
+        "exitType": "Branch",
+        "label": "dungeon_hub"
+      },
+      "dungeon:b_2": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:18",
+          "dungeon:55"
+        ],
+        "entryType": "Continuation",
+        "exitType": "Choice"
+      },
+      "dungeon:b_3": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:6",
+          "dungeon:16"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "Branch"
+      },
+      "dungeon:b_4": {
+        "scene": "dungeon",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_5": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:7",
+          "dungeon:13"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "Choice"
+      },
+      "dungeon:b_6": {
+        "scene": "dungeon",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_7": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:8"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "GotoScene"
+      },
+      "dungeon:b_8": {
+        "scene": "dungeon",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_9": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:10"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "GoSub"
+      },
+      "dungeon:b_10": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:11"
+        ],
+        "entryType": "GoSubContinuation",
+        "exitType": "Goto"
+      },
+      "dungeon:b_11": {
+        "scene": "dungeon",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_12": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:14"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_13": {
+        "scene": "dungeon",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_14": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:20",
+          "dungeon:21"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "GoSub"
+      },
+      "dungeon:b_15": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:22"
+        ],
+        "entryType": "GoSubContinuation",
+        "exitType": "Goto"
+      },
+      "dungeon:b_16": {
+        "scene": "dungeon",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_17": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:25",
+          "dungeon:26"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "GoSub"
+      },
+      "dungeon:b_18": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:27"
+        ],
+        "entryType": "GoSubContinuation",
+        "exitType": "Goto"
+      },
+      "dungeon:b_19": {
+        "scene": "dungeon",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_20": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:30",
+          "dungeon:31"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "GoSub"
+      },
+      "dungeon:b_21": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:32"
+        ],
+        "entryType": "GoSubContinuation",
+        "exitType": "Goto"
+      },
+      "dungeon:b_22": {
+        "scene": "dungeon",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_23": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:35",
+          "dungeon:36"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "GoSub"
+      },
+      "dungeon:b_24": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:37"
+        ],
+        "entryType": "GoSubContinuation",
+        "exitType": "Goto"
+      },
+      "dungeon:b_25": {
+        "scene": "dungeon",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_26": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:40",
+          "dungeon:41"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "GoSub"
+      },
+      "dungeon:b_27": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:42"
+        ],
+        "entryType": "GoSubContinuation",
+        "exitType": "Goto"
+      },
+      "dungeon:b_28": {
+        "scene": "dungeon",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_29": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:45",
+          "dungeon:46"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "GoSub"
+      },
+      "dungeon:b_30": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:47"
+        ],
+        "entryType": "GoSubContinuation",
+        "exitType": "Goto"
+      },
+      "dungeon:b_31": {
+        "scene": "dungeon",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_32": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:50"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "GoSub"
+      },
+      "dungeon:b_33": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:51"
+        ],
+        "entryType": "GoSubContinuation",
+        "exitType": "Goto"
+      },
+      "dungeon:b_34": {
+        "scene": "dungeon",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_35": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:53"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "Goto"
+      },
+      "dungeon:b_36": {
+        "scene": "dungeon",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_37": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:56",
+          "dungeon:57",
+          "dungeon:58",
+          "dungeon:64"
+        ],
+        "entryType": "Label",
+        "exitType": "Branch",
+        "label": "enter_room"
+      },
+      "dungeon:b_38": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:65"
+        ],
+        "entryType": "Continuation",
+        "exitType": "Return"
+      },
+      "dungeon:b_39": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:59"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "GoSub"
+      },
+      "dungeon:b_40": {
+        "scene": "dungeon",
+        "statementIds": [],
+        "entryType": "GoSubContinuation",
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_41": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:60"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "GoSub"
+      },
+      "dungeon:b_42": {
+        "scene": "dungeon",
+        "statementIds": [],
+        "entryType": "GoSubContinuation",
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_43": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:62"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "GoSub"
+      },
+      "dungeon:b_44": {
+        "scene": "dungeon",
+        "statementIds": [],
+        "entryType": "GoSubContinuation",
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_45": {
+        "scene": "dungeon",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_46": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:66",
+          "dungeon:67",
+          "dungeon:68",
+          "dungeon:69"
+        ],
+        "entryType": "Label",
+        "exitType": "FallThrough",
+        "label": "combat_encounter"
+      },
+      "dungeon:b_47": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:70",
+          "dungeon:71",
+          "dungeon:73"
+        ],
+        "entryType": "Label",
+        "exitType": "Branch",
+        "label": "combat_round"
+      },
+      "dungeon:b_48": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:75"
+        ],
+        "entryType": "Continuation",
+        "exitType": "Branch"
+      },
+      "dungeon:b_49": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:72"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "Goto"
+      },
+      "dungeon:b_50": {
+        "scene": "dungeon",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_51": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:114"
+        ],
+        "entryType": "Continuation",
+        "exitType": "Choice"
+      },
+      "dungeon:b_52": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:74"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "Goto"
+      },
+      "dungeon:b_53": {
+        "scene": "dungeon",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_54": {
+        "scene": "dungeon",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_55": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:76",
+          "dungeon:77",
+          "dungeon:78",
+          "dungeon:79",
+          "dungeon:80",
+          "dungeon:81",
+          "dungeon:82",
+          "dungeon:83",
+          "dungeon:85"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "Branch"
+      },
+      "dungeon:b_56": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:86",
+          "dungeon:87",
+          "dungeon:88"
+        ],
+        "entryType": "Continuation",
+        "exitType": "Goto"
+      },
+      "dungeon:b_57": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:84"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_58": {
+        "scene": "dungeon",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_59": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:90",
+          "dungeon:91",
+          "dungeon:103"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "Branch"
+      },
+      "dungeon:b_60": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:104"
+        ],
+        "entryType": "Continuation",
+        "exitType": "Goto"
+      },
+      "dungeon:b_61": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:92",
+          "dungeon:93",
+          "dungeon:94",
+          "dungeon:95",
+          "dungeon:96"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_62": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:97",
+          "dungeon:98",
+          "dungeon:99",
+          "dungeon:100",
+          "dungeon:101"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_63": {
+        "scene": "dungeon",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_64": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:107"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "GoSub"
+      },
+      "dungeon:b_65": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:108",
+          "dungeon:109",
+          "dungeon:110",
+          "dungeon:111",
+          "dungeon:112"
+        ],
+        "entryType": "GoSubContinuation",
+        "exitType": "Goto"
+      },
+      "dungeon:b_66": {
+        "scene": "dungeon",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_67": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:115",
+          "dungeon:116",
+          "dungeon:119"
+        ],
+        "entryType": "Label",
+        "exitType": "Branch",
+        "label": "combat_victory"
+      },
+      "dungeon:b_68": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:122"
+        ],
+        "entryType": "Continuation",
+        "exitType": "Branch"
+      },
+      "dungeon:b_69": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:117",
+          "dungeon:118"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_70": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:123",
+          "dungeon:124"
+        ],
+        "entryType": "Continuation",
+        "exitType": "Return"
+      },
+      "dungeon:b_71": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:120",
+          "dungeon:121"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_72": {
+        "scene": "dungeon",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_73": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:125",
+          "dungeon:126",
+          "dungeon:127",
+          "dungeon:141"
+        ],
+        "entryType": "Label",
+        "exitType": "Choice",
+        "label": "treasure_room"
+      },
+      "dungeon:b_74": {
+        "scene": "dungeon",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_75": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:128",
+          "dungeon:129",
+          "dungeon:130"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "Return"
+      },
+      "dungeon:b_76": {
+        "scene": "dungeon",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_77": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:132",
+          "dungeon:138"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "Branch"
+      },
+      "dungeon:b_78": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:139"
+        ],
+        "entryType": "Continuation",
+        "exitType": "Return"
+      },
+      "dungeon:b_79": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:133",
+          "dungeon:134",
+          "dungeon:135"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_80": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:136"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_81": {
+        "scene": "dungeon",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_82": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:142",
+          "dungeon:143",
+          "dungeon:144",
+          "dungeon:145",
+          "dungeon:146"
+        ],
+        "entryType": "Label",
+        "exitType": "Return",
+        "label": "key_room"
+      },
+      "dungeon:b_83": {
+        "scene": "dungeon",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_84": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:147",
+          "dungeon:148",
+          "dungeon:149",
+          "dungeon:150",
+          "dungeon:151",
+          "dungeon:153"
+        ],
+        "entryType": "Label",
+        "exitType": "Branch",
+        "label": "use_potion"
+      },
+      "dungeon:b_85": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:154",
+          "dungeon:155"
+        ],
+        "entryType": "Continuation",
+        "exitType": "Return"
+      },
+      "dungeon:b_86": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:152"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_87": {
+        "scene": "dungeon",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_88": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:156",
+          "dungeon:157",
+          "dungeon:158",
+          "dungeon:159",
+          "dungeon:160",
+          "dungeon:162"
+        ],
+        "entryType": "Label",
+        "exitType": "Branch",
+        "label": "rest"
+      },
+      "dungeon:b_89": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:163",
+          "dungeon:164"
+        ],
+        "entryType": "Continuation",
+        "exitType": "Return"
+      },
+      "dungeon:b_90": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:161"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_91": {
+        "scene": "dungeon",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_92": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:165",
+          "dungeon:166",
+          "dungeon:167"
+        ],
+        "entryType": "Label",
+        "exitType": "Ending",
+        "label": "death"
+      },
+      "dungeon:b_93": {
+        "scene": "dungeon",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_94": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:168",
+          "dungeon:169",
+          "dungeon:173"
+        ],
+        "entryType": "Label",
+        "exitType": "Branch",
+        "label": "retreat"
+      },
+      "dungeon:b_95": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:174",
+          "dungeon:175"
+        ],
+        "entryType": "Continuation",
+        "exitType": "Finish"
+      },
+      "dungeon:b_96": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:170"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_97": {
+        "scene": "dungeon",
+        "statementIds": [
+          "dungeon:171"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "FallThrough"
+      },
+      "dungeon:b_98": {
+        "scene": "dungeon",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      }
+    },
+    "edges": [
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "dungeon:b_0",
+        "targetBlockId": "dungeon:b_1",
+        "metadata": {}
+      },
+      {
+        "kind": "GotoScene",
+        "sourceBlockId": "dungeon:b_7",
+        "targetBlockId": null,
+        "metadata": {
+          "targetScene": "boss"
+        }
+      },
+      {
+        "kind": "ChoiceOption",
+        "sourceBlockId": "dungeon:b_5",
+        "targetBlockId": "dungeon:b_7",
+        "metadata": {
+          "optionStatementId": "dungeon:9"
+        }
+      },
+      {
+        "kind": "GoSubCall",
+        "sourceBlockId": "dungeon:b_9",
+        "targetBlockId": "dungeon:b_88",
+        "metadata": {
+          "label": "rest"
+        }
+      },
+      {
+        "kind": "GoSubReturn",
+        "sourceBlockId": "dungeon:b_9",
+        "targetBlockId": "dungeon:b_10",
+        "metadata": {}
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "dungeon:b_10",
+        "targetBlockId": "dungeon:b_1",
+        "metadata": {
+          "label": "dungeon_hub"
+        }
+      },
+      {
+        "kind": "ChoiceOption",
+        "sourceBlockId": "dungeon:b_5",
+        "targetBlockId": "dungeon:b_9",
+        "metadata": {
+          "optionStatementId": "dungeon:12"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "dungeon:b_5",
+        "targetBlockId": "dungeon:b_6",
+        "metadata": {}
+      },
+      {
+        "kind": "IfBranch",
+        "sourceBlockId": "dungeon:b_3",
+        "targetBlockId": "dungeon:b_5",
+        "metadata": {
+          "conditionStatementId": "dungeon:16"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "dungeon:b_6",
+        "targetBlockId": "dungeon:b_4",
+        "metadata": {}
+      },
+      {
+        "kind": "ElseBranch",
+        "sourceBlockId": "dungeon:b_3",
+        "targetBlockId": "dungeon:b_12",
+        "metadata": {}
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "dungeon:b_12",
+        "targetBlockId": "dungeon:b_4",
+        "metadata": {}
+      },
+      {
+        "kind": "IfBranch",
+        "sourceBlockId": "dungeon:b_1",
+        "targetBlockId": "dungeon:b_3",
+        "metadata": {
+          "conditionStatementId": "dungeon:17"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "dungeon:b_4",
+        "targetBlockId": "dungeon:b_2",
+        "metadata": {}
+      },
+      {
+        "kind": "IfFallThrough",
+        "sourceBlockId": "dungeon:b_1",
+        "targetBlockId": "dungeon:b_2",
+        "metadata": {}
+      },
+      {
+        "kind": "GoSubCall",
+        "sourceBlockId": "dungeon:b_14",
+        "targetBlockId": "dungeon:b_37",
+        "metadata": {
+          "label": "enter_room"
+        }
+      },
+      {
+        "kind": "GoSubReturn",
+        "sourceBlockId": "dungeon:b_14",
+        "targetBlockId": "dungeon:b_15",
+        "metadata": {}
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "dungeon:b_15",
+        "targetBlockId": "dungeon:b_1",
+        "metadata": {
+          "label": "dungeon_hub"
+        }
+      },
+      {
+        "kind": "ChoiceOption",
+        "sourceBlockId": "dungeon:b_2",
+        "targetBlockId": "dungeon:b_14",
+        "metadata": {
+          "optionStatementId": "dungeon:23",
+          "effectiveReuse": "hide_reuse"
+        }
+      },
+      {
+        "kind": "GoSubCall",
+        "sourceBlockId": "dungeon:b_17",
+        "targetBlockId": "dungeon:b_37",
+        "metadata": {
+          "label": "enter_room"
+        }
+      },
+      {
+        "kind": "GoSubReturn",
+        "sourceBlockId": "dungeon:b_17",
+        "targetBlockId": "dungeon:b_18",
+        "metadata": {}
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "dungeon:b_18",
+        "targetBlockId": "dungeon:b_1",
+        "metadata": {
+          "label": "dungeon_hub"
+        }
+      },
+      {
+        "kind": "ChoiceOption",
+        "sourceBlockId": "dungeon:b_2",
+        "targetBlockId": "dungeon:b_17",
+        "metadata": {
+          "optionStatementId": "dungeon:28",
+          "effectiveReuse": "hide_reuse"
+        }
+      },
+      {
+        "kind": "GoSubCall",
+        "sourceBlockId": "dungeon:b_20",
+        "targetBlockId": "dungeon:b_37",
+        "metadata": {
+          "label": "enter_room"
+        }
+      },
+      {
+        "kind": "GoSubReturn",
+        "sourceBlockId": "dungeon:b_20",
+        "targetBlockId": "dungeon:b_21",
+        "metadata": {}
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "dungeon:b_21",
+        "targetBlockId": "dungeon:b_1",
+        "metadata": {
+          "label": "dungeon_hub"
+        }
+      },
+      {
+        "kind": "ChoiceOption",
+        "sourceBlockId": "dungeon:b_2",
+        "targetBlockId": "dungeon:b_20",
+        "metadata": {
+          "optionStatementId": "dungeon:33",
+          "effectiveReuse": "hide_reuse"
+        }
+      },
+      {
+        "kind": "GoSubCall",
+        "sourceBlockId": "dungeon:b_23",
+        "targetBlockId": "dungeon:b_37",
+        "metadata": {
+          "label": "enter_room"
+        }
+      },
+      {
+        "kind": "GoSubReturn",
+        "sourceBlockId": "dungeon:b_23",
+        "targetBlockId": "dungeon:b_24",
+        "metadata": {}
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "dungeon:b_24",
+        "targetBlockId": "dungeon:b_1",
+        "metadata": {
+          "label": "dungeon_hub"
+        }
+      },
+      {
+        "kind": "ChoiceOption",
+        "sourceBlockId": "dungeon:b_2",
+        "targetBlockId": "dungeon:b_23",
+        "metadata": {
+          "optionStatementId": "dungeon:38",
+          "effectiveReuse": "hide_reuse"
+        }
+      },
+      {
+        "kind": "GoSubCall",
+        "sourceBlockId": "dungeon:b_26",
+        "targetBlockId": "dungeon:b_37",
+        "metadata": {
+          "label": "enter_room"
+        }
+      },
+      {
+        "kind": "GoSubReturn",
+        "sourceBlockId": "dungeon:b_26",
+        "targetBlockId": "dungeon:b_27",
+        "metadata": {}
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "dungeon:b_27",
+        "targetBlockId": "dungeon:b_1",
+        "metadata": {
+          "label": "dungeon_hub"
+        }
+      },
+      {
+        "kind": "ChoiceOption",
+        "sourceBlockId": "dungeon:b_2",
+        "targetBlockId": "dungeon:b_26",
+        "metadata": {
+          "optionStatementId": "dungeon:43",
+          "effectiveReuse": "hide_reuse"
+        }
+      },
+      {
+        "kind": "GoSubCall",
+        "sourceBlockId": "dungeon:b_29",
+        "targetBlockId": "dungeon:b_37",
+        "metadata": {
+          "label": "enter_room"
+        }
+      },
+      {
+        "kind": "GoSubReturn",
+        "sourceBlockId": "dungeon:b_29",
+        "targetBlockId": "dungeon:b_30",
+        "metadata": {}
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "dungeon:b_30",
+        "targetBlockId": "dungeon:b_1",
+        "metadata": {
+          "label": "dungeon_hub"
+        }
+      },
+      {
+        "kind": "ChoiceOption",
+        "sourceBlockId": "dungeon:b_2",
+        "targetBlockId": "dungeon:b_29",
+        "metadata": {
+          "optionStatementId": "dungeon:48",
+          "effectiveReuse": "hide_reuse"
+        }
+      },
+      {
+        "kind": "GoSubCall",
+        "sourceBlockId": "dungeon:b_32",
+        "targetBlockId": "dungeon:b_84",
+        "metadata": {
+          "label": "use_potion"
+        }
+      },
+      {
+        "kind": "GoSubReturn",
+        "sourceBlockId": "dungeon:b_32",
+        "targetBlockId": "dungeon:b_33",
+        "metadata": {}
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "dungeon:b_33",
+        "targetBlockId": "dungeon:b_1",
+        "metadata": {
+          "label": "dungeon_hub"
+        }
+      },
+      {
+        "kind": "ChoiceOptionCheck",
+        "sourceBlockId": "dungeon:b_2",
+        "targetBlockId": "dungeon:b_32",
+        "metadata": {
+          "optionStatementId": "dungeon:52",
+          "conditionStatementId": "dungeon:52",
+          "choiceConditionKind": "selectable_if"
+        }
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "dungeon:b_35",
+        "targetBlockId": "dungeon:b_94",
+        "metadata": {
+          "label": "retreat"
+        }
+      },
+      {
+        "kind": "ChoiceOption",
+        "sourceBlockId": "dungeon:b_2",
+        "targetBlockId": "dungeon:b_35",
+        "metadata": {
+          "optionStatementId": "dungeon:54"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "dungeon:b_2",
+        "targetBlockId": "dungeon:b_13",
+        "metadata": {}
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "dungeon:b_13",
+        "targetBlockId": "dungeon:b_37",
+        "metadata": {}
+      },
+      {
+        "kind": "GoSubCall",
+        "sourceBlockId": "dungeon:b_39",
+        "targetBlockId": "dungeon:b_46",
+        "metadata": {
+          "label": "combat_encounter"
+        }
+      },
+      {
+        "kind": "GoSubReturn",
+        "sourceBlockId": "dungeon:b_39",
+        "targetBlockId": "dungeon:b_40",
+        "metadata": {}
+      },
+      {
+        "kind": "IfBranch",
+        "sourceBlockId": "dungeon:b_37",
+        "targetBlockId": "dungeon:b_39",
+        "metadata": {
+          "conditionStatementId": "dungeon:64"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "dungeon:b_40",
+        "targetBlockId": "dungeon:b_38",
+        "metadata": {}
+      },
+      {
+        "kind": "GoSubCall",
+        "sourceBlockId": "dungeon:b_41",
+        "targetBlockId": "dungeon:b_73",
+        "metadata": {
+          "label": "treasure_room"
+        }
+      },
+      {
+        "kind": "GoSubReturn",
+        "sourceBlockId": "dungeon:b_41",
+        "targetBlockId": "dungeon:b_42",
+        "metadata": {}
+      },
+      {
+        "kind": "ElseIfBranch",
+        "sourceBlockId": "dungeon:b_37",
+        "targetBlockId": "dungeon:b_41",
+        "metadata": {
+          "conditionStatementId": "dungeon:61"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "dungeon:b_42",
+        "targetBlockId": "dungeon:b_38",
+        "metadata": {}
+      },
+      {
+        "kind": "GoSubCall",
+        "sourceBlockId": "dungeon:b_43",
+        "targetBlockId": "dungeon:b_82",
+        "metadata": {
+          "label": "key_room"
+        }
+      },
+      {
+        "kind": "GoSubReturn",
+        "sourceBlockId": "dungeon:b_43",
+        "targetBlockId": "dungeon:b_44",
+        "metadata": {}
+      },
+      {
+        "kind": "ElseBranch",
+        "sourceBlockId": "dungeon:b_37",
+        "targetBlockId": "dungeon:b_43",
+        "metadata": {}
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "dungeon:b_44",
+        "targetBlockId": "dungeon:b_38",
+        "metadata": {}
+      },
+      {
+        "kind": "Return",
+        "sourceBlockId": "dungeon:b_38",
+        "targetBlockId": null,
+        "metadata": {}
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "dungeon:b_45",
+        "targetBlockId": "dungeon:b_46",
+        "metadata": {}
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "dungeon:b_46",
+        "targetBlockId": "dungeon:b_47",
+        "metadata": {}
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "dungeon:b_49",
+        "targetBlockId": "dungeon:b_67",
+        "metadata": {
+          "label": "combat_victory"
+        }
+      },
+      {
+        "kind": "IfBranch",
+        "sourceBlockId": "dungeon:b_47",
+        "targetBlockId": "dungeon:b_49",
+        "metadata": {
+          "conditionStatementId": "dungeon:73"
+        }
+      },
+      {
+        "kind": "IfFallThrough",
+        "sourceBlockId": "dungeon:b_47",
+        "targetBlockId": "dungeon:b_48",
+        "metadata": {}
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "dungeon:b_52",
+        "targetBlockId": "dungeon:b_92",
+        "metadata": {
+          "label": "death"
+        }
+      },
+      {
+        "kind": "IfBranch",
+        "sourceBlockId": "dungeon:b_48",
+        "targetBlockId": "dungeon:b_52",
+        "metadata": {
+          "conditionStatementId": "dungeon:75"
+        }
+      },
+      {
+        "kind": "IfFallThrough",
+        "sourceBlockId": "dungeon:b_48",
+        "targetBlockId": "dungeon:b_51",
+        "metadata": {}
+      },
+      {
+        "kind": "IfBranch",
+        "sourceBlockId": "dungeon:b_55",
+        "targetBlockId": "dungeon:b_57",
+        "metadata": {
+          "conditionStatementId": "dungeon:85"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "dungeon:b_57",
+        "targetBlockId": "dungeon:b_56",
+        "metadata": {}
+      },
+      {
+        "kind": "IfFallThrough",
+        "sourceBlockId": "dungeon:b_55",
+        "targetBlockId": "dungeon:b_56",
+        "metadata": {}
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "dungeon:b_56",
+        "targetBlockId": "dungeon:b_47",
+        "metadata": {
+          "label": "combat_round"
+        }
+      },
+      {
+        "kind": "ChoiceOption",
+        "sourceBlockId": "dungeon:b_51",
+        "targetBlockId": "dungeon:b_55",
+        "metadata": {
+          "optionStatementId": "dungeon:89"
+        }
+      },
+      {
+        "kind": "IfBranch",
+        "sourceBlockId": "dungeon:b_59",
+        "targetBlockId": "dungeon:b_61",
+        "metadata": {
+          "conditionStatementId": "dungeon:103"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "dungeon:b_61",
+        "targetBlockId": "dungeon:b_60",
+        "metadata": {}
+      },
+      {
+        "kind": "ElseBranch",
+        "sourceBlockId": "dungeon:b_59",
+        "targetBlockId": "dungeon:b_62",
+        "metadata": {}
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "dungeon:b_62",
+        "targetBlockId": "dungeon:b_60",
+        "metadata": {}
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "dungeon:b_60",
+        "targetBlockId": "dungeon:b_47",
+        "metadata": {
+          "label": "combat_round"
+        }
+      },
+      {
+        "kind": "ChoiceOption",
+        "sourceBlockId": "dungeon:b_51",
+        "targetBlockId": "dungeon:b_59",
+        "metadata": {
+          "optionStatementId": "dungeon:105"
+        }
+      },
+      {
+        "kind": "GoSubCall",
+        "sourceBlockId": "dungeon:b_64",
+        "targetBlockId": "dungeon:b_84",
+        "metadata": {
+          "label": "use_potion"
+        }
+      },
+      {
+        "kind": "GoSubReturn",
+        "sourceBlockId": "dungeon:b_64",
+        "targetBlockId": "dungeon:b_65",
+        "metadata": {}
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "dungeon:b_65",
+        "targetBlockId": "dungeon:b_47",
+        "metadata": {
+          "label": "combat_round"
+        }
+      },
+      {
+        "kind": "ChoiceOptionCheck",
+        "sourceBlockId": "dungeon:b_51",
+        "targetBlockId": "dungeon:b_64",
+        "metadata": {
+          "optionStatementId": "dungeon:113",
+          "conditionStatementId": "dungeon:113",
+          "choiceConditionKind": "selectable_if"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "dungeon:b_51",
+        "targetBlockId": "dungeon:b_54",
+        "metadata": {}
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "dungeon:b_54",
+        "targetBlockId": "dungeon:b_67",
+        "metadata": {}
+      },
+      {
+        "kind": "IfBranch",
+        "sourceBlockId": "dungeon:b_67",
+        "targetBlockId": "dungeon:b_69",
+        "metadata": {
+          "conditionStatementId": "dungeon:119"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "dungeon:b_69",
+        "targetBlockId": "dungeon:b_68",
+        "metadata": {}
+      },
+      {
+        "kind": "IfFallThrough",
+        "sourceBlockId": "dungeon:b_67",
+        "targetBlockId": "dungeon:b_68",
+        "metadata": {}
+      },
+      {
+        "kind": "IfBranch",
+        "sourceBlockId": "dungeon:b_68",
+        "targetBlockId": "dungeon:b_71",
+        "metadata": {
+          "conditionStatementId": "dungeon:122"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "dungeon:b_71",
+        "targetBlockId": "dungeon:b_70",
+        "metadata": {}
+      },
+      {
+        "kind": "IfFallThrough",
+        "sourceBlockId": "dungeon:b_68",
+        "targetBlockId": "dungeon:b_70",
+        "metadata": {}
+      },
+      {
+        "kind": "Return",
+        "sourceBlockId": "dungeon:b_70",
+        "targetBlockId": null,
+        "metadata": {}
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "dungeon:b_72",
+        "targetBlockId": "dungeon:b_73",
+        "metadata": {}
+      },
+      {
+        "kind": "Return",
+        "sourceBlockId": "dungeon:b_75",
+        "targetBlockId": null,
+        "metadata": {}
+      },
+      {
+        "kind": "ChoiceOption",
+        "sourceBlockId": "dungeon:b_73",
+        "targetBlockId": "dungeon:b_75",
+        "metadata": {
+          "optionStatementId": "dungeon:131"
+        }
+      },
+      {
+        "kind": "IfBranch",
+        "sourceBlockId": "dungeon:b_77",
+        "targetBlockId": "dungeon:b_79",
+        "metadata": {
+          "conditionStatementId": "dungeon:138"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "dungeon:b_79",
+        "targetBlockId": "dungeon:b_78",
+        "metadata": {}
+      },
+      {
+        "kind": "ElseBranch",
+        "sourceBlockId": "dungeon:b_77",
+        "targetBlockId": "dungeon:b_80",
+        "metadata": {}
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "dungeon:b_80",
+        "targetBlockId": "dungeon:b_78",
+        "metadata": {}
+      },
+      {
+        "kind": "Return",
+        "sourceBlockId": "dungeon:b_78",
+        "targetBlockId": null,
+        "metadata": {}
+      },
+      {
+        "kind": "ChoiceOption",
+        "sourceBlockId": "dungeon:b_73",
+        "targetBlockId": "dungeon:b_77",
+        "metadata": {
+          "optionStatementId": "dungeon:140"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "dungeon:b_73",
+        "targetBlockId": "dungeon:b_74",
+        "metadata": {}
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "dungeon:b_74",
+        "targetBlockId": "dungeon:b_82",
+        "metadata": {}
+      },
+      {
+        "kind": "Return",
+        "sourceBlockId": "dungeon:b_82",
+        "targetBlockId": null,
+        "metadata": {}
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "dungeon:b_83",
+        "targetBlockId": "dungeon:b_84",
+        "metadata": {}
+      },
+      {
+        "kind": "IfBranch",
+        "sourceBlockId": "dungeon:b_84",
+        "targetBlockId": "dungeon:b_86",
+        "metadata": {
+          "conditionStatementId": "dungeon:153"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "dungeon:b_86",
+        "targetBlockId": "dungeon:b_85",
+        "metadata": {}
+      },
+      {
+        "kind": "IfFallThrough",
+        "sourceBlockId": "dungeon:b_84",
+        "targetBlockId": "dungeon:b_85",
+        "metadata": {}
+      },
+      {
+        "kind": "Return",
+        "sourceBlockId": "dungeon:b_85",
+        "targetBlockId": null,
+        "metadata": {}
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "dungeon:b_87",
+        "targetBlockId": "dungeon:b_88",
+        "metadata": {}
+      },
+      {
+        "kind": "IfBranch",
+        "sourceBlockId": "dungeon:b_88",
+        "targetBlockId": "dungeon:b_90",
+        "metadata": {
+          "conditionStatementId": "dungeon:162"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "dungeon:b_90",
+        "targetBlockId": "dungeon:b_89",
+        "metadata": {}
+      },
+      {
+        "kind": "IfFallThrough",
+        "sourceBlockId": "dungeon:b_88",
+        "targetBlockId": "dungeon:b_89",
+        "metadata": {}
+      },
+      {
+        "kind": "Return",
+        "sourceBlockId": "dungeon:b_89",
+        "targetBlockId": null,
+        "metadata": {}
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "dungeon:b_91",
+        "targetBlockId": "dungeon:b_92",
+        "metadata": {}
+      },
+      {
+        "kind": "GameEnd",
+        "sourceBlockId": "dungeon:b_92",
+        "targetBlockId": null,
+        "metadata": {}
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "dungeon:b_93",
+        "targetBlockId": "dungeon:b_94",
+        "metadata": {}
+      },
+      {
+        "kind": "IfBranch",
+        "sourceBlockId": "dungeon:b_94",
+        "targetBlockId": "dungeon:b_96",
+        "metadata": {
+          "conditionStatementId": "dungeon:173"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "dungeon:b_96",
+        "targetBlockId": "dungeon:b_95",
+        "metadata": {}
+      },
+      {
+        "kind": "ElseBranch",
+        "sourceBlockId": "dungeon:b_94",
+        "targetBlockId": "dungeon:b_97",
+        "metadata": {}
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "dungeon:b_97",
+        "targetBlockId": "dungeon:b_95",
+        "metadata": {}
+      },
+      {
+        "kind": "SceneExit",
+        "sourceBlockId": "dungeon:b_95",
+        "targetBlockId": null,
+        "metadata": {}
+      }
+    ],
+    "entryBlockId": "dungeon:b_0",
+    "labelToBlockId": {
+      "dungeon_hub": "dungeon:b_1",
+      "enter_room": "dungeon:b_37",
+      "combat_encounter": "dungeon:b_46",
+      "combat_round": "dungeon:b_47",
+      "combat_victory": "dungeon:b_67",
+      "treasure_room": "dungeon:b_73",
+      "key_room": "dungeon:b_82",
+      "use_potion": "dungeon:b_84",
+      "rest": "dungeon:b_88",
+      "death": "dungeon:b_92",
+      "retreat": "dungeon:b_94"
+    },
+    "unresolvedEdges": []
+  },
+  {
+    "sceneName": "startup",
+    "blocks": {
+      "startup:b_0": {
+        "exitType": "GotoScene"
+      },
+      "startup:b_1": {
+        "exitType": "FallThrough"
+      }
+    },
+    "blockIndex": {
+      "startup:b_0": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:0",
+          "startup:1",
+          "startup:2",
+          "startup:3",
+          "startup:4",
+          "startup:5",
+          "startup:6",
+          "startup:7",
+          "startup:8",
+          "startup:9",
+          "startup:10",
+          "startup:11",
+          "startup:12"
+        ],
+        "entryType": "SceneEntry",
+        "exitType": "GotoScene"
+      },
+      "startup:b_1": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      }
+    },
+    "edges": [
+      {
+        "kind": "GotoScene",
+        "sourceBlockId": "startup:b_0",
+        "targetBlockId": null,
+        "metadata": {
+          "targetScene": "dungeon"
+        }
+      }
+    ],
+    "entryBlockId": "startup:b_0",
+    "labelToBlockId": {},
+    "unresolvedEdges": []
+  }
+]

@@ -1,0 +1,41 @@
+*create result ""
+*create depth 0
+
+*gosub layer1
+Final: ${result} depth=${depth}
+*finish
+
+*label layer1
+*set result (result & "L1>")
+*set depth + 1
+*gosub layer2
+*set result (result & "<L1")
+*return
+
+*label layer2
+*set result (result & "L2>")
+*set depth + 1
+*if (depth = 2)
+  *gosub layer3
+*set result (result & "<L2")
+*return
+
+*label layer3
+*set result (result & "L3>")
+*set depth + 1
+*gosub layer4
+*set result (result & "<L3")
+*return
+
+*label layer4
+*set result (result & "L4>")
+*set depth + 1
+*if (depth >= 4)
+  *gosub layer5
+*set result (result & "<L4")
+*return
+
+*label layer5
+*set result (result & "L5")
+*set depth + 1
+*return

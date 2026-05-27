@@ -1,0 +1,268 @@
+[
+  [
+    {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 0,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "strength",
+      "rawValue": "strength",
+      "position": 8,
+      "lineNumber": 0,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 30,
+      "position": 17,
+      "lineNumber": 0,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 1,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "magic",
+      "rawValue": "magic",
+      "position": 8,
+      "lineNumber": 1,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 60,
+      "position": 14,
+      "lineNumber": 1,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 3,
+      "position": 0,
+      "indent": 0,
+      "content": "Choose your approach:\n"
+    },
+    {
+      "type": "Choice",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 4,
+      "position": 0
+    },
+    {
+      "type": "SelectableIf",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 5,
+      "position": 2
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 17,
+      "lineNumber": 5,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "Identifier",
+      "value": "strength",
+      "rawValue": "strength",
+      "position": 18,
+      "lineNumber": 5,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "GreaterThanEqualsOperator",
+      "rawValue": ">=",
+      "position": 27,
+      "lineNumber": 5,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 50,
+      "position": 30,
+      "lineNumber": 5,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 32,
+      "lineNumber": 5,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 5,
+      "position": 16,
+      "rawText": "Break down the door.",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 5,
+      "position": 17,
+      "indent": 1,
+      "content": "Break down the door."
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 6,
+      "position": 4,
+      "indent": 2,
+      "content": "You smash through!\n"
+    },
+    {
+      "type": "Finish",
+      "sceneName": "startup",
+      "indent": 2,
+      "lineNumber": 7,
+      "position": 4
+    },
+    {
+      "type": "SelectableIf",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 8,
+      "position": 2
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 17,
+      "lineNumber": 8,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "Identifier",
+      "value": "magic",
+      "rawValue": "magic",
+      "position": 18,
+      "lineNumber": 8,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "GreaterThanEqualsOperator",
+      "rawValue": ">=",
+      "position": 24,
+      "lineNumber": 8,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 50,
+      "position": 27,
+      "lineNumber": 8,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 29,
+      "lineNumber": 8,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 8,
+      "position": 16,
+      "rawText": "Cast a spell.",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 8,
+      "position": 17,
+      "indent": 1,
+      "content": "Cast a spell."
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 9,
+      "position": 4,
+      "indent": 2,
+      "content": "You cast an opening spell.\n"
+    },
+    {
+      "type": "Finish",
+      "sceneName": "startup",
+      "indent": 2,
+      "lineNumber": 10,
+      "position": 4
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 11,
+      "rawText": "Pick the lock.",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 11,
+      "position": null,
+      "indent": 1,
+      "content": "Pick the lock."
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 12,
+      "position": 4,
+      "indent": 2,
+      "content": "You pick the lock carefully.\n"
+    },
+    {
+      "type": "Finish",
+      "sceneName": "startup",
+      "indent": 2,
+      "lineNumber": 13,
+      "position": 4
+    },
+    {
+      "lineNumber": 14,
+      "indent": 0,
+      "position": 0,
+      "sceneName": "startup",
+      "type": "SceneEnd"
+    }
+  ]
+]

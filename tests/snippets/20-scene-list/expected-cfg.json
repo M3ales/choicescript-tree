@@ -1,0 +1,31 @@
+[
+  {
+    "sceneName": "startup",
+    "blocks": {
+      "startup:b_0": {
+        "exitType": "ImplicitEnd"
+      }
+    },
+    "blockIndex": {
+      "startup:b_0": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:0"
+        ],
+        "entryType": "SceneEntry",
+        "exitType": "ImplicitEnd"
+      }
+    },
+    "edges": [
+      {
+        "kind": "SceneExit",
+        "sourceBlockId": "startup:b_0",
+        "targetBlockId": null,
+        "metadata": {}
+      }
+    ],
+    "entryBlockId": "startup:b_0",
+    "labelToBlockId": {},
+    "unresolvedEdges": []
+  }
+]

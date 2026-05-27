@@ -1,0 +1,12 @@
+*label talk
+Who do you talk to?
+*choice
+  *disable_reuse #Talk to the guard.
+    The guard shares rumors.
+    *goto talk
+  *disable_reuse #Talk to the merchant.
+    The merchant offers wares.
+    *goto talk
+  #Walk away.
+    You walk away.
+    *finish

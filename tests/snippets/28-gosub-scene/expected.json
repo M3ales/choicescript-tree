@@ -1,0 +1,271 @@
+[
+  {
+    "name": "helpers",
+    "statements": [
+      {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "helpers",
+          "indent": 0,
+          "lineNumber": 0,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "add_rep",
+          "rawValue": "add_rep",
+          "position": 6,
+          "lineNumber": 0,
+          "sceneName": "helpers",
+          "indent": 0,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Binary",
+          "left": {
+            "kind": "Identifier",
+            "token": {
+              "type": "Identifier",
+              "value": "reputation",
+              "rawValue": "reputation",
+              "position": 5,
+              "lineNumber": 1,
+              "sceneName": "helpers",
+              "indent": 0
+            }
+          },
+          "operator": {
+            "type": "AdditionOperator",
+            "rawValue": "+",
+            "position": 16,
+            "lineNumber": 1,
+            "sceneName": "helpers",
+            "indent": 0
+          },
+          "right": {
+            "kind": "Literal",
+            "value": {
+              "type": "NumberLiteral",
+              "value": 10,
+              "position": 18,
+              "lineNumber": 1,
+              "sceneName": "helpers",
+              "indent": 0
+            }
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "helpers",
+          "indent": 0,
+          "lineNumber": 1,
+          "position": 0
+        }
+      },
+      {
+        "kind": "Return",
+        "token": {
+          "type": "Return",
+          "sceneName": "helpers",
+          "indent": 0,
+          "lineNumber": 2,
+          "position": 0
+        }
+      }
+    ],
+    "parseErrors": [],
+    "start": {
+      "sceneName": "helpers",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    "end": {
+      "type": "Return",
+      "sceneName": "helpers",
+      "indent": 0,
+      "lineNumber": 2,
+      "position": 0
+    }
+  },
+  {
+    "name": "startup",
+    "statements": [
+      {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "reputation",
+          "rawValue": "reputation",
+          "position": 8,
+          "lineNumber": 0,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 0,
+            "position": 19,
+            "lineNumber": 0,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 0,
+          "position": 0
+        }
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 2,
+            "position": 0,
+            "indent": 0,
+            "content": "You arrive in town.\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 20,
+            "lineNumber": 2,
+            "position": 0,
+            "text": "You arrive in town.\n"
+          }
+        ]
+      },
+      {
+        "kind": "GoSubScene",
+        "token": {
+          "type": "GoSubScene",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 3,
+          "position": 0
+        },
+        "scene": {
+          "type": "Identifier",
+          "value": "helpers",
+          "rawValue": "helpers",
+          "position": 13,
+          "lineNumber": 3,
+          "sceneName": "startup",
+          "indent": 0,
+          "isSceneName": true,
+          "isLabelName": false
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "add_rep",
+          "rawValue": "add_rep",
+          "position": 21,
+          "lineNumber": 3,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        },
+        "args": []
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 4,
+            "position": 0,
+            "indent": 0,
+            "content": "Your reputation is "
+          },
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 4,
+            "position": 32,
+            "indent": 0,
+            "content": ".\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 19,
+            "lineNumber": 4,
+            "position": 0,
+            "text": "Your reputation is "
+          },
+          {
+            "kind": "Print",
+            "start": 0,
+            "end": 0,
+            "lineNumber": 4,
+            "position": 19,
+            "expression": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "reputation",
+                "rawValue": "reputation",
+                "position": 21,
+                "lineNumber": 4,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          },
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 2,
+            "lineNumber": 4,
+            "position": 32,
+            "text": ".\n"
+          }
+        ]
+      },
+      {
+        "kind": "Finish",
+        "token": {
+          "type": "Finish",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 5,
+          "position": 0
+        },
+        "buttonText": null
+      }
+    ],
+    "parseErrors": [],
+    "start": {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    "end": {
+      "type": "Finish",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 5,
+      "position": 0
+    }
+  }
+]

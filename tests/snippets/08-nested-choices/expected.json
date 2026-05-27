@@ -1,0 +1,424 @@
+[
+  {
+    "name": "startup",
+    "statements": [
+      {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "weapon",
+          "rawValue": "weapon",
+          "position": 8,
+          "lineNumber": 0,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "StringLiteral",
+            "value": "none",
+            "position": 15,
+            "lineNumber": 0,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 0,
+          "position": 0
+        }
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 2,
+            "position": 0,
+            "indent": 0,
+            "content": "What do you do?\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 16,
+            "lineNumber": 2,
+            "position": 0,
+            "text": "What do you do?\n"
+          }
+        ]
+      },
+      {
+        "kind": "Choice",
+        "token": {
+          "type": "Choice",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 3,
+          "position": 0
+        },
+        "body": [
+          {
+            "kind": "ChoiceOption",
+            "token": {
+              "type": "ChoiceOption",
+              "sceneName": "startup",
+              "indent": 1,
+              "lineNumber": 4,
+              "rawText": "Go to the armory.",
+              "hasMultiReplace": false
+            },
+            "body": [
+              {
+                "kind": "SetVariable",
+                "expression": {
+                  "kind": "Identifier",
+                  "token": {
+                    "type": "Identifier",
+                    "value": "weapon",
+                    "rawValue": "weapon",
+                    "position": 9,
+                    "lineNumber": 5,
+                    "sceneName": "startup",
+                    "indent": 2
+                  }
+                },
+                "assignment": {
+                  "kind": "Literal",
+                  "value": {
+                    "type": "StringLiteral",
+                    "value": "sword",
+                    "position": 16,
+                    "lineNumber": 5,
+                    "sceneName": "startup",
+                    "indent": 2
+                  }
+                },
+                "token": {
+                  "type": "SetVariable",
+                  "sceneName": "startup",
+                  "indent": 2,
+                  "lineNumber": 5,
+                  "position": 4
+                }
+              },
+              {
+                "content": [
+                  {
+                    "type": "Prose",
+                    "sceneName": "startup",
+                    "lineNumber": 6,
+                    "position": 4,
+                    "indent": 2,
+                    "content": "Which weapon?\n"
+                  }
+                ],
+                "kind": "Prose",
+                "parsedSegments": [
+                  {
+                    "kind": "Text",
+                    "start": 0,
+                    "end": 14,
+                    "lineNumber": 6,
+                    "position": 4,
+                    "text": "Which weapon?\n"
+                  }
+                ]
+              },
+              {
+                "kind": "Choice",
+                "token": {
+                  "type": "Choice",
+                  "sceneName": "startup",
+                  "indent": 2,
+                  "lineNumber": 7,
+                  "position": 4
+                },
+                "body": [
+                  {
+                    "kind": "ChoiceOption",
+                    "token": {
+                      "type": "ChoiceOption",
+                      "sceneName": "startup",
+                      "indent": 3,
+                      "lineNumber": 8,
+                      "rawText": "Take the sword.",
+                      "hasMultiReplace": false
+                    },
+                    "body": [
+                      {
+                        "kind": "SetVariable",
+                        "expression": {
+                          "kind": "Identifier",
+                          "token": {
+                            "type": "Identifier",
+                            "value": "weapon",
+                            "rawValue": "weapon",
+                            "position": 13,
+                            "lineNumber": 9,
+                            "sceneName": "startup",
+                            "indent": 4
+                          }
+                        },
+                        "assignment": {
+                          "kind": "Literal",
+                          "value": {
+                            "type": "StringLiteral",
+                            "value": "sword",
+                            "position": 20,
+                            "lineNumber": 9,
+                            "sceneName": "startup",
+                            "indent": 4
+                          }
+                        },
+                        "token": {
+                          "type": "SetVariable",
+                          "sceneName": "startup",
+                          "indent": 4,
+                          "lineNumber": 9,
+                          "position": 8
+                        }
+                      },
+                      {
+                        "content": [
+                          {
+                            "type": "Prose",
+                            "sceneName": "startup",
+                            "lineNumber": 10,
+                            "position": 8,
+                            "indent": 4,
+                            "content": "A fine blade.\n"
+                          }
+                        ],
+                        "kind": "Prose",
+                        "parsedSegments": [
+                          {
+                            "kind": "Text",
+                            "start": 0,
+                            "end": 14,
+                            "lineNumber": 10,
+                            "position": 8,
+                            "text": "A fine blade.\n"
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "Finish",
+                        "token": {
+                          "type": "Finish",
+                          "sceneName": "startup",
+                          "indent": 4,
+                          "lineNumber": 11,
+                          "position": 8
+                        },
+                        "buttonText": null
+                      }
+                    ],
+                    "parsedSegments": [
+                      {
+                        "kind": "Text",
+                        "start": 0,
+                        "end": 15,
+                        "lineNumber": 8,
+                        "position": null,
+                        "text": "Take the sword."
+                      }
+                    ],
+                    "reuse": null,
+                    "selectableIf": null
+                  },
+                  {
+                    "kind": "ChoiceOption",
+                    "token": {
+                      "type": "ChoiceOption",
+                      "sceneName": "startup",
+                      "indent": 3,
+                      "lineNumber": 12,
+                      "rawText": "Take the axe.",
+                      "hasMultiReplace": false
+                    },
+                    "body": [
+                      {
+                        "kind": "SetVariable",
+                        "expression": {
+                          "kind": "Identifier",
+                          "token": {
+                            "type": "Identifier",
+                            "value": "weapon",
+                            "rawValue": "weapon",
+                            "position": 13,
+                            "lineNumber": 13,
+                            "sceneName": "startup",
+                            "indent": 4
+                          }
+                        },
+                        "assignment": {
+                          "kind": "Literal",
+                          "value": {
+                            "type": "StringLiteral",
+                            "value": "axe",
+                            "position": 20,
+                            "lineNumber": 13,
+                            "sceneName": "startup",
+                            "indent": 4
+                          }
+                        },
+                        "token": {
+                          "type": "SetVariable",
+                          "sceneName": "startup",
+                          "indent": 4,
+                          "lineNumber": 13,
+                          "position": 8
+                        }
+                      },
+                      {
+                        "content": [
+                          {
+                            "type": "Prose",
+                            "sceneName": "startup",
+                            "lineNumber": 14,
+                            "position": 8,
+                            "indent": 4,
+                            "content": "Heavy but powerful.\n"
+                          }
+                        ],
+                        "kind": "Prose",
+                        "parsedSegments": [
+                          {
+                            "kind": "Text",
+                            "start": 0,
+                            "end": 20,
+                            "lineNumber": 14,
+                            "position": 8,
+                            "text": "Heavy but powerful.\n"
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "Finish",
+                        "token": {
+                          "type": "Finish",
+                          "sceneName": "startup",
+                          "indent": 4,
+                          "lineNumber": 15,
+                          "position": 8
+                        },
+                        "buttonText": null
+                      }
+                    ],
+                    "parsedSegments": [
+                      {
+                        "kind": "Text",
+                        "start": 0,
+                        "end": 13,
+                        "lineNumber": 12,
+                        "position": null,
+                        "text": "Take the axe."
+                      }
+                    ],
+                    "reuse": null,
+                    "selectableIf": null
+                  }
+                ]
+              }
+            ],
+            "parsedSegments": [
+              {
+                "kind": "Text",
+                "start": 0,
+                "end": 17,
+                "lineNumber": 4,
+                "position": null,
+                "text": "Go to the armory."
+              }
+            ],
+            "reuse": null,
+            "selectableIf": null
+          },
+          {
+            "kind": "ChoiceOption",
+            "token": {
+              "type": "ChoiceOption",
+              "sceneName": "startup",
+              "indent": 1,
+              "lineNumber": 16,
+              "rawText": "Go to the market.",
+              "hasMultiReplace": false
+            },
+            "body": [
+              {
+                "content": [
+                  {
+                    "type": "Prose",
+                    "sceneName": "startup",
+                    "lineNumber": 17,
+                    "position": 4,
+                    "indent": 2,
+                    "content": "You browse the stalls.\n"
+                  }
+                ],
+                "kind": "Prose",
+                "parsedSegments": [
+                  {
+                    "kind": "Text",
+                    "start": 0,
+                    "end": 23,
+                    "lineNumber": 17,
+                    "position": 4,
+                    "text": "You browse the stalls.\n"
+                  }
+                ]
+              },
+              {
+                "kind": "Finish",
+                "token": {
+                  "type": "Finish",
+                  "sceneName": "startup",
+                  "indent": 2,
+                  "lineNumber": 18,
+                  "position": 4
+                },
+                "buttonText": null
+              }
+            ],
+            "parsedSegments": [
+              {
+                "kind": "Text",
+                "start": 0,
+                "end": 17,
+                "lineNumber": 16,
+                "position": null,
+                "text": "Go to the market."
+              }
+            ],
+            "reuse": null,
+            "selectableIf": null
+          }
+        ]
+      }
+    ],
+    "parseErrors": [],
+    "start": {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    "end": {
+      "type": "Finish",
+      "sceneName": "startup",
+      "indent": 2,
+      "lineNumber": 18,
+      "position": 4
+    }
+  }
+]

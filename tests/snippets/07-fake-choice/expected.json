@@ -1,0 +1,202 @@
+[
+  {
+    "name": "startup",
+    "statements": [
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 0,
+            "position": 0,
+            "indent": 0,
+            "content": "The door opens before you.\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 27,
+            "lineNumber": 0,
+            "position": 0,
+            "text": "The door opens before you.\n"
+          }
+        ]
+      },
+      {
+        "kind": "FakeChoice",
+        "token": {
+          "type": "FakeChoice",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 1,
+          "position": 0
+        },
+        "body": [
+          {
+            "kind": "ChoiceOption",
+            "token": {
+              "type": "ChoiceOption",
+              "sceneName": "startup",
+              "indent": 1,
+              "lineNumber": 2,
+              "rawText": "Enter boldly.",
+              "hasMultiReplace": false
+            },
+            "body": [
+              {
+                "content": [
+                  {
+                    "type": "Prose",
+                    "sceneName": "startup",
+                    "lineNumber": 3,
+                    "position": 4,
+                    "indent": 2,
+                    "content": "You stride in.\n"
+                  }
+                ],
+                "kind": "Prose",
+                "parsedSegments": [
+                  {
+                    "kind": "Text",
+                    "start": 0,
+                    "end": 15,
+                    "lineNumber": 3,
+                    "position": 4,
+                    "text": "You stride in.\n"
+                  }
+                ]
+              }
+            ],
+            "parsedSegments": [
+              {
+                "kind": "Text",
+                "start": 0,
+                "end": 13,
+                "lineNumber": 2,
+                "position": null,
+                "text": "Enter boldly."
+              }
+            ],
+            "reuse": null,
+            "selectableIf": null
+          },
+          {
+            "kind": "ChoiceOption",
+            "token": {
+              "type": "ChoiceOption",
+              "sceneName": "startup",
+              "indent": 1,
+              "lineNumber": 4,
+              "rawText": "Sneak inside.",
+              "hasMultiReplace": false
+            },
+            "body": [
+              {
+                "content": [
+                  {
+                    "type": "Prose",
+                    "sceneName": "startup",
+                    "lineNumber": 5,
+                    "position": 4,
+                    "indent": 2,
+                    "content": "You creep through the door.\n"
+                  }
+                ],
+                "kind": "Prose",
+                "parsedSegments": [
+                  {
+                    "kind": "Text",
+                    "start": 0,
+                    "end": 28,
+                    "lineNumber": 5,
+                    "position": 4,
+                    "text": "You creep through the door.\n"
+                  }
+                ]
+              }
+            ],
+            "parsedSegments": [
+              {
+                "kind": "Text",
+                "start": 0,
+                "end": 13,
+                "lineNumber": 4,
+                "position": null,
+                "text": "Sneak inside."
+              }
+            ],
+            "reuse": null,
+            "selectableIf": null
+          },
+          {
+            "kind": "ChoiceOption",
+            "token": {
+              "type": "ChoiceOption",
+              "sceneName": "startup",
+              "indent": 1,
+              "lineNumber": 6,
+              "rawText": "Knock first.",
+              "hasMultiReplace": false
+            },
+            "body": [
+              {
+                "content": [
+                  {
+                    "type": "Prose",
+                    "sceneName": "startup",
+                    "lineNumber": 7,
+                    "position": 4,
+                    "indent": 2,
+                    "content": "You knock politely.\n\n"
+                  }
+                ],
+                "kind": "Prose",
+                "parsedSegments": [
+                  {
+                    "kind": "Text",
+                    "start": 0,
+                    "end": 21,
+                    "lineNumber": 7,
+                    "position": 4,
+                    "text": "You knock politely.\n\n"
+                  }
+                ]
+              }
+            ],
+            "parsedSegments": [
+              {
+                "kind": "Text",
+                "start": 0,
+                "end": 12,
+                "lineNumber": 6,
+                "position": null,
+                "text": "Knock first."
+              }
+            ],
+            "reuse": null,
+            "selectableIf": null
+          }
+        ]
+      }
+    ],
+    "parseErrors": [],
+    "start": {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    "end": {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 7,
+      "position": 4,
+      "indent": 2,
+      "content": "You knock politely.\n\n"
+    }
+  }
+]

@@ -1,0 +1,11 @@
+The final battle is upon you.
+*choice
+  #Fight to the end.
+    You fight valiantly.
+    *ending Victory!
+  #Surrender.
+    You lay down your arms.
+    *finish
+  #Negotiate peace.
+    You broker a deal.
+    *finish

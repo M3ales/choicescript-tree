@@ -1,0 +1,149 @@
+[
+  {
+    "name": "chapter1",
+    "statements": [],
+    "parseErrors": [],
+    "start": {
+      "sceneName": "chapter1",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    "end": {
+      "sceneName": "chapter1",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    }
+  },
+  {
+    "name": "startup",
+    "statements": [
+      {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "player_ready",
+          "rawValue": "player_ready",
+          "position": 8,
+          "lineNumber": 0,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "BooleanLiteral",
+            "value": true,
+            "position": 21,
+            "lineNumber": 0,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 0,
+          "position": 0
+        }
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 2,
+            "position": 0,
+            "indent": 0,
+            "content": "Welcome to the adventure.\n\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 27,
+            "lineNumber": 2,
+            "position": 0,
+            "text": "Welcome to the adventure.\n\n"
+          }
+        ]
+      },
+      {
+        "kind": "If",
+        "token": {
+          "type": "If",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 4,
+          "position": 0
+        },
+        "body": [
+          {
+            "kind": "GotoScene",
+            "token": {
+              "type": "GotoScene",
+              "sceneName": "startup",
+              "indent": 1,
+              "lineNumber": 5,
+              "position": 2
+            },
+            "scene": {
+              "type": "Identifier",
+              "value": "chapter1",
+              "rawValue": "chapter1",
+              "position": 14,
+              "lineNumber": 5,
+              "sceneName": "startup",
+              "indent": 1,
+              "isSceneName": true,
+              "isLabelName": false
+            }
+          }
+        ],
+        "expression": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Identifier",
+            "token": {
+              "type": "Identifier",
+              "value": "player_ready",
+              "rawValue": "player_ready",
+              "position": 5,
+              "lineNumber": 4,
+              "sceneName": "startup",
+              "indent": 0
+            }
+          }
+        },
+        "elseBranch": null,
+        "elseIfBranches": []
+      }
+    ],
+    "parseErrors": [],
+    "start": {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    "end": {
+      "type": "Identifier",
+      "value": "chapter1",
+      "rawValue": "chapter1",
+      "position": 14,
+      "lineNumber": 5,
+      "sceneName": "startup",
+      "indent": 1,
+      "isSceneName": true,
+      "isLabelName": false
+    }
+  }
+]

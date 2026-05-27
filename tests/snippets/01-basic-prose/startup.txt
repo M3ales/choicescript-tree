@@ -1,0 +1,5 @@
+This is a simple scene with just prose.
+
+It has multiple paragraphs.
+
+And a third one for good measure.

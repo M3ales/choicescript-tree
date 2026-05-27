@@ -1,0 +1,171 @@
+[
+  {
+    "name": "startup",
+    "statements": [
+      {
+        "kind": "Achievement",
+        "token": {
+          "type": "Achievement",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 0,
+          "position": 0
+        },
+        "codename": {
+          "type": "Identifier",
+          "value": "first_blood",
+          "rawValue": "first_blood",
+          "lineNumber": 0,
+          "position": 13,
+          "indent": 0,
+          "sceneName": "startup"
+        },
+        "visibility": {
+          "type": "Identifier",
+          "value": "visible",
+          "rawValue": "visible",
+          "lineNumber": 0,
+          "position": 25,
+          "indent": 0,
+          "sceneName": "startup"
+        },
+        "title": {
+          "token": {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 0,
+            "position": 36,
+            "indent": 0,
+            "content": "First Blood"
+          },
+          "content": "First Blood",
+          "lineNumber": 0,
+          "position": 36,
+          "indent": 0,
+          "sceneName": "startup"
+        },
+        "preDescription": {
+          "token": {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 1,
+            "position": 2,
+            "indent": 1,
+            "content": "Draw blood for the first time."
+          },
+          "content": "Draw blood for the first time.",
+          "lineNumber": 1,
+          "position": 2,
+          "indent": 1,
+          "sceneName": "startup"
+        },
+        "postDescription": {
+          "token": {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 2,
+            "position": 0,
+            "indent": 0,
+            "content": "*achievement secret_room hidden 20 Secret Room"
+          },
+          "content": "*achievement secret_room hidden 20 Secret Room",
+          "lineNumber": 2,
+          "position": 0,
+          "indent": 0,
+          "sceneName": "startup"
+        },
+        "hidden": false
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 2,
+            "position": 46,
+            "indent": 0,
+            "content": "d\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 2,
+            "lineNumber": 2,
+            "position": 46,
+            "text": "d\n"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 3,
+            "position": 2,
+            "indent": 1,
+            "content": "Find the hidden room.\n\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 23,
+            "lineNumber": 3,
+            "position": 2,
+            "text": "Find the hidden room.\n\n"
+          }
+        ]
+      },
+      {
+        "kind": "Achieve",
+        "token": {
+          "type": "Achieve",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 5,
+          "position": 0
+        },
+        "codename": {
+          "type": "Identifier",
+          "value": "first_blood",
+          "rawValue": "first_blood",
+          "position": 9,
+          "lineNumber": 5,
+          "sceneName": "startup",
+          "indent": 0
+        }
+      },
+      {
+        "kind": "CheckAchievements",
+        "token": {
+          "type": "CheckAchievements",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 7,
+          "position": 0
+        }
+      }
+    ],
+    "parseErrors": [],
+    "start": {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    "end": {
+      "type": "CheckAchievements",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 7,
+      "position": 0
+    }
+  }
+]

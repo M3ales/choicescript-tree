@@ -1,0 +1,18 @@
+*create hp 100
+*create max_hp 100
+*create attack 15
+*create defense 10
+*create potions 3
+*create keys 0
+*create encounters 0
+*create rooms_cleared 0
+*create boss_defeated false
+*create treasure_collected 0
+*create floor 1
+
+You descend into the Irondelve Dungeon. Torchlight flickers against damp stone walls.
+
+Floor ${floor}. The darkness awaits.
+
+*goto_scene dungeon
+

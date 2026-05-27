@@ -1,0 +1,145 @@
+[
+  [
+    {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 0,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "gold",
+      "rawValue": "gold",
+      "position": 8,
+      "lineNumber": 0,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 100,
+      "position": 13,
+      "lineNumber": 0,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 2,
+      "position": 0,
+      "indent": 0,
+      "content": "You check your inventory.\n"
+    },
+    {
+      "type": "GoSub",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 3,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "check_gold",
+      "rawValue": "check_gold",
+      "position": 7,
+      "lineNumber": 3,
+      "sceneName": "startup",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 4,
+      "position": 0,
+      "indent": 0,
+      "content": "Moving on.\n"
+    },
+    {
+      "type": "Finish",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 5,
+      "position": 0
+    },
+    {
+      "type": "Label",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 7,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "check_gold",
+      "rawValue": "check_gold",
+      "position": 6,
+      "lineNumber": 7,
+      "sceneName": "startup",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 8,
+      "position": 0,
+      "indent": 0,
+      "content": "You have "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "startup",
+      "lineNumber": 8,
+      "position": 9,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "gold",
+      "rawValue": "gold",
+      "position": 11,
+      "lineNumber": 8,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "startup",
+      "lineNumber": 8,
+      "position": 15,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 8,
+      "position": 16,
+      "indent": 0,
+      "content": " gold.\n"
+    },
+    {
+      "type": "Return",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 9,
+      "position": 0
+    },
+    {
+      "lineNumber": 10,
+      "indent": 0,
+      "position": 0,
+      "sceneName": "startup",
+      "type": "SceneEnd"
+    }
+  ]
+]

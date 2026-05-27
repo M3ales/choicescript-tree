@@ -1,0 +1,81 @@
+[
+  {
+    "name": "startup",
+    "statements": [
+      {
+        "kind": "SceneList",
+        "token": {
+          "type": "SceneList",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 0,
+          "position": 0
+        },
+        "identifiers": [
+          {
+            "paid": false,
+            "type": "Identifier",
+            "value": "startup",
+            "rawValue": "startup",
+            "sceneName": "startup",
+            "lineNumber": 2,
+            "position": 2,
+            "indent": 1,
+            "isSceneName": true
+          },
+          {
+            "paid": false,
+            "type": "Identifier",
+            "value": "chapter1",
+            "rawValue": "chapter1",
+            "sceneName": "startup",
+            "lineNumber": 3,
+            "position": 2,
+            "indent": 1,
+            "isSceneName": true
+          },
+          {
+            "paid": false,
+            "type": "Identifier",
+            "value": "chapter2",
+            "rawValue": "chapter2",
+            "sceneName": "startup",
+            "lineNumber": 4,
+            "position": 2,
+            "indent": 1,
+            "isSceneName": true
+          },
+          {
+            "paid": false,
+            "type": "Identifier",
+            "value": "ending",
+            "rawValue": "ending",
+            "sceneName": "startup",
+            "lineNumber": 5,
+            "position": 2,
+            "indent": 1,
+            "isSceneName": true
+          }
+        ]
+      }
+    ],
+    "parseErrors": [],
+    "start": {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    "end": {
+      "type": "Identifier",
+      "value": "ending",
+      "rawValue": "ending",
+      "sceneName": "startup",
+      "lineNumber": 5,
+      "position": 2,
+      "indent": 1,
+      "isSceneName": true
+    }
+  }
+]

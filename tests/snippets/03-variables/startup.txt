@@ -1,0 +1,16 @@
+*create strength 50
+*create name "Hero"
+*create is_alive true
+
+*temp local_var 10
+
+Your name is ${name}.
+
+*set strength 60
+*set name "Champion"
+*set is_alive false
+*temp local_var_one 20
+*temp reference "local_var"
+${local_var}
+*set local_var ({{reference}} + {{reference&"_one"}})
+${local_var}

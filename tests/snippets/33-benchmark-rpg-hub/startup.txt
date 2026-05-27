@@ -1,0 +1,60 @@
+*create gold 100
+*create reputation 50
+*create strength 40
+*create charm 60
+*create quest_complete false
+*create items_bought 0
+*create arena_wins 0
+*create tavern_visits 0
+*create name ""
+
+Welcome to the crossroads village.
+
+*input_text name
+
+Well met, ${name}. The village square stretches before you.
+
+*label village_hub
+*set tavern_visits + 1
+
+You stand in the village square. Gold: ${gold}. Reputation: ${reputation}.
+
+*choice
+  *selectable_if (gold >= 10) #Visit the shop
+    *goto_scene shop
+  #Enter the tavern
+    *goto_scene tavern
+  *selectable_if (strength >= 30) #Challenge the arena
+    *goto_scene arena
+  #Check your stats
+    *gosub show_stats
+    *goto village_hub
+  *selectable_if (quest_complete) #Leave the village
+    *goto ending
+
+*label ending
+Your journey in the village ends.
+
+You visited the tavern ${tavern_visits} times, won ${arena_wins} arena fights, and bought ${items_bought} items.
+
+*if reputation >= 80
+  The villagers cheer as you depart. A true hero!
+  *goto final
+*elseif reputation >= 50
+  The villagers wave politely as you leave.
+  *goto final
+*else
+  The villagers watch you leave with suspicious eyes.
+
+*label final
+Farewell, ${name}.
+*ending "The End"
+
+*label show_stats
+Strength: ${strength}
+Charm: ${charm}
+Gold: ${gold}
+Reputation: ${reputation}
+Arena wins: ${arena_wins}
+Items bought: ${items_bought}
+*return

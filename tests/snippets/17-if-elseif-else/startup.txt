@@ -1,0 +1,14 @@
+*create score 75
+
+*if (score >= 90)
+  Grade: A
+*elseif (score >= 80)
+  Grade: B
+*elseif (score >= 70)
+  Grade: C
+*elseif (score >= 60)
+  Grade: D
+*else
+  Grade: F
+
+Your score was ${score}.

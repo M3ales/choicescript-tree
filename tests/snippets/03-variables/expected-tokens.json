@@ -1,0 +1,440 @@
+[
+  [
+    {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 0,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "strength",
+      "rawValue": "strength",
+      "position": 8,
+      "lineNumber": 0,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 50,
+      "position": 17,
+      "lineNumber": 0,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 1,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "name",
+      "rawValue": "name",
+      "position": 8,
+      "lineNumber": 1,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "Hero",
+      "position": 13,
+      "lineNumber": 1,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 2,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "is_alive",
+      "rawValue": "is_alive",
+      "position": 8,
+      "lineNumber": 2,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "BooleanLiteral",
+      "value": true,
+      "position": 17,
+      "lineNumber": 2,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 4,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "local_var",
+      "rawValue": "local_var",
+      "position": 6,
+      "lineNumber": 4,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 10,
+      "position": 16,
+      "lineNumber": 4,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 6,
+      "position": 0,
+      "indent": 0,
+      "content": "Your name is "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "startup",
+      "lineNumber": 6,
+      "position": 13,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "name",
+      "rawValue": "name",
+      "position": 15,
+      "lineNumber": 6,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "startup",
+      "lineNumber": 6,
+      "position": 19,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 6,
+      "position": 20,
+      "indent": 0,
+      "content": ".\n\n"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 8,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "strength",
+      "rawValue": "strength",
+      "position": 5,
+      "lineNumber": 8,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 60,
+      "position": 14,
+      "lineNumber": 8,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 9,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "name",
+      "rawValue": "name",
+      "position": 5,
+      "lineNumber": 9,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "Champion",
+      "position": 10,
+      "lineNumber": 9,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 10,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "is_alive",
+      "rawValue": "is_alive",
+      "position": 5,
+      "lineNumber": 10,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "BooleanLiteral",
+      "value": false,
+      "position": 14,
+      "lineNumber": 10,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 11,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "local_var_one",
+      "rawValue": "local_var_one",
+      "position": 6,
+      "lineNumber": 11,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 20,
+      "position": 20,
+      "lineNumber": 11,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 12,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "reference",
+      "rawValue": "reference",
+      "position": 6,
+      "lineNumber": 12,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "local_var",
+      "position": 16,
+      "lineNumber": 12,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 13,
+      "position": 0,
+      "indent": 0,
+      "content": ""
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "startup",
+      "lineNumber": 13,
+      "position": 0,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "local_var",
+      "rawValue": "local_var",
+      "position": 2,
+      "lineNumber": 13,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "startup",
+      "lineNumber": 13,
+      "position": 11,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 13,
+      "position": 12,
+      "indent": 0,
+      "content": "\n"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 14,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "local_var",
+      "rawValue": "local_var",
+      "position": 5,
+      "lineNumber": 14,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 15,
+      "lineNumber": 14,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenBrace",
+      "position": 16,
+      "lineNumber": 14,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenBrace",
+      "position": 17,
+      "lineNumber": 14,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "reference",
+      "rawValue": "reference",
+      "position": 18,
+      "lineNumber": 14,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "position": 27,
+      "lineNumber": 14,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "position": 28,
+      "lineNumber": 14,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 30,
+      "lineNumber": 14,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenBrace",
+      "position": 32,
+      "lineNumber": 14,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenBrace",
+      "position": 33,
+      "lineNumber": 14,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "reference",
+      "rawValue": "reference",
+      "position": 34,
+      "lineNumber": 14,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "position": 43,
+      "lineNumber": 14,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "_one",
+      "position": 44,
+      "lineNumber": 14,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "position": 50,
+      "lineNumber": 14,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "position": 51,
+      "lineNumber": 14,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 52,
+      "lineNumber": 14,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "lineNumber": 16,
+      "indent": 0,
+      "position": 0,
+      "sceneName": "startup",
+      "type": "SceneEnd"
+    }
+  ]
+]

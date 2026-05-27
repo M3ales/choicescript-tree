@@ -1,0 +1,49 @@
+[
+  [
+    {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    {
+      "type": "Comment",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 0,
+      "position": 0,
+      "value": "This is a single line comment."
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 2,
+      "position": 0,
+      "indent": 0,
+      "content": "Some prose here.\n\n"
+    },
+    {
+      "type": "Comment",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 4,
+      "position": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 5,
+      "position": 2,
+      "indent": 1,
+      "content": "This is a multi-line\ncomment block that should\nbe ignored by the game.\n\n"
+    },
+    {
+      "lineNumber": 10,
+      "indent": 0,
+      "position": 0,
+      "sceneName": "startup",
+      "type": "SceneEnd"
+    }
+  ]
+]

@@ -1,0 +1,65 @@
+[
+  [
+    {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "content": "Welcome to the castle.\n"
+    },
+    {
+      "type": "Image",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 1,
+      "position": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 1,
+      "position": 7,
+      "indent": 0,
+      "content": "castle.png"
+    },
+    {
+      "type": "Image",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 2,
+      "position": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 2,
+      "position": 7,
+      "indent": 0,
+      "content": "banner.jpg"
+    },
+    {
+      "type": "Identifier",
+      "sceneName": "startup",
+      "position": 18,
+      "lineNumber": 2,
+      "indent": 0,
+      "value": "center",
+      "rawValue": "center"
+    },
+    {
+      "lineNumber": 5,
+      "indent": 0,
+      "position": 0,
+      "sceneName": "startup",
+      "type": "SceneEnd"
+    }
+  ]
+]

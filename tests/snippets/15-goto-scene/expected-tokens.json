@@ -1,0 +1,114 @@
+[
+  [
+    {
+      "sceneName": "chapter1",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    {
+      "lineNumber": 3,
+      "indent": 0,
+      "position": 0,
+      "sceneName": "chapter1",
+      "type": "SceneEnd"
+    }
+  ],
+  [
+    {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 0,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "player_ready",
+      "rawValue": "player_ready",
+      "position": 8,
+      "lineNumber": 0,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "BooleanLiteral",
+      "value": true,
+      "position": 21,
+      "lineNumber": 0,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 2,
+      "position": 0,
+      "indent": 0,
+      "content": "Welcome to the adventure.\n\n"
+    },
+    {
+      "type": "If",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 4,
+      "position": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 4,
+      "lineNumber": 4,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "player_ready",
+      "rawValue": "player_ready",
+      "position": 5,
+      "lineNumber": 4,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 17,
+      "lineNumber": 4,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "GotoScene",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 5,
+      "position": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "chapter1",
+      "rawValue": "chapter1",
+      "position": 14,
+      "lineNumber": 5,
+      "sceneName": "startup",
+      "indent": 1,
+      "isSceneName": true,
+      "isLabelName": false
+    },
+    {
+      "lineNumber": 8,
+      "indent": 0,
+      "position": 0,
+      "sceneName": "startup",
+      "type": "SceneEnd"
+    }
+  ]
+]

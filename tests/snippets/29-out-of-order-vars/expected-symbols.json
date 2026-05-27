@@ -1,0 +1,190 @@
+[
+  {
+    "labels": {
+      "top_label": {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 10,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "top_label",
+          "rawValue": "top_label",
+          "position": 6,
+          "lineNumber": 10,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        }
+      },
+      "bottom_label": {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 15,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "bottom_label",
+          "rawValue": "bottom_label",
+          "position": 6,
+          "lineNumber": 15,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        }
+      }
+    },
+    "globalVariables": {
+      "score": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "score",
+          "rawValue": "score",
+          "position": 8,
+          "lineNumber": 6,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 0,
+            "position": 14,
+            "lineNumber": 6,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 6,
+          "position": 0
+        }
+      },
+      "name": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "name",
+          "rawValue": "name",
+          "position": 8,
+          "lineNumber": 7,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "StringLiteral",
+            "value": "Nobody",
+            "position": 13,
+            "lineNumber": 7,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 7,
+          "position": 0
+        }
+      }
+    },
+    "tempVariables": {
+      "local_bonus": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "local_bonus",
+          "rawValue": "local_bonus",
+          "position": 6,
+          "lineNumber": 16,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 10,
+            "position": 18,
+            "lineNumber": 16,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Temporary",
+        "token": {
+          "type": "CreateTempVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 16,
+          "position": 0
+        }
+      }
+    },
+    "checkpoints": {},
+    "gosubs": [
+      {
+        "kind": "GoSub",
+        "token": {
+          "type": "GoSub",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 17,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "top_label",
+          "rawValue": "top_label",
+          "position": 7,
+          "lineNumber": 17,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        },
+        "args": []
+      }
+    ],
+    "gotos": [
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 8,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "bottom_label",
+          "rawValue": "bottom_label",
+          "position": 6,
+          "lineNumber": 8,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        }
+      }
+    ],
+    "implicitControlFlow": []
+  }
+]

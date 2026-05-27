@@ -1,0 +1,102 @@
+[
+  [
+    {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "content": "You stand at a crossroads.\n"
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 1,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "start_adventure",
+      "rawValue": "start_adventure",
+      "position": 6,
+      "lineNumber": 1,
+      "sceneName": "startup",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "Label",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 3,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "start_adventure",
+      "rawValue": "start_adventure",
+      "position": 6,
+      "lineNumber": 3,
+      "sceneName": "startup",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 4,
+      "position": 0,
+      "indent": 0,
+      "content": "The adventure begins!\n"
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 5,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "the_end",
+      "rawValue": "the_end",
+      "position": 6,
+      "lineNumber": 5,
+      "sceneName": "startup",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "Label",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 7,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "the_end",
+      "rawValue": "the_end",
+      "position": 6,
+      "lineNumber": 7,
+      "sceneName": "startup",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "lineNumber": 9,
+      "indent": 0,
+      "position": 0,
+      "sceneName": "startup",
+      "type": "SceneEnd"
+    }
+  ]
+]

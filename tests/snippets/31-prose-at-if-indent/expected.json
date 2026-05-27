@@ -1,0 +1,4757 @@
+[
+  {
+    "name": "equivalent",
+    "statements": [
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "val",
+            "rawValue": "val",
+            "position": 5,
+            "lineNumber": 0,
+            "sceneName": "equivalent",
+            "indent": 0
+          }
+        },
+        "assignment": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 100,
+            "position": 9,
+            "lineNumber": 0,
+            "sceneName": "equivalent",
+            "indent": 0
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "equivalent",
+          "indent": 0,
+          "lineNumber": 0,
+          "position": 0
+        }
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "nested",
+            "rawValue": "nested",
+            "position": 5,
+            "lineNumber": 1,
+            "sceneName": "equivalent",
+            "indent": 0
+          }
+        },
+        "assignment": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 50,
+            "position": 12,
+            "lineNumber": 1,
+            "sceneName": "equivalent",
+            "indent": 0
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "equivalent",
+          "indent": 0,
+          "lineNumber": 1,
+          "position": 0
+        }
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "deep",
+            "rawValue": "deep",
+            "position": 5,
+            "lineNumber": 2,
+            "sceneName": "equivalent",
+            "indent": 0
+          }
+        },
+        "assignment": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 25,
+            "position": 10,
+            "lineNumber": 2,
+            "sceneName": "equivalent",
+            "indent": 0
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "equivalent",
+          "indent": 0,
+          "lineNumber": 2,
+          "position": 0
+        }
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "implicit_control_flow",
+            "rawValue": "implicit_control_flow",
+            "position": 5,
+            "lineNumber": 3,
+            "sceneName": "equivalent",
+            "indent": 0
+          }
+        },
+        "assignment": {
+          "kind": "Literal",
+          "value": {
+            "type": "BooleanLiteral",
+            "value": true,
+            "position": 27,
+            "lineNumber": 3,
+            "sceneName": "equivalent",
+            "indent": 0
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "equivalent",
+          "indent": 0,
+          "lineNumber": 3,
+          "position": 0
+        }
+      },
+      {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "matched_deep",
+          "rawValue": "matched_deep",
+          "position": 6,
+          "lineNumber": 4,
+          "sceneName": "equivalent",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "BooleanLiteral",
+            "value": false,
+            "position": 19,
+            "lineNumber": 4,
+            "sceneName": "equivalent",
+            "indent": 0
+          }
+        },
+        "scope": "Temporary",
+        "token": {
+          "type": "CreateTempVariable",
+          "sceneName": "equivalent",
+          "indent": 0,
+          "lineNumber": 4,
+          "position": 0
+        }
+      },
+      {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "matched_nested",
+          "rawValue": "matched_nested",
+          "position": 6,
+          "lineNumber": 5,
+          "sceneName": "equivalent",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "BooleanLiteral",
+            "value": false,
+            "position": 21,
+            "lineNumber": 5,
+            "sceneName": "equivalent",
+            "indent": 0
+          }
+        },
+        "scope": "Temporary",
+        "token": {
+          "type": "CreateTempVariable",
+          "sceneName": "equivalent",
+          "indent": 0,
+          "lineNumber": 5,
+          "position": 0
+        }
+      },
+      {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "matched_outer",
+          "rawValue": "matched_outer",
+          "position": 6,
+          "lineNumber": 6,
+          "sceneName": "equivalent",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "BooleanLiteral",
+            "value": false,
+            "position": 20,
+            "lineNumber": 6,
+            "sceneName": "equivalent",
+            "indent": 0
+          }
+        },
+        "scope": "Temporary",
+        "token": {
+          "type": "CreateTempVariable",
+          "sceneName": "equivalent",
+          "indent": 0,
+          "lineNumber": 6,
+          "position": 0
+        }
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "equivalent",
+            "lineNumber": 8,
+            "position": 0,
+            "indent": 0,
+            "content": "Prose at indent 0 before if.\n\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 30,
+            "lineNumber": 8,
+            "position": 0,
+            "text": "Prose at indent 0 before if.\n\n"
+          }
+        ]
+      },
+      {
+        "kind": "If",
+        "token": {
+          "type": "If",
+          "sceneName": "equivalent",
+          "indent": 0,
+          "lineNumber": 10,
+          "position": 0
+        },
+        "body": [
+          {
+            "content": [
+              {
+                "type": "Prose",
+                "sceneName": "equivalent",
+                "lineNumber": 11,
+                "position": 2,
+                "indent": 1,
+                "content": "Inside if body indent 1.\n"
+              }
+            ],
+            "kind": "Prose",
+            "parsedSegments": [
+              {
+                "kind": "Text",
+                "start": 0,
+                "end": 25,
+                "lineNumber": 11,
+                "position": 2,
+                "text": "Inside if body indent 1.\n"
+              }
+            ]
+          },
+          {
+            "kind": "If",
+            "token": {
+              "type": "If",
+              "sceneName": "equivalent",
+              "indent": 1,
+              "lineNumber": 12,
+              "position": 2
+            },
+            "body": [
+              {
+                "content": [
+                  {
+                    "type": "Prose",
+                    "sceneName": "equivalent",
+                    "lineNumber": 13,
+                    "position": 4,
+                    "indent": 2,
+                    "content": "Inside nested if indent 2.\n"
+                  }
+                ],
+                "kind": "Prose",
+                "parsedSegments": [
+                  {
+                    "kind": "Text",
+                    "start": 0,
+                    "end": 27,
+                    "lineNumber": 13,
+                    "position": 4,
+                    "text": "Inside nested if indent 2.\n"
+                  }
+                ]
+              },
+              {
+                "kind": "If",
+                "token": {
+                  "type": "If",
+                  "sceneName": "equivalent",
+                  "indent": 2,
+                  "lineNumber": 14,
+                  "position": 4
+                },
+                "body": [
+                  {
+                    "content": [
+                      {
+                        "type": "Prose",
+                        "sceneName": "equivalent",
+                        "lineNumber": 15,
+                        "position": 6,
+                        "indent": 3,
+                        "content": "Inside deep if indent 3.\n"
+                      }
+                    ],
+                    "kind": "Prose",
+                    "parsedSegments": [
+                      {
+                        "kind": "Text",
+                        "start": 0,
+                        "end": 25,
+                        "lineNumber": 15,
+                        "position": 6,
+                        "text": "Inside deep if indent 3.\n"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "SetVariable",
+                    "expression": {
+                      "kind": "Identifier",
+                      "token": {
+                        "type": "Identifier",
+                        "value": "matched_deep",
+                        "rawValue": "matched_deep",
+                        "position": 11,
+                        "lineNumber": 16,
+                        "sceneName": "equivalent",
+                        "indent": 3
+                      }
+                    },
+                    "assignment": {
+                      "kind": "Literal",
+                      "value": {
+                        "type": "BooleanLiteral",
+                        "value": true,
+                        "position": 24,
+                        "lineNumber": 16,
+                        "sceneName": "equivalent",
+                        "indent": 3
+                      }
+                    },
+                    "token": {
+                      "type": "SetVariable",
+                      "sceneName": "equivalent",
+                      "indent": 3,
+                      "lineNumber": 16,
+                      "position": 6
+                    }
+                  }
+                ],
+                "expression": {
+                  "kind": "Grouping",
+                  "expression": {
+                    "kind": "Binary",
+                    "left": {
+                      "kind": "Identifier",
+                      "token": {
+                        "type": "Identifier",
+                        "value": "deep",
+                        "rawValue": "deep",
+                        "position": 9,
+                        "lineNumber": 14,
+                        "sceneName": "equivalent",
+                        "indent": 2
+                      }
+                    },
+                    "operator": {
+                      "type": "GreaterThanEqualsOperator",
+                      "rawValue": ">=",
+                      "position": 14,
+                      "lineNumber": 14,
+                      "sceneName": "equivalent",
+                      "indent": 2
+                    },
+                    "right": {
+                      "kind": "Literal",
+                      "value": {
+                        "type": "NumberLiteral",
+                        "value": 25,
+                        "position": 17,
+                        "lineNumber": 14,
+                        "sceneName": "equivalent",
+                        "indent": 2
+                      }
+                    }
+                  }
+                },
+                "elseBranch": null,
+                "elseIfBranches": []
+              }
+            ],
+            "expression": {
+              "kind": "Grouping",
+              "expression": {
+                "kind": "Binary",
+                "left": {
+                  "kind": "Identifier",
+                  "token": {
+                    "type": "Identifier",
+                    "value": "nested",
+                    "rawValue": "nested",
+                    "position": 7,
+                    "lineNumber": 12,
+                    "sceneName": "equivalent",
+                    "indent": 1
+                  }
+                },
+                "operator": {
+                  "type": "GreaterThanEqualsOperator",
+                  "rawValue": ">=",
+                  "position": 14,
+                  "lineNumber": 12,
+                  "sceneName": "equivalent",
+                  "indent": 1
+                },
+                "right": {
+                  "kind": "Literal",
+                  "value": {
+                    "type": "NumberLiteral",
+                    "value": 50,
+                    "position": 17,
+                    "lineNumber": 12,
+                    "sceneName": "equivalent",
+                    "indent": 1
+                  }
+                }
+              }
+            },
+            "elseBranch": null,
+            "elseIfBranches": []
+          }
+        ],
+        "expression": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Binary",
+            "left": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "val",
+                "rawValue": "val",
+                "position": 5,
+                "lineNumber": 10,
+                "sceneName": "equivalent",
+                "indent": 0
+              }
+            },
+            "operator": {
+              "type": "GreaterThanEqualsOperator",
+              "rawValue": ">=",
+              "position": 9,
+              "lineNumber": 10,
+              "sceneName": "equivalent",
+              "indent": 0
+            },
+            "right": {
+              "kind": "Literal",
+              "value": {
+                "type": "NumberLiteral",
+                "value": 100,
+                "position": 12,
+                "lineNumber": 10,
+                "sceneName": "equivalent",
+                "indent": 0
+              }
+            }
+          }
+        },
+        "elseBranch": null,
+        "elseIfBranches": []
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "equivalent",
+            "lineNumber": 18,
+            "position": 0,
+            "indent": 0,
+            "content": "Deep prose at indent 2.\n\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 25,
+            "lineNumber": 18,
+            "position": 0,
+            "text": "Deep prose at indent 2.\n\n"
+          }
+        ]
+      },
+      {
+        "kind": "If",
+        "token": {
+          "type": "If",
+          "sceneName": "equivalent",
+          "indent": 0,
+          "lineNumber": 20,
+          "position": 0
+        },
+        "body": [
+          {
+            "content": [
+              {
+                "type": "Prose",
+                "sceneName": "equivalent",
+                "lineNumber": 21,
+                "position": 2,
+                "indent": 1,
+                "content": "Deep else indent 3.\n\n"
+              }
+            ],
+            "kind": "Prose",
+            "parsedSegments": [
+              {
+                "kind": "Text",
+                "start": 0,
+                "end": 21,
+                "lineNumber": 21,
+                "position": 2,
+                "text": "Deep else indent 3.\n\n"
+              }
+            ]
+          }
+        ],
+        "expression": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Binary",
+            "left": {
+              "kind": "Grouping",
+              "expression": {
+                "kind": "Binary",
+                "left": {
+                  "kind": "Identifier",
+                  "token": {
+                    "type": "Identifier",
+                    "value": "matched_deep",
+                    "rawValue": "matched_deep",
+                    "position": 6,
+                    "lineNumber": 20,
+                    "sceneName": "equivalent",
+                    "indent": 0
+                  }
+                },
+                "operator": {
+                  "type": "EqualityOperator",
+                  "rawValue": "=",
+                  "position": 19,
+                  "lineNumber": 20,
+                  "sceneName": "equivalent",
+                  "indent": 0
+                },
+                "right": {
+                  "kind": "Literal",
+                  "value": {
+                    "type": "BooleanLiteral",
+                    "value": false,
+                    "position": 21,
+                    "lineNumber": 20,
+                    "sceneName": "equivalent",
+                    "indent": 0
+                  }
+                }
+              }
+            },
+            "operator": {
+              "type": "LogicalAnd",
+              "rawValue": "and",
+              "position": 28,
+              "lineNumber": 20,
+              "sceneName": "equivalent",
+              "indent": 0
+            },
+            "right": {
+              "kind": "Grouping",
+              "expression": {
+                "kind": "Binary",
+                "left": {
+                  "kind": "Identifier",
+                  "token": {
+                    "type": "Identifier",
+                    "value": "deep",
+                    "rawValue": "deep",
+                    "position": 33,
+                    "lineNumber": 20,
+                    "sceneName": "equivalent",
+                    "indent": 0
+                  }
+                },
+                "operator": {
+                  "type": "LessThanOperator",
+                  "rawValue": "<",
+                  "position": 38,
+                  "lineNumber": 20,
+                  "sceneName": "equivalent",
+                  "indent": 0
+                },
+                "right": {
+                  "kind": "Literal",
+                  "value": {
+                    "type": "NumberLiteral",
+                    "value": 25,
+                    "position": 40,
+                    "lineNumber": 20,
+                    "sceneName": "equivalent",
+                    "indent": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "elseBranch": null,
+        "elseIfBranches": []
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "equivalent",
+            "lineNumber": 23,
+            "position": 0,
+            "indent": 0,
+            "content": "Deep prose after else at indent 2.\n\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 36,
+            "lineNumber": 23,
+            "position": 0,
+            "text": "Deep prose after else at indent 2.\n\n"
+          }
+        ]
+      },
+      {
+        "kind": "If",
+        "token": {
+          "type": "If",
+          "sceneName": "equivalent",
+          "indent": 0,
+          "lineNumber": 25,
+          "position": 0
+        },
+        "body": [
+          {
+            "kind": "SetVariable",
+            "expression": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "matched_nested",
+                "rawValue": "matched_nested",
+                "position": 7,
+                "lineNumber": 26,
+                "sceneName": "equivalent",
+                "indent": 1
+              }
+            },
+            "assignment": {
+              "kind": "Literal",
+              "value": {
+                "type": "BooleanLiteral",
+                "value": true,
+                "position": 22,
+                "lineNumber": 26,
+                "sceneName": "equivalent",
+                "indent": 1
+              }
+            },
+            "token": {
+              "type": "SetVariable",
+              "sceneName": "equivalent",
+              "indent": 1,
+              "lineNumber": 26,
+              "position": 2
+            }
+          }
+        ],
+        "expression": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Binary",
+            "left": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "nested",
+                "rawValue": "nested",
+                "position": 5,
+                "lineNumber": 25,
+                "sceneName": "equivalent",
+                "indent": 0
+              }
+            },
+            "operator": {
+              "type": "GreaterThanEqualsOperator",
+              "rawValue": ">=",
+              "position": 12,
+              "lineNumber": 25,
+              "sceneName": "equivalent",
+              "indent": 0
+            },
+            "right": {
+              "kind": "Literal",
+              "value": {
+                "type": "NumberLiteral",
+                "value": 50,
+                "position": 15,
+                "lineNumber": 25,
+                "sceneName": "equivalent",
+                "indent": 0
+              }
+            }
+          }
+        },
+        "elseBranch": null,
+        "elseIfBranches": []
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "equivalent",
+            "lineNumber": 28,
+            "position": 0,
+            "indent": 0,
+            "content": "Nested prose at indent 1.\n\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 27,
+            "lineNumber": 28,
+            "position": 0,
+            "text": "Nested prose at indent 1.\n\n"
+          }
+        ]
+      },
+      {
+        "kind": "If",
+        "token": {
+          "type": "If",
+          "sceneName": "equivalent",
+          "indent": 0,
+          "lineNumber": 30,
+          "position": 0
+        },
+        "body": [
+          {
+            "content": [
+              {
+                "type": "Prose",
+                "sceneName": "equivalent",
+                "lineNumber": 31,
+                "position": 2,
+                "indent": 1,
+                "content": "Nested elseif indent 2.\n"
+              }
+            ],
+            "kind": "Prose",
+            "parsedSegments": [
+              {
+                "kind": "Text",
+                "start": 0,
+                "end": 24,
+                "lineNumber": 31,
+                "position": 2,
+                "text": "Nested elseif indent 2.\n"
+              }
+            ]
+          },
+          {
+            "kind": "SetVariable",
+            "expression": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "matched_nested",
+                "rawValue": "matched_nested",
+                "position": 7,
+                "lineNumber": 32,
+                "sceneName": "equivalent",
+                "indent": 1
+              }
+            },
+            "assignment": {
+              "kind": "Literal",
+              "value": {
+                "type": "BooleanLiteral",
+                "value": true,
+                "position": 22,
+                "lineNumber": 32,
+                "sceneName": "equivalent",
+                "indent": 1
+              }
+            },
+            "token": {
+              "type": "SetVariable",
+              "sceneName": "equivalent",
+              "indent": 1,
+              "lineNumber": 32,
+              "position": 2
+            }
+          }
+        ],
+        "expression": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Binary",
+            "left": {
+              "kind": "Grouping",
+              "expression": {
+                "kind": "Binary",
+                "left": {
+                  "kind": "Identifier",
+                  "token": {
+                    "type": "Identifier",
+                    "value": "matched_nested",
+                    "rawValue": "matched_nested",
+                    "position": 6,
+                    "lineNumber": 30,
+                    "sceneName": "equivalent",
+                    "indent": 0
+                  }
+                },
+                "operator": {
+                  "type": "EqualityOperator",
+                  "rawValue": "=",
+                  "position": 21,
+                  "lineNumber": 30,
+                  "sceneName": "equivalent",
+                  "indent": 0
+                },
+                "right": {
+                  "kind": "Literal",
+                  "value": {
+                    "type": "BooleanLiteral",
+                    "value": false,
+                    "position": 23,
+                    "lineNumber": 30,
+                    "sceneName": "equivalent",
+                    "indent": 0
+                  }
+                }
+              }
+            },
+            "operator": {
+              "type": "LogicalAnd",
+              "rawValue": "and",
+              "position": 30,
+              "lineNumber": 30,
+              "sceneName": "equivalent",
+              "indent": 0
+            },
+            "right": {
+              "kind": "Grouping",
+              "expression": {
+                "kind": "Binary",
+                "left": {
+                  "kind": "Identifier",
+                  "token": {
+                    "type": "Identifier",
+                    "value": "nested",
+                    "rawValue": "nested",
+                    "position": 35,
+                    "lineNumber": 30,
+                    "sceneName": "equivalent",
+                    "indent": 0
+                  }
+                },
+                "operator": {
+                  "type": "GreaterThanEqualsOperator",
+                  "rawValue": ">=",
+                  "position": 42,
+                  "lineNumber": 30,
+                  "sceneName": "equivalent",
+                  "indent": 0
+                },
+                "right": {
+                  "kind": "Literal",
+                  "value": {
+                    "type": "NumberLiteral",
+                    "value": 25,
+                    "position": 45,
+                    "lineNumber": 30,
+                    "sceneName": "equivalent",
+                    "indent": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "elseBranch": null,
+        "elseIfBranches": []
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "equivalent",
+            "lineNumber": 34,
+            "position": 0,
+            "indent": 0,
+            "content": "Nested prose after elseif at indent 1.\n\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 40,
+            "lineNumber": 34,
+            "position": 0,
+            "text": "Nested prose after elseif at indent 1.\n\n"
+          }
+        ]
+      },
+      {
+        "kind": "If",
+        "token": {
+          "type": "If",
+          "sceneName": "equivalent",
+          "indent": 0,
+          "lineNumber": 36,
+          "position": 0
+        },
+        "body": [
+          {
+            "content": [
+              {
+                "type": "Prose",
+                "sceneName": "equivalent",
+                "lineNumber": 37,
+                "position": 2,
+                "indent": 1,
+                "content": "Nested else indent 2.\n\n"
+              }
+            ],
+            "kind": "Prose",
+            "parsedSegments": [
+              {
+                "kind": "Text",
+                "start": 0,
+                "end": 23,
+                "lineNumber": 37,
+                "position": 2,
+                "text": "Nested else indent 2.\n\n"
+              }
+            ]
+          }
+        ],
+        "expression": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Binary",
+            "left": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "matched_nested",
+                "rawValue": "matched_nested",
+                "position": 5,
+                "lineNumber": 36,
+                "sceneName": "equivalent",
+                "indent": 0
+              }
+            },
+            "operator": {
+              "type": "EqualityOperator",
+              "rawValue": "=",
+              "position": 20,
+              "lineNumber": 36,
+              "sceneName": "equivalent",
+              "indent": 0
+            },
+            "right": {
+              "kind": "Literal",
+              "value": {
+                "type": "BooleanLiteral",
+                "value": false,
+                "position": 22,
+                "lineNumber": 36,
+                "sceneName": "equivalent",
+                "indent": 0
+              }
+            }
+          }
+        },
+        "elseBranch": null,
+        "elseIfBranches": []
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "equivalent",
+            "lineNumber": 39,
+            "position": 0,
+            "indent": 0,
+            "content": "Nested prose after else at indent 1.\n\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 38,
+            "lineNumber": 39,
+            "position": 0,
+            "text": "Nested prose after else at indent 1.\n\n"
+          }
+        ]
+      },
+      {
+        "kind": "If",
+        "token": {
+          "type": "If",
+          "sceneName": "equivalent",
+          "indent": 0,
+          "lineNumber": 41,
+          "position": 0
+        },
+        "body": [
+          {
+            "kind": "SetVariable",
+            "expression": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "matched_outer",
+                "rawValue": "matched_outer",
+                "position": 7,
+                "lineNumber": 42,
+                "sceneName": "equivalent",
+                "indent": 1
+              }
+            },
+            "assignment": {
+              "kind": "Literal",
+              "value": {
+                "type": "BooleanLiteral",
+                "value": true,
+                "position": 21,
+                "lineNumber": 42,
+                "sceneName": "equivalent",
+                "indent": 1
+              }
+            },
+            "token": {
+              "type": "SetVariable",
+              "sceneName": "equivalent",
+              "indent": 1,
+              "lineNumber": 42,
+              "position": 2
+            }
+          }
+        ],
+        "expression": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Binary",
+            "left": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "val",
+                "rawValue": "val",
+                "position": 5,
+                "lineNumber": 41,
+                "sceneName": "equivalent",
+                "indent": 0
+              }
+            },
+            "operator": {
+              "type": "GreaterThanEqualsOperator",
+              "rawValue": ">=",
+              "position": 9,
+              "lineNumber": 41,
+              "sceneName": "equivalent",
+              "indent": 0
+            },
+            "right": {
+              "kind": "Literal",
+              "value": {
+                "type": "NumberLiteral",
+                "value": 100,
+                "position": 12,
+                "lineNumber": 41,
+                "sceneName": "equivalent",
+                "indent": 0
+              }
+            }
+          }
+        },
+        "elseBranch": null,
+        "elseIfBranches": []
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "equivalent",
+            "lineNumber": 44,
+            "position": 0,
+            "indent": 0,
+            "content": "Prose at indent 0 after if body.\n\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 34,
+            "lineNumber": 44,
+            "position": 0,
+            "text": "Prose at indent 0 after if body.\n\n"
+          }
+        ]
+      },
+      {
+        "kind": "If",
+        "token": {
+          "type": "If",
+          "sceneName": "equivalent",
+          "indent": 0,
+          "lineNumber": 46,
+          "position": 0
+        },
+        "body": [
+          {
+            "content": [
+              {
+                "type": "Prose",
+                "sceneName": "equivalent",
+                "lineNumber": 47,
+                "position": 2,
+                "indent": 1,
+                "content": "Elseif body indent 1.\n"
+              }
+            ],
+            "kind": "Prose",
+            "parsedSegments": [
+              {
+                "kind": "Text",
+                "start": 0,
+                "end": 22,
+                "lineNumber": 47,
+                "position": 2,
+                "text": "Elseif body indent 1.\n"
+              }
+            ]
+          },
+          {
+            "kind": "SetVariable",
+            "expression": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "matched_outer",
+                "rawValue": "matched_outer",
+                "position": 7,
+                "lineNumber": 48,
+                "sceneName": "equivalent",
+                "indent": 1
+              }
+            },
+            "assignment": {
+              "kind": "Literal",
+              "value": {
+                "type": "BooleanLiteral",
+                "value": true,
+                "position": 21,
+                "lineNumber": 48,
+                "sceneName": "equivalent",
+                "indent": 1
+              }
+            },
+            "token": {
+              "type": "SetVariable",
+              "sceneName": "equivalent",
+              "indent": 1,
+              "lineNumber": 48,
+              "position": 2
+            }
+          }
+        ],
+        "expression": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Binary",
+            "left": {
+              "kind": "Grouping",
+              "expression": {
+                "kind": "Binary",
+                "left": {
+                  "kind": "Identifier",
+                  "token": {
+                    "type": "Identifier",
+                    "value": "matched_outer",
+                    "rawValue": "matched_outer",
+                    "position": 6,
+                    "lineNumber": 46,
+                    "sceneName": "equivalent",
+                    "indent": 0
+                  }
+                },
+                "operator": {
+                  "type": "EqualityOperator",
+                  "rawValue": "=",
+                  "position": 20,
+                  "lineNumber": 46,
+                  "sceneName": "equivalent",
+                  "indent": 0
+                },
+                "right": {
+                  "kind": "Literal",
+                  "value": {
+                    "type": "BooleanLiteral",
+                    "value": false,
+                    "position": 22,
+                    "lineNumber": 46,
+                    "sceneName": "equivalent",
+                    "indent": 0
+                  }
+                }
+              }
+            },
+            "operator": {
+              "type": "LogicalAnd",
+              "rawValue": "and",
+              "position": 29,
+              "lineNumber": 46,
+              "sceneName": "equivalent",
+              "indent": 0
+            },
+            "right": {
+              "kind": "Grouping",
+              "expression": {
+                "kind": "Binary",
+                "left": {
+                  "kind": "Identifier",
+                  "token": {
+                    "type": "Identifier",
+                    "value": "val",
+                    "rawValue": "val",
+                    "position": 34,
+                    "lineNumber": 46,
+                    "sceneName": "equivalent",
+                    "indent": 0
+                  }
+                },
+                "operator": {
+                  "type": "GreaterThanEqualsOperator",
+                  "rawValue": ">=",
+                  "position": 38,
+                  "lineNumber": 46,
+                  "sceneName": "equivalent",
+                  "indent": 0
+                },
+                "right": {
+                  "kind": "Literal",
+                  "value": {
+                    "type": "NumberLiteral",
+                    "value": 50,
+                    "position": 41,
+                    "lineNumber": 46,
+                    "sceneName": "equivalent",
+                    "indent": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "elseBranch": null,
+        "elseIfBranches": []
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "equivalent",
+            "lineNumber": 50,
+            "position": 0,
+            "indent": 0,
+            "content": "Prose at indent 0 after elseif.\n\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 33,
+            "lineNumber": 50,
+            "position": 0,
+            "text": "Prose at indent 0 after elseif.\n\n"
+          }
+        ]
+      },
+      {
+        "kind": "If",
+        "token": {
+          "type": "If",
+          "sceneName": "equivalent",
+          "indent": 0,
+          "lineNumber": 52,
+          "position": 0
+        },
+        "body": [
+          {
+            "content": [
+              {
+                "type": "Prose",
+                "sceneName": "equivalent",
+                "lineNumber": 53,
+                "position": 2,
+                "indent": 1,
+                "content": "Else body indent 1.\n\n"
+              }
+            ],
+            "kind": "Prose",
+            "parsedSegments": [
+              {
+                "kind": "Text",
+                "start": 0,
+                "end": 21,
+                "lineNumber": 53,
+                "position": 2,
+                "text": "Else body indent 1.\n\n"
+              }
+            ]
+          }
+        ],
+        "expression": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Binary",
+            "left": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "matched_outer",
+                "rawValue": "matched_outer",
+                "position": 5,
+                "lineNumber": 52,
+                "sceneName": "equivalent",
+                "indent": 0
+              }
+            },
+            "operator": {
+              "type": "EqualityOperator",
+              "rawValue": "=",
+              "position": 19,
+              "lineNumber": 52,
+              "sceneName": "equivalent",
+              "indent": 0
+            },
+            "right": {
+              "kind": "Literal",
+              "value": {
+                "type": "BooleanLiteral",
+                "value": false,
+                "position": 21,
+                "lineNumber": 52,
+                "sceneName": "equivalent",
+                "indent": 0
+              }
+            }
+          }
+        },
+        "elseBranch": null,
+        "elseIfBranches": []
+      }
+    ],
+    "parseErrors": [],
+    "start": {
+      "sceneName": "equivalent",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    "end": {
+      "type": "Prose",
+      "sceneName": "equivalent",
+      "lineNumber": 53,
+      "position": 2,
+      "indent": 1,
+      "content": "Else body indent 1.\n\n"
+    }
+  },
+  {
+    "name": "startup",
+    "statements": [
+      {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "val",
+          "rawValue": "val",
+          "position": 8,
+          "lineNumber": 0,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 0,
+            "position": 12,
+            "lineNumber": 0,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 0,
+          "position": 0
+        }
+      },
+      {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "marker",
+          "rawValue": "marker",
+          "position": 8,
+          "lineNumber": 1,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "StringLiteral",
+            "value": "",
+            "position": 15,
+            "lineNumber": 1,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 1,
+          "position": 0
+        }
+      },
+      {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "implicit_control_flow",
+          "rawValue": "implicit_control_flow",
+          "position": 8,
+          "lineNumber": 2,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "BooleanLiteral",
+            "value": true,
+            "position": 30,
+            "lineNumber": 2,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 2,
+          "position": 0
+        }
+      },
+      {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 4,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "top",
+          "rawValue": "top",
+          "position": 6,
+          "lineNumber": 4,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "local_bonus",
+          "rawValue": "local_bonus",
+          "position": 6,
+          "lineNumber": 5,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 0,
+            "position": 18,
+            "lineNumber": 5,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Temporary",
+        "token": {
+          "type": "CreateTempVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 5,
+          "position": 0
+        }
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "local_bonus",
+            "rawValue": "local_bonus",
+            "position": 5,
+            "lineNumber": 6,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "assignment": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Binary",
+            "left": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "val",
+                "rawValue": "val",
+                "position": 18,
+                "lineNumber": 6,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "operator": {
+              "type": "AdditionOperator",
+              "rawValue": "+",
+              "position": 22,
+              "lineNumber": 6,
+              "sceneName": "startup",
+              "indent": 0
+            },
+            "right": {
+              "kind": "Literal",
+              "value": {
+                "type": "NumberLiteral",
+                "value": 1,
+                "position": 24,
+                "lineNumber": 6,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 6,
+          "position": 0
+        }
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 8,
+            "position": 0,
+            "indent": 0,
+            "content": "=== TEST 1: val=100 (if matches) ===\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 37,
+            "lineNumber": 8,
+            "position": 0,
+            "text": "=== TEST 1: val=100 (if matches) ===\n"
+          }
+        ]
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "val",
+            "rawValue": "val",
+            "position": 5,
+            "lineNumber": 9,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "assignment": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 100,
+            "position": 9,
+            "lineNumber": 9,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 9,
+          "position": 0
+        }
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "marker",
+            "rawValue": "marker",
+            "position": 5,
+            "lineNumber": 10,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "assignment": {
+          "kind": "Literal",
+          "value": {
+            "type": "StringLiteral",
+            "value": "",
+            "position": 12,
+            "lineNumber": 10,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 10,
+          "position": 0
+        }
+      },
+      {
+        "kind": "If",
+        "token": {
+          "type": "If",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 11,
+          "position": 0
+        },
+        "body": [
+          {
+            "content": [
+              {
+                "type": "Prose",
+                "sceneName": "startup",
+                "lineNumber": 12,
+                "position": 2,
+                "indent": 1,
+                "content": "IF-BODY\n"
+              }
+            ],
+            "kind": "Prose",
+            "parsedSegments": [
+              {
+                "kind": "Text",
+                "start": 0,
+                "end": 8,
+                "lineNumber": 12,
+                "position": 2,
+                "text": "IF-BODY\n"
+              }
+            ]
+          },
+          {
+            "kind": "GotoLabel",
+            "token": {
+              "type": "GotoLabel",
+              "sceneName": "startup",
+              "indent": 1,
+              "lineNumber": 13,
+              "position": 2
+            },
+            "label": {
+              "type": "Identifier",
+              "value": "t1cont",
+              "rawValue": "t1cont",
+              "position": 8,
+              "lineNumber": 13,
+              "sceneName": "startup",
+              "indent": 1,
+              "isLabelName": true
+            }
+          }
+        ],
+        "expression": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Binary",
+            "left": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "val",
+                "rawValue": "val",
+                "position": 5,
+                "lineNumber": 11,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "operator": {
+              "type": "GreaterThanEqualsOperator",
+              "rawValue": ">=",
+              "position": 9,
+              "lineNumber": 11,
+              "sceneName": "startup",
+              "indent": 0
+            },
+            "right": {
+              "kind": "Literal",
+              "value": {
+                "type": "NumberLiteral",
+                "value": 100,
+                "position": 12,
+                "lineNumber": 11,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          }
+        },
+        "elseBranch": null,
+        "elseIfBranches": []
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "marker",
+            "rawValue": "marker",
+            "position": 5,
+            "lineNumber": 14,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "assignment": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Binary",
+            "left": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "marker",
+                "rawValue": "marker",
+                "position": 13,
+                "lineNumber": 14,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "operator": {
+              "type": "ConcatenationOperator",
+              "rawValue": "&",
+              "position": 20,
+              "lineNumber": 14,
+              "sceneName": "startup",
+              "indent": 0
+            },
+            "right": {
+              "kind": "Literal",
+              "value": {
+                "type": "StringLiteral",
+                "value": "A",
+                "position": 22,
+                "lineNumber": 14,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 14,
+          "position": 0
+        }
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 15,
+            "position": 0,
+            "indent": 0,
+            "content": "Prose-between-if-and-elseif.\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 29,
+            "lineNumber": 15,
+            "position": 0,
+            "text": "Prose-between-if-and-elseif.\n"
+          }
+        ]
+      },
+      {
+        "kind": "Error",
+        "token": {
+          "type": "ElseIf",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 16,
+          "position": 0
+        },
+        "message": "Unknown statement starting with ElseIf at 'ElseIf' startup:16:0[Indent 0, Id: 184]"
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "marker",
+            "rawValue": "marker",
+            "position": 5,
+            "lineNumber": 19,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "assignment": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Binary",
+            "left": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "marker",
+                "rawValue": "marker",
+                "position": 13,
+                "lineNumber": 19,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "operator": {
+              "type": "ConcatenationOperator",
+              "rawValue": "&",
+              "position": 20,
+              "lineNumber": 19,
+              "sceneName": "startup",
+              "indent": 0
+            },
+            "right": {
+              "kind": "Literal",
+              "value": {
+                "type": "StringLiteral",
+                "value": "B",
+                "position": 22,
+                "lineNumber": 19,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 19,
+          "position": 0
+        }
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 20,
+            "position": 0,
+            "indent": 0,
+            "content": "Prose-between-elseif-and-else.\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 31,
+            "lineNumber": 20,
+            "position": 0,
+            "text": "Prose-between-elseif-and-else.\n"
+          }
+        ]
+      },
+      {
+        "kind": "Else",
+        "token": {
+          "type": "Else",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 21,
+          "position": 0
+        },
+        "body": [
+          {
+            "content": [
+              {
+                "type": "Prose",
+                "sceneName": "startup",
+                "lineNumber": 22,
+                "position": 2,
+                "indent": 1,
+                "content": "ELSE-BODY\n"
+              }
+            ],
+            "kind": "Prose",
+            "parsedSegments": [
+              {
+                "kind": "Text",
+                "start": 0,
+                "end": 10,
+                "lineNumber": 22,
+                "position": 2,
+                "text": "ELSE-BODY\n"
+              }
+            ]
+          },
+          {
+            "kind": "GotoLabel",
+            "token": {
+              "type": "GotoLabel",
+              "sceneName": "startup",
+              "indent": 1,
+              "lineNumber": 23,
+              "position": 2
+            },
+            "label": {
+              "type": "Identifier",
+              "value": "t1cont",
+              "rawValue": "t1cont",
+              "position": 8,
+              "lineNumber": 23,
+              "sceneName": "startup",
+              "indent": 1,
+              "isLabelName": true
+            }
+          }
+        ]
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "marker",
+            "rawValue": "marker",
+            "position": 5,
+            "lineNumber": 24,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "assignment": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Binary",
+            "left": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "marker",
+                "rawValue": "marker",
+                "position": 13,
+                "lineNumber": 24,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "operator": {
+              "type": "ConcatenationOperator",
+              "rawValue": "&",
+              "position": 20,
+              "lineNumber": 24,
+              "sceneName": "startup",
+              "indent": 0
+            },
+            "right": {
+              "kind": "Literal",
+              "value": {
+                "type": "StringLiteral",
+                "value": "C",
+                "position": 22,
+                "lineNumber": 24,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 24,
+          "position": 0
+        }
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 25,
+            "position": 0,
+            "indent": 0,
+            "content": "Prose-after-else.\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 18,
+            "lineNumber": 25,
+            "position": 0,
+            "text": "Prose-after-else.\n"
+          }
+        ]
+      },
+      {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 26,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "t1cont",
+          "rawValue": "t1cont",
+          "position": 6,
+          "lineNumber": 26,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        }
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 27,
+            "position": 0,
+            "indent": 0,
+            "content": "Marker1: "
+          },
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 27,
+            "position": 18,
+            "indent": 0,
+            "content": "\n\n=== TEST 2: val=75 (elseif matches) ===\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 9,
+            "lineNumber": 27,
+            "position": 0,
+            "text": "Marker1: "
+          },
+          {
+            "kind": "Print",
+            "start": 0,
+            "end": 0,
+            "lineNumber": 27,
+            "position": 9,
+            "expression": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "marker",
+                "rawValue": "marker",
+                "position": 11,
+                "lineNumber": 27,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          },
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 42,
+            "lineNumber": 27,
+            "position": 18,
+            "text": "\n\n=== TEST 2: val=75 (elseif matches) ===\n"
+          }
+        ]
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "val",
+            "rawValue": "val",
+            "position": 5,
+            "lineNumber": 30,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "assignment": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 75,
+            "position": 9,
+            "lineNumber": 30,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 30,
+          "position": 0
+        }
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "marker",
+            "rawValue": "marker",
+            "position": 5,
+            "lineNumber": 31,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "assignment": {
+          "kind": "Literal",
+          "value": {
+            "type": "StringLiteral",
+            "value": "",
+            "position": 12,
+            "lineNumber": 31,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 31,
+          "position": 0
+        }
+      },
+      {
+        "kind": "If",
+        "token": {
+          "type": "If",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 32,
+          "position": 0
+        },
+        "body": [
+          {
+            "content": [
+              {
+                "type": "Prose",
+                "sceneName": "startup",
+                "lineNumber": 33,
+                "position": 2,
+                "indent": 1,
+                "content": "IF-BODY\n"
+              }
+            ],
+            "kind": "Prose",
+            "parsedSegments": [
+              {
+                "kind": "Text",
+                "start": 0,
+                "end": 8,
+                "lineNumber": 33,
+                "position": 2,
+                "text": "IF-BODY\n"
+              }
+            ]
+          },
+          {
+            "kind": "GotoLabel",
+            "token": {
+              "type": "GotoLabel",
+              "sceneName": "startup",
+              "indent": 1,
+              "lineNumber": 34,
+              "position": 2
+            },
+            "label": {
+              "type": "Identifier",
+              "value": "t2cont",
+              "rawValue": "t2cont",
+              "position": 8,
+              "lineNumber": 34,
+              "sceneName": "startup",
+              "indent": 1,
+              "isLabelName": true
+            }
+          }
+        ],
+        "expression": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Binary",
+            "left": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "val",
+                "rawValue": "val",
+                "position": 5,
+                "lineNumber": 32,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "operator": {
+              "type": "GreaterThanEqualsOperator",
+              "rawValue": ">=",
+              "position": 9,
+              "lineNumber": 32,
+              "sceneName": "startup",
+              "indent": 0
+            },
+            "right": {
+              "kind": "Literal",
+              "value": {
+                "type": "NumberLiteral",
+                "value": 100,
+                "position": 12,
+                "lineNumber": 32,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          }
+        },
+        "elseBranch": null,
+        "elseIfBranches": []
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "marker",
+            "rawValue": "marker",
+            "position": 5,
+            "lineNumber": 35,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "assignment": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Binary",
+            "left": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "marker",
+                "rawValue": "marker",
+                "position": 13,
+                "lineNumber": 35,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "operator": {
+              "type": "ConcatenationOperator",
+              "rawValue": "&",
+              "position": 20,
+              "lineNumber": 35,
+              "sceneName": "startup",
+              "indent": 0
+            },
+            "right": {
+              "kind": "Literal",
+              "value": {
+                "type": "StringLiteral",
+                "value": "A",
+                "position": 22,
+                "lineNumber": 35,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 35,
+          "position": 0
+        }
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 36,
+            "position": 0,
+            "indent": 0,
+            "content": "Prose-between-if-and-elseif.\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 29,
+            "lineNumber": 36,
+            "position": 0,
+            "text": "Prose-between-if-and-elseif.\n"
+          }
+        ]
+      },
+      {
+        "kind": "Error",
+        "token": {
+          "type": "ElseIf",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 37,
+          "position": 0
+        },
+        "message": "Unknown statement starting with ElseIf at 'ElseIf' startup:37:0[Indent 0, Id: 243]"
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "marker",
+            "rawValue": "marker",
+            "position": 5,
+            "lineNumber": 40,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "assignment": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Binary",
+            "left": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "marker",
+                "rawValue": "marker",
+                "position": 13,
+                "lineNumber": 40,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "operator": {
+              "type": "ConcatenationOperator",
+              "rawValue": "&",
+              "position": 20,
+              "lineNumber": 40,
+              "sceneName": "startup",
+              "indent": 0
+            },
+            "right": {
+              "kind": "Literal",
+              "value": {
+                "type": "StringLiteral",
+                "value": "B",
+                "position": 22,
+                "lineNumber": 40,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 40,
+          "position": 0
+        }
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 41,
+            "position": 0,
+            "indent": 0,
+            "content": "Prose-between-elseif-and-else.\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 31,
+            "lineNumber": 41,
+            "position": 0,
+            "text": "Prose-between-elseif-and-else.\n"
+          }
+        ]
+      },
+      {
+        "kind": "Else",
+        "token": {
+          "type": "Else",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 42,
+          "position": 0
+        },
+        "body": [
+          {
+            "content": [
+              {
+                "type": "Prose",
+                "sceneName": "startup",
+                "lineNumber": 43,
+                "position": 2,
+                "indent": 1,
+                "content": "ELSE-BODY\n"
+              }
+            ],
+            "kind": "Prose",
+            "parsedSegments": [
+              {
+                "kind": "Text",
+                "start": 0,
+                "end": 10,
+                "lineNumber": 43,
+                "position": 2,
+                "text": "ELSE-BODY\n"
+              }
+            ]
+          },
+          {
+            "kind": "GotoLabel",
+            "token": {
+              "type": "GotoLabel",
+              "sceneName": "startup",
+              "indent": 1,
+              "lineNumber": 44,
+              "position": 2
+            },
+            "label": {
+              "type": "Identifier",
+              "value": "t2cont",
+              "rawValue": "t2cont",
+              "position": 8,
+              "lineNumber": 44,
+              "sceneName": "startup",
+              "indent": 1,
+              "isLabelName": true
+            }
+          }
+        ]
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "marker",
+            "rawValue": "marker",
+            "position": 5,
+            "lineNumber": 45,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "assignment": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Binary",
+            "left": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "marker",
+                "rawValue": "marker",
+                "position": 13,
+                "lineNumber": 45,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "operator": {
+              "type": "ConcatenationOperator",
+              "rawValue": "&",
+              "position": 20,
+              "lineNumber": 45,
+              "sceneName": "startup",
+              "indent": 0
+            },
+            "right": {
+              "kind": "Literal",
+              "value": {
+                "type": "StringLiteral",
+                "value": "C",
+                "position": 22,
+                "lineNumber": 45,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 45,
+          "position": 0
+        }
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 46,
+            "position": 0,
+            "indent": 0,
+            "content": "Prose-after-else.\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 18,
+            "lineNumber": 46,
+            "position": 0,
+            "text": "Prose-after-else.\n"
+          }
+        ]
+      },
+      {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 47,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "t2cont",
+          "rawValue": "t2cont",
+          "position": 6,
+          "lineNumber": 47,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        }
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 48,
+            "position": 0,
+            "indent": 0,
+            "content": "Marker2: "
+          },
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 48,
+            "position": 18,
+            "indent": 0,
+            "content": "\n\n=== TEST 3: val=10 (else matches) ===\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 9,
+            "lineNumber": 48,
+            "position": 0,
+            "text": "Marker2: "
+          },
+          {
+            "kind": "Print",
+            "start": 0,
+            "end": 0,
+            "lineNumber": 48,
+            "position": 9,
+            "expression": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "marker",
+                "rawValue": "marker",
+                "position": 11,
+                "lineNumber": 48,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          },
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 40,
+            "lineNumber": 48,
+            "position": 18,
+            "text": "\n\n=== TEST 3: val=10 (else matches) ===\n"
+          }
+        ]
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "val",
+            "rawValue": "val",
+            "position": 5,
+            "lineNumber": 51,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "assignment": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 10,
+            "position": 9,
+            "lineNumber": 51,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 51,
+          "position": 0
+        }
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "marker",
+            "rawValue": "marker",
+            "position": 5,
+            "lineNumber": 52,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "assignment": {
+          "kind": "Literal",
+          "value": {
+            "type": "StringLiteral",
+            "value": "",
+            "position": 12,
+            "lineNumber": 52,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 52,
+          "position": 0
+        }
+      },
+      {
+        "kind": "If",
+        "token": {
+          "type": "If",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 53,
+          "position": 0
+        },
+        "body": [
+          {
+            "content": [
+              {
+                "type": "Prose",
+                "sceneName": "startup",
+                "lineNumber": 54,
+                "position": 2,
+                "indent": 1,
+                "content": "IF-BODY\n"
+              }
+            ],
+            "kind": "Prose",
+            "parsedSegments": [
+              {
+                "kind": "Text",
+                "start": 0,
+                "end": 8,
+                "lineNumber": 54,
+                "position": 2,
+                "text": "IF-BODY\n"
+              }
+            ]
+          },
+          {
+            "kind": "GotoLabel",
+            "token": {
+              "type": "GotoLabel",
+              "sceneName": "startup",
+              "indent": 1,
+              "lineNumber": 55,
+              "position": 2
+            },
+            "label": {
+              "type": "Identifier",
+              "value": "t3cont",
+              "rawValue": "t3cont",
+              "position": 8,
+              "lineNumber": 55,
+              "sceneName": "startup",
+              "indent": 1,
+              "isLabelName": true
+            }
+          }
+        ],
+        "expression": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Binary",
+            "left": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "val",
+                "rawValue": "val",
+                "position": 5,
+                "lineNumber": 53,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "operator": {
+              "type": "GreaterThanEqualsOperator",
+              "rawValue": ">=",
+              "position": 9,
+              "lineNumber": 53,
+              "sceneName": "startup",
+              "indent": 0
+            },
+            "right": {
+              "kind": "Literal",
+              "value": {
+                "type": "NumberLiteral",
+                "value": 100,
+                "position": 12,
+                "lineNumber": 53,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          }
+        },
+        "elseBranch": null,
+        "elseIfBranches": []
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "marker",
+            "rawValue": "marker",
+            "position": 5,
+            "lineNumber": 56,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "assignment": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Binary",
+            "left": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "marker",
+                "rawValue": "marker",
+                "position": 13,
+                "lineNumber": 56,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "operator": {
+              "type": "ConcatenationOperator",
+              "rawValue": "&",
+              "position": 20,
+              "lineNumber": 56,
+              "sceneName": "startup",
+              "indent": 0
+            },
+            "right": {
+              "kind": "Literal",
+              "value": {
+                "type": "StringLiteral",
+                "value": "A",
+                "position": 22,
+                "lineNumber": 56,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 56,
+          "position": 0
+        }
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 57,
+            "position": 0,
+            "indent": 0,
+            "content": "Prose-between-if-and-elseif.\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 29,
+            "lineNumber": 57,
+            "position": 0,
+            "text": "Prose-between-if-and-elseif.\n"
+          }
+        ]
+      },
+      {
+        "kind": "Error",
+        "token": {
+          "type": "ElseIf",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 58,
+          "position": 0
+        },
+        "message": "Unknown statement starting with ElseIf at 'ElseIf' startup:58:0[Indent 0, Id: 302]"
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "marker",
+            "rawValue": "marker",
+            "position": 5,
+            "lineNumber": 61,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "assignment": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Binary",
+            "left": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "marker",
+                "rawValue": "marker",
+                "position": 13,
+                "lineNumber": 61,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "operator": {
+              "type": "ConcatenationOperator",
+              "rawValue": "&",
+              "position": 20,
+              "lineNumber": 61,
+              "sceneName": "startup",
+              "indent": 0
+            },
+            "right": {
+              "kind": "Literal",
+              "value": {
+                "type": "StringLiteral",
+                "value": "B",
+                "position": 22,
+                "lineNumber": 61,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 61,
+          "position": 0
+        }
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 62,
+            "position": 0,
+            "indent": 0,
+            "content": "Prose-between-elseif-and-else.\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 31,
+            "lineNumber": 62,
+            "position": 0,
+            "text": "Prose-between-elseif-and-else.\n"
+          }
+        ]
+      },
+      {
+        "kind": "Else",
+        "token": {
+          "type": "Else",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 63,
+          "position": 0
+        },
+        "body": [
+          {
+            "content": [
+              {
+                "type": "Prose",
+                "sceneName": "startup",
+                "lineNumber": 64,
+                "position": 2,
+                "indent": 1,
+                "content": "ELSE-BODY\n"
+              }
+            ],
+            "kind": "Prose",
+            "parsedSegments": [
+              {
+                "kind": "Text",
+                "start": 0,
+                "end": 10,
+                "lineNumber": 64,
+                "position": 2,
+                "text": "ELSE-BODY\n"
+              }
+            ]
+          },
+          {
+            "kind": "GotoLabel",
+            "token": {
+              "type": "GotoLabel",
+              "sceneName": "startup",
+              "indent": 1,
+              "lineNumber": 65,
+              "position": 2
+            },
+            "label": {
+              "type": "Identifier",
+              "value": "t3cont",
+              "rawValue": "t3cont",
+              "position": 8,
+              "lineNumber": 65,
+              "sceneName": "startup",
+              "indent": 1,
+              "isLabelName": true
+            }
+          }
+        ]
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "marker",
+            "rawValue": "marker",
+            "position": 5,
+            "lineNumber": 66,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "assignment": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Binary",
+            "left": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "marker",
+                "rawValue": "marker",
+                "position": 13,
+                "lineNumber": 66,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "operator": {
+              "type": "ConcatenationOperator",
+              "rawValue": "&",
+              "position": 20,
+              "lineNumber": 66,
+              "sceneName": "startup",
+              "indent": 0
+            },
+            "right": {
+              "kind": "Literal",
+              "value": {
+                "type": "StringLiteral",
+                "value": "C",
+                "position": 22,
+                "lineNumber": 66,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 66,
+          "position": 0
+        }
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 67,
+            "position": 0,
+            "indent": 0,
+            "content": "Prose-after-else.\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 18,
+            "lineNumber": 67,
+            "position": 0,
+            "text": "Prose-after-else.\n"
+          }
+        ]
+      },
+      {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 68,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "t3cont",
+          "rawValue": "t3cont",
+          "position": 6,
+          "lineNumber": 68,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        }
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 69,
+            "position": 0,
+            "indent": 0,
+            "content": "Marker3: "
+          },
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 69,
+            "position": 18,
+            "indent": 0,
+            "content": "\n\n=== TEST 4: val=0, no else branch ===\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 9,
+            "lineNumber": 69,
+            "position": 0,
+            "text": "Marker3: "
+          },
+          {
+            "kind": "Print",
+            "start": 0,
+            "end": 0,
+            "lineNumber": 69,
+            "position": 9,
+            "expression": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "marker",
+                "rawValue": "marker",
+                "position": 11,
+                "lineNumber": 69,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          },
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 40,
+            "lineNumber": 69,
+            "position": 18,
+            "text": "\n\n=== TEST 4: val=0, no else branch ===\n"
+          }
+        ]
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "val",
+            "rawValue": "val",
+            "position": 5,
+            "lineNumber": 72,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "assignment": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 0,
+            "position": 9,
+            "lineNumber": 72,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 72,
+          "position": 0
+        }
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "marker",
+            "rawValue": "marker",
+            "position": 5,
+            "lineNumber": 73,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "assignment": {
+          "kind": "Literal",
+          "value": {
+            "type": "StringLiteral",
+            "value": "",
+            "position": 12,
+            "lineNumber": 73,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 73,
+          "position": 0
+        }
+      },
+      {
+        "kind": "If",
+        "token": {
+          "type": "If",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 74,
+          "position": 0
+        },
+        "body": [
+          {
+            "content": [
+              {
+                "type": "Prose",
+                "sceneName": "startup",
+                "lineNumber": 75,
+                "position": 2,
+                "indent": 1,
+                "content": "IF-BODY\n"
+              }
+            ],
+            "kind": "Prose",
+            "parsedSegments": [
+              {
+                "kind": "Text",
+                "start": 0,
+                "end": 8,
+                "lineNumber": 75,
+                "position": 2,
+                "text": "IF-BODY\n"
+              }
+            ]
+          },
+          {
+            "kind": "GotoLabel",
+            "token": {
+              "type": "GotoLabel",
+              "sceneName": "startup",
+              "indent": 1,
+              "lineNumber": 76,
+              "position": 2
+            },
+            "label": {
+              "type": "Identifier",
+              "value": "t4cont",
+              "rawValue": "t4cont",
+              "position": 8,
+              "lineNumber": 76,
+              "sceneName": "startup",
+              "indent": 1,
+              "isLabelName": true
+            }
+          }
+        ],
+        "expression": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Binary",
+            "left": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "val",
+                "rawValue": "val",
+                "position": 5,
+                "lineNumber": 74,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "operator": {
+              "type": "GreaterThanEqualsOperator",
+              "rawValue": ">=",
+              "position": 9,
+              "lineNumber": 74,
+              "sceneName": "startup",
+              "indent": 0
+            },
+            "right": {
+              "kind": "Literal",
+              "value": {
+                "type": "NumberLiteral",
+                "value": 100,
+                "position": 12,
+                "lineNumber": 74,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          }
+        },
+        "elseBranch": null,
+        "elseIfBranches": []
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "marker",
+            "rawValue": "marker",
+            "position": 5,
+            "lineNumber": 77,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "assignment": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Binary",
+            "left": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "marker",
+                "rawValue": "marker",
+                "position": 13,
+                "lineNumber": 77,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "operator": {
+              "type": "ConcatenationOperator",
+              "rawValue": "&",
+              "position": 20,
+              "lineNumber": 77,
+              "sceneName": "startup",
+              "indent": 0
+            },
+            "right": {
+              "kind": "Literal",
+              "value": {
+                "type": "StringLiteral",
+                "value": "A",
+                "position": 22,
+                "lineNumber": 77,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 77,
+          "position": 0
+        }
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 78,
+            "position": 0,
+            "indent": 0,
+            "content": "Prose-after-if-no-else.\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 24,
+            "lineNumber": 78,
+            "position": 0,
+            "text": "Prose-after-if-no-else.\n"
+          }
+        ]
+      },
+      {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 79,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "t4cont",
+          "rawValue": "t4cont",
+          "position": 6,
+          "lineNumber": 79,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        }
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 80,
+            "position": 0,
+            "indent": 0,
+            "content": "Marker4: "
+          },
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 80,
+            "position": 18,
+            "indent": 0,
+            "content": "\n\n=== TEST 5: ICF, val=100 (if matches, no goto) ===\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 9,
+            "lineNumber": 80,
+            "position": 0,
+            "text": "Marker4: "
+          },
+          {
+            "kind": "Print",
+            "start": 0,
+            "end": 0,
+            "lineNumber": 80,
+            "position": 9,
+            "expression": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "marker",
+                "rawValue": "marker",
+                "position": 11,
+                "lineNumber": 80,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          },
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 53,
+            "lineNumber": 80,
+            "position": 18,
+            "text": "\n\n=== TEST 5: ICF, val=100 (if matches, no goto) ===\n"
+          }
+        ]
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "val",
+            "rawValue": "val",
+            "position": 5,
+            "lineNumber": 83,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "assignment": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 100,
+            "position": 9,
+            "lineNumber": 83,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 83,
+          "position": 0
+        }
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "marker",
+            "rawValue": "marker",
+            "position": 5,
+            "lineNumber": 84,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "assignment": {
+          "kind": "Literal",
+          "value": {
+            "type": "StringLiteral",
+            "value": "",
+            "position": 12,
+            "lineNumber": 84,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 84,
+          "position": 0
+        }
+      },
+      {
+        "kind": "If",
+        "token": {
+          "type": "If",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 85,
+          "position": 0
+        },
+        "body": [
+          {
+            "content": [
+              {
+                "type": "Prose",
+                "sceneName": "startup",
+                "lineNumber": 86,
+                "position": 2,
+                "indent": 1,
+                "content": "IF-BODY-ICF\n"
+              }
+            ],
+            "kind": "Prose",
+            "parsedSegments": [
+              {
+                "kind": "Text",
+                "start": 0,
+                "end": 12,
+                "lineNumber": 86,
+                "position": 2,
+                "text": "IF-BODY-ICF\n"
+              }
+            ]
+          }
+        ],
+        "expression": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Binary",
+            "left": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "val",
+                "rawValue": "val",
+                "position": 5,
+                "lineNumber": 85,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "operator": {
+              "type": "GreaterThanEqualsOperator",
+              "rawValue": ">=",
+              "position": 9,
+              "lineNumber": 85,
+              "sceneName": "startup",
+              "indent": 0
+            },
+            "right": {
+              "kind": "Literal",
+              "value": {
+                "type": "NumberLiteral",
+                "value": 100,
+                "position": 12,
+                "lineNumber": 85,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          }
+        },
+        "elseBranch": null,
+        "elseIfBranches": []
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "marker",
+            "rawValue": "marker",
+            "position": 5,
+            "lineNumber": 87,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "assignment": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Binary",
+            "left": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "marker",
+                "rawValue": "marker",
+                "position": 13,
+                "lineNumber": 87,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "operator": {
+              "type": "ConcatenationOperator",
+              "rawValue": "&",
+              "position": 20,
+              "lineNumber": 87,
+              "sceneName": "startup",
+              "indent": 0
+            },
+            "right": {
+              "kind": "Literal",
+              "value": {
+                "type": "StringLiteral",
+                "value": "A",
+                "position": 22,
+                "lineNumber": 87,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 87,
+          "position": 0
+        }
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 88,
+            "position": 0,
+            "indent": 0,
+            "content": "Prose-between-if-and-elseif-icf.\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 33,
+            "lineNumber": 88,
+            "position": 0,
+            "text": "Prose-between-if-and-elseif-icf.\n"
+          }
+        ]
+      },
+      {
+        "kind": "Error",
+        "token": {
+          "type": "ElseIf",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 89,
+          "position": 0
+        },
+        "message": "Unknown statement starting with ElseIf at 'ElseIf' startup:89:0[Indent 0, Id: 389]"
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "marker",
+            "rawValue": "marker",
+            "position": 5,
+            "lineNumber": 91,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "assignment": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Binary",
+            "left": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "marker",
+                "rawValue": "marker",
+                "position": 13,
+                "lineNumber": 91,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "operator": {
+              "type": "ConcatenationOperator",
+              "rawValue": "&",
+              "position": 20,
+              "lineNumber": 91,
+              "sceneName": "startup",
+              "indent": 0
+            },
+            "right": {
+              "kind": "Literal",
+              "value": {
+                "type": "StringLiteral",
+                "value": "B",
+                "position": 22,
+                "lineNumber": 91,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 91,
+          "position": 0
+        }
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 92,
+            "position": 0,
+            "indent": 0,
+            "content": "Prose-between-elseif-and-else-icf.\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 35,
+            "lineNumber": 92,
+            "position": 0,
+            "text": "Prose-between-elseif-and-else-icf.\n"
+          }
+        ]
+      },
+      {
+        "kind": "Else",
+        "token": {
+          "type": "Else",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 93,
+          "position": 0
+        },
+        "body": [
+          {
+            "content": [
+              {
+                "type": "Prose",
+                "sceneName": "startup",
+                "lineNumber": 94,
+                "position": 2,
+                "indent": 1,
+                "content": "ELSE-BODY-ICF\n"
+              }
+            ],
+            "kind": "Prose",
+            "parsedSegments": [
+              {
+                "kind": "Text",
+                "start": 0,
+                "end": 14,
+                "lineNumber": 94,
+                "position": 2,
+                "text": "ELSE-BODY-ICF\n"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "marker",
+            "rawValue": "marker",
+            "position": 5,
+            "lineNumber": 95,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "assignment": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Binary",
+            "left": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "marker",
+                "rawValue": "marker",
+                "position": 13,
+                "lineNumber": 95,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "operator": {
+              "type": "ConcatenationOperator",
+              "rawValue": "&",
+              "position": 20,
+              "lineNumber": 95,
+              "sceneName": "startup",
+              "indent": 0
+            },
+            "right": {
+              "kind": "Literal",
+              "value": {
+                "type": "StringLiteral",
+                "value": "C",
+                "position": 22,
+                "lineNumber": 95,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 95,
+          "position": 0
+        }
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 96,
+            "position": 0,
+            "indent": 0,
+            "content": "Prose-after-else-icf.\nMarker5: "
+          },
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 97,
+            "position": 18,
+            "indent": 0,
+            "content": "\n\n=== TEST 6: ICF, val=10 (else matches, no goto) ===\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 31,
+            "lineNumber": 96,
+            "position": 0,
+            "text": "Prose-after-else-icf.\nMarker5: "
+          },
+          {
+            "kind": "Print",
+            "start": 0,
+            "end": 0,
+            "lineNumber": 97,
+            "position": 9,
+            "expression": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "marker",
+                "rawValue": "marker",
+                "position": 11,
+                "lineNumber": 97,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          },
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 54,
+            "lineNumber": 97,
+            "position": 18,
+            "text": "\n\n=== TEST 6: ICF, val=10 (else matches, no goto) ===\n"
+          }
+        ]
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "val",
+            "rawValue": "val",
+            "position": 5,
+            "lineNumber": 100,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "assignment": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 10,
+            "position": 9,
+            "lineNumber": 100,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 100,
+          "position": 0
+        }
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "marker",
+            "rawValue": "marker",
+            "position": 5,
+            "lineNumber": 101,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "assignment": {
+          "kind": "Literal",
+          "value": {
+            "type": "StringLiteral",
+            "value": "",
+            "position": 12,
+            "lineNumber": 101,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 101,
+          "position": 0
+        }
+      },
+      {
+        "kind": "If",
+        "token": {
+          "type": "If",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 102,
+          "position": 0
+        },
+        "body": [
+          {
+            "content": [
+              {
+                "type": "Prose",
+                "sceneName": "startup",
+                "lineNumber": 103,
+                "position": 2,
+                "indent": 1,
+                "content": "IF-BODY-ICF\n"
+              }
+            ],
+            "kind": "Prose",
+            "parsedSegments": [
+              {
+                "kind": "Text",
+                "start": 0,
+                "end": 12,
+                "lineNumber": 103,
+                "position": 2,
+                "text": "IF-BODY-ICF\n"
+              }
+            ]
+          }
+        ],
+        "expression": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Binary",
+            "left": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "val",
+                "rawValue": "val",
+                "position": 5,
+                "lineNumber": 102,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "operator": {
+              "type": "GreaterThanEqualsOperator",
+              "rawValue": ">=",
+              "position": 9,
+              "lineNumber": 102,
+              "sceneName": "startup",
+              "indent": 0
+            },
+            "right": {
+              "kind": "Literal",
+              "value": {
+                "type": "NumberLiteral",
+                "value": 100,
+                "position": 12,
+                "lineNumber": 102,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          }
+        },
+        "elseBranch": null,
+        "elseIfBranches": []
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "marker",
+            "rawValue": "marker",
+            "position": 5,
+            "lineNumber": 104,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "assignment": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Binary",
+            "left": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "marker",
+                "rawValue": "marker",
+                "position": 13,
+                "lineNumber": 104,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "operator": {
+              "type": "ConcatenationOperator",
+              "rawValue": "&",
+              "position": 20,
+              "lineNumber": 104,
+              "sceneName": "startup",
+              "indent": 0
+            },
+            "right": {
+              "kind": "Literal",
+              "value": {
+                "type": "StringLiteral",
+                "value": "A",
+                "position": 22,
+                "lineNumber": 104,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 104,
+          "position": 0
+        }
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 105,
+            "position": 0,
+            "indent": 0,
+            "content": "Prose-between-if-and-elseif-icf.\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 33,
+            "lineNumber": 105,
+            "position": 0,
+            "text": "Prose-between-if-and-elseif-icf.\n"
+          }
+        ]
+      },
+      {
+        "kind": "Error",
+        "token": {
+          "type": "ElseIf",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 106,
+          "position": 0
+        },
+        "message": "Unknown statement starting with ElseIf at 'ElseIf' startup:106:0[Indent 0, Id: 439]"
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "marker",
+            "rawValue": "marker",
+            "position": 5,
+            "lineNumber": 108,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "assignment": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Binary",
+            "left": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "marker",
+                "rawValue": "marker",
+                "position": 13,
+                "lineNumber": 108,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "operator": {
+              "type": "ConcatenationOperator",
+              "rawValue": "&",
+              "position": 20,
+              "lineNumber": 108,
+              "sceneName": "startup",
+              "indent": 0
+            },
+            "right": {
+              "kind": "Literal",
+              "value": {
+                "type": "StringLiteral",
+                "value": "B",
+                "position": 22,
+                "lineNumber": 108,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 108,
+          "position": 0
+        }
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 109,
+            "position": 0,
+            "indent": 0,
+            "content": "Prose-between-elseif-and-else-icf.\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 35,
+            "lineNumber": 109,
+            "position": 0,
+            "text": "Prose-between-elseif-and-else-icf.\n"
+          }
+        ]
+      },
+      {
+        "kind": "Else",
+        "token": {
+          "type": "Else",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 110,
+          "position": 0
+        },
+        "body": [
+          {
+            "content": [
+              {
+                "type": "Prose",
+                "sceneName": "startup",
+                "lineNumber": 111,
+                "position": 2,
+                "indent": 1,
+                "content": "ELSE-BODY-ICF\n"
+              }
+            ],
+            "kind": "Prose",
+            "parsedSegments": [
+              {
+                "kind": "Text",
+                "start": 0,
+                "end": 14,
+                "lineNumber": 111,
+                "position": 2,
+                "text": "ELSE-BODY-ICF\n"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "marker",
+            "rawValue": "marker",
+            "position": 5,
+            "lineNumber": 112,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "assignment": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Binary",
+            "left": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "marker",
+                "rawValue": "marker",
+                "position": 13,
+                "lineNumber": 112,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "operator": {
+              "type": "ConcatenationOperator",
+              "rawValue": "&",
+              "position": 20,
+              "lineNumber": 112,
+              "sceneName": "startup",
+              "indent": 0
+            },
+            "right": {
+              "kind": "Literal",
+              "value": {
+                "type": "StringLiteral",
+                "value": "C",
+                "position": 22,
+                "lineNumber": 112,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 112,
+          "position": 0
+        }
+      }
+    ],
+    "parseErrors": [
+      {
+        "token": {
+          "type": "ElseIf",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 16,
+          "position": 0
+        },
+        "message": "Unknown statement starting with ElseIf at 'ElseIf' startup:16:0[Indent 0, Id: 184]",
+        "context": [
+          {
+            "kind": "Scene 'startup'",
+            "token": {
+              "sceneName": "startup",
+              "lineNumber": 0,
+              "position": 0,
+              "indent": 0,
+              "type": "SceneStart"
+            }
+          }
+        ]
+      },
+      {
+        "token": {
+          "type": "Else",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 21,
+          "position": 0
+        },
+        "message": "Dangling *else with no related *if at 'Else' startup:21:0[Indent 0, Id: 201]",
+        "context": [
+          {
+            "kind": "Scene 'startup'",
+            "token": {
+              "sceneName": "startup",
+              "lineNumber": 0,
+              "position": 0,
+              "indent": 0,
+              "type": "SceneStart"
+            }
+          }
+        ]
+      },
+      {
+        "token": {
+          "type": "ElseIf",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 37,
+          "position": 0
+        },
+        "message": "Unknown statement starting with ElseIf at 'ElseIf' startup:37:0[Indent 0, Id: 243]",
+        "context": [
+          {
+            "kind": "Scene 'startup'",
+            "token": {
+              "sceneName": "startup",
+              "lineNumber": 0,
+              "position": 0,
+              "indent": 0,
+              "type": "SceneStart"
+            }
+          }
+        ]
+      },
+      {
+        "token": {
+          "type": "Else",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 42,
+          "position": 0
+        },
+        "message": "Dangling *else with no related *if at 'Else' startup:42:0[Indent 0, Id: 260]",
+        "context": [
+          {
+            "kind": "Scene 'startup'",
+            "token": {
+              "sceneName": "startup",
+              "lineNumber": 0,
+              "position": 0,
+              "indent": 0,
+              "type": "SceneStart"
+            }
+          }
+        ]
+      },
+      {
+        "token": {
+          "type": "ElseIf",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 58,
+          "position": 0
+        },
+        "message": "Unknown statement starting with ElseIf at 'ElseIf' startup:58:0[Indent 0, Id: 302]",
+        "context": [
+          {
+            "kind": "Scene 'startup'",
+            "token": {
+              "sceneName": "startup",
+              "lineNumber": 0,
+              "position": 0,
+              "indent": 0,
+              "type": "SceneStart"
+            }
+          }
+        ]
+      },
+      {
+        "token": {
+          "type": "Else",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 63,
+          "position": 0
+        },
+        "message": "Dangling *else with no related *if at 'Else' startup:63:0[Indent 0, Id: 319]",
+        "context": [
+          {
+            "kind": "Scene 'startup'",
+            "token": {
+              "sceneName": "startup",
+              "lineNumber": 0,
+              "position": 0,
+              "indent": 0,
+              "type": "SceneStart"
+            }
+          }
+        ]
+      },
+      {
+        "token": {
+          "type": "ElseIf",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 89,
+          "position": 0
+        },
+        "message": "Unknown statement starting with ElseIf at 'ElseIf' startup:89:0[Indent 0, Id: 389]",
+        "context": [
+          {
+            "kind": "Scene 'startup'",
+            "token": {
+              "sceneName": "startup",
+              "lineNumber": 0,
+              "position": 0,
+              "indent": 0,
+              "type": "SceneStart"
+            }
+          }
+        ]
+      },
+      {
+        "token": {
+          "type": "Else",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 93,
+          "position": 0
+        },
+        "message": "Dangling *else with no related *if at 'Else' startup:93:0[Indent 0, Id: 404]",
+        "context": [
+          {
+            "kind": "Scene 'startup'",
+            "token": {
+              "sceneName": "startup",
+              "lineNumber": 0,
+              "position": 0,
+              "indent": 0,
+              "type": "SceneStart"
+            }
+          }
+        ]
+      },
+      {
+        "token": {
+          "type": "ElseIf",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 106,
+          "position": 0
+        },
+        "message": "Unknown statement starting with ElseIf at 'ElseIf' startup:106:0[Indent 0, Id: 439]",
+        "context": [
+          {
+            "kind": "Scene 'startup'",
+            "token": {
+              "sceneName": "startup",
+              "lineNumber": 0,
+              "position": 0,
+              "indent": 0,
+              "type": "SceneStart"
+            }
+          }
+        ]
+      },
+      {
+        "token": {
+          "type": "Else",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 110,
+          "position": 0
+        },
+        "message": "Dangling *else with no related *if at 'Else' startup:110:0[Indent 0, Id: 454]",
+        "context": [
+          {
+            "kind": "Scene 'startup'",
+            "token": {
+              "sceneName": "startup",
+              "lineNumber": 0,
+              "position": 0,
+              "indent": 0,
+              "type": "SceneStart"
+            }
+          }
+        ]
+      }
+    ],
+    "start": {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    "end": {
+      "type": "CloseParenthesis",
+      "position": 25,
+      "lineNumber": 112,
+      "sceneName": "startup",
+      "indent": 0
+    }
+  }
+]

@@ -1,0 +1,177 @@
+[
+  [
+    {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    {
+      "type": "Label",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 0,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "talk",
+      "rawValue": "talk",
+      "position": 6,
+      "lineNumber": 0,
+      "sceneName": "startup",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 1,
+      "position": 0,
+      "indent": 0,
+      "content": "Who do you talk to?\n"
+    },
+    {
+      "type": "Choice",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 2,
+      "position": 0
+    },
+    {
+      "type": "DisableReuse",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 3,
+      "position": 2
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 3,
+      "rawText": "Talk to the guard.",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 3,
+      "position": null,
+      "indent": 1,
+      "content": "Talk to the guard."
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 4,
+      "position": 4,
+      "indent": 2,
+      "content": "The guard shares rumors.\n"
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "startup",
+      "indent": 2,
+      "lineNumber": 5,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "talk",
+      "rawValue": "talk",
+      "position": 10,
+      "lineNumber": 5,
+      "sceneName": "startup",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "DisableReuse",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 6,
+      "position": 2
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 6,
+      "rawText": "Talk to the merchant.",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 6,
+      "position": null,
+      "indent": 1,
+      "content": "Talk to the merchant."
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 7,
+      "position": 4,
+      "indent": 2,
+      "content": "The merchant offers wares.\n"
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "startup",
+      "indent": 2,
+      "lineNumber": 8,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "talk",
+      "rawValue": "talk",
+      "position": 10,
+      "lineNumber": 8,
+      "sceneName": "startup",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 9,
+      "rawText": "Walk away.",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 9,
+      "position": null,
+      "indent": 1,
+      "content": "Walk away."
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 10,
+      "position": 4,
+      "indent": 2,
+      "content": "You walk away.\n"
+    },
+    {
+      "type": "Finish",
+      "sceneName": "startup",
+      "indent": 2,
+      "lineNumber": 11,
+      "position": 4
+    },
+    {
+      "lineNumber": 12,
+      "indent": 0,
+      "position": 0,
+      "sceneName": "startup",
+      "type": "SceneEnd"
+    }
+  ]
+]

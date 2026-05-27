@@ -1,0 +1,11 @@
+What do you do?
+*choice
+  #Fight the dragon.
+    You draw your sword!
+    *finish
+  #Run away.
+    You flee into the night.
+    *finish
+  #Try to talk.
+    The dragon listens.
+    *finish

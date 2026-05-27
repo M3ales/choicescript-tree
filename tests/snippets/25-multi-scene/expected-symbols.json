@@ -1,0 +1,105 @@
+[
+  {
+    "labels": {},
+    "globalVariables": {},
+    "tempVariables": {},
+    "checkpoints": {},
+    "gosubs": [],
+    "gotos": [],
+    "implicitControlFlow": []
+  },
+  {
+    "labels": {},
+    "globalVariables": {
+      "health": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "health",
+          "rawValue": "health",
+          "position": 8,
+          "lineNumber": 0,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 100,
+            "position": 15,
+            "lineNumber": 0,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 0,
+          "position": 0
+        }
+      }
+    },
+    "tempVariables": {},
+    "checkpoints": {},
+    "gosubs": [],
+    "gotos": [
+      {
+        "kind": "GotoScene",
+        "token": {
+          "type": "GotoScene",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 3,
+          "position": 0
+        },
+        "scene": {
+          "type": "Identifier",
+          "value": "tavern",
+          "rawValue": "tavern",
+          "position": 12,
+          "lineNumber": 3,
+          "sceneName": "startup",
+          "indent": 0,
+          "isSceneName": true,
+          "isLabelName": false
+        }
+      }
+    ],
+    "implicitControlFlow": []
+  },
+  {
+    "labels": {},
+    "globalVariables": {},
+    "tempVariables": {},
+    "checkpoints": {},
+    "gosubs": [],
+    "gotos": [
+      {
+        "kind": "GotoScene",
+        "token": {
+          "type": "GotoScene",
+          "sceneName": "tavern",
+          "indent": 2,
+          "lineNumber": 4,
+          "position": 4
+        },
+        "scene": {
+          "type": "Identifier",
+          "value": "market",
+          "rawValue": "market",
+          "position": 16,
+          "lineNumber": 4,
+          "sceneName": "tavern",
+          "indent": 2,
+          "isSceneName": true,
+          "isLabelName": false
+        }
+      }
+    ],
+    "implicitControlFlow": []
+  }
+]

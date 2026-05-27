@@ -1,0 +1,219 @@
+[
+  {
+    "name": "startup",
+    "statements": [
+      {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "gold",
+          "rawValue": "gold",
+          "position": 8,
+          "lineNumber": 0,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 100,
+            "position": 13,
+            "lineNumber": 0,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 0,
+          "position": 0
+        }
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 2,
+            "position": 0,
+            "indent": 0,
+            "content": "You check your inventory.\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 26,
+            "lineNumber": 2,
+            "position": 0,
+            "text": "You check your inventory.\n"
+          }
+        ]
+      },
+      {
+        "kind": "GoSub",
+        "token": {
+          "type": "GoSub",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 3,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "check_gold",
+          "rawValue": "check_gold",
+          "position": 7,
+          "lineNumber": 3,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        },
+        "args": []
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 4,
+            "position": 0,
+            "indent": 0,
+            "content": "Moving on.\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 11,
+            "lineNumber": 4,
+            "position": 0,
+            "text": "Moving on.\n"
+          }
+        ]
+      },
+      {
+        "kind": "Finish",
+        "token": {
+          "type": "Finish",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 5,
+          "position": 0
+        },
+        "buttonText": null
+      },
+      {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 7,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "check_gold",
+          "rawValue": "check_gold",
+          "position": 6,
+          "lineNumber": 7,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        }
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 8,
+            "position": 0,
+            "indent": 0,
+            "content": "You have "
+          },
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 8,
+            "position": 16,
+            "indent": 0,
+            "content": " gold.\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 9,
+            "lineNumber": 8,
+            "position": 0,
+            "text": "You have "
+          },
+          {
+            "kind": "Print",
+            "start": 0,
+            "end": 0,
+            "lineNumber": 8,
+            "position": 9,
+            "expression": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "gold",
+                "rawValue": "gold",
+                "position": 11,
+                "lineNumber": 8,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          },
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 7,
+            "lineNumber": 8,
+            "position": 16,
+            "text": " gold.\n"
+          }
+        ]
+      },
+      {
+        "kind": "Return",
+        "token": {
+          "type": "Return",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 9,
+          "position": 0
+        }
+      }
+    ],
+    "parseErrors": [],
+    "start": {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    "end": {
+      "type": "Return",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 9,
+      "position": 0
+    }
+  }
+]

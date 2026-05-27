@@ -1,0 +1,10 @@
+*create player_name ""
+*create player_age 0
+
+What is your name?
+*input_text player_name
+
+How old are you?
+*input_number player_age
+
+Welcome, ${player_name}!

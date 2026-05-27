@@ -1,0 +1,158 @@
+[
+  {
+    "sceneName": "startup",
+    "blocks": {
+      "startup:b_0": {
+        "exitType": "Choice"
+      },
+      "startup:b_1": {
+        "exitType": "ImplicitEnd"
+      },
+      "startup:b_2": {
+        "exitType": "Finish"
+      },
+      "startup:b_3": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_4": {
+        "exitType": "Finish"
+      },
+      "startup:b_5": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_6": {
+        "exitType": "Finish"
+      },
+      "startup:b_7": {
+        "exitType": "FallThrough"
+      }
+    },
+    "blockIndex": {
+      "startup:b_0": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:0",
+          "startup:1",
+          "startup:2",
+          "startup:14"
+        ],
+        "entryType": "SceneEntry",
+        "exitType": "Choice"
+      },
+      "startup:b_1": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "ImplicitEnd"
+      },
+      "startup:b_2": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:4",
+          "startup:5"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "Finish"
+      },
+      "startup:b_3": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "startup:b_4": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:8",
+          "startup:9"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "Finish"
+      },
+      "startup:b_5": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "startup:b_6": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:11",
+          "startup:12"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "Finish"
+      },
+      "startup:b_7": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      }
+    },
+    "edges": [
+      {
+        "kind": "SceneExit",
+        "sourceBlockId": "startup:b_2",
+        "targetBlockId": null,
+        "metadata": {}
+      },
+      {
+        "kind": "ChoiceOptionCheck",
+        "sourceBlockId": "startup:b_0",
+        "targetBlockId": "startup:b_2",
+        "metadata": {
+          "optionStatementId": "startup:6",
+          "conditionStatementId": "startup:6",
+          "choiceConditionKind": "selectable_if"
+        }
+      },
+      {
+        "kind": "SceneExit",
+        "sourceBlockId": "startup:b_4",
+        "targetBlockId": null,
+        "metadata": {}
+      },
+      {
+        "kind": "ChoiceOptionCheck",
+        "sourceBlockId": "startup:b_0",
+        "targetBlockId": "startup:b_4",
+        "metadata": {
+          "optionStatementId": "startup:10",
+          "conditionStatementId": "startup:10",
+          "choiceConditionKind": "selectable_if"
+        }
+      },
+      {
+        "kind": "SceneExit",
+        "sourceBlockId": "startup:b_6",
+        "targetBlockId": null,
+        "metadata": {}
+      },
+      {
+        "kind": "ChoiceOption",
+        "sourceBlockId": "startup:b_0",
+        "targetBlockId": "startup:b_6",
+        "metadata": {
+          "optionStatementId": "startup:13"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "startup:b_0",
+        "targetBlockId": "startup:b_1",
+        "metadata": {}
+      },
+      {
+        "kind": "SceneExit",
+        "sourceBlockId": "startup:b_1",
+        "targetBlockId": null,
+        "metadata": {}
+      }
+    ],
+    "entryBlockId": "startup:b_0",
+    "labelToBlockId": {},
+    "unresolvedEdges": []
+  }
+]

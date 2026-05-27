@@ -1,0 +1,18 @@
+*create a 1
+*create b 2
+*create c 3
+*create d 4
+
+*if (a = 1)
+  *if (b = 2)
+    *if (c = 3)
+      *if (d = 4)
+        All four match!
+      *else
+        D does not match.
+    *else
+      C does not match.
+  *else
+    B does not match.
+*else
+  A does not match.

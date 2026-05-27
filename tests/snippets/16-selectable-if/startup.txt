@@ -1,0 +1,14 @@
+*create strength 30
+*create magic 60
+
+Choose your approach:
+*choice
+  *selectable_if (strength >= 50) #Break down the door.
+    You smash through!
+    *finish
+  *selectable_if (magic >= 50) #Cast a spell.
+    You cast an opening spell.
+    *finish
+  #Pick the lock.
+    You pick the lock carefully.
+    *finish

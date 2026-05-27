@@ -1,0 +1,266 @@
+[
+  {
+    "name": "startup",
+    "statements": [
+      {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "strength",
+          "rawValue": "strength",
+          "position": 8,
+          "lineNumber": 0,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 50,
+            "position": 17,
+            "lineNumber": 0,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 0,
+          "position": 0
+        }
+      },
+      {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "charm",
+          "rawValue": "charm",
+          "position": 8,
+          "lineNumber": 1,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 30,
+            "position": 14,
+            "lineNumber": 1,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 1,
+          "position": 0
+        }
+      },
+      {
+        "kind": "If",
+        "token": {
+          "type": "If",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 3,
+          "position": 0
+        },
+        "body": [
+          {
+            "content": [
+              {
+                "type": "Prose",
+                "sceneName": "startup",
+                "lineNumber": 4,
+                "position": 2,
+                "indent": 1,
+                "content": "You are strong.\n"
+              }
+            ],
+            "kind": "Prose",
+            "parsedSegments": [
+              {
+                "kind": "Text",
+                "start": 0,
+                "end": 16,
+                "lineNumber": 4,
+                "position": 2,
+                "text": "You are strong.\n"
+              }
+            ]
+          }
+        ],
+        "expression": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Binary",
+            "left": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "strength",
+                "rawValue": "strength",
+                "position": 5,
+                "lineNumber": 3,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "operator": {
+              "type": "GreaterThanOperator",
+              "rawValue": ">",
+              "position": 14,
+              "lineNumber": 3,
+              "sceneName": "startup",
+              "indent": 0
+            },
+            "right": {
+              "kind": "Literal",
+              "value": {
+                "type": "NumberLiteral",
+                "value": 40,
+                "position": 16,
+                "lineNumber": 3,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          }
+        },
+        "elseBranch": {
+          "kind": "Else",
+          "token": {
+            "type": "Else",
+            "sceneName": "startup",
+            "indent": 0,
+            "lineNumber": 7,
+            "position": 0
+          },
+          "body": [
+            {
+              "content": [
+                {
+                  "type": "Prose",
+                  "sceneName": "startup",
+                  "lineNumber": 8,
+                  "position": 2,
+                  "indent": 1,
+                  "content": "You are average.\n\n"
+                }
+              ],
+              "kind": "Prose",
+              "parsedSegments": [
+                {
+                  "kind": "Text",
+                  "start": 0,
+                  "end": 18,
+                  "lineNumber": 8,
+                  "position": 2,
+                  "text": "You are average.\n\n"
+                }
+              ]
+            }
+          ]
+        },
+        "elseIfBranches": [
+          {
+            "kind": "ElseIf",
+            "token": {
+              "type": "ElseIf",
+              "sceneName": "startup",
+              "indent": 0,
+              "lineNumber": 5,
+              "position": 0
+            },
+            "body": [
+              {
+                "content": [
+                  {
+                    "type": "Prose",
+                    "sceneName": "startup",
+                    "lineNumber": 6,
+                    "position": 2,
+                    "indent": 1,
+                    "content": "You are charming.\n"
+                  }
+                ],
+                "kind": "Prose",
+                "parsedSegments": [
+                  {
+                    "kind": "Text",
+                    "start": 0,
+                    "end": 18,
+                    "lineNumber": 6,
+                    "position": 2,
+                    "text": "You are charming.\n"
+                  }
+                ]
+              }
+            ],
+            "expression": {
+              "kind": "Grouping",
+              "expression": {
+                "kind": "Binary",
+                "left": {
+                  "kind": "Identifier",
+                  "token": {
+                    "type": "Identifier",
+                    "value": "charm",
+                    "rawValue": "charm",
+                    "position": 9,
+                    "lineNumber": 5,
+                    "sceneName": "startup",
+                    "indent": 0
+                  }
+                },
+                "operator": {
+                  "type": "GreaterThanOperator",
+                  "rawValue": ">",
+                  "position": 15,
+                  "lineNumber": 5,
+                  "sceneName": "startup",
+                  "indent": 0
+                },
+                "right": {
+                  "kind": "Literal",
+                  "value": {
+                    "type": "NumberLiteral",
+                    "value": 25,
+                    "position": 17,
+                    "lineNumber": 5,
+                    "sceneName": "startup",
+                    "indent": 0
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "parseErrors": [],
+    "start": {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    "end": {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 8,
+      "position": 2,
+      "indent": 1,
+      "content": "You are average.\n\n"
+    }
+  }
+]

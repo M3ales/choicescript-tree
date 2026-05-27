@@ -1,0 +1,272 @@
+[
+  {
+    "name": "startup",
+    "statements": [
+      {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 0,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "talk",
+          "rawValue": "talk",
+          "position": 6,
+          "lineNumber": 0,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        }
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 1,
+            "position": 0,
+            "indent": 0,
+            "content": "Who do you talk to?\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 20,
+            "lineNumber": 1,
+            "position": 0,
+            "text": "Who do you talk to?\n"
+          }
+        ]
+      },
+      {
+        "kind": "Choice",
+        "token": {
+          "type": "Choice",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 2,
+          "position": 0
+        },
+        "body": [
+          {
+            "kind": "ChoiceOption",
+            "token": {
+              "type": "ChoiceOption",
+              "sceneName": "startup",
+              "indent": 1,
+              "lineNumber": 3,
+              "rawText": "Talk to the guard.",
+              "hasMultiReplace": false
+            },
+            "body": [
+              {
+                "content": [
+                  {
+                    "type": "Prose",
+                    "sceneName": "startup",
+                    "lineNumber": 4,
+                    "position": 4,
+                    "indent": 2,
+                    "content": "The guard shares rumors.\n"
+                  }
+                ],
+                "kind": "Prose",
+                "parsedSegments": [
+                  {
+                    "kind": "Text",
+                    "start": 0,
+                    "end": 25,
+                    "lineNumber": 4,
+                    "position": 4,
+                    "text": "The guard shares rumors.\n"
+                  }
+                ]
+              },
+              {
+                "kind": "GotoLabel",
+                "token": {
+                  "type": "GotoLabel",
+                  "sceneName": "startup",
+                  "indent": 2,
+                  "lineNumber": 5,
+                  "position": 4
+                },
+                "label": {
+                  "type": "Identifier",
+                  "value": "talk",
+                  "rawValue": "talk",
+                  "position": 10,
+                  "lineNumber": 5,
+                  "sceneName": "startup",
+                  "indent": 2,
+                  "isLabelName": true
+                }
+              }
+            ],
+            "parsedSegments": [
+              {
+                "kind": "Text",
+                "start": 0,
+                "end": 18,
+                "lineNumber": 3,
+                "position": null,
+                "text": "Talk to the guard."
+              }
+            ],
+            "reuse": "disable_reuse",
+            "selectableIf": null
+          },
+          {
+            "kind": "ChoiceOption",
+            "token": {
+              "type": "ChoiceOption",
+              "sceneName": "startup",
+              "indent": 1,
+              "lineNumber": 6,
+              "rawText": "Talk to the merchant.",
+              "hasMultiReplace": false
+            },
+            "body": [
+              {
+                "content": [
+                  {
+                    "type": "Prose",
+                    "sceneName": "startup",
+                    "lineNumber": 7,
+                    "position": 4,
+                    "indent": 2,
+                    "content": "The merchant offers wares.\n"
+                  }
+                ],
+                "kind": "Prose",
+                "parsedSegments": [
+                  {
+                    "kind": "Text",
+                    "start": 0,
+                    "end": 27,
+                    "lineNumber": 7,
+                    "position": 4,
+                    "text": "The merchant offers wares.\n"
+                  }
+                ]
+              },
+              {
+                "kind": "GotoLabel",
+                "token": {
+                  "type": "GotoLabel",
+                  "sceneName": "startup",
+                  "indent": 2,
+                  "lineNumber": 8,
+                  "position": 4
+                },
+                "label": {
+                  "type": "Identifier",
+                  "value": "talk",
+                  "rawValue": "talk",
+                  "position": 10,
+                  "lineNumber": 8,
+                  "sceneName": "startup",
+                  "indent": 2,
+                  "isLabelName": true
+                }
+              }
+            ],
+            "parsedSegments": [
+              {
+                "kind": "Text",
+                "start": 0,
+                "end": 21,
+                "lineNumber": 6,
+                "position": null,
+                "text": "Talk to the merchant."
+              }
+            ],
+            "reuse": "disable_reuse",
+            "selectableIf": null
+          },
+          {
+            "kind": "ChoiceOption",
+            "token": {
+              "type": "ChoiceOption",
+              "sceneName": "startup",
+              "indent": 1,
+              "lineNumber": 9,
+              "rawText": "Walk away.",
+              "hasMultiReplace": false
+            },
+            "body": [
+              {
+                "content": [
+                  {
+                    "type": "Prose",
+                    "sceneName": "startup",
+                    "lineNumber": 10,
+                    "position": 4,
+                    "indent": 2,
+                    "content": "You walk away.\n"
+                  }
+                ],
+                "kind": "Prose",
+                "parsedSegments": [
+                  {
+                    "kind": "Text",
+                    "start": 0,
+                    "end": 15,
+                    "lineNumber": 10,
+                    "position": 4,
+                    "text": "You walk away.\n"
+                  }
+                ]
+              },
+              {
+                "kind": "Finish",
+                "token": {
+                  "type": "Finish",
+                  "sceneName": "startup",
+                  "indent": 2,
+                  "lineNumber": 11,
+                  "position": 4
+                },
+                "buttonText": null
+              }
+            ],
+            "parsedSegments": [
+              {
+                "kind": "Text",
+                "start": 0,
+                "end": 10,
+                "lineNumber": 9,
+                "position": null,
+                "text": "Walk away."
+              }
+            ],
+            "reuse": null,
+            "selectableIf": null
+          }
+        ]
+      }
+    ],
+    "parseErrors": [],
+    "start": {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    "end": {
+      "type": "Finish",
+      "sceneName": "startup",
+      "indent": 2,
+      "lineNumber": 11,
+      "position": 4
+    }
+  }
+]

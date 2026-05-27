@@ -1,0 +1,7 @@
+*scene_list
+  startup
+  chapter1
+  chapter2
+  ending
+
+Welcome to the game.

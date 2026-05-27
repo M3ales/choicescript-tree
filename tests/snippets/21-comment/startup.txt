@@ -1,0 +1,10 @@
+*comment This is a single line comment.
+
+Some prose here.
+
+*comment
+  This is a multi-line
+  comment block that should
+  be ignored by the game.
+
+More prose after the comment.

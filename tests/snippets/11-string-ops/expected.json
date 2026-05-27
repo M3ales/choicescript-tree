@@ -1,0 +1,321 @@
+[
+  {
+    "name": "startup",
+    "statements": [
+      {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "first_name",
+          "rawValue": "first_name",
+          "position": 8,
+          "lineNumber": 0,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "StringLiteral",
+            "value": "John",
+            "position": 19,
+            "lineNumber": 0,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 0,
+          "position": 0
+        }
+      },
+      {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "last_name",
+          "rawValue": "last_name",
+          "position": 8,
+          "lineNumber": 1,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "StringLiteral",
+            "value": "Smith",
+            "position": 18,
+            "lineNumber": 1,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 1,
+          "position": 0
+        }
+      },
+      {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "full_name",
+          "rawValue": "full_name",
+          "position": 8,
+          "lineNumber": 2,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "StringLiteral",
+            "value": "",
+            "position": 18,
+            "lineNumber": 2,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 2,
+          "position": 0
+        }
+      },
+      {
+        "content": [],
+        "kind": "Comment"
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "full_name",
+            "rawValue": "full_name",
+            "position": 5,
+            "lineNumber": 5,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "assignment": {
+          "kind": "Binary",
+          "left": {
+            "kind": "Grouping",
+            "expression": {
+              "kind": "Binary",
+              "left": {
+                "kind": "Identifier",
+                "token": {
+                  "type": "Identifier",
+                  "value": "first_name",
+                  "rawValue": "first_name",
+                  "position": 16,
+                  "lineNumber": 5,
+                  "sceneName": "startup",
+                  "indent": 0
+                }
+              },
+              "operator": {
+                "type": "ConcatenationOperator",
+                "rawValue": "&",
+                "position": 26,
+                "lineNumber": 5,
+                "sceneName": "startup",
+                "indent": 0
+              },
+              "right": {
+                "kind": "Literal",
+                "value": {
+                  "type": "StringLiteral",
+                  "value": " ",
+                  "position": 28,
+                  "lineNumber": 5,
+                  "sceneName": "startup",
+                  "indent": 0
+                }
+              }
+            }
+          },
+          "operator": {
+            "type": "ConcatenationOperator",
+            "rawValue": "&",
+            "position": 32,
+            "lineNumber": 5,
+            "sceneName": "startup",
+            "indent": 0
+          },
+          "right": {
+            "kind": "Identifier",
+            "token": {
+              "type": "Identifier",
+              "value": "last_name",
+              "rawValue": "last_name",
+              "position": 33,
+              "lineNumber": 5,
+              "sceneName": "startup",
+              "indent": 0
+            }
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 5,
+          "position": 0
+        }
+      },
+      {
+        "content": [],
+        "kind": "Comment"
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "full_name",
+            "rawValue": "full_name",
+            "position": 5,
+            "lineNumber": 8,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "assignment": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Binary",
+            "left": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "first_name",
+                "rawValue": "first_name",
+                "position": 16,
+                "lineNumber": 8,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "operator": {
+              "type": "ConcatenationOperator",
+              "rawValue": "&",
+              "position": 26,
+              "lineNumber": 8,
+              "sceneName": "startup",
+              "indent": 0
+            },
+            "right": {
+              "kind": "Binary",
+              "left": {
+                "kind": "Literal",
+                "value": {
+                  "type": "StringLiteral",
+                  "value": " ",
+                  "position": 27,
+                  "lineNumber": 8,
+                  "sceneName": "startup",
+                  "indent": 0
+                }
+              },
+              "operator": {
+                "type": "ConcatenationOperator",
+                "rawValue": "&",
+                "position": 30,
+                "lineNumber": 8,
+                "sceneName": "startup",
+                "indent": 0
+              },
+              "right": {
+                "kind": "Identifier",
+                "token": {
+                  "type": "Identifier",
+                  "value": "last_name",
+                  "rawValue": "last_name",
+                  "position": 31,
+                  "lineNumber": 8,
+                  "sceneName": "startup",
+                  "indent": 0
+                }
+              }
+            }
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 8,
+          "position": 0
+        }
+      }
+    ],
+    "parseErrors": [
+      {
+        "token": {
+          "type": "ConcatenationOperator",
+          "rawValue": "&",
+          "position": 30,
+          "lineNumber": 8,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "message": "Concatenation (&) is strictly binary — use parentheses to group multiple concatenations at 'ConcatenationOperator' startup:8:30[Indent 0, Id: 27]",
+        "context": [
+          {
+            "kind": "Scene 'startup'",
+            "token": {
+              "sceneName": "startup",
+              "lineNumber": 0,
+              "position": 0,
+              "indent": 0,
+              "type": "SceneStart"
+            }
+          },
+          {
+            "kind": "SetVariable",
+            "token": {
+              "type": "SetVariable",
+              "sceneName": "startup",
+              "indent": 0,
+              "lineNumber": 8,
+              "position": 0
+            }
+          }
+        ]
+      }
+    ],
+    "start": {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    "end": {
+      "type": "CloseParenthesis",
+      "position": 40,
+      "lineNumber": 8,
+      "sceneName": "startup",
+      "indent": 0
+    }
+  }
+]

@@ -1,0 +1,75 @@
+*temp browsing true
+*temp selected_item ""
+*temp selected_cost 0
+
+The shopkeeper greets you warmly. "Welcome! Browse my wares."
+
+*label shop_hub
+
+*if items_bought >= 3
+  "You're one of my best customers!" the shopkeeper beams.
+
+What catches your eye?
+
+*choice
+  *selectable_if (gold >= 30) #Sword of Valor (30 gold)
+    *set selected_item "Sword of Valor"
+    *set selected_cost 30
+    *gosub confirm_purchase
+    *if browsing
+      *goto shop_hub
+    *goto shop_exit
+  *selectable_if (gold >= 20) #Shield of Faith (20 gold)
+    *set selected_item "Shield of Faith"
+    *set selected_cost 20
+    *gosub confirm_purchase
+    *if browsing
+      *goto shop_hub
+    *goto shop_exit
+  *selectable_if (gold >= 15) #Charm Amulet (15 gold)
+    *set selected_item "Charm Amulet"
+    *set selected_cost 15
+    *gosub confirm_purchase
+    *if browsing
+      *goto shop_hub
+    *goto shop_exit
+  *selectable_if (gold >= 10) #Health Potion (10 gold)
+    *set selected_item "Health Potion"
+    *set selected_cost 10
+    *gosub confirm_purchase
+    *if browsing
+      *goto shop_hub
+    *goto shop_exit
+  #Leave the shop
+    *goto shop_exit
+
+*label shop_exit
+"Come again!" calls the shopkeeper as you leave.
+*goto_scene startup village_hub
+
+*label confirm_purchase
+You pick up the ${selected_item}. It costs ${selected_cost} gold. You have ${gold} gold.
+
+*choice
+  #Yes, buy it
+    *set gold - selected_cost
+    *set items_bought + 1
+    *if selected_item = "Sword of Valor"
+      *set strength + 15
+    *if selected_item = "Shield of Faith"
+      *set strength + 10
+    *if selected_item = "Charm Amulet"
+      *set charm + 15
+    You bought the ${selected_item}!
+    *goto confirm_continue
+  #No, put it back
+    You set the ${selected_item} back on the shelf.
+    *goto confirm_continue
+
+*label confirm_continue
+*choice
+  #Keep browsing
+    *return
+  #Leave the shop
+    *set browsing false
+    *return

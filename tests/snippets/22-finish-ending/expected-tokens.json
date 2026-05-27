@@ -1,0 +1,134 @@
+[
+  [
+    {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "content": "The final battle is upon you.\n"
+    },
+    {
+      "type": "Choice",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 1,
+      "position": 0
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 2,
+      "rawText": "Fight to the end.",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 2,
+      "position": null,
+      "indent": 1,
+      "content": "Fight to the end."
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 3,
+      "position": 4,
+      "indent": 2,
+      "content": "You fight valiantly.\n"
+    },
+    {
+      "type": "Ending",
+      "sceneName": "startup",
+      "indent": 2,
+      "lineNumber": 4,
+      "position": 4
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 4,
+      "position": 11,
+      "indent": 2,
+      "content": "Victory!"
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 5,
+      "rawText": "Surrender.",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 5,
+      "position": null,
+      "indent": 1,
+      "content": "Surrender."
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 6,
+      "position": 4,
+      "indent": 2,
+      "content": "You lay down your arms.\n"
+    },
+    {
+      "type": "Finish",
+      "sceneName": "startup",
+      "indent": 2,
+      "lineNumber": 7,
+      "position": 4
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 8,
+      "rawText": "Negotiate peace.",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 8,
+      "position": null,
+      "indent": 1,
+      "content": "Negotiate peace."
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 9,
+      "position": 4,
+      "indent": 2,
+      "content": "You broker a deal.\n"
+    },
+    {
+      "type": "Finish",
+      "sceneName": "startup",
+      "indent": 2,
+      "lineNumber": 10,
+      "position": 4
+    },
+    {
+      "lineNumber": 11,
+      "indent": 0,
+      "position": 0,
+      "sceneName": "startup",
+      "type": "SceneEnd"
+    }
+  ]
+]

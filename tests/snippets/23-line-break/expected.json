@@ -1,0 +1,88 @@
+[
+  {
+    "name": "startup",
+    "statements": [
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 0,
+            "position": 0,
+            "indent": 0,
+            "content": "First line of text.\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 20,
+            "lineNumber": 0,
+            "position": 0,
+            "text": "First line of text.\n"
+          }
+        ]
+      },
+      {
+        "kind": "LineBreak",
+        "token": {
+          "type": "LineBreak",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 1,
+          "position": 0
+        }
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 2,
+            "position": 0,
+            "indent": 0,
+            "content": "Second line of text.\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 21,
+            "lineNumber": 2,
+            "position": 0,
+            "text": "Second line of text.\n"
+          }
+        ]
+      },
+      {
+        "kind": "LineBreak",
+        "token": {
+          "type": "LineBreak",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 3,
+          "position": 0
+        }
+      }
+    ],
+    "parseErrors": [],
+    "start": {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    "end": {
+      "type": "LineBreak",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 3,
+      "position": 0
+    }
+  }
+]

@@ -1,0 +1,9 @@
+You stand at a crossroads.
+*goto start_adventure
+
+*label start_adventure
+The adventure begins!
+*goto the_end
+
+*label the_end
+The end.

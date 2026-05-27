@@ -1,0 +1,105 @@
+[
+  [
+    {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "content": "The door opens before you.\n"
+    },
+    {
+      "type": "FakeChoice",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 1,
+      "position": 0
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 2,
+      "rawText": "Enter boldly.",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 2,
+      "position": null,
+      "indent": 1,
+      "content": "Enter boldly."
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 3,
+      "position": 4,
+      "indent": 2,
+      "content": "You stride in.\n"
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 4,
+      "rawText": "Sneak inside.",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 4,
+      "position": null,
+      "indent": 1,
+      "content": "Sneak inside."
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 5,
+      "position": 4,
+      "indent": 2,
+      "content": "You creep through the door.\n"
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 6,
+      "rawText": "Knock first.",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 6,
+      "position": null,
+      "indent": 1,
+      "content": "Knock first."
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 7,
+      "position": 4,
+      "indent": 2,
+      "content": "You knock politely.\n\n"
+    },
+    {
+      "lineNumber": 10,
+      "indent": 0,
+      "position": 0,
+      "sceneName": "startup",
+      "type": "SceneEnd"
+    }
+  ]
+]

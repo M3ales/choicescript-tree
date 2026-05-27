@@ -1,0 +1,5725 @@
+[
+  [
+    {
+      "sceneName": "arena",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "arena",
+      "indent": 0,
+      "lineNumber": 0,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "fight_round",
+      "rawValue": "fight_round",
+      "position": 6,
+      "lineNumber": 0,
+      "sceneName": "arena",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 18,
+      "lineNumber": 0,
+      "sceneName": "arena",
+      "indent": 0
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "arena",
+      "indent": 0,
+      "lineNumber": 1,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "opponent_hp",
+      "rawValue": "opponent_hp",
+      "position": 6,
+      "lineNumber": 1,
+      "sceneName": "arena",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 100,
+      "position": 18,
+      "lineNumber": 1,
+      "sceneName": "arena",
+      "indent": 0
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "arena",
+      "indent": 0,
+      "lineNumber": 2,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "player_hp",
+      "rawValue": "player_hp",
+      "position": 6,
+      "lineNumber": 2,
+      "sceneName": "arena",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 100,
+      "position": 16,
+      "lineNumber": 2,
+      "sceneName": "arena",
+      "indent": 0
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "arena",
+      "indent": 0,
+      "lineNumber": 3,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "fighting",
+      "rawValue": "fighting",
+      "position": 6,
+      "lineNumber": 3,
+      "sceneName": "arena",
+      "indent": 0
+    },
+    {
+      "type": "BooleanLiteral",
+      "value": true,
+      "position": 15,
+      "lineNumber": 3,
+      "sceneName": "arena",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "arena",
+      "lineNumber": 5,
+      "position": 0,
+      "indent": 0,
+      "content": "The arena roars with spectators. A scarred warrior faces you across the sand.\n\n\"Fight well, outsider.\"\n\n"
+    },
+    {
+      "type": "Label",
+      "sceneName": "arena",
+      "indent": 0,
+      "lineNumber": 9,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "combat_loop",
+      "rawValue": "combat_loop",
+      "position": 6,
+      "lineNumber": 9,
+      "sceneName": "arena",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "arena",
+      "indent": 0,
+      "lineNumber": 10,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "fight_round",
+      "rawValue": "fight_round",
+      "position": 5,
+      "lineNumber": 10,
+      "sceneName": "arena",
+      "indent": 0
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 17,
+      "lineNumber": 10,
+      "sceneName": "arena",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 1,
+      "position": 19,
+      "lineNumber": 10,
+      "sceneName": "arena",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "arena",
+      "lineNumber": 12,
+      "position": 0,
+      "indent": 0,
+      "content": "Round "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "arena",
+      "lineNumber": 12,
+      "position": 6,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "fight_round",
+      "rawValue": "fight_round",
+      "position": 8,
+      "lineNumber": 12,
+      "sceneName": "arena",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "arena",
+      "lineNumber": 12,
+      "position": 19,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "arena",
+      "lineNumber": 12,
+      "position": 20,
+      "indent": 0,
+      "content": ". Your HP: "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "arena",
+      "lineNumber": 12,
+      "position": 31,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "player_hp",
+      "rawValue": "player_hp",
+      "position": 33,
+      "lineNumber": 12,
+      "sceneName": "arena",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "arena",
+      "lineNumber": 12,
+      "position": 42,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "arena",
+      "lineNumber": 12,
+      "position": 43,
+      "indent": 0,
+      "content": ". Opponent HP: "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "arena",
+      "lineNumber": 12,
+      "position": 58,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "opponent_hp",
+      "rawValue": "opponent_hp",
+      "position": 60,
+      "lineNumber": 12,
+      "sceneName": "arena",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "arena",
+      "lineNumber": 12,
+      "position": 71,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "arena",
+      "lineNumber": 12,
+      "position": 72,
+      "indent": 0,
+      "content": ".\n\n"
+    },
+    {
+      "type": "If",
+      "sceneName": "arena",
+      "indent": 0,
+      "lineNumber": 14,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "opponent_hp",
+      "rawValue": "opponent_hp",
+      "position": 4,
+      "lineNumber": 14,
+      "sceneName": "arena",
+      "indent": 0
+    },
+    {
+      "type": "LessThanEqualsOperator",
+      "rawValue": "<=",
+      "position": 16,
+      "lineNumber": 14,
+      "sceneName": "arena",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 19,
+      "lineNumber": 14,
+      "sceneName": "arena",
+      "indent": 0
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "arena",
+      "indent": 1,
+      "lineNumber": 15,
+      "position": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "victory",
+      "rawValue": "victory",
+      "position": 8,
+      "lineNumber": 15,
+      "sceneName": "arena",
+      "indent": 1,
+      "isLabelName": true
+    },
+    {
+      "type": "If",
+      "sceneName": "arena",
+      "indent": 0,
+      "lineNumber": 16,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "player_hp",
+      "rawValue": "player_hp",
+      "position": 4,
+      "lineNumber": 16,
+      "sceneName": "arena",
+      "indent": 0
+    },
+    {
+      "type": "LessThanEqualsOperator",
+      "rawValue": "<=",
+      "position": 14,
+      "lineNumber": 16,
+      "sceneName": "arena",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 17,
+      "lineNumber": 16,
+      "sceneName": "arena",
+      "indent": 0
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "arena",
+      "indent": 1,
+      "lineNumber": 17,
+      "position": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "defeat",
+      "rawValue": "defeat",
+      "position": 8,
+      "lineNumber": 17,
+      "sceneName": "arena",
+      "indent": 1,
+      "isLabelName": true
+    },
+    {
+      "type": "If",
+      "sceneName": "arena",
+      "indent": 0,
+      "lineNumber": 18,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "fight_round",
+      "rawValue": "fight_round",
+      "position": 4,
+      "lineNumber": 18,
+      "sceneName": "arena",
+      "indent": 0
+    },
+    {
+      "type": "GreaterThanOperator",
+      "rawValue": ">",
+      "position": 16,
+      "lineNumber": 18,
+      "sceneName": "arena",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 10,
+      "position": 18,
+      "lineNumber": 18,
+      "sceneName": "arena",
+      "indent": 0
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "arena",
+      "indent": 1,
+      "lineNumber": 19,
+      "position": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "draw",
+      "rawValue": "draw",
+      "position": 8,
+      "lineNumber": 19,
+      "sceneName": "arena",
+      "indent": 1,
+      "isLabelName": true
+    },
+    {
+      "type": "Choice",
+      "sceneName": "arena",
+      "indent": 0,
+      "lineNumber": 21,
+      "position": 0
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "arena",
+      "indent": 1,
+      "lineNumber": 22,
+      "rawText": "Attack with full force",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "arena",
+      "lineNumber": 22,
+      "position": null,
+      "indent": 1,
+      "content": "Attack with full force"
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "arena",
+      "indent": 2,
+      "lineNumber": 23,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "damage",
+      "rawValue": "damage",
+      "position": 10,
+      "lineNumber": 23,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 17,
+      "lineNumber": 23,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "GenerateRandom",
+      "sceneName": "arena",
+      "indent": 2,
+      "lineNumber": 24,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "damage",
+      "rawValue": "damage",
+      "position": 10,
+      "lineNumber": 24,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 15,
+      "position": 17,
+      "lineNumber": 24,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 30,
+      "position": 20,
+      "lineNumber": 24,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "arena",
+      "indent": 2,
+      "lineNumber": 25,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "opponent_hp",
+      "rawValue": "opponent_hp",
+      "position": 9,
+      "lineNumber": 25,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "SubtractionOperator",
+      "rawValue": "-",
+      "position": 21,
+      "lineNumber": 25,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "damage",
+      "rawValue": "damage",
+      "position": 23,
+      "lineNumber": 25,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "arena",
+      "lineNumber": 26,
+      "position": 4,
+      "indent": 2,
+      "content": "You strike hard for "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "arena",
+      "lineNumber": 26,
+      "position": 24,
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "damage",
+      "rawValue": "damage",
+      "position": 26,
+      "lineNumber": 26,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "arena",
+      "lineNumber": 26,
+      "position": 32,
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "arena",
+      "lineNumber": 26,
+      "position": 33,
+      "indent": 2,
+      "content": " damage!\n"
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "arena",
+      "indent": 2,
+      "lineNumber": 27,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "counter_damage",
+      "rawValue": "counter_damage",
+      "position": 10,
+      "lineNumber": 27,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 25,
+      "lineNumber": 27,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "GenerateRandom",
+      "sceneName": "arena",
+      "indent": 2,
+      "lineNumber": 28,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "counter_damage",
+      "rawValue": "counter_damage",
+      "position": 10,
+      "lineNumber": 28,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 10,
+      "position": 25,
+      "lineNumber": 28,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 25,
+      "position": 28,
+      "lineNumber": 28,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "arena",
+      "indent": 2,
+      "lineNumber": 29,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "player_hp",
+      "rawValue": "player_hp",
+      "position": 9,
+      "lineNumber": 29,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "SubtractionOperator",
+      "rawValue": "-",
+      "position": 19,
+      "lineNumber": 29,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "counter_damage",
+      "rawValue": "counter_damage",
+      "position": 21,
+      "lineNumber": 29,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "arena",
+      "lineNumber": 30,
+      "position": 4,
+      "indent": 2,
+      "content": "The opponent counters for "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "arena",
+      "lineNumber": 30,
+      "position": 30,
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "counter_damage",
+      "rawValue": "counter_damage",
+      "position": 32,
+      "lineNumber": 30,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "arena",
+      "lineNumber": 30,
+      "position": 46,
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "arena",
+      "lineNumber": 30,
+      "position": 47,
+      "indent": 2,
+      "content": "!\n"
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "arena",
+      "indent": 2,
+      "lineNumber": 31,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "combat_loop",
+      "rawValue": "combat_loop",
+      "position": 10,
+      "lineNumber": 31,
+      "sceneName": "arena",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "arena",
+      "indent": 1,
+      "lineNumber": 32,
+      "rawText": "Defensive stance",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "arena",
+      "lineNumber": 32,
+      "position": null,
+      "indent": 1,
+      "content": "Defensive stance"
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "arena",
+      "indent": 2,
+      "lineNumber": 33,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "damage",
+      "rawValue": "damage",
+      "position": 10,
+      "lineNumber": 33,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 17,
+      "lineNumber": 33,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "GenerateRandom",
+      "sceneName": "arena",
+      "indent": 2,
+      "lineNumber": 34,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "damage",
+      "rawValue": "damage",
+      "position": 10,
+      "lineNumber": 34,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 5,
+      "position": 17,
+      "lineNumber": 34,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 15,
+      "position": 19,
+      "lineNumber": 34,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "arena",
+      "indent": 2,
+      "lineNumber": 35,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "opponent_hp",
+      "rawValue": "opponent_hp",
+      "position": 9,
+      "lineNumber": 35,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "SubtractionOperator",
+      "rawValue": "-",
+      "position": 21,
+      "lineNumber": 35,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "damage",
+      "rawValue": "damage",
+      "position": 23,
+      "lineNumber": 35,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "arena",
+      "lineNumber": 36,
+      "position": 4,
+      "indent": 2,
+      "content": "You fight cautiously, dealing "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "arena",
+      "lineNumber": 36,
+      "position": 34,
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "damage",
+      "rawValue": "damage",
+      "position": 36,
+      "lineNumber": 36,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "arena",
+      "lineNumber": 36,
+      "position": 42,
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "arena",
+      "lineNumber": 36,
+      "position": 43,
+      "indent": 2,
+      "content": " damage.\n"
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "arena",
+      "indent": 2,
+      "lineNumber": 37,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "counter_damage",
+      "rawValue": "counter_damage",
+      "position": 10,
+      "lineNumber": 37,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 25,
+      "lineNumber": 37,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "GenerateRandom",
+      "sceneName": "arena",
+      "indent": 2,
+      "lineNumber": 38,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "counter_damage",
+      "rawValue": "counter_damage",
+      "position": 10,
+      "lineNumber": 38,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 5,
+      "position": 25,
+      "lineNumber": 38,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 15,
+      "position": 27,
+      "lineNumber": 38,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "arena",
+      "indent": 2,
+      "lineNumber": 39,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "player_hp",
+      "rawValue": "player_hp",
+      "position": 9,
+      "lineNumber": 39,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "SubtractionOperator",
+      "rawValue": "-",
+      "position": 19,
+      "lineNumber": 39,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "counter_damage",
+      "rawValue": "counter_damage",
+      "position": 21,
+      "lineNumber": 39,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "arena",
+      "lineNumber": 40,
+      "position": 4,
+      "indent": 2,
+      "content": "The opponent hits for "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "arena",
+      "lineNumber": 40,
+      "position": 26,
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "counter_damage",
+      "rawValue": "counter_damage",
+      "position": 28,
+      "lineNumber": 40,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "arena",
+      "lineNumber": 40,
+      "position": 42,
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "arena",
+      "lineNumber": 40,
+      "position": 43,
+      "indent": 2,
+      "content": ", but your guard softens the blow.\n"
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "arena",
+      "indent": 2,
+      "lineNumber": 41,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "combat_loop",
+      "rawValue": "combat_loop",
+      "position": 10,
+      "lineNumber": 41,
+      "sceneName": "arena",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "SelectableIf",
+      "sceneName": "arena",
+      "indent": 1,
+      "lineNumber": 42,
+      "position": 2
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 17,
+      "lineNumber": 42,
+      "sceneName": "arena",
+      "indent": 1
+    },
+    {
+      "type": "Identifier",
+      "value": "charm",
+      "rawValue": "charm",
+      "position": 18,
+      "lineNumber": 42,
+      "sceneName": "arena",
+      "indent": 1
+    },
+    {
+      "type": "GreaterThanEqualsOperator",
+      "rawValue": ">=",
+      "position": 24,
+      "lineNumber": 42,
+      "sceneName": "arena",
+      "indent": 1
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 60,
+      "position": 27,
+      "lineNumber": 42,
+      "sceneName": "arena",
+      "indent": 1
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 29,
+      "lineNumber": 42,
+      "sceneName": "arena",
+      "indent": 1
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "arena",
+      "indent": 1,
+      "lineNumber": 42,
+      "position": 16,
+      "rawText": "Taunt the opponent",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "arena",
+      "lineNumber": 42,
+      "position": 17,
+      "indent": 1,
+      "content": "Taunt the opponent"
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "arena",
+      "indent": 2,
+      "lineNumber": 43,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "damage",
+      "rawValue": "damage",
+      "position": 10,
+      "lineNumber": 43,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 17,
+      "lineNumber": 43,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "GenerateRandom",
+      "sceneName": "arena",
+      "indent": 2,
+      "lineNumber": 44,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "damage",
+      "rawValue": "damage",
+      "position": 10,
+      "lineNumber": 44,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 20,
+      "position": 17,
+      "lineNumber": 44,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 35,
+      "position": 20,
+      "lineNumber": 44,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "arena",
+      "indent": 2,
+      "lineNumber": 45,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "opponent_hp",
+      "rawValue": "opponent_hp",
+      "position": 9,
+      "lineNumber": 45,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "SubtractionOperator",
+      "rawValue": "-",
+      "position": 21,
+      "lineNumber": 45,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "damage",
+      "rawValue": "damage",
+      "position": 23,
+      "lineNumber": 45,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "arena",
+      "lineNumber": 46,
+      "position": 4,
+      "indent": 2,
+      "content": "Your taunt enrages the opponent, creating an opening! "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "arena",
+      "lineNumber": 46,
+      "position": 58,
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "damage",
+      "rawValue": "damage",
+      "position": 60,
+      "lineNumber": 46,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "arena",
+      "lineNumber": 46,
+      "position": 66,
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "arena",
+      "lineNumber": 46,
+      "position": 67,
+      "indent": 2,
+      "content": " damage!\n"
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "arena",
+      "indent": 2,
+      "lineNumber": 47,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "counter_damage",
+      "rawValue": "counter_damage",
+      "position": 10,
+      "lineNumber": 47,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 25,
+      "lineNumber": 47,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "GenerateRandom",
+      "sceneName": "arena",
+      "indent": 2,
+      "lineNumber": 48,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "counter_damage",
+      "rawValue": "counter_damage",
+      "position": 10,
+      "lineNumber": 48,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 15,
+      "position": 25,
+      "lineNumber": 48,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 30,
+      "position": 28,
+      "lineNumber": 48,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "arena",
+      "indent": 2,
+      "lineNumber": 49,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "player_hp",
+      "rawValue": "player_hp",
+      "position": 9,
+      "lineNumber": 49,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "SubtractionOperator",
+      "rawValue": "-",
+      "position": 19,
+      "lineNumber": 49,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "counter_damage",
+      "rawValue": "counter_damage",
+      "position": 21,
+      "lineNumber": 49,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "arena",
+      "lineNumber": 50,
+      "position": 4,
+      "indent": 2,
+      "content": "But the fury cuts both ways. "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "arena",
+      "lineNumber": 50,
+      "position": 33,
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "counter_damage",
+      "rawValue": "counter_damage",
+      "position": 35,
+      "lineNumber": 50,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "arena",
+      "lineNumber": 50,
+      "position": 49,
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "arena",
+      "lineNumber": 50,
+      "position": 50,
+      "indent": 2,
+      "content": " damage taken!\n"
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "arena",
+      "indent": 2,
+      "lineNumber": 51,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "combat_loop",
+      "rawValue": "combat_loop",
+      "position": 10,
+      "lineNumber": 51,
+      "sceneName": "arena",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "Label",
+      "sceneName": "arena",
+      "indent": 0,
+      "lineNumber": 53,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "victory",
+      "rawValue": "victory",
+      "position": 6,
+      "lineNumber": 53,
+      "sceneName": "arena",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "arena",
+      "indent": 0,
+      "lineNumber": 54,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "arena_wins",
+      "rawValue": "arena_wins",
+      "position": 5,
+      "lineNumber": 54,
+      "sceneName": "arena",
+      "indent": 0
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 16,
+      "lineNumber": 54,
+      "sceneName": "arena",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 1,
+      "position": 18,
+      "lineNumber": 54,
+      "sceneName": "arena",
+      "indent": 0
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "arena",
+      "indent": 0,
+      "lineNumber": 55,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "reputation",
+      "rawValue": "reputation",
+      "position": 5,
+      "lineNumber": 55,
+      "sceneName": "arena",
+      "indent": 0
+    },
+    {
+      "type": "FairmathAdditionOperator",
+      "rawValue": "%+",
+      "position": 16,
+      "lineNumber": 55,
+      "sceneName": "arena",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 20,
+      "position": 19,
+      "lineNumber": 55,
+      "sceneName": "arena",
+      "indent": 0
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "arena",
+      "indent": 0,
+      "lineNumber": 56,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "gold",
+      "rawValue": "gold",
+      "position": 5,
+      "lineNumber": 56,
+      "sceneName": "arena",
+      "indent": 0
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 10,
+      "lineNumber": 56,
+      "sceneName": "arena",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 25,
+      "position": 12,
+      "lineNumber": 56,
+      "sceneName": "arena",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "arena",
+      "lineNumber": 58,
+      "position": 0,
+      "indent": 0,
+      "content": "The crowd erupts! You are victorious in "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "arena",
+      "lineNumber": 58,
+      "position": 40,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "fight_round",
+      "rawValue": "fight_round",
+      "position": 42,
+      "lineNumber": 58,
+      "sceneName": "arena",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "arena",
+      "lineNumber": 58,
+      "position": 53,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "arena",
+      "lineNumber": 58,
+      "position": 54,
+      "indent": 0,
+      "content": " rounds!\n\n"
+    },
+    {
+      "type": "Choice",
+      "sceneName": "arena",
+      "indent": 0,
+      "lineNumber": 60,
+      "position": 0
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "arena",
+      "indent": 1,
+      "lineNumber": 61,
+      "rawText": "Salute the crowd",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "arena",
+      "lineNumber": 61,
+      "position": null,
+      "indent": 1,
+      "content": "Salute the crowd"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "arena",
+      "indent": 2,
+      "lineNumber": 62,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "reputation",
+      "rawValue": "reputation",
+      "position": 9,
+      "lineNumber": 62,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "FairmathAdditionOperator",
+      "rawValue": "%+",
+      "position": 20,
+      "lineNumber": 62,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 10,
+      "position": 23,
+      "lineNumber": 62,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "arena",
+      "lineNumber": 63,
+      "position": 4,
+      "indent": 2,
+      "content": "You raise your fist. The crowd loves it.\n"
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "arena",
+      "indent": 2,
+      "lineNumber": 64,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "arena_exit",
+      "rawValue": "arena_exit",
+      "position": 10,
+      "lineNumber": 64,
+      "sceneName": "arena",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "arena",
+      "indent": 1,
+      "lineNumber": 65,
+      "rawText": "Help your opponent up",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "arena",
+      "lineNumber": 65,
+      "position": null,
+      "indent": 1,
+      "content": "Help your opponent up"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "arena",
+      "indent": 2,
+      "lineNumber": 66,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "reputation",
+      "rawValue": "reputation",
+      "position": 9,
+      "lineNumber": 66,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "FairmathAdditionOperator",
+      "rawValue": "%+",
+      "position": 20,
+      "lineNumber": 66,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 15,
+      "position": 23,
+      "lineNumber": 66,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "arena",
+      "indent": 2,
+      "lineNumber": 67,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "charm",
+      "rawValue": "charm",
+      "position": 9,
+      "lineNumber": 67,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 15,
+      "lineNumber": 67,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 5,
+      "position": 17,
+      "lineNumber": 67,
+      "sceneName": "arena",
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "arena",
+      "lineNumber": 68,
+      "position": 4,
+      "indent": 2,
+      "content": "A show of honor. Even the opponent nods with respect.\n"
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "arena",
+      "indent": 2,
+      "lineNumber": 69,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "arena_exit",
+      "rawValue": "arena_exit",
+      "position": 10,
+      "lineNumber": 69,
+      "sceneName": "arena",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "Label",
+      "sceneName": "arena",
+      "indent": 0,
+      "lineNumber": 71,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "defeat",
+      "rawValue": "defeat",
+      "position": 6,
+      "lineNumber": 71,
+      "sceneName": "arena",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "arena",
+      "indent": 0,
+      "lineNumber": 72,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "reputation",
+      "rawValue": "reputation",
+      "position": 5,
+      "lineNumber": 72,
+      "sceneName": "arena",
+      "indent": 0
+    },
+    {
+      "type": "FairmathSubtractionOperator",
+      "rawValue": "%-",
+      "position": 16,
+      "lineNumber": 72,
+      "sceneName": "arena",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 10,
+      "position": 19,
+      "lineNumber": 72,
+      "sceneName": "arena",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "arena",
+      "lineNumber": 74,
+      "position": 0,
+      "indent": 0,
+      "content": "You fall in round "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "arena",
+      "lineNumber": 74,
+      "position": 18,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "fight_round",
+      "rawValue": "fight_round",
+      "position": 20,
+      "lineNumber": 74,
+      "sceneName": "arena",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "arena",
+      "lineNumber": 74,
+      "position": 31,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "arena",
+      "lineNumber": 74,
+      "position": 32,
+      "indent": 0,
+      "content": ". The crowd groans.\n\nBetter luck next time.\n"
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "arena",
+      "indent": 0,
+      "lineNumber": 77,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "arena_exit",
+      "rawValue": "arena_exit",
+      "position": 6,
+      "lineNumber": 77,
+      "sceneName": "arena",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "Label",
+      "sceneName": "arena",
+      "indent": 0,
+      "lineNumber": 79,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "draw",
+      "rawValue": "draw",
+      "position": 6,
+      "lineNumber": 79,
+      "sceneName": "arena",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "arena",
+      "indent": 0,
+      "lineNumber": 80,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "reputation",
+      "rawValue": "reputation",
+      "position": 5,
+      "lineNumber": 80,
+      "sceneName": "arena",
+      "indent": 0
+    },
+    {
+      "type": "FairmathAdditionOperator",
+      "rawValue": "%+",
+      "position": 16,
+      "lineNumber": 80,
+      "sceneName": "arena",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 5,
+      "position": 19,
+      "lineNumber": 80,
+      "sceneName": "arena",
+      "indent": 0
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "arena",
+      "indent": 0,
+      "lineNumber": 81,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "gold",
+      "rawValue": "gold",
+      "position": 5,
+      "lineNumber": 81,
+      "sceneName": "arena",
+      "indent": 0
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 10,
+      "lineNumber": 81,
+      "sceneName": "arena",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 10,
+      "position": 12,
+      "lineNumber": 81,
+      "sceneName": "arena",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "arena",
+      "lineNumber": 83,
+      "position": 0,
+      "indent": 0,
+      "content": "After "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "arena",
+      "lineNumber": 83,
+      "position": 6,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "fight_round",
+      "rawValue": "fight_round",
+      "position": 8,
+      "lineNumber": 83,
+      "sceneName": "arena",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "arena",
+      "lineNumber": 83,
+      "position": 19,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "arena",
+      "lineNumber": 83,
+      "position": 20,
+      "indent": 0,
+      "content": " rounds, the judge calls a draw. A respectable showing.\n"
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "arena",
+      "indent": 0,
+      "lineNumber": 84,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "arena_exit",
+      "rawValue": "arena_exit",
+      "position": 6,
+      "lineNumber": 84,
+      "sceneName": "arena",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "Label",
+      "sceneName": "arena",
+      "indent": 0,
+      "lineNumber": 86,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "arena_exit",
+      "rawValue": "arena_exit",
+      "position": 6,
+      "lineNumber": 86,
+      "sceneName": "arena",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "Prose",
+      "sceneName": "arena",
+      "lineNumber": 87,
+      "position": 0,
+      "indent": 0,
+      "content": "You leave the arena sands behind.\n"
+    },
+    {
+      "type": "GotoScene",
+      "sceneName": "arena",
+      "indent": 0,
+      "lineNumber": 88,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "startup",
+      "rawValue": "startup",
+      "position": 12,
+      "lineNumber": 88,
+      "sceneName": "arena",
+      "indent": 0,
+      "isSceneName": true,
+      "isLabelName": false
+    },
+    {
+      "type": "Identifier",
+      "value": "village_hub",
+      "rawValue": "village_hub",
+      "position": 20,
+      "lineNumber": 88,
+      "sceneName": "arena",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "lineNumber": 90,
+      "indent": 0,
+      "position": 0,
+      "sceneName": "arena",
+      "type": "SceneEnd"
+    }
+  ],
+  [
+    {
+      "sceneName": "shop",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "shop",
+      "indent": 0,
+      "lineNumber": 0,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "browsing",
+      "rawValue": "browsing",
+      "position": 6,
+      "lineNumber": 0,
+      "sceneName": "shop",
+      "indent": 0
+    },
+    {
+      "type": "BooleanLiteral",
+      "value": true,
+      "position": 15,
+      "lineNumber": 0,
+      "sceneName": "shop",
+      "indent": 0
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "shop",
+      "indent": 0,
+      "lineNumber": 1,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "selected_item",
+      "rawValue": "selected_item",
+      "position": 6,
+      "lineNumber": 1,
+      "sceneName": "shop",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "",
+      "position": 20,
+      "lineNumber": 1,
+      "sceneName": "shop",
+      "indent": 0
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "shop",
+      "indent": 0,
+      "lineNumber": 2,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "selected_cost",
+      "rawValue": "selected_cost",
+      "position": 6,
+      "lineNumber": 2,
+      "sceneName": "shop",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 20,
+      "lineNumber": 2,
+      "sceneName": "shop",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "shop",
+      "lineNumber": 4,
+      "position": 0,
+      "indent": 0,
+      "content": "The shopkeeper greets you warmly. \"Welcome! Browse my wares.\"\n\n"
+    },
+    {
+      "type": "Label",
+      "sceneName": "shop",
+      "indent": 0,
+      "lineNumber": 6,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "shop_hub",
+      "rawValue": "shop_hub",
+      "position": 6,
+      "lineNumber": 6,
+      "sceneName": "shop",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "If",
+      "sceneName": "shop",
+      "indent": 0,
+      "lineNumber": 8,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "items_bought",
+      "rawValue": "items_bought",
+      "position": 4,
+      "lineNumber": 8,
+      "sceneName": "shop",
+      "indent": 0
+    },
+    {
+      "type": "GreaterThanEqualsOperator",
+      "rawValue": ">=",
+      "position": 17,
+      "lineNumber": 8,
+      "sceneName": "shop",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 3,
+      "position": 20,
+      "lineNumber": 8,
+      "sceneName": "shop",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "shop",
+      "lineNumber": 9,
+      "position": 2,
+      "indent": 1,
+      "content": "\"You're one of my best customers!\" the shopkeeper beams.\n\n"
+    },
+    {
+      "type": "Prose",
+      "sceneName": "shop",
+      "lineNumber": 11,
+      "position": 0,
+      "indent": 0,
+      "content": "What catches your eye?\n\n"
+    },
+    {
+      "type": "Choice",
+      "sceneName": "shop",
+      "indent": 0,
+      "lineNumber": 13,
+      "position": 0
+    },
+    {
+      "type": "SelectableIf",
+      "sceneName": "shop",
+      "indent": 1,
+      "lineNumber": 14,
+      "position": 2
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 17,
+      "lineNumber": 14,
+      "sceneName": "shop",
+      "indent": 1
+    },
+    {
+      "type": "Identifier",
+      "value": "gold",
+      "rawValue": "gold",
+      "position": 18,
+      "lineNumber": 14,
+      "sceneName": "shop",
+      "indent": 1
+    },
+    {
+      "type": "GreaterThanEqualsOperator",
+      "rawValue": ">=",
+      "position": 23,
+      "lineNumber": 14,
+      "sceneName": "shop",
+      "indent": 1
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 30,
+      "position": 26,
+      "lineNumber": 14,
+      "sceneName": "shop",
+      "indent": 1
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 28,
+      "lineNumber": 14,
+      "sceneName": "shop",
+      "indent": 1
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "shop",
+      "indent": 1,
+      "lineNumber": 14,
+      "position": 16,
+      "rawText": "Sword of Valor (30 gold)",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "shop",
+      "lineNumber": 14,
+      "position": 17,
+      "indent": 1,
+      "content": "Sword of Valor (30 gold)"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "shop",
+      "indent": 2,
+      "lineNumber": 15,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "selected_item",
+      "rawValue": "selected_item",
+      "position": 9,
+      "lineNumber": 15,
+      "sceneName": "shop",
+      "indent": 2
+    },
+    {
+      "type": "StringLiteral",
+      "value": "Sword of Valor",
+      "position": 23,
+      "lineNumber": 15,
+      "sceneName": "shop",
+      "indent": 2
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "shop",
+      "indent": 2,
+      "lineNumber": 16,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "selected_cost",
+      "rawValue": "selected_cost",
+      "position": 9,
+      "lineNumber": 16,
+      "sceneName": "shop",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 30,
+      "position": 23,
+      "lineNumber": 16,
+      "sceneName": "shop",
+      "indent": 2
+    },
+    {
+      "type": "GoSub",
+      "sceneName": "shop",
+      "indent": 2,
+      "lineNumber": 17,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "confirm_purchase",
+      "rawValue": "confirm_purchase",
+      "position": 11,
+      "lineNumber": 17,
+      "sceneName": "shop",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "If",
+      "sceneName": "shop",
+      "indent": 2,
+      "lineNumber": 18,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "browsing",
+      "rawValue": "browsing",
+      "position": 8,
+      "lineNumber": 18,
+      "sceneName": "shop",
+      "indent": 2
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "shop",
+      "indent": 3,
+      "lineNumber": 19,
+      "position": 6
+    },
+    {
+      "type": "Identifier",
+      "value": "shop_hub",
+      "rawValue": "shop_hub",
+      "position": 12,
+      "lineNumber": 19,
+      "sceneName": "shop",
+      "indent": 3,
+      "isLabelName": true
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "shop",
+      "indent": 2,
+      "lineNumber": 20,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "shop_exit",
+      "rawValue": "shop_exit",
+      "position": 10,
+      "lineNumber": 20,
+      "sceneName": "shop",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "SelectableIf",
+      "sceneName": "shop",
+      "indent": 1,
+      "lineNumber": 21,
+      "position": 2
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 17,
+      "lineNumber": 21,
+      "sceneName": "shop",
+      "indent": 1
+    },
+    {
+      "type": "Identifier",
+      "value": "gold",
+      "rawValue": "gold",
+      "position": 18,
+      "lineNumber": 21,
+      "sceneName": "shop",
+      "indent": 1
+    },
+    {
+      "type": "GreaterThanEqualsOperator",
+      "rawValue": ">=",
+      "position": 23,
+      "lineNumber": 21,
+      "sceneName": "shop",
+      "indent": 1
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 20,
+      "position": 26,
+      "lineNumber": 21,
+      "sceneName": "shop",
+      "indent": 1
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 28,
+      "lineNumber": 21,
+      "sceneName": "shop",
+      "indent": 1
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "shop",
+      "indent": 1,
+      "lineNumber": 21,
+      "position": 16,
+      "rawText": "Shield of Faith (20 gold)",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "shop",
+      "lineNumber": 21,
+      "position": 17,
+      "indent": 1,
+      "content": "Shield of Faith (20 gold)"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "shop",
+      "indent": 2,
+      "lineNumber": 22,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "selected_item",
+      "rawValue": "selected_item",
+      "position": 9,
+      "lineNumber": 22,
+      "sceneName": "shop",
+      "indent": 2
+    },
+    {
+      "type": "StringLiteral",
+      "value": "Shield of Faith",
+      "position": 23,
+      "lineNumber": 22,
+      "sceneName": "shop",
+      "indent": 2
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "shop",
+      "indent": 2,
+      "lineNumber": 23,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "selected_cost",
+      "rawValue": "selected_cost",
+      "position": 9,
+      "lineNumber": 23,
+      "sceneName": "shop",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 20,
+      "position": 23,
+      "lineNumber": 23,
+      "sceneName": "shop",
+      "indent": 2
+    },
+    {
+      "type": "GoSub",
+      "sceneName": "shop",
+      "indent": 2,
+      "lineNumber": 24,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "confirm_purchase",
+      "rawValue": "confirm_purchase",
+      "position": 11,
+      "lineNumber": 24,
+      "sceneName": "shop",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "If",
+      "sceneName": "shop",
+      "indent": 2,
+      "lineNumber": 25,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "browsing",
+      "rawValue": "browsing",
+      "position": 8,
+      "lineNumber": 25,
+      "sceneName": "shop",
+      "indent": 2
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "shop",
+      "indent": 3,
+      "lineNumber": 26,
+      "position": 6
+    },
+    {
+      "type": "Identifier",
+      "value": "shop_hub",
+      "rawValue": "shop_hub",
+      "position": 12,
+      "lineNumber": 26,
+      "sceneName": "shop",
+      "indent": 3,
+      "isLabelName": true
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "shop",
+      "indent": 2,
+      "lineNumber": 27,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "shop_exit",
+      "rawValue": "shop_exit",
+      "position": 10,
+      "lineNumber": 27,
+      "sceneName": "shop",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "SelectableIf",
+      "sceneName": "shop",
+      "indent": 1,
+      "lineNumber": 28,
+      "position": 2
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 17,
+      "lineNumber": 28,
+      "sceneName": "shop",
+      "indent": 1
+    },
+    {
+      "type": "Identifier",
+      "value": "gold",
+      "rawValue": "gold",
+      "position": 18,
+      "lineNumber": 28,
+      "sceneName": "shop",
+      "indent": 1
+    },
+    {
+      "type": "GreaterThanEqualsOperator",
+      "rawValue": ">=",
+      "position": 23,
+      "lineNumber": 28,
+      "sceneName": "shop",
+      "indent": 1
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 15,
+      "position": 26,
+      "lineNumber": 28,
+      "sceneName": "shop",
+      "indent": 1
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 28,
+      "lineNumber": 28,
+      "sceneName": "shop",
+      "indent": 1
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "shop",
+      "indent": 1,
+      "lineNumber": 28,
+      "position": 16,
+      "rawText": "Charm Amulet (15 gold)",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "shop",
+      "lineNumber": 28,
+      "position": 17,
+      "indent": 1,
+      "content": "Charm Amulet (15 gold)"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "shop",
+      "indent": 2,
+      "lineNumber": 29,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "selected_item",
+      "rawValue": "selected_item",
+      "position": 9,
+      "lineNumber": 29,
+      "sceneName": "shop",
+      "indent": 2
+    },
+    {
+      "type": "StringLiteral",
+      "value": "Charm Amulet",
+      "position": 23,
+      "lineNumber": 29,
+      "sceneName": "shop",
+      "indent": 2
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "shop",
+      "indent": 2,
+      "lineNumber": 30,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "selected_cost",
+      "rawValue": "selected_cost",
+      "position": 9,
+      "lineNumber": 30,
+      "sceneName": "shop",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 15,
+      "position": 23,
+      "lineNumber": 30,
+      "sceneName": "shop",
+      "indent": 2
+    },
+    {
+      "type": "GoSub",
+      "sceneName": "shop",
+      "indent": 2,
+      "lineNumber": 31,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "confirm_purchase",
+      "rawValue": "confirm_purchase",
+      "position": 11,
+      "lineNumber": 31,
+      "sceneName": "shop",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "If",
+      "sceneName": "shop",
+      "indent": 2,
+      "lineNumber": 32,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "browsing",
+      "rawValue": "browsing",
+      "position": 8,
+      "lineNumber": 32,
+      "sceneName": "shop",
+      "indent": 2
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "shop",
+      "indent": 3,
+      "lineNumber": 33,
+      "position": 6
+    },
+    {
+      "type": "Identifier",
+      "value": "shop_hub",
+      "rawValue": "shop_hub",
+      "position": 12,
+      "lineNumber": 33,
+      "sceneName": "shop",
+      "indent": 3,
+      "isLabelName": true
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "shop",
+      "indent": 2,
+      "lineNumber": 34,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "shop_exit",
+      "rawValue": "shop_exit",
+      "position": 10,
+      "lineNumber": 34,
+      "sceneName": "shop",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "SelectableIf",
+      "sceneName": "shop",
+      "indent": 1,
+      "lineNumber": 35,
+      "position": 2
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 17,
+      "lineNumber": 35,
+      "sceneName": "shop",
+      "indent": 1
+    },
+    {
+      "type": "Identifier",
+      "value": "gold",
+      "rawValue": "gold",
+      "position": 18,
+      "lineNumber": 35,
+      "sceneName": "shop",
+      "indent": 1
+    },
+    {
+      "type": "GreaterThanEqualsOperator",
+      "rawValue": ">=",
+      "position": 23,
+      "lineNumber": 35,
+      "sceneName": "shop",
+      "indent": 1
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 10,
+      "position": 26,
+      "lineNumber": 35,
+      "sceneName": "shop",
+      "indent": 1
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 28,
+      "lineNumber": 35,
+      "sceneName": "shop",
+      "indent": 1
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "shop",
+      "indent": 1,
+      "lineNumber": 35,
+      "position": 16,
+      "rawText": "Health Potion (10 gold)",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "shop",
+      "lineNumber": 35,
+      "position": 17,
+      "indent": 1,
+      "content": "Health Potion (10 gold)"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "shop",
+      "indent": 2,
+      "lineNumber": 36,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "selected_item",
+      "rawValue": "selected_item",
+      "position": 9,
+      "lineNumber": 36,
+      "sceneName": "shop",
+      "indent": 2
+    },
+    {
+      "type": "StringLiteral",
+      "value": "Health Potion",
+      "position": 23,
+      "lineNumber": 36,
+      "sceneName": "shop",
+      "indent": 2
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "shop",
+      "indent": 2,
+      "lineNumber": 37,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "selected_cost",
+      "rawValue": "selected_cost",
+      "position": 9,
+      "lineNumber": 37,
+      "sceneName": "shop",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 10,
+      "position": 23,
+      "lineNumber": 37,
+      "sceneName": "shop",
+      "indent": 2
+    },
+    {
+      "type": "GoSub",
+      "sceneName": "shop",
+      "indent": 2,
+      "lineNumber": 38,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "confirm_purchase",
+      "rawValue": "confirm_purchase",
+      "position": 11,
+      "lineNumber": 38,
+      "sceneName": "shop",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "If",
+      "sceneName": "shop",
+      "indent": 2,
+      "lineNumber": 39,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "browsing",
+      "rawValue": "browsing",
+      "position": 8,
+      "lineNumber": 39,
+      "sceneName": "shop",
+      "indent": 2
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "shop",
+      "indent": 3,
+      "lineNumber": 40,
+      "position": 6
+    },
+    {
+      "type": "Identifier",
+      "value": "shop_hub",
+      "rawValue": "shop_hub",
+      "position": 12,
+      "lineNumber": 40,
+      "sceneName": "shop",
+      "indent": 3,
+      "isLabelName": true
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "shop",
+      "indent": 2,
+      "lineNumber": 41,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "shop_exit",
+      "rawValue": "shop_exit",
+      "position": 10,
+      "lineNumber": 41,
+      "sceneName": "shop",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "shop",
+      "indent": 1,
+      "lineNumber": 42,
+      "rawText": "Leave the shop",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "shop",
+      "lineNumber": 42,
+      "position": null,
+      "indent": 1,
+      "content": "Leave the shop"
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "shop",
+      "indent": 2,
+      "lineNumber": 43,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "shop_exit",
+      "rawValue": "shop_exit",
+      "position": 10,
+      "lineNumber": 43,
+      "sceneName": "shop",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "Label",
+      "sceneName": "shop",
+      "indent": 0,
+      "lineNumber": 45,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "shop_exit",
+      "rawValue": "shop_exit",
+      "position": 6,
+      "lineNumber": 45,
+      "sceneName": "shop",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "Prose",
+      "sceneName": "shop",
+      "lineNumber": 46,
+      "position": 0,
+      "indent": 0,
+      "content": "\"Come again!\" calls the shopkeeper as you leave.\n"
+    },
+    {
+      "type": "GotoScene",
+      "sceneName": "shop",
+      "indent": 0,
+      "lineNumber": 47,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "startup",
+      "rawValue": "startup",
+      "position": 12,
+      "lineNumber": 47,
+      "sceneName": "shop",
+      "indent": 0,
+      "isSceneName": true,
+      "isLabelName": false
+    },
+    {
+      "type": "Identifier",
+      "value": "village_hub",
+      "rawValue": "village_hub",
+      "position": 20,
+      "lineNumber": 47,
+      "sceneName": "shop",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "Label",
+      "sceneName": "shop",
+      "indent": 0,
+      "lineNumber": 49,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "confirm_purchase",
+      "rawValue": "confirm_purchase",
+      "position": 6,
+      "lineNumber": 49,
+      "sceneName": "shop",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "Prose",
+      "sceneName": "shop",
+      "lineNumber": 50,
+      "position": 0,
+      "indent": 0,
+      "content": "You pick up the "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "shop",
+      "lineNumber": 50,
+      "position": 16,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "selected_item",
+      "rawValue": "selected_item",
+      "position": 18,
+      "lineNumber": 50,
+      "sceneName": "shop",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "shop",
+      "lineNumber": 50,
+      "position": 31,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "shop",
+      "lineNumber": 50,
+      "position": 32,
+      "indent": 0,
+      "content": ". It costs "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "shop",
+      "lineNumber": 50,
+      "position": 43,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "selected_cost",
+      "rawValue": "selected_cost",
+      "position": 45,
+      "lineNumber": 50,
+      "sceneName": "shop",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "shop",
+      "lineNumber": 50,
+      "position": 58,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "shop",
+      "lineNumber": 50,
+      "position": 59,
+      "indent": 0,
+      "content": " gold. You have "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "shop",
+      "lineNumber": 50,
+      "position": 75,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "gold",
+      "rawValue": "gold",
+      "position": 77,
+      "lineNumber": 50,
+      "sceneName": "shop",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "shop",
+      "lineNumber": 50,
+      "position": 81,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "shop",
+      "lineNumber": 50,
+      "position": 82,
+      "indent": 0,
+      "content": " gold.\n\n"
+    },
+    {
+      "type": "Choice",
+      "sceneName": "shop",
+      "indent": 0,
+      "lineNumber": 52,
+      "position": 0
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "shop",
+      "indent": 1,
+      "lineNumber": 53,
+      "rawText": "Yes, buy it",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "shop",
+      "lineNumber": 53,
+      "position": null,
+      "indent": 1,
+      "content": "Yes, buy it"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "shop",
+      "indent": 2,
+      "lineNumber": 54,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "gold",
+      "rawValue": "gold",
+      "position": 9,
+      "lineNumber": 54,
+      "sceneName": "shop",
+      "indent": 2
+    },
+    {
+      "type": "SubtractionOperator",
+      "rawValue": "-",
+      "position": 14,
+      "lineNumber": 54,
+      "sceneName": "shop",
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "selected_cost",
+      "rawValue": "selected_cost",
+      "position": 16,
+      "lineNumber": 54,
+      "sceneName": "shop",
+      "indent": 2
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "shop",
+      "indent": 2,
+      "lineNumber": 55,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "items_bought",
+      "rawValue": "items_bought",
+      "position": 9,
+      "lineNumber": 55,
+      "sceneName": "shop",
+      "indent": 2
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 22,
+      "lineNumber": 55,
+      "sceneName": "shop",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 1,
+      "position": 24,
+      "lineNumber": 55,
+      "sceneName": "shop",
+      "indent": 2
+    },
+    {
+      "type": "If",
+      "sceneName": "shop",
+      "indent": 2,
+      "lineNumber": 56,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "selected_item",
+      "rawValue": "selected_item",
+      "position": 8,
+      "lineNumber": 56,
+      "sceneName": "shop",
+      "indent": 2
+    },
+    {
+      "type": "EqualityOperator",
+      "rawValue": "=",
+      "position": 22,
+      "lineNumber": 56,
+      "sceneName": "shop",
+      "indent": 2
+    },
+    {
+      "type": "StringLiteral",
+      "value": "Sword of Valor",
+      "position": 24,
+      "lineNumber": 56,
+      "sceneName": "shop",
+      "indent": 2
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "shop",
+      "indent": 3,
+      "lineNumber": 57,
+      "position": 6
+    },
+    {
+      "type": "Identifier",
+      "value": "strength",
+      "rawValue": "strength",
+      "position": 11,
+      "lineNumber": 57,
+      "sceneName": "shop",
+      "indent": 3
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 20,
+      "lineNumber": 57,
+      "sceneName": "shop",
+      "indent": 3
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 15,
+      "position": 22,
+      "lineNumber": 57,
+      "sceneName": "shop",
+      "indent": 3
+    },
+    {
+      "type": "If",
+      "sceneName": "shop",
+      "indent": 2,
+      "lineNumber": 58,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "selected_item",
+      "rawValue": "selected_item",
+      "position": 8,
+      "lineNumber": 58,
+      "sceneName": "shop",
+      "indent": 2
+    },
+    {
+      "type": "EqualityOperator",
+      "rawValue": "=",
+      "position": 22,
+      "lineNumber": 58,
+      "sceneName": "shop",
+      "indent": 2
+    },
+    {
+      "type": "StringLiteral",
+      "value": "Shield of Faith",
+      "position": 24,
+      "lineNumber": 58,
+      "sceneName": "shop",
+      "indent": 2
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "shop",
+      "indent": 3,
+      "lineNumber": 59,
+      "position": 6
+    },
+    {
+      "type": "Identifier",
+      "value": "strength",
+      "rawValue": "strength",
+      "position": 11,
+      "lineNumber": 59,
+      "sceneName": "shop",
+      "indent": 3
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 20,
+      "lineNumber": 59,
+      "sceneName": "shop",
+      "indent": 3
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 10,
+      "position": 22,
+      "lineNumber": 59,
+      "sceneName": "shop",
+      "indent": 3
+    },
+    {
+      "type": "If",
+      "sceneName": "shop",
+      "indent": 2,
+      "lineNumber": 60,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "selected_item",
+      "rawValue": "selected_item",
+      "position": 8,
+      "lineNumber": 60,
+      "sceneName": "shop",
+      "indent": 2
+    },
+    {
+      "type": "EqualityOperator",
+      "rawValue": "=",
+      "position": 22,
+      "lineNumber": 60,
+      "sceneName": "shop",
+      "indent": 2
+    },
+    {
+      "type": "StringLiteral",
+      "value": "Charm Amulet",
+      "position": 24,
+      "lineNumber": 60,
+      "sceneName": "shop",
+      "indent": 2
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "shop",
+      "indent": 3,
+      "lineNumber": 61,
+      "position": 6
+    },
+    {
+      "type": "Identifier",
+      "value": "charm",
+      "rawValue": "charm",
+      "position": 11,
+      "lineNumber": 61,
+      "sceneName": "shop",
+      "indent": 3
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 17,
+      "lineNumber": 61,
+      "sceneName": "shop",
+      "indent": 3
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 15,
+      "position": 19,
+      "lineNumber": 61,
+      "sceneName": "shop",
+      "indent": 3
+    },
+    {
+      "type": "Prose",
+      "sceneName": "shop",
+      "lineNumber": 62,
+      "position": 4,
+      "indent": 2,
+      "content": "You bought the "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "shop",
+      "lineNumber": 62,
+      "position": 19,
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "selected_item",
+      "rawValue": "selected_item",
+      "position": 21,
+      "lineNumber": 62,
+      "sceneName": "shop",
+      "indent": 2
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "shop",
+      "lineNumber": 62,
+      "position": 34,
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "shop",
+      "lineNumber": 62,
+      "position": 35,
+      "indent": 2,
+      "content": "!\n"
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "shop",
+      "indent": 2,
+      "lineNumber": 63,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "confirm_continue",
+      "rawValue": "confirm_continue",
+      "position": 10,
+      "lineNumber": 63,
+      "sceneName": "shop",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "shop",
+      "indent": 1,
+      "lineNumber": 64,
+      "rawText": "No, put it back",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "shop",
+      "lineNumber": 64,
+      "position": null,
+      "indent": 1,
+      "content": "No, put it back"
+    },
+    {
+      "type": "Prose",
+      "sceneName": "shop",
+      "lineNumber": 65,
+      "position": 4,
+      "indent": 2,
+      "content": "You set the "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "shop",
+      "lineNumber": 65,
+      "position": 16,
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "selected_item",
+      "rawValue": "selected_item",
+      "position": 18,
+      "lineNumber": 65,
+      "sceneName": "shop",
+      "indent": 2
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "shop",
+      "lineNumber": 65,
+      "position": 31,
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "shop",
+      "lineNumber": 65,
+      "position": 32,
+      "indent": 2,
+      "content": " back on the shelf.\n"
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "shop",
+      "indent": 2,
+      "lineNumber": 66,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "confirm_continue",
+      "rawValue": "confirm_continue",
+      "position": 10,
+      "lineNumber": 66,
+      "sceneName": "shop",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "Label",
+      "sceneName": "shop",
+      "indent": 0,
+      "lineNumber": 68,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "confirm_continue",
+      "rawValue": "confirm_continue",
+      "position": 6,
+      "lineNumber": 68,
+      "sceneName": "shop",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "Choice",
+      "sceneName": "shop",
+      "indent": 0,
+      "lineNumber": 69,
+      "position": 0
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "shop",
+      "indent": 1,
+      "lineNumber": 70,
+      "rawText": "Keep browsing",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "shop",
+      "lineNumber": 70,
+      "position": null,
+      "indent": 1,
+      "content": "Keep browsing"
+    },
+    {
+      "type": "Return",
+      "sceneName": "shop",
+      "indent": 2,
+      "lineNumber": 71,
+      "position": 4
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "shop",
+      "indent": 1,
+      "lineNumber": 72,
+      "rawText": "Leave the shop",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "shop",
+      "lineNumber": 72,
+      "position": null,
+      "indent": 1,
+      "content": "Leave the shop"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "shop",
+      "indent": 2,
+      "lineNumber": 73,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "browsing",
+      "rawValue": "browsing",
+      "position": 9,
+      "lineNumber": 73,
+      "sceneName": "shop",
+      "indent": 2
+    },
+    {
+      "type": "BooleanLiteral",
+      "value": false,
+      "position": 18,
+      "lineNumber": 73,
+      "sceneName": "shop",
+      "indent": 2
+    },
+    {
+      "type": "Return",
+      "sceneName": "shop",
+      "indent": 2,
+      "lineNumber": 74,
+      "position": 4
+    },
+    {
+      "lineNumber": 76,
+      "indent": 0,
+      "position": 0,
+      "sceneName": "shop",
+      "type": "SceneEnd"
+    }
+  ],
+  [
+    {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 0,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "gold",
+      "rawValue": "gold",
+      "position": 8,
+      "lineNumber": 0,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 100,
+      "position": 13,
+      "lineNumber": 0,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 1,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "reputation",
+      "rawValue": "reputation",
+      "position": 8,
+      "lineNumber": 1,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 50,
+      "position": 19,
+      "lineNumber": 1,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 2,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "strength",
+      "rawValue": "strength",
+      "position": 8,
+      "lineNumber": 2,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 40,
+      "position": 17,
+      "lineNumber": 2,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 3,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "charm",
+      "rawValue": "charm",
+      "position": 8,
+      "lineNumber": 3,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 60,
+      "position": 14,
+      "lineNumber": 3,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 4,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "quest_complete",
+      "rawValue": "quest_complete",
+      "position": 8,
+      "lineNumber": 4,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "BooleanLiteral",
+      "value": false,
+      "position": 23,
+      "lineNumber": 4,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 5,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "items_bought",
+      "rawValue": "items_bought",
+      "position": 8,
+      "lineNumber": 5,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 21,
+      "lineNumber": 5,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 6,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "arena_wins",
+      "rawValue": "arena_wins",
+      "position": 8,
+      "lineNumber": 6,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 19,
+      "lineNumber": 6,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 7,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "tavern_visits",
+      "rawValue": "tavern_visits",
+      "position": 8,
+      "lineNumber": 7,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 22,
+      "lineNumber": 7,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 8,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "name",
+      "rawValue": "name",
+      "position": 8,
+      "lineNumber": 8,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "",
+      "position": 13,
+      "lineNumber": 8,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 10,
+      "position": 0,
+      "indent": 0,
+      "content": "Welcome to the crossroads village.\n\n"
+    },
+    {
+      "type": "InputText",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 12,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "name",
+      "rawValue": "name",
+      "position": 12,
+      "lineNumber": 12,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 14,
+      "position": 0,
+      "indent": 0,
+      "content": "Well met, "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "startup",
+      "lineNumber": 14,
+      "position": 10,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "name",
+      "rawValue": "name",
+      "position": 12,
+      "lineNumber": 14,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "startup",
+      "lineNumber": 14,
+      "position": 16,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 14,
+      "position": 17,
+      "indent": 0,
+      "content": ". The village square stretches before you.\n\n"
+    },
+    {
+      "type": "Label",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 16,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "village_hub",
+      "rawValue": "village_hub",
+      "position": 6,
+      "lineNumber": 16,
+      "sceneName": "startup",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 17,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "tavern_visits",
+      "rawValue": "tavern_visits",
+      "position": 5,
+      "lineNumber": 17,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 19,
+      "lineNumber": 17,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 1,
+      "position": 21,
+      "lineNumber": 17,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 19,
+      "position": 0,
+      "indent": 0,
+      "content": "You stand in the village square. Gold: "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "startup",
+      "lineNumber": 19,
+      "position": 39,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "gold",
+      "rawValue": "gold",
+      "position": 41,
+      "lineNumber": 19,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "startup",
+      "lineNumber": 19,
+      "position": 45,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 19,
+      "position": 46,
+      "indent": 0,
+      "content": ". Reputation: "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "startup",
+      "lineNumber": 19,
+      "position": 60,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "reputation",
+      "rawValue": "reputation",
+      "position": 62,
+      "lineNumber": 19,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "startup",
+      "lineNumber": 19,
+      "position": 72,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 19,
+      "position": 73,
+      "indent": 0,
+      "content": ".\n\n"
+    },
+    {
+      "type": "Choice",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 21,
+      "position": 0
+    },
+    {
+      "type": "SelectableIf",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 22,
+      "position": 2
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 17,
+      "lineNumber": 22,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "Identifier",
+      "value": "gold",
+      "rawValue": "gold",
+      "position": 18,
+      "lineNumber": 22,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "GreaterThanEqualsOperator",
+      "rawValue": ">=",
+      "position": 23,
+      "lineNumber": 22,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 10,
+      "position": 26,
+      "lineNumber": 22,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 28,
+      "lineNumber": 22,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 22,
+      "position": 16,
+      "rawText": "Visit the shop",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 22,
+      "position": 17,
+      "indent": 1,
+      "content": "Visit the shop"
+    },
+    {
+      "type": "GotoScene",
+      "sceneName": "startup",
+      "indent": 2,
+      "lineNumber": 23,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "shop",
+      "rawValue": "shop",
+      "position": 16,
+      "lineNumber": 23,
+      "sceneName": "startup",
+      "indent": 2,
+      "isSceneName": true,
+      "isLabelName": false
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 24,
+      "rawText": "Enter the tavern",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 24,
+      "position": null,
+      "indent": 1,
+      "content": "Enter the tavern"
+    },
+    {
+      "type": "GotoScene",
+      "sceneName": "startup",
+      "indent": 2,
+      "lineNumber": 25,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "tavern",
+      "rawValue": "tavern",
+      "position": 16,
+      "lineNumber": 25,
+      "sceneName": "startup",
+      "indent": 2,
+      "isSceneName": true,
+      "isLabelName": false
+    },
+    {
+      "type": "SelectableIf",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 26,
+      "position": 2
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 17,
+      "lineNumber": 26,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "Identifier",
+      "value": "strength",
+      "rawValue": "strength",
+      "position": 18,
+      "lineNumber": 26,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "GreaterThanEqualsOperator",
+      "rawValue": ">=",
+      "position": 27,
+      "lineNumber": 26,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 30,
+      "position": 30,
+      "lineNumber": 26,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 32,
+      "lineNumber": 26,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 26,
+      "position": 16,
+      "rawText": "Challenge the arena",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 26,
+      "position": 17,
+      "indent": 1,
+      "content": "Challenge the arena"
+    },
+    {
+      "type": "GotoScene",
+      "sceneName": "startup",
+      "indent": 2,
+      "lineNumber": 27,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "arena",
+      "rawValue": "arena",
+      "position": 16,
+      "lineNumber": 27,
+      "sceneName": "startup",
+      "indent": 2,
+      "isSceneName": true,
+      "isLabelName": false
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 28,
+      "rawText": "Check your stats",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 28,
+      "position": null,
+      "indent": 1,
+      "content": "Check your stats"
+    },
+    {
+      "type": "GoSub",
+      "sceneName": "startup",
+      "indent": 2,
+      "lineNumber": 29,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "show_stats",
+      "rawValue": "show_stats",
+      "position": 11,
+      "lineNumber": 29,
+      "sceneName": "startup",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "startup",
+      "indent": 2,
+      "lineNumber": 30,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "village_hub",
+      "rawValue": "village_hub",
+      "position": 10,
+      "lineNumber": 30,
+      "sceneName": "startup",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "SelectableIf",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 31,
+      "position": 2
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 17,
+      "lineNumber": 31,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "Identifier",
+      "value": "quest_complete",
+      "rawValue": "quest_complete",
+      "position": 18,
+      "lineNumber": 31,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 32,
+      "lineNumber": 31,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 31,
+      "position": 16,
+      "rawText": "Leave the village",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 31,
+      "position": 17,
+      "indent": 1,
+      "content": "Leave the village"
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "startup",
+      "indent": 2,
+      "lineNumber": 32,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "ending",
+      "rawValue": "ending",
+      "position": 10,
+      "lineNumber": 32,
+      "sceneName": "startup",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "Label",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 34,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "ending",
+      "rawValue": "ending",
+      "position": 6,
+      "lineNumber": 34,
+      "sceneName": "startup",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 35,
+      "position": 0,
+      "indent": 0,
+      "content": "Your journey in the village ends.\n\nYou visited the tavern "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "startup",
+      "lineNumber": 37,
+      "position": 23,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "tavern_visits",
+      "rawValue": "tavern_visits",
+      "position": 25,
+      "lineNumber": 37,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "startup",
+      "lineNumber": 37,
+      "position": 38,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 37,
+      "position": 39,
+      "indent": 0,
+      "content": " times, won "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "startup",
+      "lineNumber": 37,
+      "position": 51,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "arena_wins",
+      "rawValue": "arena_wins",
+      "position": 53,
+      "lineNumber": 37,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "startup",
+      "lineNumber": 37,
+      "position": 63,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 37,
+      "position": 64,
+      "indent": 0,
+      "content": " arena fights, and bought "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "startup",
+      "lineNumber": 37,
+      "position": 90,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "items_bought",
+      "rawValue": "items_bought",
+      "position": 92,
+      "lineNumber": 37,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "startup",
+      "lineNumber": 37,
+      "position": 104,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 37,
+      "position": 105,
+      "indent": 0,
+      "content": " items.\n\n"
+    },
+    {
+      "type": "If",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 39,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "reputation",
+      "rawValue": "reputation",
+      "position": 4,
+      "lineNumber": 39,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "GreaterThanEqualsOperator",
+      "rawValue": ">=",
+      "position": 15,
+      "lineNumber": 39,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 80,
+      "position": 18,
+      "lineNumber": 39,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 40,
+      "position": 2,
+      "indent": 1,
+      "content": "The villagers cheer as you depart. A true hero!\n"
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 41,
+      "position": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "final",
+      "rawValue": "final",
+      "position": 8,
+      "lineNumber": 41,
+      "sceneName": "startup",
+      "indent": 1,
+      "isLabelName": true
+    },
+    {
+      "type": "ElseIf",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 42,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "reputation",
+      "rawValue": "reputation",
+      "position": 8,
+      "lineNumber": 42,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "GreaterThanEqualsOperator",
+      "rawValue": ">=",
+      "position": 19,
+      "lineNumber": 42,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 50,
+      "position": 22,
+      "lineNumber": 42,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 43,
+      "position": 2,
+      "indent": 1,
+      "content": "The villagers wave politely as you leave.\n"
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 44,
+      "position": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "final",
+      "rawValue": "final",
+      "position": 8,
+      "lineNumber": 44,
+      "sceneName": "startup",
+      "indent": 1,
+      "isLabelName": true
+    },
+    {
+      "type": "Else",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 45,
+      "position": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 46,
+      "position": 2,
+      "indent": 1,
+      "content": "The villagers watch you leave with suspicious eyes.\n\n"
+    },
+    {
+      "type": "Label",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 48,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "final",
+      "rawValue": "final",
+      "position": 6,
+      "lineNumber": 48,
+      "sceneName": "startup",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 49,
+      "position": 0,
+      "indent": 0,
+      "content": "Farewell, "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "startup",
+      "lineNumber": 49,
+      "position": 10,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "name",
+      "rawValue": "name",
+      "position": 12,
+      "lineNumber": 49,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "startup",
+      "lineNumber": 49,
+      "position": 16,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 49,
+      "position": 17,
+      "indent": 0,
+      "content": ".\n"
+    },
+    {
+      "type": "Ending",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 50,
+      "position": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 50,
+      "position": 7,
+      "indent": 0,
+      "content": "\"The End\""
+    },
+    {
+      "type": "Label",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 52,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "show_stats",
+      "rawValue": "show_stats",
+      "position": 6,
+      "lineNumber": 52,
+      "sceneName": "startup",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 53,
+      "position": 0,
+      "indent": 0,
+      "content": "Strength: "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "startup",
+      "lineNumber": 53,
+      "position": 10,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "strength",
+      "rawValue": "strength",
+      "position": 12,
+      "lineNumber": 53,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "startup",
+      "lineNumber": 53,
+      "position": 20,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 53,
+      "position": 21,
+      "indent": 0,
+      "content": "\nCharm: "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "startup",
+      "lineNumber": 54,
+      "position": 7,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "charm",
+      "rawValue": "charm",
+      "position": 9,
+      "lineNumber": 54,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "startup",
+      "lineNumber": 54,
+      "position": 14,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 54,
+      "position": 15,
+      "indent": 0,
+      "content": "\nGold: "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "startup",
+      "lineNumber": 55,
+      "position": 6,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "gold",
+      "rawValue": "gold",
+      "position": 8,
+      "lineNumber": 55,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "startup",
+      "lineNumber": 55,
+      "position": 12,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 55,
+      "position": 13,
+      "indent": 0,
+      "content": "\nReputation: "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "startup",
+      "lineNumber": 56,
+      "position": 12,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "reputation",
+      "rawValue": "reputation",
+      "position": 14,
+      "lineNumber": 56,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "startup",
+      "lineNumber": 56,
+      "position": 24,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 56,
+      "position": 25,
+      "indent": 0,
+      "content": "\nArena wins: "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "startup",
+      "lineNumber": 57,
+      "position": 12,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "arena_wins",
+      "rawValue": "arena_wins",
+      "position": 14,
+      "lineNumber": 57,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "startup",
+      "lineNumber": 57,
+      "position": 24,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 57,
+      "position": 25,
+      "indent": 0,
+      "content": "\nItems bought: "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "startup",
+      "lineNumber": 58,
+      "position": 14,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "items_bought",
+      "rawValue": "items_bought",
+      "position": 16,
+      "lineNumber": 58,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "startup",
+      "lineNumber": 58,
+      "position": 28,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 58,
+      "position": 29,
+      "indent": 0,
+      "content": "\n"
+    },
+    {
+      "type": "Return",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 59,
+      "position": 0
+    },
+    {
+      "lineNumber": 61,
+      "indent": 0,
+      "position": 0,
+      "sceneName": "startup",
+      "type": "SceneEnd"
+    }
+  ],
+  [
+    {
+      "sceneName": "tavern",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "tavern",
+      "indent": 0,
+      "lineNumber": 0,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "drink_count",
+      "rawValue": "drink_count",
+      "position": 6,
+      "lineNumber": 0,
+      "sceneName": "tavern",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 18,
+      "lineNumber": 0,
+      "sceneName": "tavern",
+      "indent": 0
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "tavern",
+      "indent": 0,
+      "lineNumber": 1,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "heard_rumor",
+      "rawValue": "heard_rumor",
+      "position": 6,
+      "lineNumber": 1,
+      "sceneName": "tavern",
+      "indent": 0
+    },
+    {
+      "type": "BooleanLiteral",
+      "value": false,
+      "position": 18,
+      "lineNumber": 1,
+      "sceneName": "tavern",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "tavern",
+      "lineNumber": 3,
+      "position": 0,
+      "indent": 0,
+      "content": "The tavern is warm and bustling. A bard plays in the corner.\n\n"
+    },
+    {
+      "type": "Label",
+      "sceneName": "tavern",
+      "indent": 0,
+      "lineNumber": 5,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "tavern_hub",
+      "rawValue": "tavern_hub",
+      "position": 6,
+      "lineNumber": 5,
+      "sceneName": "tavern",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "Choice",
+      "sceneName": "tavern",
+      "indent": 0,
+      "lineNumber": 7,
+      "position": 0
+    },
+    {
+      "type": "SelectableIf",
+      "sceneName": "tavern",
+      "indent": 1,
+      "lineNumber": 8,
+      "position": 2
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 17,
+      "lineNumber": 8,
+      "sceneName": "tavern",
+      "indent": 1
+    },
+    {
+      "type": "Identifier",
+      "value": "gold",
+      "rawValue": "gold",
+      "position": 18,
+      "lineNumber": 8,
+      "sceneName": "tavern",
+      "indent": 1
+    },
+    {
+      "type": "GreaterThanEqualsOperator",
+      "rawValue": ">=",
+      "position": 23,
+      "lineNumber": 8,
+      "sceneName": "tavern",
+      "indent": 1
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 5,
+      "position": 26,
+      "lineNumber": 8,
+      "sceneName": "tavern",
+      "indent": 1
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 27,
+      "lineNumber": 8,
+      "sceneName": "tavern",
+      "indent": 1
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "tavern",
+      "indent": 1,
+      "lineNumber": 8,
+      "position": 16,
+      "rawText": "Buy a drink (5 gold)",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "tavern",
+      "lineNumber": 8,
+      "position": 17,
+      "indent": 1,
+      "content": "Buy a drink (5 gold)"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "tavern",
+      "indent": 2,
+      "lineNumber": 9,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "gold",
+      "rawValue": "gold",
+      "position": 9,
+      "lineNumber": 9,
+      "sceneName": "tavern",
+      "indent": 2
+    },
+    {
+      "type": "SubtractionOperator",
+      "rawValue": "-",
+      "position": 14,
+      "lineNumber": 9,
+      "sceneName": "tavern",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 5,
+      "position": 16,
+      "lineNumber": 9,
+      "sceneName": "tavern",
+      "indent": 2
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "tavern",
+      "indent": 2,
+      "lineNumber": 10,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "drink_count",
+      "rawValue": "drink_count",
+      "position": 9,
+      "lineNumber": 10,
+      "sceneName": "tavern",
+      "indent": 2
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 21,
+      "lineNumber": 10,
+      "sceneName": "tavern",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 1,
+      "position": 23,
+      "lineNumber": 10,
+      "sceneName": "tavern",
+      "indent": 2
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "tavern",
+      "indent": 2,
+      "lineNumber": 11,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "reputation",
+      "rawValue": "reputation",
+      "position": 9,
+      "lineNumber": 11,
+      "sceneName": "tavern",
+      "indent": 2
+    },
+    {
+      "type": "FairmathAdditionOperator",
+      "rawValue": "%+",
+      "position": 20,
+      "lineNumber": 11,
+      "sceneName": "tavern",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 5,
+      "position": 23,
+      "lineNumber": 11,
+      "sceneName": "tavern",
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "tavern",
+      "lineNumber": 12,
+      "position": 4,
+      "indent": 2,
+      "content": "You enjoy a cold ale.\n"
+    },
+    {
+      "type": "If",
+      "sceneName": "tavern",
+      "indent": 2,
+      "lineNumber": 13,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "drink_count",
+      "rawValue": "drink_count",
+      "position": 8,
+      "lineNumber": 13,
+      "sceneName": "tavern",
+      "indent": 2
+    },
+    {
+      "type": "GreaterThanEqualsOperator",
+      "rawValue": ">=",
+      "position": 20,
+      "lineNumber": 13,
+      "sceneName": "tavern",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 3,
+      "position": 23,
+      "lineNumber": 13,
+      "sceneName": "tavern",
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "tavern",
+      "lineNumber": 14,
+      "position": 6,
+      "indent": 3,
+      "content": "The barkeep leans in. \"You seem trustworthy. There's an arena champion looking for a real fight.\"\n"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "tavern",
+      "indent": 3,
+      "lineNumber": 15,
+      "position": 6
+    },
+    {
+      "type": "Identifier",
+      "value": "heard_rumor",
+      "rawValue": "heard_rumor",
+      "position": 11,
+      "lineNumber": 15,
+      "sceneName": "tavern",
+      "indent": 3
+    },
+    {
+      "type": "BooleanLiteral",
+      "value": true,
+      "position": 23,
+      "lineNumber": 15,
+      "sceneName": "tavern",
+      "indent": 3
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "tavern",
+      "indent": 2,
+      "lineNumber": 16,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "tavern_hub",
+      "rawValue": "tavern_hub",
+      "position": 10,
+      "lineNumber": 16,
+      "sceneName": "tavern",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "tavern",
+      "indent": 1,
+      "lineNumber": 17,
+      "rawText": "Talk to the bard",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "tavern",
+      "lineNumber": 17,
+      "position": null,
+      "indent": 1,
+      "content": "Talk to the bard"
+    },
+    {
+      "type": "GoSub",
+      "sceneName": "tavern",
+      "indent": 2,
+      "lineNumber": 18,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "bard_conversation",
+      "rawValue": "bard_conversation",
+      "position": 11,
+      "lineNumber": 18,
+      "sceneName": "tavern",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "tavern",
+      "indent": 2,
+      "lineNumber": 19,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "tavern_hub",
+      "rawValue": "tavern_hub",
+      "position": 10,
+      "lineNumber": 19,
+      "sceneName": "tavern",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "SelectableIf",
+      "sceneName": "tavern",
+      "indent": 1,
+      "lineNumber": 20,
+      "position": 2
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 17,
+      "lineNumber": 20,
+      "sceneName": "tavern",
+      "indent": 1
+    },
+    {
+      "type": "Identifier",
+      "value": "charm",
+      "rawValue": "charm",
+      "position": 18,
+      "lineNumber": 20,
+      "sceneName": "tavern",
+      "indent": 1
+    },
+    {
+      "type": "GreaterThanEqualsOperator",
+      "rawValue": ">=",
+      "position": 24,
+      "lineNumber": 20,
+      "sceneName": "tavern",
+      "indent": 1
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 50,
+      "position": 27,
+      "lineNumber": 20,
+      "sceneName": "tavern",
+      "indent": 1
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 29,
+      "lineNumber": 20,
+      "sceneName": "tavern",
+      "indent": 1
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "tavern",
+      "indent": 1,
+      "lineNumber": 20,
+      "position": 16,
+      "rawText": "Charm the barmaid for information",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "tavern",
+      "lineNumber": 20,
+      "position": 17,
+      "indent": 1,
+      "content": "Charm the barmaid for information"
+    },
+    {
+      "type": "Prose",
+      "sceneName": "tavern",
+      "lineNumber": 21,
+      "position": 4,
+      "indent": 2,
+      "content": "She whispers, \"The shopkeeper has a special sword. Pricey, but worth it.\"\n"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "tavern",
+      "indent": 2,
+      "lineNumber": 22,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "reputation",
+      "rawValue": "reputation",
+      "position": 9,
+      "lineNumber": 22,
+      "sceneName": "tavern",
+      "indent": 2
+    },
+    {
+      "type": "FairmathAdditionOperator",
+      "rawValue": "%+",
+      "position": 20,
+      "lineNumber": 22,
+      "sceneName": "tavern",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 10,
+      "position": 23,
+      "lineNumber": 22,
+      "sceneName": "tavern",
+      "indent": 2
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "tavern",
+      "indent": 2,
+      "lineNumber": 23,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "tavern_hub",
+      "rawValue": "tavern_hub",
+      "position": 10,
+      "lineNumber": 23,
+      "sceneName": "tavern",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "tavern",
+      "indent": 1,
+      "lineNumber": 24,
+      "rawText": "Leave the tavern",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "tavern",
+      "lineNumber": 24,
+      "position": null,
+      "indent": 1,
+      "content": "Leave the tavern"
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "tavern",
+      "indent": 2,
+      "lineNumber": 25,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "tavern_exit",
+      "rawValue": "tavern_exit",
+      "position": 10,
+      "lineNumber": 25,
+      "sceneName": "tavern",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "Label",
+      "sceneName": "tavern",
+      "indent": 0,
+      "lineNumber": 27,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "tavern_exit",
+      "rawValue": "tavern_exit",
+      "position": 6,
+      "lineNumber": 27,
+      "sceneName": "tavern",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "Prose",
+      "sceneName": "tavern",
+      "lineNumber": 28,
+      "position": 0,
+      "indent": 0,
+      "content": "You step back out into the village square.\n"
+    },
+    {
+      "type": "GotoScene",
+      "sceneName": "tavern",
+      "indent": 0,
+      "lineNumber": 29,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "startup",
+      "rawValue": "startup",
+      "position": 12,
+      "lineNumber": 29,
+      "sceneName": "tavern",
+      "indent": 0,
+      "isSceneName": true,
+      "isLabelName": false
+    },
+    {
+      "type": "Identifier",
+      "value": "village_hub",
+      "rawValue": "village_hub",
+      "position": 20,
+      "lineNumber": 29,
+      "sceneName": "tavern",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "Label",
+      "sceneName": "tavern",
+      "indent": 0,
+      "lineNumber": 31,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "bard_conversation",
+      "rawValue": "bard_conversation",
+      "position": 6,
+      "lineNumber": 31,
+      "sceneName": "tavern",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "Prose",
+      "sceneName": "tavern",
+      "lineNumber": 32,
+      "position": 0,
+      "indent": 0,
+      "content": "The bard pauses between songs.\n\n"
+    },
+    {
+      "type": "Choice",
+      "sceneName": "tavern",
+      "indent": 0,
+      "lineNumber": 34,
+      "position": 0
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "tavern",
+      "indent": 1,
+      "lineNumber": 35,
+      "rawText": "Request a heroic ballad",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "tavern",
+      "lineNumber": 35,
+      "position": null,
+      "indent": 1,
+      "content": "Request a heroic ballad"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "tavern",
+      "indent": 2,
+      "lineNumber": 36,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "reputation",
+      "rawValue": "reputation",
+      "position": 9,
+      "lineNumber": 36,
+      "sceneName": "tavern",
+      "indent": 2
+    },
+    {
+      "type": "FairmathAdditionOperator",
+      "rawValue": "%+",
+      "position": 20,
+      "lineNumber": 36,
+      "sceneName": "tavern",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 5,
+      "position": 23,
+      "lineNumber": 36,
+      "sceneName": "tavern",
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "tavern",
+      "lineNumber": 37,
+      "position": 4,
+      "indent": 2,
+      "content": "The bard sings of ancient heroes. The crowd raises their mugs.\n"
+    },
+    {
+      "type": "Return",
+      "sceneName": "tavern",
+      "indent": 2,
+      "lineNumber": 38,
+      "position": 4
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "tavern",
+      "indent": 1,
+      "lineNumber": 39,
+      "rawText": "Ask about local news",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "tavern",
+      "lineNumber": 39,
+      "position": null,
+      "indent": 1,
+      "content": "Ask about local news"
+    },
+    {
+      "type": "Prose",
+      "sceneName": "tavern",
+      "lineNumber": 40,
+      "position": 4,
+      "indent": 2,
+      "content": "\"Strange things happening near the old dungeon,\" the bard says quietly.\n"
+    },
+    {
+      "type": "Return",
+      "sceneName": "tavern",
+      "indent": 2,
+      "lineNumber": 41,
+      "position": 4
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "tavern",
+      "indent": 1,
+      "lineNumber": 42,
+      "rawText": "Toss a coin (1 gold)",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "tavern",
+      "lineNumber": 42,
+      "position": null,
+      "indent": 1,
+      "content": "Toss a coin (1 gold)"
+    },
+    {
+      "type": "If",
+      "sceneName": "tavern",
+      "indent": 2,
+      "lineNumber": 43,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "gold",
+      "rawValue": "gold",
+      "position": 8,
+      "lineNumber": 43,
+      "sceneName": "tavern",
+      "indent": 2
+    },
+    {
+      "type": "GreaterThanEqualsOperator",
+      "rawValue": ">=",
+      "position": 13,
+      "lineNumber": 43,
+      "sceneName": "tavern",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 1,
+      "position": 16,
+      "lineNumber": 43,
+      "sceneName": "tavern",
+      "indent": 2
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "tavern",
+      "indent": 3,
+      "lineNumber": 44,
+      "position": 6
+    },
+    {
+      "type": "Identifier",
+      "value": "gold",
+      "rawValue": "gold",
+      "position": 11,
+      "lineNumber": 44,
+      "sceneName": "tavern",
+      "indent": 3
+    },
+    {
+      "type": "SubtractionOperator",
+      "rawValue": "-",
+      "position": 16,
+      "lineNumber": 44,
+      "sceneName": "tavern",
+      "indent": 3
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 1,
+      "position": 18,
+      "lineNumber": 44,
+      "sceneName": "tavern",
+      "indent": 3
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "tavern",
+      "indent": 3,
+      "lineNumber": 45,
+      "position": 6
+    },
+    {
+      "type": "Identifier",
+      "value": "reputation",
+      "rawValue": "reputation",
+      "position": 11,
+      "lineNumber": 45,
+      "sceneName": "tavern",
+      "indent": 3
+    },
+    {
+      "type": "FairmathAdditionOperator",
+      "rawValue": "%+",
+      "position": 22,
+      "lineNumber": 45,
+      "sceneName": "tavern",
+      "indent": 3
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 10,
+      "position": 25,
+      "lineNumber": 45,
+      "sceneName": "tavern",
+      "indent": 3
+    },
+    {
+      "type": "Prose",
+      "sceneName": "tavern",
+      "lineNumber": 46,
+      "position": 6,
+      "indent": 3,
+      "content": "The bard nods gratefully and plays your favorite tune.\n"
+    },
+    {
+      "type": "Else",
+      "sceneName": "tavern",
+      "indent": 2,
+      "lineNumber": 47,
+      "position": 4
+    },
+    {
+      "type": "Prose",
+      "sceneName": "tavern",
+      "lineNumber": 48,
+      "position": 6,
+      "indent": 3,
+      "content": "You reach for your purse but find it empty. Embarrassing.\n"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "tavern",
+      "indent": 3,
+      "lineNumber": 49,
+      "position": 6
+    },
+    {
+      "type": "Identifier",
+      "value": "reputation",
+      "rawValue": "reputation",
+      "position": 11,
+      "lineNumber": 49,
+      "sceneName": "tavern",
+      "indent": 3
+    },
+    {
+      "type": "FairmathSubtractionOperator",
+      "rawValue": "%-",
+      "position": 22,
+      "lineNumber": 49,
+      "sceneName": "tavern",
+      "indent": 3
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 5,
+      "position": 25,
+      "lineNumber": 49,
+      "sceneName": "tavern",
+      "indent": 3
+    },
+    {
+      "type": "Return",
+      "sceneName": "tavern",
+      "indent": 2,
+      "lineNumber": 50,
+      "position": 4
+    },
+    {
+      "lineNumber": 52,
+      "indent": 0,
+      "position": 0,
+      "sceneName": "tavern",
+      "type": "SceneEnd"
+    }
+  ]
+]

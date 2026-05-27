@@ -1,0 +1,177 @@
+[
+  [
+    {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    {
+      "type": "Label",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 0,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "shop",
+      "rawValue": "shop",
+      "position": 6,
+      "lineNumber": 0,
+      "sceneName": "startup",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 1,
+      "position": 0,
+      "indent": 0,
+      "content": "What would you like to buy?\n"
+    },
+    {
+      "type": "Choice",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 2,
+      "position": 0
+    },
+    {
+      "type": "HideReuse",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 3,
+      "position": 2
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 3,
+      "rawText": "Buy a sword.",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 3,
+      "position": null,
+      "indent": 1,
+      "content": "Buy a sword."
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 4,
+      "position": 4,
+      "indent": 2,
+      "content": "You buy a sword.\n"
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "startup",
+      "indent": 2,
+      "lineNumber": 5,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "shop",
+      "rawValue": "shop",
+      "position": 10,
+      "lineNumber": 5,
+      "sceneName": "startup",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "HideReuse",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 6,
+      "position": 2
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 6,
+      "rawText": "Buy a shield.",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 6,
+      "position": null,
+      "indent": 1,
+      "content": "Buy a shield."
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 7,
+      "position": 4,
+      "indent": 2,
+      "content": "You buy a shield.\n"
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "startup",
+      "indent": 2,
+      "lineNumber": 8,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "shop",
+      "rawValue": "shop",
+      "position": 10,
+      "lineNumber": 8,
+      "sceneName": "startup",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 9,
+      "rawText": "Leave the shop.",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 9,
+      "position": null,
+      "indent": 1,
+      "content": "Leave the shop."
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 10,
+      "position": 4,
+      "indent": 2,
+      "content": "You leave.\n"
+    },
+    {
+      "type": "Finish",
+      "sceneName": "startup",
+      "indent": 2,
+      "lineNumber": 11,
+      "position": 4
+    },
+    {
+      "lineNumber": 12,
+      "indent": 0,
+      "position": 0,
+      "sceneName": "startup",
+      "type": "SceneEnd"
+    }
+  ]
+]

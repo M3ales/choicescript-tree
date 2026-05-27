@@ -1,0 +1,111 @@
+[
+  {
+    "sceneName": "chapter1",
+    "blocks": {
+      "chapter1:b_0": {
+        "exitType": "ImplicitEnd"
+      }
+    },
+    "blockIndex": {
+      "chapter1:b_0": {
+        "scene": "chapter1",
+        "statementIds": [],
+        "entryType": "SceneEntry",
+        "exitType": "ImplicitEnd"
+      }
+    },
+    "edges": [
+      {
+        "kind": "SceneExit",
+        "sourceBlockId": "chapter1:b_0",
+        "targetBlockId": null,
+        "metadata": {}
+      }
+    ],
+    "entryBlockId": "chapter1:b_0",
+    "labelToBlockId": {},
+    "unresolvedEdges": []
+  },
+  {
+    "sceneName": "startup",
+    "blocks": {
+      "startup:b_0": {
+        "exitType": "Branch"
+      },
+      "startup:b_1": {
+        "exitType": "ImplicitEnd"
+      },
+      "startup:b_2": {
+        "exitType": "GotoScene"
+      },
+      "startup:b_3": {
+        "exitType": "FallThrough"
+      }
+    },
+    "blockIndex": {
+      "startup:b_0": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:0",
+          "startup:1",
+          "startup:3"
+        ],
+        "entryType": "SceneEntry",
+        "exitType": "Branch"
+      },
+      "startup:b_1": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "ImplicitEnd"
+      },
+      "startup:b_2": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:2"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "GotoScene"
+      },
+      "startup:b_3": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      }
+    },
+    "edges": [
+      {
+        "kind": "GotoScene",
+        "sourceBlockId": "startup:b_2",
+        "targetBlockId": null,
+        "metadata": {
+          "targetScene": "chapter1"
+        }
+      },
+      {
+        "kind": "IfBranch",
+        "sourceBlockId": "startup:b_0",
+        "targetBlockId": "startup:b_2",
+        "metadata": {
+          "conditionStatementId": "startup:3"
+        }
+      },
+      {
+        "kind": "IfFallThrough",
+        "sourceBlockId": "startup:b_0",
+        "targetBlockId": "startup:b_1",
+        "metadata": {}
+      },
+      {
+        "kind": "SceneExit",
+        "sourceBlockId": "startup:b_1",
+        "targetBlockId": null,
+        "metadata": {}
+      }
+    ],
+    "entryBlockId": "startup:b_0",
+    "labelToBlockId": {},
+    "unresolvedEdges": []
+  }
+]

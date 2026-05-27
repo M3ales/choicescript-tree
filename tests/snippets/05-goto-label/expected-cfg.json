@@ -1,0 +1,107 @@
+[
+  {
+    "sceneName": "startup",
+    "blocks": {
+      "startup:b_0": {
+        "exitType": "Goto"
+      },
+      "startup:b_1": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_2": {
+        "exitType": "Goto"
+      },
+      "startup:b_3": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_4": {
+        "exitType": "ImplicitEnd"
+      }
+    },
+    "blockIndex": {
+      "startup:b_0": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:0",
+          "startup:1"
+        ],
+        "entryType": "SceneEntry",
+        "exitType": "Goto"
+      },
+      "startup:b_1": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "startup:b_2": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:2",
+          "startup:3",
+          "startup:4"
+        ],
+        "entryType": "Label",
+        "exitType": "Goto",
+        "label": "start_adventure"
+      },
+      "startup:b_3": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "startup:b_4": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:5"
+        ],
+        "entryType": "Label",
+        "exitType": "ImplicitEnd",
+        "label": "the_end"
+      }
+    },
+    "edges": [
+      {
+        "kind": "Goto",
+        "sourceBlockId": "startup:b_0",
+        "targetBlockId": "startup:b_2",
+        "metadata": {
+          "label": "start_adventure"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "startup:b_1",
+        "targetBlockId": "startup:b_2",
+        "metadata": {}
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "startup:b_2",
+        "targetBlockId": "startup:b_4",
+        "metadata": {
+          "label": "the_end"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "startup:b_3",
+        "targetBlockId": "startup:b_4",
+        "metadata": {}
+      },
+      {
+        "kind": "SceneExit",
+        "sourceBlockId": "startup:b_4",
+        "targetBlockId": null,
+        "metadata": {}
+      }
+    ],
+    "entryBlockId": "startup:b_0",
+    "labelToBlockId": {
+      "start_adventure": "startup:b_2",
+      "the_end": "startup:b_4"
+    },
+    "unresolvedEdges": []
+  }
+]

@@ -8,7 +8,7 @@
     "fetch": "tsx fetch/index.ts",
     "scan": "tsx scanner/index.ts",
     "parse": "tsx parser/index.ts",
-    "start": "npm run scan && npm run parse && npm run analyse:symbols && npm run analyse:scope && npm run analyse:cfg && npm run analyse:statements && npm run analyse:flatten-gosubs && npm run analyse:inline-cfg && npm run analyse:variable-casing && npm run analyse:dataflow && npm run analyse:reachability && npm run guide && npm run graph",
+    "start": "npm run scan && npm run parse && npm run analyse:symbols && npm run analyse:scope && npm run analyse:cfg && npm run analyse:statements && npm run analyse:flatten-gosubs && npm run analyse:inline-cfg && npm run analyse:variable-casing && npm run analyse:dataflow && npm run analyse:reachability && npm run analyse:paths && npm run guide && npm run graph",
     "analyse:symbols": "tsx analysis/symbol-table/index.ts",
     "analyse:scope": "tsx analysis/scope/index.ts",
     "analyse:variable-casing": "tsx analysis/variable-casing/index.ts",
@@ -28,6 +28,8 @@
     "verify:guide": "tsx analysis/verify-guide.ts",
     "graph": "tsx renderer/graph/index.ts",
     "annotate-source": "tsx renderer/annotate-source/index.ts",
+    "test": "tsx tests/run.ts",
+    "test:update": "tsx tests/run.ts --update"
   },
   "author": "",
   "license": "MIT",

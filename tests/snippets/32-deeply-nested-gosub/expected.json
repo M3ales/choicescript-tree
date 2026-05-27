@@ -1,0 +1,1296 @@
+[
+  {
+    "name": "startup",
+    "statements": [
+      {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "result",
+          "rawValue": "result",
+          "position": 8,
+          "lineNumber": 0,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "StringLiteral",
+            "value": "",
+            "position": 15,
+            "lineNumber": 0,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 0,
+          "position": 0
+        }
+      },
+      {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "depth",
+          "rawValue": "depth",
+          "position": 8,
+          "lineNumber": 1,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 0,
+            "position": 14,
+            "lineNumber": 1,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 1,
+          "position": 0
+        }
+      },
+      {
+        "kind": "GoSub",
+        "token": {
+          "type": "GoSub",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 3,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "layer1",
+          "rawValue": "layer1",
+          "position": 7,
+          "lineNumber": 3,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        },
+        "args": []
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 4,
+            "position": 0,
+            "indent": 0,
+            "content": "Final: "
+          },
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 4,
+            "position": 16,
+            "indent": 0,
+            "content": " depth="
+          },
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 4,
+            "position": 31,
+            "indent": 0,
+            "content": "\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 7,
+            "lineNumber": 4,
+            "position": 0,
+            "text": "Final: "
+          },
+          {
+            "kind": "Print",
+            "start": 0,
+            "end": 0,
+            "lineNumber": 4,
+            "position": 7,
+            "expression": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "result",
+                "rawValue": "result",
+                "position": 9,
+                "lineNumber": 4,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          },
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 7,
+            "lineNumber": 4,
+            "position": 16,
+            "text": " depth="
+          },
+          {
+            "kind": "Print",
+            "start": 0,
+            "end": 0,
+            "lineNumber": 4,
+            "position": 23,
+            "expression": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "depth",
+                "rawValue": "depth",
+                "position": 25,
+                "lineNumber": 4,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          },
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 1,
+            "lineNumber": 4,
+            "position": 31,
+            "text": "\n"
+          }
+        ]
+      },
+      {
+        "kind": "Finish",
+        "token": {
+          "type": "Finish",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 5,
+          "position": 0
+        },
+        "buttonText": null
+      },
+      {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 7,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "layer1",
+          "rawValue": "layer1",
+          "position": 6,
+          "lineNumber": 7,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "result",
+            "rawValue": "result",
+            "position": 5,
+            "lineNumber": 8,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "assignment": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Binary",
+            "left": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "result",
+                "rawValue": "result",
+                "position": 13,
+                "lineNumber": 8,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "operator": {
+              "type": "ConcatenationOperator",
+              "rawValue": "&",
+              "position": 20,
+              "lineNumber": 8,
+              "sceneName": "startup",
+              "indent": 0
+            },
+            "right": {
+              "kind": "Literal",
+              "value": {
+                "type": "StringLiteral",
+                "value": "L1>",
+                "position": 22,
+                "lineNumber": 8,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 8,
+          "position": 0
+        }
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Binary",
+          "left": {
+            "kind": "Identifier",
+            "token": {
+              "type": "Identifier",
+              "value": "depth",
+              "rawValue": "depth",
+              "position": 5,
+              "lineNumber": 9,
+              "sceneName": "startup",
+              "indent": 0
+            }
+          },
+          "operator": {
+            "type": "AdditionOperator",
+            "rawValue": "+",
+            "position": 11,
+            "lineNumber": 9,
+            "sceneName": "startup",
+            "indent": 0
+          },
+          "right": {
+            "kind": "Literal",
+            "value": {
+              "type": "NumberLiteral",
+              "value": 1,
+              "position": 13,
+              "lineNumber": 9,
+              "sceneName": "startup",
+              "indent": 0
+            }
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 9,
+          "position": 0
+        }
+      },
+      {
+        "kind": "GoSub",
+        "token": {
+          "type": "GoSub",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 10,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "layer2",
+          "rawValue": "layer2",
+          "position": 7,
+          "lineNumber": 10,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        },
+        "args": []
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "result",
+            "rawValue": "result",
+            "position": 5,
+            "lineNumber": 11,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "assignment": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Binary",
+            "left": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "result",
+                "rawValue": "result",
+                "position": 13,
+                "lineNumber": 11,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "operator": {
+              "type": "ConcatenationOperator",
+              "rawValue": "&",
+              "position": 20,
+              "lineNumber": 11,
+              "sceneName": "startup",
+              "indent": 0
+            },
+            "right": {
+              "kind": "Literal",
+              "value": {
+                "type": "StringLiteral",
+                "value": "<L1",
+                "position": 22,
+                "lineNumber": 11,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 11,
+          "position": 0
+        }
+      },
+      {
+        "kind": "Return",
+        "token": {
+          "type": "Return",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 12,
+          "position": 0
+        }
+      },
+      {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 14,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "layer2",
+          "rawValue": "layer2",
+          "position": 6,
+          "lineNumber": 14,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "result",
+            "rawValue": "result",
+            "position": 5,
+            "lineNumber": 15,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "assignment": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Binary",
+            "left": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "result",
+                "rawValue": "result",
+                "position": 13,
+                "lineNumber": 15,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "operator": {
+              "type": "ConcatenationOperator",
+              "rawValue": "&",
+              "position": 20,
+              "lineNumber": 15,
+              "sceneName": "startup",
+              "indent": 0
+            },
+            "right": {
+              "kind": "Literal",
+              "value": {
+                "type": "StringLiteral",
+                "value": "L2>",
+                "position": 22,
+                "lineNumber": 15,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 15,
+          "position": 0
+        }
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Binary",
+          "left": {
+            "kind": "Identifier",
+            "token": {
+              "type": "Identifier",
+              "value": "depth",
+              "rawValue": "depth",
+              "position": 5,
+              "lineNumber": 16,
+              "sceneName": "startup",
+              "indent": 0
+            }
+          },
+          "operator": {
+            "type": "AdditionOperator",
+            "rawValue": "+",
+            "position": 11,
+            "lineNumber": 16,
+            "sceneName": "startup",
+            "indent": 0
+          },
+          "right": {
+            "kind": "Literal",
+            "value": {
+              "type": "NumberLiteral",
+              "value": 1,
+              "position": 13,
+              "lineNumber": 16,
+              "sceneName": "startup",
+              "indent": 0
+            }
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 16,
+          "position": 0
+        }
+      },
+      {
+        "kind": "If",
+        "token": {
+          "type": "If",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 17,
+          "position": 0
+        },
+        "body": [
+          {
+            "kind": "GoSub",
+            "token": {
+              "type": "GoSub",
+              "sceneName": "startup",
+              "indent": 1,
+              "lineNumber": 18,
+              "position": 2
+            },
+            "label": {
+              "type": "Identifier",
+              "value": "layer3",
+              "rawValue": "layer3",
+              "position": 9,
+              "lineNumber": 18,
+              "sceneName": "startup",
+              "indent": 1,
+              "isLabelName": true
+            },
+            "args": []
+          }
+        ],
+        "expression": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Binary",
+            "left": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "depth",
+                "rawValue": "depth",
+                "position": 5,
+                "lineNumber": 17,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "operator": {
+              "type": "EqualityOperator",
+              "rawValue": "=",
+              "position": 11,
+              "lineNumber": 17,
+              "sceneName": "startup",
+              "indent": 0
+            },
+            "right": {
+              "kind": "Literal",
+              "value": {
+                "type": "NumberLiteral",
+                "value": 2,
+                "position": 13,
+                "lineNumber": 17,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          }
+        },
+        "elseBranch": null,
+        "elseIfBranches": []
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "result",
+            "rawValue": "result",
+            "position": 5,
+            "lineNumber": 19,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "assignment": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Binary",
+            "left": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "result",
+                "rawValue": "result",
+                "position": 13,
+                "lineNumber": 19,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "operator": {
+              "type": "ConcatenationOperator",
+              "rawValue": "&",
+              "position": 20,
+              "lineNumber": 19,
+              "sceneName": "startup",
+              "indent": 0
+            },
+            "right": {
+              "kind": "Literal",
+              "value": {
+                "type": "StringLiteral",
+                "value": "<L2",
+                "position": 22,
+                "lineNumber": 19,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 19,
+          "position": 0
+        }
+      },
+      {
+        "kind": "Return",
+        "token": {
+          "type": "Return",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 20,
+          "position": 0
+        }
+      },
+      {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 22,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "layer3",
+          "rawValue": "layer3",
+          "position": 6,
+          "lineNumber": 22,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "result",
+            "rawValue": "result",
+            "position": 5,
+            "lineNumber": 23,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "assignment": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Binary",
+            "left": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "result",
+                "rawValue": "result",
+                "position": 13,
+                "lineNumber": 23,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "operator": {
+              "type": "ConcatenationOperator",
+              "rawValue": "&",
+              "position": 20,
+              "lineNumber": 23,
+              "sceneName": "startup",
+              "indent": 0
+            },
+            "right": {
+              "kind": "Literal",
+              "value": {
+                "type": "StringLiteral",
+                "value": "L3>",
+                "position": 22,
+                "lineNumber": 23,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 23,
+          "position": 0
+        }
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Binary",
+          "left": {
+            "kind": "Identifier",
+            "token": {
+              "type": "Identifier",
+              "value": "depth",
+              "rawValue": "depth",
+              "position": 5,
+              "lineNumber": 24,
+              "sceneName": "startup",
+              "indent": 0
+            }
+          },
+          "operator": {
+            "type": "AdditionOperator",
+            "rawValue": "+",
+            "position": 11,
+            "lineNumber": 24,
+            "sceneName": "startup",
+            "indent": 0
+          },
+          "right": {
+            "kind": "Literal",
+            "value": {
+              "type": "NumberLiteral",
+              "value": 1,
+              "position": 13,
+              "lineNumber": 24,
+              "sceneName": "startup",
+              "indent": 0
+            }
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 24,
+          "position": 0
+        }
+      },
+      {
+        "kind": "GoSub",
+        "token": {
+          "type": "GoSub",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 25,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "layer4",
+          "rawValue": "layer4",
+          "position": 7,
+          "lineNumber": 25,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        },
+        "args": []
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "result",
+            "rawValue": "result",
+            "position": 5,
+            "lineNumber": 26,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "assignment": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Binary",
+            "left": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "result",
+                "rawValue": "result",
+                "position": 13,
+                "lineNumber": 26,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "operator": {
+              "type": "ConcatenationOperator",
+              "rawValue": "&",
+              "position": 20,
+              "lineNumber": 26,
+              "sceneName": "startup",
+              "indent": 0
+            },
+            "right": {
+              "kind": "Literal",
+              "value": {
+                "type": "StringLiteral",
+                "value": "<L3",
+                "position": 22,
+                "lineNumber": 26,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 26,
+          "position": 0
+        }
+      },
+      {
+        "kind": "Return",
+        "token": {
+          "type": "Return",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 27,
+          "position": 0
+        }
+      },
+      {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 29,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "layer4",
+          "rawValue": "layer4",
+          "position": 6,
+          "lineNumber": 29,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "result",
+            "rawValue": "result",
+            "position": 5,
+            "lineNumber": 30,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "assignment": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Binary",
+            "left": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "result",
+                "rawValue": "result",
+                "position": 13,
+                "lineNumber": 30,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "operator": {
+              "type": "ConcatenationOperator",
+              "rawValue": "&",
+              "position": 20,
+              "lineNumber": 30,
+              "sceneName": "startup",
+              "indent": 0
+            },
+            "right": {
+              "kind": "Literal",
+              "value": {
+                "type": "StringLiteral",
+                "value": "L4>",
+                "position": 22,
+                "lineNumber": 30,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 30,
+          "position": 0
+        }
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Binary",
+          "left": {
+            "kind": "Identifier",
+            "token": {
+              "type": "Identifier",
+              "value": "depth",
+              "rawValue": "depth",
+              "position": 5,
+              "lineNumber": 31,
+              "sceneName": "startup",
+              "indent": 0
+            }
+          },
+          "operator": {
+            "type": "AdditionOperator",
+            "rawValue": "+",
+            "position": 11,
+            "lineNumber": 31,
+            "sceneName": "startup",
+            "indent": 0
+          },
+          "right": {
+            "kind": "Literal",
+            "value": {
+              "type": "NumberLiteral",
+              "value": 1,
+              "position": 13,
+              "lineNumber": 31,
+              "sceneName": "startup",
+              "indent": 0
+            }
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 31,
+          "position": 0
+        }
+      },
+      {
+        "kind": "If",
+        "token": {
+          "type": "If",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 32,
+          "position": 0
+        },
+        "body": [
+          {
+            "kind": "GoSub",
+            "token": {
+              "type": "GoSub",
+              "sceneName": "startup",
+              "indent": 1,
+              "lineNumber": 33,
+              "position": 2
+            },
+            "label": {
+              "type": "Identifier",
+              "value": "layer5",
+              "rawValue": "layer5",
+              "position": 9,
+              "lineNumber": 33,
+              "sceneName": "startup",
+              "indent": 1,
+              "isLabelName": true
+            },
+            "args": []
+          }
+        ],
+        "expression": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Binary",
+            "left": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "depth",
+                "rawValue": "depth",
+                "position": 5,
+                "lineNumber": 32,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "operator": {
+              "type": "GreaterThanEqualsOperator",
+              "rawValue": ">=",
+              "position": 11,
+              "lineNumber": 32,
+              "sceneName": "startup",
+              "indent": 0
+            },
+            "right": {
+              "kind": "Literal",
+              "value": {
+                "type": "NumberLiteral",
+                "value": 4,
+                "position": 14,
+                "lineNumber": 32,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          }
+        },
+        "elseBranch": null,
+        "elseIfBranches": []
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "result",
+            "rawValue": "result",
+            "position": 5,
+            "lineNumber": 34,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "assignment": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Binary",
+            "left": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "result",
+                "rawValue": "result",
+                "position": 13,
+                "lineNumber": 34,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "operator": {
+              "type": "ConcatenationOperator",
+              "rawValue": "&",
+              "position": 20,
+              "lineNumber": 34,
+              "sceneName": "startup",
+              "indent": 0
+            },
+            "right": {
+              "kind": "Literal",
+              "value": {
+                "type": "StringLiteral",
+                "value": "<L4",
+                "position": 22,
+                "lineNumber": 34,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 34,
+          "position": 0
+        }
+      },
+      {
+        "kind": "Return",
+        "token": {
+          "type": "Return",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 35,
+          "position": 0
+        }
+      },
+      {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 37,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "layer5",
+          "rawValue": "layer5",
+          "position": 6,
+          "lineNumber": 37,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "result",
+            "rawValue": "result",
+            "position": 5,
+            "lineNumber": 38,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "assignment": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Binary",
+            "left": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "result",
+                "rawValue": "result",
+                "position": 13,
+                "lineNumber": 38,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "operator": {
+              "type": "ConcatenationOperator",
+              "rawValue": "&",
+              "position": 20,
+              "lineNumber": 38,
+              "sceneName": "startup",
+              "indent": 0
+            },
+            "right": {
+              "kind": "Literal",
+              "value": {
+                "type": "StringLiteral",
+                "value": "L5",
+                "position": 22,
+                "lineNumber": 38,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 38,
+          "position": 0
+        }
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Binary",
+          "left": {
+            "kind": "Identifier",
+            "token": {
+              "type": "Identifier",
+              "value": "depth",
+              "rawValue": "depth",
+              "position": 5,
+              "lineNumber": 39,
+              "sceneName": "startup",
+              "indent": 0
+            }
+          },
+          "operator": {
+            "type": "AdditionOperator",
+            "rawValue": "+",
+            "position": 11,
+            "lineNumber": 39,
+            "sceneName": "startup",
+            "indent": 0
+          },
+          "right": {
+            "kind": "Literal",
+            "value": {
+              "type": "NumberLiteral",
+              "value": 1,
+              "position": 13,
+              "lineNumber": 39,
+              "sceneName": "startup",
+              "indent": 0
+            }
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 39,
+          "position": 0
+        }
+      },
+      {
+        "kind": "Return",
+        "token": {
+          "type": "Return",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 40,
+          "position": 0
+        }
+      }
+    ],
+    "parseErrors": [],
+    "start": {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    "end": {
+      "type": "Return",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 40,
+      "position": 0
+    }
+  }
+]

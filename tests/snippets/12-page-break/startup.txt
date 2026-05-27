@@ -1,0 +1,9 @@
+Chapter one begins.
+
+*page_break
+
+Chapter two begins.
+
+*page_break Continue reading
+
+The story continues.

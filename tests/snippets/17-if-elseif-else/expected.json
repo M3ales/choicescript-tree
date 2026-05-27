@@ -1,0 +1,379 @@
+[
+  {
+    "name": "startup",
+    "statements": [
+      {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "score",
+          "rawValue": "score",
+          "position": 8,
+          "lineNumber": 0,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 75,
+            "position": 14,
+            "lineNumber": 0,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 0,
+          "position": 0
+        }
+      },
+      {
+        "kind": "If",
+        "token": {
+          "type": "If",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 2,
+          "position": 0
+        },
+        "body": [
+          {
+            "content": [
+              {
+                "type": "Prose",
+                "sceneName": "startup",
+                "lineNumber": 3,
+                "position": 2,
+                "indent": 1,
+                "content": "Grade: A\n"
+              }
+            ],
+            "kind": "Prose",
+            "parsedSegments": [
+              {
+                "kind": "Text",
+                "start": 0,
+                "end": 9,
+                "lineNumber": 3,
+                "position": 2,
+                "text": "Grade: A\n"
+              }
+            ]
+          }
+        ],
+        "expression": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Binary",
+            "left": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "score",
+                "rawValue": "score",
+                "position": 5,
+                "lineNumber": 2,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "operator": {
+              "type": "GreaterThanEqualsOperator",
+              "rawValue": ">=",
+              "position": 11,
+              "lineNumber": 2,
+              "sceneName": "startup",
+              "indent": 0
+            },
+            "right": {
+              "kind": "Literal",
+              "value": {
+                "type": "NumberLiteral",
+                "value": 90,
+                "position": 14,
+                "lineNumber": 2,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          }
+        },
+        "elseBranch": {
+          "kind": "Else",
+          "token": {
+            "type": "Else",
+            "sceneName": "startup",
+            "indent": 0,
+            "lineNumber": 10,
+            "position": 0
+          },
+          "body": [
+            {
+              "content": [
+                {
+                  "type": "Prose",
+                  "sceneName": "startup",
+                  "lineNumber": 11,
+                  "position": 2,
+                  "indent": 1,
+                  "content": "Grade: F\n\n"
+                }
+              ],
+              "kind": "Prose",
+              "parsedSegments": [
+                {
+                  "kind": "Text",
+                  "start": 0,
+                  "end": 10,
+                  "lineNumber": 11,
+                  "position": 2,
+                  "text": "Grade: F\n\n"
+                }
+              ]
+            }
+          ]
+        },
+        "elseIfBranches": [
+          {
+            "kind": "ElseIf",
+            "token": {
+              "type": "ElseIf",
+              "sceneName": "startup",
+              "indent": 0,
+              "lineNumber": 4,
+              "position": 0
+            },
+            "body": [
+              {
+                "content": [
+                  {
+                    "type": "Prose",
+                    "sceneName": "startup",
+                    "lineNumber": 5,
+                    "position": 2,
+                    "indent": 1,
+                    "content": "Grade: B\n"
+                  }
+                ],
+                "kind": "Prose",
+                "parsedSegments": [
+                  {
+                    "kind": "Text",
+                    "start": 0,
+                    "end": 9,
+                    "lineNumber": 5,
+                    "position": 2,
+                    "text": "Grade: B\n"
+                  }
+                ]
+              }
+            ],
+            "expression": {
+              "kind": "Grouping",
+              "expression": {
+                "kind": "Binary",
+                "left": {
+                  "kind": "Identifier",
+                  "token": {
+                    "type": "Identifier",
+                    "value": "score",
+                    "rawValue": "score",
+                    "position": 9,
+                    "lineNumber": 4,
+                    "sceneName": "startup",
+                    "indent": 0
+                  }
+                },
+                "operator": {
+                  "type": "GreaterThanEqualsOperator",
+                  "rawValue": ">=",
+                  "position": 15,
+                  "lineNumber": 4,
+                  "sceneName": "startup",
+                  "indent": 0
+                },
+                "right": {
+                  "kind": "Literal",
+                  "value": {
+                    "type": "NumberLiteral",
+                    "value": 80,
+                    "position": 18,
+                    "lineNumber": 4,
+                    "sceneName": "startup",
+                    "indent": 0
+                  }
+                }
+              }
+            }
+          },
+          {
+            "kind": "ElseIf",
+            "token": {
+              "type": "ElseIf",
+              "sceneName": "startup",
+              "indent": 0,
+              "lineNumber": 6,
+              "position": 0
+            },
+            "body": [
+              {
+                "content": [
+                  {
+                    "type": "Prose",
+                    "sceneName": "startup",
+                    "lineNumber": 7,
+                    "position": 2,
+                    "indent": 1,
+                    "content": "Grade: C\n"
+                  }
+                ],
+                "kind": "Prose",
+                "parsedSegments": [
+                  {
+                    "kind": "Text",
+                    "start": 0,
+                    "end": 9,
+                    "lineNumber": 7,
+                    "position": 2,
+                    "text": "Grade: C\n"
+                  }
+                ]
+              }
+            ],
+            "expression": {
+              "kind": "Grouping",
+              "expression": {
+                "kind": "Binary",
+                "left": {
+                  "kind": "Identifier",
+                  "token": {
+                    "type": "Identifier",
+                    "value": "score",
+                    "rawValue": "score",
+                    "position": 9,
+                    "lineNumber": 6,
+                    "sceneName": "startup",
+                    "indent": 0
+                  }
+                },
+                "operator": {
+                  "type": "GreaterThanEqualsOperator",
+                  "rawValue": ">=",
+                  "position": 15,
+                  "lineNumber": 6,
+                  "sceneName": "startup",
+                  "indent": 0
+                },
+                "right": {
+                  "kind": "Literal",
+                  "value": {
+                    "type": "NumberLiteral",
+                    "value": 70,
+                    "position": 18,
+                    "lineNumber": 6,
+                    "sceneName": "startup",
+                    "indent": 0
+                  }
+                }
+              }
+            }
+          },
+          {
+            "kind": "ElseIf",
+            "token": {
+              "type": "ElseIf",
+              "sceneName": "startup",
+              "indent": 0,
+              "lineNumber": 8,
+              "position": 0
+            },
+            "body": [
+              {
+                "content": [
+                  {
+                    "type": "Prose",
+                    "sceneName": "startup",
+                    "lineNumber": 9,
+                    "position": 2,
+                    "indent": 1,
+                    "content": "Grade: D\n"
+                  }
+                ],
+                "kind": "Prose",
+                "parsedSegments": [
+                  {
+                    "kind": "Text",
+                    "start": 0,
+                    "end": 9,
+                    "lineNumber": 9,
+                    "position": 2,
+                    "text": "Grade: D\n"
+                  }
+                ]
+              }
+            ],
+            "expression": {
+              "kind": "Grouping",
+              "expression": {
+                "kind": "Binary",
+                "left": {
+                  "kind": "Identifier",
+                  "token": {
+                    "type": "Identifier",
+                    "value": "score",
+                    "rawValue": "score",
+                    "position": 9,
+                    "lineNumber": 8,
+                    "sceneName": "startup",
+                    "indent": 0
+                  }
+                },
+                "operator": {
+                  "type": "GreaterThanEqualsOperator",
+                  "rawValue": ">=",
+                  "position": 15,
+                  "lineNumber": 8,
+                  "sceneName": "startup",
+                  "indent": 0
+                },
+                "right": {
+                  "kind": "Literal",
+                  "value": {
+                    "type": "NumberLiteral",
+                    "value": 60,
+                    "position": 18,
+                    "lineNumber": 8,
+                    "sceneName": "startup",
+                    "indent": 0
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "parseErrors": [],
+    "start": {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    "end": {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 11,
+      "position": 2,
+      "indent": 1,
+      "content": "Grade: F\n\n"
+    }
+  }
+]

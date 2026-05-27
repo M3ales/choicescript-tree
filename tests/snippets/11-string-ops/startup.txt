@@ -1,0 +1,11 @@
+*create first_name "John"
+*create last_name "Smith"
+*create full_name ""
+
+*comment concat is weird, but strictly binary. Next statement is valid concat.
+*set full_name (first_name& " ")&last_name
+
+*comment this statement is not valid since & is strictly binary, no precedence without parenthesis
+*set full_name (first_name&" "&last_name)
+
+Hello, ${full_name}!

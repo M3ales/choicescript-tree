@@ -1,0 +1,58 @@
+*set val 100
+*set nested 50
+*set deep 25
+*set implicit_control_flow true
+*temp matched_deep false
+*temp matched_nested false
+*temp matched_outer false
+
+Prose at indent 0 before if.
+
+*if (val >= 100)
+  Inside if body indent 1.
+  *if (nested >= 50)
+    Inside nested if indent 2.
+    *if (deep >= 25)
+      Inside deep if indent 3.
+      *set matched_deep true
+
+Deep prose at indent 2.
+
+*if ((matched_deep = false) and (deep < 25))
+  Deep else indent 3.
+
+Deep prose after else at indent 2.
+
+*if (nested >= 50)
+  *set matched_nested true
+
+Nested prose at indent 1.
+
+*if ((matched_nested = false) and (nested >= 25))
+  Nested elseif indent 2.
+  *set matched_nested true
+
+Nested prose after elseif at indent 1.
+
+*if (matched_nested = false)
+  Nested else indent 2.
+
+Nested prose after else at indent 1.
+
+*if (val >= 100)
+  *set matched_outer true
+
+Prose at indent 0 after if body.
+
+*if ((matched_outer = false) and (val >= 50))
+  Elseif body indent 1.
+  *set matched_outer true
+
+Prose at indent 0 after elseif.
+
+*if (matched_outer = false)
+  Else body indent 1.
+
+Prose at indent 0 after else.
+
+Final prose.

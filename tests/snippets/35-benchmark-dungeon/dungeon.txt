@@ -1,0 +1,197 @@
+*temp current_room ""
+*temp encounter_roll 0
+*temp enemy_hp 0
+*temp loot_roll 0
+
+*label dungeon_hub
+
+HP: ${hp}/${max_hp}. Potions: ${potions}. Keys: ${keys}. Rooms cleared: ${rooms_cleared}.
+
+*if rooms_cleared >= 6
+  A massive iron door looms before you. The boss chamber.
+  *if keys >= 2
+    You have enough keys to unlock it.
+    *choice
+      #Enter the boss chamber
+        *goto_scene boss
+      #Rest and prepare first
+        *gosub rest
+        *goto dungeon_hub
+  *else
+    The door requires 2 keys. You have ${keys}. Explore more rooms.
+
+The corridor branches in several directions.
+
+*choice
+  *hide_reuse #Take the left passage (dark and narrow)
+    *set current_room "narrow"
+    *gosub enter_room
+    *goto dungeon_hub
+  *hide_reuse #Take the right passage (wide and echoing)
+    *set current_room "wide"
+    *gosub enter_room
+    *goto dungeon_hub
+  *hide_reuse #Descend a crumbling staircase
+    *set current_room "stairs"
+    *gosub enter_room
+    *goto dungeon_hub
+  *hide_reuse #Crawl through a gap in the wall
+    *set current_room "gap"
+    *gosub enter_room
+    *goto dungeon_hub
+  *hide_reuse #Follow the sound of running water
+    *set current_room "water"
+    *gosub enter_room
+    *goto dungeon_hub
+  *hide_reuse #Push open a rusted gate
+    *set current_room "gate"
+    *gosub enter_room
+    *goto dungeon_hub
+  *selectable_if (potions > 0) #Use a potion
+    *gosub use_potion
+    *goto dungeon_hub
+  #Retreat to the surface
+    *goto retreat
+
+*label enter_room
+*set rooms_cleared + 1
+*rand encounter_roll 1 10
+
+*if encounter_roll <= 6
+  *gosub combat_encounter
+*elseif encounter_roll <= 8
+  *gosub treasure_room
+*else
+  *gosub key_room
+
+*return
+
+*label combat_encounter
+*set encounters + 1
+*set enemy_hp (30 + (encounters * 5))
+
+A creature lunges from the shadows!
+
+*label combat_round
+
+Enemy HP: ${enemy_hp}. Your HP: ${hp}.
+
+*if enemy_hp <= 0
+  *goto combat_victory
+*if hp <= 0
+  *goto death
+
+*choice
+  #Strike!
+    *temp damage 0
+    *rand damage (attack - 5) (attack + 5)
+    *set enemy_hp - damage
+    You deal ${damage} damage!
+    *temp enemy_damage 0
+    *rand enemy_damage 5 (10 + (encounters * 2))
+    *temp mitigated 0
+    *set mitigated (enemy_damage - defense)
+    *if mitigated < 0
+      *set mitigated 0
+    *set hp - mitigated
+    The creature strikes back! ${mitigated} damage after your armor absorbs the rest.
+    *goto combat_round
+  #Dodge and counter
+    *temp dodge_roll 0
+    *rand dodge_roll 1 10
+    *if dodge_roll > 4
+      You dodge the attack!
+      *temp damage 0
+      *rand damage (attack - 3) (attack + 3)
+      *set enemy_hp - damage
+      Counter-attack for ${damage}!
+    *else
+      You stumble! The creature rakes you.
+      *temp enemy_damage 0
+      *rand enemy_damage 8 (15 + (encounters * 2))
+      *set hp - enemy_damage
+      ${enemy_damage} damage taken!
+    *goto combat_round
+  *selectable_if (potions > 0) #Use a potion mid-fight
+    *gosub use_potion
+    *temp enemy_damage 0
+    *rand enemy_damage 3 8
+    *set hp - enemy_damage
+    The creature strikes while you drink! ${enemy_damage} damage.
+    *goto combat_round
+
+*label combat_victory
+*rand loot_roll 1 10
+*if loot_roll > 7
+  You find a potion on the corpse!
+  *set potions + 1
+*if loot_roll <= 3
+  A few coins glint among the remains.
+  *set treasure_collected + 1
+Victory! The creature falls.
+*return
+
+*label treasure_room
+*set treasure_collected + 1
+
+A glittering cache of treasure!
+
+*choice
+  #Take the gold
+    *set treasure_collected + 2
+    You stuff your pockets with coins.
+    *return
+  #Search for hidden items
+    *rand loot_roll 1 10
+    *if loot_roll > 5
+      A healing potion hidden behind the gold!
+      *set potions + 1
+      *set treasure_collected + 1
+    *else
+      Nothing else of value.
+    *return
+
+*label key_room
+An ornate chest sits on a pedestal. Inside, a heavy iron key.
+
+*set keys + 1
+
+You now have ${keys} key(s).
+*return
+
+*label use_potion
+*set potions - 1
+*temp heal 0
+*rand heal 25 40
+*set hp + heal
+*if hp > max_hp
+  *set hp max_hp
+You drink a potion and recover ${heal} HP. HP: ${hp}/${max_hp}.
+*return
+
+*label rest
+You find a quiet alcove and rest briefly.
+*temp heal 0
+*rand heal 10 20
+*set hp + heal
+*if hp > max_hp
+  *set hp max_hp
+Recovered ${heal} HP. HP: ${hp}/${max_hp}.
+*return
+
+*label death
+Your torch sputters out. The dungeon claims another adventurer.
+
+Rooms cleared: ${rooms_cleared}. Encounters survived: ${encounters}.
+*ending "Fallen in the Deep"
+
+*label retreat
+You climb back to the surface, blinking in the sunlight.
+
+*if rooms_cleared >= 3
+  A respectable delve. You'll return stronger.
+*else
+  Perhaps you weren't ready for the dungeon.
+
+Rooms explored: ${rooms_cleared}. Treasure collected: ${treasure_collected}.
+*finish

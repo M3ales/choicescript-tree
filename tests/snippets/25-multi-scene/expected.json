@@ -1,0 +1,303 @@
+[
+  {
+    "name": "market",
+    "statements": [],
+    "parseErrors": [],
+    "start": {
+      "sceneName": "market",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    "end": {
+      "sceneName": "market",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    }
+  },
+  {
+    "name": "startup",
+    "statements": [
+      {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "health",
+          "rawValue": "health",
+          "position": 8,
+          "lineNumber": 0,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 100,
+            "position": 15,
+            "lineNumber": 0,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 0,
+          "position": 0
+        }
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 2,
+            "position": 0,
+            "indent": 0,
+            "content": "Welcome, adventurer.\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 21,
+            "lineNumber": 2,
+            "position": 0,
+            "text": "Welcome, adventurer.\n"
+          }
+        ]
+      },
+      {
+        "kind": "GotoScene",
+        "token": {
+          "type": "GotoScene",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 3,
+          "position": 0
+        },
+        "scene": {
+          "type": "Identifier",
+          "value": "tavern",
+          "rawValue": "tavern",
+          "position": 12,
+          "lineNumber": 3,
+          "sceneName": "startup",
+          "indent": 0,
+          "isSceneName": true,
+          "isLabelName": false
+        }
+      }
+    ],
+    "parseErrors": [],
+    "start": {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    "end": {
+      "type": "Identifier",
+      "value": "tavern",
+      "rawValue": "tavern",
+      "position": 12,
+      "lineNumber": 3,
+      "sceneName": "startup",
+      "indent": 0,
+      "isSceneName": true,
+      "isLabelName": false
+    }
+  },
+  {
+    "name": "tavern",
+    "statements": [
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "tavern",
+            "lineNumber": 0,
+            "position": 0,
+            "indent": 0,
+            "content": "You enter the tavern.\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 22,
+            "lineNumber": 0,
+            "position": 0,
+            "text": "You enter the tavern.\n"
+          }
+        ]
+      },
+      {
+        "kind": "Choice",
+        "token": {
+          "type": "Choice",
+          "sceneName": "tavern",
+          "indent": 0,
+          "lineNumber": 1,
+          "position": 0
+        },
+        "body": [
+          {
+            "kind": "ChoiceOption",
+            "token": {
+              "type": "ChoiceOption",
+              "sceneName": "tavern",
+              "indent": 1,
+              "lineNumber": 2,
+              "rawText": "Order a drink.",
+              "hasMultiReplace": false
+            },
+            "body": [
+              {
+                "content": [
+                  {
+                    "type": "Prose",
+                    "sceneName": "tavern",
+                    "lineNumber": 3,
+                    "position": 4,
+                    "indent": 2,
+                    "content": "You sit at the bar.\n"
+                  }
+                ],
+                "kind": "Prose",
+                "parsedSegments": [
+                  {
+                    "kind": "Text",
+                    "start": 0,
+                    "end": 20,
+                    "lineNumber": 3,
+                    "position": 4,
+                    "text": "You sit at the bar.\n"
+                  }
+                ]
+              },
+              {
+                "kind": "GotoScene",
+                "token": {
+                  "type": "GotoScene",
+                  "sceneName": "tavern",
+                  "indent": 2,
+                  "lineNumber": 4,
+                  "position": 4
+                },
+                "scene": {
+                  "type": "Identifier",
+                  "value": "market",
+                  "rawValue": "market",
+                  "position": 16,
+                  "lineNumber": 4,
+                  "sceneName": "tavern",
+                  "indent": 2,
+                  "isSceneName": true,
+                  "isLabelName": false
+                }
+              }
+            ],
+            "parsedSegments": [
+              {
+                "kind": "Text",
+                "start": 0,
+                "end": 14,
+                "lineNumber": 2,
+                "position": null,
+                "text": "Order a drink."
+              }
+            ],
+            "reuse": null,
+            "selectableIf": null
+          },
+          {
+            "kind": "ChoiceOption",
+            "token": {
+              "type": "ChoiceOption",
+              "sceneName": "tavern",
+              "indent": 1,
+              "lineNumber": 5,
+              "rawText": "Talk to the bartender.",
+              "hasMultiReplace": false
+            },
+            "body": [
+              {
+                "content": [
+                  {
+                    "type": "Prose",
+                    "sceneName": "tavern",
+                    "lineNumber": 6,
+                    "position": 4,
+                    "indent": 2,
+                    "content": "The bartender nods.\n"
+                  }
+                ],
+                "kind": "Prose",
+                "parsedSegments": [
+                  {
+                    "kind": "Text",
+                    "start": 0,
+                    "end": 20,
+                    "lineNumber": 6,
+                    "position": 4,
+                    "text": "The bartender nods.\n"
+                  }
+                ]
+              },
+              {
+                "kind": "Finish",
+                "token": {
+                  "type": "Finish",
+                  "sceneName": "tavern",
+                  "indent": 2,
+                  "lineNumber": 7,
+                  "position": 4
+                },
+                "buttonText": null
+              }
+            ],
+            "parsedSegments": [
+              {
+                "kind": "Text",
+                "start": 0,
+                "end": 22,
+                "lineNumber": 5,
+                "position": null,
+                "text": "Talk to the bartender."
+              }
+            ],
+            "reuse": null,
+            "selectableIf": null
+          }
+        ]
+      }
+    ],
+    "parseErrors": [],
+    "start": {
+      "sceneName": "tavern",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    "end": {
+      "type": "Finish",
+      "sceneName": "tavern",
+      "indent": 2,
+      "lineNumber": 7,
+      "position": 4
+    }
+  }
+]

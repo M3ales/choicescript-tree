@@ -1,0 +1,370 @@
+[
+  {
+    "name": "startup",
+    "statements": [
+      {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "strength",
+          "rawValue": "strength",
+          "position": 8,
+          "lineNumber": 0,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 30,
+            "position": 17,
+            "lineNumber": 0,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 0,
+          "position": 0
+        }
+      },
+      {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "magic",
+          "rawValue": "magic",
+          "position": 8,
+          "lineNumber": 1,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 60,
+            "position": 14,
+            "lineNumber": 1,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 1,
+          "position": 0
+        }
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 3,
+            "position": 0,
+            "indent": 0,
+            "content": "Choose your approach:\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 22,
+            "lineNumber": 3,
+            "position": 0,
+            "text": "Choose your approach:\n"
+          }
+        ]
+      },
+      {
+        "kind": "Choice",
+        "token": {
+          "type": "Choice",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 4,
+          "position": 0
+        },
+        "body": [
+          {
+            "kind": "ChoiceOption",
+            "token": {
+              "type": "ChoiceOption",
+              "sceneName": "startup",
+              "indent": 1,
+              "lineNumber": 5,
+              "position": 16,
+              "rawText": "Break down the door.",
+              "hasMultiReplace": false
+            },
+            "body": [
+              {
+                "content": [
+                  {
+                    "type": "Prose",
+                    "sceneName": "startup",
+                    "lineNumber": 6,
+                    "position": 4,
+                    "indent": 2,
+                    "content": "You smash through!\n"
+                  }
+                ],
+                "kind": "Prose",
+                "parsedSegments": [
+                  {
+                    "kind": "Text",
+                    "start": 0,
+                    "end": 19,
+                    "lineNumber": 6,
+                    "position": 4,
+                    "text": "You smash through!\n"
+                  }
+                ]
+              },
+              {
+                "kind": "Finish",
+                "token": {
+                  "type": "Finish",
+                  "sceneName": "startup",
+                  "indent": 2,
+                  "lineNumber": 7,
+                  "position": 4
+                },
+                "buttonText": null
+              }
+            ],
+            "parsedSegments": [
+              {
+                "kind": "Text",
+                "start": 0,
+                "end": 20,
+                "lineNumber": 5,
+                "position": 17,
+                "text": "Break down the door."
+              }
+            ],
+            "reuse": null,
+            "selectableIf": {
+              "kind": "Grouping",
+              "expression": {
+                "kind": "Binary",
+                "left": {
+                  "kind": "Identifier",
+                  "token": {
+                    "type": "Identifier",
+                    "value": "strength",
+                    "rawValue": "strength",
+                    "position": 18,
+                    "lineNumber": 5,
+                    "sceneName": "startup",
+                    "indent": 1
+                  }
+                },
+                "operator": {
+                  "type": "GreaterThanEqualsOperator",
+                  "rawValue": ">=",
+                  "position": 27,
+                  "lineNumber": 5,
+                  "sceneName": "startup",
+                  "indent": 1
+                },
+                "right": {
+                  "kind": "Literal",
+                  "value": {
+                    "type": "NumberLiteral",
+                    "value": 50,
+                    "position": 30,
+                    "lineNumber": 5,
+                    "sceneName": "startup",
+                    "indent": 1
+                  }
+                }
+              }
+            }
+          },
+          {
+            "kind": "ChoiceOption",
+            "token": {
+              "type": "ChoiceOption",
+              "sceneName": "startup",
+              "indent": 1,
+              "lineNumber": 8,
+              "position": 16,
+              "rawText": "Cast a spell.",
+              "hasMultiReplace": false
+            },
+            "body": [
+              {
+                "content": [
+                  {
+                    "type": "Prose",
+                    "sceneName": "startup",
+                    "lineNumber": 9,
+                    "position": 4,
+                    "indent": 2,
+                    "content": "You cast an opening spell.\n"
+                  }
+                ],
+                "kind": "Prose",
+                "parsedSegments": [
+                  {
+                    "kind": "Text",
+                    "start": 0,
+                    "end": 27,
+                    "lineNumber": 9,
+                    "position": 4,
+                    "text": "You cast an opening spell.\n"
+                  }
+                ]
+              },
+              {
+                "kind": "Finish",
+                "token": {
+                  "type": "Finish",
+                  "sceneName": "startup",
+                  "indent": 2,
+                  "lineNumber": 10,
+                  "position": 4
+                },
+                "buttonText": null
+              }
+            ],
+            "parsedSegments": [
+              {
+                "kind": "Text",
+                "start": 0,
+                "end": 13,
+                "lineNumber": 8,
+                "position": 17,
+                "text": "Cast a spell."
+              }
+            ],
+            "reuse": null,
+            "selectableIf": {
+              "kind": "Grouping",
+              "expression": {
+                "kind": "Binary",
+                "left": {
+                  "kind": "Identifier",
+                  "token": {
+                    "type": "Identifier",
+                    "value": "magic",
+                    "rawValue": "magic",
+                    "position": 18,
+                    "lineNumber": 8,
+                    "sceneName": "startup",
+                    "indent": 1
+                  }
+                },
+                "operator": {
+                  "type": "GreaterThanEqualsOperator",
+                  "rawValue": ">=",
+                  "position": 24,
+                  "lineNumber": 8,
+                  "sceneName": "startup",
+                  "indent": 1
+                },
+                "right": {
+                  "kind": "Literal",
+                  "value": {
+                    "type": "NumberLiteral",
+                    "value": 50,
+                    "position": 27,
+                    "lineNumber": 8,
+                    "sceneName": "startup",
+                    "indent": 1
+                  }
+                }
+              }
+            }
+          },
+          {
+            "kind": "ChoiceOption",
+            "token": {
+              "type": "ChoiceOption",
+              "sceneName": "startup",
+              "indent": 1,
+              "lineNumber": 11,
+              "rawText": "Pick the lock.",
+              "hasMultiReplace": false
+            },
+            "body": [
+              {
+                "content": [
+                  {
+                    "type": "Prose",
+                    "sceneName": "startup",
+                    "lineNumber": 12,
+                    "position": 4,
+                    "indent": 2,
+                    "content": "You pick the lock carefully.\n"
+                  }
+                ],
+                "kind": "Prose",
+                "parsedSegments": [
+                  {
+                    "kind": "Text",
+                    "start": 0,
+                    "end": 29,
+                    "lineNumber": 12,
+                    "position": 4,
+                    "text": "You pick the lock carefully.\n"
+                  }
+                ]
+              },
+              {
+                "kind": "Finish",
+                "token": {
+                  "type": "Finish",
+                  "sceneName": "startup",
+                  "indent": 2,
+                  "lineNumber": 13,
+                  "position": 4
+                },
+                "buttonText": null
+              }
+            ],
+            "parsedSegments": [
+              {
+                "kind": "Text",
+                "start": 0,
+                "end": 14,
+                "lineNumber": 11,
+                "position": null,
+                "text": "Pick the lock."
+              }
+            ],
+            "reuse": null,
+            "selectableIf": null
+          }
+        ]
+      }
+    ],
+    "parseErrors": [],
+    "start": {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    "end": {
+      "type": "Finish",
+      "sceneName": "startup",
+      "indent": 2,
+      "lineNumber": 13,
+      "position": 4
+    }
+  }
+]

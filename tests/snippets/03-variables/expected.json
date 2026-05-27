@@ -1,0 +1,509 @@
+[
+  {
+    "name": "startup",
+    "statements": [
+      {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "strength",
+          "rawValue": "strength",
+          "position": 8,
+          "lineNumber": 0,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 50,
+            "position": 17,
+            "lineNumber": 0,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 0,
+          "position": 0
+        }
+      },
+      {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "name",
+          "rawValue": "name",
+          "position": 8,
+          "lineNumber": 1,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "StringLiteral",
+            "value": "Hero",
+            "position": 13,
+            "lineNumber": 1,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 1,
+          "position": 0
+        }
+      },
+      {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "is_alive",
+          "rawValue": "is_alive",
+          "position": 8,
+          "lineNumber": 2,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "BooleanLiteral",
+            "value": true,
+            "position": 17,
+            "lineNumber": 2,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 2,
+          "position": 0
+        }
+      },
+      {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "local_var",
+          "rawValue": "local_var",
+          "position": 6,
+          "lineNumber": 4,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 10,
+            "position": 16,
+            "lineNumber": 4,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Temporary",
+        "token": {
+          "type": "CreateTempVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 4,
+          "position": 0
+        }
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 6,
+            "position": 0,
+            "indent": 0,
+            "content": "Your name is "
+          },
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 6,
+            "position": 20,
+            "indent": 0,
+            "content": ".\n\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 13,
+            "lineNumber": 6,
+            "position": 0,
+            "text": "Your name is "
+          },
+          {
+            "kind": "Print",
+            "start": 0,
+            "end": 0,
+            "lineNumber": 6,
+            "position": 13,
+            "expression": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "name",
+                "rawValue": "name",
+                "position": 15,
+                "lineNumber": 6,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          },
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 3,
+            "lineNumber": 6,
+            "position": 20,
+            "text": ".\n\n"
+          }
+        ]
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "strength",
+            "rawValue": "strength",
+            "position": 5,
+            "lineNumber": 8,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "assignment": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 60,
+            "position": 14,
+            "lineNumber": 8,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 8,
+          "position": 0
+        }
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "name",
+            "rawValue": "name",
+            "position": 5,
+            "lineNumber": 9,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "assignment": {
+          "kind": "Literal",
+          "value": {
+            "type": "StringLiteral",
+            "value": "Champion",
+            "position": 10,
+            "lineNumber": 9,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 9,
+          "position": 0
+        }
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "is_alive",
+            "rawValue": "is_alive",
+            "position": 5,
+            "lineNumber": 10,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "assignment": {
+          "kind": "Literal",
+          "value": {
+            "type": "BooleanLiteral",
+            "value": false,
+            "position": 14,
+            "lineNumber": 10,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 10,
+          "position": 0
+        }
+      },
+      {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "local_var_one",
+          "rawValue": "local_var_one",
+          "position": 6,
+          "lineNumber": 11,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 20,
+            "position": 20,
+            "lineNumber": 11,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Temporary",
+        "token": {
+          "type": "CreateTempVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 11,
+          "position": 0
+        }
+      },
+      {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "reference",
+          "rawValue": "reference",
+          "position": 6,
+          "lineNumber": 12,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "StringLiteral",
+            "value": "local_var",
+            "position": 16,
+            "lineNumber": 12,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Temporary",
+        "token": {
+          "type": "CreateTempVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 12,
+          "position": 0
+        }
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 13,
+            "position": 0,
+            "indent": 0,
+            "content": ""
+          },
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 13,
+            "position": 12,
+            "indent": 0,
+            "content": "\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Print",
+            "start": 0,
+            "end": 0,
+            "lineNumber": 13,
+            "position": 0,
+            "expression": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "local_var",
+                "rawValue": "local_var",
+                "position": 2,
+                "lineNumber": 13,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          },
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 1,
+            "lineNumber": 13,
+            "position": 12,
+            "text": "\n"
+          }
+        ]
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "local_var",
+            "rawValue": "local_var",
+            "position": 5,
+            "lineNumber": 14,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "assignment": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Binary",
+            "left": {
+              "kind": "Dereference",
+              "expression": {
+                "kind": "Dereference",
+                "expression": {
+                  "kind": "Identifier",
+                  "token": {
+                    "type": "Identifier",
+                    "value": "reference",
+                    "rawValue": "reference",
+                    "position": 18,
+                    "lineNumber": 14,
+                    "sceneName": "startup",
+                    "indent": 0
+                  }
+                }
+              }
+            },
+            "operator": {
+              "type": "AdditionOperator",
+              "rawValue": "+",
+              "position": 30,
+              "lineNumber": 14,
+              "sceneName": "startup",
+              "indent": 0
+            },
+            "right": {
+              "kind": "Dereference",
+              "expression": {
+                "kind": "Dereference",
+                "expression": {
+                  "kind": "Binary",
+                  "left": {
+                    "kind": "Identifier",
+                    "token": {
+                      "type": "Identifier",
+                      "value": "reference",
+                      "rawValue": "reference",
+                      "position": 34,
+                      "lineNumber": 14,
+                      "sceneName": "startup",
+                      "indent": 0
+                    }
+                  },
+                  "operator": {
+                    "type": "ConcatenationOperator",
+                    "rawValue": "&",
+                    "position": 43,
+                    "lineNumber": 14,
+                    "sceneName": "startup",
+                    "indent": 0
+                  },
+                  "right": {
+                    "kind": "Literal",
+                    "value": {
+                      "type": "StringLiteral",
+                      "value": "_one",
+                      "position": 44,
+                      "lineNumber": 14,
+                      "sceneName": "startup",
+                      "indent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 14,
+          "position": 0
+        }
+      }
+    ],
+    "parseErrors": [],
+    "start": {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    "end": {
+      "type": "CloseParenthesis",
+      "position": 52,
+      "lineNumber": 14,
+      "sceneName": "startup",
+      "indent": 0
+    }
+  }
+]

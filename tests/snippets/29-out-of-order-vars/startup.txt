@@ -1,0 +1,23 @@
+*scene_list
+    a
+    b
+
+*ifid 30dd879c-ee2f-11db-8314-0800200c9a66
+*author m3ales
+*achievement an_achivement hidden 2 one
+    hidden
+    note that it works
+*comment all header statements above are valid before *create
+*create score 0
+*create name "Nobody"
+*goto bottom_label
+
+*label top_label
+*set score 100
+*set name "Winner"
+*return
+
+*label bottom_label
+*temp local_bonus 10
+*gosub top_label
+Your score is ${score} and your name is ${name}.

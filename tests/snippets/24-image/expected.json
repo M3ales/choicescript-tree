@@ -1,0 +1,126 @@
+[
+  {
+    "name": "startup",
+    "statements": [
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 0,
+            "position": 0,
+            "indent": 0,
+            "content": "Welcome to the castle.\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 23,
+            "lineNumber": 0,
+            "position": 0,
+            "text": "Welcome to the castle.\n"
+          }
+        ]
+      },
+      {
+        "kind": "Image",
+        "token": {
+          "type": "Image",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 1,
+          "position": 0
+        },
+        "path": {
+          "token": {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 1,
+            "position": 7,
+            "indent": 0,
+            "content": "castle.png"
+          },
+          "content": "castle.png",
+          "parsedSegments": [
+            {
+              "kind": "Text",
+              "start": 0,
+              "end": 10,
+              "lineNumber": 1,
+              "position": 7,
+              "text": "castle.png"
+            }
+          ],
+          "lineNumber": 1,
+          "position": 7,
+          "indent": 0,
+          "sceneName": "startup"
+        }
+      },
+      {
+        "kind": "Image",
+        "token": {
+          "type": "Image",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 2,
+          "position": 0
+        },
+        "path": {
+          "token": {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 2,
+            "position": 7,
+            "indent": 0,
+            "content": "banner.jpg"
+          },
+          "content": "banner.jpg",
+          "parsedSegments": [
+            {
+              "kind": "Text",
+              "start": 0,
+              "end": 10,
+              "lineNumber": 2,
+              "position": 7,
+              "text": "banner.jpg"
+            }
+          ],
+          "lineNumber": 2,
+          "position": 7,
+          "indent": 0,
+          "sceneName": "startup"
+        },
+        "alignment": {
+          "type": "Identifier",
+          "sceneName": "startup",
+          "position": 18,
+          "lineNumber": 2,
+          "indent": 0,
+          "value": "center",
+          "rawValue": "center"
+        }
+      }
+    ],
+    "parseErrors": [],
+    "start": {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    "end": {
+      "type": "Identifier",
+      "sceneName": "startup",
+      "position": 18,
+      "lineNumber": 2,
+      "indent": 0,
+      "value": "center",
+      "rawValue": "center"
+    }
+  }
+]

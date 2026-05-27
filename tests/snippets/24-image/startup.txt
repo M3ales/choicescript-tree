@@ -1,0 +1,5 @@
+Welcome to the castle.
+*image castle.png
+*image banner.jpg center
+
+The castle stands before you.

@@ -1,0 +1,195 @@
+[
+  {
+    "name": "startup",
+    "statements": [
+      {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "player_name",
+          "rawValue": "player_name",
+          "position": 8,
+          "lineNumber": 0,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "StringLiteral",
+            "value": "",
+            "position": 20,
+            "lineNumber": 0,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 0,
+          "position": 0
+        }
+      },
+      {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "player_age",
+          "rawValue": "player_age",
+          "position": 8,
+          "lineNumber": 1,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 0,
+            "position": 19,
+            "lineNumber": 1,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 1,
+          "position": 0
+        }
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 3,
+            "position": 0,
+            "indent": 0,
+            "content": "What is your name?\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 19,
+            "lineNumber": 3,
+            "position": 0,
+            "text": "What is your name?\n"
+          }
+        ]
+      },
+      {
+        "kind": "InputText",
+        "token": {
+          "type": "InputText",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 4,
+          "position": 0
+        },
+        "storeInto": {
+          "type": "Identifier",
+          "value": "player_name",
+          "rawValue": "player_name",
+          "position": 12,
+          "lineNumber": 4,
+          "sceneName": "startup",
+          "indent": 0
+        }
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 6,
+            "position": 0,
+            "indent": 0,
+            "content": "How old are you?\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 17,
+            "lineNumber": 6,
+            "position": 0,
+            "text": "How old are you?\n"
+          }
+        ]
+      },
+      {
+        "kind": "Error",
+        "token": {
+          "lineNumber": 10,
+          "indent": 0,
+          "position": 0,
+          "sceneName": "startup",
+          "type": "SceneEnd"
+        },
+        "message": "Expect expression at end of scene startup:10:0[Indent 0]"
+      }
+    ],
+    "parseErrors": [
+      {
+        "token": {
+          "lineNumber": 10,
+          "indent": 0,
+          "position": 0,
+          "sceneName": "startup",
+          "type": "SceneEnd"
+        },
+        "message": "Expect expression at end of scene startup:10:0[Indent 0]",
+        "context": [
+          {
+            "kind": "Scene 'startup'",
+            "token": {
+              "sceneName": "startup",
+              "lineNumber": 0,
+              "position": 0,
+              "indent": 0,
+              "type": "SceneStart"
+            }
+          },
+          {
+            "kind": "InputNumber",
+            "token": {
+              "type": "InputNumber",
+              "sceneName": "startup",
+              "indent": 0,
+              "lineNumber": 7,
+              "position": 0
+            }
+          }
+        ]
+      }
+    ],
+    "start": {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    "end": {
+      "type": "Identifier",
+      "value": "player_age",
+      "rawValue": "player_age",
+      "position": 14,
+      "lineNumber": 7,
+      "sceneName": "startup",
+      "indent": 0
+    }
+  }
+]

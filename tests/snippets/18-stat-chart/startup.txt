@@ -1,0 +1,10 @@
+*create strength 60
+*create intelligence 40
+*create charisma 50
+*create name "Hero"
+
+*stat_chart
+  text name Name
+  percent strength Strength
+  percent intelligence Intelligence
+  percent charisma Charisma

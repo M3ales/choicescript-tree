@@ -1,0 +1,177 @@
+[
+  {
+    "sceneName": "startup",
+    "blocks": {
+      "startup:b_0": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_1": {
+        "exitType": "Choice"
+      },
+      "startup:b_2": {
+        "exitType": "ImplicitEnd"
+      },
+      "startup:b_3": {
+        "exitType": "Goto"
+      },
+      "startup:b_4": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_5": {
+        "exitType": "Goto"
+      },
+      "startup:b_6": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_7": {
+        "exitType": "Finish"
+      },
+      "startup:b_8": {
+        "exitType": "FallThrough"
+      }
+    },
+    "blockIndex": {
+      "startup:b_0": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "SceneEntry",
+        "exitType": "FallThrough"
+      },
+      "startup:b_1": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:0",
+          "startup:1",
+          "startup:13"
+        ],
+        "entryType": "Label",
+        "exitType": "Choice",
+        "label": "shop"
+      },
+      "startup:b_2": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "ImplicitEnd"
+      },
+      "startup:b_3": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:3",
+          "startup:4"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "Goto"
+      },
+      "startup:b_4": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "startup:b_5": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:7",
+          "startup:8"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "Goto"
+      },
+      "startup:b_6": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "startup:b_7": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:10",
+          "startup:11"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "Finish"
+      },
+      "startup:b_8": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      }
+    },
+    "edges": [
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "startup:b_0",
+        "targetBlockId": "startup:b_1",
+        "metadata": {}
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "startup:b_3",
+        "targetBlockId": "startup:b_1",
+        "metadata": {
+          "label": "shop"
+        }
+      },
+      {
+        "kind": "ChoiceOption",
+        "sourceBlockId": "startup:b_1",
+        "targetBlockId": "startup:b_3",
+        "metadata": {
+          "optionStatementId": "startup:5",
+          "effectiveReuse": "hide_reuse"
+        }
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "startup:b_5",
+        "targetBlockId": "startup:b_1",
+        "metadata": {
+          "label": "shop"
+        }
+      },
+      {
+        "kind": "ChoiceOption",
+        "sourceBlockId": "startup:b_1",
+        "targetBlockId": "startup:b_5",
+        "metadata": {
+          "optionStatementId": "startup:9",
+          "effectiveReuse": "hide_reuse"
+        }
+      },
+      {
+        "kind": "SceneExit",
+        "sourceBlockId": "startup:b_7",
+        "targetBlockId": null,
+        "metadata": {}
+      },
+      {
+        "kind": "ChoiceOption",
+        "sourceBlockId": "startup:b_1",
+        "targetBlockId": "startup:b_7",
+        "metadata": {
+          "optionStatementId": "startup:12"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "startup:b_1",
+        "targetBlockId": "startup:b_2",
+        "metadata": {}
+      },
+      {
+        "kind": "SceneExit",
+        "sourceBlockId": "startup:b_2",
+        "targetBlockId": null,
+        "metadata": {}
+      }
+    ],
+    "entryBlockId": "startup:b_0",
+    "labelToBlockId": {
+      "shop": "startup:b_1"
+    },
+    "unresolvedEdges": []
+  }
+]

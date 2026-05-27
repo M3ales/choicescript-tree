@@ -1,0 +1,89 @@
+*temp fight_round 0
+*temp opponent_hp 100
+*temp player_hp 100
+*temp fighting true
+
+The arena roars with spectators. A scarred warrior faces you across the sand.
+
+"Fight well, outsider."
+
+*label combat_loop
+*set fight_round + 1
+
+Round ${fight_round}. Your HP: ${player_hp}. Opponent HP: ${opponent_hp}.
+
+*if opponent_hp <= 0
+  *goto victory
+*if player_hp <= 0
+  *goto defeat
+*if fight_round > 10
+  *goto draw
+
+*choice
+  #Attack with full force
+    *temp damage 0
+    *rand damage 15 30
+    *set opponent_hp - damage
+    You strike hard for ${damage} damage!
+    *temp counter_damage 0
+    *rand counter_damage 10 25
+    *set player_hp - counter_damage
+    The opponent counters for ${counter_damage}!
+    *goto combat_loop
+  #Defensive stance
+    *temp damage 0
+    *rand damage 5 15
+    *set opponent_hp - damage
+    You fight cautiously, dealing ${damage} damage.
+    *temp counter_damage 0
+    *rand counter_damage 5 15
+    *set player_hp - counter_damage
+    The opponent hits for ${counter_damage}, but your guard softens the blow.
+    *goto combat_loop
+  *selectable_if (charm >= 60) #Taunt the opponent
+    *temp damage 0
+    *rand damage 20 35
+    *set opponent_hp - damage
+    Your taunt enrages the opponent, creating an opening! ${damage} damage!
+    *temp counter_damage 0
+    *rand counter_damage 15 30
+    *set player_hp - counter_damage
+    But the fury cuts both ways. ${counter_damage} damage taken!
+    *goto combat_loop
+
+*label victory
+*set arena_wins + 1
+*set reputation %+ 20
+*set gold + 25
+
+The crowd erupts! You are victorious in ${fight_round} rounds!
+
+*choice
+  #Salute the crowd
+    *set reputation %+ 10
+    You raise your fist. The crowd loves it.
+    *goto arena_exit
+  #Help your opponent up
+    *set reputation %+ 15
+    *set charm + 5
+    A show of honor. Even the opponent nods with respect.
+    *goto arena_exit
+
+*label defeat
+*set reputation %- 10
+
+You fall in round ${fight_round}. The crowd groans.
+
+Better luck next time.
+*goto arena_exit
+
+*label draw
+*set reputation %+ 5
+*set gold + 10
+
+After ${fight_round} rounds, the judge calls a draw. A respectable showing.
+*goto arena_exit
+
+*label arena_exit
+You leave the arena sands behind.
+*goto_scene startup village_hub

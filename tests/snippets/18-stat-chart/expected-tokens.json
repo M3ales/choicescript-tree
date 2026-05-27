@@ -1,0 +1,225 @@
+[
+  [
+    {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 0,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "strength",
+      "rawValue": "strength",
+      "position": 8,
+      "lineNumber": 0,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 60,
+      "position": 17,
+      "lineNumber": 0,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 1,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "intelligence",
+      "rawValue": "intelligence",
+      "position": 8,
+      "lineNumber": 1,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 40,
+      "position": 21,
+      "lineNumber": 1,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 2,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "charisma",
+      "rawValue": "charisma",
+      "position": 8,
+      "lineNumber": 2,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 50,
+      "position": 17,
+      "lineNumber": 2,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 3,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "name",
+      "rawValue": "name",
+      "position": 8,
+      "lineNumber": 3,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "Hero",
+      "position": 13,
+      "lineNumber": 3,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StatChart",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 5,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "text",
+      "rawValue": "text",
+      "sceneName": "startup",
+      "lineNumber": 6,
+      "position": 2,
+      "indent": 1
+    },
+    {
+      "type": "Identifier",
+      "value": "name",
+      "rawValue": "name",
+      "sceneName": "startup",
+      "lineNumber": 6,
+      "position": 7,
+      "indent": 1
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 6,
+      "position": 12,
+      "indent": 1,
+      "content": "Name"
+    },
+    {
+      "type": "Identifier",
+      "value": "percent",
+      "rawValue": "percent",
+      "sceneName": "startup",
+      "lineNumber": 7,
+      "position": 2,
+      "indent": 1
+    },
+    {
+      "type": "Identifier",
+      "value": "strength",
+      "rawValue": "strength",
+      "sceneName": "startup",
+      "lineNumber": 7,
+      "position": 10,
+      "indent": 1
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 7,
+      "position": 10,
+      "indent": 1,
+      "content": "Strength"
+    },
+    {
+      "type": "Identifier",
+      "value": "percent",
+      "rawValue": "percent",
+      "sceneName": "startup",
+      "lineNumber": 8,
+      "position": 2,
+      "indent": 1
+    },
+    {
+      "type": "Identifier",
+      "value": "intelligence",
+      "rawValue": "intelligence",
+      "sceneName": "startup",
+      "lineNumber": 8,
+      "position": 10,
+      "indent": 1
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 8,
+      "position": 10,
+      "indent": 1,
+      "content": "Intelligence"
+    },
+    {
+      "type": "Identifier",
+      "value": "percent",
+      "rawValue": "percent",
+      "sceneName": "startup",
+      "lineNumber": 9,
+      "position": 2,
+      "indent": 1
+    },
+    {
+      "type": "Identifier",
+      "value": "charisma",
+      "rawValue": "charisma",
+      "sceneName": "startup",
+      "lineNumber": 9,
+      "position": 10,
+      "indent": 1
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 9,
+      "position": 10,
+      "indent": 1,
+      "content": "Charisma"
+    },
+    {
+      "lineNumber": 10,
+      "indent": 0,
+      "position": 0,
+      "sceneName": "startup",
+      "type": "SceneEnd"
+    }
+  ]
+]

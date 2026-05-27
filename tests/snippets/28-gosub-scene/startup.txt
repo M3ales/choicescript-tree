@@ -1,0 +1,6 @@
+*create reputation 0
+
+You arrive in town.
+*gosub_scene helpers add_rep
+Your reputation is ${reputation}.
+*finish

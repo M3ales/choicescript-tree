@@ -1,0 +1,281 @@
+[
+  {
+    "labels": {
+      "layer1": {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 7,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "layer1",
+          "rawValue": "layer1",
+          "position": 6,
+          "lineNumber": 7,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        }
+      },
+      "layer2": {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 14,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "layer2",
+          "rawValue": "layer2",
+          "position": 6,
+          "lineNumber": 14,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        }
+      },
+      "layer3": {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 22,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "layer3",
+          "rawValue": "layer3",
+          "position": 6,
+          "lineNumber": 22,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        }
+      },
+      "layer4": {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 29,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "layer4",
+          "rawValue": "layer4",
+          "position": 6,
+          "lineNumber": 29,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        }
+      },
+      "layer5": {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 37,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "layer5",
+          "rawValue": "layer5",
+          "position": 6,
+          "lineNumber": 37,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        }
+      }
+    },
+    "globalVariables": {
+      "result": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "result",
+          "rawValue": "result",
+          "position": 8,
+          "lineNumber": 0,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "StringLiteral",
+            "value": "",
+            "position": 15,
+            "lineNumber": 0,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 0,
+          "position": 0
+        }
+      },
+      "depth": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "depth",
+          "rawValue": "depth",
+          "position": 8,
+          "lineNumber": 1,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 0,
+            "position": 14,
+            "lineNumber": 1,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 1,
+          "position": 0
+        }
+      }
+    },
+    "tempVariables": {},
+    "checkpoints": {},
+    "gosubs": [
+      {
+        "kind": "GoSub",
+        "token": {
+          "type": "GoSub",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 3,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "layer1",
+          "rawValue": "layer1",
+          "position": 7,
+          "lineNumber": 3,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        },
+        "args": []
+      },
+      {
+        "kind": "GoSub",
+        "token": {
+          "type": "GoSub",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 10,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "layer2",
+          "rawValue": "layer2",
+          "position": 7,
+          "lineNumber": 10,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        },
+        "args": []
+      },
+      {
+        "kind": "GoSub",
+        "token": {
+          "type": "GoSub",
+          "sceneName": "startup",
+          "indent": 1,
+          "lineNumber": 18,
+          "position": 2
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "layer3",
+          "rawValue": "layer3",
+          "position": 9,
+          "lineNumber": 18,
+          "sceneName": "startup",
+          "indent": 1,
+          "isLabelName": true
+        },
+        "args": []
+      },
+      {
+        "kind": "GoSub",
+        "token": {
+          "type": "GoSub",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 25,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "layer4",
+          "rawValue": "layer4",
+          "position": 7,
+          "lineNumber": 25,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        },
+        "args": []
+      },
+      {
+        "kind": "GoSub",
+        "token": {
+          "type": "GoSub",
+          "sceneName": "startup",
+          "indent": 1,
+          "lineNumber": 33,
+          "position": 2
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "layer5",
+          "rawValue": "layer5",
+          "position": 9,
+          "lineNumber": 33,
+          "sceneName": "startup",
+          "indent": 1,
+          "isLabelName": true
+        },
+        "args": []
+      }
+    ],
+    "gotos": [],
+    "implicitControlFlow": []
+  }
+]

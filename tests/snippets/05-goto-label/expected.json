@@ -1,0 +1,151 @@
+[
+  {
+    "name": "startup",
+    "statements": [
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 0,
+            "position": 0,
+            "indent": 0,
+            "content": "You stand at a crossroads.\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 27,
+            "lineNumber": 0,
+            "position": 0,
+            "text": "You stand at a crossroads.\n"
+          }
+        ]
+      },
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 1,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "start_adventure",
+          "rawValue": "start_adventure",
+          "position": 6,
+          "lineNumber": 1,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 3,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "start_adventure",
+          "rawValue": "start_adventure",
+          "position": 6,
+          "lineNumber": 3,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        }
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 4,
+            "position": 0,
+            "indent": 0,
+            "content": "The adventure begins!\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 22,
+            "lineNumber": 4,
+            "position": 0,
+            "text": "The adventure begins!\n"
+          }
+        ]
+      },
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 5,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "the_end",
+          "rawValue": "the_end",
+          "position": 6,
+          "lineNumber": 5,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 7,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "the_end",
+          "rawValue": "the_end",
+          "position": 6,
+          "lineNumber": 7,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        }
+      }
+    ],
+    "parseErrors": [],
+    "start": {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    "end": {
+      "type": "Identifier",
+      "value": "the_end",
+      "rawValue": "the_end",
+      "position": 6,
+      "lineNumber": 7,
+      "sceneName": "startup",
+      "indent": 0,
+      "isLabelName": true
+    }
+  }
+]

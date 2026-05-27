@@ -1,0 +1,105 @@
+[
+  {
+    "sceneName": "startup",
+    "blocks": {
+      "startup:b_0": {
+        "exitType": "GoSub"
+      },
+      "startup:b_1": {
+        "exitType": "Finish"
+      },
+      "startup:b_2": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_3": {
+        "exitType": "Return"
+      },
+      "startup:b_4": {
+        "exitType": "FallThrough"
+      }
+    },
+    "blockIndex": {
+      "startup:b_0": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:0",
+          "startup:1",
+          "startup:2"
+        ],
+        "entryType": "SceneEntry",
+        "exitType": "GoSub"
+      },
+      "startup:b_1": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:3",
+          "startup:4"
+        ],
+        "entryType": "GoSubContinuation",
+        "exitType": "Finish"
+      },
+      "startup:b_2": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "startup:b_3": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:5",
+          "startup:6",
+          "startup:7"
+        ],
+        "entryType": "Label",
+        "exitType": "Return",
+        "label": "check_gold"
+      },
+      "startup:b_4": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      }
+    },
+    "edges": [
+      {
+        "kind": "GoSubCall",
+        "sourceBlockId": "startup:b_0",
+        "targetBlockId": "startup:b_3",
+        "metadata": {
+          "label": "check_gold"
+        }
+      },
+      {
+        "kind": "GoSubReturn",
+        "sourceBlockId": "startup:b_0",
+        "targetBlockId": "startup:b_1",
+        "metadata": {}
+      },
+      {
+        "kind": "SceneExit",
+        "sourceBlockId": "startup:b_1",
+        "targetBlockId": null,
+        "metadata": {}
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "startup:b_2",
+        "targetBlockId": "startup:b_3",
+        "metadata": {}
+      },
+      {
+        "kind": "Return",
+        "sourceBlockId": "startup:b_3",
+        "targetBlockId": null,
+        "metadata": {}
+      }
+    ],
+    "entryBlockId": "startup:b_0",
+    "labelToBlockId": {
+      "check_gold": "startup:b_3"
+    },
+    "unresolvedEdges": []
+  }
+]

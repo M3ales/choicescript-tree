@@ -1,0 +1,1855 @@
+[
+  {
+    "labels": {
+      "combat_loop": {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "arena",
+          "indent": 0,
+          "lineNumber": 9,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "combat_loop",
+          "rawValue": "combat_loop",
+          "position": 6,
+          "lineNumber": 9,
+          "sceneName": "arena",
+          "indent": 0,
+          "isLabelName": true
+        }
+      },
+      "victory": {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "arena",
+          "indent": 0,
+          "lineNumber": 53,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "victory",
+          "rawValue": "victory",
+          "position": 6,
+          "lineNumber": 53,
+          "sceneName": "arena",
+          "indent": 0,
+          "isLabelName": true
+        }
+      },
+      "defeat": {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "arena",
+          "indent": 0,
+          "lineNumber": 71,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "defeat",
+          "rawValue": "defeat",
+          "position": 6,
+          "lineNumber": 71,
+          "sceneName": "arena",
+          "indent": 0,
+          "isLabelName": true
+        }
+      },
+      "draw": {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "arena",
+          "indent": 0,
+          "lineNumber": 79,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "draw",
+          "rawValue": "draw",
+          "position": 6,
+          "lineNumber": 79,
+          "sceneName": "arena",
+          "indent": 0,
+          "isLabelName": true
+        }
+      },
+      "arena_exit": {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "arena",
+          "indent": 0,
+          "lineNumber": 86,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "arena_exit",
+          "rawValue": "arena_exit",
+          "position": 6,
+          "lineNumber": 86,
+          "sceneName": "arena",
+          "indent": 0,
+          "isLabelName": true
+        }
+      }
+    },
+    "globalVariables": {},
+    "tempVariables": {
+      "fight_round": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "fight_round",
+          "rawValue": "fight_round",
+          "position": 6,
+          "lineNumber": 0,
+          "sceneName": "arena",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 0,
+            "position": 18,
+            "lineNumber": 0,
+            "sceneName": "arena",
+            "indent": 0
+          }
+        },
+        "scope": "Temporary",
+        "token": {
+          "type": "CreateTempVariable",
+          "sceneName": "arena",
+          "indent": 0,
+          "lineNumber": 0,
+          "position": 0
+        }
+      },
+      "opponent_hp": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "opponent_hp",
+          "rawValue": "opponent_hp",
+          "position": 6,
+          "lineNumber": 1,
+          "sceneName": "arena",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 100,
+            "position": 18,
+            "lineNumber": 1,
+            "sceneName": "arena",
+            "indent": 0
+          }
+        },
+        "scope": "Temporary",
+        "token": {
+          "type": "CreateTempVariable",
+          "sceneName": "arena",
+          "indent": 0,
+          "lineNumber": 1,
+          "position": 0
+        }
+      },
+      "player_hp": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "player_hp",
+          "rawValue": "player_hp",
+          "position": 6,
+          "lineNumber": 2,
+          "sceneName": "arena",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 100,
+            "position": 16,
+            "lineNumber": 2,
+            "sceneName": "arena",
+            "indent": 0
+          }
+        },
+        "scope": "Temporary",
+        "token": {
+          "type": "CreateTempVariable",
+          "sceneName": "arena",
+          "indent": 0,
+          "lineNumber": 2,
+          "position": 0
+        }
+      },
+      "fighting": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "fighting",
+          "rawValue": "fighting",
+          "position": 6,
+          "lineNumber": 3,
+          "sceneName": "arena",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "BooleanLiteral",
+            "value": true,
+            "position": 15,
+            "lineNumber": 3,
+            "sceneName": "arena",
+            "indent": 0
+          }
+        },
+        "scope": "Temporary",
+        "token": {
+          "type": "CreateTempVariable",
+          "sceneName": "arena",
+          "indent": 0,
+          "lineNumber": 3,
+          "position": 0
+        }
+      },
+      "damage": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "damage",
+          "rawValue": "damage",
+          "position": 10,
+          "lineNumber": 43,
+          "sceneName": "arena",
+          "indent": 2
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 0,
+            "position": 17,
+            "lineNumber": 43,
+            "sceneName": "arena",
+            "indent": 2
+          }
+        },
+        "scope": "Temporary",
+        "token": {
+          "type": "CreateTempVariable",
+          "sceneName": "arena",
+          "indent": 2,
+          "lineNumber": 43,
+          "position": 4
+        }
+      },
+      "counter_damage": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "counter_damage",
+          "rawValue": "counter_damage",
+          "position": 10,
+          "lineNumber": 47,
+          "sceneName": "arena",
+          "indent": 2
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 0,
+            "position": 25,
+            "lineNumber": 47,
+            "sceneName": "arena",
+            "indent": 2
+          }
+        },
+        "scope": "Temporary",
+        "token": {
+          "type": "CreateTempVariable",
+          "sceneName": "arena",
+          "indent": 2,
+          "lineNumber": 47,
+          "position": 4
+        }
+      }
+    },
+    "checkpoints": {},
+    "gosubs": [],
+    "gotos": [
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "arena",
+          "indent": 1,
+          "lineNumber": 15,
+          "position": 2
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "victory",
+          "rawValue": "victory",
+          "position": 8,
+          "lineNumber": 15,
+          "sceneName": "arena",
+          "indent": 1,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "arena",
+          "indent": 1,
+          "lineNumber": 17,
+          "position": 2
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "defeat",
+          "rawValue": "defeat",
+          "position": 8,
+          "lineNumber": 17,
+          "sceneName": "arena",
+          "indent": 1,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "arena",
+          "indent": 1,
+          "lineNumber": 19,
+          "position": 2
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "draw",
+          "rawValue": "draw",
+          "position": 8,
+          "lineNumber": 19,
+          "sceneName": "arena",
+          "indent": 1,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "arena",
+          "indent": 2,
+          "lineNumber": 31,
+          "position": 4
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "combat_loop",
+          "rawValue": "combat_loop",
+          "position": 10,
+          "lineNumber": 31,
+          "sceneName": "arena",
+          "indent": 2,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "arena",
+          "indent": 2,
+          "lineNumber": 41,
+          "position": 4
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "combat_loop",
+          "rawValue": "combat_loop",
+          "position": 10,
+          "lineNumber": 41,
+          "sceneName": "arena",
+          "indent": 2,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "arena",
+          "indent": 2,
+          "lineNumber": 51,
+          "position": 4
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "combat_loop",
+          "rawValue": "combat_loop",
+          "position": 10,
+          "lineNumber": 51,
+          "sceneName": "arena",
+          "indent": 2,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "arena",
+          "indent": 2,
+          "lineNumber": 64,
+          "position": 4
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "arena_exit",
+          "rawValue": "arena_exit",
+          "position": 10,
+          "lineNumber": 64,
+          "sceneName": "arena",
+          "indent": 2,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "arena",
+          "indent": 2,
+          "lineNumber": 69,
+          "position": 4
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "arena_exit",
+          "rawValue": "arena_exit",
+          "position": 10,
+          "lineNumber": 69,
+          "sceneName": "arena",
+          "indent": 2,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "arena",
+          "indent": 0,
+          "lineNumber": 77,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "arena_exit",
+          "rawValue": "arena_exit",
+          "position": 6,
+          "lineNumber": 77,
+          "sceneName": "arena",
+          "indent": 0,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "arena",
+          "indent": 0,
+          "lineNumber": 84,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "arena_exit",
+          "rawValue": "arena_exit",
+          "position": 6,
+          "lineNumber": 84,
+          "sceneName": "arena",
+          "indent": 0,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "GotoScene",
+        "token": {
+          "type": "GotoScene",
+          "sceneName": "arena",
+          "indent": 0,
+          "lineNumber": 88,
+          "position": 0
+        },
+        "scene": {
+          "type": "Identifier",
+          "value": "startup",
+          "rawValue": "startup",
+          "position": 12,
+          "lineNumber": 88,
+          "sceneName": "arena",
+          "indent": 0,
+          "isSceneName": true,
+          "isLabelName": false
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "village_hub",
+          "rawValue": "village_hub",
+          "position": 20,
+          "lineNumber": 88,
+          "sceneName": "arena",
+          "indent": 0,
+          "isLabelName": true
+        }
+      }
+    ],
+    "implicitControlFlow": []
+  },
+  {
+    "labels": {
+      "shop_hub": {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "shop",
+          "indent": 0,
+          "lineNumber": 6,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "shop_hub",
+          "rawValue": "shop_hub",
+          "position": 6,
+          "lineNumber": 6,
+          "sceneName": "shop",
+          "indent": 0,
+          "isLabelName": true
+        }
+      },
+      "shop_exit": {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "shop",
+          "indent": 0,
+          "lineNumber": 45,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "shop_exit",
+          "rawValue": "shop_exit",
+          "position": 6,
+          "lineNumber": 45,
+          "sceneName": "shop",
+          "indent": 0,
+          "isLabelName": true
+        }
+      },
+      "confirm_purchase": {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "shop",
+          "indent": 0,
+          "lineNumber": 49,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "confirm_purchase",
+          "rawValue": "confirm_purchase",
+          "position": 6,
+          "lineNumber": 49,
+          "sceneName": "shop",
+          "indent": 0,
+          "isLabelName": true
+        }
+      },
+      "confirm_continue": {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "shop",
+          "indent": 0,
+          "lineNumber": 68,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "confirm_continue",
+          "rawValue": "confirm_continue",
+          "position": 6,
+          "lineNumber": 68,
+          "sceneName": "shop",
+          "indent": 0,
+          "isLabelName": true
+        }
+      }
+    },
+    "globalVariables": {},
+    "tempVariables": {
+      "browsing": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "browsing",
+          "rawValue": "browsing",
+          "position": 6,
+          "lineNumber": 0,
+          "sceneName": "shop",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "BooleanLiteral",
+            "value": true,
+            "position": 15,
+            "lineNumber": 0,
+            "sceneName": "shop",
+            "indent": 0
+          }
+        },
+        "scope": "Temporary",
+        "token": {
+          "type": "CreateTempVariable",
+          "sceneName": "shop",
+          "indent": 0,
+          "lineNumber": 0,
+          "position": 0
+        }
+      },
+      "selected_item": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "selected_item",
+          "rawValue": "selected_item",
+          "position": 6,
+          "lineNumber": 1,
+          "sceneName": "shop",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "StringLiteral",
+            "value": "",
+            "position": 20,
+            "lineNumber": 1,
+            "sceneName": "shop",
+            "indent": 0
+          }
+        },
+        "scope": "Temporary",
+        "token": {
+          "type": "CreateTempVariable",
+          "sceneName": "shop",
+          "indent": 0,
+          "lineNumber": 1,
+          "position": 0
+        }
+      },
+      "selected_cost": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "selected_cost",
+          "rawValue": "selected_cost",
+          "position": 6,
+          "lineNumber": 2,
+          "sceneName": "shop",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 0,
+            "position": 20,
+            "lineNumber": 2,
+            "sceneName": "shop",
+            "indent": 0
+          }
+        },
+        "scope": "Temporary",
+        "token": {
+          "type": "CreateTempVariable",
+          "sceneName": "shop",
+          "indent": 0,
+          "lineNumber": 2,
+          "position": 0
+        }
+      }
+    },
+    "checkpoints": {},
+    "gosubs": [
+      {
+        "kind": "GoSub",
+        "token": {
+          "type": "GoSub",
+          "sceneName": "shop",
+          "indent": 2,
+          "lineNumber": 17,
+          "position": 4
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "confirm_purchase",
+          "rawValue": "confirm_purchase",
+          "position": 11,
+          "lineNumber": 17,
+          "sceneName": "shop",
+          "indent": 2,
+          "isLabelName": true
+        },
+        "args": []
+      },
+      {
+        "kind": "GoSub",
+        "token": {
+          "type": "GoSub",
+          "sceneName": "shop",
+          "indent": 2,
+          "lineNumber": 24,
+          "position": 4
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "confirm_purchase",
+          "rawValue": "confirm_purchase",
+          "position": 11,
+          "lineNumber": 24,
+          "sceneName": "shop",
+          "indent": 2,
+          "isLabelName": true
+        },
+        "args": []
+      },
+      {
+        "kind": "GoSub",
+        "token": {
+          "type": "GoSub",
+          "sceneName": "shop",
+          "indent": 2,
+          "lineNumber": 31,
+          "position": 4
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "confirm_purchase",
+          "rawValue": "confirm_purchase",
+          "position": 11,
+          "lineNumber": 31,
+          "sceneName": "shop",
+          "indent": 2,
+          "isLabelName": true
+        },
+        "args": []
+      },
+      {
+        "kind": "GoSub",
+        "token": {
+          "type": "GoSub",
+          "sceneName": "shop",
+          "indent": 2,
+          "lineNumber": 38,
+          "position": 4
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "confirm_purchase",
+          "rawValue": "confirm_purchase",
+          "position": 11,
+          "lineNumber": 38,
+          "sceneName": "shop",
+          "indent": 2,
+          "isLabelName": true
+        },
+        "args": []
+      }
+    ],
+    "gotos": [
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "shop",
+          "indent": 3,
+          "lineNumber": 19,
+          "position": 6
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "shop_hub",
+          "rawValue": "shop_hub",
+          "position": 12,
+          "lineNumber": 19,
+          "sceneName": "shop",
+          "indent": 3,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "shop",
+          "indent": 2,
+          "lineNumber": 20,
+          "position": 4
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "shop_exit",
+          "rawValue": "shop_exit",
+          "position": 10,
+          "lineNumber": 20,
+          "sceneName": "shop",
+          "indent": 2,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "shop",
+          "indent": 3,
+          "lineNumber": 26,
+          "position": 6
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "shop_hub",
+          "rawValue": "shop_hub",
+          "position": 12,
+          "lineNumber": 26,
+          "sceneName": "shop",
+          "indent": 3,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "shop",
+          "indent": 2,
+          "lineNumber": 27,
+          "position": 4
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "shop_exit",
+          "rawValue": "shop_exit",
+          "position": 10,
+          "lineNumber": 27,
+          "sceneName": "shop",
+          "indent": 2,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "shop",
+          "indent": 3,
+          "lineNumber": 33,
+          "position": 6
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "shop_hub",
+          "rawValue": "shop_hub",
+          "position": 12,
+          "lineNumber": 33,
+          "sceneName": "shop",
+          "indent": 3,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "shop",
+          "indent": 2,
+          "lineNumber": 34,
+          "position": 4
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "shop_exit",
+          "rawValue": "shop_exit",
+          "position": 10,
+          "lineNumber": 34,
+          "sceneName": "shop",
+          "indent": 2,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "shop",
+          "indent": 3,
+          "lineNumber": 40,
+          "position": 6
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "shop_hub",
+          "rawValue": "shop_hub",
+          "position": 12,
+          "lineNumber": 40,
+          "sceneName": "shop",
+          "indent": 3,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "shop",
+          "indent": 2,
+          "lineNumber": 41,
+          "position": 4
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "shop_exit",
+          "rawValue": "shop_exit",
+          "position": 10,
+          "lineNumber": 41,
+          "sceneName": "shop",
+          "indent": 2,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "shop",
+          "indent": 2,
+          "lineNumber": 43,
+          "position": 4
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "shop_exit",
+          "rawValue": "shop_exit",
+          "position": 10,
+          "lineNumber": 43,
+          "sceneName": "shop",
+          "indent": 2,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "GotoScene",
+        "token": {
+          "type": "GotoScene",
+          "sceneName": "shop",
+          "indent": 0,
+          "lineNumber": 47,
+          "position": 0
+        },
+        "scene": {
+          "type": "Identifier",
+          "value": "startup",
+          "rawValue": "startup",
+          "position": 12,
+          "lineNumber": 47,
+          "sceneName": "shop",
+          "indent": 0,
+          "isSceneName": true,
+          "isLabelName": false
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "village_hub",
+          "rawValue": "village_hub",
+          "position": 20,
+          "lineNumber": 47,
+          "sceneName": "shop",
+          "indent": 0,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "shop",
+          "indent": 2,
+          "lineNumber": 63,
+          "position": 4
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "confirm_continue",
+          "rawValue": "confirm_continue",
+          "position": 10,
+          "lineNumber": 63,
+          "sceneName": "shop",
+          "indent": 2,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "shop",
+          "indent": 2,
+          "lineNumber": 66,
+          "position": 4
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "confirm_continue",
+          "rawValue": "confirm_continue",
+          "position": 10,
+          "lineNumber": 66,
+          "sceneName": "shop",
+          "indent": 2,
+          "isLabelName": true
+        }
+      }
+    ],
+    "implicitControlFlow": []
+  },
+  {
+    "labels": {
+      "village_hub": {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 16,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "village_hub",
+          "rawValue": "village_hub",
+          "position": 6,
+          "lineNumber": 16,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        }
+      },
+      "ending": {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 34,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "ending",
+          "rawValue": "ending",
+          "position": 6,
+          "lineNumber": 34,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        }
+      },
+      "final": {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 48,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "final",
+          "rawValue": "final",
+          "position": 6,
+          "lineNumber": 48,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        }
+      },
+      "show_stats": {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 52,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "show_stats",
+          "rawValue": "show_stats",
+          "position": 6,
+          "lineNumber": 52,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        }
+      }
+    },
+    "globalVariables": {
+      "gold": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "gold",
+          "rawValue": "gold",
+          "position": 8,
+          "lineNumber": 0,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 100,
+            "position": 13,
+            "lineNumber": 0,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 0,
+          "position": 0
+        }
+      },
+      "reputation": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "reputation",
+          "rawValue": "reputation",
+          "position": 8,
+          "lineNumber": 1,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 50,
+            "position": 19,
+            "lineNumber": 1,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 1,
+          "position": 0
+        }
+      },
+      "strength": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "strength",
+          "rawValue": "strength",
+          "position": 8,
+          "lineNumber": 2,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 40,
+            "position": 17,
+            "lineNumber": 2,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 2,
+          "position": 0
+        }
+      },
+      "charm": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "charm",
+          "rawValue": "charm",
+          "position": 8,
+          "lineNumber": 3,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 60,
+            "position": 14,
+            "lineNumber": 3,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 3,
+          "position": 0
+        }
+      },
+      "quest_complete": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "quest_complete",
+          "rawValue": "quest_complete",
+          "position": 8,
+          "lineNumber": 4,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "BooleanLiteral",
+            "value": false,
+            "position": 23,
+            "lineNumber": 4,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 4,
+          "position": 0
+        }
+      },
+      "items_bought": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "items_bought",
+          "rawValue": "items_bought",
+          "position": 8,
+          "lineNumber": 5,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 0,
+            "position": 21,
+            "lineNumber": 5,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 5,
+          "position": 0
+        }
+      },
+      "arena_wins": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "arena_wins",
+          "rawValue": "arena_wins",
+          "position": 8,
+          "lineNumber": 6,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 0,
+            "position": 19,
+            "lineNumber": 6,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 6,
+          "position": 0
+        }
+      },
+      "tavern_visits": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "tavern_visits",
+          "rawValue": "tavern_visits",
+          "position": 8,
+          "lineNumber": 7,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 0,
+            "position": 22,
+            "lineNumber": 7,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 7,
+          "position": 0
+        }
+      },
+      "name": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "name",
+          "rawValue": "name",
+          "position": 8,
+          "lineNumber": 8,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "StringLiteral",
+            "value": "",
+            "position": 13,
+            "lineNumber": 8,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 8,
+          "position": 0
+        }
+      }
+    },
+    "tempVariables": {},
+    "checkpoints": {},
+    "gosubs": [
+      {
+        "kind": "GoSub",
+        "token": {
+          "type": "GoSub",
+          "sceneName": "startup",
+          "indent": 2,
+          "lineNumber": 29,
+          "position": 4
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "show_stats",
+          "rawValue": "show_stats",
+          "position": 11,
+          "lineNumber": 29,
+          "sceneName": "startup",
+          "indent": 2,
+          "isLabelName": true
+        },
+        "args": []
+      }
+    ],
+    "gotos": [
+      {
+        "kind": "GotoScene",
+        "token": {
+          "type": "GotoScene",
+          "sceneName": "startup",
+          "indent": 2,
+          "lineNumber": 23,
+          "position": 4
+        },
+        "scene": {
+          "type": "Identifier",
+          "value": "shop",
+          "rawValue": "shop",
+          "position": 16,
+          "lineNumber": 23,
+          "sceneName": "startup",
+          "indent": 2,
+          "isSceneName": true,
+          "isLabelName": false
+        }
+      },
+      {
+        "kind": "GotoScene",
+        "token": {
+          "type": "GotoScene",
+          "sceneName": "startup",
+          "indent": 2,
+          "lineNumber": 25,
+          "position": 4
+        },
+        "scene": {
+          "type": "Identifier",
+          "value": "tavern",
+          "rawValue": "tavern",
+          "position": 16,
+          "lineNumber": 25,
+          "sceneName": "startup",
+          "indent": 2,
+          "isSceneName": true,
+          "isLabelName": false
+        }
+      },
+      {
+        "kind": "GotoScene",
+        "token": {
+          "type": "GotoScene",
+          "sceneName": "startup",
+          "indent": 2,
+          "lineNumber": 27,
+          "position": 4
+        },
+        "scene": {
+          "type": "Identifier",
+          "value": "arena",
+          "rawValue": "arena",
+          "position": 16,
+          "lineNumber": 27,
+          "sceneName": "startup",
+          "indent": 2,
+          "isSceneName": true,
+          "isLabelName": false
+        }
+      },
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "startup",
+          "indent": 2,
+          "lineNumber": 30,
+          "position": 4
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "village_hub",
+          "rawValue": "village_hub",
+          "position": 10,
+          "lineNumber": 30,
+          "sceneName": "startup",
+          "indent": 2,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "startup",
+          "indent": 2,
+          "lineNumber": 32,
+          "position": 4
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "ending",
+          "rawValue": "ending",
+          "position": 10,
+          "lineNumber": 32,
+          "sceneName": "startup",
+          "indent": 2,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "startup",
+          "indent": 1,
+          "lineNumber": 41,
+          "position": 2
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "final",
+          "rawValue": "final",
+          "position": 8,
+          "lineNumber": 41,
+          "sceneName": "startup",
+          "indent": 1,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "startup",
+          "indent": 1,
+          "lineNumber": 44,
+          "position": 2
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "final",
+          "rawValue": "final",
+          "position": 8,
+          "lineNumber": 44,
+          "sceneName": "startup",
+          "indent": 1,
+          "isLabelName": true
+        }
+      }
+    ],
+    "implicitControlFlow": []
+  },
+  {
+    "labels": {
+      "tavern_hub": {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "tavern",
+          "indent": 0,
+          "lineNumber": 5,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "tavern_hub",
+          "rawValue": "tavern_hub",
+          "position": 6,
+          "lineNumber": 5,
+          "sceneName": "tavern",
+          "indent": 0,
+          "isLabelName": true
+        }
+      },
+      "tavern_exit": {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "tavern",
+          "indent": 0,
+          "lineNumber": 27,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "tavern_exit",
+          "rawValue": "tavern_exit",
+          "position": 6,
+          "lineNumber": 27,
+          "sceneName": "tavern",
+          "indent": 0,
+          "isLabelName": true
+        }
+      },
+      "bard_conversation": {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "tavern",
+          "indent": 0,
+          "lineNumber": 31,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "bard_conversation",
+          "rawValue": "bard_conversation",
+          "position": 6,
+          "lineNumber": 31,
+          "sceneName": "tavern",
+          "indent": 0,
+          "isLabelName": true
+        }
+      }
+    },
+    "globalVariables": {},
+    "tempVariables": {
+      "drink_count": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "drink_count",
+          "rawValue": "drink_count",
+          "position": 6,
+          "lineNumber": 0,
+          "sceneName": "tavern",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 0,
+            "position": 18,
+            "lineNumber": 0,
+            "sceneName": "tavern",
+            "indent": 0
+          }
+        },
+        "scope": "Temporary",
+        "token": {
+          "type": "CreateTempVariable",
+          "sceneName": "tavern",
+          "indent": 0,
+          "lineNumber": 0,
+          "position": 0
+        }
+      },
+      "heard_rumor": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "heard_rumor",
+          "rawValue": "heard_rumor",
+          "position": 6,
+          "lineNumber": 1,
+          "sceneName": "tavern",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "BooleanLiteral",
+            "value": false,
+            "position": 18,
+            "lineNumber": 1,
+            "sceneName": "tavern",
+            "indent": 0
+          }
+        },
+        "scope": "Temporary",
+        "token": {
+          "type": "CreateTempVariable",
+          "sceneName": "tavern",
+          "indent": 0,
+          "lineNumber": 1,
+          "position": 0
+        }
+      }
+    },
+    "checkpoints": {},
+    "gosubs": [
+      {
+        "kind": "GoSub",
+        "token": {
+          "type": "GoSub",
+          "sceneName": "tavern",
+          "indent": 2,
+          "lineNumber": 18,
+          "position": 4
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "bard_conversation",
+          "rawValue": "bard_conversation",
+          "position": 11,
+          "lineNumber": 18,
+          "sceneName": "tavern",
+          "indent": 2,
+          "isLabelName": true
+        },
+        "args": []
+      }
+    ],
+    "gotos": [
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "tavern",
+          "indent": 2,
+          "lineNumber": 16,
+          "position": 4
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "tavern_hub",
+          "rawValue": "tavern_hub",
+          "position": 10,
+          "lineNumber": 16,
+          "sceneName": "tavern",
+          "indent": 2,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "tavern",
+          "indent": 2,
+          "lineNumber": 19,
+          "position": 4
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "tavern_hub",
+          "rawValue": "tavern_hub",
+          "position": 10,
+          "lineNumber": 19,
+          "sceneName": "tavern",
+          "indent": 2,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "tavern",
+          "indent": 2,
+          "lineNumber": 23,
+          "position": 4
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "tavern_hub",
+          "rawValue": "tavern_hub",
+          "position": 10,
+          "lineNumber": 23,
+          "sceneName": "tavern",
+          "indent": 2,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "tavern",
+          "indent": 2,
+          "lineNumber": 25,
+          "position": 4
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "tavern_exit",
+          "rawValue": "tavern_exit",
+          "position": 10,
+          "lineNumber": 25,
+          "sceneName": "tavern",
+          "indent": 2,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "GotoScene",
+        "token": {
+          "type": "GotoScene",
+          "sceneName": "tavern",
+          "indent": 0,
+          "lineNumber": 29,
+          "position": 0
+        },
+        "scene": {
+          "type": "Identifier",
+          "value": "startup",
+          "rawValue": "startup",
+          "position": 12,
+          "lineNumber": 29,
+          "sceneName": "tavern",
+          "indent": 0,
+          "isSceneName": true,
+          "isLabelName": false
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "village_hub",
+          "rawValue": "village_hub",
+          "position": 20,
+          "lineNumber": 29,
+          "sceneName": "tavern",
+          "indent": 0,
+          "isLabelName": true
+        }
+      }
+    ],
+    "implicitControlFlow": []
+  }
+]

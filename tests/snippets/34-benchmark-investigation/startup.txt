@@ -1,0 +1,104 @@
+*create clues_found 0
+*create suspects_interviewed 0
+*create confidence 0
+*create has_weapon false
+*create has_motive false
+*create has_alibi_broken false
+*create detective_rank "Junior"
+*create case_closed false
+*create notes ""
+
+You are Detective ${detective_rank}, assigned to the Blackwood Manor case.
+
+A body was found in the study. Three suspects. No witnesses.
+
+*label case_hub
+
+Case progress: ${clues_found} clues found. ${suspects_interviewed} suspects interviewed.
+
+*if (clues_found >= 3) and (suspects_interviewed >= 2)
+  *set confidence + 20
+  You feel ready to make an accusation.
+
+*choice
+  #Investigate the crime scene
+    *goto_scene crime_scene
+  #Interview suspects
+    *goto_scene interrogation
+  *selectable_if (confidence >= 50) #Make an accusation
+    *goto accusation
+  #Review your notes
+    *gosub review_notes
+    *goto case_hub
+  *selectable_if (clues_found >= 5) #Request forensic analysis
+    *gosub forensics
+    *goto case_hub
+
+*label accusation
+You gather the suspects in the drawing room.
+
+"I have solved this case."
+
+*choice
+  #Accuse the butler
+    *if (has_weapon) and (has_motive)
+      *goto correct_accusation
+    *else
+      *goto wrong_accusation
+  #Accuse the spouse
+    *if (has_alibi_broken) and (has_motive)
+      *goto correct_accusation
+    *else
+      *goto wrong_accusation
+  #Accuse the business partner
+    *goto wrong_accusation
+
+*label correct_accusation
+*set case_closed true
+*set detective_rank "Senior"
+
+"The evidence speaks clearly," you declare, laying out each clue.
+
+The guilty party breaks down. Case closed.
+
+Congratulations, Detective. You've been promoted to ${detective_rank}.
+*finish
+
+*label wrong_accusation
+
+The accused produces an airtight defense. Your evidence crumbles.
+
+*set confidence - 30
+
+*choice
+  #Return to investigating
+    Embarrassed, you resolve to find more evidence.
+    *goto case_hub
+  #Give up the case
+    The case goes cold. A failure on your record.
+    *ending "Case Unsolved"
+
+*label review_notes
+Your case file reads:
+
+*if has_weapon
+  - Murder weapon identified: letter opener from the study.
+*if has_motive
+  - Financial motive confirmed via insurance documents.
+*if has_alibi_broken
+  - Spouse's alibi has inconsistencies.
+*if clues_found = 0
+  - No evidence collected yet.
+
+*return
+
+*label forensics
+The lab results come back.
+
+*if has_weapon
+  Fingerprints on the weapon match one of the suspects.
+  *set confidence + 15
+*else
+  No weapon submitted for analysis.
+
+*return

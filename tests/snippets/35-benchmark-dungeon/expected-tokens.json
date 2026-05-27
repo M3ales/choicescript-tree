@@ -1,0 +1,8065 @@
+[
+  [
+    {
+      "sceneName": "boss",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "boss",
+      "indent": 0,
+      "lineNumber": 0,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "boss_hp",
+      "rawValue": "boss_hp",
+      "position": 6,
+      "lineNumber": 0,
+      "sceneName": "boss",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 200,
+      "position": 14,
+      "lineNumber": 0,
+      "sceneName": "boss",
+      "indent": 0
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "boss",
+      "indent": 0,
+      "lineNumber": 1,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "phase",
+      "rawValue": "phase",
+      "position": 6,
+      "lineNumber": 1,
+      "sceneName": "boss",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 1,
+      "position": 12,
+      "lineNumber": 1,
+      "sceneName": "boss",
+      "indent": 0
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "boss",
+      "indent": 0,
+      "lineNumber": 2,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "fight_round",
+      "rawValue": "fight_round",
+      "position": 6,
+      "lineNumber": 2,
+      "sceneName": "boss",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 18,
+      "lineNumber": 2,
+      "sceneName": "boss",
+      "indent": 0
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "boss",
+      "indent": 0,
+      "lineNumber": 3,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "boss_attack",
+      "rawValue": "boss_attack",
+      "position": 6,
+      "lineNumber": 3,
+      "sceneName": "boss",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 20,
+      "position": 18,
+      "lineNumber": 3,
+      "sceneName": "boss",
+      "indent": 0
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "boss",
+      "indent": 0,
+      "lineNumber": 4,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "enraged",
+      "rawValue": "enraged",
+      "position": 6,
+      "lineNumber": 4,
+      "sceneName": "boss",
+      "indent": 0
+    },
+    {
+      "type": "BooleanLiteral",
+      "value": false,
+      "position": 14,
+      "lineNumber": 4,
+      "sceneName": "boss",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "boss",
+      "lineNumber": 6,
+      "position": 0,
+      "indent": 0,
+      "content": "The iron door groans open. A massive stone golem stirs to life.\n\n\"INTRUDER. YOU SHALL NOT PASS.\"\n\n"
+    },
+    {
+      "type": "Label",
+      "sceneName": "boss",
+      "indent": 0,
+      "lineNumber": 10,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "boss_fight",
+      "rawValue": "boss_fight",
+      "position": 6,
+      "lineNumber": 10,
+      "sceneName": "boss",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "boss",
+      "indent": 0,
+      "lineNumber": 11,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "fight_round",
+      "rawValue": "fight_round",
+      "position": 5,
+      "lineNumber": 11,
+      "sceneName": "boss",
+      "indent": 0
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 17,
+      "lineNumber": 11,
+      "sceneName": "boss",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 1,
+      "position": 19,
+      "lineNumber": 11,
+      "sceneName": "boss",
+      "indent": 0
+    },
+    {
+      "type": "If",
+      "sceneName": "boss",
+      "indent": 0,
+      "lineNumber": 13,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "boss_hp",
+      "rawValue": "boss_hp",
+      "position": 4,
+      "lineNumber": 13,
+      "sceneName": "boss",
+      "indent": 0
+    },
+    {
+      "type": "LessThanEqualsOperator",
+      "rawValue": "<=",
+      "position": 12,
+      "lineNumber": 13,
+      "sceneName": "boss",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 100,
+      "position": 15,
+      "lineNumber": 13,
+      "sceneName": "boss",
+      "indent": 0
+    },
+    {
+      "type": "If",
+      "sceneName": "boss",
+      "indent": 1,
+      "lineNumber": 14,
+      "position": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "phase",
+      "rawValue": "phase",
+      "position": 6,
+      "lineNumber": 14,
+      "sceneName": "boss",
+      "indent": 1
+    },
+    {
+      "type": "EqualityOperator",
+      "rawValue": "=",
+      "position": 12,
+      "lineNumber": 14,
+      "sceneName": "boss",
+      "indent": 1
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 1,
+      "position": 14,
+      "lineNumber": 14,
+      "sceneName": "boss",
+      "indent": 1
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "boss",
+      "indent": 2,
+      "lineNumber": 15,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "phase",
+      "rawValue": "phase",
+      "position": 9,
+      "lineNumber": 15,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 2,
+      "position": 15,
+      "lineNumber": 15,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "boss",
+      "indent": 2,
+      "lineNumber": 16,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "boss_attack",
+      "rawValue": "boss_attack",
+      "position": 9,
+      "lineNumber": 16,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 21,
+      "lineNumber": 16,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 10,
+      "position": 23,
+      "lineNumber": 16,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "boss",
+      "indent": 2,
+      "lineNumber": 17,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "enraged",
+      "rawValue": "enraged",
+      "position": 9,
+      "lineNumber": 17,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "BooleanLiteral",
+      "value": true,
+      "position": 17,
+      "lineNumber": 17,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "boss",
+      "lineNumber": 18,
+      "position": 4,
+      "indent": 2,
+      "content": "The golem's eyes flare red! It enters a berserk rage!\n\n"
+    },
+    {
+      "type": "Prose",
+      "sceneName": "boss",
+      "lineNumber": 20,
+      "position": 0,
+      "indent": 0,
+      "content": "Round "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "boss",
+      "lineNumber": 20,
+      "position": 6,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "fight_round",
+      "rawValue": "fight_round",
+      "position": 8,
+      "lineNumber": 20,
+      "sceneName": "boss",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "boss",
+      "lineNumber": 20,
+      "position": 19,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "boss",
+      "lineNumber": 20,
+      "position": 20,
+      "indent": 0,
+      "content": ". "
+    },
+    {
+      "type": "OpenMultiReplace",
+      "sceneName": "boss",
+      "lineNumber": 20,
+      "position": 22,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "enraged",
+      "rawValue": "enraged",
+      "position": 24,
+      "lineNumber": 20,
+      "sceneName": "boss",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "boss",
+      "lineNumber": 20,
+      "position": 32,
+      "indent": 0,
+      "content": "ENRAGED "
+    },
+    {
+      "type": "MultiReplaceElse",
+      "sceneName": "boss",
+      "lineNumber": 20,
+      "position": 40,
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "boss",
+      "lineNumber": 20,
+      "position": 41,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "boss",
+      "lineNumber": 20,
+      "position": 42,
+      "indent": 0,
+      "content": " Boss HP: "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "boss",
+      "lineNumber": 20,
+      "position": 52,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "boss_hp",
+      "rawValue": "boss_hp",
+      "position": 54,
+      "lineNumber": 20,
+      "sceneName": "boss",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "boss",
+      "lineNumber": 20,
+      "position": 61,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "boss",
+      "lineNumber": 20,
+      "position": 62,
+      "indent": 0,
+      "content": ". Your HP: "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "boss",
+      "lineNumber": 20,
+      "position": 73,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "hp",
+      "rawValue": "hp",
+      "position": 75,
+      "lineNumber": 20,
+      "sceneName": "boss",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "boss",
+      "lineNumber": 20,
+      "position": 77,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "boss",
+      "lineNumber": 20,
+      "position": 78,
+      "indent": 0,
+      "content": ".\n\n"
+    },
+    {
+      "type": "If",
+      "sceneName": "boss",
+      "indent": 0,
+      "lineNumber": 22,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "boss_hp",
+      "rawValue": "boss_hp",
+      "position": 4,
+      "lineNumber": 22,
+      "sceneName": "boss",
+      "indent": 0
+    },
+    {
+      "type": "LessThanEqualsOperator",
+      "rawValue": "<=",
+      "position": 12,
+      "lineNumber": 22,
+      "sceneName": "boss",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 15,
+      "lineNumber": 22,
+      "sceneName": "boss",
+      "indent": 0
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "boss",
+      "indent": 1,
+      "lineNumber": 23,
+      "position": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "boss_victory",
+      "rawValue": "boss_victory",
+      "position": 8,
+      "lineNumber": 23,
+      "sceneName": "boss",
+      "indent": 1,
+      "isLabelName": true
+    },
+    {
+      "type": "If",
+      "sceneName": "boss",
+      "indent": 0,
+      "lineNumber": 24,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "hp",
+      "rawValue": "hp",
+      "position": 4,
+      "lineNumber": 24,
+      "sceneName": "boss",
+      "indent": 0
+    },
+    {
+      "type": "LessThanEqualsOperator",
+      "rawValue": "<=",
+      "position": 7,
+      "lineNumber": 24,
+      "sceneName": "boss",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 10,
+      "lineNumber": 24,
+      "sceneName": "boss",
+      "indent": 0
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "boss",
+      "indent": 1,
+      "lineNumber": 25,
+      "position": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "boss_defeat",
+      "rawValue": "boss_defeat",
+      "position": 8,
+      "lineNumber": 25,
+      "sceneName": "boss",
+      "indent": 1,
+      "isLabelName": true
+    },
+    {
+      "type": "Choice",
+      "sceneName": "boss",
+      "indent": 0,
+      "lineNumber": 27,
+      "position": 0
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "boss",
+      "indent": 1,
+      "lineNumber": 28,
+      "rawText": "Heavy attack",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "boss",
+      "lineNumber": 28,
+      "position": null,
+      "indent": 1,
+      "content": "Heavy attack"
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "boss",
+      "indent": 2,
+      "lineNumber": 29,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "damage",
+      "rawValue": "damage",
+      "position": 10,
+      "lineNumber": 29,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 17,
+      "lineNumber": 29,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "GenerateRandom",
+      "sceneName": "boss",
+      "indent": 2,
+      "lineNumber": 30,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "damage",
+      "rawValue": "damage",
+      "position": 10,
+      "lineNumber": 30,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 17,
+      "lineNumber": 30,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "attack",
+      "rawValue": "attack",
+      "position": 18,
+      "lineNumber": 30,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 24,
+      "lineNumber": 30,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 26,
+      "lineNumber": 30,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "attack",
+      "rawValue": "attack",
+      "position": 27,
+      "lineNumber": 30,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 34,
+      "lineNumber": 30,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 10,
+      "position": 36,
+      "lineNumber": 30,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 38,
+      "lineNumber": 30,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "boss",
+      "indent": 2,
+      "lineNumber": 31,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "boss_hp",
+      "rawValue": "boss_hp",
+      "position": 9,
+      "lineNumber": 31,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "SubtractionOperator",
+      "rawValue": "-",
+      "position": 17,
+      "lineNumber": 31,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "damage",
+      "rawValue": "damage",
+      "position": 19,
+      "lineNumber": 31,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "boss",
+      "lineNumber": 32,
+      "position": 4,
+      "indent": 2,
+      "content": "You smash the golem for "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "boss",
+      "lineNumber": 32,
+      "position": 28,
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "damage",
+      "rawValue": "damage",
+      "position": 30,
+      "lineNumber": 32,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "boss",
+      "lineNumber": 32,
+      "position": 36,
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "boss",
+      "lineNumber": 32,
+      "position": 37,
+      "indent": 2,
+      "content": " damage!\n"
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "boss",
+      "indent": 2,
+      "lineNumber": 33,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "hit",
+      "rawValue": "hit",
+      "position": 10,
+      "lineNumber": 33,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 14,
+      "lineNumber": 33,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "GenerateRandom",
+      "sceneName": "boss",
+      "indent": 2,
+      "lineNumber": 34,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "hit",
+      "rawValue": "hit",
+      "position": 10,
+      "lineNumber": 34,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "boss_attack",
+      "rawValue": "boss_attack",
+      "position": 14,
+      "lineNumber": 34,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 26,
+      "lineNumber": 34,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "boss_attack",
+      "rawValue": "boss_attack",
+      "position": 27,
+      "lineNumber": 34,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 39,
+      "lineNumber": 34,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 15,
+      "position": 41,
+      "lineNumber": 34,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 43,
+      "lineNumber": 34,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "boss",
+      "indent": 2,
+      "lineNumber": 35,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "mitigated",
+      "rawValue": "mitigated",
+      "position": 10,
+      "lineNumber": 35,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 20,
+      "lineNumber": 35,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "hit",
+      "rawValue": "hit",
+      "position": 21,
+      "lineNumber": 35,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "SubtractionOperator",
+      "rawValue": "-",
+      "position": 25,
+      "lineNumber": 35,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "defense",
+      "rawValue": "defense",
+      "position": 27,
+      "lineNumber": 35,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 34,
+      "lineNumber": 35,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "If",
+      "sceneName": "boss",
+      "indent": 2,
+      "lineNumber": 36,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "mitigated",
+      "rawValue": "mitigated",
+      "position": 8,
+      "lineNumber": 36,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "LessThanOperator",
+      "rawValue": "<",
+      "position": 18,
+      "lineNumber": 36,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 20,
+      "lineNumber": 36,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "boss",
+      "indent": 3,
+      "lineNumber": 37,
+      "position": 6
+    },
+    {
+      "type": "Identifier",
+      "value": "mitigated",
+      "rawValue": "mitigated",
+      "position": 11,
+      "lineNumber": 37,
+      "sceneName": "boss",
+      "indent": 3
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 21,
+      "lineNumber": 37,
+      "sceneName": "boss",
+      "indent": 3
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "boss",
+      "indent": 2,
+      "lineNumber": 38,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "hp",
+      "rawValue": "hp",
+      "position": 9,
+      "lineNumber": 38,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "SubtractionOperator",
+      "rawValue": "-",
+      "position": 12,
+      "lineNumber": 38,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "mitigated",
+      "rawValue": "mitigated",
+      "position": 14,
+      "lineNumber": 38,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "boss",
+      "lineNumber": 39,
+      "position": 4,
+      "indent": 2,
+      "content": "The golem retaliates! "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "boss",
+      "lineNumber": 39,
+      "position": 26,
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "mitigated",
+      "rawValue": "mitigated",
+      "position": 28,
+      "lineNumber": 39,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "boss",
+      "lineNumber": 39,
+      "position": 37,
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "boss",
+      "lineNumber": 39,
+      "position": 38,
+      "indent": 2,
+      "content": " damage!\n"
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "boss",
+      "indent": 2,
+      "lineNumber": 40,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "boss_fight",
+      "rawValue": "boss_fight",
+      "position": 10,
+      "lineNumber": 40,
+      "sceneName": "boss",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "boss",
+      "indent": 1,
+      "lineNumber": 41,
+      "rawText": "Aim for the cracks",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "boss",
+      "lineNumber": 41,
+      "position": null,
+      "indent": 1,
+      "content": "Aim for the cracks"
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "boss",
+      "indent": 2,
+      "lineNumber": 42,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "precision_roll",
+      "rawValue": "precision_roll",
+      "position": 10,
+      "lineNumber": 42,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 25,
+      "lineNumber": 42,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "GenerateRandom",
+      "sceneName": "boss",
+      "indent": 2,
+      "lineNumber": 43,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "precision_roll",
+      "rawValue": "precision_roll",
+      "position": 10,
+      "lineNumber": 43,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 1,
+      "position": 25,
+      "lineNumber": 43,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 10,
+      "position": 27,
+      "lineNumber": 43,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "If",
+      "sceneName": "boss",
+      "indent": 2,
+      "lineNumber": 44,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "precision_roll",
+      "rawValue": "precision_roll",
+      "position": 8,
+      "lineNumber": 44,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "GreaterThanOperator",
+      "rawValue": ">",
+      "position": 23,
+      "lineNumber": 44,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 5,
+      "position": 25,
+      "lineNumber": 44,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "boss",
+      "indent": 3,
+      "lineNumber": 45,
+      "position": 6
+    },
+    {
+      "type": "Identifier",
+      "value": "damage",
+      "rawValue": "damage",
+      "position": 12,
+      "lineNumber": 45,
+      "sceneName": "boss",
+      "indent": 3
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 19,
+      "lineNumber": 45,
+      "sceneName": "boss",
+      "indent": 3
+    },
+    {
+      "type": "GenerateRandom",
+      "sceneName": "boss",
+      "indent": 3,
+      "lineNumber": 46,
+      "position": 6
+    },
+    {
+      "type": "Identifier",
+      "value": "damage",
+      "rawValue": "damage",
+      "position": 12,
+      "lineNumber": 46,
+      "sceneName": "boss",
+      "indent": 3
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 19,
+      "lineNumber": 46,
+      "sceneName": "boss",
+      "indent": 3
+    },
+    {
+      "type": "Identifier",
+      "value": "attack",
+      "rawValue": "attack",
+      "position": 20,
+      "lineNumber": 46,
+      "sceneName": "boss",
+      "indent": 3
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 27,
+      "lineNumber": 46,
+      "sceneName": "boss",
+      "indent": 3
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 5,
+      "position": 29,
+      "lineNumber": 46,
+      "sceneName": "boss",
+      "indent": 3
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 30,
+      "lineNumber": 46,
+      "sceneName": "boss",
+      "indent": 3
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 32,
+      "lineNumber": 46,
+      "sceneName": "boss",
+      "indent": 3
+    },
+    {
+      "type": "Identifier",
+      "value": "attack",
+      "rawValue": "attack",
+      "position": 33,
+      "lineNumber": 46,
+      "sceneName": "boss",
+      "indent": 3
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 40,
+      "lineNumber": 46,
+      "sceneName": "boss",
+      "indent": 3
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 20,
+      "position": 42,
+      "lineNumber": 46,
+      "sceneName": "boss",
+      "indent": 3
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 44,
+      "lineNumber": 46,
+      "sceneName": "boss",
+      "indent": 3
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "boss",
+      "indent": 3,
+      "lineNumber": 47,
+      "position": 6
+    },
+    {
+      "type": "Identifier",
+      "value": "boss_hp",
+      "rawValue": "boss_hp",
+      "position": 11,
+      "lineNumber": 47,
+      "sceneName": "boss",
+      "indent": 3
+    },
+    {
+      "type": "SubtractionOperator",
+      "rawValue": "-",
+      "position": 19,
+      "lineNumber": 47,
+      "sceneName": "boss",
+      "indent": 3
+    },
+    {
+      "type": "Identifier",
+      "value": "damage",
+      "rawValue": "damage",
+      "position": 21,
+      "lineNumber": 47,
+      "sceneName": "boss",
+      "indent": 3
+    },
+    {
+      "type": "Prose",
+      "sceneName": "boss",
+      "lineNumber": 48,
+      "position": 6,
+      "indent": 3,
+      "content": "You find a weak point! "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "boss",
+      "lineNumber": 48,
+      "position": 29,
+      "indent": 3
+    },
+    {
+      "type": "Identifier",
+      "value": "damage",
+      "rawValue": "damage",
+      "position": 31,
+      "lineNumber": 48,
+      "sceneName": "boss",
+      "indent": 3
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "boss",
+      "lineNumber": 48,
+      "position": 37,
+      "indent": 3
+    },
+    {
+      "type": "Prose",
+      "sceneName": "boss",
+      "lineNumber": 48,
+      "position": 38,
+      "indent": 3,
+      "content": " critical damage!\n"
+    },
+    {
+      "type": "Else",
+      "sceneName": "boss",
+      "indent": 2,
+      "lineNumber": 49,
+      "position": 4
+    },
+    {
+      "type": "Prose",
+      "sceneName": "boss",
+      "lineNumber": 50,
+      "position": 6,
+      "indent": 3,
+      "content": "Your attack glances off solid stone.\n"
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "boss",
+      "indent": 2,
+      "lineNumber": 51,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "hit",
+      "rawValue": "hit",
+      "position": 10,
+      "lineNumber": 51,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 14,
+      "lineNumber": 51,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "GenerateRandom",
+      "sceneName": "boss",
+      "indent": 2,
+      "lineNumber": 52,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "hit",
+      "rawValue": "hit",
+      "position": 10,
+      "lineNumber": 52,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "boss_attack",
+      "rawValue": "boss_attack",
+      "position": 14,
+      "lineNumber": 52,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 26,
+      "lineNumber": 52,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "boss_attack",
+      "rawValue": "boss_attack",
+      "position": 27,
+      "lineNumber": 52,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 39,
+      "lineNumber": 52,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 10,
+      "position": 41,
+      "lineNumber": 52,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 43,
+      "lineNumber": 52,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "boss",
+      "indent": 2,
+      "lineNumber": 53,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "mitigated",
+      "rawValue": "mitigated",
+      "position": 10,
+      "lineNumber": 53,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 20,
+      "lineNumber": 53,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "hit",
+      "rawValue": "hit",
+      "position": 21,
+      "lineNumber": 53,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "SubtractionOperator",
+      "rawValue": "-",
+      "position": 25,
+      "lineNumber": 53,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "defense",
+      "rawValue": "defense",
+      "position": 27,
+      "lineNumber": 53,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 34,
+      "lineNumber": 53,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "If",
+      "sceneName": "boss",
+      "indent": 2,
+      "lineNumber": 54,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "mitigated",
+      "rawValue": "mitigated",
+      "position": 8,
+      "lineNumber": 54,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "LessThanOperator",
+      "rawValue": "<",
+      "position": 18,
+      "lineNumber": 54,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 20,
+      "lineNumber": 54,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "boss",
+      "indent": 3,
+      "lineNumber": 55,
+      "position": 6
+    },
+    {
+      "type": "Identifier",
+      "value": "mitigated",
+      "rawValue": "mitigated",
+      "position": 11,
+      "lineNumber": 55,
+      "sceneName": "boss",
+      "indent": 3
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 21,
+      "lineNumber": 55,
+      "sceneName": "boss",
+      "indent": 3
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "boss",
+      "indent": 2,
+      "lineNumber": 56,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "hp",
+      "rawValue": "hp",
+      "position": 9,
+      "lineNumber": 56,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "SubtractionOperator",
+      "rawValue": "-",
+      "position": 12,
+      "lineNumber": 56,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "mitigated",
+      "rawValue": "mitigated",
+      "position": 14,
+      "lineNumber": 56,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "boss",
+      "lineNumber": 57,
+      "position": 4,
+      "indent": 2,
+      "content": "The golem swings! "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "boss",
+      "lineNumber": 57,
+      "position": 22,
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "mitigated",
+      "rawValue": "mitigated",
+      "position": 24,
+      "lineNumber": 57,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "boss",
+      "lineNumber": 57,
+      "position": 33,
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "boss",
+      "lineNumber": 57,
+      "position": 34,
+      "indent": 2,
+      "content": " damage!\n"
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "boss",
+      "indent": 2,
+      "lineNumber": 58,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "boss_fight",
+      "rawValue": "boss_fight",
+      "position": 10,
+      "lineNumber": 58,
+      "sceneName": "boss",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "SelectableIf",
+      "sceneName": "boss",
+      "indent": 1,
+      "lineNumber": 59,
+      "position": 2
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 17,
+      "lineNumber": 59,
+      "sceneName": "boss",
+      "indent": 1
+    },
+    {
+      "type": "Identifier",
+      "value": "potions",
+      "rawValue": "potions",
+      "position": 18,
+      "lineNumber": 59,
+      "sceneName": "boss",
+      "indent": 1
+    },
+    {
+      "type": "GreaterThanOperator",
+      "rawValue": ">",
+      "position": 26,
+      "lineNumber": 59,
+      "sceneName": "boss",
+      "indent": 1
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 28,
+      "lineNumber": 59,
+      "sceneName": "boss",
+      "indent": 1
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 29,
+      "lineNumber": 59,
+      "sceneName": "boss",
+      "indent": 1
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "boss",
+      "indent": 1,
+      "lineNumber": 59,
+      "position": 16,
+      "rawText": "Heal with a potion",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "boss",
+      "lineNumber": 59,
+      "position": 17,
+      "indent": 1,
+      "content": "Heal with a potion"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "boss",
+      "indent": 2,
+      "lineNumber": 60,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "potions",
+      "rawValue": "potions",
+      "position": 9,
+      "lineNumber": 60,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "SubtractionOperator",
+      "rawValue": "-",
+      "position": 17,
+      "lineNumber": 60,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 1,
+      "position": 19,
+      "lineNumber": 60,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "boss",
+      "indent": 2,
+      "lineNumber": 61,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "heal",
+      "rawValue": "heal",
+      "position": 10,
+      "lineNumber": 61,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 15,
+      "lineNumber": 61,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "GenerateRandom",
+      "sceneName": "boss",
+      "indent": 2,
+      "lineNumber": 62,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "heal",
+      "rawValue": "heal",
+      "position": 10,
+      "lineNumber": 62,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 30,
+      "position": 15,
+      "lineNumber": 62,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 50,
+      "position": 18,
+      "lineNumber": 62,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "boss",
+      "indent": 2,
+      "lineNumber": 63,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "hp",
+      "rawValue": "hp",
+      "position": 9,
+      "lineNumber": 63,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 12,
+      "lineNumber": 63,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "heal",
+      "rawValue": "heal",
+      "position": 14,
+      "lineNumber": 63,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "If",
+      "sceneName": "boss",
+      "indent": 2,
+      "lineNumber": 64,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "hp",
+      "rawValue": "hp",
+      "position": 8,
+      "lineNumber": 64,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "GreaterThanOperator",
+      "rawValue": ">",
+      "position": 11,
+      "lineNumber": 64,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "max_hp",
+      "rawValue": "max_hp",
+      "position": 13,
+      "lineNumber": 64,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "boss",
+      "indent": 3,
+      "lineNumber": 65,
+      "position": 6
+    },
+    {
+      "type": "Identifier",
+      "value": "hp",
+      "rawValue": "hp",
+      "position": 11,
+      "lineNumber": 65,
+      "sceneName": "boss",
+      "indent": 3
+    },
+    {
+      "type": "Identifier",
+      "value": "max_hp",
+      "rawValue": "max_hp",
+      "position": 14,
+      "lineNumber": 65,
+      "sceneName": "boss",
+      "indent": 3
+    },
+    {
+      "type": "Prose",
+      "sceneName": "boss",
+      "lineNumber": 66,
+      "position": 4,
+      "indent": 2,
+      "content": "You drink a potion. HP: "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "boss",
+      "lineNumber": 66,
+      "position": 28,
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "hp",
+      "rawValue": "hp",
+      "position": 30,
+      "lineNumber": 66,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "boss",
+      "lineNumber": 66,
+      "position": 32,
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "boss",
+      "lineNumber": 66,
+      "position": 33,
+      "indent": 2,
+      "content": "/"
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "boss",
+      "lineNumber": 66,
+      "position": 34,
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "max_hp",
+      "rawValue": "max_hp",
+      "position": 36,
+      "lineNumber": 66,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "boss",
+      "lineNumber": 66,
+      "position": 42,
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "boss",
+      "lineNumber": 66,
+      "position": 43,
+      "indent": 2,
+      "content": ".\n"
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "boss",
+      "indent": 2,
+      "lineNumber": 67,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "hit",
+      "rawValue": "hit",
+      "position": 10,
+      "lineNumber": 67,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 14,
+      "lineNumber": 67,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "GenerateRandom",
+      "sceneName": "boss",
+      "indent": 2,
+      "lineNumber": 68,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "hit",
+      "rawValue": "hit",
+      "position": 10,
+      "lineNumber": 68,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 14,
+      "lineNumber": 68,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "boss_attack",
+      "rawValue": "boss_attack",
+      "position": 15,
+      "lineNumber": 68,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "SubtractionOperator",
+      "rawValue": "-",
+      "position": 27,
+      "lineNumber": 68,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 5,
+      "position": 29,
+      "lineNumber": 68,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 30,
+      "lineNumber": 68,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "boss_attack",
+      "rawValue": "boss_attack",
+      "position": 32,
+      "lineNumber": 68,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "boss",
+      "indent": 2,
+      "lineNumber": 69,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "mitigated",
+      "rawValue": "mitigated",
+      "position": 10,
+      "lineNumber": 69,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 20,
+      "lineNumber": 69,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "hit",
+      "rawValue": "hit",
+      "position": 21,
+      "lineNumber": 69,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "SubtractionOperator",
+      "rawValue": "-",
+      "position": 25,
+      "lineNumber": 69,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "defense",
+      "rawValue": "defense",
+      "position": 27,
+      "lineNumber": 69,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 34,
+      "lineNumber": 69,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "If",
+      "sceneName": "boss",
+      "indent": 2,
+      "lineNumber": 70,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "mitigated",
+      "rawValue": "mitigated",
+      "position": 8,
+      "lineNumber": 70,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "LessThanOperator",
+      "rawValue": "<",
+      "position": 18,
+      "lineNumber": 70,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 20,
+      "lineNumber": 70,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "boss",
+      "indent": 3,
+      "lineNumber": 71,
+      "position": 6
+    },
+    {
+      "type": "Identifier",
+      "value": "mitigated",
+      "rawValue": "mitigated",
+      "position": 11,
+      "lineNumber": 71,
+      "sceneName": "boss",
+      "indent": 3
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 21,
+      "lineNumber": 71,
+      "sceneName": "boss",
+      "indent": 3
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "boss",
+      "indent": 2,
+      "lineNumber": 72,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "hp",
+      "rawValue": "hp",
+      "position": 9,
+      "lineNumber": 72,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "SubtractionOperator",
+      "rawValue": "-",
+      "position": 12,
+      "lineNumber": 72,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "mitigated",
+      "rawValue": "mitigated",
+      "position": 14,
+      "lineNumber": 72,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "boss",
+      "lineNumber": 73,
+      "position": 4,
+      "indent": 2,
+      "content": "The golem strikes while you heal! "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "boss",
+      "lineNumber": 73,
+      "position": 38,
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "mitigated",
+      "rawValue": "mitigated",
+      "position": 40,
+      "lineNumber": 73,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "boss",
+      "lineNumber": 73,
+      "position": 49,
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "boss",
+      "lineNumber": 73,
+      "position": 50,
+      "indent": 2,
+      "content": " damage!\n"
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "boss",
+      "indent": 2,
+      "lineNumber": 74,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "boss_fight",
+      "rawValue": "boss_fight",
+      "position": 10,
+      "lineNumber": 74,
+      "sceneName": "boss",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "SelectableIf",
+      "sceneName": "boss",
+      "indent": 1,
+      "lineNumber": 75,
+      "position": 2
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 17,
+      "lineNumber": 75,
+      "sceneName": "boss",
+      "indent": 1
+    },
+    {
+      "type": "Identifier",
+      "value": "enraged",
+      "rawValue": "enraged",
+      "position": 18,
+      "lineNumber": 75,
+      "sceneName": "boss",
+      "indent": 1
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 25,
+      "lineNumber": 75,
+      "sceneName": "boss",
+      "indent": 1
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "boss",
+      "indent": 1,
+      "lineNumber": 75,
+      "position": 16,
+      "rawText": "Wait for an opening",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "boss",
+      "lineNumber": 75,
+      "position": 17,
+      "indent": 1,
+      "content": "Wait for an opening"
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "boss",
+      "indent": 2,
+      "lineNumber": 76,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "dodge_roll",
+      "rawValue": "dodge_roll",
+      "position": 10,
+      "lineNumber": 76,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 21,
+      "lineNumber": 76,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "GenerateRandom",
+      "sceneName": "boss",
+      "indent": 2,
+      "lineNumber": 77,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "dodge_roll",
+      "rawValue": "dodge_roll",
+      "position": 10,
+      "lineNumber": 77,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 1,
+      "position": 21,
+      "lineNumber": 77,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 10,
+      "position": 23,
+      "lineNumber": 77,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "If",
+      "sceneName": "boss",
+      "indent": 2,
+      "lineNumber": 78,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "dodge_roll",
+      "rawValue": "dodge_roll",
+      "position": 8,
+      "lineNumber": 78,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "GreaterThanOperator",
+      "rawValue": ">",
+      "position": 19,
+      "lineNumber": 78,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 3,
+      "position": 21,
+      "lineNumber": 78,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "boss",
+      "lineNumber": 79,
+      "position": 6,
+      "indent": 3,
+      "content": "The berserk golem overextends!\n"
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "boss",
+      "indent": 3,
+      "lineNumber": 80,
+      "position": 6
+    },
+    {
+      "type": "Identifier",
+      "value": "damage",
+      "rawValue": "damage",
+      "position": 12,
+      "lineNumber": 80,
+      "sceneName": "boss",
+      "indent": 3
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 19,
+      "lineNumber": 80,
+      "sceneName": "boss",
+      "indent": 3
+    },
+    {
+      "type": "GenerateRandom",
+      "sceneName": "boss",
+      "indent": 3,
+      "lineNumber": 81,
+      "position": 6
+    },
+    {
+      "type": "Identifier",
+      "value": "damage",
+      "rawValue": "damage",
+      "position": 12,
+      "lineNumber": 81,
+      "sceneName": "boss",
+      "indent": 3
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 19,
+      "lineNumber": 81,
+      "sceneName": "boss",
+      "indent": 3
+    },
+    {
+      "type": "Identifier",
+      "value": "attack",
+      "rawValue": "attack",
+      "position": 20,
+      "lineNumber": 81,
+      "sceneName": "boss",
+      "indent": 3
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 27,
+      "lineNumber": 81,
+      "sceneName": "boss",
+      "indent": 3
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 10,
+      "position": 29,
+      "lineNumber": 81,
+      "sceneName": "boss",
+      "indent": 3
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 31,
+      "lineNumber": 81,
+      "sceneName": "boss",
+      "indent": 3
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 33,
+      "lineNumber": 81,
+      "sceneName": "boss",
+      "indent": 3
+    },
+    {
+      "type": "Identifier",
+      "value": "attack",
+      "rawValue": "attack",
+      "position": 34,
+      "lineNumber": 81,
+      "sceneName": "boss",
+      "indent": 3
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 41,
+      "lineNumber": 81,
+      "sceneName": "boss",
+      "indent": 3
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 25,
+      "position": 43,
+      "lineNumber": 81,
+      "sceneName": "boss",
+      "indent": 3
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 45,
+      "lineNumber": 81,
+      "sceneName": "boss",
+      "indent": 3
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "boss",
+      "indent": 3,
+      "lineNumber": 82,
+      "position": 6
+    },
+    {
+      "type": "Identifier",
+      "value": "boss_hp",
+      "rawValue": "boss_hp",
+      "position": 11,
+      "lineNumber": 82,
+      "sceneName": "boss",
+      "indent": 3
+    },
+    {
+      "type": "SubtractionOperator",
+      "rawValue": "-",
+      "position": 19,
+      "lineNumber": 82,
+      "sceneName": "boss",
+      "indent": 3
+    },
+    {
+      "type": "Identifier",
+      "value": "damage",
+      "rawValue": "damage",
+      "position": 21,
+      "lineNumber": 82,
+      "sceneName": "boss",
+      "indent": 3
+    },
+    {
+      "type": "Prose",
+      "sceneName": "boss",
+      "lineNumber": 83,
+      "position": 6,
+      "indent": 3,
+      "content": "A devastating counter for "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "boss",
+      "lineNumber": 83,
+      "position": 32,
+      "indent": 3
+    },
+    {
+      "type": "Identifier",
+      "value": "damage",
+      "rawValue": "damage",
+      "position": 34,
+      "lineNumber": 83,
+      "sceneName": "boss",
+      "indent": 3
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "boss",
+      "lineNumber": 83,
+      "position": 40,
+      "indent": 3
+    },
+    {
+      "type": "Prose",
+      "sceneName": "boss",
+      "lineNumber": 83,
+      "position": 41,
+      "indent": 3,
+      "content": "!\n"
+    },
+    {
+      "type": "Else",
+      "sceneName": "boss",
+      "indent": 2,
+      "lineNumber": 84,
+      "position": 4
+    },
+    {
+      "type": "Prose",
+      "sceneName": "boss",
+      "lineNumber": 85,
+      "position": 6,
+      "indent": 3,
+      "content": "You mistime it! The golem crushes you.\n"
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "boss",
+      "indent": 3,
+      "lineNumber": 86,
+      "position": 6
+    },
+    {
+      "type": "Identifier",
+      "value": "hit",
+      "rawValue": "hit",
+      "position": 12,
+      "lineNumber": 86,
+      "sceneName": "boss",
+      "indent": 3
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 16,
+      "lineNumber": 86,
+      "sceneName": "boss",
+      "indent": 3
+    },
+    {
+      "type": "GenerateRandom",
+      "sceneName": "boss",
+      "indent": 3,
+      "lineNumber": 87,
+      "position": 6
+    },
+    {
+      "type": "Identifier",
+      "value": "hit",
+      "rawValue": "hit",
+      "position": 12,
+      "lineNumber": 87,
+      "sceneName": "boss",
+      "indent": 3
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 16,
+      "lineNumber": 87,
+      "sceneName": "boss",
+      "indent": 3
+    },
+    {
+      "type": "Identifier",
+      "value": "boss_attack",
+      "rawValue": "boss_attack",
+      "position": 17,
+      "lineNumber": 87,
+      "sceneName": "boss",
+      "indent": 3
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 29,
+      "lineNumber": 87,
+      "sceneName": "boss",
+      "indent": 3
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 5,
+      "position": 31,
+      "lineNumber": 87,
+      "sceneName": "boss",
+      "indent": 3
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 32,
+      "lineNumber": 87,
+      "sceneName": "boss",
+      "indent": 3
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 34,
+      "lineNumber": 87,
+      "sceneName": "boss",
+      "indent": 3
+    },
+    {
+      "type": "Identifier",
+      "value": "boss_attack",
+      "rawValue": "boss_attack",
+      "position": 35,
+      "lineNumber": 87,
+      "sceneName": "boss",
+      "indent": 3
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 47,
+      "lineNumber": 87,
+      "sceneName": "boss",
+      "indent": 3
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 20,
+      "position": 49,
+      "lineNumber": 87,
+      "sceneName": "boss",
+      "indent": 3
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 51,
+      "lineNumber": 87,
+      "sceneName": "boss",
+      "indent": 3
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "boss",
+      "indent": 3,
+      "lineNumber": 88,
+      "position": 6
+    },
+    {
+      "type": "Identifier",
+      "value": "hp",
+      "rawValue": "hp",
+      "position": 11,
+      "lineNumber": 88,
+      "sceneName": "boss",
+      "indent": 3
+    },
+    {
+      "type": "SubtractionOperator",
+      "rawValue": "-",
+      "position": 14,
+      "lineNumber": 88,
+      "sceneName": "boss",
+      "indent": 3
+    },
+    {
+      "type": "Identifier",
+      "value": "hit",
+      "rawValue": "hit",
+      "position": 16,
+      "lineNumber": 88,
+      "sceneName": "boss",
+      "indent": 3
+    },
+    {
+      "type": "Prose",
+      "sceneName": "boss",
+      "lineNumber": 89,
+      "position": 6,
+      "indent": 3,
+      "content": ""
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "boss",
+      "lineNumber": 89,
+      "position": 6,
+      "indent": 3
+    },
+    {
+      "type": "Identifier",
+      "value": "hit",
+      "rawValue": "hit",
+      "position": 8,
+      "lineNumber": 89,
+      "sceneName": "boss",
+      "indent": 3
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "boss",
+      "lineNumber": 89,
+      "position": 11,
+      "indent": 3
+    },
+    {
+      "type": "Prose",
+      "sceneName": "boss",
+      "lineNumber": 89,
+      "position": 12,
+      "indent": 3,
+      "content": " unmitigated damage!\n"
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "boss",
+      "indent": 2,
+      "lineNumber": 90,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "boss_fight",
+      "rawValue": "boss_fight",
+      "position": 10,
+      "lineNumber": 90,
+      "sceneName": "boss",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "Label",
+      "sceneName": "boss",
+      "indent": 0,
+      "lineNumber": 92,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "boss_victory",
+      "rawValue": "boss_victory",
+      "position": 6,
+      "lineNumber": 92,
+      "sceneName": "boss",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "boss",
+      "indent": 0,
+      "lineNumber": 93,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "boss_defeated",
+      "rawValue": "boss_defeated",
+      "position": 5,
+      "lineNumber": 93,
+      "sceneName": "boss",
+      "indent": 0
+    },
+    {
+      "type": "BooleanLiteral",
+      "value": true,
+      "position": 19,
+      "lineNumber": 93,
+      "sceneName": "boss",
+      "indent": 0
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "boss",
+      "indent": 0,
+      "lineNumber": 94,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "treasure_collected",
+      "rawValue": "treasure_collected",
+      "position": 5,
+      "lineNumber": 94,
+      "sceneName": "boss",
+      "indent": 0
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 24,
+      "lineNumber": 94,
+      "sceneName": "boss",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 10,
+      "position": 26,
+      "lineNumber": 94,
+      "sceneName": "boss",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "boss",
+      "lineNumber": 96,
+      "position": 0,
+      "indent": 0,
+      "content": "The golem crumbles into rubble. Behind it, a hoard of ancient treasure.\n\nVictory in "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "boss",
+      "lineNumber": 98,
+      "position": 11,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "fight_round",
+      "rawValue": "fight_round",
+      "position": 13,
+      "lineNumber": 98,
+      "sceneName": "boss",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "boss",
+      "lineNumber": 98,
+      "position": 24,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "boss",
+      "lineNumber": 98,
+      "position": 25,
+      "indent": 0,
+      "content": " rounds!\n\n"
+    },
+    {
+      "type": "Choice",
+      "sceneName": "boss",
+      "indent": 0,
+      "lineNumber": 100,
+      "position": 0
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "boss",
+      "indent": 1,
+      "lineNumber": 101,
+      "rawText": "Claim the treasure and leave",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "boss",
+      "lineNumber": 101,
+      "position": null,
+      "indent": 1,
+      "content": "Claim the treasure and leave"
+    },
+    {
+      "type": "Prose",
+      "sceneName": "boss",
+      "lineNumber": 102,
+      "position": 4,
+      "indent": 2,
+      "content": "You gather armfuls of gold and gems.\n"
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "boss",
+      "indent": 2,
+      "lineNumber": 103,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "boss_exit",
+      "rawValue": "boss_exit",
+      "position": 10,
+      "lineNumber": 103,
+      "sceneName": "boss",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "boss",
+      "indent": 1,
+      "lineNumber": 104,
+      "rawText": "Search for something special",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "boss",
+      "lineNumber": 104,
+      "position": null,
+      "indent": 1,
+      "content": "Search for something special"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "boss",
+      "indent": 2,
+      "lineNumber": 105,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "attack",
+      "rawValue": "attack",
+      "position": 9,
+      "lineNumber": 105,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 16,
+      "lineNumber": 105,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 5,
+      "position": 18,
+      "lineNumber": 105,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "boss",
+      "indent": 2,
+      "lineNumber": 106,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "defense",
+      "rawValue": "defense",
+      "position": 9,
+      "lineNumber": 106,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 17,
+      "lineNumber": 106,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 5,
+      "position": 19,
+      "lineNumber": 106,
+      "sceneName": "boss",
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "boss",
+      "lineNumber": 107,
+      "position": 4,
+      "indent": 2,
+      "content": "Among the rubble you find an enchanted ring. Its power flows into you.\n"
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "boss",
+      "indent": 2,
+      "lineNumber": 108,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "boss_exit",
+      "rawValue": "boss_exit",
+      "position": 10,
+      "lineNumber": 108,
+      "sceneName": "boss",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "Label",
+      "sceneName": "boss",
+      "indent": 0,
+      "lineNumber": 110,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "boss_defeat",
+      "rawValue": "boss_defeat",
+      "position": 6,
+      "lineNumber": 110,
+      "sceneName": "boss",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "Prose",
+      "sceneName": "boss",
+      "lineNumber": 111,
+      "position": 0,
+      "indent": 0,
+      "content": "The golem's fist comes down one final time.\n\nYou lasted "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "boss",
+      "lineNumber": 113,
+      "position": 11,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "fight_round",
+      "rawValue": "fight_round",
+      "position": 13,
+      "lineNumber": 113,
+      "sceneName": "boss",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "boss",
+      "lineNumber": 113,
+      "position": 24,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "boss",
+      "lineNumber": 113,
+      "position": 25,
+      "indent": 0,
+      "content": " rounds against the dungeon boss. A valiant effort.\n"
+    },
+    {
+      "type": "Ending",
+      "sceneName": "boss",
+      "indent": 0,
+      "lineNumber": 114,
+      "position": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "boss",
+      "lineNumber": 114,
+      "position": 7,
+      "indent": 0,
+      "content": "\"Fallen to the Guardian\""
+    },
+    {
+      "type": "Label",
+      "sceneName": "boss",
+      "indent": 0,
+      "lineNumber": 116,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "boss_exit",
+      "rawValue": "boss_exit",
+      "position": 6,
+      "lineNumber": 116,
+      "sceneName": "boss",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "Prose",
+      "sceneName": "boss",
+      "lineNumber": 117,
+      "position": 0,
+      "indent": 0,
+      "content": "You emerge from the dungeon, victorious.\n\nFinal stats: "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "boss",
+      "lineNumber": 119,
+      "position": 13,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "encounters",
+      "rawValue": "encounters",
+      "position": 15,
+      "lineNumber": 119,
+      "sceneName": "boss",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "boss",
+      "lineNumber": 119,
+      "position": 25,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "boss",
+      "lineNumber": 119,
+      "position": 26,
+      "indent": 0,
+      "content": " encounters, "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "boss",
+      "lineNumber": 119,
+      "position": 39,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "rooms_cleared",
+      "rawValue": "rooms_cleared",
+      "position": 41,
+      "lineNumber": 119,
+      "sceneName": "boss",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "boss",
+      "lineNumber": 119,
+      "position": 54,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "boss",
+      "lineNumber": 119,
+      "position": 55,
+      "indent": 0,
+      "content": " rooms explored, "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "boss",
+      "lineNumber": 119,
+      "position": 72,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "treasure_collected",
+      "rawValue": "treasure_collected",
+      "position": 74,
+      "lineNumber": 119,
+      "sceneName": "boss",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "boss",
+      "lineNumber": 119,
+      "position": 92,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "boss",
+      "lineNumber": 119,
+      "position": 93,
+      "indent": 0,
+      "content": " treasure collected.\n\nThe Irondelve Dungeon is conquered!\n"
+    },
+    {
+      "type": "Finish",
+      "sceneName": "boss",
+      "indent": 0,
+      "lineNumber": 122,
+      "position": 0
+    },
+    {
+      "lineNumber": 124,
+      "indent": 0,
+      "position": 0,
+      "sceneName": "boss",
+      "type": "SceneEnd"
+    }
+  ],
+  [
+    {
+      "sceneName": "dungeon",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "dungeon",
+      "indent": 0,
+      "lineNumber": 0,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "current_room",
+      "rawValue": "current_room",
+      "position": 6,
+      "lineNumber": 0,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "",
+      "position": 19,
+      "lineNumber": 0,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "dungeon",
+      "indent": 0,
+      "lineNumber": 1,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "encounter_roll",
+      "rawValue": "encounter_roll",
+      "position": 6,
+      "lineNumber": 1,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 21,
+      "lineNumber": 1,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "dungeon",
+      "indent": 0,
+      "lineNumber": 2,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "enemy_hp",
+      "rawValue": "enemy_hp",
+      "position": 6,
+      "lineNumber": 2,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 15,
+      "lineNumber": 2,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "dungeon",
+      "indent": 0,
+      "lineNumber": 3,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "loot_roll",
+      "rawValue": "loot_roll",
+      "position": 6,
+      "lineNumber": 3,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 16,
+      "lineNumber": 3,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "Label",
+      "sceneName": "dungeon",
+      "indent": 0,
+      "lineNumber": 5,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "dungeon_hub",
+      "rawValue": "dungeon_hub",
+      "position": 6,
+      "lineNumber": 5,
+      "sceneName": "dungeon",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 7,
+      "position": 0,
+      "indent": 0,
+      "content": "HP: "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "dungeon",
+      "lineNumber": 7,
+      "position": 4,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "hp",
+      "rawValue": "hp",
+      "position": 6,
+      "lineNumber": 7,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "dungeon",
+      "lineNumber": 7,
+      "position": 8,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 7,
+      "position": 9,
+      "indent": 0,
+      "content": "/"
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "dungeon",
+      "lineNumber": 7,
+      "position": 10,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "max_hp",
+      "rawValue": "max_hp",
+      "position": 12,
+      "lineNumber": 7,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "dungeon",
+      "lineNumber": 7,
+      "position": 18,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 7,
+      "position": 19,
+      "indent": 0,
+      "content": ". Potions: "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "dungeon",
+      "lineNumber": 7,
+      "position": 30,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "potions",
+      "rawValue": "potions",
+      "position": 32,
+      "lineNumber": 7,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "dungeon",
+      "lineNumber": 7,
+      "position": 39,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 7,
+      "position": 40,
+      "indent": 0,
+      "content": ". Keys: "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "dungeon",
+      "lineNumber": 7,
+      "position": 48,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "keys",
+      "rawValue": "keys",
+      "position": 50,
+      "lineNumber": 7,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "dungeon",
+      "lineNumber": 7,
+      "position": 54,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 7,
+      "position": 55,
+      "indent": 0,
+      "content": ". Rooms cleared: "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "dungeon",
+      "lineNumber": 7,
+      "position": 72,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "rooms_cleared",
+      "rawValue": "rooms_cleared",
+      "position": 74,
+      "lineNumber": 7,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "dungeon",
+      "lineNumber": 7,
+      "position": 87,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 7,
+      "position": 88,
+      "indent": 0,
+      "content": ".\n\n"
+    },
+    {
+      "type": "If",
+      "sceneName": "dungeon",
+      "indent": 0,
+      "lineNumber": 9,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "rooms_cleared",
+      "rawValue": "rooms_cleared",
+      "position": 4,
+      "lineNumber": 9,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "GreaterThanEqualsOperator",
+      "rawValue": ">=",
+      "position": 18,
+      "lineNumber": 9,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 6,
+      "position": 21,
+      "lineNumber": 9,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 10,
+      "position": 2,
+      "indent": 1,
+      "content": "A massive iron door looms before you. The boss chamber.\n"
+    },
+    {
+      "type": "If",
+      "sceneName": "dungeon",
+      "indent": 1,
+      "lineNumber": 11,
+      "position": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "keys",
+      "rawValue": "keys",
+      "position": 6,
+      "lineNumber": 11,
+      "sceneName": "dungeon",
+      "indent": 1
+    },
+    {
+      "type": "GreaterThanEqualsOperator",
+      "rawValue": ">=",
+      "position": 11,
+      "lineNumber": 11,
+      "sceneName": "dungeon",
+      "indent": 1
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 2,
+      "position": 14,
+      "lineNumber": 11,
+      "sceneName": "dungeon",
+      "indent": 1
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 12,
+      "position": 4,
+      "indent": 2,
+      "content": "You have enough keys to unlock it.\n"
+    },
+    {
+      "type": "Choice",
+      "sceneName": "dungeon",
+      "indent": 2,
+      "lineNumber": 13,
+      "position": 4
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "dungeon",
+      "indent": 3,
+      "lineNumber": 14,
+      "rawText": "Enter the boss chamber",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 14,
+      "position": null,
+      "indent": 3,
+      "content": "Enter the boss chamber"
+    },
+    {
+      "type": "GotoScene",
+      "sceneName": "dungeon",
+      "indent": 4,
+      "lineNumber": 15,
+      "position": 8
+    },
+    {
+      "type": "Identifier",
+      "value": "boss",
+      "rawValue": "boss",
+      "position": 20,
+      "lineNumber": 15,
+      "sceneName": "dungeon",
+      "indent": 4,
+      "isSceneName": true,
+      "isLabelName": false
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "dungeon",
+      "indent": 3,
+      "lineNumber": 16,
+      "rawText": "Rest and prepare first",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 16,
+      "position": null,
+      "indent": 3,
+      "content": "Rest and prepare first"
+    },
+    {
+      "type": "GoSub",
+      "sceneName": "dungeon",
+      "indent": 4,
+      "lineNumber": 17,
+      "position": 8
+    },
+    {
+      "type": "Identifier",
+      "value": "rest",
+      "rawValue": "rest",
+      "position": 15,
+      "lineNumber": 17,
+      "sceneName": "dungeon",
+      "indent": 4,
+      "isLabelName": true
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "dungeon",
+      "indent": 4,
+      "lineNumber": 18,
+      "position": 8
+    },
+    {
+      "type": "Identifier",
+      "value": "dungeon_hub",
+      "rawValue": "dungeon_hub",
+      "position": 14,
+      "lineNumber": 18,
+      "sceneName": "dungeon",
+      "indent": 4,
+      "isLabelName": true
+    },
+    {
+      "type": "Else",
+      "sceneName": "dungeon",
+      "indent": 1,
+      "lineNumber": 19,
+      "position": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 20,
+      "position": 4,
+      "indent": 2,
+      "content": "The door requires 2 keys. You have "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "dungeon",
+      "lineNumber": 20,
+      "position": 39,
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "keys",
+      "rawValue": "keys",
+      "position": 41,
+      "lineNumber": 20,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "dungeon",
+      "lineNumber": 20,
+      "position": 45,
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 20,
+      "position": 46,
+      "indent": 2,
+      "content": ". Explore more rooms.\n\n"
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 22,
+      "position": 0,
+      "indent": 0,
+      "content": "The corridor branches in several directions.\n\n"
+    },
+    {
+      "type": "Choice",
+      "sceneName": "dungeon",
+      "indent": 0,
+      "lineNumber": 24,
+      "position": 0
+    },
+    {
+      "type": "HideReuse",
+      "sceneName": "dungeon",
+      "indent": 1,
+      "lineNumber": 25,
+      "position": 2
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "dungeon",
+      "indent": 1,
+      "lineNumber": 25,
+      "rawText": "Take the left passage (dark and narrow)",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 25,
+      "position": null,
+      "indent": 1,
+      "content": "Take the left passage (dark and narrow)"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "dungeon",
+      "indent": 2,
+      "lineNumber": 26,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "current_room",
+      "rawValue": "current_room",
+      "position": 9,
+      "lineNumber": 26,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "StringLiteral",
+      "value": "narrow",
+      "position": 22,
+      "lineNumber": 26,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "GoSub",
+      "sceneName": "dungeon",
+      "indent": 2,
+      "lineNumber": 27,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "enter_room",
+      "rawValue": "enter_room",
+      "position": 11,
+      "lineNumber": 27,
+      "sceneName": "dungeon",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "dungeon",
+      "indent": 2,
+      "lineNumber": 28,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "dungeon_hub",
+      "rawValue": "dungeon_hub",
+      "position": 10,
+      "lineNumber": 28,
+      "sceneName": "dungeon",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "HideReuse",
+      "sceneName": "dungeon",
+      "indent": 1,
+      "lineNumber": 29,
+      "position": 2
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "dungeon",
+      "indent": 1,
+      "lineNumber": 29,
+      "rawText": "Take the right passage (wide and echoing)",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 29,
+      "position": null,
+      "indent": 1,
+      "content": "Take the right passage (wide and echoing)"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "dungeon",
+      "indent": 2,
+      "lineNumber": 30,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "current_room",
+      "rawValue": "current_room",
+      "position": 9,
+      "lineNumber": 30,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "StringLiteral",
+      "value": "wide",
+      "position": 22,
+      "lineNumber": 30,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "GoSub",
+      "sceneName": "dungeon",
+      "indent": 2,
+      "lineNumber": 31,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "enter_room",
+      "rawValue": "enter_room",
+      "position": 11,
+      "lineNumber": 31,
+      "sceneName": "dungeon",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "dungeon",
+      "indent": 2,
+      "lineNumber": 32,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "dungeon_hub",
+      "rawValue": "dungeon_hub",
+      "position": 10,
+      "lineNumber": 32,
+      "sceneName": "dungeon",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "HideReuse",
+      "sceneName": "dungeon",
+      "indent": 1,
+      "lineNumber": 33,
+      "position": 2
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "dungeon",
+      "indent": 1,
+      "lineNumber": 33,
+      "rawText": "Descend a crumbling staircase",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 33,
+      "position": null,
+      "indent": 1,
+      "content": "Descend a crumbling staircase"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "dungeon",
+      "indent": 2,
+      "lineNumber": 34,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "current_room",
+      "rawValue": "current_room",
+      "position": 9,
+      "lineNumber": 34,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "StringLiteral",
+      "value": "stairs",
+      "position": 22,
+      "lineNumber": 34,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "GoSub",
+      "sceneName": "dungeon",
+      "indent": 2,
+      "lineNumber": 35,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "enter_room",
+      "rawValue": "enter_room",
+      "position": 11,
+      "lineNumber": 35,
+      "sceneName": "dungeon",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "dungeon",
+      "indent": 2,
+      "lineNumber": 36,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "dungeon_hub",
+      "rawValue": "dungeon_hub",
+      "position": 10,
+      "lineNumber": 36,
+      "sceneName": "dungeon",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "HideReuse",
+      "sceneName": "dungeon",
+      "indent": 1,
+      "lineNumber": 37,
+      "position": 2
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "dungeon",
+      "indent": 1,
+      "lineNumber": 37,
+      "rawText": "Crawl through a gap in the wall",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 37,
+      "position": null,
+      "indent": 1,
+      "content": "Crawl through a gap in the wall"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "dungeon",
+      "indent": 2,
+      "lineNumber": 38,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "current_room",
+      "rawValue": "current_room",
+      "position": 9,
+      "lineNumber": 38,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "StringLiteral",
+      "value": "gap",
+      "position": 22,
+      "lineNumber": 38,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "GoSub",
+      "sceneName": "dungeon",
+      "indent": 2,
+      "lineNumber": 39,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "enter_room",
+      "rawValue": "enter_room",
+      "position": 11,
+      "lineNumber": 39,
+      "sceneName": "dungeon",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "dungeon",
+      "indent": 2,
+      "lineNumber": 40,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "dungeon_hub",
+      "rawValue": "dungeon_hub",
+      "position": 10,
+      "lineNumber": 40,
+      "sceneName": "dungeon",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "HideReuse",
+      "sceneName": "dungeon",
+      "indent": 1,
+      "lineNumber": 41,
+      "position": 2
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "dungeon",
+      "indent": 1,
+      "lineNumber": 41,
+      "rawText": "Follow the sound of running water",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 41,
+      "position": null,
+      "indent": 1,
+      "content": "Follow the sound of running water"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "dungeon",
+      "indent": 2,
+      "lineNumber": 42,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "current_room",
+      "rawValue": "current_room",
+      "position": 9,
+      "lineNumber": 42,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "StringLiteral",
+      "value": "water",
+      "position": 22,
+      "lineNumber": 42,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "GoSub",
+      "sceneName": "dungeon",
+      "indent": 2,
+      "lineNumber": 43,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "enter_room",
+      "rawValue": "enter_room",
+      "position": 11,
+      "lineNumber": 43,
+      "sceneName": "dungeon",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "dungeon",
+      "indent": 2,
+      "lineNumber": 44,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "dungeon_hub",
+      "rawValue": "dungeon_hub",
+      "position": 10,
+      "lineNumber": 44,
+      "sceneName": "dungeon",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "HideReuse",
+      "sceneName": "dungeon",
+      "indent": 1,
+      "lineNumber": 45,
+      "position": 2
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "dungeon",
+      "indent": 1,
+      "lineNumber": 45,
+      "rawText": "Push open a rusted gate",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 45,
+      "position": null,
+      "indent": 1,
+      "content": "Push open a rusted gate"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "dungeon",
+      "indent": 2,
+      "lineNumber": 46,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "current_room",
+      "rawValue": "current_room",
+      "position": 9,
+      "lineNumber": 46,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "StringLiteral",
+      "value": "gate",
+      "position": 22,
+      "lineNumber": 46,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "GoSub",
+      "sceneName": "dungeon",
+      "indent": 2,
+      "lineNumber": 47,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "enter_room",
+      "rawValue": "enter_room",
+      "position": 11,
+      "lineNumber": 47,
+      "sceneName": "dungeon",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "dungeon",
+      "indent": 2,
+      "lineNumber": 48,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "dungeon_hub",
+      "rawValue": "dungeon_hub",
+      "position": 10,
+      "lineNumber": 48,
+      "sceneName": "dungeon",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "SelectableIf",
+      "sceneName": "dungeon",
+      "indent": 1,
+      "lineNumber": 49,
+      "position": 2
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 17,
+      "lineNumber": 49,
+      "sceneName": "dungeon",
+      "indent": 1
+    },
+    {
+      "type": "Identifier",
+      "value": "potions",
+      "rawValue": "potions",
+      "position": 18,
+      "lineNumber": 49,
+      "sceneName": "dungeon",
+      "indent": 1
+    },
+    {
+      "type": "GreaterThanOperator",
+      "rawValue": ">",
+      "position": 26,
+      "lineNumber": 49,
+      "sceneName": "dungeon",
+      "indent": 1
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 28,
+      "lineNumber": 49,
+      "sceneName": "dungeon",
+      "indent": 1
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 29,
+      "lineNumber": 49,
+      "sceneName": "dungeon",
+      "indent": 1
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "dungeon",
+      "indent": 1,
+      "lineNumber": 49,
+      "position": 16,
+      "rawText": "Use a potion",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 49,
+      "position": 17,
+      "indent": 1,
+      "content": "Use a potion"
+    },
+    {
+      "type": "GoSub",
+      "sceneName": "dungeon",
+      "indent": 2,
+      "lineNumber": 50,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "use_potion",
+      "rawValue": "use_potion",
+      "position": 11,
+      "lineNumber": 50,
+      "sceneName": "dungeon",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "dungeon",
+      "indent": 2,
+      "lineNumber": 51,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "dungeon_hub",
+      "rawValue": "dungeon_hub",
+      "position": 10,
+      "lineNumber": 51,
+      "sceneName": "dungeon",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "dungeon",
+      "indent": 1,
+      "lineNumber": 52,
+      "rawText": "Retreat to the surface",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 52,
+      "position": null,
+      "indent": 1,
+      "content": "Retreat to the surface"
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "dungeon",
+      "indent": 2,
+      "lineNumber": 53,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "retreat",
+      "rawValue": "retreat",
+      "position": 10,
+      "lineNumber": 53,
+      "sceneName": "dungeon",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "Label",
+      "sceneName": "dungeon",
+      "indent": 0,
+      "lineNumber": 55,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "enter_room",
+      "rawValue": "enter_room",
+      "position": 6,
+      "lineNumber": 55,
+      "sceneName": "dungeon",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "dungeon",
+      "indent": 0,
+      "lineNumber": 56,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "rooms_cleared",
+      "rawValue": "rooms_cleared",
+      "position": 5,
+      "lineNumber": 56,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 19,
+      "lineNumber": 56,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 1,
+      "position": 21,
+      "lineNumber": 56,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "GenerateRandom",
+      "sceneName": "dungeon",
+      "indent": 0,
+      "lineNumber": 57,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "encounter_roll",
+      "rawValue": "encounter_roll",
+      "position": 6,
+      "lineNumber": 57,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 1,
+      "position": 21,
+      "lineNumber": 57,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 10,
+      "position": 23,
+      "lineNumber": 57,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "If",
+      "sceneName": "dungeon",
+      "indent": 0,
+      "lineNumber": 59,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "encounter_roll",
+      "rawValue": "encounter_roll",
+      "position": 4,
+      "lineNumber": 59,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "LessThanEqualsOperator",
+      "rawValue": "<=",
+      "position": 19,
+      "lineNumber": 59,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 6,
+      "position": 22,
+      "lineNumber": 59,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "GoSub",
+      "sceneName": "dungeon",
+      "indent": 1,
+      "lineNumber": 60,
+      "position": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "combat_encounter",
+      "rawValue": "combat_encounter",
+      "position": 9,
+      "lineNumber": 60,
+      "sceneName": "dungeon",
+      "indent": 1,
+      "isLabelName": true
+    },
+    {
+      "type": "ElseIf",
+      "sceneName": "dungeon",
+      "indent": 0,
+      "lineNumber": 61,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "encounter_roll",
+      "rawValue": "encounter_roll",
+      "position": 8,
+      "lineNumber": 61,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "LessThanEqualsOperator",
+      "rawValue": "<=",
+      "position": 23,
+      "lineNumber": 61,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 8,
+      "position": 26,
+      "lineNumber": 61,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "GoSub",
+      "sceneName": "dungeon",
+      "indent": 1,
+      "lineNumber": 62,
+      "position": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "treasure_room",
+      "rawValue": "treasure_room",
+      "position": 9,
+      "lineNumber": 62,
+      "sceneName": "dungeon",
+      "indent": 1,
+      "isLabelName": true
+    },
+    {
+      "type": "Else",
+      "sceneName": "dungeon",
+      "indent": 0,
+      "lineNumber": 63,
+      "position": 0
+    },
+    {
+      "type": "GoSub",
+      "sceneName": "dungeon",
+      "indent": 1,
+      "lineNumber": 64,
+      "position": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "key_room",
+      "rawValue": "key_room",
+      "position": 9,
+      "lineNumber": 64,
+      "sceneName": "dungeon",
+      "indent": 1,
+      "isLabelName": true
+    },
+    {
+      "type": "Return",
+      "sceneName": "dungeon",
+      "indent": 0,
+      "lineNumber": 66,
+      "position": 0
+    },
+    {
+      "type": "Label",
+      "sceneName": "dungeon",
+      "indent": 0,
+      "lineNumber": 68,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "combat_encounter",
+      "rawValue": "combat_encounter",
+      "position": 6,
+      "lineNumber": 68,
+      "sceneName": "dungeon",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "dungeon",
+      "indent": 0,
+      "lineNumber": 69,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "encounters",
+      "rawValue": "encounters",
+      "position": 5,
+      "lineNumber": 69,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 16,
+      "lineNumber": 69,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 1,
+      "position": 18,
+      "lineNumber": 69,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "dungeon",
+      "indent": 0,
+      "lineNumber": 70,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "enemy_hp",
+      "rawValue": "enemy_hp",
+      "position": 5,
+      "lineNumber": 70,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 14,
+      "lineNumber": 70,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 30,
+      "position": 15,
+      "lineNumber": 70,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 18,
+      "lineNumber": 70,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 20,
+      "lineNumber": 70,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "encounters",
+      "rawValue": "encounters",
+      "position": 21,
+      "lineNumber": 70,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "MultiplicationOperator",
+      "rawValue": "*",
+      "position": 32,
+      "lineNumber": 70,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 5,
+      "position": 34,
+      "lineNumber": 70,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 35,
+      "lineNumber": 70,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 36,
+      "lineNumber": 70,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 72,
+      "position": 0,
+      "indent": 0,
+      "content": "A creature lunges from the shadows!\n\n"
+    },
+    {
+      "type": "Label",
+      "sceneName": "dungeon",
+      "indent": 0,
+      "lineNumber": 74,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "combat_round",
+      "rawValue": "combat_round",
+      "position": 6,
+      "lineNumber": 74,
+      "sceneName": "dungeon",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 76,
+      "position": 0,
+      "indent": 0,
+      "content": "Enemy HP: "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "dungeon",
+      "lineNumber": 76,
+      "position": 10,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "enemy_hp",
+      "rawValue": "enemy_hp",
+      "position": 12,
+      "lineNumber": 76,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "dungeon",
+      "lineNumber": 76,
+      "position": 20,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 76,
+      "position": 21,
+      "indent": 0,
+      "content": ". Your HP: "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "dungeon",
+      "lineNumber": 76,
+      "position": 32,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "hp",
+      "rawValue": "hp",
+      "position": 34,
+      "lineNumber": 76,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "dungeon",
+      "lineNumber": 76,
+      "position": 36,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 76,
+      "position": 37,
+      "indent": 0,
+      "content": ".\n\n"
+    },
+    {
+      "type": "If",
+      "sceneName": "dungeon",
+      "indent": 0,
+      "lineNumber": 78,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "enemy_hp",
+      "rawValue": "enemy_hp",
+      "position": 4,
+      "lineNumber": 78,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "LessThanEqualsOperator",
+      "rawValue": "<=",
+      "position": 13,
+      "lineNumber": 78,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 16,
+      "lineNumber": 78,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "dungeon",
+      "indent": 1,
+      "lineNumber": 79,
+      "position": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "combat_victory",
+      "rawValue": "combat_victory",
+      "position": 8,
+      "lineNumber": 79,
+      "sceneName": "dungeon",
+      "indent": 1,
+      "isLabelName": true
+    },
+    {
+      "type": "If",
+      "sceneName": "dungeon",
+      "indent": 0,
+      "lineNumber": 80,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "hp",
+      "rawValue": "hp",
+      "position": 4,
+      "lineNumber": 80,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "LessThanEqualsOperator",
+      "rawValue": "<=",
+      "position": 7,
+      "lineNumber": 80,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 10,
+      "lineNumber": 80,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "dungeon",
+      "indent": 1,
+      "lineNumber": 81,
+      "position": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "death",
+      "rawValue": "death",
+      "position": 8,
+      "lineNumber": 81,
+      "sceneName": "dungeon",
+      "indent": 1,
+      "isLabelName": true
+    },
+    {
+      "type": "Choice",
+      "sceneName": "dungeon",
+      "indent": 0,
+      "lineNumber": 83,
+      "position": 0
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "dungeon",
+      "indent": 1,
+      "lineNumber": 84,
+      "rawText": "Strike!",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 84,
+      "position": null,
+      "indent": 1,
+      "content": "Strike!"
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "dungeon",
+      "indent": 2,
+      "lineNumber": 85,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "damage",
+      "rawValue": "damage",
+      "position": 10,
+      "lineNumber": 85,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 17,
+      "lineNumber": 85,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "GenerateRandom",
+      "sceneName": "dungeon",
+      "indent": 2,
+      "lineNumber": 86,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "damage",
+      "rawValue": "damage",
+      "position": 10,
+      "lineNumber": 86,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 17,
+      "lineNumber": 86,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "attack",
+      "rawValue": "attack",
+      "position": 18,
+      "lineNumber": 86,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "SubtractionOperator",
+      "rawValue": "-",
+      "position": 25,
+      "lineNumber": 86,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 5,
+      "position": 27,
+      "lineNumber": 86,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 28,
+      "lineNumber": 86,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 30,
+      "lineNumber": 86,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "attack",
+      "rawValue": "attack",
+      "position": 31,
+      "lineNumber": 86,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 38,
+      "lineNumber": 86,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 5,
+      "position": 40,
+      "lineNumber": 86,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 41,
+      "lineNumber": 86,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "dungeon",
+      "indent": 2,
+      "lineNumber": 87,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "enemy_hp",
+      "rawValue": "enemy_hp",
+      "position": 9,
+      "lineNumber": 87,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "SubtractionOperator",
+      "rawValue": "-",
+      "position": 18,
+      "lineNumber": 87,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "damage",
+      "rawValue": "damage",
+      "position": 20,
+      "lineNumber": 87,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 88,
+      "position": 4,
+      "indent": 2,
+      "content": "You deal "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "dungeon",
+      "lineNumber": 88,
+      "position": 13,
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "damage",
+      "rawValue": "damage",
+      "position": 15,
+      "lineNumber": 88,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "dungeon",
+      "lineNumber": 88,
+      "position": 21,
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 88,
+      "position": 22,
+      "indent": 2,
+      "content": " damage!\n"
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "dungeon",
+      "indent": 2,
+      "lineNumber": 89,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "enemy_damage",
+      "rawValue": "enemy_damage",
+      "position": 10,
+      "lineNumber": 89,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 23,
+      "lineNumber": 89,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "GenerateRandom",
+      "sceneName": "dungeon",
+      "indent": 2,
+      "lineNumber": 90,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "enemy_damage",
+      "rawValue": "enemy_damage",
+      "position": 10,
+      "lineNumber": 90,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 5,
+      "position": 23,
+      "lineNumber": 90,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 25,
+      "lineNumber": 90,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 10,
+      "position": 26,
+      "lineNumber": 90,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 29,
+      "lineNumber": 90,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 31,
+      "lineNumber": 90,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "encounters",
+      "rawValue": "encounters",
+      "position": 32,
+      "lineNumber": 90,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "MultiplicationOperator",
+      "rawValue": "*",
+      "position": 43,
+      "lineNumber": 90,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 2,
+      "position": 45,
+      "lineNumber": 90,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 46,
+      "lineNumber": 90,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 47,
+      "lineNumber": 90,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "dungeon",
+      "indent": 2,
+      "lineNumber": 91,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "mitigated",
+      "rawValue": "mitigated",
+      "position": 10,
+      "lineNumber": 91,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 20,
+      "lineNumber": 91,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "dungeon",
+      "indent": 2,
+      "lineNumber": 92,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "mitigated",
+      "rawValue": "mitigated",
+      "position": 9,
+      "lineNumber": 92,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 19,
+      "lineNumber": 92,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "enemy_damage",
+      "rawValue": "enemy_damage",
+      "position": 20,
+      "lineNumber": 92,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "SubtractionOperator",
+      "rawValue": "-",
+      "position": 33,
+      "lineNumber": 92,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "defense",
+      "rawValue": "defense",
+      "position": 35,
+      "lineNumber": 92,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 42,
+      "lineNumber": 92,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "If",
+      "sceneName": "dungeon",
+      "indent": 2,
+      "lineNumber": 93,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "mitigated",
+      "rawValue": "mitigated",
+      "position": 8,
+      "lineNumber": 93,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "LessThanOperator",
+      "rawValue": "<",
+      "position": 18,
+      "lineNumber": 93,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 20,
+      "lineNumber": 93,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "dungeon",
+      "indent": 3,
+      "lineNumber": 94,
+      "position": 6
+    },
+    {
+      "type": "Identifier",
+      "value": "mitigated",
+      "rawValue": "mitigated",
+      "position": 11,
+      "lineNumber": 94,
+      "sceneName": "dungeon",
+      "indent": 3
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 21,
+      "lineNumber": 94,
+      "sceneName": "dungeon",
+      "indent": 3
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "dungeon",
+      "indent": 2,
+      "lineNumber": 95,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "hp",
+      "rawValue": "hp",
+      "position": 9,
+      "lineNumber": 95,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "SubtractionOperator",
+      "rawValue": "-",
+      "position": 12,
+      "lineNumber": 95,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "mitigated",
+      "rawValue": "mitigated",
+      "position": 14,
+      "lineNumber": 95,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 96,
+      "position": 4,
+      "indent": 2,
+      "content": "The creature strikes back! "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "dungeon",
+      "lineNumber": 96,
+      "position": 31,
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "mitigated",
+      "rawValue": "mitigated",
+      "position": 33,
+      "lineNumber": 96,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "dungeon",
+      "lineNumber": 96,
+      "position": 42,
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 96,
+      "position": 43,
+      "indent": 2,
+      "content": " damage after your armor absorbs the rest.\n"
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "dungeon",
+      "indent": 2,
+      "lineNumber": 97,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "combat_round",
+      "rawValue": "combat_round",
+      "position": 10,
+      "lineNumber": 97,
+      "sceneName": "dungeon",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "dungeon",
+      "indent": 1,
+      "lineNumber": 98,
+      "rawText": "Dodge and counter",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 98,
+      "position": null,
+      "indent": 1,
+      "content": "Dodge and counter"
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "dungeon",
+      "indent": 2,
+      "lineNumber": 99,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "dodge_roll",
+      "rawValue": "dodge_roll",
+      "position": 10,
+      "lineNumber": 99,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 21,
+      "lineNumber": 99,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "GenerateRandom",
+      "sceneName": "dungeon",
+      "indent": 2,
+      "lineNumber": 100,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "dodge_roll",
+      "rawValue": "dodge_roll",
+      "position": 10,
+      "lineNumber": 100,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 1,
+      "position": 21,
+      "lineNumber": 100,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 10,
+      "position": 23,
+      "lineNumber": 100,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "If",
+      "sceneName": "dungeon",
+      "indent": 2,
+      "lineNumber": 101,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "dodge_roll",
+      "rawValue": "dodge_roll",
+      "position": 8,
+      "lineNumber": 101,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "GreaterThanOperator",
+      "rawValue": ">",
+      "position": 19,
+      "lineNumber": 101,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 4,
+      "position": 21,
+      "lineNumber": 101,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 102,
+      "position": 6,
+      "indent": 3,
+      "content": "You dodge the attack!\n"
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "dungeon",
+      "indent": 3,
+      "lineNumber": 103,
+      "position": 6
+    },
+    {
+      "type": "Identifier",
+      "value": "damage",
+      "rawValue": "damage",
+      "position": 12,
+      "lineNumber": 103,
+      "sceneName": "dungeon",
+      "indent": 3
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 19,
+      "lineNumber": 103,
+      "sceneName": "dungeon",
+      "indent": 3
+    },
+    {
+      "type": "GenerateRandom",
+      "sceneName": "dungeon",
+      "indent": 3,
+      "lineNumber": 104,
+      "position": 6
+    },
+    {
+      "type": "Identifier",
+      "value": "damage",
+      "rawValue": "damage",
+      "position": 12,
+      "lineNumber": 104,
+      "sceneName": "dungeon",
+      "indent": 3
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 19,
+      "lineNumber": 104,
+      "sceneName": "dungeon",
+      "indent": 3
+    },
+    {
+      "type": "Identifier",
+      "value": "attack",
+      "rawValue": "attack",
+      "position": 20,
+      "lineNumber": 104,
+      "sceneName": "dungeon",
+      "indent": 3
+    },
+    {
+      "type": "SubtractionOperator",
+      "rawValue": "-",
+      "position": 27,
+      "lineNumber": 104,
+      "sceneName": "dungeon",
+      "indent": 3
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 3,
+      "position": 29,
+      "lineNumber": 104,
+      "sceneName": "dungeon",
+      "indent": 3
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 30,
+      "lineNumber": 104,
+      "sceneName": "dungeon",
+      "indent": 3
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 32,
+      "lineNumber": 104,
+      "sceneName": "dungeon",
+      "indent": 3
+    },
+    {
+      "type": "Identifier",
+      "value": "attack",
+      "rawValue": "attack",
+      "position": 33,
+      "lineNumber": 104,
+      "sceneName": "dungeon",
+      "indent": 3
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 40,
+      "lineNumber": 104,
+      "sceneName": "dungeon",
+      "indent": 3
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 3,
+      "position": 42,
+      "lineNumber": 104,
+      "sceneName": "dungeon",
+      "indent": 3
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 43,
+      "lineNumber": 104,
+      "sceneName": "dungeon",
+      "indent": 3
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "dungeon",
+      "indent": 3,
+      "lineNumber": 105,
+      "position": 6
+    },
+    {
+      "type": "Identifier",
+      "value": "enemy_hp",
+      "rawValue": "enemy_hp",
+      "position": 11,
+      "lineNumber": 105,
+      "sceneName": "dungeon",
+      "indent": 3
+    },
+    {
+      "type": "SubtractionOperator",
+      "rawValue": "-",
+      "position": 20,
+      "lineNumber": 105,
+      "sceneName": "dungeon",
+      "indent": 3
+    },
+    {
+      "type": "Identifier",
+      "value": "damage",
+      "rawValue": "damage",
+      "position": 22,
+      "lineNumber": 105,
+      "sceneName": "dungeon",
+      "indent": 3
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 106,
+      "position": 6,
+      "indent": 3,
+      "content": "Counter-attack for "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "dungeon",
+      "lineNumber": 106,
+      "position": 25,
+      "indent": 3
+    },
+    {
+      "type": "Identifier",
+      "value": "damage",
+      "rawValue": "damage",
+      "position": 27,
+      "lineNumber": 106,
+      "sceneName": "dungeon",
+      "indent": 3
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "dungeon",
+      "lineNumber": 106,
+      "position": 33,
+      "indent": 3
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 106,
+      "position": 34,
+      "indent": 3,
+      "content": "!\n"
+    },
+    {
+      "type": "Else",
+      "sceneName": "dungeon",
+      "indent": 2,
+      "lineNumber": 107,
+      "position": 4
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 108,
+      "position": 6,
+      "indent": 3,
+      "content": "You stumble! The creature rakes you.\n"
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "dungeon",
+      "indent": 3,
+      "lineNumber": 109,
+      "position": 6
+    },
+    {
+      "type": "Identifier",
+      "value": "enemy_damage",
+      "rawValue": "enemy_damage",
+      "position": 12,
+      "lineNumber": 109,
+      "sceneName": "dungeon",
+      "indent": 3
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 25,
+      "lineNumber": 109,
+      "sceneName": "dungeon",
+      "indent": 3
+    },
+    {
+      "type": "GenerateRandom",
+      "sceneName": "dungeon",
+      "indent": 3,
+      "lineNumber": 110,
+      "position": 6
+    },
+    {
+      "type": "Identifier",
+      "value": "enemy_damage",
+      "rawValue": "enemy_damage",
+      "position": 12,
+      "lineNumber": 110,
+      "sceneName": "dungeon",
+      "indent": 3
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 8,
+      "position": 25,
+      "lineNumber": 110,
+      "sceneName": "dungeon",
+      "indent": 3
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 27,
+      "lineNumber": 110,
+      "sceneName": "dungeon",
+      "indent": 3
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 15,
+      "position": 28,
+      "lineNumber": 110,
+      "sceneName": "dungeon",
+      "indent": 3
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 31,
+      "lineNumber": 110,
+      "sceneName": "dungeon",
+      "indent": 3
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 33,
+      "lineNumber": 110,
+      "sceneName": "dungeon",
+      "indent": 3
+    },
+    {
+      "type": "Identifier",
+      "value": "encounters",
+      "rawValue": "encounters",
+      "position": 34,
+      "lineNumber": 110,
+      "sceneName": "dungeon",
+      "indent": 3
+    },
+    {
+      "type": "MultiplicationOperator",
+      "rawValue": "*",
+      "position": 45,
+      "lineNumber": 110,
+      "sceneName": "dungeon",
+      "indent": 3
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 2,
+      "position": 47,
+      "lineNumber": 110,
+      "sceneName": "dungeon",
+      "indent": 3
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 48,
+      "lineNumber": 110,
+      "sceneName": "dungeon",
+      "indent": 3
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 49,
+      "lineNumber": 110,
+      "sceneName": "dungeon",
+      "indent": 3
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "dungeon",
+      "indent": 3,
+      "lineNumber": 111,
+      "position": 6
+    },
+    {
+      "type": "Identifier",
+      "value": "hp",
+      "rawValue": "hp",
+      "position": 11,
+      "lineNumber": 111,
+      "sceneName": "dungeon",
+      "indent": 3
+    },
+    {
+      "type": "SubtractionOperator",
+      "rawValue": "-",
+      "position": 14,
+      "lineNumber": 111,
+      "sceneName": "dungeon",
+      "indent": 3
+    },
+    {
+      "type": "Identifier",
+      "value": "enemy_damage",
+      "rawValue": "enemy_damage",
+      "position": 16,
+      "lineNumber": 111,
+      "sceneName": "dungeon",
+      "indent": 3
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 112,
+      "position": 6,
+      "indent": 3,
+      "content": ""
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "dungeon",
+      "lineNumber": 112,
+      "position": 6,
+      "indent": 3
+    },
+    {
+      "type": "Identifier",
+      "value": "enemy_damage",
+      "rawValue": "enemy_damage",
+      "position": 8,
+      "lineNumber": 112,
+      "sceneName": "dungeon",
+      "indent": 3
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "dungeon",
+      "lineNumber": 112,
+      "position": 20,
+      "indent": 3
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 112,
+      "position": 21,
+      "indent": 3,
+      "content": " damage taken!\n"
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "dungeon",
+      "indent": 2,
+      "lineNumber": 113,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "combat_round",
+      "rawValue": "combat_round",
+      "position": 10,
+      "lineNumber": 113,
+      "sceneName": "dungeon",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "SelectableIf",
+      "sceneName": "dungeon",
+      "indent": 1,
+      "lineNumber": 114,
+      "position": 2
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 17,
+      "lineNumber": 114,
+      "sceneName": "dungeon",
+      "indent": 1
+    },
+    {
+      "type": "Identifier",
+      "value": "potions",
+      "rawValue": "potions",
+      "position": 18,
+      "lineNumber": 114,
+      "sceneName": "dungeon",
+      "indent": 1
+    },
+    {
+      "type": "GreaterThanOperator",
+      "rawValue": ">",
+      "position": 26,
+      "lineNumber": 114,
+      "sceneName": "dungeon",
+      "indent": 1
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 28,
+      "lineNumber": 114,
+      "sceneName": "dungeon",
+      "indent": 1
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 29,
+      "lineNumber": 114,
+      "sceneName": "dungeon",
+      "indent": 1
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "dungeon",
+      "indent": 1,
+      "lineNumber": 114,
+      "position": 16,
+      "rawText": "Use a potion mid-fight",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 114,
+      "position": 17,
+      "indent": 1,
+      "content": "Use a potion mid-fight"
+    },
+    {
+      "type": "GoSub",
+      "sceneName": "dungeon",
+      "indent": 2,
+      "lineNumber": 115,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "use_potion",
+      "rawValue": "use_potion",
+      "position": 11,
+      "lineNumber": 115,
+      "sceneName": "dungeon",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "dungeon",
+      "indent": 2,
+      "lineNumber": 116,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "enemy_damage",
+      "rawValue": "enemy_damage",
+      "position": 10,
+      "lineNumber": 116,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 23,
+      "lineNumber": 116,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "GenerateRandom",
+      "sceneName": "dungeon",
+      "indent": 2,
+      "lineNumber": 117,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "enemy_damage",
+      "rawValue": "enemy_damage",
+      "position": 10,
+      "lineNumber": 117,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 3,
+      "position": 23,
+      "lineNumber": 117,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 8,
+      "position": 25,
+      "lineNumber": 117,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "dungeon",
+      "indent": 2,
+      "lineNumber": 118,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "hp",
+      "rawValue": "hp",
+      "position": 9,
+      "lineNumber": 118,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "SubtractionOperator",
+      "rawValue": "-",
+      "position": 12,
+      "lineNumber": 118,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "enemy_damage",
+      "rawValue": "enemy_damage",
+      "position": 14,
+      "lineNumber": 118,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 119,
+      "position": 4,
+      "indent": 2,
+      "content": "The creature strikes while you drink! "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "dungeon",
+      "lineNumber": 119,
+      "position": 42,
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "enemy_damage",
+      "rawValue": "enemy_damage",
+      "position": 44,
+      "lineNumber": 119,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "dungeon",
+      "lineNumber": 119,
+      "position": 56,
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 119,
+      "position": 57,
+      "indent": 2,
+      "content": " damage.\n"
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "dungeon",
+      "indent": 2,
+      "lineNumber": 120,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "combat_round",
+      "rawValue": "combat_round",
+      "position": 10,
+      "lineNumber": 120,
+      "sceneName": "dungeon",
+      "indent": 2,
+      "isLabelName": true
+    },
+    {
+      "type": "Label",
+      "sceneName": "dungeon",
+      "indent": 0,
+      "lineNumber": 122,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "combat_victory",
+      "rawValue": "combat_victory",
+      "position": 6,
+      "lineNumber": 122,
+      "sceneName": "dungeon",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "GenerateRandom",
+      "sceneName": "dungeon",
+      "indent": 0,
+      "lineNumber": 123,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "loot_roll",
+      "rawValue": "loot_roll",
+      "position": 6,
+      "lineNumber": 123,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 1,
+      "position": 16,
+      "lineNumber": 123,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 10,
+      "position": 18,
+      "lineNumber": 123,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "If",
+      "sceneName": "dungeon",
+      "indent": 0,
+      "lineNumber": 124,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "loot_roll",
+      "rawValue": "loot_roll",
+      "position": 4,
+      "lineNumber": 124,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "GreaterThanOperator",
+      "rawValue": ">",
+      "position": 14,
+      "lineNumber": 124,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 7,
+      "position": 16,
+      "lineNumber": 124,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 125,
+      "position": 2,
+      "indent": 1,
+      "content": "You find a potion on the corpse!\n"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "dungeon",
+      "indent": 1,
+      "lineNumber": 126,
+      "position": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "potions",
+      "rawValue": "potions",
+      "position": 7,
+      "lineNumber": 126,
+      "sceneName": "dungeon",
+      "indent": 1
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 15,
+      "lineNumber": 126,
+      "sceneName": "dungeon",
+      "indent": 1
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 1,
+      "position": 17,
+      "lineNumber": 126,
+      "sceneName": "dungeon",
+      "indent": 1
+    },
+    {
+      "type": "If",
+      "sceneName": "dungeon",
+      "indent": 0,
+      "lineNumber": 127,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "loot_roll",
+      "rawValue": "loot_roll",
+      "position": 4,
+      "lineNumber": 127,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "LessThanEqualsOperator",
+      "rawValue": "<=",
+      "position": 14,
+      "lineNumber": 127,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 3,
+      "position": 17,
+      "lineNumber": 127,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 128,
+      "position": 2,
+      "indent": 1,
+      "content": "A few coins glint among the remains.\n"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "dungeon",
+      "indent": 1,
+      "lineNumber": 129,
+      "position": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "treasure_collected",
+      "rawValue": "treasure_collected",
+      "position": 7,
+      "lineNumber": 129,
+      "sceneName": "dungeon",
+      "indent": 1
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 26,
+      "lineNumber": 129,
+      "sceneName": "dungeon",
+      "indent": 1
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 1,
+      "position": 28,
+      "lineNumber": 129,
+      "sceneName": "dungeon",
+      "indent": 1
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 130,
+      "position": 0,
+      "indent": 0,
+      "content": "Victory! The creature falls.\n"
+    },
+    {
+      "type": "Return",
+      "sceneName": "dungeon",
+      "indent": 0,
+      "lineNumber": 131,
+      "position": 0
+    },
+    {
+      "type": "Label",
+      "sceneName": "dungeon",
+      "indent": 0,
+      "lineNumber": 133,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "treasure_room",
+      "rawValue": "treasure_room",
+      "position": 6,
+      "lineNumber": 133,
+      "sceneName": "dungeon",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "dungeon",
+      "indent": 0,
+      "lineNumber": 134,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "treasure_collected",
+      "rawValue": "treasure_collected",
+      "position": 5,
+      "lineNumber": 134,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 24,
+      "lineNumber": 134,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 1,
+      "position": 26,
+      "lineNumber": 134,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 136,
+      "position": 0,
+      "indent": 0,
+      "content": "A glittering cache of treasure!\n\n"
+    },
+    {
+      "type": "Choice",
+      "sceneName": "dungeon",
+      "indent": 0,
+      "lineNumber": 138,
+      "position": 0
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "dungeon",
+      "indent": 1,
+      "lineNumber": 139,
+      "rawText": "Take the gold",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 139,
+      "position": null,
+      "indent": 1,
+      "content": "Take the gold"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "dungeon",
+      "indent": 2,
+      "lineNumber": 140,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "treasure_collected",
+      "rawValue": "treasure_collected",
+      "position": 9,
+      "lineNumber": 140,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 28,
+      "lineNumber": 140,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 2,
+      "position": 30,
+      "lineNumber": 140,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 141,
+      "position": 4,
+      "indent": 2,
+      "content": "You stuff your pockets with coins.\n"
+    },
+    {
+      "type": "Return",
+      "sceneName": "dungeon",
+      "indent": 2,
+      "lineNumber": 142,
+      "position": 4
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "dungeon",
+      "indent": 1,
+      "lineNumber": 143,
+      "rawText": "Search for hidden items",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 143,
+      "position": null,
+      "indent": 1,
+      "content": "Search for hidden items"
+    },
+    {
+      "type": "GenerateRandom",
+      "sceneName": "dungeon",
+      "indent": 2,
+      "lineNumber": 144,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "loot_roll",
+      "rawValue": "loot_roll",
+      "position": 10,
+      "lineNumber": 144,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 1,
+      "position": 20,
+      "lineNumber": 144,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 10,
+      "position": 22,
+      "lineNumber": 144,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "If",
+      "sceneName": "dungeon",
+      "indent": 2,
+      "lineNumber": 145,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "loot_roll",
+      "rawValue": "loot_roll",
+      "position": 8,
+      "lineNumber": 145,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "GreaterThanOperator",
+      "rawValue": ">",
+      "position": 18,
+      "lineNumber": 145,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 5,
+      "position": 20,
+      "lineNumber": 145,
+      "sceneName": "dungeon",
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 146,
+      "position": 6,
+      "indent": 3,
+      "content": "A healing potion hidden behind the gold!\n"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "dungeon",
+      "indent": 3,
+      "lineNumber": 147,
+      "position": 6
+    },
+    {
+      "type": "Identifier",
+      "value": "potions",
+      "rawValue": "potions",
+      "position": 11,
+      "lineNumber": 147,
+      "sceneName": "dungeon",
+      "indent": 3
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 19,
+      "lineNumber": 147,
+      "sceneName": "dungeon",
+      "indent": 3
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 1,
+      "position": 21,
+      "lineNumber": 147,
+      "sceneName": "dungeon",
+      "indent": 3
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "dungeon",
+      "indent": 3,
+      "lineNumber": 148,
+      "position": 6
+    },
+    {
+      "type": "Identifier",
+      "value": "treasure_collected",
+      "rawValue": "treasure_collected",
+      "position": 11,
+      "lineNumber": 148,
+      "sceneName": "dungeon",
+      "indent": 3
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 30,
+      "lineNumber": 148,
+      "sceneName": "dungeon",
+      "indent": 3
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 1,
+      "position": 32,
+      "lineNumber": 148,
+      "sceneName": "dungeon",
+      "indent": 3
+    },
+    {
+      "type": "Else",
+      "sceneName": "dungeon",
+      "indent": 2,
+      "lineNumber": 149,
+      "position": 4
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 150,
+      "position": 6,
+      "indent": 3,
+      "content": "Nothing else of value.\n"
+    },
+    {
+      "type": "Return",
+      "sceneName": "dungeon",
+      "indent": 2,
+      "lineNumber": 151,
+      "position": 4
+    },
+    {
+      "type": "Label",
+      "sceneName": "dungeon",
+      "indent": 0,
+      "lineNumber": 153,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "key_room",
+      "rawValue": "key_room",
+      "position": 6,
+      "lineNumber": 153,
+      "sceneName": "dungeon",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 154,
+      "position": 0,
+      "indent": 0,
+      "content": "An ornate chest sits on a pedestal. Inside, a heavy iron key.\n\n"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "dungeon",
+      "indent": 0,
+      "lineNumber": 156,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "keys",
+      "rawValue": "keys",
+      "position": 5,
+      "lineNumber": 156,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 10,
+      "lineNumber": 156,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 1,
+      "position": 12,
+      "lineNumber": 156,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 158,
+      "position": 0,
+      "indent": 0,
+      "content": "You now have "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "dungeon",
+      "lineNumber": 158,
+      "position": 13,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "keys",
+      "rawValue": "keys",
+      "position": 15,
+      "lineNumber": 158,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "dungeon",
+      "lineNumber": 158,
+      "position": 19,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 158,
+      "position": 20,
+      "indent": 0,
+      "content": " key(s).\n"
+    },
+    {
+      "type": "Return",
+      "sceneName": "dungeon",
+      "indent": 0,
+      "lineNumber": 159,
+      "position": 0
+    },
+    {
+      "type": "Label",
+      "sceneName": "dungeon",
+      "indent": 0,
+      "lineNumber": 161,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "use_potion",
+      "rawValue": "use_potion",
+      "position": 6,
+      "lineNumber": 161,
+      "sceneName": "dungeon",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "dungeon",
+      "indent": 0,
+      "lineNumber": 162,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "potions",
+      "rawValue": "potions",
+      "position": 5,
+      "lineNumber": 162,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "SubtractionOperator",
+      "rawValue": "-",
+      "position": 13,
+      "lineNumber": 162,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 1,
+      "position": 15,
+      "lineNumber": 162,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "dungeon",
+      "indent": 0,
+      "lineNumber": 163,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "heal",
+      "rawValue": "heal",
+      "position": 6,
+      "lineNumber": 163,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 11,
+      "lineNumber": 163,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "GenerateRandom",
+      "sceneName": "dungeon",
+      "indent": 0,
+      "lineNumber": 164,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "heal",
+      "rawValue": "heal",
+      "position": 6,
+      "lineNumber": 164,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 25,
+      "position": 11,
+      "lineNumber": 164,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 40,
+      "position": 14,
+      "lineNumber": 164,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "dungeon",
+      "indent": 0,
+      "lineNumber": 165,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "hp",
+      "rawValue": "hp",
+      "position": 5,
+      "lineNumber": 165,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 8,
+      "lineNumber": 165,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "heal",
+      "rawValue": "heal",
+      "position": 10,
+      "lineNumber": 165,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "If",
+      "sceneName": "dungeon",
+      "indent": 0,
+      "lineNumber": 166,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "hp",
+      "rawValue": "hp",
+      "position": 4,
+      "lineNumber": 166,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "GreaterThanOperator",
+      "rawValue": ">",
+      "position": 7,
+      "lineNumber": 166,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "max_hp",
+      "rawValue": "max_hp",
+      "position": 9,
+      "lineNumber": 166,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "dungeon",
+      "indent": 1,
+      "lineNumber": 167,
+      "position": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "hp",
+      "rawValue": "hp",
+      "position": 7,
+      "lineNumber": 167,
+      "sceneName": "dungeon",
+      "indent": 1
+    },
+    {
+      "type": "Identifier",
+      "value": "max_hp",
+      "rawValue": "max_hp",
+      "position": 10,
+      "lineNumber": 167,
+      "sceneName": "dungeon",
+      "indent": 1
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 168,
+      "position": 0,
+      "indent": 0,
+      "content": "You drink a potion and recover "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "dungeon",
+      "lineNumber": 168,
+      "position": 31,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "heal",
+      "rawValue": "heal",
+      "position": 33,
+      "lineNumber": 168,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "dungeon",
+      "lineNumber": 168,
+      "position": 37,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 168,
+      "position": 38,
+      "indent": 0,
+      "content": " HP. HP: "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "dungeon",
+      "lineNumber": 168,
+      "position": 47,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "hp",
+      "rawValue": "hp",
+      "position": 49,
+      "lineNumber": 168,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "dungeon",
+      "lineNumber": 168,
+      "position": 51,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 168,
+      "position": 52,
+      "indent": 0,
+      "content": "/"
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "dungeon",
+      "lineNumber": 168,
+      "position": 53,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "max_hp",
+      "rawValue": "max_hp",
+      "position": 55,
+      "lineNumber": 168,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "dungeon",
+      "lineNumber": 168,
+      "position": 61,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 168,
+      "position": 62,
+      "indent": 0,
+      "content": ".\n"
+    },
+    {
+      "type": "Return",
+      "sceneName": "dungeon",
+      "indent": 0,
+      "lineNumber": 169,
+      "position": 0
+    },
+    {
+      "type": "Label",
+      "sceneName": "dungeon",
+      "indent": 0,
+      "lineNumber": 171,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "rest",
+      "rawValue": "rest",
+      "position": 6,
+      "lineNumber": 171,
+      "sceneName": "dungeon",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 172,
+      "position": 0,
+      "indent": 0,
+      "content": "You find a quiet alcove and rest briefly.\n"
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "dungeon",
+      "indent": 0,
+      "lineNumber": 173,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "heal",
+      "rawValue": "heal",
+      "position": 6,
+      "lineNumber": 173,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 11,
+      "lineNumber": 173,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "GenerateRandom",
+      "sceneName": "dungeon",
+      "indent": 0,
+      "lineNumber": 174,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "heal",
+      "rawValue": "heal",
+      "position": 6,
+      "lineNumber": 174,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 10,
+      "position": 11,
+      "lineNumber": 174,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 20,
+      "position": 14,
+      "lineNumber": 174,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "dungeon",
+      "indent": 0,
+      "lineNumber": 175,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "hp",
+      "rawValue": "hp",
+      "position": 5,
+      "lineNumber": 175,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 8,
+      "lineNumber": 175,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "heal",
+      "rawValue": "heal",
+      "position": 10,
+      "lineNumber": 175,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "If",
+      "sceneName": "dungeon",
+      "indent": 0,
+      "lineNumber": 176,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "hp",
+      "rawValue": "hp",
+      "position": 4,
+      "lineNumber": 176,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "GreaterThanOperator",
+      "rawValue": ">",
+      "position": 7,
+      "lineNumber": 176,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "max_hp",
+      "rawValue": "max_hp",
+      "position": 9,
+      "lineNumber": 176,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "dungeon",
+      "indent": 1,
+      "lineNumber": 177,
+      "position": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "hp",
+      "rawValue": "hp",
+      "position": 7,
+      "lineNumber": 177,
+      "sceneName": "dungeon",
+      "indent": 1
+    },
+    {
+      "type": "Identifier",
+      "value": "max_hp",
+      "rawValue": "max_hp",
+      "position": 10,
+      "lineNumber": 177,
+      "sceneName": "dungeon",
+      "indent": 1
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 178,
+      "position": 0,
+      "indent": 0,
+      "content": "Recovered "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "dungeon",
+      "lineNumber": 178,
+      "position": 10,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "heal",
+      "rawValue": "heal",
+      "position": 12,
+      "lineNumber": 178,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "dungeon",
+      "lineNumber": 178,
+      "position": 16,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 178,
+      "position": 17,
+      "indent": 0,
+      "content": " HP. HP: "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "dungeon",
+      "lineNumber": 178,
+      "position": 26,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "hp",
+      "rawValue": "hp",
+      "position": 28,
+      "lineNumber": 178,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "dungeon",
+      "lineNumber": 178,
+      "position": 30,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 178,
+      "position": 31,
+      "indent": 0,
+      "content": "/"
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "dungeon",
+      "lineNumber": 178,
+      "position": 32,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "max_hp",
+      "rawValue": "max_hp",
+      "position": 34,
+      "lineNumber": 178,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "dungeon",
+      "lineNumber": 178,
+      "position": 40,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 178,
+      "position": 41,
+      "indent": 0,
+      "content": ".\n"
+    },
+    {
+      "type": "Return",
+      "sceneName": "dungeon",
+      "indent": 0,
+      "lineNumber": 179,
+      "position": 0
+    },
+    {
+      "type": "Label",
+      "sceneName": "dungeon",
+      "indent": 0,
+      "lineNumber": 181,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "death",
+      "rawValue": "death",
+      "position": 6,
+      "lineNumber": 181,
+      "sceneName": "dungeon",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 182,
+      "position": 0,
+      "indent": 0,
+      "content": "Your torch sputters out. The dungeon claims another adventurer.\n\nRooms cleared: "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "dungeon",
+      "lineNumber": 184,
+      "position": 15,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "rooms_cleared",
+      "rawValue": "rooms_cleared",
+      "position": 17,
+      "lineNumber": 184,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "dungeon",
+      "lineNumber": 184,
+      "position": 30,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 184,
+      "position": 31,
+      "indent": 0,
+      "content": ". Encounters survived: "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "dungeon",
+      "lineNumber": 184,
+      "position": 54,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "encounters",
+      "rawValue": "encounters",
+      "position": 56,
+      "lineNumber": 184,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "dungeon",
+      "lineNumber": 184,
+      "position": 66,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 184,
+      "position": 67,
+      "indent": 0,
+      "content": ".\n"
+    },
+    {
+      "type": "Ending",
+      "sceneName": "dungeon",
+      "indent": 0,
+      "lineNumber": 185,
+      "position": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 185,
+      "position": 7,
+      "indent": 0,
+      "content": "\"Fallen in the Deep\""
+    },
+    {
+      "type": "Label",
+      "sceneName": "dungeon",
+      "indent": 0,
+      "lineNumber": 187,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "retreat",
+      "rawValue": "retreat",
+      "position": 6,
+      "lineNumber": 187,
+      "sceneName": "dungeon",
+      "indent": 0,
+      "isLabelName": true
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 188,
+      "position": 0,
+      "indent": 0,
+      "content": "You climb back to the surface, blinking in the sunlight.\n\n"
+    },
+    {
+      "type": "If",
+      "sceneName": "dungeon",
+      "indent": 0,
+      "lineNumber": 190,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "rooms_cleared",
+      "rawValue": "rooms_cleared",
+      "position": 4,
+      "lineNumber": 190,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "GreaterThanEqualsOperator",
+      "rawValue": ">=",
+      "position": 18,
+      "lineNumber": 190,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 3,
+      "position": 21,
+      "lineNumber": 190,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 191,
+      "position": 2,
+      "indent": 1,
+      "content": "A respectable delve. You'll return stronger.\n"
+    },
+    {
+      "type": "Else",
+      "sceneName": "dungeon",
+      "indent": 0,
+      "lineNumber": 192,
+      "position": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 193,
+      "position": 2,
+      "indent": 1,
+      "content": "Perhaps you weren't ready for the dungeon.\n\n"
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 195,
+      "position": 0,
+      "indent": 0,
+      "content": "Rooms explored: "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "dungeon",
+      "lineNumber": 195,
+      "position": 16,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "rooms_cleared",
+      "rawValue": "rooms_cleared",
+      "position": 18,
+      "lineNumber": 195,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "dungeon",
+      "lineNumber": 195,
+      "position": 31,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 195,
+      "position": 32,
+      "indent": 0,
+      "content": ". Treasure collected: "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "dungeon",
+      "lineNumber": 195,
+      "position": 54,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "treasure_collected",
+      "rawValue": "treasure_collected",
+      "position": 56,
+      "lineNumber": 195,
+      "sceneName": "dungeon",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "dungeon",
+      "lineNumber": 195,
+      "position": 74,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "dungeon",
+      "lineNumber": 195,
+      "position": 75,
+      "indent": 0,
+      "content": ".\n"
+    },
+    {
+      "type": "Finish",
+      "sceneName": "dungeon",
+      "indent": 0,
+      "lineNumber": 196,
+      "position": 0
+    },
+    {
+      "lineNumber": 198,
+      "indent": 0,
+      "position": 0,
+      "sceneName": "dungeon",
+      "type": "SceneEnd"
+    }
+  ],
+  [
+    {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 0,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "hp",
+      "rawValue": "hp",
+      "position": 8,
+      "lineNumber": 0,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 100,
+      "position": 11,
+      "lineNumber": 0,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 1,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "max_hp",
+      "rawValue": "max_hp",
+      "position": 8,
+      "lineNumber": 1,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 100,
+      "position": 15,
+      "lineNumber": 1,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 2,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "attack",
+      "rawValue": "attack",
+      "position": 8,
+      "lineNumber": 2,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 15,
+      "position": 15,
+      "lineNumber": 2,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 3,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "defense",
+      "rawValue": "defense",
+      "position": 8,
+      "lineNumber": 3,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 10,
+      "position": 16,
+      "lineNumber": 3,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 4,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "potions",
+      "rawValue": "potions",
+      "position": 8,
+      "lineNumber": 4,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 3,
+      "position": 16,
+      "lineNumber": 4,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 5,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "keys",
+      "rawValue": "keys",
+      "position": 8,
+      "lineNumber": 5,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 13,
+      "lineNumber": 5,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 6,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "encounters",
+      "rawValue": "encounters",
+      "position": 8,
+      "lineNumber": 6,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 19,
+      "lineNumber": 6,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 7,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "rooms_cleared",
+      "rawValue": "rooms_cleared",
+      "position": 8,
+      "lineNumber": 7,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 22,
+      "lineNumber": 7,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 8,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "boss_defeated",
+      "rawValue": "boss_defeated",
+      "position": 8,
+      "lineNumber": 8,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "BooleanLiteral",
+      "value": false,
+      "position": 22,
+      "lineNumber": 8,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 9,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "treasure_collected",
+      "rawValue": "treasure_collected",
+      "position": 8,
+      "lineNumber": 9,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 27,
+      "lineNumber": 9,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 10,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "floor",
+      "rawValue": "floor",
+      "position": 8,
+      "lineNumber": 10,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 1,
+      "position": 14,
+      "lineNumber": 10,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 12,
+      "position": 0,
+      "indent": 0,
+      "content": "You descend into the Irondelve Dungeon. Torchlight flickers against damp stone walls.\n\nFloor "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "startup",
+      "lineNumber": 14,
+      "position": 6,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "floor",
+      "rawValue": "floor",
+      "position": 8,
+      "lineNumber": 14,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "startup",
+      "lineNumber": 14,
+      "position": 13,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 14,
+      "position": 14,
+      "indent": 0,
+      "content": ". The darkness awaits.\n\n"
+    },
+    {
+      "type": "GotoScene",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 16,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "dungeon",
+      "rawValue": "dungeon",
+      "position": 12,
+      "lineNumber": 16,
+      "sceneName": "startup",
+      "indent": 0,
+      "isSceneName": true,
+      "isLabelName": false
+    },
+    {
+      "lineNumber": 19,
+      "indent": 0,
+      "position": 0,
+      "sceneName": "startup",
+      "type": "SceneEnd"
+    }
+  ]
+]

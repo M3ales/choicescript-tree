@@ -1,0 +1,4 @@
+*create health 100
+
+Welcome, adventurer.
+*goto_scene tavern
