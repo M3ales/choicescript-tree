@@ -128,6 +128,15 @@ export const checkNavigation = (scene: SceneAstWithSymbolTable, index: number, s
       return goto;
     }
 
+    if(!goto.label) {
+      errors.push(<AnalysisError>{
+        message: `Malformed *goto with no label target`,
+        statement: goto,
+        severity: 'Error',
+        solutionCode: 0,
+      });
+      return goto;
+    }
     if(goto.label["type"] === undefined) return goto;
     checkLocalLabel(goto.label as IdentifierToken, scene.symbolTable.labels, goto, errors);
     return goto;
@@ -139,7 +148,7 @@ export const checkNavigation = (scene: SceneAstWithSymbolTable, index: number, s
       const name = sceneName(sceneGosub.scene);
       if (name !== undefined) {
         const targetScene = checkSceneExists(name, scenes, gosub, errors);
-        if(targetScene && sceneGosub.label["type"] !== undefined) {
+        if(targetScene && sceneGosub.label && sceneGosub.label["type"] !== undefined) {
           checkSceneLabel(sceneGosub.label as IdentifierToken, targetScene, gosub, errors);
         }
       } else {
@@ -149,6 +158,15 @@ export const checkNavigation = (scene: SceneAstWithSymbolTable, index: number, s
       return gosub;
     }
 
+    if(!gosub.label) {
+      errors.push(<AnalysisError>{
+        message: `Malformed *gosub with no label target`,
+        statement: gosub,
+        severity: 'Error',
+        solutionCode: 0,
+      });
+      return gosub;
+    }
     if(gosub.label["type"] === undefined) return gosub;
     checkLocalLabel(gosub.label as IdentifierToken, scene.symbolTable.labels, gosub, errors);
     return gosub;
