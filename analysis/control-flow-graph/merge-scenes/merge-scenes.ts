@@ -34,10 +34,48 @@ const extractSceneOrder = (scenes: SceneAstWithSymbolTable[]): { order: string[]
 };
 
 
+export interface MergedCfgResult {
+  game: ControlFlowGraph;
+  stats: ControlFlowGraph | null;
+}
+
+const buildSceneCfg = (
+  sceneCfg: SceneControlFlowGraph,
+  sceneName: string,
+): ControlFlowGraph => {
+  const blocks: Record<string, BlockRef> = {};
+  const edges: Transition[] = [];
+  const statementIndex: Record<string, StatementIndexEntry> = {};
+
+  for (const [id, ref] of Object.entries(sceneCfg.blocks)) {
+    blocks[id] = ref;
+    for (const stmtId of sceneCfg.blockIndex[id]?.statementIds ?? []) {
+      const localId = parseInt(stmtId.split(":")[1], 10);
+      statementIndex[stmtId] = {
+        scene: sceneName,
+        localStatementId: localId,
+        blockId: id,
+      };
+    }
+  }
+
+  for (const edge of sceneCfg.edges) {
+    edges.push(edge);
+  }
+
+  return {
+    blocks,
+    edges,
+    statementIndex,
+    entryBlockId: sceneCfg.entryBlockId,
+    sceneOrder: [sceneName],
+  };
+};
+
 export const mergeScenes = (
   scenes: SceneAstWithSymbolTable[],
   cfgs: Map<string, SceneControlFlowGraph>,
-): ControlFlowGraph => {
+): MergedCfgResult => {
   const { order: sceneOrder, sceneListScenes } = extractSceneOrder(scenes);
 
   const blocks: Record<string, BlockRef> = {};
@@ -45,6 +83,7 @@ export const mergeScenes = (
   const statementIndex: Record<string, StatementIndexEntry> = {};
 
   for (const scene of scenes) {
+    if (scene.name === "choicescript_stats") continue;
     const cfg = cfgs.get(scene.name);
     if (!cfg) continue;
     const name = scene.name;
@@ -115,27 +154,26 @@ export const mergeScenes = (
     }
   }
 
-  const statsCfg = cfgs.get("choicescript_stats");
   const startupCfg = cfgs.get("startup");
-  if (statsCfg && startupCfg) {
-    edges.push({
-      id: `${startupCfg.entryBlockId}.stats_link`,
-      kind: "SceneProgression",
-      sourceBlockId: startupCfg.entryBlockId,
-      targetBlockId: statsCfg.entryBlockId,
-      metadata: { targetScene: "choicescript_stats" },
-    });
-  }
 
   const entryBlockId = startupCfg
     ? startupCfg.entryBlockId
     : Object.keys(blocks)[0];
 
-  return {
+  const gameSceneOrder = sceneOrder.filter(s => s !== "choicescript_stats");
+
+  const game: ControlFlowGraph = {
     blocks,
     edges,
     statementIndex,
     entryBlockId,
-    sceneOrder,
+    sceneOrder: gameSceneOrder,
   };
+
+  const statsSceneCfg = cfgs.get("choicescript_stats");
+  const stats = statsSceneCfg
+    ? buildSceneCfg(statsSceneCfg, "choicescript_stats")
+    : null;
+
+  return { game, stats };
 };

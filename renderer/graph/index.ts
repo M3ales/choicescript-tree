@@ -175,6 +175,41 @@ function destNodeId(dest: TraceDest): string {
 
 // --- Build trace chain as graph nodes ---
 
+const condRenderCache = new Map<string, string>();
+
+function renderConditional(step: TraceStep & { kind: "conditional" }, scene: string): string {
+  const cacheKey = JSON.stringify({ step, scene });
+  const cached = condRenderCache.get(cacheKey);
+  if (cached) return cached;
+
+  const condId = nextId("cond");
+  nodes.push({ id: condId, scene, label: "if", shape: "diamond", fillcolor: "lightyellow" });
+
+  for (const branch of step.branches) {
+    let branchLabel: string;
+    if (branch.condition) {
+      branchLabel = branch.isElse
+        ? `elseif ${truncate(branch.condition, 30)}`
+        : `if ${truncate(branch.condition, 30)}`;
+    } else {
+      branchLabel = branch.isElse ? "else" : "";
+    }
+    const inner = renderSteps(branch.steps, scene);
+    const branchDest = branch.dest ? scopedDestNodeId(branch.dest, scene) : null;
+    if (inner && branchDest) {
+      dotEdges.push({ from: condId, to: inner.first, label: branchLabel, color: "gray40", style: "dashed" });
+      dotEdges.push({ from: inner.last, to: branchDest, label: "", color: "gray40", style: "dashed" });
+    } else if (inner) {
+      dotEdges.push({ from: condId, to: inner.first, label: branchLabel, color: "gray40", style: "dashed" });
+    } else if (branchDest) {
+      dotEdges.push({ from: condId, to: branchDest, label: branchLabel, color: "gray40", style: "dashed" });
+    }
+  }
+
+  condRenderCache.set(cacheKey, condId);
+  return condId;
+}
+
 function renderSteps(steps: TraceStep[], scene: string): { first: string; last: string } | null {
   if (steps.length === 0) return null;
 
@@ -189,32 +224,9 @@ function renderSteps(steps: TraceStep[], scene: string): { first: string; last: 
       if (!firstNodeId) firstNodeId = nodeId;
       lastNodeId = nodeId;
     } else if (step.kind === "conditional") {
-      const condId = nextId("cond");
-      nodes.push({ id: condId, scene, label: "if", shape: "diamond", fillcolor: "lightyellow" });
+      const condId = renderConditional(step, scene);
       if (lastNodeId) dotEdges.push({ from: lastNodeId, to: condId, label: "", color: "gray40" });
       if (!firstNodeId) firstNodeId = condId;
-
-      for (const branch of step.branches) {
-        let branchLabel: string;
-        if (branch.condition) {
-          branchLabel = branch.isElse
-            ? `elseif ${truncate(branch.condition, 30)}`
-            : `if ${truncate(branch.condition, 30)}`;
-        } else {
-          branchLabel = branch.isElse ? "else" : "";
-        }
-        const inner = renderSteps(branch.steps, scene);
-        const branchDest = branch.dest ? scopedDestNodeId(branch.dest, scene) : null;
-        if (inner && branchDest) {
-          dotEdges.push({ from: condId, to: inner.first, label: branchLabel, color: "gray40", style: "dashed" });
-          dotEdges.push({ from: inner.last, to: branchDest, label: "", color: "gray40", style: "dashed" });
-        } else if (inner) {
-          dotEdges.push({ from: condId, to: inner.first, label: branchLabel, color: "gray40", style: "dashed" });
-        } else if (branchDest) {
-          dotEdges.push({ from: condId, to: branchDest, label: branchLabel, color: "gray40", style: "dashed" });
-        }
-      }
-
       lastNodeId = condId;
     }
   }
@@ -534,9 +546,13 @@ lines.push('  "END" [label="END" shape=doublecircle fillcolor=gray90];');
 lines.push('  "DEAD" [label="DEAD END" shape=octagon fillcolor=mistyrose];');
 lines.push("");
 
+const seenEdges = new Set<string>();
 for (const e of dotEdges) {
   const style = e.style ? ` style=${e.style}` : (e.color === "gray50" ? " style=dashed" : "");
-  lines.push(`  "${e.from}" -> "${e.to}" [label="${escDot(e.label)}" color=${e.color} fontcolor=${e.color}${style}];`);
+  const line = `  "${e.from}" -> "${e.to}" [label="${escDot(e.label)}" color=${e.color} fontcolor=${e.color}${style}];`;
+  if (seenEdges.has(line)) continue;
+  seenEdges.add(line);
+  lines.push(line);
 }
 
 lines.push("}");

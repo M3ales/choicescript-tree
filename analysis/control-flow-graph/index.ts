@@ -33,7 +33,7 @@ for (const [name, cfg] of cfgs) {
   console.log(`  ${name}: ${blocks} blocks, ${edges} edges, ${labels} labels`);
 }
 
-const cfg = mergeScenes(scenes, cfgs);
+const { game: cfg, stats: statsCfg } = mergeScenes(scenes, cfgs);
 
 const reachableBlockIds = new Set<string>();
 reachableBlockIds.add(cfg.entryBlockId);
@@ -57,6 +57,11 @@ if (pruned > 0) {
 }
 
 writeNdjson(outPath('cfg.ndjson'), serialiseCfg(cfg));
+
+if (statsCfg) {
+  writeNdjson(outPath('cfg-stats.ndjson'), serialiseCfg(statsCfg));
+  console.log(`Stats CFG: ${Object.keys(statsCfg.blocks).length} blocks, ${statsCfg.edges.length} edges`);
+}
 
 const totalBlocks2 = Object.keys(cfg.blocks).length;
 const totalEdges2 = cfg.edges.length;

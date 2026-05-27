@@ -79,16 +79,21 @@ export const flattenSubroutines = (
   const flattenedMap = new Map<string, FlattenedSubroutine>();
   let totalLoopsUnrolled = 0;
 
-  for (const scc of sccs) {
+  for (let si = 0; si < sccs.length; si++) {
+    const scc = sccs[si];
     if (scc.length === 1) {
       const entryId = scc[0];
       const node = nodes.get(entryId)!;
       const unrolled = unrollSubroutineBody(entryId, node.body, cfg, statements, resolver);
       totalLoopsUnrolled += unrolled.loopsUnrolled;
       const sub = flattenOne(entryId, unrolled, node.name, flattenedMap).sub;
+      if (sub.blockRefs.length > 1000) {
+        console.log(`  Flatten: [${si}/${sccs.length}] ${node.name ?? entryId}: ${node.body.coreBlockIds.size} blocks → ${sub.blockRefs.length} refs (${unrolled.loopsUnrolled} loops unrolled, ${node.children.size} children inlined)`);
+      }
       subroutines.push(sub);
       flattenedMap.set(entryId, sub);
     } else {
+      console.log(`  Flatten: SCC ${si} has ${scc.length} entries (mutually recursive)`);
       const result = flattenScc(scc, nodes, cfg, statements, resolver, flattenedMap);
       totalLoopsUnrolled += result.loopsUnrolled;
       for (const sub of result.subroutines) {
@@ -274,7 +279,7 @@ const findSubroutineBody = (
   const { visited, collected: returnBlockIds } = walkGraph<string>(
     entryBlockId,
     id => (edgesBySource.get(id) ?? [])
-      .filter(e => e.targetBlockId && !isAnyGoSubReturn(e.kind) && e.kind !== "SceneProgression" && e.kind !== "GotoScene")
+      .filter(e => e.targetBlockId && !isGoSubCall(e.kind) && !isAnyGoSubReturn(e.kind) && e.kind !== "SceneProgression" && e.kind !== "GotoScene")
       .map(e => e.targetBlockId!),
     {
       exitWhen: id => {
@@ -413,7 +418,13 @@ const flattenOne = (
   const nestedReturnBlocks = new Set<string>();
   let nestCounter = 0;
 
+  const MAX_NEST_PASSES = 100;
+  let nestPass = 0;
   for (;;) {
+    if (++nestPass > MAX_NEST_PASSES) {
+      console.warn(`  WARN: nested gosub inlining hit ${MAX_NEST_PASSES} passes, breaking (possible recursive gosubs)`);
+      break;
+    }
     const edgesBySource = buildEdgesBySource(edges);
     let resolvedAny = false;
 

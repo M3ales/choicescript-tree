@@ -24,17 +24,25 @@ const addNeeded = (globalId: string) => {
   set.add(localId);
 };
 
-const records = readNdjsonSync<CfgRecord>(outPath("cfg.ndjson"));
-for (const rec of records) {
-  if (rec.type === "stmtIndex") {
-    addNeeded(rec.id as string);
-  }
-  if (rec.type === "edge") {
-    const meta = rec.metadata as Record<string, unknown> | undefined;
-    if (!meta) continue;
-    for (const key of ["conditionStatementId", "optionStatementId", "choiceConditionId"]) {
-      const stmtId = meta[key] as string | undefined;
-      if (stmtId) addNeeded(stmtId);
+import { existsSync } from "fs";
+
+const cfgPaths = [outPath("cfg.ndjson")];
+const statsPath = outPath("cfg-stats.ndjson");
+if (existsSync(statsPath)) cfgPaths.push(statsPath);
+
+for (const cfgPath of cfgPaths) {
+  const records = readNdjsonSync<CfgRecord>(cfgPath);
+  for (const rec of records) {
+    if (rec.type === "stmtIndex") {
+      addNeeded(rec.id as string);
+    }
+    if (rec.type === "edge") {
+      const meta = rec.metadata as Record<string, unknown> | undefined;
+      if (!meta) continue;
+      for (const key of ["conditionStatementId", "optionStatementId", "choiceConditionId"]) {
+        const stmtId = meta[key] as string | undefined;
+        if (stmtId) addNeeded(stmtId);
+      }
     }
   }
 }

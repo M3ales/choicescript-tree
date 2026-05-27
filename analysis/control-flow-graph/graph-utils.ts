@@ -1,5 +1,5 @@
 import { ControlFlowGraph } from "./data";
-import { isGoSubCall } from "./data/transition-kind";
+import { isGoSubCall, isAnyGoSubCall } from "./data/transition-kind";
 
 export const getOrSet = <K, V>(map: Map<K, V>, key: K, create: () => V): V => {
   let v = map.get(key);
@@ -58,7 +58,7 @@ export const buildSuccessorMap = (
   const succs = new Map<string, Set<string>>();
   for (const edge of cfg.edges) {
     if (!edge.targetBlockId) continue;
-    if (excludeGoSub && isGoSubCall(edge.kind)) continue;
+    if (excludeGoSub && isAnyGoSubCall(edge.kind)) continue;
     getOrSet(succs, edge.sourceBlockId, () => new Set()).add(edge.targetBlockId);
   }
   return succs;

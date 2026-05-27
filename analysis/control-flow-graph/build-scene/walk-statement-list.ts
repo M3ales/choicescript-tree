@@ -1,6 +1,7 @@
 import {
   ChoiceOptionStatement,
   ChoiceStatement,
+  DeclareArrayStatement,
   FakeChoiceStatement,
   GoSubSceneStatement,
   GoSubStatement,
@@ -45,8 +46,8 @@ const connect = (
   return edge;
 };
 
-const isLiteralLabelReference = (label: IdentifierToken | { kind?: string }): label is IdentifierToken => {
-  return label["type"] !== undefined;
+const isLiteralLabelReference = (label: IdentifierToken | { kind?: string } | undefined): label is IdentifierToken => {
+  return label != null && "type" in label && label["type"] !== undefined;
 };
 
 export const walkStatementList = (
@@ -216,49 +217,9 @@ export const walkStatementList = (
           connect(state, currentBlock.id, null, "GoSubSceneCall", metadata);
         }
 
-        const gosub = stmt as GoSubStatement | GoSubSceneStatement;
-        const hasJank =
-          gosub.jankContinuedElseIfBranches.length > 0 ||
-          gosub.jankContinuedElseBranch !== null;
-
-        if (hasJank) {
-          const jankBlock = beginCodeBlock(state, "GoSubContinuation");
-          connect(state, currentBlock.id, jankBlock.id, "GoSubReturn");
-
-          jankBlock.exitType = "Branch";
-          const contBlock = beginCodeBlock(state, "Continuation");
-
-          for (const branch of gosub.jankContinuedElseIfBranches) {
-            const result = walkStatementList(branch.body, state, "ConditionalBody", false);
-            connect(state, jankBlock.id, result.entryBlockId, "ElseIfBranch", {
-              conditionStatementId: qualifyStmtId(state, branch.statementId),
-            });
-            for (const exitId of result.exitBlockIds) {
-              connect(state, exitId, contBlock.id, "FallThrough");
-            }
-          }
-
-          if (gosub.jankContinuedElseBranch) {
-            const result = walkStatementList(
-              gosub.jankContinuedElseBranch.body,
-              state,
-              "ConditionalBody",
-              false
-            );
-            connect(state, jankBlock.id, result.entryBlockId, "ElseBranch");
-            for (const exitId of result.exitBlockIds) {
-              connect(state, exitId, contBlock.id, "FallThrough");
-            }
-          } else {
-            connect(state, jankBlock.id, contBlock.id, "IfFallThrough");
-          }
-
-          currentBlock = contBlock;
-        } else {
-          const contBlock = beginCodeBlock(state, "GoSubContinuation");
-          connect(state, currentBlock.id, contBlock.id, "GoSubReturn");
-          currentBlock = contBlock;
-        }
+        const contBlock = beginCodeBlock(state, "GoSubContinuation");
+        connect(state, currentBlock.id, contBlock.id, "GoSubReturn");
+        currentBlock = contBlock;
 
         break;
       }
@@ -317,6 +278,19 @@ export const walkStatementList = (
         state.currentReuseMode = null;
         if (stmt.statementId != null) {
           currentBlock.statementIds.push(qualifyStmtId(state, stmt.statementId));
+        }
+        break;
+      }
+
+      case "DeclareArray": {
+        const arrayStmt = stmt as DeclareArrayStatement;
+        if (stmt.statementId != null) {
+          currentBlock.statementIds.push(qualifyStmtId(state, stmt.statementId));
+        }
+        for (const decl of arrayStmt.declarations) {
+          if (decl.statementId != null) {
+            currentBlock.statementIds.push(qualifyStmtId(state, decl.statementId));
+          }
         }
         break;
       }

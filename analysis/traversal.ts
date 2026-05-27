@@ -2,8 +2,6 @@ import {
   ChoiceOptionStatement,
   ChoiceStatement,
   FakeChoiceStatement,
-  GoSubSceneStatement,
-  GoSubStatement,
   IfStatement,
   Statement,
 } from "../parser/statements";
@@ -53,38 +51,9 @@ export const walk = (
         walk(option.body, visitors);
         break;
       }
-      case "GoSub": {
-        const gosub = statement as GoSubStatement;
-
-        if (gosub.jankContinuedElseIfBranches.length > 0) {
-          gosub.jankContinuedElseIfBranches.forEach((branch) => {
-            visitStatement(branch);
-            walk(branch.body, visitors);
-          });
-        }
-
-        if (gosub.jankContinuedElseBranch) {
-          visitStatement(gosub.jankContinuedElseBranch);
-          walk(gosub.jankContinuedElseBranch.body, visitors);
-        }
+      case "GoSub":
+      case "GoSubScene":
         break;
-      }
-      case "GoSubScene": {
-        const gosubScene = statement as GoSubSceneStatement;
-
-        if (gosubScene.jankContinuedElseIfBranches.length > 0) {
-          gosubScene.jankContinuedElseIfBranches.forEach((branch) => {
-            visitStatement(branch);
-            walk(branch.body, visitors);
-          });
-        }
-
-        if (gosubScene.jankContinuedElseBranch) {
-          visitStatement(gosubScene.jankContinuedElseBranch);
-          walk(gosubScene.jankContinuedElseBranch.body, visitors);
-        }
-        break;
-      }
       default:
         break;
     }

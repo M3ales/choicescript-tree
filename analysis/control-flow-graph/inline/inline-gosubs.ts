@@ -383,11 +383,16 @@ export const inlineFlattened = (
   const errors: InlineError[] = [];
   const removedEdges = new Set<string>();
 
-  for (const edge of [...edges]) {
-    if (!isGoSubCall(edge.kind) || !edge.targetBlockId) continue;
+  const gosubEdges = edges.filter(e => isGoSubCall(e.kind) && e.targetBlockId && subByEntry.has(e.targetBlockId!));
+  console.log(`  Inline: ${gosubEdges.length} gosub call sites to inline`);
 
-    const sub = subByEntry.get(edge.targetBlockId);
-    if (!sub) continue;
+  for (let gi = 0; gi < gosubEdges.length; gi++) {
+    const edge = gosubEdges[gi];
+
+    const sub = subByEntry.get(edge.targetBlockId!)!;
+    if (sub.blockRefs.length > 1000) {
+      console.log(`    [${gi}/${gosubEdges.length}] ${edge.metadata?.label ?? edge.targetBlockId} (${sub.blockRefs.length} refs) → ${refMap.size} total refs`);
+    }
 
     const callerEdges = edgesBySource.get(edge.sourceBlockId) ?? [];
     let returnEdge: Transition | undefined;
@@ -451,6 +456,8 @@ export const inlineFlattened = (
     gosubsInlined++;
   }
 
+  console.log(`  Inline: done. ${gosubsInlined} sites inlined → ${refMap.size} refs, ${edges.length} edges`);
+
   if (removedEdges.size > 0) {
     let write = 0;
     for (let read = 0; read < edges.length; read++) {
@@ -459,9 +466,11 @@ export const inlineFlattened = (
     edges.length = write;
   }
 
+  console.log(`  Prune: starting reachability on ${refMap.size} refs, ${edges.length} edges`);
   const { refs, edges: prunedEdges } = pruneUnreachable(
     cfg.entryBlockId, refMap, edges, errors, originalGoSubReturnTargets,
   );
+  console.log(`  Prune: ${refs.length} refs, ${prunedEdges.length} edges after pruning`);
 
   for (const e of prunedEdges) {
     if (isGoSubCall(e.kind)) {

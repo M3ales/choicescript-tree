@@ -1,4 +1,5 @@
 import "../../../bootstrap";
+import { existsSync } from "fs";
 import { inlineCfg } from "./inline-cfg";
 import { readCfg, readStatements, serialiseInlineCfg, BlockResolver } from "../cfg-io";
 import { writeNdjson } from "../../ndjson";
@@ -43,14 +44,13 @@ const boundedLoops = loopResult.loops.filter(l => l.tripCount !== null);
 console.log(`  Loop analysis: ${loopResult.loops.length} loops detected, ${boundedLoops.length} bounded`);
 console.log(`  Loop unrolling: ${unrolled.loopsUnrolled} loops unrolled, +${unrolled.blocksAdded} blocks, +${unrolled.edgesAdded} edges`);
 
-const serializable = loopResult.loops.map(loop => ({
+const serializable: any[] = loopResult.loops.map(loop => ({
   headerId: loop.headerId,
   bodySize: loop.bodyBlockIds.length,
   backEdgeCount: loop.backEdges.length,
   tripCount: loop.tripCount,
   bounds: loop.bounds,
 }));
-getIO().writeFile(outPath("loop-analysis.json"), JSON.stringify(serializable, null, 2));
 
 const finalCfg = unrolled.cfg;
 console.log(`  Result: ${Object.keys(finalCfg.blocks).length} blocks, ${finalCfg.edges.length} edges`);
@@ -98,3 +98,33 @@ if (inlined.errors.length > 0) {
   );
   console.log(`Wrote inline-cfg-errors.json (${inlined.errors.length} errors)`);
 }
+
+const statsCfgPath = outPath("cfg-stats.ndjson");
+if (existsSync(statsCfgPath)) {
+  const statsCfg = readCfg(statsCfgPath);
+  console.log(`\nStats CFG: starting with ${Object.keys(statsCfg.blocks).length} blocks, ${statsCfg.edges.length} edges`);
+
+  const statsResult = inlineCfg(statsCfg, statements, resolver);
+  const statsFinalCfg = statsResult.unroll.cfg;
+
+  const statsLoops = statsResult.loopResult.loops.map(loop => ({
+    headerId: loop.headerId,
+    bodySize: loop.bodyBlockIds.length,
+    backEdgeCount: loop.backEdges.length,
+    tripCount: loop.tripCount,
+    bounds: loop.bounds,
+  }));
+  serializable.push(...statsLoops);
+
+  const statsRecordCount = writeNdjson(outPath("inline-cfg-stats.ndjson"), serialiseInlineCfg({
+    blockRefs: Object.values(statsFinalCfg.blocks),
+    edges: statsFinalCfg.edges,
+    statementIndex: statsFinalCfg.statementIndex,
+    entryBlockId: statsFinalCfg.entryBlockId,
+    sceneOrder: statsFinalCfg.sceneOrder,
+  }));
+  console.log(`Wrote inline-cfg-stats.ndjson (${statsRecordCount} records)`);
+  console.log(`  Result: ${Object.keys(statsFinalCfg.blocks).length} blocks, ${statsFinalCfg.edges.length} edges`);
+}
+
+getIO().writeFile(outPath("loop-analysis.json"), JSON.stringify(serializable, null, 2));
