@@ -3,7 +3,7 @@ import { countIndentation } from '../scanner/indent';
 import { ParseError } from './parse-error';
 import { outPath, getIO } from '../out-dir';
 
-const CONTEXT_LINES = 2;
+const CONTEXT_LINES = 10;
 
 const STATEMENT_SYNTAX: Record<string, string> = {
     Prose: "Prose Block",
@@ -61,8 +61,10 @@ export const formatErrorWithContext = (error: ParseError): string => {
     }
 
     const lines = content.split('\n');
-    const start = Math.max(0, lineNumber - CONTEXT_LINES);
-    const end = Math.min(lines.length - 1, lineNumber + CONTEXT_LINES);
+    const BEFORE = CONTEXT_LINES + 4;
+    const AFTER = CONTEXT_LINES - 4;
+    const start = Math.max(0, lineNumber - BEFORE);
+    const end = Math.min(lines.length - 1, lineNumber + AFTER);
     const gutterWidth = String(end + 1).length;
     const indents = lines.slice(start, end + 1).map(l => countIndentation(l).indent);
     const indentWidth = Math.max(...indents.map(i => String(i).length));

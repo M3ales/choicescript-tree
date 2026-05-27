@@ -1,4 +1,5 @@
-export const countIndentation = (line: string): { indent: number, position: number } => {
+export const countIndentation = (line: string | undefined): { indent: number, position: number } => {
+    if (!line) return { indent: 0, position: 0 };
     let indent = 0;
     let position = 0;
     for (const char of line) {

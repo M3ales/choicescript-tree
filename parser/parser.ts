@@ -5,6 +5,10 @@ import {
   CheckAchievementsToken,
   ChoiceOptionToken,
   CommentToken,
+  CreateArrayToken,
+  CreateTempArrayToken,
+  DeleteArrayToken,
+  DeleteVariableToken,
   DisableReuseToken,
   GameIdentifierToken,
   HideReuseToken,
@@ -40,7 +44,10 @@ import {
   ChoiceOptionStatement,
   ChoiceStatement,
   CommentBlock,
+  DeclareArrayStatement,
   DeclareVariableStatement,
+  DeleteArrayStatement,
+  DeleteVariableStatement,
   DisableReuseStatement,
   ElseIfStatement,
   ElseStatement,
@@ -102,11 +109,17 @@ const choiceScopeOnlyTokenTypes: Set<TokenType> = new Set<TokenType>([
   "SelectableIf",
 ]);
 
+const startupHeaderStatements = new Set([
+  "DeclareVariable", "DeclareArray", "Author", "SceneList", "GameIdentifier", "Comment", "Achievement",
+]);
+
 export class Parser {
   tokens: Token[];
   current: number;
   errors: ParseError[];
   contextStack: ParseContext[];
+  seenNonHeaderStatement = false;
+  sceneName: string | null = null;
 
   constructor(tokens: Token[]) {
     this.tokens = tokens;
@@ -324,7 +337,7 @@ export class Parser {
     return expr;
   }
 
-  term(): Expression {
+  term(inConcat = false): Expression {
     let expr: Expression = this.factor();
     while (
       this.match([
@@ -336,7 +349,11 @@ export class Parser {
       ])
     ) {
       const operator: Token = this.previous();
-      const right = this.term();
+      if (operator.type === "ConcatenationOperator" && inConcat) {
+        this.error(operator, "Concatenation (&) is strictly binary — use parentheses to group multiple concatenations");
+      }
+      const isConcat = operator.type === "ConcatenationOperator";
+      const right = this.term(isConcat);
       expr = <Binary>{ kind: "Binary", left: expr, operator: operator, right: right };
     }
     return expr;
@@ -463,6 +480,7 @@ export class Parser {
   parseScene(): SceneAst {
     if (this.match(["SceneStart"], false, false)) {
       const sceneStart = this.previous() as SceneStartToken;
+      this.sceneName = sceneStart.sceneName;
       return this.withContext({ kind: `Scene '${sceneStart.sceneName}'`, token: sceneStart }, () => {
         const statements: Statement[] = [];
         while (!this.isAtEnd() && !this.match(["SceneEnd"], false, false)) {
@@ -502,6 +520,10 @@ export class Parser {
     ["SetVariable", () => this.setVariable()],
     ["CreateVariable", () => this.createVariable(false)],
     ["CreateTempVariable", () => this.createVariable(true)],
+    ["CreateArray", () => this.createArray(false)],
+    ["CreateTempArray", () => this.createArray(true)],
+    ["DeleteVariable", () => this.deleteVariable()],
+    ["DeleteArray", () => this.deleteArray()],
     ["Image", () => this.imageStatement()],
     ["GoSub", () => this.goSub()],
     ["Finish", () => this.finishStatement()],
@@ -531,7 +553,11 @@ export class Parser {
   statement(): Statement {
     for (const [tokenType, fn] of this.statementDispatch) {
       if (this.match([tokenType], false, false)) {
-        return this.withContext({ kind: tokenType, token: this.previous() }, fn);
+        const stmt = this.withContext({ kind: tokenType, token: this.previous() }, fn);
+        if (!startupHeaderStatements.has(stmt.kind)) {
+          this.seenNonHeaderStatement = true;
+        }
+        return stmt;
       }
     }
 
@@ -889,25 +915,12 @@ export class Parser {
 
     this.expectLineChange();
 
-    // real meme jank used by chapter 6 of aura clash
-    const elseIfBranches = [];
-    let elseBranch = null;
-    while(this.match(["ElseIf", "Else"], false, true)) {
-      const branch = this.previous();
-      if(branch.type === "ElseIf") {
-        elseIfBranches.push(this.elseIfStatement());
-      }
-      elseBranch = this.elseStatement();
-    }
-
     return <GoSubSceneStatement>{
       kind: "GoSubScene",
       token: token,
       scene: scene,
       label: label,
       args: args,
-      jankContinuedElseBranch: elseBranch,
-      jankContinuedElseIfBranches: elseIfBranches,
       statementId: this.generateStatementId()
     };
   }
@@ -924,24 +937,11 @@ export class Parser {
 
     this.expectLineChange();
 
-    // real meme jank used by chapter 6 of aura clash
-    const elseIfBranches = [];
-    let elseBranch = null;
-    while(this.match(["ElseIf", "Else"], false, true)) {
-      const branch = this.previous();
-      if(branch.type === "ElseIf") {
-        elseIfBranches.push(this.elseIfStatement());
-      }
-      elseBranch = this.elseStatement();
-    }
-
     return <GoSubStatement>{
       kind: "GoSub",
       token: token,
       label: label,
       args: args,
-      jankContinuedElseBranch: elseBranch,
-      jankContinuedElseIfBranches: elseIfBranches,
       statementId: this.generateStatementId()
     };
   }
@@ -1673,6 +1673,10 @@ export class Parser {
 
   createVariable(temporary: boolean): DeclareVariableStatement {
     const token = this.previous();
+    const canUseCreate = !temporary && this.sceneName === "startup" && !this.seenNonHeaderStatement;
+    if (!temporary && !canUseCreate) {
+      this.error(token, "*create is only allowed at the top of startup, before any non-header statements");
+    }
     const identifier = this.consume("Identifier", "Expect variable name");
     const expr = !this.peekSameLine() ? null : this.expression();
     this.expectLineChange();
@@ -1683,6 +1687,72 @@ export class Parser {
       scope: temporary ? "Temporary" : "Global",
       token: token,
       statementId: this.generateStatementId()
+    };
+  }
+
+  createArray(temporary: boolean): DeclareArrayStatement {
+    const token = this.previous();
+    const canUseCreate = !temporary && this.sceneName === "startup" && !this.seenNonHeaderStatement;
+    if (!temporary && !canUseCreate) {
+      this.error(token, "*create_array is only allowed at the top of startup, before any non-header statements");
+    }
+    const identifier = this.consume("Identifier", "Expect array name") as IdentifierToken;
+    const countExpr = this.expression();
+    if (countExpr.kind !== "Literal" || (countExpr as Literal).value.type !== "NumberLiteral") {
+      this.error(token, "Array count must be a numeric literal");
+    }
+    const count = ((countExpr as Literal).value as NumberLiteralToken).value;
+    const valueExpr = !this.peekSameLine() ? null : this.expression();
+    this.expectLineChange();
+
+    const declarations: DeclareVariableStatement[] = [];
+    for (let i = 1; i <= count; i++) {
+      const syntheticIdentifier = <IdentifierToken>{
+        ...identifier,
+        value: `${identifier.value}_${i}`,
+      };
+      declarations.push(<DeclareVariableStatement>{
+        kind: "DeclareVariable",
+        variable: syntheticIdentifier,
+        expression: valueExpr,
+        scope: temporary ? "Temporary" : "Global",
+        token: token,
+        statementId: this.generateStatementId(),
+      });
+    }
+
+    return <DeclareArrayStatement>{
+      kind: "DeclareArray",
+      token: token,
+      variable: identifier,
+      count: count,
+      declarations: declarations,
+      scope: temporary ? "Temporary" : "Global",
+      statementId: this.generateStatementId(),
+    };
+  }
+
+  deleteVariable(): DeleteVariableStatement {
+    const token = this.previous();
+    const identifier = this.consume("Identifier", "Expect variable name");
+    this.expectLineChange();
+    return <DeleteVariableStatement>{
+      kind: "DeleteVariable",
+      token: token,
+      variable: identifier,
+      statementId: this.generateStatementId(),
+    };
+  }
+
+  deleteArray(): DeleteArrayStatement {
+    const token = this.previous();
+    const identifier = this.consume("Identifier", "Expect array name");
+    this.expectLineChange();
+    return <DeleteArrayStatement>{
+      kind: "DeleteArray",
+      token: token,
+      variable: identifier,
+      statementId: this.generateStatementId(),
     };
   }
 
