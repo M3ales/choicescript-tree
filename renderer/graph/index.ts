@@ -566,4 +566,4 @@ console.log("Rendering SVG...");
 const graphviz = await Graphviz.load();
 const svg = graphviz.dot(dot, "svg");
 getIO().writeFile(outPath(`graph${suffix}.svg`), svg);
-console.log(`Wrote ${outPath(`graph${suffix}.svg`)} (${(Buffer.byteLength(svg) / 1024 / 1024).toFixed(1)} MB)`);
+console.log(`Wrote ${outPath(`graph${suffix}.svg`)} (${(new Blob([svg]).size / 1024 / 1024).toFixed(1)} MB)`);

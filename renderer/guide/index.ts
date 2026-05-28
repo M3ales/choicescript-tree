@@ -1135,4 +1135,4 @@ const out = render(tree);
 const guide = `# Choice Guide\n\n${out.join("\n")}\n`;
 getIO().writeFile(outPath("guide.md"), guide);
 
-console.log(`Wrote guide.md (${(Buffer.byteLength(guide) / 1024).toFixed(0)} KB)`);
+console.log(`Wrote guide.md (${(new Blob([guide]).size / 1024).toFixed(0)} KB)`);

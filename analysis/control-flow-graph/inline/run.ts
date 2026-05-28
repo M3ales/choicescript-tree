@@ -1,5 +1,4 @@
 import "../../../bootstrap";
-import { existsSync } from "fs";
 import { inlineCfg } from "./inline-cfg";
 import { readCfg, readStatements, serialiseInlineCfg, BlockResolver } from "../cfg-io";
 import { writeNdjson } from "../../ndjson";
@@ -28,7 +27,7 @@ if (unresolvedGosubs.length > 0) {
       console.error(`    ${e.callerBlockId} -> ${target}`);
     }
   }
-  process.exit(1);
+  throw new Error("Unresolved gosub calls — cannot continue");
 }
 
 const inlinedOriginals = inlined.errors.filter(e => e.kind === "inlined-original");
@@ -100,7 +99,7 @@ if (inlined.errors.length > 0) {
 }
 
 const statsCfgPath = outPath("cfg-stats.ndjson");
-if (existsSync(statsCfgPath)) {
+if (getIO().exists(statsCfgPath)) {
   const statsCfg = readCfg(statsCfgPath);
   console.log(`\nStats CFG: starting with ${Object.keys(statsCfg.blocks).length} blocks, ${statsCfg.edges.length} edges`);
 

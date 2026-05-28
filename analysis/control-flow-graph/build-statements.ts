@@ -24,11 +24,9 @@ const addNeeded = (globalId: string) => {
   set.add(localId);
 };
 
-import { existsSync } from "fs";
-
 const cfgPaths = [outPath("cfg.ndjson")];
 const statsPath = outPath("cfg-stats.ndjson");
-if (existsSync(statsPath)) cfgPaths.push(statsPath);
+if (getIO().exists(statsPath)) cfgPaths.push(statsPath);
 
 for (const cfgPath of cfgPaths) {
   const records = readNdjsonSync<CfgRecord>(cfgPath);
