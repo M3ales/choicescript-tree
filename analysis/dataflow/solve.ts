@@ -174,6 +174,40 @@ const computeIncomingState = (
   return result ?? emptyState();
 };
 
+const iterativeDfs = (
+  startId: string,
+  successors: Map<string, Set<string>>,
+  visited: Set<string>,
+  postorder: string[],
+): void => {
+  if (visited.has(startId)) return;
+  const stack: Array<{ blockId: string; iter: Iterator<string> | null }> = [];
+  visited.add(startId);
+  const succs = successors.get(startId);
+  stack.push({ blockId: startId, iter: succs ? succs.values() : null });
+
+  while (stack.length > 0) {
+    const frame = stack[stack.length - 1];
+    let pushed = false;
+    if (frame.iter) {
+      for (let next = frame.iter.next(); !next.done; next = frame.iter.next()) {
+        const succId = next.value;
+        if (!visited.has(succId)) {
+          visited.add(succId);
+          const s = successors.get(succId);
+          stack.push({ blockId: succId, iter: s ? s.values() : null });
+          pushed = true;
+          break;
+        }
+      }
+    }
+    if (!pushed) {
+      postorder.push(frame.blockId);
+      stack.pop();
+    }
+  }
+};
+
 const computeTopologicalOrder = (
   entryBlockId: string,
   successors: Map<string, Set<string>>,
@@ -183,19 +217,7 @@ const computeTopologicalOrder = (
   const visited = new Set<string>();
   const postorder: string[] = [];
 
-  const dfs = (blockId: string) => {
-    if (visited.has(blockId)) return;
-    visited.add(blockId);
-    const succs = successors.get(blockId);
-    if (succs) {
-      for (const succId of succs) {
-        if (!visited.has(succId)) dfs(succId);
-      }
-    }
-    postorder.push(blockId);
-  };
-
-  dfs(entryBlockId);
+  iterativeDfs(entryBlockId, successors, visited, postorder);
   const reachableOrder = postorder.splice(0).reverse();
 
   const sceneIndex = new Map(sceneOrder.map((s, i) => [s, i]));
@@ -208,7 +230,7 @@ const computeTopologicalOrder = (
     });
 
   for (const blockId of remaining) {
-    if (!visited.has(blockId)) dfs(blockId);
+    iterativeDfs(blockId, successors, visited, postorder);
   }
   const remainingOrder = postorder.reverse();
 
