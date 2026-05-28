@@ -1,0 +1,2247 @@
+[
+  [
+    {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 0,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "first_name",
+      "rawValue": "first_name",
+      "position": 8,
+      "lineNumber": 0,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "John",
+      "position": 19,
+      "lineNumber": 0,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 1,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "last_name",
+      "rawValue": "last_name",
+      "position": 8,
+      "lineNumber": 1,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "Smith",
+      "position": 18,
+      "lineNumber": 1,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 2,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "title",
+      "rawValue": "title",
+      "position": 8,
+      "lineNumber": 2,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "Mr",
+      "position": 14,
+      "lineNumber": 2,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 3,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "greeting",
+      "rawValue": "greeting",
+      "position": 8,
+      "lineNumber": 3,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "",
+      "position": 17,
+      "lineNumber": 3,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 4,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "field",
+      "rawValue": "field",
+      "position": 8,
+      "lineNumber": 4,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "first_name",
+      "position": 14,
+      "lineNumber": 4,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Comment",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 6,
+      "position": 0,
+      "value": "single interpolation in set — 2 segments, no grouping needed"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 7,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "greeting",
+      "rawValue": "greeting",
+      "position": 5,
+      "lineNumber": 7,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "Hello ",
+      "position": 15,
+      "lineNumber": 7,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "synthetic": true,
+      "position": 23,
+      "lineNumber": 7,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 23,
+      "lineNumber": 7,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "first_name",
+      "rawValue": "first_name",
+      "position": 23,
+      "lineNumber": 7,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 33,
+      "lineNumber": 7,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Comment",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 9,
+      "position": 0,
+      "value": "two interpolations — 3+ segments, needs synthetic grouping"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 10,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "greeting",
+      "rawValue": "greeting",
+      "position": 5,
+      "lineNumber": 10,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "Hello ",
+      "position": 15,
+      "lineNumber": 10,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "synthetic": true,
+      "position": 23,
+      "lineNumber": 10,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 23,
+      "lineNumber": 10,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "first_name",
+      "rawValue": "first_name",
+      "position": 23,
+      "lineNumber": 10,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 33,
+      "lineNumber": 10,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "synthetic": true,
+      "position": 34,
+      "lineNumber": 10,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": " ",
+      "position": 34,
+      "lineNumber": 10,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "synthetic": true,
+      "position": 37,
+      "lineNumber": 10,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 37,
+      "lineNumber": 10,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "last_name",
+      "rawValue": "last_name",
+      "position": 37,
+      "lineNumber": 10,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 46,
+      "lineNumber": 10,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Comment",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 12,
+      "position": 0,
+      "value": "three interpolations — even more chaining"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 13,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "greeting",
+      "rawValue": "greeting",
+      "position": 5,
+      "lineNumber": 13,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 17,
+      "lineNumber": 13,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "title",
+      "rawValue": "title",
+      "position": 17,
+      "lineNumber": 13,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 22,
+      "lineNumber": 13,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "synthetic": true,
+      "position": 23,
+      "lineNumber": 13,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": " ",
+      "position": 23,
+      "lineNumber": 13,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "synthetic": true,
+      "position": 26,
+      "lineNumber": 13,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 26,
+      "lineNumber": 13,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "first_name",
+      "rawValue": "first_name",
+      "position": 26,
+      "lineNumber": 13,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 36,
+      "lineNumber": 13,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "synthetic": true,
+      "position": 37,
+      "lineNumber": 13,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": " ",
+      "position": 37,
+      "lineNumber": 13,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "synthetic": true,
+      "position": 40,
+      "lineNumber": 13,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 40,
+      "lineNumber": 13,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "last_name",
+      "rawValue": "last_name",
+      "position": 40,
+      "lineNumber": 13,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 49,
+      "lineNumber": 13,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Comment",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 15,
+      "position": 0,
+      "value": "interpolation mixed with surrounding text"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 16,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "greeting",
+      "rawValue": "greeting",
+      "position": 5,
+      "lineNumber": 16,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "Dear ",
+      "position": 15,
+      "lineNumber": 16,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "synthetic": true,
+      "position": 22,
+      "lineNumber": 16,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 22,
+      "lineNumber": 16,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "title",
+      "rawValue": "title",
+      "position": 22,
+      "lineNumber": 16,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 27,
+      "lineNumber": 16,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "synthetic": true,
+      "position": 28,
+      "lineNumber": 16,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": ". ",
+      "position": 28,
+      "lineNumber": 16,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "synthetic": true,
+      "position": 32,
+      "lineNumber": 16,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 32,
+      "lineNumber": 16,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "first_name",
+      "rawValue": "first_name",
+      "position": 32,
+      "lineNumber": 16,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 42,
+      "lineNumber": 16,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "synthetic": true,
+      "position": 43,
+      "lineNumber": 16,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": " ",
+      "position": 43,
+      "lineNumber": 16,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "synthetic": true,
+      "position": 46,
+      "lineNumber": 16,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 46,
+      "lineNumber": 16,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "last_name",
+      "rawValue": "last_name",
+      "position": 46,
+      "lineNumber": 16,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 55,
+      "lineNumber": 16,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "synthetic": true,
+      "position": 56,
+      "lineNumber": 16,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": ", welcome!",
+      "position": 56,
+      "lineNumber": 16,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Comment",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 18,
+      "position": 0,
+      "value": "mixing explicit & with interpolation — valid when properly parenthesised"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 19,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "greeting",
+      "rawValue": "greeting",
+      "position": 5,
+      "lineNumber": 19,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 14,
+      "lineNumber": 19,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "Dear ",
+      "position": 16,
+      "lineNumber": 19,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "synthetic": true,
+      "position": 23,
+      "lineNumber": 19,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 23,
+      "lineNumber": 19,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "title",
+      "rawValue": "title",
+      "position": 23,
+      "lineNumber": 19,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 28,
+      "lineNumber": 19,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "synthetic": true,
+      "position": 29,
+      "lineNumber": 19,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": ". ",
+      "position": 29,
+      "lineNumber": 19,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "synthetic": true,
+      "position": 33,
+      "lineNumber": 19,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 33,
+      "lineNumber": 19,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "first_name",
+      "rawValue": "first_name",
+      "position": 33,
+      "lineNumber": 19,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 43,
+      "lineNumber": 19,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "synthetic": true,
+      "position": 44,
+      "lineNumber": 19,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": " ",
+      "position": 44,
+      "lineNumber": 19,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "synthetic": true,
+      "position": 47,
+      "lineNumber": 19,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 47,
+      "lineNumber": 19,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "last_name",
+      "rawValue": "last_name",
+      "position": 47,
+      "lineNumber": 19,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 56,
+      "lineNumber": 19,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 58,
+      "lineNumber": 19,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "position": 59,
+      "lineNumber": 19,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": ", welcome!",
+      "position": 60,
+      "lineNumber": 19,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Comment",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 21,
+      "position": 0,
+      "value": "explicit chained & with interpolation — error: & is strictly binary"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 22,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "greeting",
+      "rawValue": "greeting",
+      "position": 5,
+      "lineNumber": 22,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "Dear ",
+      "position": 15,
+      "lineNumber": 22,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "synthetic": true,
+      "position": 22,
+      "lineNumber": 22,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 22,
+      "lineNumber": 22,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "title",
+      "rawValue": "title",
+      "position": 22,
+      "lineNumber": 22,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 27,
+      "lineNumber": 22,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "synthetic": true,
+      "position": 28,
+      "lineNumber": 22,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": ". ",
+      "position": 28,
+      "lineNumber": 22,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "synthetic": true,
+      "position": 32,
+      "lineNumber": 22,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 32,
+      "lineNumber": 22,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "first_name",
+      "rawValue": "first_name",
+      "position": 32,
+      "lineNumber": 22,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 42,
+      "lineNumber": 22,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "synthetic": true,
+      "position": 43,
+      "lineNumber": 22,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": " ",
+      "position": 43,
+      "lineNumber": 22,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "synthetic": true,
+      "position": 46,
+      "lineNumber": 22,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 46,
+      "lineNumber": 22,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "last_name",
+      "rawValue": "last_name",
+      "position": 46,
+      "lineNumber": 22,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 55,
+      "lineNumber": 22,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "position": 57,
+      "lineNumber": 22,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": ", welcome!",
+      "position": 58,
+      "lineNumber": 22,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "position": 70,
+      "lineNumber": 22,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": " Enjoy!",
+      "position": 71,
+      "lineNumber": 22,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Comment",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 24,
+      "position": 0,
+      "value": "single explicit & with interpolation — valid binary"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 25,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "greeting",
+      "rawValue": "greeting",
+      "position": 5,
+      "lineNumber": 25,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "Hello ",
+      "position": 15,
+      "lineNumber": 25,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "synthetic": true,
+      "position": 23,
+      "lineNumber": 25,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 23,
+      "lineNumber": 25,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "first_name",
+      "rawValue": "first_name",
+      "position": 23,
+      "lineNumber": 25,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 33,
+      "lineNumber": 25,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "position": 35,
+      "lineNumber": 25,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": " ",
+      "position": 37,
+      "lineNumber": 25,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "synthetic": true,
+      "position": 40,
+      "lineNumber": 25,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 40,
+      "lineNumber": 25,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "last_name",
+      "rawValue": "last_name",
+      "position": 40,
+      "lineNumber": 25,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 49,
+      "lineNumber": 25,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Comment",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 27,
+      "position": 0,
+      "value": "valid binary & inside ${} — parenthesised to satisfy binary rule"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 28,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "greeting",
+      "rawValue": "greeting",
+      "position": 5,
+      "lineNumber": 28,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "Hello ",
+      "position": 15,
+      "lineNumber": 28,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "synthetic": true,
+      "position": 23,
+      "lineNumber": 28,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 23,
+      "lineNumber": 28,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 23,
+      "lineNumber": 28,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "first_name",
+      "rawValue": "first_name",
+      "position": 24,
+      "lineNumber": 28,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "position": 34,
+      "lineNumber": 28,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": " ",
+      "position": 35,
+      "lineNumber": 28,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 38,
+      "lineNumber": 28,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "position": 39,
+      "lineNumber": 28,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "last_name",
+      "rawValue": "last_name",
+      "position": 40,
+      "lineNumber": 28,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 49,
+      "lineNumber": 28,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Comment",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 30,
+      "position": 0,
+      "value": "chained & inside ${} — error: & is strictly binary even inside interpolation"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 31,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "greeting",
+      "rawValue": "greeting",
+      "position": 5,
+      "lineNumber": 31,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "Hello ",
+      "position": 15,
+      "lineNumber": 31,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "synthetic": true,
+      "position": 23,
+      "lineNumber": 31,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 23,
+      "lineNumber": 31,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "first_name",
+      "rawValue": "first_name",
+      "position": 23,
+      "lineNumber": 31,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "position": 33,
+      "lineNumber": 31,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": " ",
+      "position": 34,
+      "lineNumber": 31,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "position": 37,
+      "lineNumber": 31,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "last_name",
+      "rawValue": "last_name",
+      "position": 38,
+      "lineNumber": 31,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 47,
+      "lineNumber": 31,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Comment",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 33,
+      "position": 0,
+      "value": "curly-brace dereference {var} inside ${} with multiple interpolations"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 34,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "greeting",
+      "rawValue": "greeting",
+      "position": 5,
+      "lineNumber": 34,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 17,
+      "lineNumber": 34,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "title",
+      "rawValue": "title",
+      "position": 17,
+      "lineNumber": 34,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 22,
+      "lineNumber": 34,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "synthetic": true,
+      "position": 23,
+      "lineNumber": 34,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": " ",
+      "position": 23,
+      "lineNumber": 34,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "synthetic": true,
+      "position": 26,
+      "lineNumber": 34,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 26,
+      "lineNumber": 34,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenBrace",
+      "position": 26,
+      "lineNumber": 34,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "field",
+      "rawValue": "field",
+      "position": 27,
+      "lineNumber": 34,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "position": 32,
+      "lineNumber": 34,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 33,
+      "lineNumber": 34,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "synthetic": true,
+      "position": 34,
+      "lineNumber": 34,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": " ",
+      "position": 34,
+      "lineNumber": 34,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "synthetic": true,
+      "position": 37,
+      "lineNumber": 34,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 37,
+      "lineNumber": 34,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "last_name",
+      "rawValue": "last_name",
+      "position": 37,
+      "lineNumber": 34,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 46,
+      "lineNumber": 34,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Comment",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 36,
+      "position": 0,
+      "value": "valid binary & inside ${} combined with outer multiple interpolations"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 37,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "greeting",
+      "rawValue": "greeting",
+      "position": 5,
+      "lineNumber": 37,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 17,
+      "lineNumber": 37,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 17,
+      "lineNumber": 37,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "first_name",
+      "rawValue": "first_name",
+      "position": 18,
+      "lineNumber": 37,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "position": 28,
+      "lineNumber": 37,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": " ",
+      "position": 29,
+      "lineNumber": 37,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 32,
+      "lineNumber": 37,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "position": 33,
+      "lineNumber": 37,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "last_name",
+      "rawValue": "last_name",
+      "position": 34,
+      "lineNumber": 37,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 43,
+      "lineNumber": 37,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "synthetic": true,
+      "position": 44,
+      "lineNumber": 37,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": " of ",
+      "position": 44,
+      "lineNumber": 37,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "synthetic": true,
+      "position": 50,
+      "lineNumber": 37,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 50,
+      "lineNumber": 37,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "title",
+      "rawValue": "title",
+      "position": 50,
+      "lineNumber": 37,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 55,
+      "lineNumber": 37,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Comment",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 39,
+      "position": 0,
+      "value": "chained & inside ${} with outer interpolations — error: inner & non-binary"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 40,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "greeting",
+      "rawValue": "greeting",
+      "position": 5,
+      "lineNumber": 40,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 17,
+      "lineNumber": 40,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "first_name",
+      "rawValue": "first_name",
+      "position": 17,
+      "lineNumber": 40,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "position": 27,
+      "lineNumber": 40,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": " ",
+      "position": 28,
+      "lineNumber": 40,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "position": 31,
+      "lineNumber": 40,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "last_name",
+      "rawValue": "last_name",
+      "position": 32,
+      "lineNumber": 40,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 41,
+      "lineNumber": 40,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "synthetic": true,
+      "position": 42,
+      "lineNumber": 40,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": " of ",
+      "position": 42,
+      "lineNumber": 40,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "synthetic": true,
+      "position": 48,
+      "lineNumber": 40,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 48,
+      "lineNumber": 40,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "title",
+      "rawValue": "title",
+      "position": 48,
+      "lineNumber": 40,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 53,
+      "lineNumber": 40,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Comment",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 42,
+      "position": 0,
+      "value": "deeply chained & in ${} — error: multiple violations"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 43,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "greeting",
+      "rawValue": "greeting",
+      "position": 5,
+      "lineNumber": 43,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 17,
+      "lineNumber": 43,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "first_name",
+      "rawValue": "first_name",
+      "position": 17,
+      "lineNumber": 43,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "position": 27,
+      "lineNumber": 43,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": " ",
+      "position": 28,
+      "lineNumber": 43,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "position": 31,
+      "lineNumber": 43,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "last_name",
+      "rawValue": "last_name",
+      "position": 32,
+      "lineNumber": 43,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "position": 41,
+      "lineNumber": 43,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": " ",
+      "position": 42,
+      "lineNumber": 43,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "position": 45,
+      "lineNumber": 43,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "title",
+      "rawValue": "title",
+      "position": 46,
+      "lineNumber": 43,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 51,
+      "lineNumber": 43,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Comment",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 45,
+      "position": 0,
+      "value": "single valid & between two interpolated strings"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 46,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "greeting",
+      "rawValue": "greeting",
+      "position": 5,
+      "lineNumber": 46,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 14,
+      "lineNumber": 46,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 18,
+      "lineNumber": 46,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "first_name",
+      "rawValue": "first_name",
+      "position": 18,
+      "lineNumber": 46,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 28,
+      "lineNumber": 46,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "synthetic": true,
+      "position": 29,
+      "lineNumber": 46,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": " ",
+      "position": 29,
+      "lineNumber": 46,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "synthetic": true,
+      "position": 32,
+      "lineNumber": 46,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 32,
+      "lineNumber": 46,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "last_name",
+      "rawValue": "last_name",
+      "position": 32,
+      "lineNumber": 46,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 41,
+      "lineNumber": 46,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 43,
+      "lineNumber": 46,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "position": 44,
+      "lineNumber": 46,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 45,
+      "lineNumber": 46,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": " ",
+      "position": 47,
+      "lineNumber": 46,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "synthetic": true,
+      "position": 50,
+      "lineNumber": 46,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 50,
+      "lineNumber": 46,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "title",
+      "rawValue": "title",
+      "position": 50,
+      "lineNumber": 46,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 55,
+      "lineNumber": 46,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 57,
+      "lineNumber": 46,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Comment",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 48,
+      "position": 0,
+      "value": "valid & joining interpolation result with explicit concat expression"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 49,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "greeting",
+      "rawValue": "greeting",
+      "position": 5,
+      "lineNumber": 49,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "Hello ",
+      "position": 15,
+      "lineNumber": 49,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "synthetic": true,
+      "position": 23,
+      "lineNumber": 49,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 23,
+      "lineNumber": 49,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "first_name",
+      "rawValue": "first_name",
+      "position": 23,
+      "lineNumber": 49,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 33,
+      "lineNumber": 49,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "position": 35,
+      "lineNumber": 49,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 36,
+      "lineNumber": 49,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 37,
+      "lineNumber": 49,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 38,
+      "lineNumber": 49,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 39,
+      "lineNumber": 49,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": " ",
+      "position": 40,
+      "lineNumber": 49,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 43,
+      "lineNumber": 49,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "position": 44,
+      "lineNumber": 49,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "last_name",
+      "rawValue": "last_name",
+      "position": 45,
+      "lineNumber": 49,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 54,
+      "lineNumber": 49,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "position": 55,
+      "lineNumber": 49,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": " ",
+      "position": 56,
+      "lineNumber": 49,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 59,
+      "lineNumber": 49,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "ConcatenationOperator",
+      "rawValue": "&",
+      "position": 60,
+      "lineNumber": 49,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "title",
+      "rawValue": "title",
+      "position": 61,
+      "lineNumber": 49,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 66,
+      "lineNumber": 49,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "lineNumber": 52,
+      "indent": 0,
+      "position": 0,
+      "sceneName": "startup",
+      "type": "SceneEnd"
+    }
+  ]
+]

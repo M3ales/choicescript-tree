@@ -252,6 +252,7 @@ export function tokenizeExpressionString(
             tokens.push(<ArithmeticOperatorToken>{
               type: "ConcatenationOperator",
               rawValue: "&",
+              synthetic: true,
               ...baseAt(seg.pos),
             });
           }

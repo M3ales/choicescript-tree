@@ -1,0 +1,52 @@
+*create first_name "John"
+*create last_name "Smith"
+*create title "Mr"
+*create greeting ""
+*create field "first_name"
+
+*comment single interpolation in set — 2 segments, no grouping needed
+*set greeting "Hello ${first_name}"
+
+*comment two interpolations — 3+ segments, needs synthetic grouping
+*set greeting "Hello ${first_name} ${last_name}"
+
+*comment three interpolations — even more chaining
+*set greeting "${title} ${first_name} ${last_name}"
+
+*comment interpolation mixed with surrounding text
+*set greeting "Dear ${title}. ${first_name} ${last_name}, welcome!"
+
+*comment mixing explicit & with interpolation — valid when properly parenthesised
+*set greeting ("Dear ${title}. ${first_name} ${last_name}")&", welcome!"
+
+*comment explicit chained & with interpolation — error: & is strictly binary
+*set greeting "Dear ${title}. ${first_name} ${last_name}"&", welcome!"&" Enjoy!"
+
+*comment single explicit & with interpolation — valid binary
+*set greeting "Hello ${first_name}"&" ${last_name}"
+
+*comment valid binary & inside ${} — parenthesised to satisfy binary rule
+*set greeting "Hello ${(first_name&" ")&last_name}"
+
+*comment chained & inside ${} — error: & is strictly binary even inside interpolation
+*set greeting "Hello ${first_name&" "&last_name}"
+
+*comment curly-brace dereference {var} inside ${} with multiple interpolations
+*set greeting "${title} ${{field}} ${last_name}"
+
+*comment valid binary & inside ${} combined with outer multiple interpolations
+*set greeting "${(first_name&" ")&last_name} of ${title}"
+
+*comment chained & inside ${} with outer interpolations — error: inner & non-binary
+*set greeting "${first_name&" "&last_name} of ${title}"
+
+*comment deeply chained & in ${} — error: multiple violations
+*set greeting "${first_name&" "&last_name&" "&title}"
+
+*comment single valid & between two interpolated strings
+*set greeting ("${first_name} ${last_name}")&(" ${title}")
+
+*comment valid & joining interpolation result with explicit concat expression
+*set greeting "Hello ${first_name}"&((((" ")&last_name)&" ")&title)
+
+${greeting}!

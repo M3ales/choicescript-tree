@@ -349,10 +349,10 @@ export class Parser {
       ])
     ) {
       const operator: Token = this.previous();
-      if (operator.type === "ConcatenationOperator" && inConcat) {
+      if (operator.type === "ConcatenationOperator" && inConcat && !(operator as any).synthetic) {
         this.error(operator, "Concatenation (&) is strictly binary — use parentheses to group multiple concatenations");
       }
-      const isConcat = operator.type === "ConcatenationOperator";
+      const isConcat = operator.type === "ConcatenationOperator" && !(operator as any).synthetic;
       const right = this.term(isConcat);
       expr = <Binary>{ kind: "Binary", left: expr, operator: operator, right: right };
     }
