@@ -349,6 +349,10 @@ export const scanScene = (scene: Scene, knownLabels: string[], knownSceneNames: 
                     context.position = line.length;
                     break;
                 }
+                case "SceneList": {
+                    context.position = line.length;
+                    break;
+                }
                 case "Image": {
                     const imageTokens = handleImage(context);
                     // console.log('Image', imageTokens)
@@ -499,10 +503,12 @@ const handleCommand = (context: ScannerContext) => {
             break;
         }
         case '*create': {
+            if(context.currentLine[context.position+1] === '_') break;
             context.mode = "Expression";
             return createInContextToken(<CreateVariableToken>{type: 'CreateVariable'});
         }
         case '*temp': {
+            if(context.currentLine[context.position+1] === '_') break;
             context.mode = "Expression";
             return createInContextToken(<CreateTempVariableToken>{type: 'CreateTempVariable'});
         }
@@ -601,6 +607,7 @@ const handleCommand = (context: ScannerContext) => {
             return createInContextToken(<RestoreCheckpointToken>{type: 'RestoreCheckpoint'});
         }
         case "*delete": {
+            if(context.currentLine[context.position+1] === '_') break;
             context.mode = "Expression";
             return createInContextToken(<DeleteVariableToken>{type: 'DeleteVariable'});
         }
