@@ -7,7 +7,7 @@
           "type": "Label",
           "sceneName": "startup",
           "indent": 0,
-          "lineNumber": 23,
+          "lineNumber": 28,
           "position": 0
         },
         "label": {
@@ -15,7 +15,7 @@
           "value": "search_loop",
           "rawValue": "search_loop",
           "position": 6,
-          "lineNumber": 23,
+          "lineNumber": 28,
           "sceneName": "startup",
           "indent": 0,
           "isLabelName": true
@@ -27,7 +27,7 @@
           "type": "Label",
           "sceneName": "startup",
           "indent": 0,
-          "lineNumber": 30,
+          "lineNumber": 35,
           "position": 0
         },
         "label": {
@@ -35,7 +35,7 @@
           "value": "search_done",
           "rawValue": "search_done",
           "position": 6,
-          "lineNumber": 30,
+          "lineNumber": 35,
           "sceneName": "startup",
           "indent": 0,
           "isLabelName": true
@@ -228,6 +228,254 @@
           "lineNumber": 5,
           "position": 0
         }
+      },
+      "stats_1": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "stats_1",
+          "rawValue": "stats",
+          "position": 14,
+          "lineNumber": 8,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 0,
+            "position": 22,
+            "lineNumber": 8,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateArray",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 8,
+          "position": 0
+        }
+      },
+      "stats_2": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "stats_2",
+          "rawValue": "stats",
+          "position": 14,
+          "lineNumber": 8,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 0,
+            "position": 22,
+            "lineNumber": 8,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateArray",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 8,
+          "position": 0
+        }
+      },
+      "stats_3": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "stats_3",
+          "rawValue": "stats",
+          "position": 14,
+          "lineNumber": 8,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 0,
+            "position": 22,
+            "lineNumber": 8,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateArray",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 8,
+          "position": 0
+        }
+      },
+      "stats_4": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "stats_4",
+          "rawValue": "stats",
+          "position": 14,
+          "lineNumber": 8,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 0,
+            "position": 22,
+            "lineNumber": 8,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateArray",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 8,
+          "position": 0
+        }
+      },
+      "stats_5": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "stats_5",
+          "rawValue": "stats",
+          "position": 14,
+          "lineNumber": 8,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 0,
+            "position": 22,
+            "lineNumber": 8,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateArray",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 8,
+          "position": 0
+        }
+      },
+      "colors_1": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "colors_1",
+          "rawValue": "colors",
+          "position": 14,
+          "lineNumber": 10,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "StringLiteral",
+            "value": "red",
+            "position": 23,
+            "lineNumber": 10,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateArray",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 10,
+          "position": 0
+        }
+      },
+      "colors_2": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "colors_2",
+          "rawValue": "colors",
+          "position": 14,
+          "lineNumber": 10,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "StringLiteral",
+            "value": "red",
+            "position": 23,
+            "lineNumber": 10,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateArray",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 10,
+          "position": 0
+        }
+      },
+      "colors_3": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "colors_3",
+          "rawValue": "colors",
+          "position": 14,
+          "lineNumber": 10,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "StringLiteral",
+            "value": "red",
+            "position": 23,
+            "lineNumber": 10,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateArray",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 10,
+          "position": 0
+        }
       }
     },
     "tempVariables": {
@@ -238,7 +486,7 @@
           "value": "idx",
           "rawValue": "idx",
           "position": 6,
-          "lineNumber": 22,
+          "lineNumber": 27,
           "sceneName": "startup",
           "indent": 0
         },
@@ -248,7 +496,7 @@
             "type": "NumberLiteral",
             "value": 1,
             "position": 10,
-            "lineNumber": 22,
+            "lineNumber": 27,
             "sceneName": "startup",
             "indent": 0
           }
@@ -258,7 +506,255 @@
           "type": "CreateTempVariable",
           "sceneName": "startup",
           "indent": 0,
-          "lineNumber": 22,
+          "lineNumber": 27,
+          "position": 0
+        }
+      },
+      "si": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "si",
+          "rawValue": "si",
+          "position": 6,
+          "lineNumber": 41,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 3,
+            "position": 9,
+            "lineNumber": 41,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Temporary",
+        "token": {
+          "type": "CreateTempVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 41,
+          "position": 0
+        }
+      },
+      "scores_1": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "scores_1",
+          "rawValue": "scores",
+          "position": 12,
+          "lineNumber": 50,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 0,
+            "position": 21,
+            "lineNumber": 50,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Temporary",
+        "token": {
+          "type": "CreateTempArray",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 50,
+          "position": 0
+        }
+      },
+      "scores_2": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "scores_2",
+          "rawValue": "scores",
+          "position": 12,
+          "lineNumber": 50,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 0,
+            "position": 21,
+            "lineNumber": 50,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Temporary",
+        "token": {
+          "type": "CreateTempArray",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 50,
+          "position": 0
+        }
+      },
+      "scores_3": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "scores_3",
+          "rawValue": "scores",
+          "position": 12,
+          "lineNumber": 50,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 0,
+            "position": 21,
+            "lineNumber": 50,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Temporary",
+        "token": {
+          "type": "CreateTempArray",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 50,
+          "position": 0
+        }
+      },
+      "scores_4": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "scores_4",
+          "rawValue": "scores",
+          "position": 12,
+          "lineNumber": 50,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 0,
+            "position": 21,
+            "lineNumber": 50,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Temporary",
+        "token": {
+          "type": "CreateTempArray",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 50,
+          "position": 0
+        }
+      },
+      "ti": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "ti",
+          "rawValue": "ti",
+          "position": 6,
+          "lineNumber": 53,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 3,
+            "position": 9,
+            "lineNumber": 53,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Temporary",
+        "token": {
+          "type": "CreateTempVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 53,
+          "position": 0
+        }
+      },
+      "labels_1": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "labels_1",
+          "rawValue": "labels",
+          "position": 12,
+          "lineNumber": 58,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "StringLiteral",
+            "value": "none",
+            "position": 21,
+            "lineNumber": 58,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Temporary",
+        "token": {
+          "type": "CreateTempArray",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 58,
+          "position": 0
+        }
+      },
+      "labels_2": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "labels_2",
+          "rawValue": "labels",
+          "position": 12,
+          "lineNumber": 58,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "StringLiteral",
+            "value": "none",
+            "position": 21,
+            "lineNumber": 58,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Temporary",
+        "token": {
+          "type": "CreateTempArray",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 58,
           "position": 0
         }
       },
@@ -269,7 +765,7 @@
           "value": "slot",
           "rawValue": "slot",
           "position": 6,
-          "lineNumber": 34,
+          "lineNumber": 68,
           "sceneName": "startup",
           "indent": 0
         },
@@ -279,7 +775,7 @@
             "type": "NumberLiteral",
             "value": 3,
             "position": 11,
-            "lineNumber": 34,
+            "lineNumber": 68,
             "sceneName": "startup",
             "indent": 0
           }
@@ -289,7 +785,7 @@
           "type": "CreateTempVariable",
           "sceneName": "startup",
           "indent": 0,
-          "lineNumber": 34,
+          "lineNumber": 68,
           "position": 0
         }
       }
@@ -303,7 +799,7 @@
           "type": "GotoLabel",
           "sceneName": "startup",
           "indent": 2,
-          "lineNumber": 27,
+          "lineNumber": 32,
           "position": 4
         },
         "label": {
@@ -311,7 +807,7 @@
           "value": "search_done",
           "rawValue": "search_done",
           "position": 10,
-          "lineNumber": 27,
+          "lineNumber": 32,
           "sceneName": "startup",
           "indent": 2,
           "isLabelName": true
@@ -323,7 +819,7 @@
           "type": "GotoLabel",
           "sceneName": "startup",
           "indent": 1,
-          "lineNumber": 29,
+          "lineNumber": 34,
           "position": 2
         },
         "label": {
@@ -331,7 +827,7 @@
           "value": "search_loop",
           "rawValue": "search_loop",
           "position": 8,
-          "lineNumber": 29,
+          "lineNumber": 34,
           "sceneName": "startup",
           "indent": 1,
           "isLabelName": true

@@ -1,0 +1,122 @@
+[
+  {
+    "sceneName": "chapter1",
+    "blocks": {
+      "chapter1:b_0": {
+        "exitType": "Finish"
+      },
+      "chapter1:b_1": {
+        "exitType": "FallThrough"
+      }
+    },
+    "blockIndex": {
+      "chapter1:b_0": {
+        "scene": "chapter1",
+        "statementIds": [
+          "chapter1:0",
+          "chapter1:1"
+        ],
+        "entryType": "SceneEntry",
+        "exitType": "Finish"
+      },
+      "chapter1:b_1": {
+        "scene": "chapter1",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      }
+    },
+    "edges": [
+      {
+        "kind": "SceneExit",
+        "sourceBlockId": "chapter1:b_0",
+        "targetBlockId": null,
+        "metadata": {}
+      }
+    ],
+    "entryBlockId": "chapter1:b_0",
+    "labelToBlockId": {},
+    "unresolvedEdges": []
+  },
+  {
+    "sceneName": "chapter2",
+    "blocks": {
+      "chapter2:b_0": {
+        "exitType": "Finish"
+      },
+      "chapter2:b_1": {
+        "exitType": "FallThrough"
+      }
+    },
+    "blockIndex": {
+      "chapter2:b_0": {
+        "scene": "chapter2",
+        "statementIds": [
+          "chapter2:0",
+          "chapter2:1"
+        ],
+        "entryType": "SceneEntry",
+        "exitType": "Finish"
+      },
+      "chapter2:b_1": {
+        "scene": "chapter2",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      }
+    },
+    "edges": [
+      {
+        "kind": "SceneExit",
+        "sourceBlockId": "chapter2:b_0",
+        "targetBlockId": null,
+        "metadata": {}
+      }
+    ],
+    "entryBlockId": "chapter2:b_0",
+    "labelToBlockId": {},
+    "unresolvedEdges": []
+  },
+  {
+    "sceneName": "startup",
+    "blocks": {
+      "startup:b_0": {
+        "exitType": "Finish"
+      },
+      "startup:b_1": {
+        "exitType": "FallThrough"
+      }
+    },
+    "blockIndex": {
+      "startup:b_0": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:0",
+          "startup:1",
+          "startup:2",
+          "startup:3",
+          "startup:4"
+        ],
+        "entryType": "SceneEntry",
+        "exitType": "Finish"
+      },
+      "startup:b_1": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      }
+    },
+    "edges": [
+      {
+        "kind": "SceneExit",
+        "sourceBlockId": "startup:b_0",
+        "targetBlockId": null,
+        "metadata": {}
+      }
+    ],
+    "entryBlockId": "startup:b_0",
+    "labelToBlockId": {},
+    "unresolvedEdges": []
+  }
+]

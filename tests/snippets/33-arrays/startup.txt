@@ -59,6 +59,8 @@ Scores: ${scores_1}, ${scores_2}, ${scores[ti]}, ${scores_4}
 *temp_array labels 2 "none"
 *set labels_1 "alpha"
 *set labels_2 "beta"
+*set labels_3 "hello"
+
 Labels: ${labels_1}, ${labels_2}
 
 *comment delete_array usage

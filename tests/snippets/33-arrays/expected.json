@@ -193,32 +193,302 @@
         "kind": "Comment"
       },
       {
-        "kind": "Error",
+        "kind": "DeclareArray",
         "token": {
-          "type": "NumberLiteral",
-          "value": 5,
-          "position": 20,
+          "type": "CreateArray",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 8,
+          "position": 0
+        },
+        "variable": {
+          "type": "Identifier",
+          "value": "stats",
+          "rawValue": "stats",
+          "position": 14,
           "lineNumber": 8,
           "sceneName": "startup",
           "indent": 0
         },
-        "message": "Expected end of statement, found NumberLiteral instead at 8:20 at 'NumberLiteral' startup:8:20[Indent 0, Id: 23]"
+        "count": 5,
+        "declarations": [
+          {
+            "kind": "DeclareVariable",
+            "variable": {
+              "type": "Identifier",
+              "value": "stats_1",
+              "rawValue": "stats",
+              "position": 14,
+              "lineNumber": 8,
+              "sceneName": "startup",
+              "indent": 0
+            },
+            "expression": {
+              "kind": "Literal",
+              "value": {
+                "type": "NumberLiteral",
+                "value": 0,
+                "position": 22,
+                "lineNumber": 8,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "scope": "Global",
+            "token": {
+              "type": "CreateArray",
+              "sceneName": "startup",
+              "indent": 0,
+              "lineNumber": 8,
+              "position": 0
+            }
+          },
+          {
+            "kind": "DeclareVariable",
+            "variable": {
+              "type": "Identifier",
+              "value": "stats_2",
+              "rawValue": "stats",
+              "position": 14,
+              "lineNumber": 8,
+              "sceneName": "startup",
+              "indent": 0
+            },
+            "expression": {
+              "kind": "Literal",
+              "value": {
+                "type": "NumberLiteral",
+                "value": 0,
+                "position": 22,
+                "lineNumber": 8,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "scope": "Global",
+            "token": {
+              "type": "CreateArray",
+              "sceneName": "startup",
+              "indent": 0,
+              "lineNumber": 8,
+              "position": 0
+            }
+          },
+          {
+            "kind": "DeclareVariable",
+            "variable": {
+              "type": "Identifier",
+              "value": "stats_3",
+              "rawValue": "stats",
+              "position": 14,
+              "lineNumber": 8,
+              "sceneName": "startup",
+              "indent": 0
+            },
+            "expression": {
+              "kind": "Literal",
+              "value": {
+                "type": "NumberLiteral",
+                "value": 0,
+                "position": 22,
+                "lineNumber": 8,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "scope": "Global",
+            "token": {
+              "type": "CreateArray",
+              "sceneName": "startup",
+              "indent": 0,
+              "lineNumber": 8,
+              "position": 0
+            }
+          },
+          {
+            "kind": "DeclareVariable",
+            "variable": {
+              "type": "Identifier",
+              "value": "stats_4",
+              "rawValue": "stats",
+              "position": 14,
+              "lineNumber": 8,
+              "sceneName": "startup",
+              "indent": 0
+            },
+            "expression": {
+              "kind": "Literal",
+              "value": {
+                "type": "NumberLiteral",
+                "value": 0,
+                "position": 22,
+                "lineNumber": 8,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "scope": "Global",
+            "token": {
+              "type": "CreateArray",
+              "sceneName": "startup",
+              "indent": 0,
+              "lineNumber": 8,
+              "position": 0
+            }
+          },
+          {
+            "kind": "DeclareVariable",
+            "variable": {
+              "type": "Identifier",
+              "value": "stats_5",
+              "rawValue": "stats",
+              "position": 14,
+              "lineNumber": 8,
+              "sceneName": "startup",
+              "indent": 0
+            },
+            "expression": {
+              "kind": "Literal",
+              "value": {
+                "type": "NumberLiteral",
+                "value": 0,
+                "position": 22,
+                "lineNumber": 8,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "scope": "Global",
+            "token": {
+              "type": "CreateArray",
+              "sceneName": "startup",
+              "indent": 0,
+              "lineNumber": 8,
+              "position": 0
+            }
+          }
+        ],
+        "scope": "Global"
       },
       {
         "content": [],
         "kind": "Comment"
       },
       {
-        "kind": "Error",
+        "kind": "DeclareArray",
         "token": {
-          "type": "NumberLiteral",
-          "value": 3,
-          "position": 21,
+          "type": "CreateArray",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 10,
+          "position": 0
+        },
+        "variable": {
+          "type": "Identifier",
+          "value": "colors",
+          "rawValue": "colors",
+          "position": 14,
           "lineNumber": 10,
           "sceneName": "startup",
           "indent": 0
         },
-        "message": "Expected end of statement, found NumberLiteral instead at 10:21 at 'NumberLiteral' startup:10:21[Indent 0, Id: 29]"
+        "count": 3,
+        "declarations": [
+          {
+            "kind": "DeclareVariable",
+            "variable": {
+              "type": "Identifier",
+              "value": "colors_1",
+              "rawValue": "colors",
+              "position": 14,
+              "lineNumber": 10,
+              "sceneName": "startup",
+              "indent": 0
+            },
+            "expression": {
+              "kind": "Literal",
+              "value": {
+                "type": "StringLiteral",
+                "value": "red",
+                "position": 23,
+                "lineNumber": 10,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "scope": "Global",
+            "token": {
+              "type": "CreateArray",
+              "sceneName": "startup",
+              "indent": 0,
+              "lineNumber": 10,
+              "position": 0
+            }
+          },
+          {
+            "kind": "DeclareVariable",
+            "variable": {
+              "type": "Identifier",
+              "value": "colors_2",
+              "rawValue": "colors",
+              "position": 14,
+              "lineNumber": 10,
+              "sceneName": "startup",
+              "indent": 0
+            },
+            "expression": {
+              "kind": "Literal",
+              "value": {
+                "type": "StringLiteral",
+                "value": "red",
+                "position": 23,
+                "lineNumber": 10,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "scope": "Global",
+            "token": {
+              "type": "CreateArray",
+              "sceneName": "startup",
+              "indent": 0,
+              "lineNumber": 10,
+              "position": 0
+            }
+          },
+          {
+            "kind": "DeclareVariable",
+            "variable": {
+              "type": "Identifier",
+              "value": "colors_3",
+              "rawValue": "colors",
+              "position": 14,
+              "lineNumber": 10,
+              "sceneName": "startup",
+              "indent": 0
+            },
+            "expression": {
+              "kind": "Literal",
+              "value": {
+                "type": "StringLiteral",
+                "value": "red",
+                "position": 23,
+                "lineNumber": 10,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "scope": "Global",
+            "token": {
+              "type": "CreateArray",
+              "sceneName": "startup",
+              "indent": 0,
+              "lineNumber": 10,
+              "position": 0
+            }
+          }
+        ],
+        "scope": "Global"
       },
       {
         "content": [
@@ -1535,16 +1805,151 @@
         "kind": "Comment"
       },
       {
-        "kind": "Error",
+        "kind": "DeclareArray",
         "token": {
-          "type": "NumberLiteral",
-          "value": 4,
-          "position": 19,
+          "type": "CreateTempArray",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 50,
+          "position": 0
+        },
+        "variable": {
+          "type": "Identifier",
+          "value": "scores",
+          "rawValue": "scores",
+          "position": 12,
           "lineNumber": 50,
           "sceneName": "startup",
           "indent": 0
         },
-        "message": "Expected end of statement, found NumberLiteral instead at 50:19 at 'NumberLiteral' startup:50:19[Indent 0, Id: 178]"
+        "count": 4,
+        "declarations": [
+          {
+            "kind": "DeclareVariable",
+            "variable": {
+              "type": "Identifier",
+              "value": "scores_1",
+              "rawValue": "scores",
+              "position": 12,
+              "lineNumber": 50,
+              "sceneName": "startup",
+              "indent": 0
+            },
+            "expression": {
+              "kind": "Literal",
+              "value": {
+                "type": "NumberLiteral",
+                "value": 0,
+                "position": 21,
+                "lineNumber": 50,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "scope": "Temporary",
+            "token": {
+              "type": "CreateTempArray",
+              "sceneName": "startup",
+              "indent": 0,
+              "lineNumber": 50,
+              "position": 0
+            }
+          },
+          {
+            "kind": "DeclareVariable",
+            "variable": {
+              "type": "Identifier",
+              "value": "scores_2",
+              "rawValue": "scores",
+              "position": 12,
+              "lineNumber": 50,
+              "sceneName": "startup",
+              "indent": 0
+            },
+            "expression": {
+              "kind": "Literal",
+              "value": {
+                "type": "NumberLiteral",
+                "value": 0,
+                "position": 21,
+                "lineNumber": 50,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "scope": "Temporary",
+            "token": {
+              "type": "CreateTempArray",
+              "sceneName": "startup",
+              "indent": 0,
+              "lineNumber": 50,
+              "position": 0
+            }
+          },
+          {
+            "kind": "DeclareVariable",
+            "variable": {
+              "type": "Identifier",
+              "value": "scores_3",
+              "rawValue": "scores",
+              "position": 12,
+              "lineNumber": 50,
+              "sceneName": "startup",
+              "indent": 0
+            },
+            "expression": {
+              "kind": "Literal",
+              "value": {
+                "type": "NumberLiteral",
+                "value": 0,
+                "position": 21,
+                "lineNumber": 50,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "scope": "Temporary",
+            "token": {
+              "type": "CreateTempArray",
+              "sceneName": "startup",
+              "indent": 0,
+              "lineNumber": 50,
+              "position": 0
+            }
+          },
+          {
+            "kind": "DeclareVariable",
+            "variable": {
+              "type": "Identifier",
+              "value": "scores_4",
+              "rawValue": "scores",
+              "position": 12,
+              "lineNumber": 50,
+              "sceneName": "startup",
+              "indent": 0
+            },
+            "expression": {
+              "kind": "Literal",
+              "value": {
+                "type": "NumberLiteral",
+                "value": 0,
+                "position": 21,
+                "lineNumber": 50,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "scope": "Temporary",
+            "token": {
+              "type": "CreateTempArray",
+              "sceneName": "startup",
+              "indent": 0,
+              "lineNumber": 50,
+              "position": 0
+            }
+          }
+        ],
+        "scope": "Temporary"
       },
       {
         "kind": "SetVariable",
@@ -1897,16 +2302,89 @@
         ]
       },
       {
-        "kind": "Error",
+        "kind": "DeclareArray",
         "token": {
-          "type": "NumberLiteral",
-          "value": 2,
-          "position": 19,
+          "type": "CreateTempArray",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 58,
+          "position": 0
+        },
+        "variable": {
+          "type": "Identifier",
+          "value": "labels",
+          "rawValue": "labels",
+          "position": 12,
           "lineNumber": 58,
           "sceneName": "startup",
           "indent": 0
         },
-        "message": "Expected end of statement, found NumberLiteral instead at 58:19 at 'NumberLiteral' startup:58:19[Indent 0, Id: 221]"
+        "count": 2,
+        "declarations": [
+          {
+            "kind": "DeclareVariable",
+            "variable": {
+              "type": "Identifier",
+              "value": "labels_1",
+              "rawValue": "labels",
+              "position": 12,
+              "lineNumber": 58,
+              "sceneName": "startup",
+              "indent": 0
+            },
+            "expression": {
+              "kind": "Literal",
+              "value": {
+                "type": "StringLiteral",
+                "value": "none",
+                "position": 21,
+                "lineNumber": 58,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "scope": "Temporary",
+            "token": {
+              "type": "CreateTempArray",
+              "sceneName": "startup",
+              "indent": 0,
+              "lineNumber": 58,
+              "position": 0
+            }
+          },
+          {
+            "kind": "DeclareVariable",
+            "variable": {
+              "type": "Identifier",
+              "value": "labels_2",
+              "rawValue": "labels",
+              "position": 12,
+              "lineNumber": 58,
+              "sceneName": "startup",
+              "indent": 0
+            },
+            "expression": {
+              "kind": "Literal",
+              "value": {
+                "type": "StringLiteral",
+                "value": "none",
+                "position": 21,
+                "lineNumber": 58,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "scope": "Temporary",
+            "token": {
+              "type": "CreateTempArray",
+              "sceneName": "startup",
+              "indent": 0,
+              "lineNumber": 58,
+              "position": 0
+            }
+          }
+        ],
+        "scope": "Temporary"
       },
       {
         "kind": "SetVariable",
@@ -2072,8 +2550,15 @@
         "kind": "Comment"
       },
       {
-        "kind": "Error",
+        "kind": "DeleteArray",
         "token": {
+          "type": "DeleteArray",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 64,
+          "position": 0
+        },
+        "variable": {
           "type": "Identifier",
           "value": "scores",
           "rawValue": "scores",
@@ -2081,8 +2566,26 @@
           "lineNumber": 64,
           "sceneName": "startup",
           "indent": 0
+        }
+      },
+      {
+        "kind": "DeleteArray",
+        "token": {
+          "type": "DeleteArray",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 65,
+          "position": 0
         },
-        "message": "Expected end of statement, found Identifier instead at 64:14 at 'Identifier' startup:64:14[Indent 0, Id: 241]"
+        "variable": {
+          "type": "Identifier",
+          "value": "labels",
+          "rawValue": "labels",
+          "position": 14,
+          "lineNumber": 65,
+          "sceneName": "startup",
+          "indent": 0
+        }
       },
       {
         "content": [],
@@ -2165,174 +2668,7 @@
         }
       }
     ],
-    "parseErrors": [
-      {
-        "token": {
-          "type": "NumberLiteral",
-          "value": 5,
-          "position": 20,
-          "lineNumber": 8,
-          "sceneName": "startup",
-          "indent": 0
-        },
-        "message": "Expected end of statement, found NumberLiteral instead at 8:20 at 'NumberLiteral' startup:8:20[Indent 0, Id: 23]",
-        "context": [
-          {
-            "kind": "Scene 'startup'",
-            "token": {
-              "sceneName": "startup",
-              "lineNumber": 0,
-              "position": 0,
-              "indent": 0,
-              "type": "SceneStart"
-            }
-          },
-          {
-            "kind": "CreateVariable",
-            "token": {
-              "type": "CreateVariable",
-              "sceneName": "startup",
-              "indent": 0,
-              "lineNumber": 8,
-              "position": 0
-            }
-          }
-        ]
-      },
-      {
-        "token": {
-          "type": "NumberLiteral",
-          "value": 3,
-          "position": 21,
-          "lineNumber": 10,
-          "sceneName": "startup",
-          "indent": 0
-        },
-        "message": "Expected end of statement, found NumberLiteral instead at 10:21 at 'NumberLiteral' startup:10:21[Indent 0, Id: 29]",
-        "context": [
-          {
-            "kind": "Scene 'startup'",
-            "token": {
-              "sceneName": "startup",
-              "lineNumber": 0,
-              "position": 0,
-              "indent": 0,
-              "type": "SceneStart"
-            }
-          },
-          {
-            "kind": "CreateVariable",
-            "token": {
-              "type": "CreateVariable",
-              "sceneName": "startup",
-              "indent": 0,
-              "lineNumber": 10,
-              "position": 0
-            }
-          }
-        ]
-      },
-      {
-        "token": {
-          "type": "NumberLiteral",
-          "value": 4,
-          "position": 19,
-          "lineNumber": 50,
-          "sceneName": "startup",
-          "indent": 0
-        },
-        "message": "Expected end of statement, found NumberLiteral instead at 50:19 at 'NumberLiteral' startup:50:19[Indent 0, Id: 178]",
-        "context": [
-          {
-            "kind": "Scene 'startup'",
-            "token": {
-              "sceneName": "startup",
-              "lineNumber": 0,
-              "position": 0,
-              "indent": 0,
-              "type": "SceneStart"
-            }
-          },
-          {
-            "kind": "CreateTempVariable",
-            "token": {
-              "type": "CreateTempVariable",
-              "sceneName": "startup",
-              "indent": 0,
-              "lineNumber": 50,
-              "position": 0
-            }
-          }
-        ]
-      },
-      {
-        "token": {
-          "type": "NumberLiteral",
-          "value": 2,
-          "position": 19,
-          "lineNumber": 58,
-          "sceneName": "startup",
-          "indent": 0
-        },
-        "message": "Expected end of statement, found NumberLiteral instead at 58:19 at 'NumberLiteral' startup:58:19[Indent 0, Id: 221]",
-        "context": [
-          {
-            "kind": "Scene 'startup'",
-            "token": {
-              "sceneName": "startup",
-              "lineNumber": 0,
-              "position": 0,
-              "indent": 0,
-              "type": "SceneStart"
-            }
-          },
-          {
-            "kind": "CreateTempVariable",
-            "token": {
-              "type": "CreateTempVariable",
-              "sceneName": "startup",
-              "indent": 0,
-              "lineNumber": 58,
-              "position": 0
-            }
-          }
-        ]
-      },
-      {
-        "token": {
-          "type": "Identifier",
-          "value": "scores",
-          "rawValue": "scores",
-          "position": 14,
-          "lineNumber": 64,
-          "sceneName": "startup",
-          "indent": 0
-        },
-        "message": "Expected end of statement, found Identifier instead at 64:14 at 'Identifier' startup:64:14[Indent 0, Id: 241]",
-        "context": [
-          {
-            "kind": "Scene 'startup'",
-            "token": {
-              "sceneName": "startup",
-              "lineNumber": 0,
-              "position": 0,
-              "indent": 0,
-              "type": "SceneStart"
-            }
-          },
-          {
-            "kind": "DeleteVariable",
-            "token": {
-              "type": "DeleteVariable",
-              "sceneName": "startup",
-              "indent": 0,
-              "lineNumber": 64,
-              "position": 0
-            }
-          }
-        ]
-      }
-    ],
+    "parseErrors": [],
     "start": {
       "sceneName": "startup",
       "lineNumber": 0,

@@ -160,20 +160,11 @@
       "value": "create_array with numeric default"
     },
     {
-      "type": "CreateVariable",
+      "type": "CreateArray",
       "sceneName": "startup",
       "indent": 0,
       "lineNumber": 8,
       "position": 0
-    },
-    {
-      "type": "Identifier",
-      "value": "_array",
-      "rawValue": "_array",
-      "position": 7,
-      "lineNumber": 8,
-      "sceneName": "startup",
-      "indent": 0
     },
     {
       "type": "Identifier",
@@ -209,20 +200,11 @@
       "value": "create_array with string default"
     },
     {
-      "type": "CreateVariable",
+      "type": "CreateArray",
       "sceneName": "startup",
       "indent": 0,
       "lineNumber": 10,
       "position": 0
-    },
-    {
-      "type": "Identifier",
-      "value": "_array",
-      "rawValue": "_array",
-      "position": 7,
-      "lineNumber": 10,
-      "sceneName": "startup",
-      "indent": 0
     },
     {
       "type": "Identifier",
@@ -1381,20 +1363,11 @@
       "value": "temp_array usage"
     },
     {
-      "type": "CreateTempVariable",
+      "type": "CreateTempArray",
       "sceneName": "startup",
       "indent": 0,
       "lineNumber": 50,
       "position": 0
-    },
-    {
-      "type": "Identifier",
-      "value": "_array",
-      "rawValue": "_array",
-      "position": 5,
-      "lineNumber": 50,
-      "sceneName": "startup",
-      "indent": 0
     },
     {
       "type": "Identifier",
@@ -1720,20 +1693,11 @@
       "content": "\n\n"
     },
     {
-      "type": "CreateTempVariable",
+      "type": "CreateTempArray",
       "sceneName": "startup",
       "indent": 0,
       "lineNumber": 58,
       "position": 0
-    },
-    {
-      "type": "Identifier",
-      "value": "_array",
-      "rawValue": "_array",
-      "position": 5,
-      "lineNumber": 58,
-      "sceneName": "startup",
-      "indent": 0
     },
     {
       "type": "Identifier",
@@ -1887,20 +1851,11 @@
       "value": "delete_array usage"
     },
     {
-      "type": "DeleteVariable",
+      "type": "DeleteArray",
       "sceneName": "startup",
       "indent": 0,
       "lineNumber": 64,
       "position": 0
-    },
-    {
-      "type": "Identifier",
-      "value": "_array",
-      "rawValue": "_array",
-      "position": 7,
-      "lineNumber": 64,
-      "sceneName": "startup",
-      "indent": 0
     },
     {
       "type": "Identifier",
@@ -1912,20 +1867,11 @@
       "indent": 0
     },
     {
-      "type": "DeleteVariable",
+      "type": "DeleteArray",
       "sceneName": "startup",
       "indent": 0,
       "lineNumber": 65,
       "position": 0
-    },
-    {
-      "type": "Identifier",
-      "value": "_array",
-      "rawValue": "_array",
-      "position": 7,
-      "lineNumber": 65,
-      "sceneName": "startup",
-      "indent": 0
     },
     {
       "type": "Identifier",

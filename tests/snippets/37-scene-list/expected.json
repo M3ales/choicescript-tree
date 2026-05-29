@@ -1,0 +1,254 @@
+[
+  {
+    "name": "chapter1",
+    "statements": [
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "chapter1",
+            "lineNumber": 0,
+            "position": 0,
+            "indent": 0,
+            "content": "Chapter one begins.\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 20,
+            "lineNumber": 0,
+            "position": 0,
+            "text": "Chapter one begins.\n"
+          }
+        ]
+      },
+      {
+        "kind": "Finish",
+        "token": {
+          "type": "Finish",
+          "sceneName": "chapter1",
+          "indent": 0,
+          "lineNumber": 1,
+          "position": 0
+        },
+        "buttonText": null
+      }
+    ],
+    "parseErrors": [],
+    "start": {
+      "sceneName": "chapter1",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    "end": {
+      "type": "Finish",
+      "sceneName": "chapter1",
+      "indent": 0,
+      "lineNumber": 1,
+      "position": 0
+    }
+  },
+  {
+    "name": "chapter2",
+    "statements": [
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "chapter2",
+            "lineNumber": 0,
+            "position": 0,
+            "indent": 0,
+            "content": "Chapter two begins.\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 20,
+            "lineNumber": 0,
+            "position": 0,
+            "text": "Chapter two begins.\n"
+          }
+        ]
+      },
+      {
+        "kind": "Finish",
+        "token": {
+          "type": "Finish",
+          "sceneName": "chapter2",
+          "indent": 0,
+          "lineNumber": 1,
+          "position": 0
+        },
+        "buttonText": null
+      }
+    ],
+    "parseErrors": [],
+    "start": {
+      "sceneName": "chapter2",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    "end": {
+      "type": "Finish",
+      "sceneName": "chapter2",
+      "indent": 0,
+      "lineNumber": 1,
+      "position": 0
+    }
+  },
+  {
+    "name": "startup",
+    "statements": [
+      {
+        "kind": "Author",
+        "token": {
+          "type": "Author",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 1,
+          "position": 0
+        },
+        "value": {
+          "token": {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 1,
+            "position": 7,
+            "indent": 0,
+            "content": "Test"
+          },
+          "content": "Test",
+          "lineNumber": 1,
+          "position": 7,
+          "indent": 0,
+          "sceneName": "startup"
+        }
+      },
+      {
+        "kind": "SceneList",
+        "token": {
+          "type": "SceneList",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 3,
+          "position": 0
+        },
+        "identifiers": [
+          {
+            "paid": false,
+            "type": "Identifier",
+            "value": "chapter1",
+            "rawValue": "chapter1",
+            "sceneName": "startup",
+            "lineNumber": 5,
+            "position": 4,
+            "indent": 2,
+            "isSceneName": true
+          },
+          {
+            "paid": false,
+            "type": "Identifier",
+            "value": "chapter2",
+            "rawValue": "chapter2",
+            "sceneName": "startup",
+            "lineNumber": 6,
+            "position": 4,
+            "indent": 2,
+            "isSceneName": true
+          }
+        ]
+      },
+      {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "score",
+          "rawValue": "score",
+          "position": 8,
+          "lineNumber": 7,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 0,
+            "position": 14,
+            "lineNumber": 7,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 7,
+          "position": 0
+        }
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 8,
+            "position": 0,
+            "indent": 0,
+            "content": "Hello world\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 12,
+            "lineNumber": 8,
+            "position": 0,
+            "text": "Hello world\n"
+          }
+        ]
+      },
+      {
+        "kind": "Finish",
+        "token": {
+          "type": "Finish",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 9,
+          "position": 0
+        },
+        "buttonText": null
+      }
+    ],
+    "parseErrors": [],
+    "start": {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    "end": {
+      "type": "Finish",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 9,
+      "position": 0
+    }
+  }
+]

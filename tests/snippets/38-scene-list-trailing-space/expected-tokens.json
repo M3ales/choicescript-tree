@@ -1,0 +1,161 @@
+[
+  [
+    {
+      "sceneName": "chapter1",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    {
+      "type": "Prose",
+      "sceneName": "chapter1",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "content": "Chapter one begins.\n"
+    },
+    {
+      "type": "Finish",
+      "sceneName": "chapter1",
+      "indent": 0,
+      "lineNumber": 1,
+      "position": 0
+    },
+    {
+      "lineNumber": 3,
+      "indent": 0,
+      "position": 0,
+      "sceneName": "chapter1",
+      "type": "SceneEnd"
+    }
+  ],
+  [
+    {
+      "sceneName": "chapter2",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    {
+      "type": "Prose",
+      "sceneName": "chapter2",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "content": "Chapter two begins.\n"
+    },
+    {
+      "type": "Finish",
+      "sceneName": "chapter2",
+      "indent": 0,
+      "lineNumber": 1,
+      "position": 0
+    },
+    {
+      "lineNumber": 3,
+      "indent": 0,
+      "position": 0,
+      "sceneName": "chapter2",
+      "type": "SceneEnd"
+    }
+  ],
+  [
+    {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    {
+      "type": "Author",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 1,
+      "position": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 1,
+      "position": 7,
+      "indent": 0,
+      "content": "Test"
+    },
+    {
+      "type": "SceneList",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 3,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "chapter1",
+      "rawValue": "chapter1",
+      "sceneName": "startup",
+      "lineNumber": 5,
+      "position": 4,
+      "indent": 2,
+      "isSceneName": true
+    },
+    {
+      "type": "Identifier",
+      "value": "chapter2",
+      "rawValue": "chapter2",
+      "sceneName": "startup",
+      "lineNumber": 6,
+      "position": 4,
+      "indent": 2,
+      "isSceneName": true
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 7,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "score",
+      "rawValue": "score",
+      "position": 8,
+      "lineNumber": 7,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 14,
+      "lineNumber": 7,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 8,
+      "position": 0,
+      "indent": 0,
+      "content": "Hello world\n"
+    },
+    {
+      "type": "Finish",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 9,
+      "position": 0
+    },
+    {
+      "lineNumber": 11,
+      "indent": 0,
+      "position": 0,
+      "sceneName": "startup",
+      "type": "SceneEnd"
+    }
+  ]
+]

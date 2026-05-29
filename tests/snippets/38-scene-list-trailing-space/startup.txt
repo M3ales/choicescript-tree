@@ -1,0 +1,10 @@
+*title Test
+*author Test
+
+*scene_list 
+    chapter1
+    chapter2
+
+*create score 0
+Hello world
+*finish
