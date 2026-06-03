@@ -28,6 +28,15 @@ const execute = async () => {
     console.info(`Loaded ${scenes.length} scenes`);
     console.log(`Writing ${scenes.length} to ${outPath('raw-scenes.json')}`);
     getIO().writeFile(outPath('raw-scenes.json'), JSON.stringify(scenes, null, 2));
+
+    const scenesDir = outPath('scenes');
+    getIO().mkdir(scenesDir);
+    for (const scene of scenes) {
+        if (scene.content) {
+            getIO().writeFile(`${scenesDir}/${scene.name}.txt`, scene.content);
+        }
+    }
+    console.log(`Wrote ${scenes.length} scene files to ${scenesDir}/`);
 }
 
 export const readSceneList = (startup: Scene): string[] => {
