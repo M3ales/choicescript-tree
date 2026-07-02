@@ -20,6 +20,7 @@ import {
     SelectableIfToken,
     OpenMultiReplaceToken,
     ImageToken,
+    TextImageToken,
     InputTextToken,
     GameIdentifierToken,
     AuthorToken,
@@ -37,6 +38,7 @@ import {
     StatChartToken,
     GotoRandomSceneToken,
     EndingToken,
+    BugToken,
     HideReuseToken,
     DisableReuseToken,
     AllowReuseToken,
@@ -53,15 +55,23 @@ import {
     CreateTempArrayToken,
     CreateArrayToken
 } from "./tokens";
-import {tokenizeExpressionString} from './expression-handler';
+import {tokenizeExpressionString, PrefixTrie} from './expression-handler';
 import { parseAchievementBlock as scanAchievementBlock } from "./achievement-handler";
 import { handleSceneList } from "./scene-list-handler";
 import { countIndentation } from "./indent";
 import { ParametersToken } from "./tokens/parameters";
 import { handleStatChart } from "./stat-chart-handler";
 import { handleImage } from "./image-handler";
+import { ScannerCheckpoint } from "./scanner-checkpoint";
 
-export const scanScene = (scene: Scene, knownLabels: string[], knownSceneNames: string[]) => {
+export interface ScanResult {
+    tokens: Token[];
+    checkpoints: ScannerCheckpoint[];
+}
+
+export const scanScene = (scene: Scene, knownLabels: string[] | PrefixTrie, knownSceneNames: string[] | PrefixTrie): ScanResult => {
+    const labelTrie = knownLabels instanceof PrefixTrie ? knownLabels : new PrefixTrie(knownLabels);
+    const sceneTrie = knownSceneNames instanceof PrefixTrie ? knownSceneNames : new PrefixTrie(knownSceneNames);
     const context: ScannerContext = {
         proseBlock: '',
         proseBlockStart: undefined,
@@ -94,8 +104,21 @@ export const scanScene = (scene: Scene, knownLabels: string[], knownSceneNames: 
         .replaceAll('\r\n', '\n')
         .replaceAll('\r','\n')
         .split('\n');
+    const checkpoints: ScannerCheckpoint[] = [];
+    let lastCheckpointLine = -1;
     let lastMode = 'Initial';
     while (context.lineNumber < context.sceneLines.length) {
+
+        if (context.lineNumber !== lastCheckpointLine) {
+            lastCheckpointLine = context.lineNumber;
+            checkpoints.push({
+                line: context.lineNumber,
+                previousIndent: context.indent.previous,
+                proseBlockStartLine: context.proseBlockStart?.lineNumber,
+                proseBlockIndent: context.proseBlockStart?.indent,
+                tokenIndex: tokens.length,
+            });
+        }
 
         if(lastMode !== context.mode) {
             //console.log(`Transition from ${lastMode} to ${context.mode}`)
@@ -178,7 +201,7 @@ export const scanScene = (scene: Scene, knownLabels: string[], knownSceneNames: 
                         && (line.substring(0, context.position).trim().length === 0
                             || isAfterChoiceModifierOnSameLine(tokens, context.lineNumber)))
                     {
-                        context.currentTokenStartPosition = undefined;
+                        context.currentTokenStartPosition = context.position;
                         context.currentToken = '';
                         context.mode = "ChoiceOption";
                         flushProseBlock(tokens, context);
@@ -216,6 +239,107 @@ export const scanScene = (scene: Scene, knownLabels: string[], knownSceneNames: 
                     context.mode = 'Prose';
                     break;
                 }
+                case "SceneArgToEOL": {
+                    const sch = line[context.position];
+                    if (sch === ' ' || sch === '\t') {
+                        context.position++;
+                        break;
+                    }
+                    if (sch === '{') {
+                        context.mode = "Expression";
+                        context.currentTokenStartPosition = context.position;
+                        context.currentToken = sch;
+                        context.position++;
+                        break;
+                    }
+                    const sstart = context.position;
+                    let send = sstart;
+                    while (send < line.length && line[send] !== ' ' && line[send] !== '\t') send++;
+                    const sraw = line.substring(sstart, send);
+                    tokens.push(<IdentifierToken>{
+                        type: 'Identifier',
+                        value: sraw.toLowerCase(),
+                        rawValue: sraw,
+                        sceneName: scene.name,
+                        indent: context.indent.current,
+                        lineNumber: context.lineNumber,
+                        position: sstart,
+                        isSceneName: true,
+                    });
+                    context.position = send;
+                    context.mode = send < line.length ? 'LabelToEOL' : 'Prose';
+                    break;
+                }
+                case "LabelToEOL": {
+                    const ch = line[context.position];
+                    if (ch === ' ' || ch === '\t') {
+                        context.position++;
+                        break;
+                    }
+                    if (ch === '{') {
+                        context.mode = "Expression";
+                        context.currentTokenStartPosition = context.position;
+                        context.currentToken = ch;
+                        context.position++;
+                        break;
+                    }
+                    const start = context.position;
+                    let end = start;
+                    while (end < line.length && line[end] !== ' ' && line[end] !== '\t') end++;
+                    const raw = line.substring(start, end);
+                    tokens.push(<IdentifierToken>{
+                        type: 'Identifier',
+                        value: raw.toLowerCase(),
+                        rawValue: raw,
+                        sceneName: scene.name,
+                        indent: context.indent.current,
+                        lineNumber: context.lineNumber,
+                        position: start,
+                        isLabelName: true,
+                    });
+                    context.position = end;
+                    if (context.gosubArgs && end < line.length) {
+                        context.mode = 'GoSubArgsToEOL';
+                        context.gosubArgs = false;
+                    } else {
+                        context.gosubArgs = false;
+                        context.mode = end < line.length ? 'LabelToEOL' : 'Prose';
+                    }
+                    break;
+                }
+                case "GoSubArgsToEOL": {
+                    const gaCh = line[context.position];
+                    if (gaCh === ' ' || gaCh === '\t') {
+                        context.position++;
+                        break;
+                    }
+                    const gaStart = context.position;
+                    let gaEnd = gaStart;
+                    let gaDepth = 0;
+                    while (gaEnd < line.length) {
+                        const c = line[gaEnd];
+                        if (c === '(') gaDepth++;
+                        else if (c === ')') gaDepth--;
+                        else if ((c === ' ' || c === '\t') && gaDepth <= 0) break;
+                        gaEnd++;
+                    }
+                    const gaRaw = line.substring(gaStart, gaEnd);
+                    const gaTokens = tokenizeExpressionString(
+                        gaRaw,
+                        context.lineNumber,
+                        gaStart,
+                        context.indent.current,
+                        context.scene.name,
+                        labelTrie,
+                        sceneTrie,
+                    );
+                    tokens.push(...gaTokens);
+                    context.position = gaEnd;
+                    if (gaEnd >= line.length) {
+                        context.mode = 'Prose';
+                    }
+                    break;
+                }
                 case "Expression": {
                         if (isStartOfCommand(context)) {
                             var expressionTokens = tokenizeExpressionString(
@@ -224,8 +348,8 @@ export const scanScene = (scene: Scene, knownLabels: string[], knownSceneNames: 
                                 context.currentTokenStartPosition,
                                 context.indent.current,
                                 context.scene.name,
-                                knownLabels,
-                                knownSceneNames);
+                                labelTrie,
+                                sceneTrie);
                             tokens.push(...expressionTokens);
                             context.mode = "Command";
                             context.currentTokenStartPosition = context.position;
@@ -242,9 +366,10 @@ export const scanScene = (scene: Scene, knownLabels: string[], knownSceneNames: 
                                 context.currentTokenStartPosition,
                                 context.indent.current,
                                 context.scene.name,
-                                knownLabels,
-                                knownSceneNames);
+                                labelTrie,
+                                sceneTrie);
                             tokens.push(...expressionTokens);
+                            context.currentTokenStartPosition = context.position;
                             context.mode = "ChoiceOption";
                             //console.log('Encountered Token, switching mode to Token after expression', expressionTokens)
                             continue;
@@ -263,8 +388,8 @@ export const scanScene = (scene: Scene, knownLabels: string[], knownSceneNames: 
                                 context.currentTokenStartPosition,
                                 context.indent.current,
                                 context.scene.name,
-                                knownLabels,
-                                knownSceneNames);
+                                labelTrie,
+                                sceneTrie);
                             
                             //console.log("EOL reached, scanning expression", expressionTokens)
                             tokens.push(...expressionTokens);
@@ -325,10 +450,12 @@ export const scanScene = (scene: Scene, knownLabels: string[], knownSceneNames: 
                     );
 
                     tokens.push(...scanned);
-                    context.position = postLine.length;
+                    context.position = line.length;
                     context.lineNumber += 2;
                     context.insideMultiLineToken = false;
 
+                    context.proseBlock = '';
+                    context.proseBlockStart = undefined;
                     context.mode = "Prose";
                     break;
                 }
@@ -383,7 +510,7 @@ export const scanScene = (scene: Scene, knownLabels: string[], knownSceneNames: 
             type: 'SceneEnd'
         }
     );
-    return tokens;
+    return { tokens, checkpoints };
 }
 
 const choiceModifierTokenTypes = new Set(["HideReuse", "DisableReuse", "AllowReuse"]);
@@ -434,7 +561,9 @@ const handleCommand = (context: ScannerContext) => {
     // evaluate token, decide if not inside token anymore
     switch(context.currentToken) {
         case '*label': {
-            context.mode = "Expression";
+            const nextChar = context.currentLine[context.position+1];
+            if(nextChar !== undefined && nextChar !== ' ' && nextChar !== '\t') break;
+            context.mode = "LabelToEOL";
             return createInContextToken(<LabelToken>{type: 'Label'});
         }
         case '*params': {
@@ -454,11 +583,13 @@ const handleCommand = (context: ScannerContext) => {
             return createInContextToken(<AllowReuseToken>{type: 'AllowReuse'});
         }
         case '*gosub ': {
-            context.mode = "Expression";
+            context.mode = "LabelToEOL";
+            context.gosubArgs = true;
             return createInContextToken(<GoSubToken>{type: 'GoSub'});
         }
         case '*gosub_scene ': {
-            context.mode = "Expression";
+            context.mode = "SceneArgToEOL";
+            context.gosubArgs = true;
             return createInContextToken(<GoSubSceneToken>{type: 'GoSubScene'});
         }
         case '*return': {
@@ -466,11 +597,11 @@ const handleCommand = (context: ScannerContext) => {
             return createInContextToken(<ReturnToken>{type: 'Return'});
         }
         case '*goto ': {
-            context.mode = "Expression";
+            context.mode = "LabelToEOL";
             return createInContextToken(<GotoLabelToken>{type: 'GotoLabel'});
         }
         case '*goto_scene': {
-            context.mode = "Expression";
+            context.mode = "SceneArgToEOL";
             return createInContextToken(<GotoSceneToken>{type: 'GotoScene'});
         }
         case '*goto_random_scene': {
@@ -533,6 +664,10 @@ const handleCommand = (context: ScannerContext) => {
             context.mode = "ProseToEOL";
             return createInContextToken(<EndingToken>{type: 'Ending'});
         }
+        case '*bug': {
+            context.mode = "ProseToEOL";
+            return createInContextToken(<BugToken>{type: 'Bug'});
+        }
         case "*stat_chart": {
             context.mode = "StatChart"
             return createInContextToken(<StatChartToken>{type: 'StatChart'});
@@ -572,6 +707,10 @@ const handleCommand = (context: ScannerContext) => {
         case "*image": {
             context.mode = "Image";
             return createInContextToken(<ImageToken>{type: 'Image'});
+        }
+        case "*text_image": {
+            context.mode = "Image";
+            return createInContextToken(<TextImageToken>{type: 'TextImage'});
         }
         case "*input_number": {
             context.mode = "Expression";
@@ -632,7 +771,7 @@ const handleCommand = (context: ScannerContext) => {
     return undefined;
 }
 
-const knownCommands = [
+const knownCommandsSet = new Set([
     "*choice",
     "*fake_choice",
     "*label",
@@ -664,59 +803,56 @@ const knownCommands = [
     "*page_break_advertisement",
     "*input_text",
     "*input_number",
-    "*finish",
     "*ending",
     "*delay_ending",
+    "*bug",
     "*return",
     "*achievement",
     "*achieve",
     "*check_achievements",
     "*link",
     "*image",
+    "*text_image",
     "*purchase_discount",
     "*save_checkpoint",
     "*restore_checkpoint",
-    "*delete",
     "*create_array",
     "*delete_array",
     "*temp_array",
     "*scene_list",
     "*author"
-];
+]);
 
 const isStartOfCommand = (context: ScannerContext) : boolean => {
-    if(context.currentLine[context.position] === "*") {
-        if(context.position === 0) return true;
-        const intent = countIndentation(context.currentLine);
-        if(context.position === intent.position) return true;
-        if(context.position + 1 >= context.currentLine.length) return false;
-        const nextChar = context.currentLine[context.position + 1];
-        if(nextChar === ' ') return false;
-        if(Number.isInteger(nextChar)) return false;
+    const line = context.currentLine;
+    const pos = context.position;
+    if(line[pos] !== "*") return false;
 
-        if(context.position > 0) {
-            if(![" ", "\t"].includes(context.currentLine[context.position-1])){
-                return false;
-            }
-        }
+    if(pos === 0) return true;
+    const intent = countIndentation(line);
+    if(pos === intent.position) return true;
+    if(pos + 1 >= line.length) return false;
+    const nextChar = line[pos + 1];
+    if(nextChar === ' ') return false;
+    if(Number.isInteger(nextChar)) return false;
 
-        const lineRemaining = context.currentLine.substring(context.position);
-        let endOfCommand = lineRemaining.indexOf(' ');
-        const parenIndex = lineRemaining.indexOf('(');
-        if (endOfCommand === -1 || (parenIndex !== -1 && parenIndex < endOfCommand)) {
-            endOfCommand = parenIndex;
-        }
-        if(endOfCommand === -1) {
-            endOfCommand = lineRemaining.indexOf(')');
-        }
-        let possibleCommand = lineRemaining;
-        if(endOfCommand !== -1) {
-            possibleCommand = lineRemaining.substring(0, endOfCommand);
-        }
+    const prev = line[pos - 1];
+    if(prev !== ' ' && prev !== '\t') return false;
 
-        return knownCommands.includes(possibleCommand);
+    let endOfCommand = line.indexOf(' ', pos);
+    const parenIndex = line.indexOf('(', pos);
+    if (endOfCommand === -1 || (parenIndex !== -1 && parenIndex < endOfCommand)) {
+        endOfCommand = parenIndex;
     }
-    return false;
+    if(endOfCommand === -1) {
+        endOfCommand = line.indexOf(')', pos);
+    }
+
+    const possibleCommand = endOfCommand !== -1
+        ? line.substring(pos, endOfCommand)
+        : line.substring(pos);
+
+    return knownCommandsSet.has(possibleCommand);
 }
 
 const isStartOfChoiceOption = (char:string, before: string | undefined): boolean => {

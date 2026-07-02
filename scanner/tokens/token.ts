@@ -7,4 +7,5 @@ export interface Token {
     position: number;
     indent: number;
     id?: number;
+    hash?: number;
 }

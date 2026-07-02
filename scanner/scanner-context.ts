@@ -25,12 +25,17 @@ export interface ScannerContext {
     | "Prose"
     | "Command"
     | "Expression"
+    | "LabelToEOL"
+    | "SceneArgToEOL"
+    | "GoSubArgsToEOL"
     | "Comment"
     | "ChoiceOption"
     | "Achievement"
     | "SceneList"
     | "StatChart"
     | "Image";
+
+  gosubArgs?: boolean;
 
   indent: IndentationContext;
 }

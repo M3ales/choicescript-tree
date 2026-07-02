@@ -1,4 +1,3 @@
-import exp from "node:constants";
 import {
   OpenParenthesisToken,
   CloseParenthesisToken,
@@ -24,6 +23,7 @@ import { DollarToken } from "./tokens/expressions/dollar";
 import { OpenPrintToken } from "./tokens/expressions/open-print";
 import { OpenPrintCapitaliseAllToken } from "./tokens/expressions/open-print-caps-all";
 import { OpenPrintCapitaliseFirstToken } from "./tokens/expressions/open-print-caps-first";
+import { PrefixTrie } from "./prefix-trie";
 
 function isDigit(char: string): boolean {
   const code = char.charCodeAt(0);
@@ -43,40 +43,7 @@ const isAlphanumericOrUnderscore = (char: string): boolean => {
   return isLetter(char) || isDigit(char) || char === "_";
 }
 
-const matchKnownIdentifier = (
-  expression: string,
-  cursor: number,
-  names: string[],
-): { matched: string | null, rawValue: string, newCursor: number } => {
-  const lowerChar = expression[cursor].toLowerCase();
-  let possible = names.filter(n => n.startsWith(lowerChar));
-  let value = "";
-  let rawExtracted = "";
-  const startPos = cursor;
-  let nextCharIsValidVariable = false;
-
-  while(possible.length > 0 && cursor < expression.length) {
-    const tempValue = value + expression[cursor].toLowerCase();
-    const previousPossible = possible;
-    possible = names.filter(n => n.startsWith(tempValue));
-    if(previousPossible.length > 0 && possible.length === 0) {
-      possible = previousPossible;
-      if(isAlphanumericOrUnderscore(expression[cursor])) {
-        nextCharIsValidVariable = true;
-      }
-      break;
-    }
-    value = tempValue;
-    rawExtracted += expression[cursor];
-    cursor++;
-  }
-
-  const found = possible.some(n => n === value);
-  if(found && !nextCharIsValidVariable) {
-    return { matched: value, rawValue: rawExtracted, newCursor: cursor };
-  }
-  return { matched: null, rawValue: "", newCursor: startPos };
-}
+export { PrefixTrie } from "./prefix-trie";
 
 export function tokenizeExpressionString(
   expression: string,
@@ -84,17 +51,23 @@ export function tokenizeExpressionString(
   position: number,
   indent: number,
   sceneName: string,
-  knownLabels: string[],
-  sceneNames: string[],
+  knownLabels: string[] | PrefixTrie,
+  sceneNames: string[] | PrefixTrie,
 ): Token[] {
+  const labelTrie = knownLabels instanceof PrefixTrie ? knownLabels : new PrefixTrie(knownLabels);
+  const sceneTrie = sceneNames instanceof PrefixTrie ? sceneNames : new PrefixTrie(sceneNames);
+  const labelSet = knownLabels instanceof PrefixTrie ? null : new Set(knownLabels.map(l => l.toLowerCase()));
+
+  const leadingSpaces = expression.length - expression.trimStart().length;
   const trimmed = expression.trim();
   const lowerValue = trimmed.toLowerCase();
-  if(knownLabels.includes(lowerValue)) {
+  const wholeLabel = labelTrie.match(lowerValue, 0, isAlphanumericOrUnderscore);
+  if(wholeLabel.matched && wholeLabel.newCursor === lowerValue.length) {
     return [{
           type: "Identifier",
           value: lowerValue,
           rawValue: trimmed,
-          position: position,
+          position: position + leadingSpaces,
           lineNumber: lineNumber,
           sceneName: sceneName,
           indent: indent,
@@ -119,38 +92,35 @@ export function tokenizeExpressionString(
       cursor++;
       continue;
     }
-    sceneNames ??= [];
-    knownLabels ??= [];
-    if(sceneNames.length > 0) {
-      const sceneMatch = matchKnownIdentifier(expression, cursor, sceneNames);
-      if(sceneMatch.matched !== null) {
-        const isAlsoLabelName = knownLabels.some(label => label === sceneMatch.matched);
-        tokens.push({
-          type: "Identifier",
-          value: sceneMatch.matched,
-          rawValue: sceneMatch.rawValue,
-          ...baseAt(cursor),
-          isSceneName: true,
-          isLabelName: isAlsoLabelName,
-        } as IdentifierToken);
-        cursor = sceneMatch.newCursor;
-        continue;
-      }
+
+    const sceneMatch = sceneTrie.match(expression, cursor, isAlphanumericOrUnderscore);
+    if(sceneMatch.matched !== null) {
+      const isAlsoLabelName = labelSet
+        ? labelSet.has(sceneMatch.matched)
+        : labelTrie.match(sceneMatch.matched, 0, isAlphanumericOrUnderscore).matched !== null;
+      tokens.push({
+        type: "Identifier",
+        value: sceneMatch.matched,
+        rawValue: sceneMatch.rawValue,
+        ...baseAt(cursor),
+        isSceneName: true,
+        isLabelName: isAlsoLabelName,
+      } as IdentifierToken);
+      cursor = sceneMatch.newCursor;
+      continue;
     }
 
-    if(knownLabels.length > 0) {
-      const labelMatch = matchKnownIdentifier(expression, cursor, knownLabels);
-      if(labelMatch.matched !== null) {
-        tokens.push({
-          type: "Identifier",
-          value: labelMatch.matched,
-          rawValue: labelMatch.rawValue,
-          ...baseAt(cursor),
-          isLabelName: true
-        } as IdentifierToken);
-        cursor = labelMatch.newCursor;
-        continue;
-      }
+    const labelMatch = labelTrie.match(expression, cursor, isAlphanumericOrUnderscore);
+    if(labelMatch.matched !== null) {
+      tokens.push({
+        type: "Identifier",
+        value: labelMatch.matched,
+        rawValue: labelMatch.rawValue,
+        ...baseAt(cursor),
+        isLabelName: true
+      } as IdentifierToken);
+      cursor = labelMatch.newCursor;
+      continue;
     }
 
     // Handle numbers

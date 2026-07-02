@@ -1,10 +1,10 @@
-import "../bootstrap";
 import {Scene} from "./scene";
 import {scanScene} from "./scanner";
 import { scanLabelNames } from "./scan-label-names";
 import { flattenProse } from "./flatten-prose";
 import { ChoiceOptionToken, ProseToken, Token } from "./tokens";
 import { outPath, ensureOutDir, getIO } from '../out-dir';
+import { PrefixTrie } from "./expression-handler";
 
 const execute = async () => {
     ensureOutDir();
@@ -32,14 +32,16 @@ export const scanScenes = async (scenes: Scene[]) => {
     }
 
     // scan labels
-    const knownLabels = cleanedScenes.map(scene => scanLabelNames(scene)).flatMap(s => s);
+    const knownLabels = cleanedScenes.flatMap(scene => scanLabelNames(scene));
     const sceneNames = scenes.map(scene => scene.name);
     console.log(`Found ${knownLabels.length} labels, and ${sceneNames.length} scenes`,sceneNames);
+    const labelTrie = new PrefixTrie(knownLabels);
+    const sceneTrie = new PrefixTrie(sceneNames);
     const tokens = cleanedScenes
         .map(scene => {
             console.time(`scan ${scene.name}`);
-            const t = scanScene(scene, knownLabels, sceneNames);
-            const flat = expandProse(t, knownLabels, sceneNames);
+            const { tokens: t } = scanScene(scene, labelTrie, sceneTrie);
+            const flat = expandProse(t, labelTrie, sceneTrie);
             console.timeEnd(`scan ${scene.name}`);
             return flat;
         });
@@ -48,8 +50,8 @@ export const scanScenes = async (scenes: Scene[]) => {
 
 const expandProse = (
     sceneTokens: Token[],
-    knownLabels: string[],
-    sceneNames: string[],
+    knownLabels: string[] | PrefixTrie,
+    sceneNames: string[] | PrefixTrie,
 ): Token[] => {
     const out: Token[] = [];
     for (const token of sceneTokens) {
@@ -109,4 +111,4 @@ const addIds = (scenes: Token[][]) => {
 
     return scenes;
 }
-await execute();
+export { execute as runScan };

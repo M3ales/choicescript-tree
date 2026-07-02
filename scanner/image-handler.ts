@@ -3,7 +3,8 @@ import { IdentifierToken, ProseToken, Token } from "./tokens";
 
 export const handleImage = (context: ScannerContext): Token[] => {
     const tokens = [];
-    const args = context.currentLine.replace('*image ', '').trim()
+    const firstSpace = context.currentLine.indexOf(' ', context.position);
+    const args = firstSpace === -1 ? '' : context.currentLine.substring(firstSpace + 1).trim()
     const {path, alignment, altText} = lineToSegments(args);
     const at = (position: number) => ({
         sceneName: context.scene.name,

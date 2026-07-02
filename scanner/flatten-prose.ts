@@ -1,4 +1,4 @@
-import { tokenizeExpressionString } from "./expression-handler";
+import { tokenizeExpressionString, PrefixTrie } from "./expression-handler";
 import {
     CloseBraceToken,
     MultiReplaceElseToken,
@@ -15,8 +15,8 @@ interface FlattenContext {
     lineNumber: number;
     position: number;
     indent: number;
-    knownLabels: string[];
-    sceneNames: string[];
+    knownLabels: string[] | PrefixTrie;
+    sceneNames: string[] | PrefixTrie;
 }
 
 interface OpenerMatch {
@@ -47,38 +47,63 @@ const matchOpener = (content: string, cursor: number): OpenerMatch | undefined =
     return undefined;
 };
 
-const positionAt = (
-    content: string,
-    offset: number,
-    base: FlattenContext,
-): { lineNumber: number; position: number } => {
-    let line = base.lineNumber;
-    let col = base.position;
-    for (let i = 0; i < offset && i < content.length; i++) {
-        if (content[i] === "\n") {
-            line++;
-            col = 0;
+interface PositionTracker {
+    content: string;
+    baseLine: number;
+    baseCol: number;
+    lastOffset: number;
+    line: number;
+    col: number;
+}
+
+const createTracker = (content: string, base: FlattenContext): PositionTracker => ({
+    content,
+    baseLine: base.lineNumber,
+    baseCol: base.position,
+    lastOffset: 0,
+    line: base.lineNumber,
+    col: base.position,
+});
+
+const trackAt = (t: PositionTracker, offset: number): { lineNumber: number; position: number } => {
+    if (offset < t.lastOffset) {
+        t.lastOffset = 0;
+        t.line = t.baseLine;
+        t.col = t.baseCol;
+    }
+    for (let i = t.lastOffset; i < offset && i < t.content.length; i++) {
+        if (t.content[i] === "\n") {
+            t.line++;
+            t.col = t.baseCol;
         } else {
-            col++;
+            t.col++;
         }
     }
-    return { lineNumber: line, position: col };
+    t.lastOffset = offset;
+    return { lineNumber: t.line, position: t.col };
 };
 
-const findMatchingBrace = (content: string, openCursor: number): number => {
+interface BraceMatch {
+    index: number;
+    crossesNewline: boolean;
+}
+
+const findMatchingBrace = (content: string, openCursor: number): BraceMatch => {
     let depth = 1;
     let i = openCursor;
+    let crossesNewline = false;
     while (i < content.length) {
         const c = content[i];
+        if (c === "\n") crossesNewline = true;
         if (c === "{") {
             depth++;
         } else if (c === "}") {
             depth--;
-            if (depth === 0) return i;
+            if (depth === 0) return { index: i, crossesNewline };
         }
         i++;
     }
-    return -1;
+    return { index: -1, crossesNewline };
 };
 
 const emitText = (
@@ -87,14 +112,15 @@ const emitText = (
     start: number,
     end: number,
     base: FlattenContext,
+    pos: PositionTracker,
 ): void => {
     if (end <= start) return;
-    const pos = positionAt(content, start, base);
+    const p = trackAt(pos,start);
     out.push(<ProseToken>{
         type: "Prose",
         sceneName: base.sceneName,
-        lineNumber: pos.lineNumber,
-        position: pos.position,
+        lineNumber: p.lineNumber,
+        position: p.position,
         indent: base.indent,
         content: content.substring(start, end),
     });
@@ -106,6 +132,7 @@ const emitRange = (
     rangeStart: number,
     rangeEnd: number,
     base: FlattenContext,
+    pos: PositionTracker,
 ): void => {
     let cursor = rangeStart;
     let textStart = cursor;
@@ -119,14 +146,26 @@ const emitRange = (
 
         const openerStart = cursor;
         const bodyStart = cursor + opener.length;
-        const closeBrace = findMatchingBrace(content, bodyStart);
+        const braceMatch = findMatchingBrace(content, bodyStart);
+        const closeBrace = braceMatch.index;
         const hasClose = closeBrace !== -1 && closeBrace < rangeEnd;
-        const bodyEnd = hasClose ? closeBrace : rangeEnd;
-        const segmentEnd = hasClose ? closeBrace + 1 : rangeEnd;
 
-        emitText(out, content, textStart, openerStart, base);
+        let bodyEnd: number;
+        let segmentEnd: number;
+        let isMultiLine = false;
+        if (hasClose && braceMatch.crossesNewline) {
+            isMultiLine = true;
+            const newlinePos = content.indexOf("\n", bodyStart);
+            bodyEnd = newlinePos !== -1 && newlinePos < closeBrace ? newlinePos : closeBrace;
+            segmentEnd = closeBrace + 1;
+        } else {
+            bodyEnd = hasClose ? closeBrace : rangeEnd;
+            segmentEnd = hasClose ? closeBrace + 1 : rangeEnd;
+        }
 
-        const openPos = positionAt(content, openerStart, base);
+        emitText(out, content, textStart, openerStart, base, pos);
+
+        const openPos = trackAt(pos,openerStart);
         switch (opener.kind) {
             case "Print":
                 out.push(<OpenPrintToken>{
@@ -167,10 +206,10 @@ const emitRange = (
         }
 
         if (opener.kind === "MultiReplace") {
-            emitMultiReplaceBody(out, content, bodyStart, bodyEnd, base);
+            emitMultiReplaceBody(out, content, bodyStart, bodyEnd, base, pos);
         } else {
             const body = content.substring(bodyStart, bodyEnd);
-            const bodyPos = positionAt(content, bodyStart, base);
+            const bodyPos = trackAt(pos,bodyStart);
             const exprTokens = tokenizeExpressionString(
                 body,
                 bodyPos.lineNumber,
@@ -184,7 +223,7 @@ const emitRange = (
         }
 
         if (hasClose) {
-            const closePos = positionAt(content, closeBrace, base);
+            const closePos = trackAt(pos,closeBrace);
             out.push(<CloseBraceToken>{
                 type: "CloseBrace",
                 sceneName: base.sceneName,
@@ -198,7 +237,7 @@ const emitRange = (
         textStart = cursor;
     }
 
-    emitText(out, content, textStart, rangeEnd, base);
+    emitText(out, content, textStart, rangeEnd, base, pos);
 };
 
 const emitMultiReplaceBody = (
@@ -207,6 +246,7 @@ const emitMultiReplaceBody = (
     bodyStart: number,
     bodyEnd: number,
     base: FlattenContext,
+    pos: PositionTracker,
 ): void => {
     let cursor = bodyStart;
     while (cursor < bodyEnd && (content[cursor] === " " || content[cursor] === "\t")) {
@@ -217,7 +257,10 @@ const emitMultiReplaceBody = (
     let depth = 0;
     while (cursor < bodyEnd) {
         const c = content[cursor];
-        if (c === "{" || c === "(" || c === "[") depth++;
+        if (c === "\"") {
+            cursor++;
+            while (cursor < bodyEnd && content[cursor] !== "\"") cursor++;
+        } else if (c === "{" || c === "(" || c === "[") depth++;
         else if (c === "}" || c === ")" || c === "]") depth--;
         else if (depth === 0 && (c === " " || c === "\t")) break;
         cursor++;
@@ -226,7 +269,7 @@ const emitMultiReplaceBody = (
 
     if (selectorEnd > selectorStart) {
         const selectorText = content.substring(selectorStart, selectorEnd);
-        const selectorPos = positionAt(content, selectorStart, base);
+        const selectorPos = trackAt(pos,selectorStart);
         out.push(
             ...tokenizeExpressionString(
                 selectorText,
@@ -251,8 +294,8 @@ const emitMultiReplaceBody = (
         if (c === "{" || c === "(" || c === "[") depth++;
         else if (c === "}" || c === ")" || c === "]") depth--;
         else if (c === "|" && depth === 0) {
-            emitRange(out, content, altStart, cursor, base);
-            const elsePos = positionAt(content, cursor, base);
+            emitRange(out, content, altStart, cursor, base, pos);
+            const elsePos = trackAt(pos,cursor);
             out.push(<MultiReplaceElseToken>{
                 type: "MultiReplaceElse",
                 sceneName: base.sceneName,
@@ -264,11 +307,12 @@ const emitMultiReplaceBody = (
         }
         cursor++;
     }
-    emitRange(out, content, altStart, bodyEnd, base);
+    emitRange(out, content, altStart, bodyEnd, base, pos);
 };
 
 export const flattenProse = (content: string, base: FlattenContext): Token[] => {
     const out: Token[] = [];
-    emitRange(out, content, 0, content.length, base);
+    const pos = createTracker(content, base);
+    emitRange(out, content, 0, content.length, base, pos);
     return out;
 };
