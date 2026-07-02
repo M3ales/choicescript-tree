@@ -17,6 +17,14 @@ export const applyStatement = (
   stmt: Statement,
   scene: string
 ): VariableState => {
+  if (stmt.kind === "Parameters") {
+    let s = state;
+    for (const id of (stmt as any).identifiers) {
+      s = setVariable(s, id.value, top, "Temporary", scene);
+    }
+    return s;
+  }
+
   const effect = extractEffect(stmt);
   if (!effect.defines) return state;
 
@@ -81,6 +89,13 @@ const applyStatementMut = (
   stmt: Statement,
   scene: string
 ): void => {
+  if (stmt.kind === "Parameters") {
+    for (const id of (stmt as any).identifiers) {
+      setVariableMut(state, id.value, top, "Temporary", scene);
+    }
+    return;
+  }
+
   const effect = extractEffect(stmt);
   if (!effect.defines) return;
 

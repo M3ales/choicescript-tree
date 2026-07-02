@@ -1,6 +1,6 @@
 import { Expression } from "../../parser/expressions";
-import { AbstractValue, constant, top, bottom, range, set, join, input } from "./abstract-value";
-import { VariableState, getVariable } from "./variable-state";
+import { AbstractValue, constant, top, bottom, range, set, join, input, MAX_SET_SIZE } from "./abstract-value";
+import { VariableState, getVariable, cloneState, isTempVariable } from "./variable-state";
 
 type ExprType = "Literal" | "Identifier" | "Binary" | "Unary" | "Grouping" | "ArrayIndexer" | "Dereference" | "Unknown";
 
@@ -47,7 +47,7 @@ export const evaluateExpression = (
     case "Grouping":
       return evaluateExpression((expr as any).expression, state, scene);
     case "ArrayIndexer":
-      return top;
+      return evaluateArrayIndexer(expr, state, scene);
     case "Dereference":
       return top;
     default:
@@ -82,21 +82,122 @@ const evaluateBinary = (
   state: VariableState,
   scene: string
 ): AbstractValue => {
-  const left = evaluateExpression(expr.left, state, scene);
-  const right = evaluateExpression(expr.right, state, scene);
   const opType = expr.operator?.type;
-
   if (!opType) return top;
 
   if (opType === "LogicalAnd" || opType === "LogicalOr") {
+    const left = evaluateExpression(expr.left, state, scene);
+    const right = evaluateExpression(expr.right, state, scene);
     return evaluateLogical(left, right, opType);
   }
+
+  const sharedVar = findSharedIdentifier(expr.left, expr.right);
+  if (sharedVar) {
+    const varValue = getVariable(state, sharedVar, scene);
+    const vals = enumerateValues(varValue);
+    if (vals && vals.length <= MAX_SET_SIZE) {
+      return evaluateCorrelated(expr, state, scene, sharedVar, vals, opType);
+    }
+  }
+
+  const left = evaluateExpression(expr.left, state, scene);
+  const right = evaluateExpression(expr.right, state, scene);
 
   if (isComparisonOperator(opType)) {
     return evaluateComparison(left, right, opType);
   }
 
   return evaluateArithmetic(left, right, opType);
+};
+
+const soleIdentifier = (expr: any): string | null => {
+  const type = classifyExpression(expr);
+  if (type === "Identifier") return expr.token?.value?.toLowerCase() ?? null;
+  if (type === "Grouping") return soleIdentifier(expr.expression);
+  return null;
+};
+
+const collectIdentifiers = (expr: any, out: Set<string>): void => {
+  if (!expr) return;
+  const type = classifyExpression(expr);
+  switch (type) {
+    case "Identifier":
+      if (expr.token?.value) out.add(expr.token.value.toLowerCase());
+      break;
+    case "Binary":
+      collectIdentifiers(expr.left, out);
+      collectIdentifiers(expr.right, out);
+      break;
+    case "Unary":
+    case "Grouping":
+      collectIdentifiers(expr.value ?? expr.expression, out);
+      break;
+  }
+};
+
+const findSharedIdentifier = (left: any, right: any): string | null => {
+  const leftIds = new Set<string>();
+  const rightIds = new Set<string>();
+  collectIdentifiers(left, leftIds);
+  collectIdentifiers(right, rightIds);
+  for (const id of leftIds) {
+    if (rightIds.has(id)) return id;
+  }
+  return null;
+};
+
+const evaluateCorrelated = (
+  expr: any,
+  baseState: VariableState,
+  scene: string,
+  varName: string,
+  values: (string | number | boolean)[],
+  opType: string,
+): AbstractValue => {
+  const results: (string | number | boolean)[] = [];
+  let hasNonEnumerable = false;
+
+  for (const val of values) {
+    const pinned = pinVariable(baseState, varName, val, scene);
+    const left = evaluateExpression(expr.left, pinned, scene);
+    const right = evaluateExpression(expr.right, pinned, scene);
+    let result: AbstractValue;
+    if (isComparisonOperator(opType)) {
+      result = evaluateComparison(left, right, opType);
+    } else {
+      result = evaluateArithmetic(left, right, opType);
+    }
+    if (result.kind === "constant") {
+      results.push(result.value);
+    } else if (result.kind === "set") {
+      results.push(...result.values);
+    } else {
+      hasNonEnumerable = true;
+    }
+  }
+
+  if (results.length === 0) return top;
+  if (hasNonEnumerable) {
+    const partial = set(results);
+    return partial.kind === "top" ? top : join(partial, top);
+  }
+  return set(results);
+};
+
+const pinVariable = (
+  state: VariableState,
+  name: string,
+  value: string | number | boolean,
+  scene: string,
+): VariableState => {
+  const pinned = cloneState(state);
+  const pinnedVal: AbstractValue = { kind: "constant", value };
+  if (isTempVariable(state, name, scene)) {
+    pinned.temps.set(scene, new Map([[name, pinnedVal]]));
+  } else {
+    pinned.globals.set(name, pinnedVal);
+  }
+  return pinned;
 };
 
 const evaluateUnary = (
@@ -112,20 +213,66 @@ const evaluateUnary = (
   switch (opType) {
     case "NotOperator":
       if (operand.kind === "constant") return constant(!isTruthy(operand.value));
+      if (operand.kind === "set") {
+        return set(
+          operand.values.map(v => !isTruthy(v)),
+          operand.hasUserInput,
+        );
+      }
       return top;
     case "RoundOperator":
       if (operand.kind === "constant" && typeof operand.value === "number")
         return constant(Math.round(operand.value));
       if (operand.kind === "range")
         return range(Math.round(operand.min), Math.round(operand.max));
+      if (operand.kind === "set" && operand.values.every(v => typeof v === "number")) {
+        return set(
+          (operand.values as number[]).map(v => Math.round(v)),
+          operand.hasUserInput,
+        );
+      }
       return top;
     case "LengthOperator":
       if (operand.kind === "constant" && typeof operand.value === "string")
         return constant(operand.value.length);
+      if (operand.kind === "set") {
+        const lengths = operand.values
+          .filter((v): v is string => typeof v === "string")
+          .map(v => v.length);
+        if (lengths.length === operand.values.length) return set(lengths, operand.hasUserInput);
+      }
       return top;
     default:
       return top;
   }
+};
+
+const evaluateArrayIndexer = (
+  expr: any,
+  state: VariableState,
+  scene: string
+): AbstractValue => {
+  const name = expr.identifier?.value;
+  if (!name) return top;
+  const base = getVariable(state, name, scene);
+  const index = evaluateExpression(expr.expression, state, scene);
+  const baseVals = toStringValues(base);
+  const indexNums = toNumericValues(index);
+  if (baseVals && indexNums) {
+    const hasInput = baseVals.includes(INPUT_SENTINEL);
+    const results: (string | number | boolean)[] = [];
+    for (const b of baseVals) {
+      if (b === INPUT_SENTINEL) continue;
+      for (const i of indexNums) {
+        const idx = i - 1;
+        if (typeof b === "string" && idx >= 0 && idx < b.length) {
+          results.push(b[idx]);
+        }
+      }
+    }
+    return results.length > 0 ? set(results, hasInput || undefined) : (hasInput ? input : top);
+  }
+  return top;
 };
 
 const isComparisonOperator = (opType: string): boolean =>
@@ -141,27 +288,98 @@ const evaluateComparison = (
   right: AbstractValue,
   opType: string
 ): AbstractValue => {
-  if (left.kind !== "constant" || right.kind !== "constant") return top;
+  if (left.kind === "constant" && right.kind === "constant") {
+    const l = left.value;
+    const r = right.value;
+    switch (opType) {
+      case "EqualityOperator": return constant(l === r);
+      case "NotEqualityOperator": return constant(l !== r);
+      case "GreaterThanOperator": return constant(l > r);
+      case "LessThanOperator": return constant(l < r);
+      case "GreaterThanEqualsOperator": return constant(l >= r);
+      case "LessThanEqualsOperator": return constant(l <= r);
+      default: return top;
+    }
+  }
 
-  const l = left.value;
-  const r = right.value;
+  const leftVals = enumerateValues(left);
+  const rightVals = enumerateValues(right);
+  if (leftVals && rightVals) {
+    const results = new Set<boolean>();
+    for (const l of leftVals) {
+      for (const r of rightVals) {
+        results.add(applyComparison(l, r, opType));
+      }
+      if (results.size === 2) break;
+    }
+    if (results.size === 1) return constant([...results][0]);
+    if (results.size === 2) return set([true, false]);
+    return top;
+  }
 
+  const leftRange = toRange(left);
+  const rightRange = toRange(right);
+  if (leftRange && rightRange && isFiniteRange(leftRange) && isFiniteRange(rightRange)) {
+    return evaluateRangeComparison(leftRange, rightRange, opType);
+  }
+
+  return top;
+};
+
+const isFiniteRange = (r: { min: number; max: number }): boolean =>
+  isFinite(r.min) && isFinite(r.max);
+
+const evaluateRangeComparison = (
+  l: { min: number; max: number },
+  r: { min: number; max: number },
+  opType: string,
+): AbstractValue => {
   switch (opType) {
-    case "EqualityOperator":
-      return constant(l === r);
-    case "NotEqualityOperator":
-      return constant(l !== r);
     case "GreaterThanOperator":
-      return constant(l > r);
+      if (l.min > r.max) return constant(true);
+      if (l.max <= r.min) return constant(false);
+      return set([true, false]);
     case "LessThanOperator":
-      return constant(l < r);
+      if (l.max < r.min) return constant(true);
+      if (l.min >= r.max) return constant(false);
+      return set([true, false]);
     case "GreaterThanEqualsOperator":
-      return constant(l >= r);
+      if (l.min >= r.max) return constant(true);
+      if (l.max < r.min) return constant(false);
+      return set([true, false]);
     case "LessThanEqualsOperator":
-      return constant(l <= r);
+      if (l.max <= r.min) return constant(true);
+      if (l.min > r.max) return constant(false);
+      return set([true, false]);
+    case "EqualityOperator":
+      if (l.min === l.max && r.min === r.max && l.min === r.min) return constant(true);
+      if (l.max < r.min || l.min > r.max) return constant(false);
+      return set([true, false]);
+    case "NotEqualityOperator":
+      if (l.max < r.min || l.min > r.max) return constant(true);
+      if (l.min === l.max && r.min === r.max && l.min === r.min) return constant(false);
+      return set([true, false]);
     default:
       return top;
   }
+};
+
+const applyComparison = (l: string | number | boolean, r: string | number | boolean, opType: string): boolean => {
+  switch (opType) {
+    case "EqualityOperator": return l === r;
+    case "NotEqualityOperator": return l !== r;
+    case "GreaterThanOperator": return l > r;
+    case "LessThanOperator": return l < r;
+    case "GreaterThanEqualsOperator": return l >= r;
+    case "LessThanEqualsOperator": return l <= r;
+    default: return false;
+  }
+};
+
+const enumerateValues = (av: AbstractValue): (string | number | boolean)[] | null => {
+  if (av.kind === "constant") return [av.value];
+  if (av.kind === "set" && !av.hasUserInput) return av.values;
+  return null;
 };
 
 const evaluateLogical = (
@@ -169,13 +387,41 @@ const evaluateLogical = (
   right: AbstractValue,
   opType: string
 ): AbstractValue => {
-  if (left.kind === "constant" && right.kind === "constant") {
-    const l = isTruthy(left.value);
-    const r = isTruthy(right.value);
-    if (opType === "LogicalAnd") return constant(l && r);
-    if (opType === "LogicalOr") return constant(l || r);
+  const lt = abstractTruthiness(left);
+  const rt = abstractTruthiness(right);
+
+  if (opType === "LogicalAnd") {
+    if (lt === false || rt === false) return constant(false);
+    if (lt === true && rt === true) return constant(true);
+    if (lt === null || rt === null) return set([true, false]);
+    return constant(lt && rt);
+  }
+  if (opType === "LogicalOr") {
+    if (lt === true || rt === true) return constant(true);
+    if (lt === false && rt === false) return constant(false);
+    if (lt === null || rt === null) return set([true, false]);
+    return constant(lt || rt);
   }
   return top;
+};
+
+const abstractTruthiness = (av: AbstractValue): boolean | null => {
+  if (av.kind === "constant") return isTruthy(av.value);
+  if (av.kind === "set") {
+    const truths = av.values.map(isTruthy);
+    const allTrue = truths.every(t => t);
+    const allFalse = truths.every(t => !t);
+    if (av.hasUserInput) return allTrue ? null : allFalse ? null : null;
+    if (allTrue) return true;
+    if (allFalse) return false;
+    return null;
+  }
+  if (av.kind === "range") {
+    if (av.min > 0 || av.max < 0) return true;
+    if (av.min === 0 && av.max === 0) return false;
+    return null;
+  }
+  return null;
 };
 
 const isTruthy = (value: string | number | boolean): boolean => {
@@ -253,6 +499,19 @@ const evaluateArithmetic = (
   }
 
   if (isNumericArithmeticOp(opType)) {
+    const leftNums = toNumericValues(left);
+    const rightNums = toNumericValues(right);
+    if (leftNums && rightNums && leftNums.length * rightNums.length <= MAX_SET_SIZE) {
+      const results: number[] = [];
+      for (const l of leftNums) {
+        for (const r of rightNums) {
+          const v = applyNumericOp(l, r, opType);
+          if (v !== null) results.push(v);
+        }
+      }
+      if (results.length > 0) return set(results);
+    }
+
     const leftRange = toRange(left);
     const rightRange = toRange(right);
     if (leftRange && rightRange) {
@@ -269,6 +528,17 @@ const isNumericArithmeticOp = (opType: string): boolean =>
   opType === "MultiplicationOperator" ||
   opType === "DivisionOperator" ||
   opType === "ModulusOperator";
+
+const applyNumericOp = (l: number, r: number, opType: string): number | null => {
+  switch (opType) {
+    case "AdditionOperator": return l + r;
+    case "SubtractionOperator": return l - r;
+    case "MultiplicationOperator": return l * r;
+    case "DivisionOperator": return r === 0 ? null : Math.floor(l / r);
+    case "ModulusOperator": return r === 0 ? null : l % r;
+    default: return null;
+  }
+};
 
 const INPUT_SENTINEL = "__USER_INPUT__";
 

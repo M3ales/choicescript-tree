@@ -8,15 +8,7 @@ export {
   isChoiceOptionEdge,
   isGoSubCall,
   isGoSubReturn,
-  isInlinedGoSubCall,
-  isInlinedGoSubReturn,
-  isAnyGoSubCall,
-  isAnyGoSubReturn,
   isConditionalBranch,
-  goSubCallToInlined,
-  goSubReturnToInlined,
 } from "./transition-kind";
 export type { TransitionMetadata } from "./transition-metadata";
 export type { Transition } from "./transition";
-export type { ControlFlowGraph } from "./control-flow-graph";
-export type { StatementIndexEntry } from "./statement-index-entry";

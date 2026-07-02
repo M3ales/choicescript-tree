@@ -32,6 +32,14 @@ export const writeNdjson = (
   return count;
 };
 
+export const ndjsonToString = (records: Iterable<unknown>): string => {
+  const chunks: string[] = [];
+  for (const record of records) {
+    chunks.push(JSON.stringify(record));
+  }
+  return chunks.join("\n") + "\n";
+};
+
 export const readNdjsonSync = <T>(path: string): T[] => {
   const content = getIO().readFile(path);
   const results: T[] = [];

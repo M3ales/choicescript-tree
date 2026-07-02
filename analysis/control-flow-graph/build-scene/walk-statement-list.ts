@@ -17,7 +17,7 @@ import { BlockEntryType, Transition, CodeBlock, TransitionKind, TransitionMetada
 import { BuilderContext } from "./builder-context";
 import { BlockSequence } from "./block-sequence";
 
-const qualifyStmtId = (state: BuilderContext, stmtId: number): string =>
+const qualifyStmtId = (state: BuilderContext, stmtId: string): string =>
   `${state.sceneName}:${stmtId}`;
 
 const beginCodeBlock = (state: BuilderContext, entryType: BlockEntryType): CodeBlock => {
@@ -115,7 +115,8 @@ export const walkStatementList = (
         break;
       }
 
-      case "Ending": {
+      case "Ending":
+      case "Bug": {
         currentBlock.statementIds.push(qualifyStmtId(state, stmt.statementId));
         currentBlock.exitType = "Ending";
         connect(state, currentBlock.id, null, "GameEnd");
@@ -150,6 +151,8 @@ export const walkStatementList = (
 
         for (const branch of ifStmt.elseIfBranches) {
           const result = walkStatementList(branch.body, state, "ConditionalBody", false);
+          const entryBlock = state.blocks[result.entryBlockId];
+          if (entryBlock) entryBlock.statementIds.unshift(qualifyStmtId(state, branch.statementId));
           connect(state, currentBlock.id, result.entryBlockId, "ElseIfBranch", {
             conditionStatementId: qualifyStmtId(state, branch.statementId),
           });
@@ -160,6 +163,8 @@ export const walkStatementList = (
 
         if (ifStmt.elseBranch) {
           const result = walkStatementList(ifStmt.elseBranch.body, state, "ConditionalBody", false);
+          const entryBlock = state.blocks[result.entryBlockId];
+          if (entryBlock) entryBlock.statementIds.unshift(qualifyStmtId(state, ifStmt.elseBranch.statementId));
           connect(state, currentBlock.id, result.entryBlockId, "ElseBranch");
           for (const exitId of result.exitBlockIds) {
             connect(state, exitId, contBlock.id, "FallThrough");
@@ -330,6 +335,8 @@ const connectChoiceOptions = (
     if (child.kind === "ChoiceOption") {
       const option = child as ChoiceOptionStatement;
       const result = walkStatementList(option.body, state, "ChoiceOptionEntry", false);
+      const entryBlock = state.blocks[result.entryBlockId];
+      if (entryBlock) entryBlock.statementIds.unshift(qualifyStmtId(state, option.statementId));
       const hasCheck = choiceCondition || option.selectableIf;
       const kind: TransitionKind = hasCheck ? "ChoiceOptionCheck" : "ChoiceOption";
       const metadata: TransitionMetadata = {
@@ -358,13 +365,17 @@ const connectChoiceOptions = (
     } else if (child.kind === "If") {
       const ifStmt = child as IfStatement;
       const ifId = qualifyStmtId(state, ifStmt.statementId);
+      const choiceBlock = state.blocks[choiceBlockId];
+      if (choiceBlock) choiceBlock.statementIds.push(qualifyStmtId(state, ifStmt.statementId));
       connectChoiceOptions(ifStmt.body, choiceBlockId, contBlockId, isChoice, state,
         { id: ifId, kind: "if" });
       for (const branch of ifStmt.elseIfBranches) {
+        if (choiceBlock) choiceBlock.statementIds.push(qualifyStmtId(state, branch.statementId));
         connectChoiceOptions(branch.body, choiceBlockId, contBlockId, isChoice, state,
           { id: qualifyStmtId(state, branch.statementId), kind: "elseif" });
       }
       if (ifStmt.elseBranch) {
+        if (choiceBlock) choiceBlock.statementIds.push(qualifyStmtId(state, ifStmt.elseBranch.statementId));
         connectChoiceOptions(ifStmt.elseBranch.body, choiceBlockId, contBlockId, isChoice, state,
           { id: ifId, kind: "else" });
       }

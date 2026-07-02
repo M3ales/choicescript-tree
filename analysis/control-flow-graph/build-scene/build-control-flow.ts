@@ -1,4 +1,4 @@
-import { SceneAstWithSymbolTable } from "../../symbol-table/scene-ast-with-symbol-table";
+import { SceneAst } from "../../../parser/scene";
 import { SceneControlFlowGraph } from "./scene-control-flow-graph";
 import { TransitionKind, BlockRef } from "../data";
 import { BuilderContext } from "./builder-context";
@@ -6,7 +6,7 @@ import { walkStatementList } from "./walk-statement-list";
 import { NdjsonWriter } from "../../ndjson";
 
 export const buildControlFlow = (
-  scene: SceneAstWithSymbolTable,
+  scene: SceneAst,
   blockWriter: NdjsonWriter,
 ): SceneControlFlowGraph => {
   const context: BuilderContext = {

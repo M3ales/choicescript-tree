@@ -146,18 +146,7 @@ export const narrowToValue = (
   target: string | number | boolean
 ): AbstractValue => {
   if (av.kind === "bottom") return bottom;
-  if (av.kind === "constant") {
-    return av.value === target ? av : bottom;
-  }
-  if (av.kind === "set") {
-    if (av.values.includes(target)) return constant(target);
-    return av.hasUserInput ? constant(target) : bottom;
-  }
-  if (av.kind === "range" && typeof target === "number") {
-    return target >= av.min && target <= av.max ? constant(target) : bottom;
-  }
-  if (av.kind === "top" || av.kind === "input" || av.kind === "loop") return constant(target);
-  return av;
+  return constant(target);
 };
 
 export const narrowToRange = (
