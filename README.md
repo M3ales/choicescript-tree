@@ -1,6 +1,6 @@
 # choicescript-tree
 
-A static analyser for [ChoiceScript](https://www.choiceofgames.com/make-your-own-games/choicescript-intro/) interactive fiction games. Implements a full compiler pipeline — fetch, scan, parse, analyse — that builds an AST, constructs control flow graphs, performs dataflow analysis, and generates human-readable output like choice guides and Graphviz diagrams.
+A static analyser for [ChoiceScript](https://www.choiceofgames.com/make-your-own-games/choicescript-intro/) interactive fiction games. Implements a full compiler pipeline that builds an AST, constructs control flow graphs, and performs dataflow analysis.
 
 ## Requirements
 
