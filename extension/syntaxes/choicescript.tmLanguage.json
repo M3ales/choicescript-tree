@@ -1,0 +1,309 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "ChoiceScript",
+  "scopeName": "source.choicescript",
+  "patterns": [
+    { "include": "#comment" },
+    { "include": "#command" },
+    { "include": "#choice-option" },
+    { "include": "#multireplace" },
+    { "include": "#variable-interpolation" },
+    { "include": "#prose" }
+  ],
+  "repository": {
+    "comment": {
+      "match": "^(\\s*)(\\*comment)(.*)$",
+      "captures": {
+        "2": { "name": "keyword.control.comment.choicescript" },
+        "3": { "name": "comment.line.choicescript" }
+      }
+    },
+    "command": {
+      "patterns": [
+        { "include": "#command-flow" },
+        { "include": "#command-selectable-if" },
+        { "include": "#command-reuse-modifier" },
+        { "include": "#command-variable" },
+        { "include": "#command-navigation" },
+        { "include": "#command-scene" },
+        { "include": "#command-output" },
+        { "include": "#command-other" }
+      ]
+    },
+    "command-flow": {
+      "begin": "^(\\s*)(\\*(?:if|elseif))\\b",
+      "end": "$",
+      "beginCaptures": {
+        "2": { "name": "keyword.control.flow.choicescript" }
+      },
+      "patterns": [
+        { "include": "#expression" }
+      ]
+    },
+    "command-selectable-if": {
+      "begin": "^(\\s*)(\\*selectable_if)\\b",
+      "end": "$",
+      "beginCaptures": {
+        "2": { "name": "keyword.control.flow.choicescript" }
+      },
+      "patterns": [
+        { "include": "#choice-option-inline" },
+        { "include": "#expression" }
+      ]
+    },
+    "command-reuse-modifier": {
+      "begin": "^(\\s*)(\\*(?:hide_reuse|disable_reuse|allow_reuse))\\b",
+      "end": "$",
+      "beginCaptures": {
+        "2": { "name": "keyword.other.modifier.choicescript" }
+      },
+      "patterns": [
+        { "include": "#choice-option-inline" }
+      ]
+    },
+    "choice-option-inline": {
+      "match": "(#)(.*)",
+      "captures": {
+        "1": { "name": "punctuation.definition.choice.choicescript" },
+        "2": {
+          "patterns": [
+            { "include": "#variable-interpolation" },
+            { "include": "#multireplace" },
+            {
+              "match": "[^$@{]+",
+              "name": "string.unquoted.choice-option.choicescript"
+            }
+          ]
+        }
+      }
+    },
+    "command-variable": {
+      "begin": "^(\\s*)(\\*(?:set|create|temp|rand|input_text|input_number|delete))\\s+",
+      "end": "$",
+      "beginCaptures": {
+        "2": { "name": "keyword.other.variable.choicescript" }
+      },
+      "patterns": [
+        {
+          "match": "\\G(\\w+)",
+          "name": "variable.other.choicescript"
+        },
+        { "include": "#expression" }
+      ]
+    },
+    "command-navigation": {
+      "patterns": [
+        {
+          "match": "^(\\s*)(\\*(?:goto|gosub))\\s+(\\w+)",
+          "captures": {
+            "2": { "name": "keyword.control.navigation.choicescript" },
+            "3": { "name": "entity.name.label.choicescript" }
+          }
+        },
+        {
+          "match": "^(\\s*)(\\*(?:goto_scene|gosub_scene))\\s+(\\w+)(?:\\s+(\\w+))?",
+          "captures": {
+            "2": { "name": "keyword.control.navigation.choicescript" },
+            "3": { "name": "entity.name.section.choicescript" },
+            "4": { "name": "entity.name.label.choicescript" }
+          }
+        },
+        {
+          "match": "^(\\s*)(\\*(?:goto_random_scene))\\b",
+          "captures": {
+            "2": { "name": "keyword.control.navigation.choicescript" }
+          }
+        }
+      ]
+    },
+    "command-scene": {
+      "patterns": [
+        {
+          "match": "^(\\s*)(\\*label)\\s+(\\w+)",
+          "captures": {
+            "2": { "name": "keyword.control.label.choicescript" },
+            "3": { "name": "entity.name.label.definition.choicescript" }
+          }
+        },
+        {
+          "match": "^(\\s*)(\\*(?:choice|fake_choice))\\b",
+          "captures": {
+            "2": { "name": "keyword.control.choice.choicescript" }
+          }
+        },
+        {
+          "match": "^(\\s*)(\\*(?:else|return|finish|ending|delay_ending))\\b",
+          "captures": {
+            "2": { "name": "keyword.control.flow.choicescript" }
+          }
+        },
+        {
+          "match": "^(\\s*)(\\*(?:scene_list|achievement|achieve|check_achievements))\\b",
+          "captures": {
+            "2": { "name": "keyword.other.choicescript" }
+          }
+        }
+      ]
+    },
+    "command-output": {
+      "patterns": [
+        {
+          "match": "^(\\s*)(\\*(?:page_break|line_break|image|text_image|link|stat_chart))\\b",
+          "captures": {
+            "2": { "name": "keyword.other.output.choicescript" }
+          }
+        }
+      ]
+    },
+    "command-other": {
+      "patterns": [
+        {
+          "match": "^(\\s*)(\\*(?:hide_reuse|disable_reuse|allow_reuse))\\b",
+          "captures": {
+            "2": { "name": "keyword.other.modifier.choicescript" }
+          }
+        },
+        {
+          "match": "^(\\s*)(\\*(?:create_array|temp_array|delete_array))\\b",
+          "captures": {
+            "2": { "name": "keyword.other.variable.choicescript" }
+          }
+        },
+        {
+          "match": "^(\\s*)(\\*(?:save_checkpoint|restore_checkpoint))\\b",
+          "captures": {
+            "2": { "name": "keyword.other.checkpoint.choicescript" }
+          }
+        },
+        {
+          "match": "^(\\s*)(\\*(?:params|author|ifid))\\b",
+          "captures": {
+            "2": { "name": "keyword.other.meta.choicescript" }
+          }
+        },
+        {
+          "match": "^(\\s*)(\\*\\w+)\\b",
+          "captures": {
+            "2": { "name": "keyword.other.choicescript" }
+          }
+        }
+      ]
+    },
+    "choice-option": {
+      "match": "^(\\s*)(#)(.*)",
+      "captures": {
+        "2": { "name": "punctuation.definition.choice.choicescript" },
+        "3": {
+          "patterns": [
+            { "include": "#variable-interpolation" },
+            { "include": "#multireplace" },
+            {
+              "match": "[^$@{]+",
+              "name": "string.unquoted.choice-option.choicescript"
+            }
+          ]
+        }
+      }
+    },
+    "variable-interpolation": {
+      "patterns": [
+        {
+          "match": "(\\$\\{)(\\w+)(\\})",
+          "captures": {
+            "1": { "name": "punctuation.definition.interpolation.begin.choicescript" },
+            "2": { "name": "variable.other.readwrite.choicescript" },
+            "3": { "name": "punctuation.definition.interpolation.end.choicescript" }
+          }
+        },
+        {
+          "match": "(\\$!?\\{)(\\w+)(\\})",
+          "captures": {
+            "1": { "name": "punctuation.definition.interpolation.begin.choicescript" },
+            "2": { "name": "variable.other.readwrite.choicescript" },
+            "3": { "name": "punctuation.definition.interpolation.end.choicescript" }
+          }
+        }
+      ]
+    },
+    "multireplace": {
+      "begin": "@\\{",
+      "end": "\\}",
+      "beginCaptures": {
+        "0": { "name": "punctuation.definition.multireplace.begin.choicescript" }
+      },
+      "endCaptures": {
+        "0": { "name": "punctuation.definition.multireplace.end.choicescript" }
+      },
+      "name": "meta.multireplace.choicescript",
+      "patterns": [
+        {
+          "match": "\\|",
+          "name": "punctuation.separator.multireplace.choicescript"
+        },
+        { "include": "#variable-interpolation" }
+      ]
+    },
+    "expression": {
+      "patterns": [
+        {
+          "match": "\"[^\"]*\"",
+          "name": "string.quoted.double.choicescript"
+        },
+        {
+          "match": "\\b(true|false)\\b",
+          "name": "constant.language.boolean.choicescript"
+        },
+        {
+          "match": "\\b\\d+(\\.\\d+)?\\b",
+          "name": "constant.numeric.choicescript"
+        },
+        {
+          "match": "\\b(and|or|not)\\b",
+          "name": "keyword.operator.logical.choicescript"
+        },
+        {
+          "match": "\\b(modulo)\\b",
+          "name": "keyword.operator.arithmetic.choicescript"
+        },
+        {
+          "match": "%[+-]",
+          "name": "keyword.operator.fairmath.choicescript"
+        },
+        {
+          "match": "[=!<>%+\\-*/&]+",
+          "name": "keyword.operator.choicescript"
+        },
+        {
+          "match": "\\b(round|timestamp|length)\\b",
+          "name": "support.function.builtin.choicescript"
+        },
+        {
+          "match": "\\b\\w+\\b",
+          "name": "variable.other.choicescript"
+        }
+      ]
+    },
+    "prose": {
+      "patterns": [
+        { "include": "#variable-interpolation" },
+        { "include": "#multireplace" },
+        { "include": "#italic-tag" },
+        { "include": "#bold-tag" }
+      ]
+    },
+    "italic-tag": {
+      "begin": "\\[i\\]",
+      "end": "\\[/i\\]",
+      "beginCaptures": { "0": { "name": "punctuation.definition.tag.choicescript" } },
+      "endCaptures": { "0": { "name": "punctuation.definition.tag.choicescript" } },
+      "contentName": "markup.italic.choicescript"
+    },
+    "bold-tag": {
+      "begin": "\\[b\\]",
+      "end": "\\[/b\\]",
+      "beginCaptures": { "0": { "name": "punctuation.definition.tag.choicescript" } },
+      "endCaptures": { "0": { "name": "punctuation.definition.tag.choicescript" } },
+      "contentName": "markup.bold.choicescript"
+    }
+  }
+}

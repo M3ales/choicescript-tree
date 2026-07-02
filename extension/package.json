@@ -1,0 +1,70 @@
+{
+  "name": "choicescript-analyser",
+  "displayName": "ChoiceScript Analyser",
+  "description": "Syntax highlighting and diagnostics for ChoiceScript interactive fiction",
+  "version": "0.1.0",
+  "publisher": "choicescript-tree",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": ["Programming Languages"],
+  "activationEvents": ["onStartupFinished"],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "choicescript",
+        "aliases": ["ChoiceScript", "choicescript"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "choicescript",
+        "scopeName": "source.choicescript",
+        "path": "./syntaxes/choicescript.tmLanguage.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "choicescript.setLanguageMode",
+        "title": "Set as ChoiceScript",
+        "category": "ChoiceScript"
+      },
+      {
+        "command": "choicescript.analyseWorkspace",
+        "title": "Analyse Workspace",
+        "category": "ChoiceScript"
+      },
+      {
+        "command": "choicescript.clearCache",
+        "title": "Clear Cache & Re-analyse",
+        "category": "ChoiceScript"
+      }
+    ],
+    "configuration": {
+      "title": "ChoiceScript",
+      "properties": {
+        "choicescript.autoDetect": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically detect ChoiceScript projects by looking for startup.txt"
+        },
+        "choicescript.showConditionHints": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show inline condition hints on *elseif and *else lines"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "build": "node esbuild.mjs",
+    "watch": "node esbuild.mjs --watch"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "esbuild": "^0.25.0"
+  }
+}
