@@ -49,6 +49,6 @@ export class AsyncToSyncAdapter implements IO {
   }
 
   private normalize(p: string): string {
-    return p.replace(/\\/g, "/");
+    return p.replace(/\\/g, "/").replace(/^\.\//, "");
   }
 }

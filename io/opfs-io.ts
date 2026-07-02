@@ -54,11 +54,33 @@ export class OpfsIO implements AsyncIO {
     return result;
   }
 
+  async listAll(prefix: string = ""): Promise<{ path: string; size: number }[]> {
+    const result: { path: string; size: number }[] = [];
+    await this.collectMeta(this.root, prefix, result);
+    return result;
+  }
+
   async clear(): Promise<void> {
     for await (const key of (this.root as any).keys()) {
       await this.root.removeEntry(key, { recursive: true });
     }
     this.dirs.clear();
+  }
+
+  private async collectMeta(
+    dir: FileSystemDirectoryHandle,
+    prefix: string,
+    result: { path: string; size: number }[],
+  ): Promise<void> {
+    for await (const [name, handle] of (dir as any).entries()) {
+      const fullPath = prefix ? `${prefix}/${name}` : name;
+      if (handle.kind === "file") {
+        const file = await (handle as FileSystemFileHandle).getFile();
+        result.push({ path: fullPath, size: file.size });
+      } else {
+        await this.collectMeta(handle as FileSystemDirectoryHandle, fullPath, result);
+      }
+    }
   }
 
   private async collectEntries(
