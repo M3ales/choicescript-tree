@@ -1,0 +1,23 @@
+{
+  "segmentCount": 1,
+  "edgeCount": 0,
+  "entrySegmentId": "seg_0",
+  "segments": {
+    "seg_0": {
+      "cfgId": "startup:",
+      "entries": [
+        {
+          "kind": "game-start"
+        }
+      ],
+      "exits": [
+        {
+          "kind": "terminal"
+        }
+      ],
+      "blockCount": 1,
+      "gosubCount": 0
+    }
+  },
+  "edges": []
+}

@@ -1,0 +1,35 @@
+{
+  "states": [
+    {
+      "cfgId": "startup:",
+      "entryGlobals": [
+        {
+          "thanksgiving_food": ""
+        }
+      ],
+      "exitGlobals": [
+        {
+          "thanksgiving_food": ""
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:set_the_table",
+      "entryGlobals": [
+        {
+          "thanksgiving_food": ""
+        }
+      ],
+      "exitGlobals": [
+        {
+          "thanksgiving_food": "{,empanadas and salsa with tacos,hummus and flatbread,marinated skewers and crushed cucumber salad,stew and mashed potatoes}"
+        }
+      ]
+    }
+  ],
+  "diagnostics": {
+    "unresolvedExits": 0,
+    "droppedContexts": 0,
+    "missingCfgs": []
+  }
+}

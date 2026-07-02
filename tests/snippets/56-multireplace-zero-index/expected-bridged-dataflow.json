@@ -1,0 +1,17 @@
+{
+  "cfgCount": 1,
+  "states": [
+    {
+      "cfgId": "startup:",
+      "entryGlobals": [
+        {
+          "pet": "0",
+          "mood": "happy",
+          "gender": "2",
+          "is_tall": "true",
+          "count": "3"
+        }
+      ]
+    }
+  ]
+}

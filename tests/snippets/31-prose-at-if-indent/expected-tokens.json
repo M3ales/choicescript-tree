@@ -1165,10 +1165,10 @@
       "type": "Identifier",
       "value": "top",
       "rawValue": "top",
-      "position": 6,
-      "lineNumber": 4,
       "sceneName": "startup",
       "indent": 0,
+      "lineNumber": 4,
+      "position": 7,
       "isLabelName": true
     },
     {
@@ -1371,10 +1371,10 @@
       "type": "Identifier",
       "value": "t1cont",
       "rawValue": "t1cont",
-      "position": 8,
-      "lineNumber": 13,
       "sceneName": "startup",
       "indent": 1,
+      "lineNumber": 13,
+      "position": 8,
       "isLabelName": true
     },
     {
@@ -1505,10 +1505,10 @@
       "type": "Identifier",
       "value": "t1cont",
       "rawValue": "t1cont",
-      "position": 8,
-      "lineNumber": 18,
       "sceneName": "startup",
       "indent": 1,
+      "lineNumber": 18,
+      "position": 8,
       "isLabelName": true
     },
     {
@@ -1600,10 +1600,10 @@
       "type": "Identifier",
       "value": "t1cont",
       "rawValue": "t1cont",
-      "position": 8,
-      "lineNumber": 23,
       "sceneName": "startup",
       "indent": 1,
+      "lineNumber": 23,
+      "position": 8,
       "isLabelName": true
     },
     {
@@ -1680,10 +1680,10 @@
       "type": "Identifier",
       "value": "t1cont",
       "rawValue": "t1cont",
-      "position": 6,
-      "lineNumber": 26,
       "sceneName": "startup",
       "indent": 0,
+      "lineNumber": 26,
+      "position": 7,
       "isLabelName": true
     },
     {
@@ -1838,10 +1838,10 @@
       "type": "Identifier",
       "value": "t2cont",
       "rawValue": "t2cont",
-      "position": 8,
-      "lineNumber": 34,
       "sceneName": "startup",
       "indent": 1,
+      "lineNumber": 34,
+      "position": 8,
       "isLabelName": true
     },
     {
@@ -1972,10 +1972,10 @@
       "type": "Identifier",
       "value": "t2cont",
       "rawValue": "t2cont",
-      "position": 8,
-      "lineNumber": 39,
       "sceneName": "startup",
       "indent": 1,
+      "lineNumber": 39,
+      "position": 8,
       "isLabelName": true
     },
     {
@@ -2067,10 +2067,10 @@
       "type": "Identifier",
       "value": "t2cont",
       "rawValue": "t2cont",
-      "position": 8,
-      "lineNumber": 44,
       "sceneName": "startup",
       "indent": 1,
+      "lineNumber": 44,
+      "position": 8,
       "isLabelName": true
     },
     {
@@ -2147,10 +2147,10 @@
       "type": "Identifier",
       "value": "t2cont",
       "rawValue": "t2cont",
-      "position": 6,
-      "lineNumber": 47,
       "sceneName": "startup",
       "indent": 0,
+      "lineNumber": 47,
+      "position": 7,
       "isLabelName": true
     },
     {
@@ -2305,10 +2305,10 @@
       "type": "Identifier",
       "value": "t3cont",
       "rawValue": "t3cont",
-      "position": 8,
-      "lineNumber": 55,
       "sceneName": "startup",
       "indent": 1,
+      "lineNumber": 55,
+      "position": 8,
       "isLabelName": true
     },
     {
@@ -2439,10 +2439,10 @@
       "type": "Identifier",
       "value": "t3cont",
       "rawValue": "t3cont",
-      "position": 8,
-      "lineNumber": 60,
       "sceneName": "startup",
       "indent": 1,
+      "lineNumber": 60,
+      "position": 8,
       "isLabelName": true
     },
     {
@@ -2534,10 +2534,10 @@
       "type": "Identifier",
       "value": "t3cont",
       "rawValue": "t3cont",
-      "position": 8,
-      "lineNumber": 65,
       "sceneName": "startup",
       "indent": 1,
+      "lineNumber": 65,
+      "position": 8,
       "isLabelName": true
     },
     {
@@ -2614,10 +2614,10 @@
       "type": "Identifier",
       "value": "t3cont",
       "rawValue": "t3cont",
-      "position": 6,
-      "lineNumber": 68,
       "sceneName": "startup",
       "indent": 0,
+      "lineNumber": 68,
+      "position": 7,
       "isLabelName": true
     },
     {
@@ -2772,10 +2772,10 @@
       "type": "Identifier",
       "value": "t4cont",
       "rawValue": "t4cont",
-      "position": 8,
-      "lineNumber": 76,
       "sceneName": "startup",
       "indent": 1,
+      "lineNumber": 76,
+      "position": 8,
       "isLabelName": true
     },
     {
@@ -2852,10 +2852,10 @@
       "type": "Identifier",
       "value": "t4cont",
       "rawValue": "t4cont",
-      "position": 6,
-      "lineNumber": 79,
       "sceneName": "startup",
       "indent": 0,
+      "lineNumber": 79,
+      "position": 7,
       "isLabelName": true
     },
     {

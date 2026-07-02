@@ -1,0 +1,16 @@
+{
+  "deadBranchCount": 1,
+  "deadBranches": [
+    {
+      "blockId": "chapter1:b_2",
+      "scene": "chapter1",
+      "reason": "condition-false"
+    }
+  ],
+  "controlFlowViolationCount": 0,
+  "controlFlowViolations": [],
+  "undeclaredSetCount": 0,
+  "undeclaredSets": [],
+  "multiReplaceViolationCount": 0,
+  "multiReplaceViolations": []
+}

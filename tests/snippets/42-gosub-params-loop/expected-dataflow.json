@@ -1,0 +1,87 @@
+{
+  "states": [
+    {
+      "cfgId": "startup:",
+      "entryGlobals": [
+        {
+          "total": "0",
+          "rounds": "0",
+          "label": ""
+        }
+      ],
+      "exitGlobals": [
+        {
+          "total": "0",
+          "rounds": "0",
+          "label": ""
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:hub",
+      "entryGlobals": [
+        {
+          "total": "0",
+          "rounds": "0",
+          "label": ""
+        },
+        {
+          "total": "10",
+          "rounds": "1",
+          "label": "round 1"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "total": "0",
+          "rounds": "1",
+          "label": ""
+        },
+        {
+          "total": "10",
+          "rounds": "2",
+          "label": "round 1"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:add_value",
+      "entryGlobals": [
+        {
+          "total": "0",
+          "rounds": "1",
+          "label": ""
+        }
+      ],
+      "exitGlobals": [
+        {
+          "total": "10",
+          "rounds": "1",
+          "label": "round 1"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:hub__cont_0",
+      "entryGlobals": [
+        {
+          "total": "10",
+          "rounds": "1",
+          "label": "round 1"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "total": "10",
+          "rounds": "1",
+          "label": "round 1"
+        }
+      ]
+    }
+  ],
+  "diagnostics": {
+    "unresolvedExits": 0,
+    "droppedContexts": 0,
+    "missingCfgs": []
+  }
+}

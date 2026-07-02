@@ -1,0 +1,377 @@
+[
+  [
+    {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 0,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "gold",
+      "rawValue": "gold",
+      "position": 8,
+      "lineNumber": 0,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 50,
+      "position": 13,
+      "lineNumber": 0,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Label",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 2,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "shop",
+      "rawValue": "shop",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 2,
+      "position": 7,
+      "isLabelName": true
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 3,
+      "position": 0,
+      "indent": 0,
+      "content": "Gold: "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "startup",
+      "lineNumber": 3,
+      "position": 6,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "gold",
+      "rawValue": "gold",
+      "position": 8,
+      "lineNumber": 3,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "startup",
+      "lineNumber": 3,
+      "position": 12,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 3,
+      "position": 13,
+      "indent": 0,
+      "content": ".\n"
+    },
+    {
+      "type": "Choice",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 4,
+      "position": 0
+    },
+    {
+      "type": "SelectableIf",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 5,
+      "position": 2
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 17,
+      "lineNumber": 5,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "Identifier",
+      "value": "gold",
+      "rawValue": "gold",
+      "position": 18,
+      "lineNumber": 5,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "GreaterThanEqualsOperator",
+      "rawValue": ">=",
+      "position": 23,
+      "lineNumber": 5,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 20,
+      "position": 26,
+      "lineNumber": 5,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 28,
+      "lineNumber": 5,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 5,
+      "position": 30,
+      "rawText": "Buy armor (20g).",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 5,
+      "position": 31,
+      "indent": 1,
+      "content": "Buy armor (20g)."
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 2,
+      "lineNumber": 6,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "gold",
+      "rawValue": "gold",
+      "position": 9,
+      "lineNumber": 6,
+      "sceneName": "startup",
+      "indent": 2
+    },
+    {
+      "type": "SubtractionOperator",
+      "rawValue": "-",
+      "position": 14,
+      "lineNumber": 6,
+      "sceneName": "startup",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 20,
+      "position": 16,
+      "lineNumber": 6,
+      "sceneName": "startup",
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 7,
+      "position": 4,
+      "indent": 2,
+      "content": "You bought armor.\n"
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "startup",
+      "indent": 2,
+      "lineNumber": 8,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "shop",
+      "rawValue": "shop",
+      "sceneName": "startup",
+      "indent": 2,
+      "lineNumber": 8,
+      "position": 10,
+      "isLabelName": true
+    },
+    {
+      "type": "SelectableIf",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 9,
+      "position": 2
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 17,
+      "lineNumber": 9,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "Identifier",
+      "value": "gold",
+      "rawValue": "gold",
+      "position": 18,
+      "lineNumber": 9,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "GreaterThanEqualsOperator",
+      "rawValue": ">=",
+      "position": 23,
+      "lineNumber": 9,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 10,
+      "position": 26,
+      "lineNumber": 9,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 28,
+      "lineNumber": 9,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 9,
+      "position": 30,
+      "rawText": "Buy potion (10g).",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 9,
+      "position": 31,
+      "indent": 1,
+      "content": "Buy potion (10g)."
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 2,
+      "lineNumber": 10,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "gold",
+      "rawValue": "gold",
+      "position": 9,
+      "lineNumber": 10,
+      "sceneName": "startup",
+      "indent": 2
+    },
+    {
+      "type": "SubtractionOperator",
+      "rawValue": "-",
+      "position": 14,
+      "lineNumber": 10,
+      "sceneName": "startup",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 10,
+      "position": 16,
+      "lineNumber": 10,
+      "sceneName": "startup",
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 11,
+      "position": 4,
+      "indent": 2,
+      "content": "You bought a potion.\n"
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "startup",
+      "indent": 2,
+      "lineNumber": 12,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "shop",
+      "rawValue": "shop",
+      "sceneName": "startup",
+      "indent": 2,
+      "lineNumber": 12,
+      "position": 10,
+      "isLabelName": true
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 13,
+      "position": 2,
+      "rawText": "Leave.",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 13,
+      "position": 3,
+      "indent": 1,
+      "content": "Leave."
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 14,
+      "position": 4,
+      "indent": 2,
+      "content": "You leave.\n"
+    },
+    {
+      "type": "Finish",
+      "sceneName": "startup",
+      "indent": 2,
+      "lineNumber": 15,
+      "position": 4
+    },
+    {
+      "lineNumber": 17,
+      "indent": 0,
+      "position": 0,
+      "sceneName": "startup",
+      "type": "SceneEnd"
+    }
+  ]
+]

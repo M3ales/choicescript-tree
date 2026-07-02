@@ -1,0 +1,29 @@
+{
+  "cfgCount": 3,
+  "states": [
+    {
+      "cfgId": "chapter1:",
+      "entryGlobals": [
+        {
+          "score": "0"
+        }
+      ]
+    },
+    {
+      "cfgId": "chapter2:",
+      "entryGlobals": [
+        {
+          "score": "0"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:",
+      "entryGlobals": [
+        {
+          "score": "0"
+        }
+      ]
+    }
+  ]
+}

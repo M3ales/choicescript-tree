@@ -1,0 +1,47 @@
+[
+  {
+    "sceneName": "startup",
+    "blocks": {
+      "startup:b_0": {
+        "exitType": "Finish"
+      },
+      "startup:b_1": {
+        "exitType": "FallThrough"
+      }
+    },
+    "blockIndex": {
+      "startup:b_0": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:1i79n8a1cxwews",
+          "startup:jd10iajdnbgo",
+          "startup:8d8qlt1oablvv",
+          "startup:1kvx5g71xc76ut",
+          "startup:rbqag71qo6l75",
+          "startup:czlnt610es78o",
+          "startup:81ra9a11xxu5o",
+          "startup:1d6p9g01ne2t2i"
+        ],
+        "entryType": "SceneEntry",
+        "exitType": "Finish"
+      },
+      "startup:b_1": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      }
+    },
+    "edges": [
+      {
+        "kind": "SceneExit",
+        "sourceBlockId": "startup:b_0",
+        "targetBlockId": null,
+        "metadata": {}
+      }
+    ],
+    "entryBlockId": "startup:b_0",
+    "labelToBlockId": {},
+    "unresolvedEdges": []
+  }
+]

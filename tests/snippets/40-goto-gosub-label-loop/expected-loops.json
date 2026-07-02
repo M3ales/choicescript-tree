@@ -1,0 +1,30 @@
+[
+  {
+    "headerCfgId": "startup:rejoin_teammates_g",
+    "bodyCfgIds": [
+      "startup:rejoin_teammates_g"
+    ],
+    "backEdgeCount": 1,
+    "exitCount": 1,
+    "mechanism": "call-chain",
+    "pure": false,
+    "bound": "unbounded",
+    "tripCount": null,
+    "unrollDepth": null,
+    "infinite": false
+  },
+  {
+    "headerCfgId": "startup:goto_loop",
+    "bodyCfgIds": [
+      "startup:goto_loop"
+    ],
+    "backEdgeCount": 1,
+    "exitCount": 0,
+    "mechanism": "direct",
+    "pure": false,
+    "bound": "unbounded",
+    "tripCount": null,
+    "unrollDepth": null,
+    "infinite": "unbounded-infinite"
+  }
+]

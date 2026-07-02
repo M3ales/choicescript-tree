@@ -1,0 +1,43 @@
+*create gender "female"
+*create trans false
+*create father 50
+*create intense 30
+*create genuine 40
+*create endurance 22
+*create condition 100
+
+*set father %+4
+*set intense %+4
+*set genuine %+4
+You feel emotional.
+
+*if (gender = "male")
+  He sends his son off.
+*if (gender = "non-binary")
+  He sends his kid off.
+*if (gender = "female")
+  He sends his daughter off.
+*if (trans)
+  Your dad was there for your transition.
+
+Your father jerks a hand at the door.
+*gosub race_stage_condition_drain 5
+
+*goto choose_restaurant
+
+*label race_stage_condition_drain
+*params cost
+*if endurance > 24
+  *set condition - cost
+*elseif endurance > 20
+  *set condition - (cost * 2)
+*elseif endurance > 16
+  *set condition - (cost * 3)
+*else
+  *set condition - (cost * 4)
+*if condition < 0
+  *set condition 0
+*return
+
+*label choose_restaurant
+You pick a restaurant.

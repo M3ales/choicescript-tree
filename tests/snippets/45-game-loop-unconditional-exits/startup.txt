@@ -1,0 +1,28 @@
+*create stamina 100
+*create score 0
+*create intensity 1
+
+*label match_loop
+*set stamina - 2
+
+*if (stamina < 50)
+  *set intensity + 1
+  *goto intense_phase
+
+*set score + 1
+*goto match_loop
+
+*label intense_phase
+*set score + intensity
+*if (intensity > 3)
+  *goto final_rally
+
+*goto match_loop
+
+*label final_rally
+*set score + 10
+*goto match_over
+
+*label match_over
+The match is over. Score: ${score}.
+*finish

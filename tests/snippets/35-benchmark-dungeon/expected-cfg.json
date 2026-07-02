@@ -142,12 +142,12 @@
       "boss:b_0": {
         "scene": "boss",
         "statementIds": [
-          "boss:0",
-          "boss:1",
-          "boss:2",
-          "boss:3",
-          "boss:4",
-          "boss:5"
+          "boss:18cg02bri3ozt",
+          "boss:1nxt5oadiu9fo",
+          "boss:lfvl24xuqzqe",
+          "boss:2kj5pk4rho1y",
+          "boss:9fk4am1ip9rc8",
+          "boss:tsx3xg12ufo62"
         ],
         "entryType": "SceneEntry",
         "exitType": "FallThrough"
@@ -155,9 +155,9 @@
       "boss:b_1": {
         "scene": "boss",
         "statementIds": [
-          "boss:6",
-          "boss:7",
-          "boss:13"
+          "boss:jwkf8g10jtj5m",
+          "boss:1er2td91y80hkf",
+          "boss:2666fo620hm"
         ],
         "entryType": "Label",
         "exitType": "Branch",
@@ -166,8 +166,8 @@
       "boss:b_2": {
         "scene": "boss",
         "statementIds": [
-          "boss:14",
-          "boss:16"
+          "boss:3hkzxl15wdfdb",
+          "boss:1g7qhq3atp04l"
         ],
         "entryType": "Continuation",
         "exitType": "Branch"
@@ -175,7 +175,7 @@
       "boss:b_3": {
         "scene": "boss",
         "statementIds": [
-          "boss:12"
+          "boss:1cfi0vqw4r0ig"
         ],
         "entryType": "ConditionalBody",
         "exitType": "Branch"
@@ -189,10 +189,10 @@
       "boss:b_5": {
         "scene": "boss",
         "statementIds": [
-          "boss:8",
-          "boss:9",
-          "boss:10",
-          "boss:11"
+          "boss:79ysuq1gl4iyw",
+          "boss:l5hvwh1ku1lpj",
+          "boss:7044m51e1zynn",
+          "boss:41rqel2f9nez"
         ],
         "entryType": "ConditionalBody",
         "exitType": "FallThrough"
@@ -200,7 +200,7 @@
       "boss:b_6": {
         "scene": "boss",
         "statementIds": [
-          "boss:18"
+          "boss:jjtj6itgu41s"
         ],
         "entryType": "Continuation",
         "exitType": "Branch"
@@ -208,7 +208,7 @@
       "boss:b_7": {
         "scene": "boss",
         "statementIds": [
-          "boss:15"
+          "boss:1ouqc0rz4sqjd"
         ],
         "entryType": "ConditionalBody",
         "exitType": "Goto"
@@ -222,7 +222,7 @@
       "boss:b_9": {
         "scene": "boss",
         "statementIds": [
-          "boss:84"
+          "boss:1qt5ertgdd7ir"
         ],
         "entryType": "Continuation",
         "exitType": "Choice"
@@ -230,7 +230,7 @@
       "boss:b_10": {
         "scene": "boss",
         "statementIds": [
-          "boss:17"
+          "boss:rh9f0q1o1xxo4"
         ],
         "entryType": "ConditionalBody",
         "exitType": "Goto"
@@ -250,14 +250,15 @@
       "boss:b_13": {
         "scene": "boss",
         "statementIds": [
-          "boss:19",
-          "boss:20",
-          "boss:21",
-          "boss:22",
-          "boss:23",
-          "boss:24",
-          "boss:25",
-          "boss:27"
+          "boss:1ckw5h9zqtsmf",
+          "boss:8i5cq546v33n",
+          "boss:1my10501sluwx2",
+          "boss:11mvmgq1d52ft0",
+          "boss:1fztkya1oriryc",
+          "boss:7e79fm1y069w4",
+          "boss:8kmhds1yyuty6",
+          "boss:gr9jl03pulyy",
+          "boss:xt7azchwbuky"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "Branch"
@@ -265,9 +266,9 @@
       "boss:b_14": {
         "scene": "boss",
         "statementIds": [
-          "boss:28",
-          "boss:29",
-          "boss:30"
+          "boss:1aletju1omba2w",
+          "boss:7pqiu01dktqzi",
+          "boss:pcvvoc1ilawe2"
         ],
         "entryType": "Continuation",
         "exitType": "Goto"
@@ -275,7 +276,7 @@
       "boss:b_15": {
         "scene": "boss",
         "statementIds": [
-          "boss:26"
+          "boss:3s2j3poy35l3"
         ],
         "entryType": "ConditionalBody",
         "exitType": "FallThrough"
@@ -289,9 +290,10 @@
       "boss:b_17": {
         "scene": "boss",
         "statementIds": [
-          "boss:32",
-          "boss:33",
-          "boss:40"
+          "boss:716u7cjzpnfy",
+          "boss:gkp9791gp0hxb",
+          "boss:15xnt951ybtlj",
+          "boss:u9wb5jzvo5eh"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "Branch"
@@ -299,10 +301,10 @@
       "boss:b_18": {
         "scene": "boss",
         "statementIds": [
-          "boss:41",
-          "boss:42",
-          "boss:43",
-          "boss:45"
+          "boss:1mmlrbmvoj0uc",
+          "boss:2ny00j1091rsh",
+          "boss:p4okq8ol0sx2",
+          "boss:i4anyufpnato"
         ],
         "entryType": "Continuation",
         "exitType": "Branch"
@@ -310,10 +312,10 @@
       "boss:b_19": {
         "scene": "boss",
         "statementIds": [
-          "boss:34",
-          "boss:35",
-          "boss:36",
-          "boss:37"
+          "boss:15bbcuvkhod2x",
+          "boss:1xx63gofc4e2m",
+          "boss:1gly10j13h1dp9",
+          "boss:nepddc1zsi8y"
         ],
         "entryType": "ConditionalBody",
         "exitType": "FallThrough"
@@ -321,7 +323,8 @@
       "boss:b_20": {
         "scene": "boss",
         "statementIds": [
-          "boss:38"
+          "boss:1gee2m52yyftz",
+          "boss:1xdrdle1bxfri0"
         ],
         "entryType": "ConditionalBody",
         "exitType": "FallThrough"
@@ -329,9 +332,9 @@
       "boss:b_21": {
         "scene": "boss",
         "statementIds": [
-          "boss:46",
-          "boss:47",
-          "boss:48"
+          "boss:gcz4kucov998",
+          "boss:1in151t8hc56b",
+          "boss:k124x1eyts5r"
         ],
         "entryType": "Continuation",
         "exitType": "Goto"
@@ -339,7 +342,7 @@
       "boss:b_22": {
         "scene": "boss",
         "statementIds": [
-          "boss:44"
+          "boss:ncmcule9kjf3"
         ],
         "entryType": "ConditionalBody",
         "exitType": "FallThrough"
@@ -353,11 +356,12 @@
       "boss:b_24": {
         "scene": "boss",
         "statementIds": [
-          "boss:51",
-          "boss:52",
-          "boss:53",
-          "boss:54",
-          "boss:56"
+          "boss:1u1yb6g1ixcq4u",
+          "boss:xdmh967oziss",
+          "boss:lith3e3ial7g",
+          "boss:4vmw4a3pc2r8",
+          "boss:1vduotw1uy4t6",
+          "boss:98uatve4dqch"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "Branch"
@@ -365,11 +369,11 @@
       "boss:b_25": {
         "scene": "boss",
         "statementIds": [
-          "boss:57",
-          "boss:58",
-          "boss:59",
-          "boss:60",
-          "boss:62"
+          "boss:l9vaf61ca27ck",
+          "boss:vluvgt19fouwv",
+          "boss:3ple80198yrae",
+          "boss:1hu7cb11ecxft7",
+          "boss:1j8le75tkgnmn"
         ],
         "entryType": "Continuation",
         "exitType": "Branch"
@@ -377,7 +381,7 @@
       "boss:b_26": {
         "scene": "boss",
         "statementIds": [
-          "boss:55"
+          "boss:t6agrtxgaxwr"
         ],
         "entryType": "ConditionalBody",
         "exitType": "FallThrough"
@@ -385,9 +389,9 @@
       "boss:b_27": {
         "scene": "boss",
         "statementIds": [
-          "boss:63",
-          "boss:64",
-          "boss:65"
+          "boss:19lxax011m83y6",
+          "boss:1wzqacjf6xbu1",
+          "boss:14kih3nj9u1ed"
         ],
         "entryType": "Continuation",
         "exitType": "Goto"
@@ -395,7 +399,7 @@
       "boss:b_28": {
         "scene": "boss",
         "statementIds": [
-          "boss:61"
+          "boss:1jsmwav1qjeful"
         ],
         "entryType": "ConditionalBody",
         "exitType": "FallThrough"
@@ -409,9 +413,10 @@
       "boss:b_30": {
         "scene": "boss",
         "statementIds": [
-          "boss:68",
-          "boss:69",
-          "boss:81"
+          "boss:1tcaptn9p7vpl",
+          "boss:qlajdf1740u5",
+          "boss:19dny7hdihjx7",
+          "boss:d6bwhw10acmf6"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "Branch"
@@ -419,7 +424,7 @@
       "boss:b_31": {
         "scene": "boss",
         "statementIds": [
-          "boss:82"
+          "boss:jmrjt91wt2he3"
         ],
         "entryType": "Continuation",
         "exitType": "Goto"
@@ -427,11 +432,11 @@
       "boss:b_32": {
         "scene": "boss",
         "statementIds": [
-          "boss:70",
-          "boss:71",
-          "boss:72",
-          "boss:73",
-          "boss:74"
+          "boss:1jjihksr0n53y",
+          "boss:1fhfvkc1s0vfja",
+          "boss:1hmiw1q766e7w",
+          "boss:us46ngc8ldku",
+          "boss:1wdbxqo1k7aoe6"
         ],
         "entryType": "ConditionalBody",
         "exitType": "FallThrough"
@@ -439,11 +444,12 @@
       "boss:b_33": {
         "scene": "boss",
         "statementIds": [
-          "boss:75",
-          "boss:76",
-          "boss:77",
-          "boss:78",
-          "boss:79"
+          "boss:6rn1pd1n9v4ff",
+          "boss:193e44vwssbzt",
+          "boss:5wte8irzcjyw",
+          "boss:xrquqlpjm44r",
+          "boss:lwle9uc446qo",
+          "boss:1nk4k3lb5x5ln"
         ],
         "entryType": "ConditionalBody",
         "exitType": "FallThrough"
@@ -457,11 +463,11 @@
       "boss:b_35": {
         "scene": "boss",
         "statementIds": [
-          "boss:85",
-          "boss:86",
-          "boss:87",
-          "boss:88",
-          "boss:97"
+          "boss:jrexc2wzx928",
+          "boss:1w2vunn1ifbsn9",
+          "boss:plril8134gb1u",
+          "boss:1x7t8m21435yrc",
+          "boss:1f6siclehpwbf"
         ],
         "entryType": "Label",
         "exitType": "Choice",
@@ -476,8 +482,9 @@
       "boss:b_37": {
         "scene": "boss",
         "statementIds": [
-          "boss:89",
-          "boss:90"
+          "boss:m0eahi145lhss",
+          "boss:1updo4h17epd97",
+          "boss:osl9rw5g6l66"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "Goto"
@@ -491,10 +498,11 @@
       "boss:b_39": {
         "scene": "boss",
         "statementIds": [
-          "boss:92",
-          "boss:93",
-          "boss:94",
-          "boss:95"
+          "boss:1auu8nvzqvqy5",
+          "boss:ginz0gpj6zz6",
+          "boss:qx37cp15cwd5z",
+          "boss:9ajziw1qv0cs6",
+          "boss:1ka8o6zhb1nwx"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "Goto"
@@ -508,9 +516,9 @@
       "boss:b_41": {
         "scene": "boss",
         "statementIds": [
-          "boss:98",
-          "boss:99",
-          "boss:100"
+          "boss:3datbm34avzc",
+          "boss:7aavde1nucxo4",
+          "boss:1tz19rc1ejvxmm"
         ],
         "entryType": "Label",
         "exitType": "Ending",
@@ -525,9 +533,9 @@
       "boss:b_43": {
         "scene": "boss",
         "statementIds": [
-          "boss:101",
-          "boss:102",
-          "boss:103"
+          "boss:1b5tl4f1f16vtp",
+          "boss:g2z3721adc63w",
+          "boss:1dxkzvt6l7cxj"
         ],
         "entryType": "Label",
         "exitType": "Finish",
@@ -552,7 +560,7 @@
         "sourceBlockId": "boss:b_3",
         "targetBlockId": "boss:b_5",
         "metadata": {
-          "conditionStatementId": "boss:12"
+          "conditionStatementId": "boss:1cfi0vqw4r0ig"
         }
       },
       {
@@ -572,7 +580,7 @@
         "sourceBlockId": "boss:b_1",
         "targetBlockId": "boss:b_3",
         "metadata": {
-          "conditionStatementId": "boss:13"
+          "conditionStatementId": "boss:2666fo620hm"
         }
       },
       {
@@ -600,7 +608,7 @@
         "sourceBlockId": "boss:b_2",
         "targetBlockId": "boss:b_7",
         "metadata": {
-          "conditionStatementId": "boss:16"
+          "conditionStatementId": "boss:1g7qhq3atp04l"
         }
       },
       {
@@ -622,7 +630,7 @@
         "sourceBlockId": "boss:b_6",
         "targetBlockId": "boss:b_10",
         "metadata": {
-          "conditionStatementId": "boss:18"
+          "conditionStatementId": "boss:jjtj6itgu41s"
         }
       },
       {
@@ -636,7 +644,7 @@
         "sourceBlockId": "boss:b_13",
         "targetBlockId": "boss:b_15",
         "metadata": {
-          "conditionStatementId": "boss:27"
+          "conditionStatementId": "boss:xt7azchwbuky"
         }
       },
       {
@@ -664,7 +672,7 @@
         "sourceBlockId": "boss:b_9",
         "targetBlockId": "boss:b_13",
         "metadata": {
-          "optionStatementId": "boss:31"
+          "optionStatementId": "boss:1ckw5h9zqtsmf"
         }
       },
       {
@@ -672,7 +680,7 @@
         "sourceBlockId": "boss:b_17",
         "targetBlockId": "boss:b_19",
         "metadata": {
-          "conditionStatementId": "boss:40"
+          "conditionStatementId": "boss:u9wb5jzvo5eh"
         }
       },
       {
@@ -698,7 +706,7 @@
         "sourceBlockId": "boss:b_18",
         "targetBlockId": "boss:b_22",
         "metadata": {
-          "conditionStatementId": "boss:45"
+          "conditionStatementId": "boss:i4anyufpnato"
         }
       },
       {
@@ -726,7 +734,7 @@
         "sourceBlockId": "boss:b_9",
         "targetBlockId": "boss:b_17",
         "metadata": {
-          "optionStatementId": "boss:49"
+          "optionStatementId": "boss:716u7cjzpnfy"
         }
       },
       {
@@ -734,7 +742,7 @@
         "sourceBlockId": "boss:b_24",
         "targetBlockId": "boss:b_26",
         "metadata": {
-          "conditionStatementId": "boss:56"
+          "conditionStatementId": "boss:98uatve4dqch"
         }
       },
       {
@@ -754,7 +762,7 @@
         "sourceBlockId": "boss:b_25",
         "targetBlockId": "boss:b_28",
         "metadata": {
-          "conditionStatementId": "boss:62"
+          "conditionStatementId": "boss:1j8le75tkgnmn"
         }
       },
       {
@@ -782,8 +790,8 @@
         "sourceBlockId": "boss:b_9",
         "targetBlockId": "boss:b_24",
         "metadata": {
-          "optionStatementId": "boss:66",
-          "conditionStatementId": "boss:66",
+          "optionStatementId": "boss:1u1yb6g1ixcq4u",
+          "conditionStatementId": "boss:1u1yb6g1ixcq4u",
           "choiceConditionKind": "selectable_if"
         }
       },
@@ -792,7 +800,7 @@
         "sourceBlockId": "boss:b_30",
         "targetBlockId": "boss:b_32",
         "metadata": {
-          "conditionStatementId": "boss:81"
+          "conditionStatementId": "boss:d6bwhw10acmf6"
         }
       },
       {
@@ -826,8 +834,8 @@
         "sourceBlockId": "boss:b_9",
         "targetBlockId": "boss:b_30",
         "metadata": {
-          "optionStatementId": "boss:83",
-          "conditionStatementId": "boss:83",
+          "optionStatementId": "boss:1tcaptn9p7vpl",
+          "conditionStatementId": "boss:1tcaptn9p7vpl",
           "choiceConditionKind": "selectable_if"
         }
       },
@@ -856,7 +864,7 @@
         "sourceBlockId": "boss:b_35",
         "targetBlockId": "boss:b_37",
         "metadata": {
-          "optionStatementId": "boss:91"
+          "optionStatementId": "boss:m0eahi145lhss"
         }
       },
       {
@@ -872,7 +880,7 @@
         "sourceBlockId": "boss:b_35",
         "targetBlockId": "boss:b_39",
         "metadata": {
-          "optionStatementId": "boss:96"
+          "optionStatementId": "boss:1auu8nvzqvqy5"
         }
       },
       {
@@ -1220,10 +1228,10 @@
       "dungeon:b_0": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:0",
-          "dungeon:1",
-          "dungeon:2",
-          "dungeon:3"
+          "dungeon:8s007q3ri5qk",
+          "dungeon:pdzygliz51mv",
+          "dungeon:1aifn4st81aeq",
+          "dungeon:67onto1ovqae2"
         ],
         "entryType": "SceneEntry",
         "exitType": "FallThrough"
@@ -1231,9 +1239,9 @@
       "dungeon:b_1": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:4",
-          "dungeon:5",
-          "dungeon:17"
+          "dungeon:jmp4jigd18ro",
+          "dungeon:muj1irha5gfd",
+          "dungeon:gsuivy4yu8h4"
         ],
         "entryType": "Label",
         "exitType": "Branch",
@@ -1242,8 +1250,8 @@
       "dungeon:b_2": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:18",
-          "dungeon:55"
+          "dungeon:2p0o2vfdyrph",
+          "dungeon:309p24or7qny"
         ],
         "entryType": "Continuation",
         "exitType": "Choice"
@@ -1251,8 +1259,8 @@
       "dungeon:b_3": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:6",
-          "dungeon:16"
+          "dungeon:6jaabk1i6g6ni",
+          "dungeon:51jz2f1fjov1d"
         ],
         "entryType": "ConditionalBody",
         "exitType": "Branch"
@@ -1266,8 +1274,8 @@
       "dungeon:b_5": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:7",
-          "dungeon:13"
+          "dungeon:6j2cno1qdoz8q",
+          "dungeon:1yregu51dgs12f"
         ],
         "entryType": "ConditionalBody",
         "exitType": "Choice"
@@ -1281,7 +1289,8 @@
       "dungeon:b_7": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:8"
+          "dungeon:nrbg3k14zj8dy",
+          "dungeon:ebgokw10gosea"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "GotoScene"
@@ -1295,7 +1304,8 @@
       "dungeon:b_9": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:10"
+          "dungeon:9lns2d11axarr",
+          "dungeon:9cklsp10k3d0f"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "GoSub"
@@ -1303,7 +1313,7 @@
       "dungeon:b_10": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:11"
+          "dungeon:hi5ielzllh63"
         ],
         "entryType": "GoSubContinuation",
         "exitType": "Goto"
@@ -1317,7 +1327,8 @@
       "dungeon:b_12": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:14"
+          "dungeon:18raft2owbiic",
+          "dungeon:wpn0dqsbgjb4"
         ],
         "entryType": "ConditionalBody",
         "exitType": "FallThrough"
@@ -1331,8 +1342,9 @@
       "dungeon:b_14": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:20",
-          "dungeon:21"
+          "dungeon:37ysk019wke0u",
+          "dungeon:1d4cqfnu3m7it",
+          "dungeon:gh7d5g63y4nq"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "GoSub"
@@ -1340,7 +1352,7 @@
       "dungeon:b_15": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:22"
+          "dungeon:1f8f0oosxp8oa"
         ],
         "entryType": "GoSubContinuation",
         "exitType": "Goto"
@@ -1354,8 +1366,9 @@
       "dungeon:b_17": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:25",
-          "dungeon:26"
+          "dungeon:z18eu61f9pueg",
+          "dungeon:89bad21esmjwk",
+          "dungeon:318efuca5x"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "GoSub"
@@ -1363,7 +1376,7 @@
       "dungeon:b_18": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:27"
+          "dungeon:zxut3h1w98ue3"
         ],
         "entryType": "GoSubContinuation",
         "exitType": "Goto"
@@ -1377,8 +1390,9 @@
       "dungeon:b_20": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:30",
-          "dungeon:31"
+          "dungeon:ii58ismyicj2",
+          "dungeon:hhxob310ipizx",
+          "dungeon:awr2nv1fjsl95"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "GoSub"
@@ -1386,7 +1400,7 @@
       "dungeon:b_21": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:32"
+          "dungeon:1xghetthvpwrz"
         ],
         "entryType": "GoSubContinuation",
         "exitType": "Goto"
@@ -1400,8 +1414,9 @@
       "dungeon:b_23": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:35",
-          "dungeon:36"
+          "dungeon:17dce7sn2yhza",
+          "dungeon:ngohcrlq7zyd",
+          "dungeon:1n4tqb314aadf1"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "GoSub"
@@ -1409,7 +1424,7 @@
       "dungeon:b_24": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:37"
+          "dungeon:1y5rz2eeqdnck"
         ],
         "entryType": "GoSubContinuation",
         "exitType": "Goto"
@@ -1423,8 +1438,9 @@
       "dungeon:b_26": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:40",
-          "dungeon:41"
+          "dungeon:82njpdqtbgr3",
+          "dungeon:ajhdk95ymqev",
+          "dungeon:1kamlxm7kdols"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "GoSub"
@@ -1432,7 +1448,7 @@
       "dungeon:b_27": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:42"
+          "dungeon:1guexzm1wxa6i0"
         ],
         "entryType": "GoSubContinuation",
         "exitType": "Goto"
@@ -1446,8 +1462,9 @@
       "dungeon:b_29": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:45",
-          "dungeon:46"
+          "dungeon:muxjhx1sb6etf",
+          "dungeon:1oo4u311mhvp03",
+          "dungeon:a6lwna1bxqp9g"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "GoSub"
@@ -1455,7 +1472,7 @@
       "dungeon:b_30": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:47"
+          "dungeon:1q23fum1byuqd8"
         ],
         "entryType": "GoSubContinuation",
         "exitType": "Goto"
@@ -1469,7 +1486,8 @@
       "dungeon:b_32": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:50"
+          "dungeon:8lxpj55nj9yn",
+          "dungeon:y5mo01l8ewfj"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "GoSub"
@@ -1477,7 +1495,7 @@
       "dungeon:b_33": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:51"
+          "dungeon:yjin28vbgwmu"
         ],
         "entryType": "GoSubContinuation",
         "exitType": "Goto"
@@ -1491,7 +1509,8 @@
       "dungeon:b_35": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:53"
+          "dungeon:s0oledhumifn",
+          "dungeon:bcuqurs8vjp1"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "Goto"
@@ -1505,10 +1524,10 @@
       "dungeon:b_37": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:56",
-          "dungeon:57",
-          "dungeon:58",
-          "dungeon:64"
+          "dungeon:10xs5dr10wftqt",
+          "dungeon:cc96wurjn7bc",
+          "dungeon:i50s4d1pq6e0j",
+          "dungeon:p8t977vap2f5"
         ],
         "entryType": "Label",
         "exitType": "Branch",
@@ -1517,7 +1536,7 @@
       "dungeon:b_38": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:65"
+          "dungeon:3nrgf10folpt"
         ],
         "entryType": "Continuation",
         "exitType": "Return"
@@ -1525,7 +1544,7 @@
       "dungeon:b_39": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:59"
+          "dungeon:bkp9sb1nbw7ph"
         ],
         "entryType": "ConditionalBody",
         "exitType": "GoSub"
@@ -1539,7 +1558,8 @@
       "dungeon:b_41": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:60"
+          "dungeon:o6pysefpyz8c",
+          "dungeon:1rnvqeckp9lli"
         ],
         "entryType": "ConditionalBody",
         "exitType": "GoSub"
@@ -1553,7 +1573,8 @@
       "dungeon:b_43": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:62"
+          "dungeon:a6gu9n8461h1",
+          "dungeon:1x4uxhats80kw"
         ],
         "entryType": "ConditionalBody",
         "exitType": "GoSub"
@@ -1573,10 +1594,10 @@
       "dungeon:b_46": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:66",
-          "dungeon:67",
-          "dungeon:68",
-          "dungeon:69"
+          "dungeon:1khi1jlbp3apr",
+          "dungeon:yjrgp3v4r3pl",
+          "dungeon:1m1hcky1qyg8gw",
+          "dungeon:wydfyk1tah8o6"
         ],
         "entryType": "Label",
         "exitType": "FallThrough",
@@ -1585,9 +1606,9 @@
       "dungeon:b_47": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:70",
-          "dungeon:71",
-          "dungeon:73"
+          "dungeon:1scwfnhginpzf",
+          "dungeon:8k5m2pd74713",
+          "dungeon:16xj14eybc6m"
         ],
         "entryType": "Label",
         "exitType": "Branch",
@@ -1596,7 +1617,7 @@
       "dungeon:b_48": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:75"
+          "dungeon:6wlup11my47ob"
         ],
         "entryType": "Continuation",
         "exitType": "Branch"
@@ -1604,7 +1625,7 @@
       "dungeon:b_49": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:72"
+          "dungeon:1n9vlfpb6l6rf"
         ],
         "entryType": "ConditionalBody",
         "exitType": "Goto"
@@ -1618,7 +1639,7 @@
       "dungeon:b_51": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:114"
+          "dungeon:1aa0ncvaa7h4t"
         ],
         "entryType": "Continuation",
         "exitType": "Choice"
@@ -1626,7 +1647,7 @@
       "dungeon:b_52": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:74"
+          "dungeon:17essqb1cbdapd"
         ],
         "entryType": "ConditionalBody",
         "exitType": "Goto"
@@ -1646,15 +1667,16 @@
       "dungeon:b_55": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:76",
-          "dungeon:77",
-          "dungeon:78",
-          "dungeon:79",
-          "dungeon:80",
-          "dungeon:81",
-          "dungeon:82",
-          "dungeon:83",
-          "dungeon:85"
+          "dungeon:1rt3d6eo6xvk4",
+          "dungeon:1dxm20zjx0tgd",
+          "dungeon:egs733fab46x",
+          "dungeon:1q09ofi18byvhs",
+          "dungeon:2fodos140yj06",
+          "dungeon:z384ieasbyts",
+          "dungeon:v12awu60rzm0",
+          "dungeon:634m6luzwjf",
+          "dungeon:20rxkq1gbke4",
+          "dungeon:1oqq5uxrugedv"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "Branch"
@@ -1662,9 +1684,9 @@
       "dungeon:b_56": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:86",
-          "dungeon:87",
-          "dungeon:88"
+          "dungeon:ysql0rf0q79x",
+          "dungeon:1hw4tvb14g02ah",
+          "dungeon:e9536z19v1nf9"
         ],
         "entryType": "Continuation",
         "exitType": "Goto"
@@ -1672,7 +1694,7 @@
       "dungeon:b_57": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:84"
+          "dungeon:ph1gqw1fvw6b6"
         ],
         "entryType": "ConditionalBody",
         "exitType": "FallThrough"
@@ -1686,9 +1708,10 @@
       "dungeon:b_59": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:90",
-          "dungeon:91",
-          "dungeon:103"
+          "dungeon:1aem05p1l4gmjn",
+          "dungeon:18i1620125axgy",
+          "dungeon:k1mno6r5560g",
+          "dungeon:1nbn5e71bq0gqx"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "Branch"
@@ -1696,7 +1719,7 @@
       "dungeon:b_60": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:104"
+          "dungeon:1va09m41crynoa"
         ],
         "entryType": "Continuation",
         "exitType": "Goto"
@@ -1704,11 +1727,11 @@
       "dungeon:b_61": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:92",
-          "dungeon:93",
-          "dungeon:94",
-          "dungeon:95",
-          "dungeon:96"
+          "dungeon:4ai2b9bp8sg7",
+          "dungeon:1t8k1nw1a8t6eu",
+          "dungeon:5jknqe18pft80",
+          "dungeon:y1sewr4fwm85",
+          "dungeon:154k8vm18uvcec"
         ],
         "entryType": "ConditionalBody",
         "exitType": "FallThrough"
@@ -1716,11 +1739,12 @@
       "dungeon:b_62": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:97",
-          "dungeon:98",
-          "dungeon:99",
-          "dungeon:100",
-          "dungeon:101"
+          "dungeon:1glsmxq7qv3no",
+          "dungeon:1y951cgs0vpty",
+          "dungeon:3mf1srnrid9d",
+          "dungeon:1lzi0031vycvlt",
+          "dungeon:ce07jglwf59y",
+          "dungeon:1mbixjw1rrmny"
         ],
         "entryType": "ConditionalBody",
         "exitType": "FallThrough"
@@ -1734,7 +1758,8 @@
       "dungeon:b_64": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:107"
+          "dungeon:112opyq116uvdw",
+          "dungeon:170rdin54r4z5"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "GoSub"
@@ -1742,11 +1767,11 @@
       "dungeon:b_65": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:108",
-          "dungeon:109",
-          "dungeon:110",
-          "dungeon:111",
-          "dungeon:112"
+          "dungeon:12wnazb12qdrgp",
+          "dungeon:164b2q41p0d98i",
+          "dungeon:mqqv5l1fiffcb",
+          "dungeon:1c72ei5zad8f7",
+          "dungeon:vqgwwar447zc"
         ],
         "entryType": "GoSubContinuation",
         "exitType": "Goto"
@@ -1760,9 +1785,9 @@
       "dungeon:b_67": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:115",
-          "dungeon:116",
-          "dungeon:119"
+          "dungeon:bwc6911i3c6sf",
+          "dungeon:jum0zw1n76noy",
+          "dungeon:1nnwzs05ns76"
         ],
         "entryType": "Label",
         "exitType": "Branch",
@@ -1771,7 +1796,7 @@
       "dungeon:b_68": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:122"
+          "dungeon:10f0rhsxjypu"
         ],
         "entryType": "Continuation",
         "exitType": "Branch"
@@ -1779,8 +1804,8 @@
       "dungeon:b_69": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:117",
-          "dungeon:118"
+          "dungeon:1882cko1c2mmoa",
+          "dungeon:1qm35ancdxikd"
         ],
         "entryType": "ConditionalBody",
         "exitType": "FallThrough"
@@ -1788,8 +1813,8 @@
       "dungeon:b_70": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:123",
-          "dungeon:124"
+          "dungeon:nsik1g8a16n2",
+          "dungeon:1b1c8cmz19i68"
         ],
         "entryType": "Continuation",
         "exitType": "Return"
@@ -1797,8 +1822,8 @@
       "dungeon:b_71": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:120",
-          "dungeon:121"
+          "dungeon:1gdkvg4mt6nca",
+          "dungeon:bsgfcr1edm9qt"
         ],
         "entryType": "ConditionalBody",
         "exitType": "FallThrough"
@@ -1812,10 +1837,10 @@
       "dungeon:b_73": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:125",
-          "dungeon:126",
-          "dungeon:127",
-          "dungeon:141"
+          "dungeon:1wyejernfttpp",
+          "dungeon:ivcv6l1nw20t3",
+          "dungeon:1p9g0xg1nox5n2",
+          "dungeon:1fpjsu2hpb0w4"
         ],
         "entryType": "Label",
         "exitType": "Choice",
@@ -1830,9 +1855,10 @@
       "dungeon:b_75": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:128",
-          "dungeon:129",
-          "dungeon:130"
+          "dungeon:5wjv3a1e3jqto",
+          "dungeon:yod6t5fzejs3",
+          "dungeon:3lgu16qdicc",
+          "dungeon:apa9kw20q5qa"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "Return"
@@ -1846,8 +1872,9 @@
       "dungeon:b_77": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:132",
-          "dungeon:138"
+          "dungeon:e7goed1ecx373",
+          "dungeon:ntxcnxk0vf7",
+          "dungeon:qxnus2y0agnw"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "Branch"
@@ -1855,7 +1882,7 @@
       "dungeon:b_78": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:139"
+          "dungeon:1c5vrq42us4b6"
         ],
         "entryType": "Continuation",
         "exitType": "Return"
@@ -1863,9 +1890,9 @@
       "dungeon:b_79": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:133",
-          "dungeon:134",
-          "dungeon:135"
+          "dungeon:zxtnz91yxh2kn",
+          "dungeon:o9g8nypdhf7c",
+          "dungeon:py3120sd5ezi"
         ],
         "entryType": "ConditionalBody",
         "exitType": "FallThrough"
@@ -1873,7 +1900,8 @@
       "dungeon:b_80": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:136"
+          "dungeon:1xxqitqfi2byo",
+          "dungeon:lobjmb23xjix"
         ],
         "entryType": "ConditionalBody",
         "exitType": "FallThrough"
@@ -1887,11 +1915,11 @@
       "dungeon:b_82": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:142",
-          "dungeon:143",
-          "dungeon:144",
-          "dungeon:145",
-          "dungeon:146"
+          "dungeon:8u05cr3wf89h",
+          "dungeon:18x7l7a1ur0q50",
+          "dungeon:16g2doudrxte",
+          "dungeon:7so401u0rd4m",
+          "dungeon:1edsl9w52oxuy"
         ],
         "entryType": "Label",
         "exitType": "Return",
@@ -1906,12 +1934,12 @@
       "dungeon:b_84": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:147",
-          "dungeon:148",
-          "dungeon:149",
-          "dungeon:150",
-          "dungeon:151",
-          "dungeon:153"
+          "dungeon:1f5xzp217yu8o8",
+          "dungeon:1qxbak510urgun",
+          "dungeon:dri3uh1vba3n7",
+          "dungeon:17gj2pgaawu5a",
+          "dungeon:125t7olxylh6z",
+          "dungeon:136raud1m9oiwr"
         ],
         "entryType": "Label",
         "exitType": "Branch",
@@ -1920,8 +1948,8 @@
       "dungeon:b_85": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:154",
-          "dungeon:155"
+          "dungeon:113zfhen2nrpg",
+          "dungeon:euxzzj2uv9t5"
         ],
         "entryType": "Continuation",
         "exitType": "Return"
@@ -1929,7 +1957,7 @@
       "dungeon:b_86": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:152"
+          "dungeon:1ymspdi1muyi5s"
         ],
         "entryType": "ConditionalBody",
         "exitType": "FallThrough"
@@ -1943,12 +1971,12 @@
       "dungeon:b_88": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:156",
-          "dungeon:157",
-          "dungeon:158",
-          "dungeon:159",
-          "dungeon:160",
-          "dungeon:162"
+          "dungeon:mhffce1yluux0",
+          "dungeon:10f2avm1uw56hw",
+          "dungeon:y15jyw6jfa22",
+          "dungeon:1xlw08l1bwq7zr",
+          "dungeon:1rxhmqu1jz47f8",
+          "dungeon:1crsnzsgw5eo6"
         ],
         "entryType": "Label",
         "exitType": "Branch",
@@ -1957,8 +1985,8 @@
       "dungeon:b_89": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:163",
-          "dungeon:164"
+          "dungeon:ge1ry5ivtobv",
+          "dungeon:fyzk9e3ywu30"
         ],
         "entryType": "Continuation",
         "exitType": "Return"
@@ -1966,7 +1994,7 @@
       "dungeon:b_90": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:161"
+          "dungeon:1pipe8z1eeifp9"
         ],
         "entryType": "ConditionalBody",
         "exitType": "FallThrough"
@@ -1980,9 +2008,9 @@
       "dungeon:b_92": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:165",
-          "dungeon:166",
-          "dungeon:167"
+          "dungeon:12bfdvn1pbtds1",
+          "dungeon:i7z90yt97mzo",
+          "dungeon:1qy08861dp8ug4"
         ],
         "entryType": "Label",
         "exitType": "Ending",
@@ -1997,9 +2025,9 @@
       "dungeon:b_94": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:168",
-          "dungeon:169",
-          "dungeon:173"
+          "dungeon:1y78ue41hnthsu",
+          "dungeon:kzej871ytsckd",
+          "dungeon:1ta4enn17umt8x"
         ],
         "entryType": "Label",
         "exitType": "Branch",
@@ -2008,8 +2036,8 @@
       "dungeon:b_95": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:174",
-          "dungeon:175"
+          "dungeon:smgm3wmf5tzy",
+          "dungeon:exy6du14gpgno"
         ],
         "entryType": "Continuation",
         "exitType": "Finish"
@@ -2017,7 +2045,7 @@
       "dungeon:b_96": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:170"
+          "dungeon:1bni7a41sxh4di"
         ],
         "entryType": "ConditionalBody",
         "exitType": "FallThrough"
@@ -2025,7 +2053,8 @@
       "dungeon:b_97": {
         "scene": "dungeon",
         "statementIds": [
-          "dungeon:171"
+          "dungeon:12pymf2jhsrgc",
+          "dungeon:dkw3hitaumzc"
         ],
         "entryType": "ConditionalBody",
         "exitType": "FallThrough"
@@ -2057,7 +2086,7 @@
         "sourceBlockId": "dungeon:b_5",
         "targetBlockId": "dungeon:b_7",
         "metadata": {
-          "optionStatementId": "dungeon:9"
+          "optionStatementId": "dungeon:nrbg3k14zj8dy"
         }
       },
       {
@@ -2087,7 +2116,7 @@
         "sourceBlockId": "dungeon:b_5",
         "targetBlockId": "dungeon:b_9",
         "metadata": {
-          "optionStatementId": "dungeon:12"
+          "optionStatementId": "dungeon:9lns2d11axarr"
         }
       },
       {
@@ -2101,7 +2130,7 @@
         "sourceBlockId": "dungeon:b_3",
         "targetBlockId": "dungeon:b_5",
         "metadata": {
-          "conditionStatementId": "dungeon:16"
+          "conditionStatementId": "dungeon:51jz2f1fjov1d"
         }
       },
       {
@@ -2127,7 +2156,7 @@
         "sourceBlockId": "dungeon:b_1",
         "targetBlockId": "dungeon:b_3",
         "metadata": {
-          "conditionStatementId": "dungeon:17"
+          "conditionStatementId": "dungeon:gsuivy4yu8h4"
         }
       },
       {
@@ -2169,7 +2198,7 @@
         "sourceBlockId": "dungeon:b_2",
         "targetBlockId": "dungeon:b_14",
         "metadata": {
-          "optionStatementId": "dungeon:23",
+          "optionStatementId": "dungeon:37ysk019wke0u",
           "effectiveReuse": "hide_reuse"
         }
       },
@@ -2200,7 +2229,7 @@
         "sourceBlockId": "dungeon:b_2",
         "targetBlockId": "dungeon:b_17",
         "metadata": {
-          "optionStatementId": "dungeon:28",
+          "optionStatementId": "dungeon:z18eu61f9pueg",
           "effectiveReuse": "hide_reuse"
         }
       },
@@ -2231,7 +2260,7 @@
         "sourceBlockId": "dungeon:b_2",
         "targetBlockId": "dungeon:b_20",
         "metadata": {
-          "optionStatementId": "dungeon:33",
+          "optionStatementId": "dungeon:ii58ismyicj2",
           "effectiveReuse": "hide_reuse"
         }
       },
@@ -2262,7 +2291,7 @@
         "sourceBlockId": "dungeon:b_2",
         "targetBlockId": "dungeon:b_23",
         "metadata": {
-          "optionStatementId": "dungeon:38",
+          "optionStatementId": "dungeon:17dce7sn2yhza",
           "effectiveReuse": "hide_reuse"
         }
       },
@@ -2293,7 +2322,7 @@
         "sourceBlockId": "dungeon:b_2",
         "targetBlockId": "dungeon:b_26",
         "metadata": {
-          "optionStatementId": "dungeon:43",
+          "optionStatementId": "dungeon:82njpdqtbgr3",
           "effectiveReuse": "hide_reuse"
         }
       },
@@ -2324,7 +2353,7 @@
         "sourceBlockId": "dungeon:b_2",
         "targetBlockId": "dungeon:b_29",
         "metadata": {
-          "optionStatementId": "dungeon:48",
+          "optionStatementId": "dungeon:muxjhx1sb6etf",
           "effectiveReuse": "hide_reuse"
         }
       },
@@ -2355,8 +2384,8 @@
         "sourceBlockId": "dungeon:b_2",
         "targetBlockId": "dungeon:b_32",
         "metadata": {
-          "optionStatementId": "dungeon:52",
-          "conditionStatementId": "dungeon:52",
+          "optionStatementId": "dungeon:8lxpj55nj9yn",
+          "conditionStatementId": "dungeon:8lxpj55nj9yn",
           "choiceConditionKind": "selectable_if"
         }
       },
@@ -2373,7 +2402,7 @@
         "sourceBlockId": "dungeon:b_2",
         "targetBlockId": "dungeon:b_35",
         "metadata": {
-          "optionStatementId": "dungeon:54"
+          "optionStatementId": "dungeon:s0oledhumifn"
         }
       },
       {
@@ -2407,7 +2436,7 @@
         "sourceBlockId": "dungeon:b_37",
         "targetBlockId": "dungeon:b_39",
         "metadata": {
-          "conditionStatementId": "dungeon:64"
+          "conditionStatementId": "dungeon:p8t977vap2f5"
         }
       },
       {
@@ -2435,7 +2464,7 @@
         "sourceBlockId": "dungeon:b_37",
         "targetBlockId": "dungeon:b_41",
         "metadata": {
-          "conditionStatementId": "dungeon:61"
+          "conditionStatementId": "dungeon:o6pysefpyz8c"
         }
       },
       {
@@ -2501,7 +2530,7 @@
         "sourceBlockId": "dungeon:b_47",
         "targetBlockId": "dungeon:b_49",
         "metadata": {
-          "conditionStatementId": "dungeon:73"
+          "conditionStatementId": "dungeon:16xj14eybc6m"
         }
       },
       {
@@ -2523,7 +2552,7 @@
         "sourceBlockId": "dungeon:b_48",
         "targetBlockId": "dungeon:b_52",
         "metadata": {
-          "conditionStatementId": "dungeon:75"
+          "conditionStatementId": "dungeon:6wlup11my47ob"
         }
       },
       {
@@ -2537,7 +2566,7 @@
         "sourceBlockId": "dungeon:b_55",
         "targetBlockId": "dungeon:b_57",
         "metadata": {
-          "conditionStatementId": "dungeon:85"
+          "conditionStatementId": "dungeon:1oqq5uxrugedv"
         }
       },
       {
@@ -2565,7 +2594,7 @@
         "sourceBlockId": "dungeon:b_51",
         "targetBlockId": "dungeon:b_55",
         "metadata": {
-          "optionStatementId": "dungeon:89"
+          "optionStatementId": "dungeon:1rt3d6eo6xvk4"
         }
       },
       {
@@ -2573,7 +2602,7 @@
         "sourceBlockId": "dungeon:b_59",
         "targetBlockId": "dungeon:b_61",
         "metadata": {
-          "conditionStatementId": "dungeon:103"
+          "conditionStatementId": "dungeon:1nbn5e71bq0gqx"
         }
       },
       {
@@ -2607,7 +2636,7 @@
         "sourceBlockId": "dungeon:b_51",
         "targetBlockId": "dungeon:b_59",
         "metadata": {
-          "optionStatementId": "dungeon:105"
+          "optionStatementId": "dungeon:1aem05p1l4gmjn"
         }
       },
       {
@@ -2637,8 +2666,8 @@
         "sourceBlockId": "dungeon:b_51",
         "targetBlockId": "dungeon:b_64",
         "metadata": {
-          "optionStatementId": "dungeon:113",
-          "conditionStatementId": "dungeon:113",
+          "optionStatementId": "dungeon:112opyq116uvdw",
+          "conditionStatementId": "dungeon:112opyq116uvdw",
           "choiceConditionKind": "selectable_if"
         }
       },
@@ -2659,7 +2688,7 @@
         "sourceBlockId": "dungeon:b_67",
         "targetBlockId": "dungeon:b_69",
         "metadata": {
-          "conditionStatementId": "dungeon:119"
+          "conditionStatementId": "dungeon:1nnwzs05ns76"
         }
       },
       {
@@ -2679,7 +2708,7 @@
         "sourceBlockId": "dungeon:b_68",
         "targetBlockId": "dungeon:b_71",
         "metadata": {
-          "conditionStatementId": "dungeon:122"
+          "conditionStatementId": "dungeon:10f0rhsxjypu"
         }
       },
       {
@@ -2717,7 +2746,7 @@
         "sourceBlockId": "dungeon:b_73",
         "targetBlockId": "dungeon:b_75",
         "metadata": {
-          "optionStatementId": "dungeon:131"
+          "optionStatementId": "dungeon:5wjv3a1e3jqto"
         }
       },
       {
@@ -2725,7 +2754,7 @@
         "sourceBlockId": "dungeon:b_77",
         "targetBlockId": "dungeon:b_79",
         "metadata": {
-          "conditionStatementId": "dungeon:138"
+          "conditionStatementId": "dungeon:qxnus2y0agnw"
         }
       },
       {
@@ -2757,7 +2786,7 @@
         "sourceBlockId": "dungeon:b_73",
         "targetBlockId": "dungeon:b_77",
         "metadata": {
-          "optionStatementId": "dungeon:140"
+          "optionStatementId": "dungeon:e7goed1ecx373"
         }
       },
       {
@@ -2789,7 +2818,7 @@
         "sourceBlockId": "dungeon:b_84",
         "targetBlockId": "dungeon:b_86",
         "metadata": {
-          "conditionStatementId": "dungeon:153"
+          "conditionStatementId": "dungeon:136raud1m9oiwr"
         }
       },
       {
@@ -2821,7 +2850,7 @@
         "sourceBlockId": "dungeon:b_88",
         "targetBlockId": "dungeon:b_90",
         "metadata": {
-          "conditionStatementId": "dungeon:162"
+          "conditionStatementId": "dungeon:1crsnzsgw5eo6"
         }
       },
       {
@@ -2865,7 +2894,7 @@
         "sourceBlockId": "dungeon:b_94",
         "targetBlockId": "dungeon:b_96",
         "metadata": {
-          "conditionStatementId": "dungeon:173"
+          "conditionStatementId": "dungeon:1ta4enn17umt8x"
         }
       },
       {
@@ -2923,19 +2952,19 @@
       "startup:b_0": {
         "scene": "startup",
         "statementIds": [
-          "startup:0",
-          "startup:1",
-          "startup:2",
-          "startup:3",
-          "startup:4",
-          "startup:5",
-          "startup:6",
-          "startup:7",
-          "startup:8",
-          "startup:9",
-          "startup:10",
-          "startup:11",
-          "startup:12"
+          "startup:wg1ry01xzu0xm",
+          "startup:unyrhc1c6me1y",
+          "startup:xaduvx1ne744v",
+          "startup:1bct4f1xo6l6f",
+          "startup:1lfq4gaxd7w4c",
+          "startup:15ze8f4sup2jm",
+          "startup:184555vbchw9",
+          "startup:lfbcbzw5ni5x",
+          "startup:iije481ethlq",
+          "startup:fm9481u9e1d3",
+          "startup:1cu0nufyy9e9l",
+          "startup:f73pd1rqbcdb",
+          "startup:f5fhnt106p6pb"
         ],
         "entryType": "SceneEntry",
         "exitType": "GotoScene"

@@ -1,0 +1,49 @@
+{
+  "cfgCount": 4,
+  "states": [
+    {
+      "cfgId": "arena:",
+      "entryGlobals": [
+        {
+          "health": "60",
+          "gold": "40",
+          "quest_done": "false",
+          "visited_shop": "false"
+        }
+      ]
+    },
+    {
+      "cfgId": "shop:",
+      "entryGlobals": [
+        {
+          "health": "90",
+          "gold": "20",
+          "quest_done": "false",
+          "visited_shop": "true"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:",
+      "entryGlobals": [
+        {
+          "health": "100",
+          "gold": "50",
+          "quest_done": "false",
+          "visited_shop": "false"
+        }
+      ]
+    },
+    {
+      "cfgId": "town:",
+      "entryGlobals": [
+        {
+          "health": "90",
+          "gold": "{40,50}",
+          "quest_done": "false",
+          "visited_shop": "false"
+        }
+      ]
+    }
+  ]
+}

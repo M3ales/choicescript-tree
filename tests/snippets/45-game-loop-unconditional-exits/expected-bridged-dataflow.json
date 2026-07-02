@@ -1,0 +1,55 @@
+{
+  "cfgCount": 5,
+  "states": [
+    {
+      "cfgId": "startup:",
+      "entryGlobals": [
+        {
+          "stamina": "100",
+          "score": "0",
+          "intensity": "1"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:final_rally",
+      "entryGlobals": [
+        {
+          "stamina": "98",
+          "score": "3",
+          "intensity": "2"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:intense_phase",
+      "entryGlobals": [
+        {
+          "stamina": "98",
+          "score": "1",
+          "intensity": "2"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:match_loop",
+      "entryGlobals": [
+        {
+          "stamina": "100",
+          "score": "0",
+          "intensity": "1"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:match_over",
+      "entryGlobals": [
+        {
+          "stamina": "98",
+          "score": "13",
+          "intensity": "2"
+        }
+      ]
+    }
+  ]
+}

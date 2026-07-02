@@ -1,0 +1,21 @@
+{
+  "cfgCount": 2,
+  "states": [
+    {
+      "cfgId": "chapter1:",
+      "entryGlobals": [
+        {
+          "player_ready": "true"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:",
+      "entryGlobals": [
+        {
+          "player_ready": "true"
+        }
+      ]
+    }
+  ]
+}

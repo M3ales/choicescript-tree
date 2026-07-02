@@ -1,0 +1,41 @@
+{
+  "cfgCount": 4,
+  "states": [
+    {
+      "cfgId": "startup:",
+      "entryGlobals": [
+        {
+          "score": "0",
+          "name": "Nobody"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:bottom_label",
+      "entryGlobals": [
+        {
+          "score": "100",
+          "name": "Winner"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:bottom_label__cont_0",
+      "entryGlobals": [
+        {
+          "score": "100",
+          "name": "Winner"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:top_label",
+      "entryGlobals": [
+        {
+          "score": "0",
+          "name": "Nobody"
+        }
+      ]
+    }
+  ]
+}

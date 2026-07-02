@@ -22,8 +22,8 @@
       "startup:b_0": {
         "scene": "startup",
         "statementIds": [
-          "startup:0",
-          "startup:1"
+          "startup:17q546zonpw31",
+          "startup:1809dhufuv3ks"
         ],
         "entryType": "SceneEntry",
         "exitType": "Goto"
@@ -37,9 +37,9 @@
       "startup:b_2": {
         "scene": "startup",
         "statementIds": [
-          "startup:2",
-          "startup:3",
-          "startup:4"
+          "startup:8tiio5mpog5r",
+          "startup:1wxsvmf1togfo9",
+          "startup:1ct3mnsg63csy"
         ],
         "entryType": "Label",
         "exitType": "Goto",
@@ -54,7 +54,7 @@
       "startup:b_4": {
         "scene": "startup",
         "statementIds": [
-          "startup:5"
+          "startup:1wpj1pv1s2sptx"
         ],
         "entryType": "Label",
         "exitType": "ImplicitEnd",

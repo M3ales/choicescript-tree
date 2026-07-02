@@ -1,0 +1,11 @@
+{
+  "cfgCount": 1,
+  "states": [
+    {
+      "cfgId": "startup:shop",
+      "entryGlobals": [
+        {}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+*create count 0
+
+*label loop
+*set count + 1
+You have been here ${count} times.
+*choice
+  #Go left.
+    You go left.
+    *goto loop
+  #Go right.
+    You go right.
+    *goto loop

@@ -40,9 +40,9 @@
       "startup:b_0": {
         "scene": "startup",
         "statementIds": [
-          "startup:0",
-          "startup:1",
-          "startup:2"
+          "startup:1mt59xe1p4v2f0",
+          "startup:rgbohr1ap3fq9",
+          "startup:18muytb17e6x61"
         ],
         "entryType": "SceneEntry",
         "exitType": "GotoScene"
@@ -94,8 +94,8 @@
       "tavern:b_0": {
         "scene": "tavern",
         "statementIds": [
-          "tavern:0",
-          "tavern:7"
+          "tavern:1vmv9fkouon9",
+          "tavern:1kdoplf15e3v7d"
         ],
         "entryType": "SceneEntry",
         "exitType": "Choice"
@@ -109,8 +109,9 @@
       "tavern:b_2": {
         "scene": "tavern",
         "statementIds": [
-          "tavern:1",
-          "tavern:2"
+          "tavern:1gefsul3r7hp7",
+          "tavern:6entk91y24xe3",
+          "tavern:17sw5qe17o6iv0"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "GotoScene"
@@ -124,8 +125,9 @@
       "tavern:b_4": {
         "scene": "tavern",
         "statementIds": [
-          "tavern:4",
-          "tavern:5"
+          "tavern:arbtdprom6ez",
+          "tavern:edyrzp1kdnwzn",
+          "tavern:f6nru71iy5woh"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "Finish"
@@ -151,7 +153,7 @@
         "sourceBlockId": "tavern:b_0",
         "targetBlockId": "tavern:b_2",
         "metadata": {
-          "optionStatementId": "tavern:3"
+          "optionStatementId": "tavern:1gefsul3r7hp7"
         }
       },
       {
@@ -165,7 +167,7 @@
         "sourceBlockId": "tavern:b_0",
         "targetBlockId": "tavern:b_4",
         "metadata": {
-          "optionStatementId": "tavern:6"
+          "optionStatementId": "tavern:arbtdprom6ez"
         }
       },
       {

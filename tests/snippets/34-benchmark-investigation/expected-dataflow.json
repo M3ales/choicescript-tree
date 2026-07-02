@@ -1,0 +1,1308 @@
+{
+  "states": [
+    {
+      "cfgId": "startup:",
+      "entryGlobals": [
+        {
+          "clues_found": "0",
+          "suspects_interviewed": "0",
+          "confidence": "0",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "false",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        }
+      ],
+      "exitGlobals": [
+        {
+          "clues_found": "0",
+          "suspects_interviewed": "0",
+          "confidence": "0",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "false",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:case_hub",
+      "entryGlobals": [
+        {
+          "clues_found": "0",
+          "suspects_interviewed": "0",
+          "confidence": "0",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "false",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        },
+        {
+          "clues_found": "{0,4}",
+          "suspects_interviewed": "0",
+          "confidence": "{-10,20,35}",
+          "has_weapon": "{false,true}",
+          "has_motive": "{false,true}",
+          "has_alibi_broken": "false",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": "{, Weapon found. Staged break-in evidence. Hidden compartment found. Motive found.}"
+        },
+        {
+          "clues_found": "3",
+          "suspects_interviewed": "2",
+          "confidence": "20",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        },
+        {
+          "clues_found": "{0,3}",
+          "suspects_interviewed": "{0,2}",
+          "confidence": "{10,20,35}",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "{false,true}",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        }
+      ],
+      "exitGlobals": [
+        {
+          "clues_found": "0",
+          "suspects_interviewed": "0",
+          "confidence": "20",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "false",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        },
+        {
+          "clues_found": "{0,4}",
+          "suspects_interviewed": "0",
+          "confidence": "{10,40,55}",
+          "has_weapon": "{false,true}",
+          "has_motive": "{false,true}",
+          "has_alibi_broken": "false",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": "{, Weapon found. Staged break-in evidence. Hidden compartment found. Motive found.}"
+        },
+        {
+          "clues_found": "3",
+          "suspects_interviewed": "2",
+          "confidence": "40",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        },
+        {
+          "clues_found": "{0,3}",
+          "suspects_interviewed": "{0,2}",
+          "confidence": "{30,40,55}",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "{false,true}",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "cfgId": "crime_scene:",
+      "entryGlobals": [
+        {
+          "clues_found": "0",
+          "suspects_interviewed": "0",
+          "confidence": "20",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "false",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        },
+        {
+          "clues_found": "3",
+          "suspects_interviewed": "2",
+          "confidence": "40",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        }
+      ],
+      "exitGlobals": [
+        {
+          "clues_found": "0",
+          "suspects_interviewed": "0",
+          "confidence": "20",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "false",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        },
+        {
+          "clues_found": "3",
+          "suspects_interviewed": "2",
+          "confidence": "40",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "cfgId": "crime_scene:scene_hub",
+      "entryGlobals": [
+        {
+          "clues_found": "0",
+          "suspects_interviewed": "0",
+          "confidence": "20",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "false",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        },
+        {
+          "clues_found": "4",
+          "suspects_interviewed": "0",
+          "confidence": "20",
+          "has_weapon": "true",
+          "has_motive": "true",
+          "has_alibi_broken": "false",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": " Weapon found. Staged break-in evidence. Hidden compartment found. Motive found."
+        },
+        {
+          "clues_found": "8",
+          "suspects_interviewed": "0",
+          "confidence": "20",
+          "has_weapon": "true",
+          "has_motive": "true",
+          "has_alibi_broken": "false",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": " Weapon found. Staged break-in evidence. Hidden compartment found. Motive found. Weapon found. Staged break-in evidence. Hidden compartment found. Motive found."
+        },
+        {
+          "clues_found": "12",
+          "suspects_interviewed": "0",
+          "confidence": "20",
+          "has_weapon": "true",
+          "has_motive": "true",
+          "has_alibi_broken": "false",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": " Weapon found. Staged break-in evidence. Hidden compartment found. Motive found. Weapon found. Staged break-in evidence. Hidden compartment found. Motive found. Weapon found. Staged break-in evidence. Hidden compartment found. Motive found."
+        },
+        {
+          "clues_found": "16",
+          "suspects_interviewed": "0",
+          "confidence": "20",
+          "has_weapon": "true",
+          "has_motive": "true",
+          "has_alibi_broken": "false",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": " Weapon found. Staged break-in evidence. Hidden compartment found. Motive found. Weapon found. Staged break-in evidence. Hidden compartment found. Motive found. Weapon found. Staged break-in evidence. Hidden compartment found. Motive found. Weapon found. Staged break-in evidence. Hidden compartment found. Motive found."
+        },
+        {
+          "clues_found": "3",
+          "suspects_interviewed": "2",
+          "confidence": "40",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        },
+        {
+          "clues_found": "7",
+          "suspects_interviewed": "2",
+          "confidence": "40",
+          "has_weapon": "true",
+          "has_motive": "true",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": " Weapon found. Staged break-in evidence. Hidden compartment found. Motive found."
+        },
+        {
+          "clues_found": "11",
+          "suspects_interviewed": "2",
+          "confidence": "40",
+          "has_weapon": "true",
+          "has_motive": "true",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": " Weapon found. Staged break-in evidence. Hidden compartment found. Motive found. Weapon found. Staged break-in evidence. Hidden compartment found. Motive found."
+        },
+        {
+          "clues_found": "15",
+          "suspects_interviewed": "2",
+          "confidence": "40",
+          "has_weapon": "true",
+          "has_motive": "true",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": " Weapon found. Staged break-in evidence. Hidden compartment found. Motive found. Weapon found. Staged break-in evidence. Hidden compartment found. Motive found. Weapon found. Staged break-in evidence. Hidden compartment found. Motive found."
+        },
+        {
+          "clues_found": "19",
+          "suspects_interviewed": "2",
+          "confidence": "40",
+          "has_weapon": "true",
+          "has_motive": "true",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": " Weapon found. Staged break-in evidence. Hidden compartment found. Motive found. Weapon found. Staged break-in evidence. Hidden compartment found. Motive found. Weapon found. Staged break-in evidence. Hidden compartment found. Motive found. Weapon found. Staged break-in evidence. Hidden compartment found. Motive found."
+        }
+      ],
+      "exitGlobals": [
+        {
+          "clues_found": "4",
+          "suspects_interviewed": "0",
+          "confidence": "20",
+          "has_weapon": "true",
+          "has_motive": "true",
+          "has_alibi_broken": "false",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": " Weapon found. Staged break-in evidence. Hidden compartment found. Motive found."
+        },
+        {
+          "clues_found": "8",
+          "suspects_interviewed": "0",
+          "confidence": "20",
+          "has_weapon": "true",
+          "has_motive": "true",
+          "has_alibi_broken": "false",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": " Weapon found. Staged break-in evidence. Hidden compartment found. Motive found. Weapon found. Staged break-in evidence. Hidden compartment found. Motive found."
+        },
+        {
+          "clues_found": "12",
+          "suspects_interviewed": "0",
+          "confidence": "20",
+          "has_weapon": "true",
+          "has_motive": "true",
+          "has_alibi_broken": "false",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": " Weapon found. Staged break-in evidence. Hidden compartment found. Motive found. Weapon found. Staged break-in evidence. Hidden compartment found. Motive found. Weapon found. Staged break-in evidence. Hidden compartment found. Motive found."
+        },
+        {
+          "clues_found": "16",
+          "suspects_interviewed": "0",
+          "confidence": "20",
+          "has_weapon": "true",
+          "has_motive": "true",
+          "has_alibi_broken": "false",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": " Weapon found. Staged break-in evidence. Hidden compartment found. Motive found. Weapon found. Staged break-in evidence. Hidden compartment found. Motive found. Weapon found. Staged break-in evidence. Hidden compartment found. Motive found. Weapon found. Staged break-in evidence. Hidden compartment found. Motive found."
+        },
+        {
+          "clues_found": "20",
+          "suspects_interviewed": "0",
+          "confidence": "20",
+          "has_weapon": "true",
+          "has_motive": "true",
+          "has_alibi_broken": "false",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": " Weapon found. Staged break-in evidence. Hidden compartment found. Motive found. Weapon found. Staged break-in evidence. Hidden compartment found. Motive found. Weapon found. Staged break-in evidence. Hidden compartment found. Motive found. Weapon found. Staged break-in evidence. Hidden compartment found. Motive found. Weapon found. Staged break-in evidence. Hidden compartment found. Motive found."
+        },
+        {
+          "clues_found": "7",
+          "suspects_interviewed": "2",
+          "confidence": "40",
+          "has_weapon": "true",
+          "has_motive": "true",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": " Weapon found. Staged break-in evidence. Hidden compartment found. Motive found."
+        },
+        {
+          "clues_found": "11",
+          "suspects_interviewed": "2",
+          "confidence": "40",
+          "has_weapon": "true",
+          "has_motive": "true",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": " Weapon found. Staged break-in evidence. Hidden compartment found. Motive found. Weapon found. Staged break-in evidence. Hidden compartment found. Motive found."
+        },
+        {
+          "clues_found": "15",
+          "suspects_interviewed": "2",
+          "confidence": "40",
+          "has_weapon": "true",
+          "has_motive": "true",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": " Weapon found. Staged break-in evidence. Hidden compartment found. Motive found. Weapon found. Staged break-in evidence. Hidden compartment found. Motive found. Weapon found. Staged break-in evidence. Hidden compartment found. Motive found."
+        },
+        {
+          "clues_found": "19",
+          "suspects_interviewed": "2",
+          "confidence": "40",
+          "has_weapon": "true",
+          "has_motive": "true",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": " Weapon found. Staged break-in evidence. Hidden compartment found. Motive found. Weapon found. Staged break-in evidence. Hidden compartment found. Motive found. Weapon found. Staged break-in evidence. Hidden compartment found. Motive found. Weapon found. Staged break-in evidence. Hidden compartment found. Motive found."
+        },
+        {
+          "clues_found": "23",
+          "suspects_interviewed": "2",
+          "confidence": "40",
+          "has_weapon": "true",
+          "has_motive": "true",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": " Weapon found. Staged break-in evidence. Hidden compartment found. Motive found. Weapon found. Staged break-in evidence. Hidden compartment found. Motive found. Weapon found. Staged break-in evidence. Hidden compartment found. Motive found. Weapon found. Staged break-in evidence. Hidden compartment found. Motive found. Weapon found. Staged break-in evidence. Hidden compartment found. Motive found."
+        }
+      ]
+    },
+    {
+      "cfgId": "interrogation:",
+      "entryGlobals": [
+        {
+          "clues_found": "0",
+          "suspects_interviewed": "0",
+          "confidence": "20",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "false",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        },
+        {
+          "clues_found": "3",
+          "suspects_interviewed": "2",
+          "confidence": "40",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        }
+      ],
+      "exitGlobals": [
+        {
+          "clues_found": "0",
+          "suspects_interviewed": "0",
+          "confidence": "20",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "false",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        },
+        {
+          "clues_found": "3",
+          "suspects_interviewed": "2",
+          "confidence": "40",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "cfgId": "interrogation:suspect_select",
+      "entryGlobals": [
+        {
+          "clues_found": "0",
+          "suspects_interviewed": "0",
+          "confidence": "20",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "false",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        },
+        {
+          "clues_found": "3",
+          "suspects_interviewed": "2",
+          "confidence": "20",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        },
+        {
+          "clues_found": "3",
+          "suspects_interviewed": "2",
+          "confidence": "40",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        },
+        {
+          "clues_found": "{12,15,3,6,9}",
+          "suspects_interviewed": "{10,2,4,6,8}",
+          "confidence": "20",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        },
+        {
+          "clues_found": "{12,15,3,6,9}",
+          "suspects_interviewed": "{10,2,4,6,8}",
+          "confidence": "{10,20}",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        }
+      ],
+      "exitGlobals": [
+        {
+          "clues_found": "0",
+          "suspects_interviewed": "0",
+          "confidence": "20",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "false",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        },
+        {
+          "clues_found": "3",
+          "suspects_interviewed": "2",
+          "confidence": "20",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        },
+        {
+          "clues_found": "3",
+          "suspects_interviewed": "2",
+          "confidence": "40",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        },
+        {
+          "clues_found": "{12,15,3,6,9}",
+          "suspects_interviewed": "{10,2,4,6,8}",
+          "confidence": "20",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        },
+        {
+          "clues_found": "{12,15,3,6,9}",
+          "suspects_interviewed": "{10,2,4,6,8}",
+          "confidence": "{10,20}",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:accusation",
+      "entryGlobals": [
+        {
+          "clues_found": "0",
+          "suspects_interviewed": "0",
+          "confidence": "20",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "false",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        },
+        {
+          "clues_found": "3",
+          "suspects_interviewed": "2",
+          "confidence": "40",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        }
+      ],
+      "exitGlobals": [
+        {
+          "clues_found": "0",
+          "suspects_interviewed": "0",
+          "confidence": "20",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "false",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        },
+        {
+          "clues_found": "3",
+          "suspects_interviewed": "2",
+          "confidence": "40",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:review_notes",
+      "entryGlobals": [
+        {
+          "clues_found": "0",
+          "suspects_interviewed": "0",
+          "confidence": "20",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "false",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        },
+        {
+          "clues_found": "0",
+          "suspects_interviewed": "0",
+          "confidence": "-10",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "false",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        },
+        {
+          "clues_found": "3",
+          "suspects_interviewed": "2",
+          "confidence": "10",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        }
+      ],
+      "exitGlobals": [
+        {
+          "clues_found": "0",
+          "suspects_interviewed": "0",
+          "confidence": "20",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "false",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        },
+        {
+          "clues_found": "0",
+          "suspects_interviewed": "0",
+          "confidence": "-10",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "false",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        },
+        {
+          "clues_found": "3",
+          "suspects_interviewed": "2",
+          "confidence": "10",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:forensics",
+      "entryGlobals": [
+        {
+          "clues_found": "0",
+          "suspects_interviewed": "0",
+          "confidence": "20",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "false",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        }
+      ],
+      "exitGlobals": [
+        {
+          "clues_found": "0",
+          "suspects_interviewed": "0",
+          "confidence": "{20,35}",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "false",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:wrong_accusation",
+      "entryGlobals": [
+        {
+          "clues_found": "0",
+          "suspects_interviewed": "0",
+          "confidence": "20",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "false",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        },
+        {
+          "clues_found": "3",
+          "suspects_interviewed": "2",
+          "confidence": "40",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        }
+      ],
+      "exitGlobals": [
+        {
+          "clues_found": "0",
+          "suspects_interviewed": "0",
+          "confidence": "-10",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "false",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        },
+        {
+          "clues_found": "3",
+          "suspects_interviewed": "2",
+          "confidence": "10",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:correct_accusation",
+      "entryGlobals": [
+        {
+          "clues_found": "0",
+          "suspects_interviewed": "0",
+          "confidence": "20",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "false",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        },
+        {
+          "clues_found": "3",
+          "suspects_interviewed": "2",
+          "confidence": "40",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        }
+      ],
+      "exitGlobals": [
+        {
+          "clues_found": "0",
+          "suspects_interviewed": "0",
+          "confidence": "20",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "false",
+          "detective_rank": "Senior",
+          "case_closed": "true",
+          "notes": ""
+        },
+        {
+          "clues_found": "3",
+          "suspects_interviewed": "2",
+          "confidence": "40",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "true",
+          "detective_rank": "Senior",
+          "case_closed": "true",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:case_hub__cont_0",
+      "entryGlobals": [
+        {
+          "clues_found": "0",
+          "suspects_interviewed": "0",
+          "confidence": "20",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "false",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        }
+      ],
+      "exitGlobals": [
+        {
+          "clues_found": "0",
+          "suspects_interviewed": "0",
+          "confidence": "20",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "false",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:case_hub__cont_1",
+      "entryGlobals": [
+        {
+          "clues_found": "0",
+          "suspects_interviewed": "0",
+          "confidence": "{20,35}",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "false",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        }
+      ],
+      "exitGlobals": [
+        {
+          "clues_found": "0",
+          "suspects_interviewed": "0",
+          "confidence": "{20,35}",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "false",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "cfgId": "crime_scene:scene_exit",
+      "entryGlobals": [
+        {
+          "clues_found": "4",
+          "suspects_interviewed": "0",
+          "confidence": "20",
+          "has_weapon": "true",
+          "has_motive": "true",
+          "has_alibi_broken": "false",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": " Weapon found. Staged break-in evidence. Hidden compartment found. Motive found."
+        },
+        {
+          "clues_found": "7",
+          "suspects_interviewed": "2",
+          "confidence": "40",
+          "has_weapon": "true",
+          "has_motive": "true",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": " Weapon found. Staged break-in evidence. Hidden compartment found. Motive found."
+        }
+      ],
+      "exitGlobals": [
+        {
+          "clues_found": "4",
+          "suspects_interviewed": "0",
+          "confidence": "20",
+          "has_weapon": "true",
+          "has_motive": "true",
+          "has_alibi_broken": "false",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": " Weapon found. Staged break-in evidence. Hidden compartment found. Motive found."
+        },
+        {
+          "clues_found": "7",
+          "suspects_interviewed": "2",
+          "confidence": "40",
+          "has_weapon": "true",
+          "has_motive": "true",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": " Weapon found. Staged break-in evidence. Hidden compartment found. Motive found."
+        }
+      ]
+    },
+    {
+      "cfgId": "interrogation:interview_loop",
+      "entryGlobals": [
+        {
+          "clues_found": "0",
+          "suspects_interviewed": "0",
+          "confidence": "20",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "false",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        },
+        {
+          "clues_found": "3",
+          "suspects_interviewed": "2",
+          "confidence": "20",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        },
+        {
+          "clues_found": "6",
+          "suspects_interviewed": "4",
+          "confidence": "20",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        },
+        {
+          "clues_found": "9",
+          "suspects_interviewed": "6",
+          "confidence": "20",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        },
+        {
+          "clues_found": "12",
+          "suspects_interviewed": "8",
+          "confidence": "20",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        }
+      ],
+      "exitGlobals": [
+        {
+          "clues_found": "3",
+          "suspects_interviewed": "2",
+          "confidence": "20",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        },
+        {
+          "clues_found": "6",
+          "suspects_interviewed": "4",
+          "confidence": "20",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        },
+        {
+          "clues_found": "9",
+          "suspects_interviewed": "6",
+          "confidence": "20",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        },
+        {
+          "clues_found": "12",
+          "suspects_interviewed": "8",
+          "confidence": "20",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        },
+        {
+          "clues_found": "15",
+          "suspects_interviewed": "10",
+          "confidence": "20",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "cfgId": "interrogation:interrogation_exit",
+      "entryGlobals": [
+        {
+          "clues_found": "0",
+          "suspects_interviewed": "0",
+          "confidence": "20",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "false",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        },
+        {
+          "clues_found": "3",
+          "suspects_interviewed": "2",
+          "confidence": "20",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        }
+      ],
+      "exitGlobals": [
+        {
+          "clues_found": "0",
+          "suspects_interviewed": "0",
+          "confidence": "20",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "false",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        },
+        {
+          "clues_found": "3",
+          "suspects_interviewed": "2",
+          "confidence": "20",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "cfgId": "interrogation:suspect_select__cont_0",
+      "entryGlobals": [
+        {
+          "clues_found": "3",
+          "suspects_interviewed": "2",
+          "confidence": "20",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        },
+        {
+          "clues_found": "{12,15,3,6,9}",
+          "suspects_interviewed": "{10,2,4,6,8}",
+          "confidence": "20",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        },
+        {
+          "clues_found": "{12,15,3,6,9}",
+          "suspects_interviewed": "{10,2,4,6,8}",
+          "confidence": "{10,20}",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        }
+      ],
+      "exitGlobals": [
+        {
+          "clues_found": "3",
+          "suspects_interviewed": "2",
+          "confidence": "20",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        },
+        {
+          "clues_found": "{12,15,3,6,9}",
+          "suspects_interviewed": "{10,2,4,6,8}",
+          "confidence": "20",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        },
+        {
+          "clues_found": "{12,15,3,6,9}",
+          "suspects_interviewed": "{10,2,4,6,8}",
+          "confidence": "{10,20}",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "cfgId": "interrogation:suspect_select__cont_1",
+      "entryGlobals": [
+        {
+          "clues_found": "3",
+          "suspects_interviewed": "2",
+          "confidence": "20",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        },
+        {
+          "clues_found": "{12,15,3,6,9}",
+          "suspects_interviewed": "{10,2,4,6,8}",
+          "confidence": "20",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        },
+        {
+          "clues_found": "{12,15,3,6,9}",
+          "suspects_interviewed": "{10,2,4,6,8}",
+          "confidence": "{10,20}",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        }
+      ],
+      "exitGlobals": [
+        {
+          "clues_found": "3",
+          "suspects_interviewed": "2",
+          "confidence": "20",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        },
+        {
+          "clues_found": "{12,15,3,6,9}",
+          "suspects_interviewed": "{10,2,4,6,8}",
+          "confidence": "20",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        },
+        {
+          "clues_found": "{12,15,3,6,9}",
+          "suspects_interviewed": "{10,2,4,6,8}",
+          "confidence": "{10,20}",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "cfgId": "interrogation:suspect_select__cont_2",
+      "entryGlobals": [
+        {
+          "clues_found": "3",
+          "suspects_interviewed": "2",
+          "confidence": "20",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        },
+        {
+          "clues_found": "{12,15,3,6,9}",
+          "suspects_interviewed": "{10,2,4,6,8}",
+          "confidence": "20",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        }
+      ],
+      "exitGlobals": [
+        {
+          "clues_found": "3",
+          "suspects_interviewed": "2",
+          "confidence": "20",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        },
+        {
+          "clues_found": "{12,15,3,6,9}",
+          "suspects_interviewed": "{10,2,4,6,8}",
+          "confidence": "20",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "true",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": ""
+        }
+      ]
+    }
+  ],
+  "diagnostics": {
+    "unresolvedExits": 1,
+    "droppedContexts": 0,
+    "missingCfgs": []
+  }
+}

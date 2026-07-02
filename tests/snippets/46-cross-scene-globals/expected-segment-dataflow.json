@@ -1,0 +1,86 @@
+{
+  "totalIterations": 3,
+  "widenedSccs": 0,
+  "stateCount": 3,
+  "cfgEntryStateCount": 4,
+  "blockDeltaCount": 9,
+  "blockMappedCount": 12,
+  "states": {
+    "seg_0": {
+      "entryGlobals": {
+        "health": "100",
+        "gold": "50",
+        "quest_done": "false",
+        "visited_shop": "false"
+      },
+      "exitGlobals": {
+        "health": "90",
+        "gold": "40",
+        "quest_done": "false",
+        "visited_shop": "false"
+      }
+    },
+    "seg_1": {
+      "entryGlobals": {
+        "health": "90",
+        "gold": "40",
+        "quest_done": "false",
+        "visited_shop": "false"
+      },
+      "exitGlobals": {
+        "health": "90",
+        "gold": "25",
+        "quest_done": "true",
+        "visited_shop": "true"
+      }
+    },
+    "seg_2": {
+      "entryGlobals": {
+        "health": "90",
+        "gold": "40",
+        "quest_done": "false",
+        "visited_shop": "false"
+      },
+      "exitGlobals": {
+        "health": "50",
+        "gold": "{140,40}",
+        "quest_done": "false",
+        "visited_shop": "false"
+      }
+    }
+  },
+  "cfgEntryStates": {
+    "arena:": {
+      "globals": {
+        "health": "60",
+        "gold": "40",
+        "quest_done": "false",
+        "visited_shop": "false"
+      }
+    },
+    "shop:": {
+      "globals": {
+        "health": "90",
+        "gold": "20",
+        "quest_done": "false",
+        "visited_shop": "true"
+      }
+    },
+    "startup:": {
+      "globals": {
+        "health": "100",
+        "gold": "50",
+        "quest_done": "false",
+        "visited_shop": "false"
+      }
+    },
+    "town:": {
+      "globals": {
+        "health": "90",
+        "gold": "{40,50}",
+        "quest_done": "false",
+        "visited_shop": "false"
+      }
+    }
+  }
+}

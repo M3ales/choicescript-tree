@@ -16,8 +16,8 @@
         "expression": {
           "kind": "Literal",
           "value": {
-            "type": "StringLiteral",
-            "value": "male",
+            "type": "NumberLiteral",
+            "value": 1,
             "position": 15,
             "lineNumber": 0,
             "sceneName": "startup",
@@ -43,8 +43,8 @@
       "type": "SceneStart"
     },
     "end": {
-      "type": "StringLiteral",
-      "value": "male",
+      "type": "NumberLiteral",
+      "value": 1,
       "position": 15,
       "lineNumber": 0,
       "sceneName": "startup",

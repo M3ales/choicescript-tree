@@ -1,0 +1,1175 @@
+{
+  "segmentCount": 22,
+  "edgeCount": 159,
+  "entrySegmentId": "seg_0",
+  "segments": {
+    "seg_0": {
+      "cfgId": "startup:",
+      "entries": [
+        {
+          "kind": "game-start"
+        }
+      ],
+      "exits": [
+        {
+          "kind": "choice"
+        },
+        {
+          "kind": "choice"
+        }
+      ],
+      "blockCount": 8,
+      "gosubCount": 0
+    },
+    "seg_1": {
+      "cfgId": "boss:boss_fight",
+      "entries": [
+        {
+          "kind": "choice-option"
+        }
+      ],
+      "exits": [
+        {
+          "kind": "choice"
+        },
+        {
+          "kind": "choice"
+        },
+        {
+          "kind": "terminal"
+        }
+      ],
+      "blockCount": 14,
+      "gosubCount": 0
+    },
+    "seg_2": {
+      "cfgId": "boss:boss_fight",
+      "entries": [
+        {
+          "kind": "choice-option"
+        }
+      ],
+      "exits": [
+        {
+          "kind": "choice"
+        },
+        {
+          "kind": "choice"
+        },
+        {
+          "kind": "terminal"
+        }
+      ],
+      "blockCount": 17,
+      "gosubCount": 0
+    },
+    "seg_3": {
+      "cfgId": "boss:boss_fight",
+      "entries": [
+        {
+          "kind": "choice-option"
+        }
+      ],
+      "exits": [
+        {
+          "kind": "choice"
+        },
+        {
+          "kind": "choice"
+        },
+        {
+          "kind": "terminal"
+        }
+      ],
+      "blockCount": 16,
+      "gosubCount": 0
+    },
+    "seg_4": {
+      "cfgId": "boss:boss_fight",
+      "entries": [
+        {
+          "kind": "choice-option"
+        }
+      ],
+      "exits": [
+        {
+          "kind": "choice"
+        },
+        {
+          "kind": "choice"
+        },
+        {
+          "kind": "terminal"
+        }
+      ],
+      "blockCount": 15,
+      "gosubCount": 0
+    },
+    "seg_5": {
+      "cfgId": "boss:boss_victory",
+      "entries": [
+        {
+          "kind": "choice-option"
+        }
+      ],
+      "exits": [
+        {
+          "kind": "terminal"
+        }
+      ],
+      "blockCount": 2,
+      "gosubCount": 0
+    },
+    "seg_6": {
+      "cfgId": "boss:boss_victory",
+      "entries": [
+        {
+          "kind": "choice-option"
+        }
+      ],
+      "exits": [
+        {
+          "kind": "terminal"
+        }
+      ],
+      "blockCount": 2,
+      "gosubCount": 0
+    },
+    "seg_7": {
+      "cfgId": "dungeon:dungeon_hub",
+      "entries": [
+        {
+          "kind": "choice-option",
+          "reuse": "hide_reuse"
+        }
+      ],
+      "exits": [
+        {
+          "kind": "choice"
+        },
+        {
+          "kind": "choice"
+        },
+        {
+          "kind": "choice"
+        },
+        {
+          "kind": "choice"
+        },
+        {
+          "kind": "terminal"
+        }
+      ],
+      "blockCount": 30,
+      "gosubCount": 4
+    },
+    "seg_8": {
+      "cfgId": "dungeon:dungeon_hub",
+      "entries": [
+        {
+          "kind": "choice-option",
+          "reuse": "hide_reuse"
+        }
+      ],
+      "exits": [
+        {
+          "kind": "choice"
+        },
+        {
+          "kind": "choice"
+        },
+        {
+          "kind": "choice"
+        },
+        {
+          "kind": "choice"
+        },
+        {
+          "kind": "terminal"
+        }
+      ],
+      "blockCount": 30,
+      "gosubCount": 4
+    },
+    "seg_9": {
+      "cfgId": "dungeon:dungeon_hub",
+      "entries": [
+        {
+          "kind": "choice-option",
+          "reuse": "hide_reuse"
+        }
+      ],
+      "exits": [
+        {
+          "kind": "choice"
+        },
+        {
+          "kind": "choice"
+        },
+        {
+          "kind": "choice"
+        },
+        {
+          "kind": "choice"
+        },
+        {
+          "kind": "terminal"
+        }
+      ],
+      "blockCount": 30,
+      "gosubCount": 4
+    },
+    "seg_10": {
+      "cfgId": "dungeon:dungeon_hub",
+      "entries": [
+        {
+          "kind": "choice-option",
+          "reuse": "hide_reuse"
+        }
+      ],
+      "exits": [
+        {
+          "kind": "choice"
+        },
+        {
+          "kind": "choice"
+        },
+        {
+          "kind": "choice"
+        },
+        {
+          "kind": "choice"
+        },
+        {
+          "kind": "terminal"
+        }
+      ],
+      "blockCount": 30,
+      "gosubCount": 4
+    },
+    "seg_11": {
+      "cfgId": "dungeon:dungeon_hub",
+      "entries": [
+        {
+          "kind": "choice-option",
+          "reuse": "hide_reuse"
+        }
+      ],
+      "exits": [
+        {
+          "kind": "choice"
+        },
+        {
+          "kind": "choice"
+        },
+        {
+          "kind": "choice"
+        },
+        {
+          "kind": "choice"
+        },
+        {
+          "kind": "terminal"
+        }
+      ],
+      "blockCount": 30,
+      "gosubCount": 4
+    },
+    "seg_12": {
+      "cfgId": "dungeon:dungeon_hub",
+      "entries": [
+        {
+          "kind": "choice-option",
+          "reuse": "hide_reuse"
+        }
+      ],
+      "exits": [
+        {
+          "kind": "choice"
+        },
+        {
+          "kind": "choice"
+        },
+        {
+          "kind": "choice"
+        },
+        {
+          "kind": "choice"
+        },
+        {
+          "kind": "terminal"
+        }
+      ],
+      "blockCount": 30,
+      "gosubCount": 4
+    },
+    "seg_13": {
+      "cfgId": "dungeon:dungeon_hub",
+      "entries": [
+        {
+          "kind": "choice-option"
+        }
+      ],
+      "exits": [
+        {
+          "kind": "choice"
+        },
+        {
+          "kind": "choice"
+        }
+      ],
+      "blockCount": 11,
+      "gosubCount": 1
+    },
+    "seg_14": {
+      "cfgId": "dungeon:retreat",
+      "entries": [
+        {
+          "kind": "choice-option"
+        }
+      ],
+      "exits": [
+        {
+          "kind": "terminal"
+        }
+      ],
+      "blockCount": 4,
+      "gosubCount": 0
+    },
+    "seg_15": {
+      "cfgId": "boss:",
+      "entries": [
+        {
+          "kind": "choice-option"
+        }
+      ],
+      "exits": [
+        {
+          "kind": "choice"
+        },
+        {
+          "kind": "choice"
+        },
+        {
+          "kind": "terminal"
+        }
+      ],
+      "blockCount": 12,
+      "gosubCount": 0
+    },
+    "seg_16": {
+      "cfgId": "dungeon:dungeon_hub",
+      "entries": [
+        {
+          "kind": "choice-option"
+        }
+      ],
+      "exits": [
+        {
+          "kind": "choice"
+        },
+        {
+          "kind": "choice"
+        }
+      ],
+      "blockCount": 11,
+      "gosubCount": 1
+    },
+    "seg_17": {
+      "cfgId": "dungeon:combat_round",
+      "entries": [
+        {
+          "kind": "choice-option"
+        }
+      ],
+      "exits": [
+        {
+          "kind": "choice"
+        },
+        {
+          "kind": "terminal"
+        }
+      ],
+      "blockCount": 14,
+      "gosubCount": 0
+    },
+    "seg_18": {
+      "cfgId": "dungeon:combat_round",
+      "entries": [
+        {
+          "kind": "choice-option"
+        }
+      ],
+      "exits": [
+        {
+          "kind": "choice"
+        },
+        {
+          "kind": "terminal"
+        }
+      ],
+      "blockCount": 15,
+      "gosubCount": 0
+    },
+    "seg_19": {
+      "cfgId": "dungeon:combat_round",
+      "entries": [
+        {
+          "kind": "choice-option"
+        }
+      ],
+      "exits": [
+        {
+          "kind": "choice"
+        },
+        {
+          "kind": "terminal"
+        }
+      ],
+      "blockCount": 16,
+      "gosubCount": 1
+    },
+    "seg_20": {
+      "cfgId": "dungeon:treasure_room",
+      "entries": [
+        {
+          "kind": "choice-option"
+        }
+      ],
+      "exits": [],
+      "blockCount": 1,
+      "gosubCount": 0
+    },
+    "seg_21": {
+      "cfgId": "dungeon:treasure_room",
+      "entries": [
+        {
+          "kind": "choice-option"
+        }
+      ],
+      "exits": [],
+      "blockCount": 4,
+      "gosubCount": 0
+    }
+  },
+  "edges": [
+    {
+      "source": "seg_0",
+      "target": "seg_7",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_0",
+      "target": "seg_8",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_0",
+      "target": "seg_9",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_0",
+      "target": "seg_10",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_0",
+      "target": "seg_11",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_0",
+      "target": "seg_12",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_0",
+      "target": "seg_13",
+      "hasCondition": true
+    },
+    {
+      "source": "seg_0",
+      "target": "seg_14"
+    },
+    {
+      "source": "seg_0",
+      "target": "seg_15"
+    },
+    {
+      "source": "seg_0",
+      "target": "seg_16"
+    },
+    {
+      "source": "seg_1",
+      "target": "seg_5"
+    },
+    {
+      "source": "seg_1",
+      "target": "seg_6"
+    },
+    {
+      "source": "seg_1",
+      "target": "seg_1"
+    },
+    {
+      "source": "seg_1",
+      "target": "seg_2"
+    },
+    {
+      "source": "seg_1",
+      "target": "seg_3",
+      "hasCondition": true
+    },
+    {
+      "source": "seg_1",
+      "target": "seg_4",
+      "hasCondition": true
+    },
+    {
+      "source": "seg_2",
+      "target": "seg_5"
+    },
+    {
+      "source": "seg_2",
+      "target": "seg_6"
+    },
+    {
+      "source": "seg_2",
+      "target": "seg_1"
+    },
+    {
+      "source": "seg_2",
+      "target": "seg_2"
+    },
+    {
+      "source": "seg_2",
+      "target": "seg_3",
+      "hasCondition": true
+    },
+    {
+      "source": "seg_2",
+      "target": "seg_4",
+      "hasCondition": true
+    },
+    {
+      "source": "seg_3",
+      "target": "seg_5"
+    },
+    {
+      "source": "seg_3",
+      "target": "seg_6"
+    },
+    {
+      "source": "seg_3",
+      "target": "seg_1"
+    },
+    {
+      "source": "seg_3",
+      "target": "seg_2"
+    },
+    {
+      "source": "seg_3",
+      "target": "seg_3",
+      "hasCondition": true
+    },
+    {
+      "source": "seg_3",
+      "target": "seg_4",
+      "hasCondition": true
+    },
+    {
+      "source": "seg_4",
+      "target": "seg_5"
+    },
+    {
+      "source": "seg_4",
+      "target": "seg_6"
+    },
+    {
+      "source": "seg_4",
+      "target": "seg_1"
+    },
+    {
+      "source": "seg_4",
+      "target": "seg_2"
+    },
+    {
+      "source": "seg_4",
+      "target": "seg_3",
+      "hasCondition": true
+    },
+    {
+      "source": "seg_4",
+      "target": "seg_4",
+      "hasCondition": true
+    },
+    {
+      "source": "seg_7",
+      "target": "seg_20"
+    },
+    {
+      "source": "seg_7",
+      "target": "seg_21"
+    },
+    {
+      "source": "seg_7",
+      "target": "seg_7",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_7",
+      "target": "seg_8",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_7",
+      "target": "seg_9",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_7",
+      "target": "seg_10",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_7",
+      "target": "seg_11",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_7",
+      "target": "seg_12",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_7",
+      "target": "seg_13",
+      "hasCondition": true
+    },
+    {
+      "source": "seg_7",
+      "target": "seg_14"
+    },
+    {
+      "source": "seg_7",
+      "target": "seg_15"
+    },
+    {
+      "source": "seg_7",
+      "target": "seg_16"
+    },
+    {
+      "source": "seg_7",
+      "target": "seg_17"
+    },
+    {
+      "source": "seg_7",
+      "target": "seg_18"
+    },
+    {
+      "source": "seg_7",
+      "target": "seg_19",
+      "hasCondition": true
+    },
+    {
+      "source": "seg_8",
+      "target": "seg_20"
+    },
+    {
+      "source": "seg_8",
+      "target": "seg_21"
+    },
+    {
+      "source": "seg_8",
+      "target": "seg_7",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_8",
+      "target": "seg_8",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_8",
+      "target": "seg_9",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_8",
+      "target": "seg_10",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_8",
+      "target": "seg_11",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_8",
+      "target": "seg_12",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_8",
+      "target": "seg_13",
+      "hasCondition": true
+    },
+    {
+      "source": "seg_8",
+      "target": "seg_14"
+    },
+    {
+      "source": "seg_8",
+      "target": "seg_15"
+    },
+    {
+      "source": "seg_8",
+      "target": "seg_16"
+    },
+    {
+      "source": "seg_8",
+      "target": "seg_17"
+    },
+    {
+      "source": "seg_8",
+      "target": "seg_18"
+    },
+    {
+      "source": "seg_8",
+      "target": "seg_19",
+      "hasCondition": true
+    },
+    {
+      "source": "seg_9",
+      "target": "seg_20"
+    },
+    {
+      "source": "seg_9",
+      "target": "seg_21"
+    },
+    {
+      "source": "seg_9",
+      "target": "seg_7",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_9",
+      "target": "seg_8",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_9",
+      "target": "seg_9",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_9",
+      "target": "seg_10",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_9",
+      "target": "seg_11",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_9",
+      "target": "seg_12",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_9",
+      "target": "seg_13",
+      "hasCondition": true
+    },
+    {
+      "source": "seg_9",
+      "target": "seg_14"
+    },
+    {
+      "source": "seg_9",
+      "target": "seg_15"
+    },
+    {
+      "source": "seg_9",
+      "target": "seg_16"
+    },
+    {
+      "source": "seg_9",
+      "target": "seg_17"
+    },
+    {
+      "source": "seg_9",
+      "target": "seg_18"
+    },
+    {
+      "source": "seg_9",
+      "target": "seg_19",
+      "hasCondition": true
+    },
+    {
+      "source": "seg_10",
+      "target": "seg_20"
+    },
+    {
+      "source": "seg_10",
+      "target": "seg_21"
+    },
+    {
+      "source": "seg_10",
+      "target": "seg_7",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_10",
+      "target": "seg_8",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_10",
+      "target": "seg_9",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_10",
+      "target": "seg_10",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_10",
+      "target": "seg_11",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_10",
+      "target": "seg_12",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_10",
+      "target": "seg_13",
+      "hasCondition": true
+    },
+    {
+      "source": "seg_10",
+      "target": "seg_14"
+    },
+    {
+      "source": "seg_10",
+      "target": "seg_15"
+    },
+    {
+      "source": "seg_10",
+      "target": "seg_16"
+    },
+    {
+      "source": "seg_10",
+      "target": "seg_17"
+    },
+    {
+      "source": "seg_10",
+      "target": "seg_18"
+    },
+    {
+      "source": "seg_10",
+      "target": "seg_19",
+      "hasCondition": true
+    },
+    {
+      "source": "seg_11",
+      "target": "seg_20"
+    },
+    {
+      "source": "seg_11",
+      "target": "seg_21"
+    },
+    {
+      "source": "seg_11",
+      "target": "seg_7",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_11",
+      "target": "seg_8",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_11",
+      "target": "seg_9",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_11",
+      "target": "seg_10",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_11",
+      "target": "seg_11",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_11",
+      "target": "seg_12",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_11",
+      "target": "seg_13",
+      "hasCondition": true
+    },
+    {
+      "source": "seg_11",
+      "target": "seg_14"
+    },
+    {
+      "source": "seg_11",
+      "target": "seg_15"
+    },
+    {
+      "source": "seg_11",
+      "target": "seg_16"
+    },
+    {
+      "source": "seg_11",
+      "target": "seg_17"
+    },
+    {
+      "source": "seg_11",
+      "target": "seg_18"
+    },
+    {
+      "source": "seg_11",
+      "target": "seg_19",
+      "hasCondition": true
+    },
+    {
+      "source": "seg_12",
+      "target": "seg_20"
+    },
+    {
+      "source": "seg_12",
+      "target": "seg_21"
+    },
+    {
+      "source": "seg_12",
+      "target": "seg_7",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_12",
+      "target": "seg_8",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_12",
+      "target": "seg_9",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_12",
+      "target": "seg_10",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_12",
+      "target": "seg_11",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_12",
+      "target": "seg_12",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_12",
+      "target": "seg_13",
+      "hasCondition": true
+    },
+    {
+      "source": "seg_12",
+      "target": "seg_14"
+    },
+    {
+      "source": "seg_12",
+      "target": "seg_15"
+    },
+    {
+      "source": "seg_12",
+      "target": "seg_16"
+    },
+    {
+      "source": "seg_12",
+      "target": "seg_17"
+    },
+    {
+      "source": "seg_12",
+      "target": "seg_18"
+    },
+    {
+      "source": "seg_12",
+      "target": "seg_19",
+      "hasCondition": true
+    },
+    {
+      "source": "seg_13",
+      "target": "seg_7",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_13",
+      "target": "seg_8",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_13",
+      "target": "seg_9",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_13",
+      "target": "seg_10",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_13",
+      "target": "seg_11",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_13",
+      "target": "seg_12",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_13",
+      "target": "seg_13",
+      "hasCondition": true
+    },
+    {
+      "source": "seg_13",
+      "target": "seg_14"
+    },
+    {
+      "source": "seg_13",
+      "target": "seg_15"
+    },
+    {
+      "source": "seg_13",
+      "target": "seg_16"
+    },
+    {
+      "source": "seg_15",
+      "target": "seg_5"
+    },
+    {
+      "source": "seg_15",
+      "target": "seg_6"
+    },
+    {
+      "source": "seg_15",
+      "target": "seg_1"
+    },
+    {
+      "source": "seg_15",
+      "target": "seg_2"
+    },
+    {
+      "source": "seg_15",
+      "target": "seg_3",
+      "hasCondition": true
+    },
+    {
+      "source": "seg_15",
+      "target": "seg_4",
+      "hasCondition": true
+    },
+    {
+      "source": "seg_16",
+      "target": "seg_7",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_16",
+      "target": "seg_8",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_16",
+      "target": "seg_9",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_16",
+      "target": "seg_10",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_16",
+      "target": "seg_11",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_16",
+      "target": "seg_12",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_16",
+      "target": "seg_13",
+      "hasCondition": true
+    },
+    {
+      "source": "seg_16",
+      "target": "seg_14"
+    },
+    {
+      "source": "seg_16",
+      "target": "seg_15"
+    },
+    {
+      "source": "seg_16",
+      "target": "seg_16"
+    },
+    {
+      "source": "seg_17",
+      "target": "seg_17"
+    },
+    {
+      "source": "seg_17",
+      "target": "seg_18"
+    },
+    {
+      "source": "seg_17",
+      "target": "seg_19",
+      "hasCondition": true
+    },
+    {
+      "source": "seg_18",
+      "target": "seg_17"
+    },
+    {
+      "source": "seg_18",
+      "target": "seg_18"
+    },
+    {
+      "source": "seg_18",
+      "target": "seg_19",
+      "hasCondition": true
+    },
+    {
+      "source": "seg_19",
+      "target": "seg_17"
+    },
+    {
+      "source": "seg_19",
+      "target": "seg_18"
+    },
+    {
+      "source": "seg_19",
+      "target": "seg_19",
+      "hasCondition": true
+    }
+  ]
+}

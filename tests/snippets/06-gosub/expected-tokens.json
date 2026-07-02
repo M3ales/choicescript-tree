@@ -50,10 +50,10 @@
       "type": "Identifier",
       "value": "check_gold",
       "rawValue": "check_gold",
-      "position": 7,
-      "lineNumber": 3,
       "sceneName": "startup",
       "indent": 0,
+      "lineNumber": 3,
+      "position": 7,
       "isLabelName": true
     },
     {
@@ -82,10 +82,10 @@
       "type": "Identifier",
       "value": "check_gold",
       "rawValue": "check_gold",
-      "position": 6,
-      "lineNumber": 7,
       "sceneName": "startup",
       "indent": 0,
+      "lineNumber": 7,
+      "position": 7,
       "isLabelName": true
     },
     {

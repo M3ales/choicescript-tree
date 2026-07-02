@@ -1,0 +1,1330 @@
+[
+  {
+    "name": "chapter1",
+    "statements": [
+      {
+        "content": [
+          {
+            "type": "Comment",
+            "sceneName": "chapter1",
+            "indent": 0,
+            "lineNumber": 1,
+            "position": 0,
+            "value": "health and stamina should be in scope (globals from startup)"
+          },
+          {
+            "type": "Comment",
+            "sceneName": "chapter1",
+            "indent": 0,
+            "lineNumber": 2,
+            "position": 0,
+            "value": "gold should NOT be in scope (deleted in startup)"
+          },
+          {
+            "type": "Comment",
+            "sceneName": "chapter1",
+            "indent": 0,
+            "lineNumber": 3,
+            "position": 0,
+            "value": "battle_log is a temp — should NOT cross scene boundary"
+          }
+        ],
+        "kind": "Comment"
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "chapter1",
+            "lineNumber": 5,
+            "position": 0,
+            "indent": 0,
+            "content": "You arrive with "
+          },
+          {
+            "type": "Prose",
+            "sceneName": "chapter1",
+            "lineNumber": 5,
+            "position": 25,
+            "indent": 0,
+            "content": " health and "
+          },
+          {
+            "type": "Prose",
+            "sceneName": "chapter1",
+            "lineNumber": 5,
+            "position": 47,
+            "indent": 0,
+            "content": " stamina.\n\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 16,
+            "lineNumber": 5,
+            "position": 0,
+            "text": "You arrive with "
+          },
+          {
+            "kind": "Print",
+            "start": 0,
+            "end": 0,
+            "lineNumber": 5,
+            "position": 16,
+            "expression": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "health",
+                "rawValue": "health",
+                "position": 18,
+                "lineNumber": 5,
+                "sceneName": "chapter1",
+                "indent": 0
+              }
+            }
+          },
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 12,
+            "lineNumber": 5,
+            "position": 25,
+            "text": " health and "
+          },
+          {
+            "kind": "Print",
+            "start": 0,
+            "end": 0,
+            "lineNumber": 5,
+            "position": 37,
+            "expression": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "stamina",
+                "rawValue": "stamina",
+                "position": 39,
+                "lineNumber": 5,
+                "sceneName": "chapter1",
+                "indent": 0
+              }
+            }
+          },
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 11,
+            "lineNumber": 5,
+            "position": 47,
+            "text": " stamina.\n\n"
+          }
+        ]
+      },
+      {
+        "content": [],
+        "kind": "Comment"
+      },
+      {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "local_var",
+          "rawValue": "local_var",
+          "position": 6,
+          "lineNumber": 8,
+          "sceneName": "chapter1",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "StringLiteral",
+            "value": "hello",
+            "position": 16,
+            "lineNumber": 8,
+            "sceneName": "chapter1",
+            "indent": 0
+          }
+        },
+        "scope": "Temporary",
+        "token": {
+          "type": "CreateTempVariable",
+          "sceneName": "chapter1",
+          "indent": 0,
+          "lineNumber": 8,
+          "position": 0
+        }
+      },
+      {
+        "content": [],
+        "kind": "Comment"
+      },
+      {
+        "kind": "If",
+        "token": {
+          "type": "If",
+          "sceneName": "chapter1",
+          "indent": 0,
+          "lineNumber": 11,
+          "position": 0
+        },
+        "body": [
+          {
+            "content": [
+              {
+                "type": "Prose",
+                "sceneName": "chapter1",
+                "lineNumber": 12,
+                "position": 2,
+                "indent": 1,
+                "content": "You still have gold!\n\n"
+              }
+            ],
+            "kind": "Prose",
+            "parsedSegments": [
+              {
+                "kind": "Text",
+                "start": 0,
+                "end": 22,
+                "lineNumber": 12,
+                "position": 2,
+                "text": "You still have gold!\n\n"
+              }
+            ]
+          }
+        ],
+        "expression": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Binary",
+            "left": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "gold",
+                "rawValue": "gold",
+                "position": 5,
+                "lineNumber": 11,
+                "sceneName": "chapter1",
+                "indent": 0
+              }
+            },
+            "operator": {
+              "type": "GreaterThanOperator",
+              "rawValue": ">",
+              "position": 10,
+              "lineNumber": 11,
+              "sceneName": "chapter1",
+              "indent": 0
+            },
+            "right": {
+              "kind": "Literal",
+              "value": {
+                "type": "NumberLiteral",
+                "value": 0,
+                "position": 12,
+                "lineNumber": 11,
+                "sceneName": "chapter1",
+                "indent": 0
+              }
+            }
+          }
+        },
+        "elseBranch": null,
+        "elseIfBranches": []
+      },
+      {
+        "content": [],
+        "kind": "Comment"
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "chapter1",
+            "lineNumber": 15,
+            "position": 0,
+            "indent": 0,
+            "content": "The log: "
+          },
+          {
+            "type": "Prose",
+            "sceneName": "chapter1",
+            "lineNumber": 15,
+            "position": 22,
+            "indent": 0,
+            "content": "\n\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 9,
+            "lineNumber": 15,
+            "position": 0,
+            "text": "The log: "
+          },
+          {
+            "kind": "Print",
+            "start": 0,
+            "end": 0,
+            "lineNumber": 15,
+            "position": 9,
+            "expression": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "battle_log",
+                "rawValue": "battle_log",
+                "position": 11,
+                "lineNumber": 15,
+                "sceneName": "chapter1",
+                "indent": 0
+              }
+            }
+          },
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 2,
+            "lineNumber": 15,
+            "position": 22,
+            "text": "\n\n"
+          }
+        ]
+      },
+      {
+        "kind": "Finish",
+        "token": {
+          "type": "Finish",
+          "sceneName": "chapter1",
+          "indent": 0,
+          "lineNumber": 17,
+          "position": 0
+        },
+        "buttonText": null
+      }
+    ],
+    "parseErrors": [],
+    "start": {
+      "sceneName": "chapter1",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    "end": {
+      "type": "Finish",
+      "sceneName": "chapter1",
+      "indent": 0,
+      "lineNumber": 17,
+      "position": 0
+    }
+  },
+  {
+    "name": "startup",
+    "statements": [
+      {
+        "content": [],
+        "kind": "Comment"
+      },
+      {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "health",
+          "rawValue": "health",
+          "position": 8,
+          "lineNumber": 1,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 100,
+            "position": 15,
+            "lineNumber": 1,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 1,
+          "position": 0
+        }
+      },
+      {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "stamina",
+          "rawValue": "stamina",
+          "position": 8,
+          "lineNumber": 2,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 50,
+            "position": 16,
+            "lineNumber": 2,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 2,
+          "position": 0
+        }
+      },
+      {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "gold",
+          "rawValue": "gold",
+          "position": 8,
+          "lineNumber": 3,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 0,
+            "position": 13,
+            "lineNumber": 3,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 3,
+          "position": 0
+        }
+      },
+      {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "battle_log",
+          "rawValue": "battle_log",
+          "position": 6,
+          "lineNumber": 4,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "StringLiteral",
+            "value": "",
+            "position": 17,
+            "lineNumber": 4,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Temporary",
+        "token": {
+          "type": "CreateTempVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 4,
+          "position": 0
+        }
+      },
+      {
+        "content": [],
+        "kind": "Comment"
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 7,
+            "position": 0,
+            "indent": 0,
+            "content": "Your health is "
+          },
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 7,
+            "position": 24,
+            "indent": 0,
+            "content": ".\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 15,
+            "lineNumber": 7,
+            "position": 0,
+            "text": "Your health is "
+          },
+          {
+            "kind": "Print",
+            "start": 0,
+            "end": 0,
+            "lineNumber": 7,
+            "position": 15,
+            "expression": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "health",
+                "rawValue": "health",
+                "position": 17,
+                "lineNumber": 7,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          },
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 2,
+            "lineNumber": 7,
+            "position": 24,
+            "text": ".\n"
+          }
+        ]
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "health",
+            "rawValue": "health",
+            "position": 5,
+            "lineNumber": 8,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "assignment": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 90,
+            "position": 12,
+            "lineNumber": 8,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 8,
+          "position": 0
+        }
+      },
+      {
+        "content": [],
+        "kind": "Comment"
+      },
+      {
+        "kind": "GoSub",
+        "token": {
+          "type": "GoSub",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 11,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "drain_stamina",
+          "rawValue": "drain_stamina",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 11,
+          "position": 7,
+          "isLabelName": true
+        },
+        "args": []
+      },
+      {
+        "content": [],
+        "kind": "Comment"
+      },
+      {
+        "kind": "If",
+        "token": {
+          "type": "If",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 14,
+          "position": 0
+        },
+        "body": [
+          {
+            "kind": "DeclareVariable",
+            "variable": {
+              "type": "Identifier",
+              "value": "bonus",
+              "rawValue": "bonus",
+              "position": 8,
+              "lineNumber": 15,
+              "sceneName": "startup",
+              "indent": 1
+            },
+            "expression": {
+              "kind": "Literal",
+              "value": {
+                "type": "NumberLiteral",
+                "value": 10,
+                "position": 14,
+                "lineNumber": 15,
+                "sceneName": "startup",
+                "indent": 1
+              }
+            },
+            "scope": "Temporary",
+            "token": {
+              "type": "CreateTempVariable",
+              "sceneName": "startup",
+              "indent": 1,
+              "lineNumber": 15,
+              "position": 2
+            }
+          },
+          {
+            "kind": "SetVariable",
+            "expression": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "health",
+                "rawValue": "health",
+                "position": 7,
+                "lineNumber": 16,
+                "sceneName": "startup",
+                "indent": 1
+              }
+            },
+            "assignment": {
+              "kind": "Grouping",
+              "expression": {
+                "kind": "Binary",
+                "left": {
+                  "kind": "Identifier",
+                  "token": {
+                    "type": "Identifier",
+                    "value": "health",
+                    "rawValue": "health",
+                    "position": 15,
+                    "lineNumber": 16,
+                    "sceneName": "startup",
+                    "indent": 1
+                  }
+                },
+                "operator": {
+                  "type": "AdditionOperator",
+                  "rawValue": "+",
+                  "position": 22,
+                  "lineNumber": 16,
+                  "sceneName": "startup",
+                  "indent": 1
+                },
+                "right": {
+                  "kind": "Identifier",
+                  "token": {
+                    "type": "Identifier",
+                    "value": "bonus",
+                    "rawValue": "bonus",
+                    "position": 24,
+                    "lineNumber": 16,
+                    "sceneName": "startup",
+                    "indent": 1
+                  }
+                }
+              }
+            },
+            "token": {
+              "type": "SetVariable",
+              "sceneName": "startup",
+              "indent": 1,
+              "lineNumber": 16,
+              "position": 2
+            }
+          }
+        ],
+        "expression": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Binary",
+            "left": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "health",
+                "rawValue": "health",
+                "position": 5,
+                "lineNumber": 14,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "operator": {
+              "type": "GreaterThanOperator",
+              "rawValue": ">",
+              "position": 12,
+              "lineNumber": 14,
+              "sceneName": "startup",
+              "indent": 0
+            },
+            "right": {
+              "kind": "Literal",
+              "value": {
+                "type": "NumberLiteral",
+                "value": 50,
+                "position": 14,
+                "lineNumber": 14,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          }
+        },
+        "elseBranch": null,
+        "elseIfBranches": []
+      },
+      {
+        "content": [
+          {
+            "type": "Comment",
+            "sceneName": "startup",
+            "indent": 0,
+            "lineNumber": 19,
+            "position": 0,
+            "value": "This is intentional: bonus only exists on one branch"
+          }
+        ],
+        "kind": "Comment"
+      },
+      {
+        "kind": "If",
+        "token": {
+          "type": "If",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 20,
+          "position": 0
+        },
+        "body": [
+          {
+            "content": [
+              {
+                "type": "Prose",
+                "sceneName": "startup",
+                "lineNumber": 21,
+                "position": 2,
+                "indent": 1,
+                "content": "You feel strong with "
+              },
+              {
+                "type": "Prose",
+                "sceneName": "startup",
+                "lineNumber": 21,
+                "position": 31,
+                "indent": 1,
+                "content": " bonus!\n\n"
+              }
+            ],
+            "kind": "Prose",
+            "parsedSegments": [
+              {
+                "kind": "Text",
+                "start": 0,
+                "end": 21,
+                "lineNumber": 21,
+                "position": 2,
+                "text": "You feel strong with "
+              },
+              {
+                "kind": "Print",
+                "start": 0,
+                "end": 0,
+                "lineNumber": 21,
+                "position": 23,
+                "expression": {
+                  "kind": "Identifier",
+                  "token": {
+                    "type": "Identifier",
+                    "value": "bonus",
+                    "rawValue": "bonus",
+                    "position": 25,
+                    "lineNumber": 21,
+                    "sceneName": "startup",
+                    "indent": 1
+                  }
+                }
+              },
+              {
+                "kind": "Text",
+                "start": 0,
+                "end": 9,
+                "lineNumber": 21,
+                "position": 31,
+                "text": " bonus!\n\n"
+              }
+            ]
+          }
+        ],
+        "expression": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Binary",
+            "left": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "health",
+                "rawValue": "health",
+                "position": 5,
+                "lineNumber": 20,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "operator": {
+              "type": "GreaterThanOperator",
+              "rawValue": ">",
+              "position": 12,
+              "lineNumber": 20,
+              "sceneName": "startup",
+              "indent": 0
+            },
+            "right": {
+              "kind": "Literal",
+              "value": {
+                "type": "NumberLiteral",
+                "value": 80,
+                "position": 14,
+                "lineNumber": 20,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          }
+        },
+        "elseBranch": null,
+        "elseIfBranches": []
+      },
+      {
+        "content": [],
+        "kind": "Comment"
+      },
+      {
+        "kind": "DeleteVariable",
+        "token": {
+          "type": "DeleteVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 24,
+          "position": 0
+        },
+        "variable": {
+          "type": "Identifier",
+          "value": "gold",
+          "rawValue": "gold",
+          "position": 8,
+          "lineNumber": 24,
+          "sceneName": "startup",
+          "indent": 0
+        }
+      },
+      {
+        "content": [
+          {
+            "type": "Comment",
+            "sceneName": "startup",
+            "indent": 0,
+            "lineNumber": 27,
+            "position": 0,
+            "value": "6. Gosub to subroutine that reads deleted var"
+          }
+        ],
+        "kind": "Comment"
+      },
+      {
+        "kind": "GoSub",
+        "token": {
+          "type": "GoSub",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 28,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "check_gold",
+          "rawValue": "check_gold",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 28,
+          "position": 7,
+          "isLabelName": true
+        },
+        "args": []
+      },
+      {
+        "content": [],
+        "kind": "Comment"
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 31,
+            "position": 0,
+            "indent": 0,
+            "content": "The log says: "
+          },
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 31,
+            "position": 27,
+            "indent": 0,
+            "content": "\n\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 14,
+            "lineNumber": 31,
+            "position": 0,
+            "text": "The log says: "
+          },
+          {
+            "kind": "Print",
+            "start": 0,
+            "end": 0,
+            "lineNumber": 31,
+            "position": 14,
+            "expression": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "battle_log",
+                "rawValue": "battle_log",
+                "position": 16,
+                "lineNumber": 31,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          },
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 2,
+            "lineNumber": 31,
+            "position": 27,
+            "text": "\n\n"
+          }
+        ]
+      },
+      {
+        "kind": "GotoScene",
+        "token": {
+          "type": "GotoScene",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 33,
+          "position": 0
+        },
+        "scene": {
+          "type": "Identifier",
+          "value": "chapter1",
+          "rawValue": "chapter1",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 33,
+          "position": 12,
+          "isSceneName": true
+        }
+      },
+      {
+        "content": [],
+        "kind": "Comment"
+      },
+      {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 37,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "drain_stamina",
+          "rawValue": "drain_stamina",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 37,
+          "position": 7,
+          "isLabelName": true
+        }
+      },
+      {
+        "content": [],
+        "kind": "Comment"
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "stamina",
+            "rawValue": "stamina",
+            "position": 5,
+            "lineNumber": 39,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "assignment": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Binary",
+            "left": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "stamina",
+                "rawValue": "stamina",
+                "position": 14,
+                "lineNumber": 39,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "operator": {
+              "type": "SubtractionOperator",
+              "rawValue": "-",
+              "position": 22,
+              "lineNumber": 39,
+              "sceneName": "startup",
+              "indent": 0
+            },
+            "right": {
+              "kind": "Literal",
+              "value": {
+                "type": "NumberLiteral",
+                "value": 10,
+                "position": 24,
+                "lineNumber": 39,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 39,
+          "position": 0
+        }
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "battle_log",
+            "rawValue": "battle_log",
+            "position": 5,
+            "lineNumber": 40,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "assignment": {
+          "kind": "Literal",
+          "value": {
+            "type": "StringLiteral",
+            "value": "drained",
+            "position": 16,
+            "lineNumber": 40,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 40,
+          "position": 0
+        }
+      },
+      {
+        "kind": "Return",
+        "token": {
+          "type": "Return",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 41,
+          "position": 0
+        }
+      },
+      {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 43,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "check_gold",
+          "rawValue": "check_gold",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 43,
+          "position": 7,
+          "isLabelName": true
+        }
+      },
+      {
+        "content": [],
+        "kind": "Comment"
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 45,
+            "position": 0,
+            "indent": 0,
+            "content": "You have "
+          },
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 45,
+            "position": 16,
+            "indent": 0,
+            "content": " gold.\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 9,
+            "lineNumber": 45,
+            "position": 0,
+            "text": "You have "
+          },
+          {
+            "kind": "Print",
+            "start": 0,
+            "end": 0,
+            "lineNumber": 45,
+            "position": 9,
+            "expression": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "gold",
+                "rawValue": "gold",
+                "position": 11,
+                "lineNumber": 45,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          },
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 7,
+            "lineNumber": 45,
+            "position": 16,
+            "text": " gold.\n"
+          }
+        ]
+      },
+      {
+        "kind": "Return",
+        "token": {
+          "type": "Return",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 46,
+          "position": 0
+        }
+      },
+      {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 48,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "dead_label",
+          "rawValue": "dead_label",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 48,
+          "position": 7,
+          "isLabelName": true
+        }
+      },
+      {
+        "content": [
+          {
+            "type": "Comment",
+            "sceneName": "startup",
+            "indent": 0,
+            "lineNumber": 50,
+            "position": 0,
+            "value": "Any variable reference here is undefined"
+          }
+        ],
+        "kind": "Comment"
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "health",
+            "rawValue": "health",
+            "position": 5,
+            "lineNumber": 51,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "assignment": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Binary",
+            "left": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "health",
+                "rawValue": "health",
+                "position": 13,
+                "lineNumber": 51,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "operator": {
+              "type": "AdditionOperator",
+              "rawValue": "+",
+              "position": 20,
+              "lineNumber": 51,
+              "sceneName": "startup",
+              "indent": 0
+            },
+            "right": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "stamina",
+                "rawValue": "stamina",
+                "position": 22,
+                "lineNumber": 51,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 51,
+          "position": 0
+        }
+      },
+      {
+        "kind": "Return",
+        "token": {
+          "type": "Return",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 52,
+          "position": 0
+        }
+      }
+    ],
+    "parseErrors": [],
+    "start": {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    "end": {
+      "type": "Return",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 52,
+      "position": 0
+    }
+  }
+]

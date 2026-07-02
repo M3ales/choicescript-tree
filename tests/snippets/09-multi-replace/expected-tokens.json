@@ -24,15 +24,15 @@
       "indent": 0
     },
     {
-      "type": "StringLiteral",
-      "value": "male",
+      "type": "NumberLiteral",
+      "value": 1,
       "position": 15,
       "lineNumber": 0,
       "sceneName": "startup",
       "indent": 0
     },
     {
-      "lineNumber": 5,
+      "lineNumber": 6,
       "indent": 0,
       "position": 0,
       "sceneName": "startup",

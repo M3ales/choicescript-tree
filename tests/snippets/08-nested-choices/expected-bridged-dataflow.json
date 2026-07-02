@@ -1,0 +1,13 @@
+{
+  "cfgCount": 1,
+  "states": [
+    {
+      "cfgId": "startup:",
+      "entryGlobals": [
+        {
+          "weapon": "{none,sword}"
+        }
+      ]
+    }
+  ]
+}

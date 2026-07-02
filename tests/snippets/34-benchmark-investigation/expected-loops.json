@@ -1,0 +1,75 @@
+[
+  {
+    "headerCfgId": "startup:case_hub",
+    "bodyCfgIds": [
+      "crime_scene:",
+      "crime_scene:scene_exit",
+      "crime_scene:scene_hub",
+      "interrogation:",
+      "interrogation:interrogation_exit",
+      "interrogation:interview_loop",
+      "interrogation:suspect_select",
+      "interrogation:suspect_select__cont_0",
+      "interrogation:suspect_select__cont_1",
+      "interrogation:suspect_select__cont_2",
+      "startup:accusation",
+      "startup:case_hub",
+      "startup:case_hub__cont_0",
+      "startup:case_hub__cont_1",
+      "startup:wrong_accusation"
+    ],
+    "backEdgeCount": 5,
+    "exitCount": 9,
+    "mechanism": "mixed",
+    "pure": false,
+    "bound": "choice-bounded",
+    "tripCount": 4,
+    "unrollDepth": 4,
+    "infinite": false
+  },
+  {
+    "headerCfgId": "crime_scene:scene_hub",
+    "bodyCfgIds": [
+      "crime_scene:scene_hub"
+    ],
+    "backEdgeCount": 4,
+    "exitCount": 3,
+    "mechanism": "direct",
+    "pure": false,
+    "bound": "choice-bounded",
+    "tripCount": 5,
+    "unrollDepth": 5,
+    "infinite": false
+  },
+  {
+    "headerCfgId": "interrogation:interview_loop",
+    "bodyCfgIds": [
+      "interrogation:interview_loop"
+    ],
+    "backEdgeCount": 3,
+    "exitCount": 3,
+    "mechanism": "direct",
+    "pure": false,
+    "bound": "condition-bounded",
+    "tripCount": 5,
+    "unrollDepth": 5,
+    "infinite": false
+  },
+  {
+    "headerCfgId": "interrogation:suspect_select",
+    "bodyCfgIds": [
+      "interrogation:suspect_select",
+      "interrogation:suspect_select__cont_0",
+      "interrogation:suspect_select__cont_1",
+      "interrogation:suspect_select__cont_2"
+    ],
+    "backEdgeCount": 3,
+    "exitCount": 5,
+    "mechanism": "direct",
+    "pure": false,
+    "bound": "choice-bounded",
+    "tripCount": 4,
+    "unrollDepth": 4,
+    "infinite": false
+  }
+]

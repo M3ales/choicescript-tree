@@ -31,8 +31,8 @@
       "startup:b_0": {
         "scene": "startup",
         "statementIds": [
-          "startup:0",
-          "startup:10"
+          "startup:pxd8ufe2z089",
+          "startup:cico4up3x56k"
         ],
         "entryType": "SceneEntry",
         "exitType": "Choice"
@@ -46,8 +46,9 @@
       "startup:b_2": {
         "scene": "startup",
         "statementIds": [
-          "startup:1",
-          "startup:2"
+          "startup:1mpx3ot1imhl5r",
+          "startup:129gueh1hctd93",
+          "startup:fgndj61i473lk"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "Finish"
@@ -61,8 +62,9 @@
       "startup:b_4": {
         "scene": "startup",
         "statementIds": [
-          "startup:4",
-          "startup:5"
+          "startup:h03d09y3qa0r",
+          "startup:kp4ok16vg48n",
+          "startup:f6nru71iy5woh"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "Finish"
@@ -76,8 +78,9 @@
       "startup:b_6": {
         "scene": "startup",
         "statementIds": [
-          "startup:7",
-          "startup:8"
+          "startup:2yt9fx1l727j",
+          "startup:1ivde513i9k57",
+          "startup:1foloor1lg5l7p"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "Finish"
@@ -101,7 +104,7 @@
         "sourceBlockId": "startup:b_0",
         "targetBlockId": "startup:b_2",
         "metadata": {
-          "optionStatementId": "startup:3"
+          "optionStatementId": "startup:1mpx3ot1imhl5r"
         }
       },
       {
@@ -115,7 +118,7 @@
         "sourceBlockId": "startup:b_0",
         "targetBlockId": "startup:b_4",
         "metadata": {
-          "optionStatementId": "startup:6"
+          "optionStatementId": "startup:h03d09y3qa0r"
         }
       },
       {
@@ -129,7 +132,7 @@
         "sourceBlockId": "startup:b_0",
         "targetBlockId": "startup:b_6",
         "metadata": {
-          "optionStatementId": "startup:9"
+          "optionStatementId": "startup:2yt9fx1l727j"
         }
       },
       {

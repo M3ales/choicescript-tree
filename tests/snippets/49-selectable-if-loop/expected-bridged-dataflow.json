@@ -1,0 +1,25 @@
+{
+  "cfgCount": 2,
+  "states": [
+    {
+      "cfgId": "startup:",
+      "entryGlobals": [
+        {
+          "gold": "30",
+          "bought_sword": "false",
+          "bought_shield": "false"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:shop",
+      "entryGlobals": [
+        {
+          "gold": "{0,10,20,30}",
+          "bought_sword": "{false,true}",
+          "bought_shield": "{false,true}"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "totalIterations": 1,
+  "widenedSccs": 0,
+  "stateCount": 1,
+  "cfgEntryStateCount": 1,
+  "blockDeltaCount": 0,
+  "blockMappedCount": 1,
+  "states": {
+    "seg_0": {
+      "entryGlobals": {
+        "pet": "0",
+        "mood": "happy",
+        "gender": "2",
+        "is_tall": "true",
+        "count": "3"
+      },
+      "exitGlobals": {
+        "pet": "0",
+        "mood": "happy",
+        "gender": "2",
+        "is_tall": "true",
+        "count": "3"
+      }
+    }
+  },
+  "cfgEntryStates": {
+    "startup:": {
+      "globals": {
+        "pet": "0",
+        "mood": "happy",
+        "gender": "2",
+        "is_tall": "true",
+        "count": "3"
+      }
+    }
+  }
+}

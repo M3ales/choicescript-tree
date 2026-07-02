@@ -1,0 +1,29 @@
+[
+  {
+    "headerCfgId": "startup:match_loop",
+    "bodyCfgIds": [
+      "startup:intense_phase",
+      "startup:match_loop"
+    ],
+    "backEdgeCount": 2,
+    "exitCount": 1,
+    "mechanism": "direct",
+    "pure": false,
+    "bound": "condition-bounded",
+    "tripCount": 0,
+    "unrollDepth": 0,
+    "infinite": false,
+    "infiniteCondition": {
+      "type": "comparison",
+      "operator": "LessThanEqualsOperator",
+      "left": {
+        "type": "var",
+        "name": "intensity"
+      },
+      "right": {
+        "type": "literal",
+        "value": 3
+      }
+    }
+  }
+]

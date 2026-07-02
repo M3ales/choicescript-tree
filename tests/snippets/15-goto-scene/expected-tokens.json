@@ -96,12 +96,11 @@
       "type": "Identifier",
       "value": "chapter1",
       "rawValue": "chapter1",
-      "position": 14,
-      "lineNumber": 5,
       "sceneName": "startup",
       "indent": 1,
-      "isSceneName": true,
-      "isLabelName": false
+      "lineNumber": 5,
+      "position": 14,
+      "isSceneName": true
     },
     {
       "lineNumber": 8,

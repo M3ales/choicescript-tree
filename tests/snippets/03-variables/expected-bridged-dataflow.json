@@ -1,0 +1,15 @@
+{
+  "cfgCount": 1,
+  "states": [
+    {
+      "cfgId": "startup:",
+      "entryGlobals": [
+        {
+          "strength": "50",
+          "name": "Hero",
+          "is_alive": "true"
+        }
+      ]
+    }
+  ]
+}

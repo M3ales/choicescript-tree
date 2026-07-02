@@ -1,0 +1,20 @@
+{
+  "loopCount": 1,
+  "loops": [
+    {
+      "bound": "unbounded",
+      "infinite": false,
+      "iterCap": 3,
+      "memberCount": 3,
+      "headerIds": [
+        "seg_1",
+        "seg_2",
+        "seg_3"
+      ],
+      "backEdgeCount": 9,
+      "exitEdgeCount": 3,
+      "allHideReuse": false,
+      "choiceOptionCount": null
+    }
+  ]
+}

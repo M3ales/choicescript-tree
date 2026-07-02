@@ -1,0 +1,545 @@
+[
+  [
+    {
+      "sceneName": "chapter1",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    {
+      "type": "Prose",
+      "sceneName": "chapter1",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "content": "Welcome to chapter 1.\n"
+    },
+    {
+      "type": "If",
+      "sceneName": "chapter1",
+      "indent": 0,
+      "lineNumber": 1,
+      "position": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 4,
+      "lineNumber": 1,
+      "sceneName": "chapter1",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "style",
+      "rawValue": "style",
+      "position": 5,
+      "lineNumber": 1,
+      "sceneName": "chapter1",
+      "indent": 0
+    },
+    {
+      "type": "EqualityOperator",
+      "rawValue": "=",
+      "position": 11,
+      "lineNumber": 1,
+      "sceneName": "chapter1",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "Warrior",
+      "position": 13,
+      "lineNumber": 1,
+      "sceneName": "chapter1",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 22,
+      "lineNumber": 1,
+      "sceneName": "chapter1",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "chapter1",
+      "lineNumber": 2,
+      "position": 2,
+      "indent": 1,
+      "content": "You swing your sword.\n"
+    },
+    {
+      "type": "ElseIf",
+      "sceneName": "chapter1",
+      "indent": 0,
+      "lineNumber": 3,
+      "position": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 8,
+      "lineNumber": 3,
+      "sceneName": "chapter1",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "style",
+      "rawValue": "style",
+      "position": 9,
+      "lineNumber": 3,
+      "sceneName": "chapter1",
+      "indent": 0
+    },
+    {
+      "type": "EqualityOperator",
+      "rawValue": "=",
+      "position": 15,
+      "lineNumber": 3,
+      "sceneName": "chapter1",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "Mage",
+      "position": 17,
+      "lineNumber": 3,
+      "sceneName": "chapter1",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 23,
+      "lineNumber": 3,
+      "sceneName": "chapter1",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "chapter1",
+      "lineNumber": 4,
+      "position": 2,
+      "indent": 1,
+      "content": "You cast a spell.\n"
+    },
+    {
+      "type": "Else",
+      "sceneName": "chapter1",
+      "indent": 0,
+      "lineNumber": 5,
+      "position": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "chapter1",
+      "lineNumber": 6,
+      "position": 2,
+      "indent": 1,
+      "content": "You have no style.\n"
+    },
+    {
+      "type": "Finish",
+      "sceneName": "chapter1",
+      "indent": 0,
+      "lineNumber": 7,
+      "position": 0
+    },
+    {
+      "lineNumber": 9,
+      "indent": 0,
+      "position": 0,
+      "sceneName": "chapter1",
+      "type": "SceneEnd"
+    }
+  ],
+  [
+    {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 0,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "style",
+      "rawValue": "style",
+      "position": 8,
+      "lineNumber": 0,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "",
+      "position": 14,
+      "lineNumber": 0,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 1,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "condition",
+      "rawValue": "condition",
+      "position": 8,
+      "lineNumber": 1,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 50,
+      "position": 18,
+      "lineNumber": 1,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "SceneList",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 2,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "startup",
+      "rawValue": "startup",
+      "sceneName": "startup",
+      "lineNumber": 4,
+      "position": 2,
+      "indent": 1,
+      "isSceneName": true
+    },
+    {
+      "type": "Identifier",
+      "value": "chapter1",
+      "rawValue": "chapter1",
+      "sceneName": "startup",
+      "lineNumber": 5,
+      "position": 2,
+      "indent": 1,
+      "isSceneName": true
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 5,
+      "position": 0,
+      "indent": 0,
+      "content": "Welcome to the game.\n"
+    },
+    {
+      "type": "GoSub",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 6,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "adjust_condition",
+      "rawValue": "adjust_condition",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 6,
+      "position": 7,
+      "isLabelName": true
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 5,
+      "position": 24,
+      "lineNumber": 6,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 8,
+      "position": 0,
+      "indent": 0,
+      "content": "Pick your style:\n"
+    },
+    {
+      "type": "FakeChoice",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 9,
+      "position": 0
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 10,
+      "position": 2,
+      "rawText": "Warrior.",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 10,
+      "position": 3,
+      "indent": 1,
+      "content": "Warrior."
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 2,
+      "lineNumber": 11,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "style",
+      "rawValue": "style",
+      "position": 9,
+      "lineNumber": 11,
+      "sceneName": "startup",
+      "indent": 2
+    },
+    {
+      "type": "StringLiteral",
+      "value": "Warrior",
+      "position": 15,
+      "lineNumber": 11,
+      "sceneName": "startup",
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 12,
+      "position": 4,
+      "indent": 2,
+      "content": "You grab a sword.\n"
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 13,
+      "position": 2,
+      "rawText": "Mage.",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 13,
+      "position": 3,
+      "indent": 1,
+      "content": "Mage."
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 2,
+      "lineNumber": 14,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "style",
+      "rawValue": "style",
+      "position": 9,
+      "lineNumber": 14,
+      "sceneName": "startup",
+      "indent": 2
+    },
+    {
+      "type": "StringLiteral",
+      "value": "Mage",
+      "position": 15,
+      "lineNumber": 14,
+      "sceneName": "startup",
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 15,
+      "position": 4,
+      "indent": 2,
+      "content": "You grab a staff.\n\n"
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 17,
+      "position": 0,
+      "indent": 0,
+      "content": "You are a "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "startup",
+      "lineNumber": 17,
+      "position": 10,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "style",
+      "rawValue": "style",
+      "position": 12,
+      "lineNumber": 17,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "startup",
+      "lineNumber": 17,
+      "position": 17,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 17,
+      "position": 18,
+      "indent": 0,
+      "content": ".\n"
+    },
+    {
+      "type": "GoSub",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 18,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "adjust_condition",
+      "rawValue": "adjust_condition",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 18,
+      "position": 7,
+      "isLabelName": true
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 3,
+      "position": 24,
+      "lineNumber": 18,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 20,
+      "position": 0,
+      "indent": 0,
+      "content": "Ready to go.\n"
+    },
+    {
+      "type": "Finish",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 21,
+      "position": 0
+    },
+    {
+      "type": "Label",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 23,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "adjust_condition",
+      "rawValue": "adjust_condition",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 23,
+      "position": 7,
+      "isLabelName": true
+    },
+    {
+      "type": "Parameters",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 24,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "amount",
+      "rawValue": "amount",
+      "position": 8,
+      "lineNumber": 24,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 25,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "condition",
+      "rawValue": "condition",
+      "position": 5,
+      "lineNumber": 25,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 15,
+      "lineNumber": 25,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "amount",
+      "rawValue": "amount",
+      "position": 17,
+      "lineNumber": 25,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Return",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 26,
+      "position": 0
+    },
+    {
+      "lineNumber": 28,
+      "indent": 0,
+      "position": 0,
+      "sceneName": "startup",
+      "type": "SceneEnd"
+    }
+  ]
+]

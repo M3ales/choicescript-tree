@@ -1,0 +1,30 @@
+{
+  "totalIterations": 1,
+  "widenedSccs": 0,
+  "stateCount": 1,
+  "cfgEntryStateCount": 2,
+  "blockDeltaCount": 0,
+  "blockMappedCount": 4,
+  "states": {
+    "seg_0": {
+      "entryGlobals": {
+        "player_ready": "true"
+      },
+      "exitGlobals": {
+        "player_ready": "true"
+      }
+    }
+  },
+  "cfgEntryStates": {
+    "chapter1:": {
+      "globals": {
+        "player_ready": "true"
+      }
+    },
+    "startup:": {
+      "globals": {
+        "player_ready": "true"
+      }
+    }
+  }
+}

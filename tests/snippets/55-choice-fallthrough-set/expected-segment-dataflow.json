@@ -1,0 +1,70 @@
+{
+  "totalIterations": 7,
+  "widenedSccs": 0,
+  "stateCount": 6,
+  "cfgEntryStateCount": 2,
+  "blockDeltaCount": 1,
+  "blockMappedCount": 8,
+  "states": {
+    "seg_0": {
+      "entryGlobals": {
+        "thanksgiving_food": ""
+      },
+      "exitGlobals": {
+        "thanksgiving_food": ""
+      }
+    },
+    "seg_1": {
+      "entryGlobals": {
+        "thanksgiving_food": ""
+      },
+      "exitGlobals": {
+        "thanksgiving_food": "{,stew and mashed potatoes}"
+      }
+    },
+    "seg_2": {
+      "entryGlobals": {
+        "thanksgiving_food": ""
+      },
+      "exitGlobals": {
+        "thanksgiving_food": "{,marinated skewers and crushed cucumber salad}"
+      }
+    },
+    "seg_3": {
+      "entryGlobals": {
+        "thanksgiving_food": ""
+      },
+      "exitGlobals": {
+        "thanksgiving_food": "{,hummus and flatbread}"
+      }
+    },
+    "seg_4": {
+      "entryGlobals": {
+        "thanksgiving_food": ""
+      },
+      "exitGlobals": {
+        "thanksgiving_food": "{,empanadas and salsa with tacos}"
+      }
+    },
+    "seg_5": {
+      "entryGlobals": {
+        "thanksgiving_food": ""
+      },
+      "exitGlobals": {
+        "thanksgiving_food": "{}"
+      }
+    }
+  },
+  "cfgEntryStates": {
+    "startup:": {
+      "globals": {
+        "thanksgiving_food": ""
+      }
+    },
+    "startup:set_the_table": {
+      "globals": {
+        "thanksgiving_food": ""
+      }
+    }
+  }
+}

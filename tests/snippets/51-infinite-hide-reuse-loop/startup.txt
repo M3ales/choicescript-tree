@@ -1,0 +1,12 @@
+*create count 0
+
+*label loop
+*set count + 1
+You have been here ${count} times.
+*choice
+  *hide_reuse #Go left.
+    You go left.
+    *goto loop
+  *hide_reuse #Go right.
+    You go right.
+    *goto loop

@@ -1,0 +1,52 @@
+{
+  "totalIterations": 1,
+  "widenedSccs": 0,
+  "stateCount": 1,
+  "cfgEntryStateCount": 4,
+  "blockDeltaCount": 5,
+  "blockMappedCount": 6,
+  "states": {
+    "seg_0": {
+      "entryGlobals": {
+        "total": "0",
+        "rounds": "0",
+        "label": ""
+      },
+      "exitGlobals": {
+        "total": "0",
+        "rounds": "1",
+        "label": "round 0"
+      }
+    }
+  },
+  "cfgEntryStates": {
+    "startup:": {
+      "globals": {
+        "total": "0",
+        "rounds": "0",
+        "label": ""
+      }
+    },
+    "startup:add_value": {
+      "globals": {
+        "total": "0",
+        "rounds": "0",
+        "label": ""
+      }
+    },
+    "startup:hub": {
+      "globals": {
+        "total": "0",
+        "rounds": "0",
+        "label": "round 0"
+      }
+    },
+    "startup:hub__cont_0": {
+      "globals": {
+        "total": "0",
+        "rounds": "0",
+        "label": "round 0"
+      }
+    }
+  }
+}

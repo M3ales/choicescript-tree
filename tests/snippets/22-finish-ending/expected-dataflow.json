@@ -1,0 +1,18 @@
+{
+  "states": [
+    {
+      "cfgId": "startup:",
+      "entryGlobals": [
+        {}
+      ],
+      "exitGlobals": [
+        {}
+      ]
+    }
+  ],
+  "diagnostics": {
+    "unresolvedExits": 1,
+    "droppedContexts": 0,
+    "missingCfgs": []
+  }
+}

@@ -1,0 +1,182 @@
+[
+  {
+    "sceneName": "startup",
+    "blocks": {
+      "startup:b_0": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_1": {
+        "exitType": "Choice"
+      },
+      "startup:b_2": {
+        "exitType": "ImplicitEnd"
+      },
+      "startup:b_3": {
+        "exitType": "Goto"
+      },
+      "startup:b_4": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_5": {
+        "exitType": "Goto"
+      },
+      "startup:b_6": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_7": {
+        "exitType": "Finish"
+      },
+      "startup:b_8": {
+        "exitType": "FallThrough"
+      }
+    },
+    "blockIndex": {
+      "startup:b_0": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:h9qjdn1cjendx"
+        ],
+        "entryType": "SceneEntry",
+        "exitType": "FallThrough"
+      },
+      "startup:b_1": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:qyw7qrqvvxr9",
+          "startup:1ne77u71bglcfl",
+          "startup:166tfwi1rogdek"
+        ],
+        "entryType": "Label",
+        "exitType": "Choice",
+        "label": "chat_hub"
+      },
+      "startup:b_2": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "ImplicitEnd"
+      },
+      "startup:b_3": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:195q60e438cmk",
+          "startup:fcjjaj129qedt",
+          "startup:1e2lv47y2u28t",
+          "startup:7tn4t2nr0beg"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "Goto"
+      },
+      "startup:b_4": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "startup:b_5": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:1qr5m7j19lnp8t",
+          "startup:jl27wb3gg0bh",
+          "startup:1jtpolu191bbf0",
+          "startup:1oke361izp2xf"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "Goto"
+      },
+      "startup:b_6": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "startup:b_7": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:1h77qhm12b95cw",
+          "startup:5c8uyf1xf42p9",
+          "startup:1gikhro1k27kqu"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "Finish"
+      },
+      "startup:b_8": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      }
+    },
+    "edges": [
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "startup:b_0",
+        "targetBlockId": "startup:b_1",
+        "metadata": {}
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "startup:b_3",
+        "targetBlockId": "startup:b_1",
+        "metadata": {
+          "label": "chat_hub"
+        }
+      },
+      {
+        "kind": "ChoiceOption",
+        "sourceBlockId": "startup:b_1",
+        "targetBlockId": "startup:b_3",
+        "metadata": {
+          "optionStatementId": "startup:195q60e438cmk"
+        }
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "startup:b_5",
+        "targetBlockId": "startup:b_1",
+        "metadata": {
+          "label": "chat_hub"
+        }
+      },
+      {
+        "kind": "ChoiceOption",
+        "sourceBlockId": "startup:b_1",
+        "targetBlockId": "startup:b_5",
+        "metadata": {
+          "optionStatementId": "startup:1qr5m7j19lnp8t"
+        }
+      },
+      {
+        "kind": "SceneExit",
+        "sourceBlockId": "startup:b_7",
+        "targetBlockId": null,
+        "metadata": {}
+      },
+      {
+        "kind": "ChoiceOption",
+        "sourceBlockId": "startup:b_1",
+        "targetBlockId": "startup:b_7",
+        "metadata": {
+          "optionStatementId": "startup:1h77qhm12b95cw"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "startup:b_1",
+        "targetBlockId": "startup:b_2",
+        "metadata": {}
+      },
+      {
+        "kind": "SceneExit",
+        "sourceBlockId": "startup:b_2",
+        "targetBlockId": null,
+        "metadata": {}
+      }
+    ],
+    "entryBlockId": "startup:b_0",
+    "labelToBlockId": {
+      "chat_hub": "startup:b_1"
+    },
+    "unresolvedEdges": []
+  }
+]

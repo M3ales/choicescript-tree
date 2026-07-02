@@ -1,0 +1,440 @@
+[
+  {
+    "sceneName": "startup",
+    "blocks": {
+      "startup:b_0": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_1": {
+        "exitType": "Branch"
+      },
+      "startup:b_2": {
+        "exitType": "Finish"
+      },
+      "startup:b_3": {
+        "exitType": "GoSub"
+      },
+      "startup:b_4": {
+        "exitType": "GoSub"
+      },
+      "startup:b_5": {
+        "exitType": "Goto"
+      },
+      "startup:b_6": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_7": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_8": {
+        "exitType": "Branch"
+      },
+      "startup:b_9": {
+        "exitType": "Return"
+      },
+      "startup:b_10": {
+        "exitType": "GoSub"
+      },
+      "startup:b_11": {
+        "exitType": "Goto"
+      },
+      "startup:b_12": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_13": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_14": {
+        "exitType": "Return"
+      },
+      "startup:b_15": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_16": {
+        "exitType": "Branch"
+      },
+      "startup:b_17": {
+        "exitType": "Return"
+      },
+      "startup:b_18": {
+        "exitType": "GoSub"
+      },
+      "startup:b_19": {
+        "exitType": "Goto"
+      },
+      "startup:b_20": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_21": {
+        "exitType": "FallThrough"
+      }
+    },
+    "blockIndex": {
+      "startup:b_0": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:64b020edapju",
+          "startup:x2b9r313t7hut",
+          "startup:13bry20rftuu2",
+          "startup:1i79n8a1cxwews"
+        ],
+        "entryType": "SceneEntry",
+        "exitType": "FallThrough"
+      },
+      "startup:b_1": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:moe3tidizhus",
+          "startup:nkc41g1hpy9hi",
+          "startup:1n1oq7812auw6e"
+        ],
+        "entryType": "Label",
+        "exitType": "Branch",
+        "label": "hub"
+      },
+      "startup:b_2": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:f96124103cdim",
+          "startup:b5y8ww1n46cvi"
+        ],
+        "entryType": "Continuation",
+        "exitType": "Finish"
+      },
+      "startup:b_3": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:1v9ja5b17j9duh"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "GoSub"
+      },
+      "startup:b_4": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:1suayuyjwofyg"
+        ],
+        "entryType": "GoSubContinuation",
+        "exitType": "GoSub"
+      },
+      "startup:b_5": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:19ypxsvganrnh"
+        ],
+        "entryType": "GoSubContinuation",
+        "exitType": "Goto"
+      },
+      "startup:b_6": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "startup:b_7": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:1i79n8a1cxwews"
+        ],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "startup:b_8": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:1cn50xkpko2su",
+          "startup:1hsnhdq11efkfg",
+          "startup:19sl7uq1mje6kg"
+        ],
+        "entryType": "Label",
+        "exitType": "Branch",
+        "label": "training"
+      },
+      "startup:b_9": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:142bzuc11j51e2"
+        ],
+        "entryType": "Continuation",
+        "exitType": "Return"
+      },
+      "startup:b_10": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:1xciq6ywtsqf8"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "GoSub"
+      },
+      "startup:b_11": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:19p6yj0zudzre"
+        ],
+        "entryType": "GoSubContinuation",
+        "exitType": "Goto"
+      },
+      "startup:b_12": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "startup:b_13": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:1i79n8a1cxwews"
+        ],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "startup:b_14": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:1qdu1rsuiynx",
+          "startup:1spq1hp11spz3j",
+          "startup:138d6rf10p68b5"
+        ],
+        "entryType": "Label",
+        "exitType": "Return",
+        "label": "drill_round"
+      },
+      "startup:b_15": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:1i79n8a1cxwews"
+        ],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "startup:b_16": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:w9g7a4138llwu",
+          "startup:1p9au8015ufbpm",
+          "startup:1y2qhxvme11yt"
+        ],
+        "entryType": "Label",
+        "exitType": "Branch",
+        "label": "patrol"
+      },
+      "startup:b_17": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:4jnpjx1vi7ksz"
+        ],
+        "entryType": "Continuation",
+        "exitType": "Return"
+      },
+      "startup:b_18": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:1i79n8a1cxwews",
+          "startup:14v4ur81exugi"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "GoSub"
+      },
+      "startup:b_19": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:1g6rdoypheues"
+        ],
+        "entryType": "GoSubContinuation",
+        "exitType": "Goto"
+      },
+      "startup:b_20": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "startup:b_21": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      }
+    },
+    "edges": [
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "startup:b_0",
+        "targetBlockId": "startup:b_1",
+        "metadata": {}
+      },
+      {
+        "kind": "GoSubCall",
+        "sourceBlockId": "startup:b_3",
+        "targetBlockId": "startup:b_8",
+        "metadata": {
+          "label": "training"
+        }
+      },
+      {
+        "kind": "GoSubReturn",
+        "sourceBlockId": "startup:b_3",
+        "targetBlockId": "startup:b_4",
+        "metadata": {}
+      },
+      {
+        "kind": "GoSubCall",
+        "sourceBlockId": "startup:b_4",
+        "targetBlockId": "startup:b_16",
+        "metadata": {
+          "label": "patrol"
+        }
+      },
+      {
+        "kind": "GoSubReturn",
+        "sourceBlockId": "startup:b_4",
+        "targetBlockId": "startup:b_5",
+        "metadata": {}
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "startup:b_5",
+        "targetBlockId": "startup:b_1",
+        "metadata": {
+          "label": "hub"
+        }
+      },
+      {
+        "kind": "IfBranch",
+        "sourceBlockId": "startup:b_1",
+        "targetBlockId": "startup:b_3",
+        "metadata": {
+          "conditionStatementId": "startup:1n1oq7812auw6e"
+        }
+      },
+      {
+        "kind": "IfFallThrough",
+        "sourceBlockId": "startup:b_1",
+        "targetBlockId": "startup:b_2",
+        "metadata": {}
+      },
+      {
+        "kind": "SceneExit",
+        "sourceBlockId": "startup:b_2",
+        "targetBlockId": null,
+        "metadata": {}
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "startup:b_7",
+        "targetBlockId": "startup:b_8",
+        "metadata": {}
+      },
+      {
+        "kind": "GoSubCall",
+        "sourceBlockId": "startup:b_10",
+        "targetBlockId": "startup:b_14",
+        "metadata": {
+          "label": "drill_round"
+        }
+      },
+      {
+        "kind": "GoSubReturn",
+        "sourceBlockId": "startup:b_10",
+        "targetBlockId": "startup:b_11",
+        "metadata": {}
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "startup:b_11",
+        "targetBlockId": "startup:b_8",
+        "metadata": {
+          "label": "training"
+        }
+      },
+      {
+        "kind": "IfBranch",
+        "sourceBlockId": "startup:b_8",
+        "targetBlockId": "startup:b_10",
+        "metadata": {
+          "conditionStatementId": "startup:19sl7uq1mje6kg"
+        }
+      },
+      {
+        "kind": "IfFallThrough",
+        "sourceBlockId": "startup:b_8",
+        "targetBlockId": "startup:b_9",
+        "metadata": {}
+      },
+      {
+        "kind": "Return",
+        "sourceBlockId": "startup:b_9",
+        "targetBlockId": null,
+        "metadata": {}
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "startup:b_13",
+        "targetBlockId": "startup:b_14",
+        "metadata": {}
+      },
+      {
+        "kind": "Return",
+        "sourceBlockId": "startup:b_14",
+        "targetBlockId": null,
+        "metadata": {}
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "startup:b_15",
+        "targetBlockId": "startup:b_16",
+        "metadata": {}
+      },
+      {
+        "kind": "GoSubCall",
+        "sourceBlockId": "startup:b_18",
+        "targetBlockId": "startup:b_8",
+        "metadata": {
+          "label": "training"
+        }
+      },
+      {
+        "kind": "GoSubReturn",
+        "sourceBlockId": "startup:b_18",
+        "targetBlockId": "startup:b_19",
+        "metadata": {}
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "startup:b_19",
+        "targetBlockId": "startup:b_16",
+        "metadata": {
+          "label": "patrol"
+        }
+      },
+      {
+        "kind": "IfBranch",
+        "sourceBlockId": "startup:b_16",
+        "targetBlockId": "startup:b_18",
+        "metadata": {
+          "conditionStatementId": "startup:1y2qhxvme11yt"
+        }
+      },
+      {
+        "kind": "IfFallThrough",
+        "sourceBlockId": "startup:b_16",
+        "targetBlockId": "startup:b_17",
+        "metadata": {}
+      },
+      {
+        "kind": "Return",
+        "sourceBlockId": "startup:b_17",
+        "targetBlockId": null,
+        "metadata": {}
+      }
+    ],
+    "entryBlockId": "startup:b_0",
+    "labelToBlockId": {
+      "hub": "startup:b_1",
+      "training": "startup:b_8",
+      "drill_round": "startup:b_14",
+      "patrol": "startup:b_16"
+    },
+    "unresolvedEdges": []
+  }
+]

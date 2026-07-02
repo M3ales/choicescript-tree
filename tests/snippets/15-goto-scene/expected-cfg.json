@@ -46,9 +46,9 @@
       "startup:b_0": {
         "scene": "startup",
         "statementIds": [
-          "startup:0",
-          "startup:1",
-          "startup:3"
+          "startup:1ngwyo61q4jems",
+          "startup:1945k0dxxkgsb",
+          "startup:1jaigmp1v368bn"
         ],
         "entryType": "SceneEntry",
         "exitType": "Branch"
@@ -62,7 +62,7 @@
       "startup:b_2": {
         "scene": "startup",
         "statementIds": [
-          "startup:2"
+          "startup:182vrfd17y64jz"
         ],
         "entryType": "ConditionalBody",
         "exitType": "GotoScene"
@@ -88,7 +88,7 @@
         "sourceBlockId": "startup:b_0",
         "targetBlockId": "startup:b_2",
         "metadata": {
-          "conditionStatementId": "startup:3"
+          "conditionStatementId": "startup:1jaigmp1v368bn"
         }
       },
       {

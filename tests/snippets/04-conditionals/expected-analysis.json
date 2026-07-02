@@ -1,0 +1,22 @@
+{
+  "deadBranchCount": 1,
+  "deadBranches": [
+    {
+      "blockId": "startup:b_4",
+      "scene": "startup",
+      "reason": "condition-true-elsewhere"
+    }
+  ],
+  "controlFlowViolationCount": 1,
+  "controlFlowViolations": [
+    {
+      "blockId": "startup:b_1",
+      "scene": "startup",
+      "kind": "implicit-end"
+    }
+  ],
+  "undeclaredSetCount": 0,
+  "undeclaredSets": [],
+  "multiReplaceViolationCount": 0,
+  "multiReplaceViolations": []
+}

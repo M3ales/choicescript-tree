@@ -1,0 +1,174 @@
+{
+  "states": [
+    {
+      "cfgId": "startup:",
+      "entryGlobals": [
+        {
+          "result": "",
+          "depth": "0"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "result": "",
+          "depth": "0"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:layer1",
+      "entryGlobals": [
+        {
+          "result": "",
+          "depth": "0"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "result": "L1>",
+          "depth": "1"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:layer2",
+      "entryGlobals": [
+        {
+          "result": "L1>",
+          "depth": "1"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "result": "L1>L2><L2",
+          "depth": "2"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:layer3",
+      "entryGlobals": [
+        {
+          "result": "L1>L2><L2",
+          "depth": "2"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "result": "L1>L2><L2L3>",
+          "depth": "3"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:layer4",
+      "entryGlobals": [
+        {
+          "result": "L1>L2><L2L3>",
+          "depth": "3"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "result": "L1>L2><L2L3>L4><L4",
+          "depth": "4"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:layer5",
+      "entryGlobals": [
+        {
+          "result": "L1>L2><L2L3>L4><L4",
+          "depth": "4"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "result": "L1>L2><L2L3>L4><L4L5",
+          "depth": "5"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:layer4__cont_0",
+      "entryGlobals": [
+        {
+          "result": "L1>L2><L2L3>L4><L4L5",
+          "depth": "5"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "result": "L1>L2><L2L3>L4><L4L5<L4",
+          "depth": "5"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:layer3__cont_0",
+      "entryGlobals": [
+        {
+          "result": "{L1>L2><L2L3>L4><L4,L1>L2><L2L3>L4><L4L5<L4}",
+          "depth": "{4,5}"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "result": "{L1>L2><L2L3>L4><L4<L3,L1>L2><L2L3>L4><L4L5<L4<L3}",
+          "depth": "{4,5}"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:layer2__cont_0",
+      "entryGlobals": [
+        {
+          "result": "{L1>L2><L2L3>L4><L4<L3,L1>L2><L2L3>L4><L4L5<L4<L3}",
+          "depth": "{4,5}"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "result": "{L1>L2><L2L3>L4><L4<L3<L2,L1>L2><L2L3>L4><L4L5<L4<L3<L2}",
+          "depth": "{4,5}"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:layer1__cont_0",
+      "entryGlobals": [
+        {
+          "result": "{L1>L2><L2,L1>L2><L2L3>L4><L4<L3<L2,L1>L2><L2L3>L4><L4L5<L4<L3<L2}",
+          "depth": "{2,4,5}"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "result": "{L1>L2><L2<L1,L1>L2><L2L3>L4><L4<L3<L2<L1,L1>L2><L2L3>L4><L4L5<L4<L3<L2<L1}",
+          "depth": "{2,4,5}"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:__entry__cont_0",
+      "entryGlobals": [
+        {
+          "result": "{L1>L2><L2<L1,L1>L2><L2L3>L4><L4<L3<L2<L1,L1>L2><L2L3>L4><L4L5<L4<L3<L2<L1}",
+          "depth": "{2,4,5}"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "result": "{L1>L2><L2<L1,L1>L2><L2L3>L4><L4<L3<L2<L1,L1>L2><L2L3>L4><L4L5<L4<L3<L2<L1}",
+          "depth": "{2,4,5}"
+        }
+      ]
+    }
+  ],
+  "diagnostics": {
+    "unresolvedExits": 0,
+    "droppedContexts": 0,
+    "missingCfgs": []
+  }
+}

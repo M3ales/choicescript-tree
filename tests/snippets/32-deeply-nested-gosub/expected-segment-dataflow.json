@@ -1,0 +1,88 @@
+{
+  "totalIterations": 1,
+  "widenedSccs": 0,
+  "stateCount": 1,
+  "cfgEntryStateCount": 11,
+  "blockDeltaCount": 13,
+  "blockMappedCount": 15,
+  "states": {
+    "seg_0": {
+      "entryGlobals": {
+        "result": "",
+        "depth": "0"
+      },
+      "exitGlobals": {
+        "result": "L1>L2><L2<L1L3><L2L4><L4<L3L5<L4",
+        "depth": "5"
+      }
+    }
+  },
+  "cfgEntryStates": {
+    "startup:": {
+      "globals": {
+        "result": "",
+        "depth": "0"
+      }
+    },
+    "startup:__entry__cont_0": {
+      "globals": {
+        "result": "L1>",
+        "depth": "1"
+      }
+    },
+    "startup:layer1": {
+      "globals": {
+        "result": "",
+        "depth": "0"
+      }
+    },
+    "startup:layer1__cont_0": {
+      "globals": {
+        "result": "L1>L2><L2",
+        "depth": "2"
+      }
+    },
+    "startup:layer2": {
+      "globals": {
+        "result": "L1>",
+        "depth": "1"
+      }
+    },
+    "startup:layer2__cont_0": {
+      "globals": {
+        "result": "L1>L2><L2<L1L3>",
+        "depth": "3"
+      }
+    },
+    "startup:layer3": {
+      "globals": {
+        "result": "L1>L2><L2<L1",
+        "depth": "2"
+      }
+    },
+    "startup:layer3__cont_0": {
+      "globals": {
+        "result": "L1>L2><L2<L1L3><L2L4><L4",
+        "depth": "4"
+      }
+    },
+    "startup:layer4": {
+      "globals": {
+        "result": "L1>L2><L2<L1L3><L2",
+        "depth": "3"
+      }
+    },
+    "startup:layer4__cont_0": {
+      "globals": {
+        "result": "L1>L2><L2<L1L3><L2L4><L4<L3L5",
+        "depth": "5"
+      }
+    },
+    "startup:layer5": {
+      "globals": {
+        "result": "L1>L2><L2<L1L3><L2L4><L4<L3",
+        "depth": "4"
+      }
+    }
+  }
+}

@@ -1,0 +1,735 @@
+[
+  {
+    "name": "startup",
+    "statements": [
+      {
+        "content": [
+          {
+            "type": "Comment",
+            "sceneName": "startup",
+            "indent": 0,
+            "lineNumber": 1,
+            "position": 0,
+            "value": "  pet = 0: multireplace is 1-indexed, 0 is uninitialized/invalid"
+          },
+          {
+            "type": "Comment",
+            "sceneName": "startup",
+            "indent": 0,
+            "lineNumber": 2,
+            "position": 0,
+            "value": "  mood = \"happy\": string cannot be coerced to a number or boolean"
+          },
+          {
+            "type": "Comment",
+            "sceneName": "startup",
+            "indent": 0,
+            "lineNumber": 3,
+            "position": 0,
+            "value": "Positive test cases (should NOT produce violations):"
+          },
+          {
+            "type": "Comment",
+            "sceneName": "startup",
+            "indent": 0,
+            "lineNumber": 4,
+            "position": 0,
+            "value": "  gender = 2: valid numeric index within range"
+          },
+          {
+            "type": "Comment",
+            "sceneName": "startup",
+            "indent": 0,
+            "lineNumber": 5,
+            "position": 0,
+            "value": "  is_tall = true: boolean is valid (true=first, false=second)"
+          },
+          {
+            "type": "Comment",
+            "sceneName": "startup",
+            "indent": 0,
+            "lineNumber": 6,
+            "position": 0,
+            "value": "  count = \"3\": numeric string is coercible to a number"
+          }
+        ],
+        "kind": "Comment"
+      },
+      {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "pet",
+          "rawValue": "pet",
+          "position": 8,
+          "lineNumber": 8,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 0,
+            "position": 12,
+            "lineNumber": 8,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 8,
+          "position": 0
+        }
+      },
+      {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "mood",
+          "rawValue": "mood",
+          "position": 8,
+          "lineNumber": 9,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "StringLiteral",
+            "value": "happy",
+            "position": 13,
+            "lineNumber": 9,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 9,
+          "position": 0
+        }
+      },
+      {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "gender",
+          "rawValue": "gender",
+          "position": 8,
+          "lineNumber": 10,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 2,
+            "position": 15,
+            "lineNumber": 10,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 10,
+          "position": 0
+        }
+      },
+      {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "is_tall",
+          "rawValue": "is_tall",
+          "position": 8,
+          "lineNumber": 11,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "BooleanLiteral",
+            "value": true,
+            "position": 16,
+            "lineNumber": 11,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 11,
+          "position": 0
+        }
+      },
+      {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "count",
+          "rawValue": "count",
+          "position": 8,
+          "lineNumber": 12,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "StringLiteral",
+            "value": "3",
+            "position": 14,
+            "lineNumber": 12,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 12,
+          "position": 0
+        }
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 14,
+            "position": 0,
+            "indent": 0,
+            "content": "You have a "
+          },
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 14,
+            "position": 17,
+            "indent": 0,
+            "content": "cat"
+          },
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 14,
+            "position": 21,
+            "indent": 0,
+            "content": "dog"
+          },
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 14,
+            "position": 25,
+            "indent": 0,
+            "content": "bird"
+          },
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 14,
+            "position": 30,
+            "indent": 0,
+            "content": ".\nYou feel "
+          },
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 15,
+            "position": 16,
+            "indent": 0,
+            "content": "great"
+          },
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 15,
+            "position": 22,
+            "indent": 0,
+            "content": "terrible"
+          },
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 15,
+            "position": 31,
+            "indent": 0,
+            "content": ".\n"
+          },
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 16,
+            "position": 9,
+            "indent": 0,
+            "content": "He"
+          },
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 16,
+            "position": 12,
+            "indent": 0,
+            "content": "She"
+          },
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 16,
+            "position": 16,
+            "indent": 0,
+            "content": "They"
+          },
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 16,
+            "position": 21,
+            "indent": 0,
+            "content": " walked in.\n"
+          },
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 17,
+            "position": 10,
+            "indent": 0,
+            "content": "tall"
+          },
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 17,
+            "position": 15,
+            "indent": 0,
+            "content": "short"
+          },
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 17,
+            "position": 21,
+            "indent": 0,
+            "content": " person.\nOption "
+          },
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 18,
+            "position": 15,
+            "indent": 0,
+            "content": "one"
+          },
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 18,
+            "position": 19,
+            "indent": 0,
+            "content": "two"
+          },
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 18,
+            "position": 23,
+            "indent": 0,
+            "content": "three"
+          },
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 18,
+            "position": 29,
+            "indent": 0,
+            "content": ".\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 11,
+            "lineNumber": 14,
+            "position": 0,
+            "text": "You have a "
+          },
+          {
+            "kind": "MultiReplace",
+            "start": 0,
+            "end": 0,
+            "lineNumber": 14,
+            "position": 11,
+            "selector": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "pet",
+                "rawValue": "pet",
+                "position": 13,
+                "lineNumber": 14,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "alternatives": [
+              {
+                "start": 0,
+                "end": 0,
+                "segments": [
+                  {
+                    "kind": "Text",
+                    "start": 0,
+                    "end": 3,
+                    "lineNumber": 14,
+                    "position": 17,
+                    "text": "cat"
+                  }
+                ]
+              },
+              {
+                "start": 0,
+                "end": 0,
+                "segments": [
+                  {
+                    "kind": "Text",
+                    "start": 0,
+                    "end": 3,
+                    "lineNumber": 14,
+                    "position": 21,
+                    "text": "dog"
+                  }
+                ]
+              },
+              {
+                "start": 0,
+                "end": 0,
+                "segments": [
+                  {
+                    "kind": "Text",
+                    "start": 0,
+                    "end": 4,
+                    "lineNumber": 14,
+                    "position": 25,
+                    "text": "bird"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 11,
+            "lineNumber": 14,
+            "position": 30,
+            "text": ".\nYou feel "
+          },
+          {
+            "kind": "MultiReplace",
+            "start": 0,
+            "end": 0,
+            "lineNumber": 15,
+            "position": 9,
+            "selector": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "mood",
+                "rawValue": "mood",
+                "position": 11,
+                "lineNumber": 15,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "alternatives": [
+              {
+                "start": 0,
+                "end": 0,
+                "segments": [
+                  {
+                    "kind": "Text",
+                    "start": 0,
+                    "end": 5,
+                    "lineNumber": 15,
+                    "position": 16,
+                    "text": "great"
+                  }
+                ]
+              },
+              {
+                "start": 0,
+                "end": 0,
+                "segments": [
+                  {
+                    "kind": "Text",
+                    "start": 0,
+                    "end": 8,
+                    "lineNumber": 15,
+                    "position": 22,
+                    "text": "terrible"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 2,
+            "lineNumber": 15,
+            "position": 31,
+            "text": ".\n"
+          },
+          {
+            "kind": "MultiReplace",
+            "start": 0,
+            "end": 0,
+            "lineNumber": 16,
+            "position": 0,
+            "selector": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "gender",
+                "rawValue": "gender",
+                "position": 2,
+                "lineNumber": 16,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "alternatives": [
+              {
+                "start": 0,
+                "end": 0,
+                "segments": [
+                  {
+                    "kind": "Text",
+                    "start": 0,
+                    "end": 2,
+                    "lineNumber": 16,
+                    "position": 9,
+                    "text": "He"
+                  }
+                ]
+              },
+              {
+                "start": 0,
+                "end": 0,
+                "segments": [
+                  {
+                    "kind": "Text",
+                    "start": 0,
+                    "end": 3,
+                    "lineNumber": 16,
+                    "position": 12,
+                    "text": "She"
+                  }
+                ]
+              },
+              {
+                "start": 0,
+                "end": 0,
+                "segments": [
+                  {
+                    "kind": "Text",
+                    "start": 0,
+                    "end": 4,
+                    "lineNumber": 16,
+                    "position": 16,
+                    "text": "They"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 12,
+            "lineNumber": 16,
+            "position": 21,
+            "text": " walked in.\n"
+          },
+          {
+            "kind": "MultiReplace",
+            "start": 0,
+            "end": 0,
+            "lineNumber": 17,
+            "position": 0,
+            "selector": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "is_tall",
+                "rawValue": "is_tall",
+                "position": 2,
+                "lineNumber": 17,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "alternatives": [
+              {
+                "start": 0,
+                "end": 0,
+                "segments": [
+                  {
+                    "kind": "Text",
+                    "start": 0,
+                    "end": 4,
+                    "lineNumber": 17,
+                    "position": 10,
+                    "text": "tall"
+                  }
+                ]
+              },
+              {
+                "start": 0,
+                "end": 0,
+                "segments": [
+                  {
+                    "kind": "Text",
+                    "start": 0,
+                    "end": 5,
+                    "lineNumber": 17,
+                    "position": 15,
+                    "text": "short"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 16,
+            "lineNumber": 17,
+            "position": 21,
+            "text": " person.\nOption "
+          },
+          {
+            "kind": "MultiReplace",
+            "start": 0,
+            "end": 0,
+            "lineNumber": 18,
+            "position": 7,
+            "selector": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "count",
+                "rawValue": "count",
+                "position": 9,
+                "lineNumber": 18,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "alternatives": [
+              {
+                "start": 0,
+                "end": 0,
+                "segments": [
+                  {
+                    "kind": "Text",
+                    "start": 0,
+                    "end": 3,
+                    "lineNumber": 18,
+                    "position": 15,
+                    "text": "one"
+                  }
+                ]
+              },
+              {
+                "start": 0,
+                "end": 0,
+                "segments": [
+                  {
+                    "kind": "Text",
+                    "start": 0,
+                    "end": 3,
+                    "lineNumber": 18,
+                    "position": 19,
+                    "text": "two"
+                  }
+                ]
+              },
+              {
+                "start": 0,
+                "end": 0,
+                "segments": [
+                  {
+                    "kind": "Text",
+                    "start": 0,
+                    "end": 5,
+                    "lineNumber": 18,
+                    "position": 23,
+                    "text": "three"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 2,
+            "lineNumber": 18,
+            "position": 29,
+            "text": ".\n"
+          }
+        ]
+      },
+      {
+        "kind": "Finish",
+        "token": {
+          "type": "Finish",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 19,
+          "position": 0
+        },
+        "buttonText": null
+      }
+    ],
+    "parseErrors": [],
+    "start": {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    "end": {
+      "type": "Finish",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 19,
+      "position": 0
+    }
+  }
+]

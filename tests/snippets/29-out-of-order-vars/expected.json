@@ -155,29 +155,6 @@
         "hidden": true
       },
       {
-        "content": [
-          {
-            "type": "Prose",
-            "sceneName": "startup",
-            "lineNumber": 8,
-            "position": 22,
-            "indent": 0,
-            "content": "ment hidden 2 one\n"
-          }
-        ],
-        "kind": "Prose",
-        "parsedSegments": [
-          {
-            "kind": "Text",
-            "start": 0,
-            "end": 18,
-            "lineNumber": 8,
-            "position": 22,
-            "text": "ment hidden 2 one\n"
-          }
-        ]
-      },
-      {
         "content": [],
         "kind": "Comment"
       },
@@ -256,10 +233,10 @@
           "type": "Identifier",
           "value": "bottom_label",
           "rawValue": "bottom_label",
-          "position": 6,
-          "lineNumber": 12,
           "sceneName": "startup",
           "indent": 0,
+          "lineNumber": 12,
+          "position": 6,
           "isLabelName": true
         }
       },
@@ -276,10 +253,10 @@
           "type": "Identifier",
           "value": "top_label",
           "rawValue": "top_label",
-          "position": 6,
-          "lineNumber": 14,
           "sceneName": "startup",
           "indent": 0,
+          "lineNumber": 14,
+          "position": 7,
           "isLabelName": true
         }
       },
@@ -372,10 +349,10 @@
           "type": "Identifier",
           "value": "bottom_label",
           "rawValue": "bottom_label",
-          "position": 6,
-          "lineNumber": 19,
           "sceneName": "startup",
           "indent": 0,
+          "lineNumber": 19,
+          "position": 7,
           "isLabelName": true
         }
       },
@@ -423,81 +400,16 @@
           "type": "Identifier",
           "value": "top_label",
           "rawValue": "top_label",
-          "position": 7,
-          "lineNumber": 21,
           "sceneName": "startup",
           "indent": 0,
+          "lineNumber": 21,
+          "position": 7,
           "isLabelName": true
         },
         "args": []
       }
     ],
-    "parseErrors": [
-      {
-        "token": {
-          "type": "CreateVariable",
-          "sceneName": "startup",
-          "indent": 0,
-          "lineNumber": 10,
-          "position": 0
-        },
-        "message": "*create is only allowed at the top of startup, before any non-header statements at 'CreateVariable' startup:10:0[Indent 0, Id: 17]",
-        "context": [
-          {
-            "kind": "Scene 'startup'",
-            "token": {
-              "sceneName": "startup",
-              "lineNumber": 0,
-              "position": 0,
-              "indent": 0,
-              "type": "SceneStart"
-            }
-          },
-          {
-            "kind": "CreateVariable",
-            "token": {
-              "type": "CreateVariable",
-              "sceneName": "startup",
-              "indent": 0,
-              "lineNumber": 10,
-              "position": 0
-            }
-          }
-        ]
-      },
-      {
-        "token": {
-          "type": "CreateVariable",
-          "sceneName": "startup",
-          "indent": 0,
-          "lineNumber": 11,
-          "position": 0
-        },
-        "message": "*create is only allowed at the top of startup, before any non-header statements at 'CreateVariable' startup:11:0[Indent 0, Id: 20]",
-        "context": [
-          {
-            "kind": "Scene 'startup'",
-            "token": {
-              "sceneName": "startup",
-              "lineNumber": 0,
-              "position": 0,
-              "indent": 0,
-              "type": "SceneStart"
-            }
-          },
-          {
-            "kind": "CreateVariable",
-            "token": {
-              "type": "CreateVariable",
-              "sceneName": "startup",
-              "indent": 0,
-              "lineNumber": 11,
-              "position": 0
-            }
-          }
-        ]
-      }
-    ],
+    "parseErrors": [],
     "start": {
       "sceneName": "startup",
       "lineNumber": 0,
@@ -509,10 +421,10 @@
       "type": "Identifier",
       "value": "top_label",
       "rawValue": "top_label",
-      "position": 7,
-      "lineNumber": 21,
       "sceneName": "startup",
       "indent": 0,
+      "lineNumber": 21,
+      "position": 7,
       "isLabelName": true
     }
   }

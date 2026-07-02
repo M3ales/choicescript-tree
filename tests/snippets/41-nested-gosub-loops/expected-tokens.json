@@ -1,0 +1,659 @@
+[
+  [
+    {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 0,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "turn",
+      "rawValue": "turn",
+      "position": 8,
+      "lineNumber": 0,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 13,
+      "lineNumber": 0,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 1,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "energy",
+      "rawValue": "energy",
+      "position": 8,
+      "lineNumber": 1,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 100,
+      "position": 15,
+      "lineNumber": 1,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 2,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "morale",
+      "rawValue": "morale",
+      "position": 8,
+      "lineNumber": 2,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 50,
+      "position": 15,
+      "lineNumber": 2,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Comment",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 4,
+      "position": 0,
+      "value": "============================================"
+    },
+    {
+      "type": "Comment",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 5,
+      "position": 0,
+      "value": " Outer loop: hub that dispatches to activities"
+    },
+    {
+      "type": "Comment",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 6,
+      "position": 0,
+      "value": " Inner loop A: training drill (gosub cycle)"
+    },
+    {
+      "type": "Comment",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 7,
+      "position": 0,
+      "value": " Inner loop B: patrol route (gosub cycle)"
+    },
+    {
+      "type": "Comment",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 8,
+      "position": 0,
+      "value": " Overlap: patrol can gosub back to training"
+    },
+    {
+      "type": "Comment",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 9,
+      "position": 0,
+      "value": "============================================"
+    },
+    {
+      "type": "Label",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 11,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "hub",
+      "rawValue": "hub",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 11,
+      "position": 7,
+      "isLabelName": true
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 12,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "turn",
+      "rawValue": "turn",
+      "position": 5,
+      "lineNumber": 12,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 10,
+      "lineNumber": 12,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 1,
+      "position": 12,
+      "lineNumber": 12,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "If",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 14,
+      "position": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 4,
+      "lineNumber": 14,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "turn",
+      "rawValue": "turn",
+      "position": 5,
+      "lineNumber": 14,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "LessThanOperator",
+      "rawValue": "<",
+      "position": 10,
+      "lineNumber": 14,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 5,
+      "position": 12,
+      "lineNumber": 14,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 13,
+      "lineNumber": 14,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "GoSub",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 15,
+      "position": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "training",
+      "rawValue": "training",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 15,
+      "position": 9,
+      "isLabelName": true
+    },
+    {
+      "type": "GoSub",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 16,
+      "position": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "patrol",
+      "rawValue": "patrol",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 16,
+      "position": 9,
+      "isLabelName": true
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 17,
+      "position": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "hub",
+      "rawValue": "hub",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 17,
+      "position": 8,
+      "isLabelName": true
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 19,
+      "position": 0,
+      "indent": 0,
+      "content": "You survived all rounds.\n"
+    },
+    {
+      "type": "Finish",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 20,
+      "position": 0
+    },
+    {
+      "type": "Comment",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 22,
+      "position": 0,
+      "value": "--- Inner loop A: training drill ---"
+    },
+    {
+      "type": "Label",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 23,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "training",
+      "rawValue": "training",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 23,
+      "position": 7,
+      "isLabelName": true
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 24,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "energy",
+      "rawValue": "energy",
+      "position": 5,
+      "lineNumber": 24,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "SubtractionOperator",
+      "rawValue": "-",
+      "position": 12,
+      "lineNumber": 24,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 10,
+      "position": 14,
+      "lineNumber": 24,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "If",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 26,
+      "position": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 4,
+      "lineNumber": 26,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "energy",
+      "rawValue": "energy",
+      "position": 5,
+      "lineNumber": 26,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "GreaterThanOperator",
+      "rawValue": ">",
+      "position": 12,
+      "lineNumber": 26,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 30,
+      "position": 14,
+      "lineNumber": 26,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 16,
+      "lineNumber": 26,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "GoSub",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 27,
+      "position": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "drill_round",
+      "rawValue": "drill_round",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 27,
+      "position": 9,
+      "isLabelName": true
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 28,
+      "position": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "training",
+      "rawValue": "training",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 28,
+      "position": 8,
+      "isLabelName": true
+    },
+    {
+      "type": "Return",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 30,
+      "position": 0
+    },
+    {
+      "type": "Comment",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 32,
+      "position": 0,
+      "value": "--- drill_round is shared by training loop ---"
+    },
+    {
+      "type": "Label",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 33,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "drill_round",
+      "rawValue": "drill_round",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 33,
+      "position": 7,
+      "isLabelName": true
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 34,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "morale",
+      "rawValue": "morale",
+      "position": 5,
+      "lineNumber": 34,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 12,
+      "lineNumber": 34,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 5,
+      "position": 14,
+      "lineNumber": 34,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Return",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 35,
+      "position": 0
+    },
+    {
+      "type": "Comment",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 37,
+      "position": 0,
+      "value": "--- Inner loop B: patrol route ---"
+    },
+    {
+      "type": "Label",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 38,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "patrol",
+      "rawValue": "patrol",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 38,
+      "position": 7,
+      "isLabelName": true
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 39,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "energy",
+      "rawValue": "energy",
+      "position": 5,
+      "lineNumber": 39,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "SubtractionOperator",
+      "rawValue": "-",
+      "position": 12,
+      "lineNumber": 39,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 5,
+      "position": 14,
+      "lineNumber": 39,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "If",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 41,
+      "position": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 4,
+      "lineNumber": 41,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "morale",
+      "rawValue": "morale",
+      "position": 5,
+      "lineNumber": 41,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "LessThanOperator",
+      "rawValue": "<",
+      "position": 12,
+      "lineNumber": 41,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 80,
+      "position": 14,
+      "lineNumber": 41,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 16,
+      "lineNumber": 41,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Comment",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 42,
+      "position": 2,
+      "value": "patrol calls back into training — creates overlap"
+    },
+    {
+      "type": "GoSub",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 43,
+      "position": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "training",
+      "rawValue": "training",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 43,
+      "position": 9,
+      "isLabelName": true
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 44,
+      "position": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "patrol",
+      "rawValue": "patrol",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 44,
+      "position": 8,
+      "isLabelName": true
+    },
+    {
+      "type": "Return",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 46,
+      "position": 0
+    },
+    {
+      "lineNumber": 48,
+      "indent": 0,
+      "position": 0,
+      "sceneName": "startup",
+      "type": "SceneEnd"
+    }
+  ]
+]

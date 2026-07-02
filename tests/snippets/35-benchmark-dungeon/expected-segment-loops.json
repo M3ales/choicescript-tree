@@ -1,0 +1,56 @@
+{
+  "loopCount": 3,
+  "loops": [
+    {
+      "bound": "condition-bounded",
+      "infinite": false,
+      "iterCap": 8,
+      "memberCount": 8,
+      "headerIds": [
+        "seg_10",
+        "seg_11",
+        "seg_12",
+        "seg_13",
+        "seg_16",
+        "seg_7",
+        "seg_8",
+        "seg_9"
+      ],
+      "backEdgeCount": 64,
+      "exitEdgeCount": 46,
+      "allHideReuse": false,
+      "choiceOptionCount": null
+    },
+    {
+      "bound": "condition-bounded",
+      "infinite": true,
+      "iterCap": 1,
+      "memberCount": 3,
+      "headerIds": [
+        "seg_17",
+        "seg_18",
+        "seg_19"
+      ],
+      "backEdgeCount": 9,
+      "exitEdgeCount": 0,
+      "allHideReuse": false,
+      "choiceOptionCount": null
+    },
+    {
+      "bound": "condition-bounded",
+      "infinite": false,
+      "iterCap": 8,
+      "memberCount": 4,
+      "headerIds": [
+        "seg_1",
+        "seg_2",
+        "seg_3",
+        "seg_4"
+      ],
+      "backEdgeCount": 16,
+      "exitEdgeCount": 8,
+      "allHideReuse": false,
+      "choiceOptionCount": null
+    }
+  ]
+}

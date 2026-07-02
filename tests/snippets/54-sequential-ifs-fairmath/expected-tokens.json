@@ -1,0 +1,978 @@
+[
+  [
+    {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 0,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "gender",
+      "rawValue": "gender",
+      "position": 8,
+      "lineNumber": 0,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "female",
+      "position": 15,
+      "lineNumber": 0,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 1,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "trans",
+      "rawValue": "trans",
+      "position": 8,
+      "lineNumber": 1,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "BooleanLiteral",
+      "value": false,
+      "position": 14,
+      "lineNumber": 1,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 2,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "father",
+      "rawValue": "father",
+      "position": 8,
+      "lineNumber": 2,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 50,
+      "position": 15,
+      "lineNumber": 2,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 3,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "intense",
+      "rawValue": "intense",
+      "position": 8,
+      "lineNumber": 3,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 30,
+      "position": 16,
+      "lineNumber": 3,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 4,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "genuine",
+      "rawValue": "genuine",
+      "position": 8,
+      "lineNumber": 4,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 40,
+      "position": 16,
+      "lineNumber": 4,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 5,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "endurance",
+      "rawValue": "endurance",
+      "position": 8,
+      "lineNumber": 5,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 22,
+      "position": 18,
+      "lineNumber": 5,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 6,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "condition",
+      "rawValue": "condition",
+      "position": 8,
+      "lineNumber": 6,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 100,
+      "position": 18,
+      "lineNumber": 6,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 8,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "father",
+      "rawValue": "father",
+      "position": 5,
+      "lineNumber": 8,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "FairmathAdditionOperator",
+      "rawValue": "%+",
+      "position": 12,
+      "lineNumber": 8,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 4,
+      "position": 14,
+      "lineNumber": 8,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 9,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "intense",
+      "rawValue": "intense",
+      "position": 5,
+      "lineNumber": 9,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "FairmathAdditionOperator",
+      "rawValue": "%+",
+      "position": 13,
+      "lineNumber": 9,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 4,
+      "position": 15,
+      "lineNumber": 9,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 10,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "genuine",
+      "rawValue": "genuine",
+      "position": 5,
+      "lineNumber": 10,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "FairmathAdditionOperator",
+      "rawValue": "%+",
+      "position": 13,
+      "lineNumber": 10,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 4,
+      "position": 15,
+      "lineNumber": 10,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 11,
+      "position": 0,
+      "indent": 0,
+      "content": "You feel emotional.\n\n"
+    },
+    {
+      "type": "If",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 13,
+      "position": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 4,
+      "lineNumber": 13,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "gender",
+      "rawValue": "gender",
+      "position": 5,
+      "lineNumber": 13,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "EqualityOperator",
+      "rawValue": "=",
+      "position": 12,
+      "lineNumber": 13,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "male",
+      "position": 14,
+      "lineNumber": 13,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 20,
+      "lineNumber": 13,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 14,
+      "position": 2,
+      "indent": 1,
+      "content": "He sends his son off.\n"
+    },
+    {
+      "type": "If",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 15,
+      "position": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 4,
+      "lineNumber": 15,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "gender",
+      "rawValue": "gender",
+      "position": 5,
+      "lineNumber": 15,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "EqualityOperator",
+      "rawValue": "=",
+      "position": 12,
+      "lineNumber": 15,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "non-binary",
+      "position": 14,
+      "lineNumber": 15,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 26,
+      "lineNumber": 15,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 16,
+      "position": 2,
+      "indent": 1,
+      "content": "He sends his kid off.\n"
+    },
+    {
+      "type": "If",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 17,
+      "position": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 4,
+      "lineNumber": 17,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "gender",
+      "rawValue": "gender",
+      "position": 5,
+      "lineNumber": 17,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "EqualityOperator",
+      "rawValue": "=",
+      "position": 12,
+      "lineNumber": 17,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "female",
+      "position": 14,
+      "lineNumber": 17,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 22,
+      "lineNumber": 17,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 18,
+      "position": 2,
+      "indent": 1,
+      "content": "He sends his daughter off.\n"
+    },
+    {
+      "type": "If",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 19,
+      "position": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 4,
+      "lineNumber": 19,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "trans",
+      "rawValue": "trans",
+      "position": 5,
+      "lineNumber": 19,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 10,
+      "lineNumber": 19,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 20,
+      "position": 2,
+      "indent": 1,
+      "content": "Your dad was there for your transition.\n\n"
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 22,
+      "position": 0,
+      "indent": 0,
+      "content": "Your father jerks a hand at the door.\n"
+    },
+    {
+      "type": "GoSub",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 23,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "race_stage_condition_drain",
+      "rawValue": "race_stage_condition_drain",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 23,
+      "position": 7,
+      "isLabelName": true
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 5,
+      "position": 34,
+      "lineNumber": 23,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "GotoLabel",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 25,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "choose_restaurant",
+      "rawValue": "choose_restaurant",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 25,
+      "position": 6,
+      "isLabelName": true
+    },
+    {
+      "type": "Label",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 27,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "race_stage_condition_drain",
+      "rawValue": "race_stage_condition_drain",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 27,
+      "position": 7,
+      "isLabelName": true
+    },
+    {
+      "type": "Parameters",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 28,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "cost",
+      "rawValue": "cost",
+      "position": 8,
+      "lineNumber": 28,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "If",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 29,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "endurance",
+      "rawValue": "endurance",
+      "position": 4,
+      "lineNumber": 29,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "GreaterThanOperator",
+      "rawValue": ">",
+      "position": 14,
+      "lineNumber": 29,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 24,
+      "position": 16,
+      "lineNumber": 29,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 30,
+      "position": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "condition",
+      "rawValue": "condition",
+      "position": 7,
+      "lineNumber": 30,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "SubtractionOperator",
+      "rawValue": "-",
+      "position": 17,
+      "lineNumber": 30,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "Identifier",
+      "value": "cost",
+      "rawValue": "cost",
+      "position": 19,
+      "lineNumber": 30,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "ElseIf",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 31,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "endurance",
+      "rawValue": "endurance",
+      "position": 8,
+      "lineNumber": 31,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "GreaterThanOperator",
+      "rawValue": ">",
+      "position": 18,
+      "lineNumber": 31,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 20,
+      "position": 20,
+      "lineNumber": 31,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 32,
+      "position": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "condition",
+      "rawValue": "condition",
+      "position": 7,
+      "lineNumber": 32,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "SubtractionOperator",
+      "rawValue": "-",
+      "position": 17,
+      "lineNumber": 32,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 19,
+      "lineNumber": 32,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "Identifier",
+      "value": "cost",
+      "rawValue": "cost",
+      "position": 20,
+      "lineNumber": 32,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "MultiplicationOperator",
+      "rawValue": "*",
+      "position": 25,
+      "lineNumber": 32,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 2,
+      "position": 27,
+      "lineNumber": 32,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 28,
+      "lineNumber": 32,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "ElseIf",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 33,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "endurance",
+      "rawValue": "endurance",
+      "position": 8,
+      "lineNumber": 33,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "GreaterThanOperator",
+      "rawValue": ">",
+      "position": 18,
+      "lineNumber": 33,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 16,
+      "position": 20,
+      "lineNumber": 33,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 34,
+      "position": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "condition",
+      "rawValue": "condition",
+      "position": 7,
+      "lineNumber": 34,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "SubtractionOperator",
+      "rawValue": "-",
+      "position": 17,
+      "lineNumber": 34,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 19,
+      "lineNumber": 34,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "Identifier",
+      "value": "cost",
+      "rawValue": "cost",
+      "position": 20,
+      "lineNumber": 34,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "MultiplicationOperator",
+      "rawValue": "*",
+      "position": 25,
+      "lineNumber": 34,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 3,
+      "position": 27,
+      "lineNumber": 34,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 28,
+      "lineNumber": 34,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "Else",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 35,
+      "position": 0
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 36,
+      "position": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "condition",
+      "rawValue": "condition",
+      "position": 7,
+      "lineNumber": 36,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "SubtractionOperator",
+      "rawValue": "-",
+      "position": 17,
+      "lineNumber": 36,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 19,
+      "lineNumber": 36,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "Identifier",
+      "value": "cost",
+      "rawValue": "cost",
+      "position": 20,
+      "lineNumber": 36,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "MultiplicationOperator",
+      "rawValue": "*",
+      "position": 25,
+      "lineNumber": 36,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 4,
+      "position": 27,
+      "lineNumber": 36,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 28,
+      "lineNumber": 36,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "If",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 37,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "condition",
+      "rawValue": "condition",
+      "position": 4,
+      "lineNumber": 37,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "LessThanOperator",
+      "rawValue": "<",
+      "position": 14,
+      "lineNumber": 37,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 16,
+      "lineNumber": 37,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 38,
+      "position": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "condition",
+      "rawValue": "condition",
+      "position": 7,
+      "lineNumber": 38,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 17,
+      "lineNumber": 38,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "Return",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 39,
+      "position": 0
+    },
+    {
+      "type": "Label",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 41,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "choose_restaurant",
+      "rawValue": "choose_restaurant",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 41,
+      "position": 7,
+      "isLabelName": true
+    },
+    {
+      "lineNumber": 44,
+      "indent": 0,
+      "position": 0,
+      "sceneName": "startup",
+      "type": "SceneEnd"
+    }
+  ]
+]

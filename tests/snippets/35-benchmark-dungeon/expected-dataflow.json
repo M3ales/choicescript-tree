@@ -1,0 +1,1155 @@
+{
+  "states": [
+    {
+      "cfgId": "startup:",
+      "entryGlobals": [
+        {
+          "hp": "100",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "3",
+          "keys": "0",
+          "encounters": "0",
+          "rooms_cleared": "0",
+          "boss_defeated": "false",
+          "treasure_collected": "0",
+          "floor": "1"
+        },
+        {
+          "hp": "100",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "3",
+          "keys": "0",
+          "encounters": "0",
+          "rooms_cleared": "0",
+          "boss_defeated": "false",
+          "treasure_collected": "0",
+          "floor": "1"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "hp": "100",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "3",
+          "keys": "0",
+          "encounters": "0",
+          "rooms_cleared": "0",
+          "boss_defeated": "false",
+          "treasure_collected": "0",
+          "floor": "1"
+        },
+        {
+          "hp": "100",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "3",
+          "keys": "0",
+          "encounters": "0",
+          "rooms_cleared": "0",
+          "boss_defeated": "false",
+          "treasure_collected": "0",
+          "floor": "1"
+        }
+      ]
+    },
+    {
+      "cfgId": "dungeon:",
+      "entryGlobals": [
+        {
+          "hp": "100",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "3",
+          "keys": "0",
+          "encounters": "0",
+          "rooms_cleared": "0",
+          "boss_defeated": "false",
+          "treasure_collected": "0",
+          "floor": "1"
+        },
+        {
+          "hp": "100",
+          "max_hp": "100",
+          "attack": "20",
+          "defense": "15",
+          "potions": "2",
+          "keys": "0",
+          "encounters": "0",
+          "rooms_cleared": "0",
+          "boss_defeated": "true",
+          "treasure_collected": "10",
+          "floor": "1"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "hp": "100",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "3",
+          "keys": "0",
+          "encounters": "0",
+          "rooms_cleared": "0",
+          "boss_defeated": "false",
+          "treasure_collected": "0",
+          "floor": "1"
+        },
+        {
+          "hp": "100",
+          "max_hp": "100",
+          "attack": "20",
+          "defense": "15",
+          "potions": "2",
+          "keys": "0",
+          "encounters": "0",
+          "rooms_cleared": "0",
+          "boss_defeated": "true",
+          "treasure_collected": "10",
+          "floor": "1"
+        }
+      ]
+    },
+    {
+      "cfgId": "dungeon:dungeon_hub",
+      "entryGlobals": [
+        {
+          "hp": "100",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "3",
+          "keys": "0",
+          "encounters": "0",
+          "rooms_cleared": "0",
+          "boss_defeated": "false",
+          "treasure_collected": "0",
+          "floor": "1"
+        },
+        {
+          "hp": "[100..140]",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "{2,3}",
+          "keys": "0",
+          "encounters": "0",
+          "rooms_cleared": "0",
+          "boss_defeated": "false",
+          "treasure_collected": "0",
+          "floor": "1"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "hp": "100",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "3",
+          "keys": "0",
+          "encounters": "0",
+          "rooms_cleared": "0",
+          "boss_defeated": "false",
+          "treasure_collected": "0",
+          "floor": "1"
+        },
+        {
+          "hp": "[100..140]",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "{2,3}",
+          "keys": "0",
+          "encounters": "0",
+          "rooms_cleared": "0",
+          "boss_defeated": "false",
+          "treasure_collected": "0",
+          "floor": "1"
+        }
+      ]
+    },
+    {
+      "cfgId": "dungeon:enter_room",
+      "entryGlobals": [
+        {
+          "hp": "100",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "3",
+          "keys": "0",
+          "encounters": "0",
+          "rooms_cleared": "0",
+          "boss_defeated": "false",
+          "treasure_collected": "0",
+          "floor": "1"
+        },
+        {
+          "hp": "100",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "3",
+          "keys": "0",
+          "encounters": "0",
+          "rooms_cleared": "0",
+          "boss_defeated": "false",
+          "treasure_collected": "0",
+          "floor": "1"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "hp": "100",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "3",
+          "keys": "0",
+          "encounters": "0",
+          "rooms_cleared": "1",
+          "boss_defeated": "false",
+          "treasure_collected": "0",
+          "floor": "1"
+        },
+        {
+          "hp": "100",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "3",
+          "keys": "0",
+          "encounters": "0",
+          "rooms_cleared": "1",
+          "boss_defeated": "false",
+          "treasure_collected": "0",
+          "floor": "1"
+        }
+      ]
+    },
+    {
+      "cfgId": "dungeon:use_potion",
+      "entryGlobals": [
+        {
+          "hp": "100",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "3",
+          "keys": "0",
+          "encounters": "0",
+          "rooms_cleared": "0",
+          "boss_defeated": "false",
+          "treasure_collected": "0",
+          "floor": "1"
+        },
+        {
+          "hp": "[83..92]",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "3",
+          "keys": "0",
+          "encounters": "1",
+          "rooms_cleared": "1",
+          "boss_defeated": "false",
+          "treasure_collected": "0",
+          "floor": "1"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "hp": "[100..140]",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "2",
+          "keys": "0",
+          "encounters": "0",
+          "rooms_cleared": "0",
+          "boss_defeated": "false",
+          "treasure_collected": "0",
+          "floor": "1"
+        },
+        {
+          "hp": "[100..132]",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "2",
+          "keys": "0",
+          "encounters": "1",
+          "rooms_cleared": "1",
+          "boss_defeated": "false",
+          "treasure_collected": "0",
+          "floor": "1"
+        }
+      ]
+    },
+    {
+      "cfgId": "dungeon:retreat",
+      "entryGlobals": [
+        {
+          "hp": "100",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "3",
+          "keys": "0",
+          "encounters": "0",
+          "rooms_cleared": "0",
+          "boss_defeated": "false",
+          "treasure_collected": "0",
+          "floor": "1"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "hp": "100",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "3",
+          "keys": "0",
+          "encounters": "0",
+          "rooms_cleared": "0",
+          "boss_defeated": "false",
+          "treasure_collected": "0",
+          "floor": "1"
+        }
+      ]
+    },
+    {
+      "cfgId": "boss:",
+      "entryGlobals": [
+        {
+          "hp": "100",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "3",
+          "keys": "0",
+          "encounters": "0",
+          "rooms_cleared": "0",
+          "boss_defeated": "false",
+          "treasure_collected": "0",
+          "floor": "1"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "hp": "100",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "3",
+          "keys": "0",
+          "encounters": "0",
+          "rooms_cleared": "0",
+          "boss_defeated": "false",
+          "treasure_collected": "0",
+          "floor": "1"
+        }
+      ]
+    },
+    {
+      "cfgId": "boss:boss_fight",
+      "entryGlobals": [
+        {
+          "hp": "100",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "3",
+          "keys": "0",
+          "encounters": "0",
+          "rooms_cleared": "0",
+          "boss_defeated": "false",
+          "treasure_collected": "0",
+          "floor": "1"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "hp": "100",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "2",
+          "keys": "0",
+          "encounters": "0",
+          "rooms_cleared": "0",
+          "boss_defeated": "false",
+          "treasure_collected": "0",
+          "floor": "1"
+        }
+      ]
+    },
+    {
+      "cfgId": "dungeon:rest",
+      "entryGlobals": [
+        {
+          "hp": "100",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "3",
+          "keys": "0",
+          "encounters": "0",
+          "rooms_cleared": "0",
+          "boss_defeated": "false",
+          "treasure_collected": "0",
+          "floor": "1"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "hp": "[100..120]",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "3",
+          "keys": "0",
+          "encounters": "0",
+          "rooms_cleared": "0",
+          "boss_defeated": "false",
+          "treasure_collected": "0",
+          "floor": "1"
+        }
+      ]
+    },
+    {
+      "cfgId": "dungeon:combat_encounter",
+      "entryGlobals": [
+        {
+          "hp": "100",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "3",
+          "keys": "0",
+          "encounters": "0",
+          "rooms_cleared": "1",
+          "boss_defeated": "false",
+          "treasure_collected": "0",
+          "floor": "1"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "hp": "100",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "3",
+          "keys": "0",
+          "encounters": "1",
+          "rooms_cleared": "1",
+          "boss_defeated": "false",
+          "treasure_collected": "0",
+          "floor": "1"
+        }
+      ]
+    },
+    {
+      "cfgId": "dungeon:combat_round",
+      "entryGlobals": [
+        {
+          "hp": "100",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "3",
+          "keys": "0",
+          "encounters": "1",
+          "rooms_cleared": "1",
+          "boss_defeated": "false",
+          "treasure_collected": "0",
+          "floor": "1"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "hp": "[83..92]",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "3",
+          "keys": "0",
+          "encounters": "1",
+          "rooms_cleared": "1",
+          "boss_defeated": "false",
+          "treasure_collected": "0",
+          "floor": "1"
+        }
+      ]
+    },
+    {
+      "cfgId": "dungeon:treasure_room",
+      "entryGlobals": [
+        {
+          "hp": "100",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "3",
+          "keys": "0",
+          "encounters": "0",
+          "rooms_cleared": "1",
+          "boss_defeated": "false",
+          "treasure_collected": "0",
+          "floor": "1"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "hp": "100",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "4",
+          "keys": "0",
+          "encounters": "0",
+          "rooms_cleared": "1",
+          "boss_defeated": "false",
+          "treasure_collected": "4",
+          "floor": "1"
+        }
+      ]
+    },
+    {
+      "cfgId": "dungeon:key_room",
+      "entryGlobals": [
+        {
+          "hp": "100",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "3",
+          "keys": "0",
+          "encounters": "0",
+          "rooms_cleared": "1",
+          "boss_defeated": "false",
+          "treasure_collected": "0",
+          "floor": "1"
+        },
+        {
+          "hp": "100",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "4",
+          "keys": "0",
+          "encounters": "0",
+          "rooms_cleared": "1",
+          "boss_defeated": "false",
+          "treasure_collected": "4",
+          "floor": "1"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "hp": "100",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "3",
+          "keys": "1",
+          "encounters": "0",
+          "rooms_cleared": "1",
+          "boss_defeated": "false",
+          "treasure_collected": "0",
+          "floor": "1"
+        },
+        {
+          "hp": "100",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "4",
+          "keys": "1",
+          "encounters": "0",
+          "rooms_cleared": "1",
+          "boss_defeated": "false",
+          "treasure_collected": "4",
+          "floor": "1"
+        }
+      ]
+    },
+    {
+      "cfgId": "dungeon:dungeon_hub__cont_7",
+      "entryGlobals": [
+        {
+          "hp": "[100..140]",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "2",
+          "keys": "0",
+          "encounters": "0",
+          "rooms_cleared": "0",
+          "boss_defeated": "false",
+          "treasure_collected": "0",
+          "floor": "1"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "hp": "[100..140]",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "2",
+          "keys": "0",
+          "encounters": "0",
+          "rooms_cleared": "0",
+          "boss_defeated": "false",
+          "treasure_collected": "0",
+          "floor": "1"
+        }
+      ]
+    },
+    {
+      "cfgId": "dungeon:dungeon_hub__cont_0",
+      "entryGlobals": [
+        {
+          "hp": "[100..120]",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "3",
+          "keys": "0",
+          "encounters": "0",
+          "rooms_cleared": "0",
+          "boss_defeated": "false",
+          "treasure_collected": "0",
+          "floor": "1"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "hp": "[100..120]",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "3",
+          "keys": "0",
+          "encounters": "0",
+          "rooms_cleared": "0",
+          "boss_defeated": "false",
+          "treasure_collected": "0",
+          "floor": "1"
+        }
+      ]
+    },
+    {
+      "cfgId": "dungeon:enter_room__cont_1",
+      "entryGlobals": [
+        {
+          "hp": "100",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "4",
+          "keys": "0",
+          "encounters": "0",
+          "rooms_cleared": "1",
+          "boss_defeated": "false",
+          "treasure_collected": "4",
+          "floor": "1"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "hp": "100",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "4",
+          "keys": "0",
+          "encounters": "0",
+          "rooms_cleared": "1",
+          "boss_defeated": "false",
+          "treasure_collected": "4",
+          "floor": "1"
+        }
+      ]
+    },
+    {
+      "cfgId": "dungeon:enter_room__cont_2",
+      "entryGlobals": [
+        {
+          "hp": "100",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "3",
+          "keys": "1",
+          "encounters": "0",
+          "rooms_cleared": "1",
+          "boss_defeated": "false",
+          "treasure_collected": "0",
+          "floor": "1"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "hp": "100",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "3",
+          "keys": "1",
+          "encounters": "0",
+          "rooms_cleared": "1",
+          "boss_defeated": "false",
+          "treasure_collected": "0",
+          "floor": "1"
+        }
+      ]
+    },
+    {
+      "cfgId": "boss:boss_victory",
+      "entryGlobals": [
+        {
+          "hp": "100",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "2",
+          "keys": "0",
+          "encounters": "0",
+          "rooms_cleared": "0",
+          "boss_defeated": "false",
+          "treasure_collected": "0",
+          "floor": "1"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "hp": "100",
+          "max_hp": "100",
+          "attack": "20",
+          "defense": "15",
+          "potions": "2",
+          "keys": "0",
+          "encounters": "0",
+          "rooms_cleared": "0",
+          "boss_defeated": "true",
+          "treasure_collected": "10",
+          "floor": "1"
+        }
+      ]
+    },
+    {
+      "cfgId": "boss:boss_defeat",
+      "entryGlobals": [
+        {
+          "hp": "100",
+          "max_hp": "100",
+          "attack": "{15,20}",
+          "defense": "{10,15}",
+          "potions": "2",
+          "keys": "0",
+          "encounters": "0",
+          "rooms_cleared": "0",
+          "boss_defeated": "{false,true}",
+          "treasure_collected": "{0,10}",
+          "floor": "1"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "hp": "100",
+          "max_hp": "100",
+          "attack": "{15,20}",
+          "defense": "{10,15}",
+          "potions": "2",
+          "keys": "0",
+          "encounters": "0",
+          "rooms_cleared": "0",
+          "boss_defeated": "{false,true}",
+          "treasure_collected": "{0,10}",
+          "floor": "1"
+        }
+      ]
+    },
+    {
+      "cfgId": "dungeon:combat_victory",
+      "entryGlobals": [
+        {
+          "hp": "[83..92]",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "3",
+          "keys": "0",
+          "encounters": "1",
+          "rooms_cleared": "1",
+          "boss_defeated": "false",
+          "treasure_collected": "0",
+          "floor": "1"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "hp": "[83..92]",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "{3,4}",
+          "keys": "0",
+          "encounters": "1",
+          "rooms_cleared": "1",
+          "boss_defeated": "false",
+          "treasure_collected": "{0,1}",
+          "floor": "1"
+        }
+      ]
+    },
+    {
+      "cfgId": "dungeon:death",
+      "entryGlobals": [
+        {
+          "hp": "[83..92]",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "3",
+          "keys": "0",
+          "encounters": "1",
+          "rooms_cleared": "1",
+          "boss_defeated": "false",
+          "treasure_collected": "0",
+          "floor": "1"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "hp": "[83..92]",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "3",
+          "keys": "0",
+          "encounters": "1",
+          "rooms_cleared": "1",
+          "boss_defeated": "false",
+          "treasure_collected": "0",
+          "floor": "1"
+        }
+      ]
+    },
+    {
+      "cfgId": "dungeon:combat_round__cont_0",
+      "entryGlobals": [
+        {
+          "hp": "[100..132]",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "2",
+          "keys": "0",
+          "encounters": "1",
+          "rooms_cleared": "1",
+          "boss_defeated": "false",
+          "treasure_collected": "0",
+          "floor": "1"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "hp": "[92..129]",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "2",
+          "keys": "0",
+          "encounters": "1",
+          "rooms_cleared": "1",
+          "boss_defeated": "false",
+          "treasure_collected": "0",
+          "floor": "1"
+        }
+      ]
+    },
+    {
+      "cfgId": "dungeon:dungeon_hub__cont_1",
+      "entryGlobals": [
+        {
+          "hp": "100",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "{3,4}",
+          "keys": "{0,1}",
+          "encounters": "0",
+          "rooms_cleared": "1",
+          "boss_defeated": "false",
+          "treasure_collected": "{0,4}",
+          "floor": "1"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "hp": "100",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "{3,4}",
+          "keys": "{0,1}",
+          "encounters": "0",
+          "rooms_cleared": "1",
+          "boss_defeated": "false",
+          "treasure_collected": "{0,4}",
+          "floor": "1"
+        }
+      ]
+    },
+    {
+      "cfgId": "dungeon:dungeon_hub__cont_2",
+      "entryGlobals": [
+        {
+          "hp": "100",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "{3,4}",
+          "keys": "{0,1}",
+          "encounters": "0",
+          "rooms_cleared": "1",
+          "boss_defeated": "false",
+          "treasure_collected": "{0,4}",
+          "floor": "1"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "hp": "100",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "{3,4}",
+          "keys": "{0,1}",
+          "encounters": "0",
+          "rooms_cleared": "1",
+          "boss_defeated": "false",
+          "treasure_collected": "{0,4}",
+          "floor": "1"
+        }
+      ]
+    },
+    {
+      "cfgId": "dungeon:dungeon_hub__cont_3",
+      "entryGlobals": [
+        {
+          "hp": "100",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "{3,4}",
+          "keys": "{0,1}",
+          "encounters": "0",
+          "rooms_cleared": "1",
+          "boss_defeated": "false",
+          "treasure_collected": "{0,4}",
+          "floor": "1"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "hp": "100",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "{3,4}",
+          "keys": "{0,1}",
+          "encounters": "0",
+          "rooms_cleared": "1",
+          "boss_defeated": "false",
+          "treasure_collected": "{0,4}",
+          "floor": "1"
+        }
+      ]
+    },
+    {
+      "cfgId": "dungeon:dungeon_hub__cont_4",
+      "entryGlobals": [
+        {
+          "hp": "100",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "{3,4}",
+          "keys": "{0,1}",
+          "encounters": "0",
+          "rooms_cleared": "1",
+          "boss_defeated": "false",
+          "treasure_collected": "{0,4}",
+          "floor": "1"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "hp": "100",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "{3,4}",
+          "keys": "{0,1}",
+          "encounters": "0",
+          "rooms_cleared": "1",
+          "boss_defeated": "false",
+          "treasure_collected": "{0,4}",
+          "floor": "1"
+        }
+      ]
+    },
+    {
+      "cfgId": "dungeon:dungeon_hub__cont_5",
+      "entryGlobals": [
+        {
+          "hp": "100",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "{3,4}",
+          "keys": "{0,1}",
+          "encounters": "0",
+          "rooms_cleared": "1",
+          "boss_defeated": "false",
+          "treasure_collected": "{0,4}",
+          "floor": "1"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "hp": "100",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "{3,4}",
+          "keys": "{0,1}",
+          "encounters": "0",
+          "rooms_cleared": "1",
+          "boss_defeated": "false",
+          "treasure_collected": "{0,4}",
+          "floor": "1"
+        }
+      ]
+    },
+    {
+      "cfgId": "dungeon:dungeon_hub__cont_6",
+      "entryGlobals": [
+        {
+          "hp": "100",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "{3,4}",
+          "keys": "{0,1}",
+          "encounters": "0",
+          "rooms_cleared": "1",
+          "boss_defeated": "false",
+          "treasure_collected": "{0,4}",
+          "floor": "1"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "hp": "100",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "{3,4}",
+          "keys": "{0,1}",
+          "encounters": "0",
+          "rooms_cleared": "1",
+          "boss_defeated": "false",
+          "treasure_collected": "{0,4}",
+          "floor": "1"
+        }
+      ]
+    },
+    {
+      "cfgId": "boss:boss_exit",
+      "entryGlobals": [
+        {
+          "hp": "100",
+          "max_hp": "100",
+          "attack": "20",
+          "defense": "15",
+          "potions": "2",
+          "keys": "0",
+          "encounters": "0",
+          "rooms_cleared": "0",
+          "boss_defeated": "true",
+          "treasure_collected": "10",
+          "floor": "1"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "hp": "100",
+          "max_hp": "100",
+          "attack": "20",
+          "defense": "15",
+          "potions": "2",
+          "keys": "0",
+          "encounters": "0",
+          "rooms_cleared": "0",
+          "boss_defeated": "true",
+          "treasure_collected": "10",
+          "floor": "1"
+        }
+      ]
+    },
+    {
+      "cfgId": "dungeon:enter_room__cont_0",
+      "entryGlobals": [
+        {
+          "hp": "[83..92]",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "{3,4}",
+          "keys": "0",
+          "encounters": "1",
+          "rooms_cleared": "1",
+          "boss_defeated": "false",
+          "treasure_collected": "{0,1}",
+          "floor": "1"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "hp": "[83..92]",
+          "max_hp": "100",
+          "attack": "15",
+          "defense": "10",
+          "potions": "{3,4}",
+          "keys": "0",
+          "encounters": "1",
+          "rooms_cleared": "1",
+          "boss_defeated": "false",
+          "treasure_collected": "{0,1}",
+          "floor": "1"
+        }
+      ]
+    }
+  ],
+  "diagnostics": {
+    "unresolvedExits": 2,
+    "droppedContexts": 0,
+    "missingCfgs": []
+  }
+}

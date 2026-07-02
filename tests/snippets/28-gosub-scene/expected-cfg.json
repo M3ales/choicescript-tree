@@ -22,9 +22,9 @@
       "helpers:b_1": {
         "scene": "helpers",
         "statementIds": [
-          "helpers:0",
-          "helpers:1",
-          "helpers:2"
+          "helpers:hswhu2rft7y8",
+          "helpers:12r2ubuc0nzf8",
+          "helpers:585r6n1dkw13l"
         ],
         "entryType": "Label",
         "exitType": "Return",
@@ -74,9 +74,9 @@
       "startup:b_0": {
         "scene": "startup",
         "statementIds": [
-          "startup:0",
-          "startup:1",
-          "startup:2"
+          "startup:uazp7cceej86",
+          "startup:1mni2vgia778m",
+          "startup:1huxn7113vph7v"
         ],
         "entryType": "SceneEntry",
         "exitType": "GoSubScene"
@@ -84,8 +84,8 @@
       "startup:b_1": {
         "scene": "startup",
         "statementIds": [
-          "startup:3",
-          "startup:4"
+          "startup:mqepn51nufj5v",
+          "startup:fqmz851ie6paj"
         ],
         "entryType": "GoSubContinuation",
         "exitType": "Finish"

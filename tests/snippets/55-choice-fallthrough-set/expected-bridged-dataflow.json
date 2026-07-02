@@ -1,0 +1,21 @@
+{
+  "cfgCount": 2,
+  "states": [
+    {
+      "cfgId": "startup:",
+      "entryGlobals": [
+        {
+          "thanksgiving_food": ""
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:set_the_table",
+      "entryGlobals": [
+        {
+          "thanksgiving_food": ""
+        }
+      ]
+    }
+  ]
+}

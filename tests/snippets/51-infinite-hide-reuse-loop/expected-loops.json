@@ -1,0 +1,16 @@
+[
+  {
+    "headerCfgId": "startup:loop",
+    "bodyCfgIds": [
+      "startup:loop"
+    ],
+    "backEdgeCount": 2,
+    "exitCount": 1,
+    "mechanism": "direct",
+    "pure": false,
+    "bound": "choice-bounded",
+    "tripCount": 3,
+    "unrollDepth": 3,
+    "infinite": false
+  }
+]

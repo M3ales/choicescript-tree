@@ -122,10 +122,10 @@
       "type": "Identifier",
       "value": "combat_loop",
       "rawValue": "combat_loop",
-      "position": 6,
-      "lineNumber": 9,
       "sceneName": "arena",
       "indent": 0,
+      "lineNumber": 9,
+      "position": 7,
       "isLabelName": true
     },
     {
@@ -304,10 +304,10 @@
       "type": "Identifier",
       "value": "victory",
       "rawValue": "victory",
-      "position": 8,
-      "lineNumber": 15,
       "sceneName": "arena",
       "indent": 1,
+      "lineNumber": 15,
+      "position": 8,
       "isLabelName": true
     },
     {
@@ -353,10 +353,10 @@
       "type": "Identifier",
       "value": "defeat",
       "rawValue": "defeat",
-      "position": 8,
-      "lineNumber": 17,
       "sceneName": "arena",
       "indent": 1,
+      "lineNumber": 17,
+      "position": 8,
       "isLabelName": true
     },
     {
@@ -402,10 +402,10 @@
       "type": "Identifier",
       "value": "draw",
       "rawValue": "draw",
-      "position": 8,
-      "lineNumber": 19,
       "sceneName": "arena",
       "indent": 1,
+      "lineNumber": 19,
+      "position": 8,
       "isLabelName": true
     },
     {
@@ -420,6 +420,7 @@
       "sceneName": "arena",
       "indent": 1,
       "lineNumber": 22,
+      "position": 2,
       "rawText": "Attack with full force",
       "hasMultiReplace": false
     },
@@ -427,7 +428,7 @@
       "type": "Prose",
       "sceneName": "arena",
       "lineNumber": 22,
-      "position": null,
+      "position": 3,
       "indent": 1,
       "content": "Attack with full force"
     },
@@ -698,10 +699,10 @@
       "type": "Identifier",
       "value": "combat_loop",
       "rawValue": "combat_loop",
-      "position": 10,
-      "lineNumber": 31,
       "sceneName": "arena",
       "indent": 2,
+      "lineNumber": 31,
+      "position": 10,
       "isLabelName": true
     },
     {
@@ -709,6 +710,7 @@
       "sceneName": "arena",
       "indent": 1,
       "lineNumber": 32,
+      "position": 2,
       "rawText": "Defensive stance",
       "hasMultiReplace": false
     },
@@ -716,7 +718,7 @@
       "type": "Prose",
       "sceneName": "arena",
       "lineNumber": 32,
-      "position": null,
+      "position": 3,
       "indent": 1,
       "content": "Defensive stance"
     },
@@ -987,10 +989,10 @@
       "type": "Identifier",
       "value": "combat_loop",
       "rawValue": "combat_loop",
-      "position": 10,
-      "lineNumber": 41,
       "sceneName": "arena",
       "indent": 2,
+      "lineNumber": 41,
+      "position": 10,
       "isLabelName": true
     },
     {
@@ -1044,7 +1046,7 @@
       "sceneName": "arena",
       "indent": 1,
       "lineNumber": 42,
-      "position": 16,
+      "position": 31,
       "rawText": "Taunt the opponent",
       "hasMultiReplace": false
     },
@@ -1052,7 +1054,7 @@
       "type": "Prose",
       "sceneName": "arena",
       "lineNumber": 42,
-      "position": 17,
+      "position": 32,
       "indent": 1,
       "content": "Taunt the opponent"
     },
@@ -1323,10 +1325,10 @@
       "type": "Identifier",
       "value": "combat_loop",
       "rawValue": "combat_loop",
-      "position": 10,
-      "lineNumber": 51,
       "sceneName": "arena",
       "indent": 2,
+      "lineNumber": 51,
+      "position": 10,
       "isLabelName": true
     },
     {
@@ -1340,10 +1342,10 @@
       "type": "Identifier",
       "value": "victory",
       "rawValue": "victory",
-      "position": 6,
-      "lineNumber": 53,
       "sceneName": "arena",
       "indent": 0,
+      "lineNumber": 53,
+      "position": 7,
       "isLabelName": true
     },
     {
@@ -1493,6 +1495,7 @@
       "sceneName": "arena",
       "indent": 1,
       "lineNumber": 61,
+      "position": 2,
       "rawText": "Salute the crowd",
       "hasMultiReplace": false
     },
@@ -1500,7 +1503,7 @@
       "type": "Prose",
       "sceneName": "arena",
       "lineNumber": 61,
-      "position": null,
+      "position": 3,
       "indent": 1,
       "content": "Salute the crowd"
     },
@@ -1555,10 +1558,10 @@
       "type": "Identifier",
       "value": "arena_exit",
       "rawValue": "arena_exit",
-      "position": 10,
-      "lineNumber": 64,
       "sceneName": "arena",
       "indent": 2,
+      "lineNumber": 64,
+      "position": 10,
       "isLabelName": true
     },
     {
@@ -1566,6 +1569,7 @@
       "sceneName": "arena",
       "indent": 1,
       "lineNumber": 65,
+      "position": 2,
       "rawText": "Help your opponent up",
       "hasMultiReplace": false
     },
@@ -1573,7 +1577,7 @@
       "type": "Prose",
       "sceneName": "arena",
       "lineNumber": 65,
-      "position": null,
+      "position": 3,
       "indent": 1,
       "content": "Help your opponent up"
     },
@@ -1660,10 +1664,10 @@
       "type": "Identifier",
       "value": "arena_exit",
       "rawValue": "arena_exit",
-      "position": 10,
-      "lineNumber": 69,
       "sceneName": "arena",
       "indent": 2,
+      "lineNumber": 69,
+      "position": 10,
       "isLabelName": true
     },
     {
@@ -1677,10 +1681,10 @@
       "type": "Identifier",
       "value": "defeat",
       "rawValue": "defeat",
-      "position": 6,
-      "lineNumber": 71,
       "sceneName": "arena",
       "indent": 0,
+      "lineNumber": 71,
+      "position": 7,
       "isLabelName": true
     },
     {
@@ -1765,10 +1769,10 @@
       "type": "Identifier",
       "value": "arena_exit",
       "rawValue": "arena_exit",
-      "position": 6,
-      "lineNumber": 77,
       "sceneName": "arena",
       "indent": 0,
+      "lineNumber": 77,
+      "position": 6,
       "isLabelName": true
     },
     {
@@ -1782,10 +1786,10 @@
       "type": "Identifier",
       "value": "draw",
       "rawValue": "draw",
-      "position": 6,
-      "lineNumber": 79,
       "sceneName": "arena",
       "indent": 0,
+      "lineNumber": 79,
+      "position": 7,
       "isLabelName": true
     },
     {
@@ -1902,10 +1906,10 @@
       "type": "Identifier",
       "value": "arena_exit",
       "rawValue": "arena_exit",
-      "position": 6,
-      "lineNumber": 84,
       "sceneName": "arena",
       "indent": 0,
+      "lineNumber": 84,
+      "position": 6,
       "isLabelName": true
     },
     {
@@ -1919,10 +1923,10 @@
       "type": "Identifier",
       "value": "arena_exit",
       "rawValue": "arena_exit",
-      "position": 6,
-      "lineNumber": 86,
       "sceneName": "arena",
       "indent": 0,
+      "lineNumber": 86,
+      "position": 7,
       "isLabelName": true
     },
     {
@@ -1944,21 +1948,20 @@
       "type": "Identifier",
       "value": "startup",
       "rawValue": "startup",
-      "position": 12,
-      "lineNumber": 88,
       "sceneName": "arena",
       "indent": 0,
-      "isSceneName": true,
-      "isLabelName": false
+      "lineNumber": 88,
+      "position": 12,
+      "isSceneName": true
     },
     {
       "type": "Identifier",
       "value": "village_hub",
       "rawValue": "village_hub",
-      "position": 20,
-      "lineNumber": 88,
       "sceneName": "arena",
       "indent": 0,
+      "lineNumber": 88,
+      "position": 20,
       "isLabelName": true
     },
     {
@@ -2068,10 +2071,10 @@
       "type": "Identifier",
       "value": "shop_hub",
       "rawValue": "shop_hub",
-      "position": 6,
-      "lineNumber": 6,
       "sceneName": "shop",
       "indent": 0,
+      "lineNumber": 6,
+      "position": 7,
       "isLabelName": true
     },
     {
@@ -2180,7 +2183,7 @@
       "sceneName": "shop",
       "indent": 1,
       "lineNumber": 14,
-      "position": 16,
+      "position": 30,
       "rawText": "Sword of Valor (30 gold)",
       "hasMultiReplace": false
     },
@@ -2188,7 +2191,7 @@
       "type": "Prose",
       "sceneName": "shop",
       "lineNumber": 14,
-      "position": 17,
+      "position": 31,
       "indent": 1,
       "content": "Sword of Valor (30 gold)"
     },
@@ -2251,10 +2254,10 @@
       "type": "Identifier",
       "value": "confirm_purchase",
       "rawValue": "confirm_purchase",
-      "position": 11,
-      "lineNumber": 17,
       "sceneName": "shop",
       "indent": 2,
+      "lineNumber": 17,
+      "position": 11,
       "isLabelName": true
     },
     {
@@ -2284,10 +2287,10 @@
       "type": "Identifier",
       "value": "shop_hub",
       "rawValue": "shop_hub",
-      "position": 12,
-      "lineNumber": 19,
       "sceneName": "shop",
       "indent": 3,
+      "lineNumber": 19,
+      "position": 12,
       "isLabelName": true
     },
     {
@@ -2301,10 +2304,10 @@
       "type": "Identifier",
       "value": "shop_exit",
       "rawValue": "shop_exit",
-      "position": 10,
-      "lineNumber": 20,
       "sceneName": "shop",
       "indent": 2,
+      "lineNumber": 20,
+      "position": 10,
       "isLabelName": true
     },
     {
@@ -2358,7 +2361,7 @@
       "sceneName": "shop",
       "indent": 1,
       "lineNumber": 21,
-      "position": 16,
+      "position": 30,
       "rawText": "Shield of Faith (20 gold)",
       "hasMultiReplace": false
     },
@@ -2366,7 +2369,7 @@
       "type": "Prose",
       "sceneName": "shop",
       "lineNumber": 21,
-      "position": 17,
+      "position": 31,
       "indent": 1,
       "content": "Shield of Faith (20 gold)"
     },
@@ -2429,10 +2432,10 @@
       "type": "Identifier",
       "value": "confirm_purchase",
       "rawValue": "confirm_purchase",
-      "position": 11,
-      "lineNumber": 24,
       "sceneName": "shop",
       "indent": 2,
+      "lineNumber": 24,
+      "position": 11,
       "isLabelName": true
     },
     {
@@ -2462,10 +2465,10 @@
       "type": "Identifier",
       "value": "shop_hub",
       "rawValue": "shop_hub",
-      "position": 12,
-      "lineNumber": 26,
       "sceneName": "shop",
       "indent": 3,
+      "lineNumber": 26,
+      "position": 12,
       "isLabelName": true
     },
     {
@@ -2479,10 +2482,10 @@
       "type": "Identifier",
       "value": "shop_exit",
       "rawValue": "shop_exit",
-      "position": 10,
-      "lineNumber": 27,
       "sceneName": "shop",
       "indent": 2,
+      "lineNumber": 27,
+      "position": 10,
       "isLabelName": true
     },
     {
@@ -2536,7 +2539,7 @@
       "sceneName": "shop",
       "indent": 1,
       "lineNumber": 28,
-      "position": 16,
+      "position": 30,
       "rawText": "Charm Amulet (15 gold)",
       "hasMultiReplace": false
     },
@@ -2544,7 +2547,7 @@
       "type": "Prose",
       "sceneName": "shop",
       "lineNumber": 28,
-      "position": 17,
+      "position": 31,
       "indent": 1,
       "content": "Charm Amulet (15 gold)"
     },
@@ -2607,10 +2610,10 @@
       "type": "Identifier",
       "value": "confirm_purchase",
       "rawValue": "confirm_purchase",
-      "position": 11,
-      "lineNumber": 31,
       "sceneName": "shop",
       "indent": 2,
+      "lineNumber": 31,
+      "position": 11,
       "isLabelName": true
     },
     {
@@ -2640,10 +2643,10 @@
       "type": "Identifier",
       "value": "shop_hub",
       "rawValue": "shop_hub",
-      "position": 12,
-      "lineNumber": 33,
       "sceneName": "shop",
       "indent": 3,
+      "lineNumber": 33,
+      "position": 12,
       "isLabelName": true
     },
     {
@@ -2657,10 +2660,10 @@
       "type": "Identifier",
       "value": "shop_exit",
       "rawValue": "shop_exit",
-      "position": 10,
-      "lineNumber": 34,
       "sceneName": "shop",
       "indent": 2,
+      "lineNumber": 34,
+      "position": 10,
       "isLabelName": true
     },
     {
@@ -2714,7 +2717,7 @@
       "sceneName": "shop",
       "indent": 1,
       "lineNumber": 35,
-      "position": 16,
+      "position": 30,
       "rawText": "Health Potion (10 gold)",
       "hasMultiReplace": false
     },
@@ -2722,7 +2725,7 @@
       "type": "Prose",
       "sceneName": "shop",
       "lineNumber": 35,
-      "position": 17,
+      "position": 31,
       "indent": 1,
       "content": "Health Potion (10 gold)"
     },
@@ -2785,10 +2788,10 @@
       "type": "Identifier",
       "value": "confirm_purchase",
       "rawValue": "confirm_purchase",
-      "position": 11,
-      "lineNumber": 38,
       "sceneName": "shop",
       "indent": 2,
+      "lineNumber": 38,
+      "position": 11,
       "isLabelName": true
     },
     {
@@ -2818,10 +2821,10 @@
       "type": "Identifier",
       "value": "shop_hub",
       "rawValue": "shop_hub",
-      "position": 12,
-      "lineNumber": 40,
       "sceneName": "shop",
       "indent": 3,
+      "lineNumber": 40,
+      "position": 12,
       "isLabelName": true
     },
     {
@@ -2835,10 +2838,10 @@
       "type": "Identifier",
       "value": "shop_exit",
       "rawValue": "shop_exit",
-      "position": 10,
-      "lineNumber": 41,
       "sceneName": "shop",
       "indent": 2,
+      "lineNumber": 41,
+      "position": 10,
       "isLabelName": true
     },
     {
@@ -2846,6 +2849,7 @@
       "sceneName": "shop",
       "indent": 1,
       "lineNumber": 42,
+      "position": 2,
       "rawText": "Leave the shop",
       "hasMultiReplace": false
     },
@@ -2853,7 +2857,7 @@
       "type": "Prose",
       "sceneName": "shop",
       "lineNumber": 42,
-      "position": null,
+      "position": 3,
       "indent": 1,
       "content": "Leave the shop"
     },
@@ -2868,10 +2872,10 @@
       "type": "Identifier",
       "value": "shop_exit",
       "rawValue": "shop_exit",
-      "position": 10,
-      "lineNumber": 43,
       "sceneName": "shop",
       "indent": 2,
+      "lineNumber": 43,
+      "position": 10,
       "isLabelName": true
     },
     {
@@ -2885,10 +2889,10 @@
       "type": "Identifier",
       "value": "shop_exit",
       "rawValue": "shop_exit",
-      "position": 6,
-      "lineNumber": 45,
       "sceneName": "shop",
       "indent": 0,
+      "lineNumber": 45,
+      "position": 7,
       "isLabelName": true
     },
     {
@@ -2910,21 +2914,20 @@
       "type": "Identifier",
       "value": "startup",
       "rawValue": "startup",
-      "position": 12,
-      "lineNumber": 47,
       "sceneName": "shop",
       "indent": 0,
-      "isSceneName": true,
-      "isLabelName": false
+      "lineNumber": 47,
+      "position": 12,
+      "isSceneName": true
     },
     {
       "type": "Identifier",
       "value": "village_hub",
       "rawValue": "village_hub",
-      "position": 20,
-      "lineNumber": 47,
       "sceneName": "shop",
       "indent": 0,
+      "lineNumber": 47,
+      "position": 20,
       "isLabelName": true
     },
     {
@@ -2938,10 +2941,10 @@
       "type": "Identifier",
       "value": "confirm_purchase",
       "rawValue": "confirm_purchase",
-      "position": 6,
-      "lineNumber": 49,
       "sceneName": "shop",
       "indent": 0,
+      "lineNumber": 49,
+      "position": 7,
       "isLabelName": true
     },
     {
@@ -3057,6 +3060,7 @@
       "sceneName": "shop",
       "indent": 1,
       "lineNumber": 53,
+      "position": 2,
       "rawText": "Yes, buy it",
       "hasMultiReplace": false
     },
@@ -3064,7 +3068,7 @@
       "type": "Prose",
       "sceneName": "shop",
       "lineNumber": 53,
-      "position": null,
+      "position": 3,
       "indent": 1,
       "content": "Yes, buy it"
     },
@@ -3375,10 +3379,10 @@
       "type": "Identifier",
       "value": "confirm_continue",
       "rawValue": "confirm_continue",
-      "position": 10,
-      "lineNumber": 63,
       "sceneName": "shop",
       "indent": 2,
+      "lineNumber": 63,
+      "position": 10,
       "isLabelName": true
     },
     {
@@ -3386,6 +3390,7 @@
       "sceneName": "shop",
       "indent": 1,
       "lineNumber": 64,
+      "position": 2,
       "rawText": "No, put it back",
       "hasMultiReplace": false
     },
@@ -3393,7 +3398,7 @@
       "type": "Prose",
       "sceneName": "shop",
       "lineNumber": 64,
-      "position": null,
+      "position": 3,
       "indent": 1,
       "content": "No, put it back"
     },
@@ -3447,10 +3452,10 @@
       "type": "Identifier",
       "value": "confirm_continue",
       "rawValue": "confirm_continue",
-      "position": 10,
-      "lineNumber": 66,
       "sceneName": "shop",
       "indent": 2,
+      "lineNumber": 66,
+      "position": 10,
       "isLabelName": true
     },
     {
@@ -3464,10 +3469,10 @@
       "type": "Identifier",
       "value": "confirm_continue",
       "rawValue": "confirm_continue",
-      "position": 6,
-      "lineNumber": 68,
       "sceneName": "shop",
       "indent": 0,
+      "lineNumber": 68,
+      "position": 7,
       "isLabelName": true
     },
     {
@@ -3482,6 +3487,7 @@
       "sceneName": "shop",
       "indent": 1,
       "lineNumber": 70,
+      "position": 2,
       "rawText": "Keep browsing",
       "hasMultiReplace": false
     },
@@ -3489,7 +3495,7 @@
       "type": "Prose",
       "sceneName": "shop",
       "lineNumber": 70,
-      "position": null,
+      "position": 3,
       "indent": 1,
       "content": "Keep browsing"
     },
@@ -3505,6 +3511,7 @@
       "sceneName": "shop",
       "indent": 1,
       "lineNumber": 72,
+      "position": 2,
       "rawText": "Leave the shop",
       "hasMultiReplace": false
     },
@@ -3512,7 +3519,7 @@
       "type": "Prose",
       "sceneName": "shop",
       "lineNumber": 72,
-      "position": null,
+      "position": 3,
       "indent": 1,
       "content": "Leave the shop"
     },
@@ -3853,10 +3860,10 @@
       "type": "Identifier",
       "value": "village_hub",
       "rawValue": "village_hub",
-      "position": 6,
-      "lineNumber": 16,
       "sceneName": "startup",
       "indent": 0,
+      "lineNumber": 16,
+      "position": 7,
       "isLabelName": true
     },
     {
@@ -4019,7 +4026,7 @@
       "sceneName": "startup",
       "indent": 1,
       "lineNumber": 22,
-      "position": 16,
+      "position": 30,
       "rawText": "Visit the shop",
       "hasMultiReplace": false
     },
@@ -4027,7 +4034,7 @@
       "type": "Prose",
       "sceneName": "startup",
       "lineNumber": 22,
-      "position": 17,
+      "position": 31,
       "indent": 1,
       "content": "Visit the shop"
     },
@@ -4042,18 +4049,18 @@
       "type": "Identifier",
       "value": "shop",
       "rawValue": "shop",
-      "position": 16,
-      "lineNumber": 23,
       "sceneName": "startup",
       "indent": 2,
-      "isSceneName": true,
-      "isLabelName": false
+      "lineNumber": 23,
+      "position": 16,
+      "isSceneName": true
     },
     {
       "type": "ChoiceOption",
       "sceneName": "startup",
       "indent": 1,
       "lineNumber": 24,
+      "position": 2,
       "rawText": "Enter the tavern",
       "hasMultiReplace": false
     },
@@ -4061,7 +4068,7 @@
       "type": "Prose",
       "sceneName": "startup",
       "lineNumber": 24,
-      "position": null,
+      "position": 3,
       "indent": 1,
       "content": "Enter the tavern"
     },
@@ -4076,12 +4083,11 @@
       "type": "Identifier",
       "value": "tavern",
       "rawValue": "tavern",
-      "position": 16,
-      "lineNumber": 25,
       "sceneName": "startup",
       "indent": 2,
-      "isSceneName": true,
-      "isLabelName": false
+      "lineNumber": 25,
+      "position": 16,
+      "isSceneName": true
     },
     {
       "type": "SelectableIf",
@@ -4134,7 +4140,7 @@
       "sceneName": "startup",
       "indent": 1,
       "lineNumber": 26,
-      "position": 16,
+      "position": 34,
       "rawText": "Challenge the arena",
       "hasMultiReplace": false
     },
@@ -4142,7 +4148,7 @@
       "type": "Prose",
       "sceneName": "startup",
       "lineNumber": 26,
-      "position": 17,
+      "position": 35,
       "indent": 1,
       "content": "Challenge the arena"
     },
@@ -4157,18 +4163,18 @@
       "type": "Identifier",
       "value": "arena",
       "rawValue": "arena",
-      "position": 16,
-      "lineNumber": 27,
       "sceneName": "startup",
       "indent": 2,
-      "isSceneName": true,
-      "isLabelName": false
+      "lineNumber": 27,
+      "position": 16,
+      "isSceneName": true
     },
     {
       "type": "ChoiceOption",
       "sceneName": "startup",
       "indent": 1,
       "lineNumber": 28,
+      "position": 2,
       "rawText": "Check your stats",
       "hasMultiReplace": false
     },
@@ -4176,7 +4182,7 @@
       "type": "Prose",
       "sceneName": "startup",
       "lineNumber": 28,
-      "position": null,
+      "position": 3,
       "indent": 1,
       "content": "Check your stats"
     },
@@ -4191,10 +4197,10 @@
       "type": "Identifier",
       "value": "show_stats",
       "rawValue": "show_stats",
-      "position": 11,
-      "lineNumber": 29,
       "sceneName": "startup",
       "indent": 2,
+      "lineNumber": 29,
+      "position": 11,
       "isLabelName": true
     },
     {
@@ -4208,10 +4214,10 @@
       "type": "Identifier",
       "value": "village_hub",
       "rawValue": "village_hub",
-      "position": 10,
-      "lineNumber": 30,
       "sceneName": "startup",
       "indent": 2,
+      "lineNumber": 30,
+      "position": 10,
       "isLabelName": true
     },
     {
@@ -4249,7 +4255,7 @@
       "sceneName": "startup",
       "indent": 1,
       "lineNumber": 31,
-      "position": 16,
+      "position": 34,
       "rawText": "Leave the village",
       "hasMultiReplace": false
     },
@@ -4257,7 +4263,7 @@
       "type": "Prose",
       "sceneName": "startup",
       "lineNumber": 31,
-      "position": 17,
+      "position": 35,
       "indent": 1,
       "content": "Leave the village"
     },
@@ -4272,10 +4278,10 @@
       "type": "Identifier",
       "value": "ending",
       "rawValue": "ending",
-      "position": 10,
-      "lineNumber": 32,
       "sceneName": "startup",
       "indent": 2,
+      "lineNumber": 32,
+      "position": 10,
       "isLabelName": true
     },
     {
@@ -4289,10 +4295,10 @@
       "type": "Identifier",
       "value": "ending",
       "rawValue": "ending",
-      "position": 6,
-      "lineNumber": 34,
       "sceneName": "startup",
       "indent": 0,
+      "lineNumber": 34,
+      "position": 7,
       "isLabelName": true
     },
     {
@@ -4447,10 +4453,10 @@
       "type": "Identifier",
       "value": "final",
       "rawValue": "final",
-      "position": 8,
-      "lineNumber": 41,
       "sceneName": "startup",
       "indent": 1,
+      "lineNumber": 41,
+      "position": 8,
       "isLabelName": true
     },
     {
@@ -4504,10 +4510,10 @@
       "type": "Identifier",
       "value": "final",
       "rawValue": "final",
-      "position": 8,
-      "lineNumber": 44,
       "sceneName": "startup",
       "indent": 1,
+      "lineNumber": 44,
+      "position": 8,
       "isLabelName": true
     },
     {
@@ -4536,10 +4542,10 @@
       "type": "Identifier",
       "value": "final",
       "rawValue": "final",
-      "position": 6,
-      "lineNumber": 48,
       "sceneName": "startup",
       "indent": 0,
+      "lineNumber": 48,
+      "position": 7,
       "isLabelName": true
     },
     {
@@ -4607,10 +4613,10 @@
       "type": "Identifier",
       "value": "show_stats",
       "rawValue": "show_stats",
-      "position": 6,
-      "lineNumber": 52,
       "sceneName": "startup",
       "indent": 0,
+      "lineNumber": 52,
+      "position": 7,
       "isLabelName": true
     },
     {
@@ -4897,10 +4903,10 @@
       "type": "Identifier",
       "value": "tavern_hub",
       "rawValue": "tavern_hub",
-      "position": 6,
-      "lineNumber": 5,
       "sceneName": "tavern",
       "indent": 0,
+      "lineNumber": 5,
+      "position": 7,
       "isLabelName": true
     },
     {
@@ -4961,7 +4967,7 @@
       "sceneName": "tavern",
       "indent": 1,
       "lineNumber": 8,
-      "position": 16,
+      "position": 29,
       "rawText": "Buy a drink (5 gold)",
       "hasMultiReplace": false
     },
@@ -4969,7 +4975,7 @@
       "type": "Prose",
       "sceneName": "tavern",
       "lineNumber": 8,
-      "position": 17,
+      "position": 30,
       "indent": 1,
       "content": "Buy a drink (5 gold)"
     },
@@ -5152,10 +5158,10 @@
       "type": "Identifier",
       "value": "tavern_hub",
       "rawValue": "tavern_hub",
-      "position": 10,
-      "lineNumber": 16,
       "sceneName": "tavern",
       "indent": 2,
+      "lineNumber": 16,
+      "position": 10,
       "isLabelName": true
     },
     {
@@ -5163,6 +5169,7 @@
       "sceneName": "tavern",
       "indent": 1,
       "lineNumber": 17,
+      "position": 2,
       "rawText": "Talk to the bard",
       "hasMultiReplace": false
     },
@@ -5170,7 +5177,7 @@
       "type": "Prose",
       "sceneName": "tavern",
       "lineNumber": 17,
-      "position": null,
+      "position": 3,
       "indent": 1,
       "content": "Talk to the bard"
     },
@@ -5185,10 +5192,10 @@
       "type": "Identifier",
       "value": "bard_conversation",
       "rawValue": "bard_conversation",
-      "position": 11,
-      "lineNumber": 18,
       "sceneName": "tavern",
       "indent": 2,
+      "lineNumber": 18,
+      "position": 11,
       "isLabelName": true
     },
     {
@@ -5202,10 +5209,10 @@
       "type": "Identifier",
       "value": "tavern_hub",
       "rawValue": "tavern_hub",
-      "position": 10,
-      "lineNumber": 19,
       "sceneName": "tavern",
       "indent": 2,
+      "lineNumber": 19,
+      "position": 10,
       "isLabelName": true
     },
     {
@@ -5259,7 +5266,7 @@
       "sceneName": "tavern",
       "indent": 1,
       "lineNumber": 20,
-      "position": 16,
+      "position": 31,
       "rawText": "Charm the barmaid for information",
       "hasMultiReplace": false
     },
@@ -5267,7 +5274,7 @@
       "type": "Prose",
       "sceneName": "tavern",
       "lineNumber": 20,
-      "position": 17,
+      "position": 32,
       "indent": 1,
       "content": "Charm the barmaid for information"
     },
@@ -5322,10 +5329,10 @@
       "type": "Identifier",
       "value": "tavern_hub",
       "rawValue": "tavern_hub",
-      "position": 10,
-      "lineNumber": 23,
       "sceneName": "tavern",
       "indent": 2,
+      "lineNumber": 23,
+      "position": 10,
       "isLabelName": true
     },
     {
@@ -5333,6 +5340,7 @@
       "sceneName": "tavern",
       "indent": 1,
       "lineNumber": 24,
+      "position": 2,
       "rawText": "Leave the tavern",
       "hasMultiReplace": false
     },
@@ -5340,7 +5348,7 @@
       "type": "Prose",
       "sceneName": "tavern",
       "lineNumber": 24,
-      "position": null,
+      "position": 3,
       "indent": 1,
       "content": "Leave the tavern"
     },
@@ -5355,10 +5363,10 @@
       "type": "Identifier",
       "value": "tavern_exit",
       "rawValue": "tavern_exit",
-      "position": 10,
-      "lineNumber": 25,
       "sceneName": "tavern",
       "indent": 2,
+      "lineNumber": 25,
+      "position": 10,
       "isLabelName": true
     },
     {
@@ -5372,10 +5380,10 @@
       "type": "Identifier",
       "value": "tavern_exit",
       "rawValue": "tavern_exit",
-      "position": 6,
-      "lineNumber": 27,
       "sceneName": "tavern",
       "indent": 0,
+      "lineNumber": 27,
+      "position": 7,
       "isLabelName": true
     },
     {
@@ -5397,21 +5405,20 @@
       "type": "Identifier",
       "value": "startup",
       "rawValue": "startup",
-      "position": 12,
-      "lineNumber": 29,
       "sceneName": "tavern",
       "indent": 0,
-      "isSceneName": true,
-      "isLabelName": false
+      "lineNumber": 29,
+      "position": 12,
+      "isSceneName": true
     },
     {
       "type": "Identifier",
       "value": "village_hub",
       "rawValue": "village_hub",
-      "position": 20,
-      "lineNumber": 29,
       "sceneName": "tavern",
       "indent": 0,
+      "lineNumber": 29,
+      "position": 20,
       "isLabelName": true
     },
     {
@@ -5425,10 +5432,10 @@
       "type": "Identifier",
       "value": "bard_conversation",
       "rawValue": "bard_conversation",
-      "position": 6,
-      "lineNumber": 31,
       "sceneName": "tavern",
       "indent": 0,
+      "lineNumber": 31,
+      "position": 7,
       "isLabelName": true
     },
     {
@@ -5451,6 +5458,7 @@
       "sceneName": "tavern",
       "indent": 1,
       "lineNumber": 35,
+      "position": 2,
       "rawText": "Request a heroic ballad",
       "hasMultiReplace": false
     },
@@ -5458,7 +5466,7 @@
       "type": "Prose",
       "sceneName": "tavern",
       "lineNumber": 35,
-      "position": null,
+      "position": 3,
       "indent": 1,
       "content": "Request a heroic ballad"
     },
@@ -5514,6 +5522,7 @@
       "sceneName": "tavern",
       "indent": 1,
       "lineNumber": 39,
+      "position": 2,
       "rawText": "Ask about local news",
       "hasMultiReplace": false
     },
@@ -5521,7 +5530,7 @@
       "type": "Prose",
       "sceneName": "tavern",
       "lineNumber": 39,
-      "position": null,
+      "position": 3,
       "indent": 1,
       "content": "Ask about local news"
     },
@@ -5545,6 +5554,7 @@
       "sceneName": "tavern",
       "indent": 1,
       "lineNumber": 42,
+      "position": 2,
       "rawText": "Toss a coin (1 gold)",
       "hasMultiReplace": false
     },
@@ -5552,7 +5562,7 @@
       "type": "Prose",
       "sceneName": "tavern",
       "lineNumber": 42,
-      "position": null,
+      "position": 3,
       "indent": 1,
       "content": "Toss a coin (1 gold)"
     },

@@ -1,0 +1,71 @@
+{
+  "cfgCount": 3,
+  "states": [
+    {
+      "cfgId": "startup:",
+      "entryGlobals": [
+        {
+          "inventory_1": "sword",
+          "inventory_2": "shield",
+          "inventory_3": "potion",
+          "inventory_count": "3",
+          "i": "0",
+          "found": "",
+          "stats_1": "bottom",
+          "stats_2": "bottom",
+          "colors_1": "bottom",
+          "scores_1": "bottom",
+          "scores_2": "bottom",
+          "scores_4": "bottom",
+          "labels_1": "bottom",
+          "labels_2": "bottom",
+          "labels_3": "bottom"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:search_done",
+      "entryGlobals": [
+        {
+          "inventory_1": "axe",
+          "inventory_2": "shield",
+          "inventory_3": "potion",
+          "inventory_count": "3",
+          "i": "2",
+          "found": "potion",
+          "stats_1": "bottom",
+          "stats_2": "bottom",
+          "colors_1": "bottom",
+          "scores_1": "bottom",
+          "scores_2": "bottom",
+          "scores_4": "bottom",
+          "labels_1": "bottom",
+          "labels_2": "bottom",
+          "labels_3": "bottom"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:search_loop",
+      "entryGlobals": [
+        {
+          "inventory_1": "axe",
+          "inventory_2": "shield",
+          "inventory_3": "potion",
+          "inventory_count": "3",
+          "i": "2",
+          "found": "",
+          "stats_1": "bottom",
+          "stats_2": "bottom",
+          "colors_1": "bottom",
+          "scores_1": "bottom",
+          "scores_2": "bottom",
+          "scores_4": "bottom",
+          "labels_1": "bottom",
+          "labels_2": "bottom",
+          "labels_3": "bottom"
+        }
+      ]
+    }
+  ]
+}

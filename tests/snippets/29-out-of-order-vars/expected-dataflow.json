@@ -1,0 +1,69 @@
+{
+  "states": [
+    {
+      "cfgId": "startup:",
+      "entryGlobals": [
+        {
+          "score": "0",
+          "name": "Nobody"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "score": "0",
+          "name": "Nobody"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:bottom_label",
+      "entryGlobals": [
+        {
+          "score": "0",
+          "name": "Nobody"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "score": "0",
+          "name": "Nobody"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:top_label",
+      "entryGlobals": [
+        {
+          "score": "0",
+          "name": "Nobody"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "score": "100",
+          "name": "Winner"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:bottom_label__cont_0",
+      "entryGlobals": [
+        {
+          "score": "100",
+          "name": "Winner"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "score": "100",
+          "name": "Winner"
+        }
+      ]
+    }
+  ],
+  "diagnostics": {
+    "unresolvedExits": 0,
+    "droppedContexts": 0,
+    "missingCfgs": []
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "deadBranchCount": 0,
+  "deadBranches": [],
+  "controlFlowViolationCount": 1,
+  "controlFlowViolations": [
+    {
+      "blockId": "startup:b_8",
+      "scene": "startup",
+      "kind": "implicit-end"
+    }
+  ],
+  "undeclaredSetCount": 28,
+  "undeclaredSets": [
+    {
+      "variable": "colors_1",
+      "scene": "startup",
+      "kind": "reference",
+      "statementKind": "Prose"
+    },
+    {
+      "variable": "colors_1",
+      "scene": "startup",
+      "kind": "set",
+      "statementKind": "SetVariable"
+    },
+    {
+      "variable": "colors_3",
+      "scene": "startup",
+      "kind": "reference",
+      "statementKind": "Prose"
+    },
+    {
+      "variable": "colors",
+      "scene": "startup",
+      "kind": "reference",
+      "statementKind": "SetVariable"
+    },
+    {
+      "variable": "colors",
+      "scene": "startup",
+      "kind": "reference",
+      "statementKind": "Prose"
+    },
+    {
+      "variable": "inventory",
+      "scene": "startup",
+      "kind": "reference",
+      "statementKind": "If"
+    },
+    {
+      "variable": "inventory",
+      "scene": "startup",
+      "kind": "reference",
+      "statementKind": "SetVariable"
+    },
+    {
+      "variable": "inventory",
+      "scene": "startup",
+      "kind": "reference",
+      "statementKind": "SetVariable"
+    },
+    {
+      "variable": "inventory",
+      "scene": "startup",
+      "kind": "reference",
+      "statementKind": "Prose"
+    },
+    {
+      "variable": "labels_1",
+      "scene": "startup",
+      "kind": "reference",
+      "statementKind": "Prose"
+    },
+    {
+      "variable": "labels_1",
+      "scene": "startup",
+      "kind": "set",
+      "statementKind": "SetVariable"
+    },
+    {
+      "variable": "labels_2",
+      "scene": "startup",
+      "kind": "reference",
+      "statementKind": "Prose"
+    },
+    {
+      "variable": "labels_2",
+      "scene": "startup",
+      "kind": "set",
+      "statementKind": "SetVariable"
+    },
+    {
+      "variable": "labels_3",
+      "scene": "startup",
+      "kind": "set",
+      "statementKind": "SetVariable"
+    },
+    {
+      "variable": "scores_1",
+      "scene": "startup",
+      "kind": "set",
+      "statementKind": "SetVariable"
+    },
+    {
+      "variable": "scores_1",
+      "scene": "startup",
+      "kind": "reference",
+      "statementKind": "Prose"
+    },
+    {
+      "variable": "scores_2",
+      "scene": "startup",
+      "kind": "set",
+      "statementKind": "SetVariable"
+    },
+    {
+      "variable": "scores_2",
+      "scene": "startup",
+      "kind": "reference",
+      "statementKind": "Prose"
+    },
+    {
+      "variable": "scores_4",
+      "scene": "startup",
+      "kind": "set",
+      "statementKind": "SetVariable"
+    },
+    {
+      "variable": "scores_4",
+      "scene": "startup",
+      "kind": "reference",
+      "statementKind": "Prose"
+    },
+    {
+      "variable": "scores",
+      "scene": "startup",
+      "kind": "reference",
+      "statementKind": "SetVariable"
+    },
+    {
+      "variable": "scores",
+      "scene": "startup",
+      "kind": "reference",
+      "statementKind": "Prose"
+    },
+    {
+      "variable": "stats_1",
+      "scene": "startup",
+      "kind": "reference",
+      "statementKind": "Prose"
+    },
+    {
+      "variable": "stats_1",
+      "scene": "startup",
+      "kind": "set",
+      "statementKind": "SetVariable"
+    },
+    {
+      "variable": "stats_2",
+      "scene": "startup",
+      "kind": "reference",
+      "statementKind": "Prose"
+    },
+    {
+      "variable": "stats_2",
+      "scene": "startup",
+      "kind": "set",
+      "statementKind": "SetVariable"
+    },
+    {
+      "variable": "stats",
+      "scene": "startup",
+      "kind": "reference",
+      "statementKind": "Prose"
+    },
+    {
+      "variable": "stats",
+      "scene": "startup",
+      "kind": "reference",
+      "statementKind": "SetVariable"
+    }
+  ],
+  "multiReplaceViolationCount": 0,
+  "multiReplaceViolations": []
+}

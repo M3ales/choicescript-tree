@@ -1,0 +1,972 @@
+{
+  "segmentCount": 24,
+  "edgeCount": 129,
+  "entrySegmentId": "seg_0",
+  "segments": {
+    "seg_0": {
+      "cfgId": "startup:",
+      "entries": [
+        {
+          "kind": "game-start"
+        }
+      ],
+      "exits": [
+        {
+          "kind": "choice"
+        }
+      ],
+      "blockCount": 4,
+      "gosubCount": 0
+    },
+    "seg_1": {
+      "cfgId": "crime_scene:scene_hub",
+      "entries": [
+        {
+          "kind": "choice-option",
+          "reuse": "hide_reuse"
+        }
+      ],
+      "exits": [
+        {
+          "kind": "choice"
+        },
+        {
+          "kind": "choice"
+        }
+      ],
+      "blockCount": 11,
+      "gosubCount": 0
+    },
+    "seg_2": {
+      "cfgId": "crime_scene:scene_hub",
+      "entries": [
+        {
+          "kind": "choice-option",
+          "reuse": "hide_reuse"
+        }
+      ],
+      "exits": [
+        {
+          "kind": "choice"
+        },
+        {
+          "kind": "choice"
+        }
+      ],
+      "blockCount": 8,
+      "gosubCount": 0
+    },
+    "seg_3": {
+      "cfgId": "crime_scene:scene_hub",
+      "entries": [
+        {
+          "kind": "choice-option",
+          "reuse": "hide_reuse"
+        }
+      ],
+      "exits": [
+        {
+          "kind": "choice"
+        },
+        {
+          "kind": "choice"
+        }
+      ],
+      "blockCount": 8,
+      "gosubCount": 0
+    },
+    "seg_4": {
+      "cfgId": "crime_scene:scene_hub",
+      "entries": [
+        {
+          "kind": "choice-option",
+          "reuse": "hide_reuse"
+        }
+      ],
+      "exits": [
+        {
+          "kind": "choice"
+        },
+        {
+          "kind": "choice"
+        }
+      ],
+      "blockCount": 8,
+      "gosubCount": 0
+    },
+    "seg_5": {
+      "cfgId": "crime_scene:scene_exit",
+      "entries": [
+        {
+          "kind": "choice-option"
+        }
+      ],
+      "exits": [
+        {
+          "kind": "choice"
+        }
+      ],
+      "blockCount": 4,
+      "gosubCount": 0
+    },
+    "seg_6": {
+      "cfgId": "interrogation:suspect_select",
+      "entries": [
+        {
+          "kind": "choice-option",
+          "reuse": "hide_reuse"
+        }
+      ],
+      "exits": [
+        {
+          "kind": "choice"
+        },
+        {
+          "kind": "choice"
+        }
+      ],
+      "blockCount": 6,
+      "gosubCount": 1
+    },
+    "seg_7": {
+      "cfgId": "interrogation:suspect_select",
+      "entries": [
+        {
+          "kind": "choice-option",
+          "reuse": "hide_reuse"
+        }
+      ],
+      "exits": [
+        {
+          "kind": "choice"
+        },
+        {
+          "kind": "choice"
+        }
+      ],
+      "blockCount": 6,
+      "gosubCount": 1
+    },
+    "seg_8": {
+      "cfgId": "interrogation:suspect_select",
+      "entries": [
+        {
+          "kind": "choice-option",
+          "reuse": "hide_reuse"
+        }
+      ],
+      "exits": [
+        {
+          "kind": "choice"
+        },
+        {
+          "kind": "choice"
+        }
+      ],
+      "blockCount": 6,
+      "gosubCount": 1
+    },
+    "seg_9": {
+      "cfgId": "interrogation:interrogation_exit",
+      "entries": [
+        {
+          "kind": "choice-option"
+        }
+      ],
+      "exits": [
+        {
+          "kind": "choice"
+        }
+      ],
+      "blockCount": 4,
+      "gosubCount": 0
+    },
+    "seg_10": {
+      "cfgId": "interrogation:interview_loop",
+      "entries": [
+        {
+          "kind": "choice-option"
+        }
+      ],
+      "exits": [
+        {
+          "kind": "choice"
+        }
+      ],
+      "blockCount": 10,
+      "gosubCount": 0
+    },
+    "seg_11": {
+      "cfgId": "interrogation:interview_loop",
+      "entries": [
+        {
+          "kind": "choice-option"
+        }
+      ],
+      "exits": [
+        {
+          "kind": "choice"
+        }
+      ],
+      "blockCount": 8,
+      "gosubCount": 0
+    },
+    "seg_12": {
+      "cfgId": "interrogation:interview_loop",
+      "entries": [
+        {
+          "kind": "choice-option"
+        }
+      ],
+      "exits": [
+        {
+          "kind": "choice"
+        }
+      ],
+      "blockCount": 7,
+      "gosubCount": 0
+    },
+    "seg_13": {
+      "cfgId": "interrogation:interview_loop",
+      "entries": [
+        {
+          "kind": "choice-option"
+        }
+      ],
+      "exits": [],
+      "blockCount": 1,
+      "gosubCount": 0
+    },
+    "seg_14": {
+      "cfgId": "crime_scene:",
+      "entries": [
+        {
+          "kind": "choice-option"
+        }
+      ],
+      "exits": [
+        {
+          "kind": "choice"
+        },
+        {
+          "kind": "choice"
+        }
+      ],
+      "blockCount": 8,
+      "gosubCount": 0
+    },
+    "seg_15": {
+      "cfgId": "interrogation:",
+      "entries": [
+        {
+          "kind": "choice-option"
+        }
+      ],
+      "exits": [
+        {
+          "kind": "choice"
+        }
+      ],
+      "blockCount": 2,
+      "gosubCount": 0
+    },
+    "seg_16": {
+      "cfgId": "startup:accusation",
+      "entries": [
+        {
+          "kind": "choice-option"
+        }
+      ],
+      "exits": [
+        {
+          "kind": "choice"
+        }
+      ],
+      "blockCount": 1,
+      "gosubCount": 0
+    },
+    "seg_17": {
+      "cfgId": "startup:case_hub",
+      "entries": [
+        {
+          "kind": "choice-option"
+        }
+      ],
+      "exits": [
+        {
+          "kind": "choice"
+        }
+      ],
+      "blockCount": 14,
+      "gosubCount": 1
+    },
+    "seg_18": {
+      "cfgId": "startup:case_hub",
+      "entries": [
+        {
+          "kind": "choice-option"
+        }
+      ],
+      "exits": [
+        {
+          "kind": "choice"
+        }
+      ],
+      "blockCount": 9,
+      "gosubCount": 1
+    },
+    "seg_19": {
+      "cfgId": "startup:accusation",
+      "entries": [
+        {
+          "kind": "choice-option"
+        }
+      ],
+      "exits": [
+        {
+          "kind": "terminal"
+        },
+        {
+          "kind": "choice"
+        }
+      ],
+      "blockCount": 5,
+      "gosubCount": 0
+    },
+    "seg_20": {
+      "cfgId": "startup:accusation",
+      "entries": [
+        {
+          "kind": "choice-option"
+        }
+      ],
+      "exits": [
+        {
+          "kind": "terminal"
+        },
+        {
+          "kind": "choice"
+        }
+      ],
+      "blockCount": 5,
+      "gosubCount": 0
+    },
+    "seg_21": {
+      "cfgId": "startup:wrong_accusation",
+      "entries": [
+        {
+          "kind": "choice-option"
+        }
+      ],
+      "exits": [
+        {
+          "kind": "choice"
+        }
+      ],
+      "blockCount": 1,
+      "gosubCount": 0
+    },
+    "seg_22": {
+      "cfgId": "startup:wrong_accusation",
+      "entries": [
+        {
+          "kind": "choice-option"
+        }
+      ],
+      "exits": [
+        {
+          "kind": "choice"
+        }
+      ],
+      "blockCount": 4,
+      "gosubCount": 0
+    },
+    "seg_23": {
+      "cfgId": "startup:wrong_accusation",
+      "entries": [
+        {
+          "kind": "choice-option"
+        }
+      ],
+      "exits": [
+        {
+          "kind": "terminal"
+        }
+      ],
+      "blockCount": 1,
+      "gosubCount": 0
+    }
+  },
+  "edges": [
+    {
+      "source": "seg_0",
+      "target": "seg_14"
+    },
+    {
+      "source": "seg_0",
+      "target": "seg_15"
+    },
+    {
+      "source": "seg_0",
+      "target": "seg_16",
+      "hasCondition": true
+    },
+    {
+      "source": "seg_0",
+      "target": "seg_17"
+    },
+    {
+      "source": "seg_0",
+      "target": "seg_18",
+      "hasCondition": true
+    },
+    {
+      "source": "seg_1",
+      "target": "seg_1",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_1",
+      "target": "seg_2",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_1",
+      "target": "seg_3",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_1",
+      "target": "seg_4",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_1",
+      "target": "seg_5"
+    },
+    {
+      "source": "seg_1",
+      "target": "seg_14"
+    },
+    {
+      "source": "seg_1",
+      "target": "seg_15"
+    },
+    {
+      "source": "seg_1",
+      "target": "seg_16",
+      "hasCondition": true
+    },
+    {
+      "source": "seg_1",
+      "target": "seg_17"
+    },
+    {
+      "source": "seg_1",
+      "target": "seg_18",
+      "hasCondition": true
+    },
+    {
+      "source": "seg_2",
+      "target": "seg_1",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_2",
+      "target": "seg_2",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_2",
+      "target": "seg_3",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_2",
+      "target": "seg_4",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_2",
+      "target": "seg_5"
+    },
+    {
+      "source": "seg_2",
+      "target": "seg_14"
+    },
+    {
+      "source": "seg_2",
+      "target": "seg_15"
+    },
+    {
+      "source": "seg_2",
+      "target": "seg_16",
+      "hasCondition": true
+    },
+    {
+      "source": "seg_2",
+      "target": "seg_17"
+    },
+    {
+      "source": "seg_2",
+      "target": "seg_18",
+      "hasCondition": true
+    },
+    {
+      "source": "seg_3",
+      "target": "seg_1",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_3",
+      "target": "seg_2",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_3",
+      "target": "seg_3",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_3",
+      "target": "seg_4",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_3",
+      "target": "seg_5"
+    },
+    {
+      "source": "seg_3",
+      "target": "seg_14"
+    },
+    {
+      "source": "seg_3",
+      "target": "seg_15"
+    },
+    {
+      "source": "seg_3",
+      "target": "seg_16",
+      "hasCondition": true
+    },
+    {
+      "source": "seg_3",
+      "target": "seg_17"
+    },
+    {
+      "source": "seg_3",
+      "target": "seg_18",
+      "hasCondition": true
+    },
+    {
+      "source": "seg_4",
+      "target": "seg_1",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_4",
+      "target": "seg_2",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_4",
+      "target": "seg_3",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_4",
+      "target": "seg_4",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_4",
+      "target": "seg_5"
+    },
+    {
+      "source": "seg_4",
+      "target": "seg_14"
+    },
+    {
+      "source": "seg_4",
+      "target": "seg_15"
+    },
+    {
+      "source": "seg_4",
+      "target": "seg_16",
+      "hasCondition": true
+    },
+    {
+      "source": "seg_4",
+      "target": "seg_17"
+    },
+    {
+      "source": "seg_4",
+      "target": "seg_18",
+      "hasCondition": true
+    },
+    {
+      "source": "seg_5",
+      "target": "seg_14"
+    },
+    {
+      "source": "seg_5",
+      "target": "seg_15"
+    },
+    {
+      "source": "seg_5",
+      "target": "seg_16",
+      "hasCondition": true
+    },
+    {
+      "source": "seg_5",
+      "target": "seg_17"
+    },
+    {
+      "source": "seg_5",
+      "target": "seg_18",
+      "hasCondition": true
+    },
+    {
+      "source": "seg_6",
+      "target": "seg_10"
+    },
+    {
+      "source": "seg_6",
+      "target": "seg_11"
+    },
+    {
+      "source": "seg_6",
+      "target": "seg_12"
+    },
+    {
+      "source": "seg_6",
+      "target": "seg_13"
+    },
+    {
+      "source": "seg_6",
+      "target": "seg_6",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_6",
+      "target": "seg_7",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_6",
+      "target": "seg_8",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_6",
+      "target": "seg_9"
+    },
+    {
+      "source": "seg_7",
+      "target": "seg_10"
+    },
+    {
+      "source": "seg_7",
+      "target": "seg_11"
+    },
+    {
+      "source": "seg_7",
+      "target": "seg_12"
+    },
+    {
+      "source": "seg_7",
+      "target": "seg_13"
+    },
+    {
+      "source": "seg_7",
+      "target": "seg_6",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_7",
+      "target": "seg_7",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_7",
+      "target": "seg_8",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_7",
+      "target": "seg_9"
+    },
+    {
+      "source": "seg_8",
+      "target": "seg_10"
+    },
+    {
+      "source": "seg_8",
+      "target": "seg_11"
+    },
+    {
+      "source": "seg_8",
+      "target": "seg_12"
+    },
+    {
+      "source": "seg_8",
+      "target": "seg_13"
+    },
+    {
+      "source": "seg_8",
+      "target": "seg_6",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_8",
+      "target": "seg_7",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_8",
+      "target": "seg_8",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_8",
+      "target": "seg_9"
+    },
+    {
+      "source": "seg_9",
+      "target": "seg_14"
+    },
+    {
+      "source": "seg_9",
+      "target": "seg_15"
+    },
+    {
+      "source": "seg_9",
+      "target": "seg_16",
+      "hasCondition": true
+    },
+    {
+      "source": "seg_9",
+      "target": "seg_17"
+    },
+    {
+      "source": "seg_9",
+      "target": "seg_18",
+      "hasCondition": true
+    },
+    {
+      "source": "seg_10",
+      "target": "seg_10"
+    },
+    {
+      "source": "seg_10",
+      "target": "seg_11"
+    },
+    {
+      "source": "seg_10",
+      "target": "seg_12"
+    },
+    {
+      "source": "seg_10",
+      "target": "seg_13"
+    },
+    {
+      "source": "seg_11",
+      "target": "seg_10"
+    },
+    {
+      "source": "seg_11",
+      "target": "seg_11"
+    },
+    {
+      "source": "seg_11",
+      "target": "seg_12"
+    },
+    {
+      "source": "seg_11",
+      "target": "seg_13"
+    },
+    {
+      "source": "seg_12",
+      "target": "seg_10"
+    },
+    {
+      "source": "seg_12",
+      "target": "seg_11"
+    },
+    {
+      "source": "seg_12",
+      "target": "seg_12"
+    },
+    {
+      "source": "seg_12",
+      "target": "seg_13"
+    },
+    {
+      "source": "seg_14",
+      "target": "seg_1",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_14",
+      "target": "seg_2",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_14",
+      "target": "seg_3",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_14",
+      "target": "seg_4",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_14",
+      "target": "seg_5"
+    },
+    {
+      "source": "seg_14",
+      "target": "seg_14"
+    },
+    {
+      "source": "seg_14",
+      "target": "seg_15"
+    },
+    {
+      "source": "seg_14",
+      "target": "seg_16",
+      "hasCondition": true
+    },
+    {
+      "source": "seg_14",
+      "target": "seg_17"
+    },
+    {
+      "source": "seg_14",
+      "target": "seg_18",
+      "hasCondition": true
+    },
+    {
+      "source": "seg_15",
+      "target": "seg_6",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_15",
+      "target": "seg_7",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_15",
+      "target": "seg_8",
+      "reuse": "hide_reuse"
+    },
+    {
+      "source": "seg_15",
+      "target": "seg_9"
+    },
+    {
+      "source": "seg_16",
+      "target": "seg_19"
+    },
+    {
+      "source": "seg_16",
+      "target": "seg_20"
+    },
+    {
+      "source": "seg_16",
+      "target": "seg_21"
+    },
+    {
+      "source": "seg_17",
+      "target": "seg_14"
+    },
+    {
+      "source": "seg_17",
+      "target": "seg_15"
+    },
+    {
+      "source": "seg_17",
+      "target": "seg_16",
+      "hasCondition": true
+    },
+    {
+      "source": "seg_17",
+      "target": "seg_17"
+    },
+    {
+      "source": "seg_17",
+      "target": "seg_18",
+      "hasCondition": true
+    },
+    {
+      "source": "seg_18",
+      "target": "seg_14"
+    },
+    {
+      "source": "seg_18",
+      "target": "seg_15"
+    },
+    {
+      "source": "seg_18",
+      "target": "seg_16",
+      "hasCondition": true
+    },
+    {
+      "source": "seg_18",
+      "target": "seg_17"
+    },
+    {
+      "source": "seg_18",
+      "target": "seg_18",
+      "hasCondition": true
+    },
+    {
+      "source": "seg_19",
+      "target": "seg_22"
+    },
+    {
+      "source": "seg_19",
+      "target": "seg_23"
+    },
+    {
+      "source": "seg_20",
+      "target": "seg_22"
+    },
+    {
+      "source": "seg_20",
+      "target": "seg_23"
+    },
+    {
+      "source": "seg_21",
+      "target": "seg_22"
+    },
+    {
+      "source": "seg_21",
+      "target": "seg_23"
+    },
+    {
+      "source": "seg_22",
+      "target": "seg_14"
+    },
+    {
+      "source": "seg_22",
+      "target": "seg_15"
+    },
+    {
+      "source": "seg_22",
+      "target": "seg_16",
+      "hasCondition": true
+    },
+    {
+      "source": "seg_22",
+      "target": "seg_17"
+    },
+    {
+      "source": "seg_22",
+      "target": "seg_18",
+      "hasCondition": true
+    }
+  ]
+}

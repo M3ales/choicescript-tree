@@ -1,0 +1,37 @@
+{
+  "loopCount": 2,
+  "loops": [
+    {
+      "bound": "condition-bounded",
+      "infinite": false,
+      "iterCap": 8,
+      "memberCount": 18,
+      "headerIds": [
+        "seg_14",
+        "seg_15",
+        "seg_16",
+        "seg_17",
+        "seg_18"
+      ],
+      "backEdgeCount": 50,
+      "exitEdgeCount": 15,
+      "allHideReuse": false,
+      "choiceOptionCount": null
+    },
+    {
+      "bound": "unbounded",
+      "infinite": false,
+      "iterCap": 3,
+      "memberCount": 3,
+      "headerIds": [
+        "seg_10",
+        "seg_11",
+        "seg_12"
+      ],
+      "backEdgeCount": 9,
+      "exitEdgeCount": 3,
+      "allHideReuse": false,
+      "choiceOptionCount": null
+    }
+  ]
+}

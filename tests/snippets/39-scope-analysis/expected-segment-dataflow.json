@@ -1,0 +1,66 @@
+{
+  "totalIterations": 1,
+  "widenedSccs": 0,
+  "stateCount": 1,
+  "cfgEntryStateCount": 6,
+  "blockDeltaCount": 11,
+  "blockMappedCount": 12,
+  "states": {
+    "seg_0": {
+      "entryGlobals": {
+        "health": "100",
+        "stamina": "50",
+        "gold": "0"
+      },
+      "exitGlobals": {
+        "health": "{100,90}",
+        "stamina": "40",
+        "gold": "0"
+      }
+    }
+  },
+  "cfgEntryStates": {
+    "chapter1:": {
+      "globals": {
+        "health": "{100,90}",
+        "stamina": "40",
+        "gold": "0"
+      }
+    },
+    "startup:": {
+      "globals": {
+        "health": "100",
+        "stamina": "50",
+        "gold": "0"
+      }
+    },
+    "startup:__entry__cont_0": {
+      "globals": {
+        "health": "90",
+        "stamina": "40",
+        "gold": "0"
+      }
+    },
+    "startup:__entry__cont_1": {
+      "globals": {
+        "health": "{100,90}",
+        "stamina": "40",
+        "gold": "0"
+      }
+    },
+    "startup:check_gold": {
+      "globals": {
+        "health": "{100,90}",
+        "stamina": "40",
+        "gold": "0"
+      }
+    },
+    "startup:drain_stamina": {
+      "globals": {
+        "health": "90",
+        "stamina": "50",
+        "gold": "0"
+      }
+    }
+  }
+}

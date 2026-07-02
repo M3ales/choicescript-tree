@@ -1,0 +1,286 @@
+[
+  {
+    "sceneName": "startup",
+    "blocks": {
+      "startup:b_0": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_1": {
+        "exitType": "Branch"
+      },
+      "startup:b_2": {
+        "exitType": "Goto"
+      },
+      "startup:b_3": {
+        "exitType": "Goto"
+      },
+      "startup:b_4": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_5": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_6": {
+        "exitType": "Branch"
+      },
+      "startup:b_7": {
+        "exitType": "Goto"
+      },
+      "startup:b_8": {
+        "exitType": "Goto"
+      },
+      "startup:b_9": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_10": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_11": {
+        "exitType": "Goto"
+      },
+      "startup:b_12": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_13": {
+        "exitType": "Finish"
+      },
+      "startup:b_14": {
+        "exitType": "FallThrough"
+      }
+    },
+    "blockIndex": {
+      "startup:b_0": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:p7tufl1nj3jdb",
+          "startup:slxkustmiu6y",
+          "startup:38oihr1349zwt"
+        ],
+        "entryType": "SceneEntry",
+        "exitType": "FallThrough"
+      },
+      "startup:b_1": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:dcbdzbodpzch",
+          "startup:2x0trx14g2lo3",
+          "startup:1x275be8p9jks"
+        ],
+        "entryType": "Label",
+        "exitType": "Branch",
+        "label": "match_loop"
+      },
+      "startup:b_2": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:jp9hxe12fhcf0",
+          "startup:w80w1f6w28g1"
+        ],
+        "entryType": "Continuation",
+        "exitType": "Goto"
+      },
+      "startup:b_3": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:1tlmfzh1mo11c7",
+          "startup:1gjaelrjk9al9"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "Goto"
+      },
+      "startup:b_4": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "startup:b_5": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "startup:b_6": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:eh4dcm1dm4evg",
+          "startup:1ajvzz01r22dg6",
+          "startup:j8khew1p5wktm"
+        ],
+        "entryType": "Label",
+        "exitType": "Branch",
+        "label": "intense_phase"
+      },
+      "startup:b_7": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:w5bnxepj3s7w"
+        ],
+        "entryType": "Continuation",
+        "exitType": "Goto"
+      },
+      "startup:b_8": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:1jl0fbrkqbi7t"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "Goto"
+      },
+      "startup:b_9": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "startup:b_10": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "startup:b_11": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:1ywnc176rdey1",
+          "startup:x4r8d416mhcm6",
+          "startup:10f2z9vxaqhp5"
+        ],
+        "entryType": "Label",
+        "exitType": "Goto",
+        "label": "final_rally"
+      },
+      "startup:b_12": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "startup:b_13": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:1wd3ldk17j873a",
+          "startup:wzimks1gtxka6",
+          "startup:d3vgrp1ny55yf"
+        ],
+        "entryType": "Label",
+        "exitType": "Finish",
+        "label": "match_over"
+      },
+      "startup:b_14": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      }
+    },
+    "edges": [
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "startup:b_0",
+        "targetBlockId": "startup:b_1",
+        "metadata": {}
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "startup:b_3",
+        "targetBlockId": "startup:b_6",
+        "metadata": {
+          "label": "intense_phase"
+        }
+      },
+      {
+        "kind": "IfBranch",
+        "sourceBlockId": "startup:b_1",
+        "targetBlockId": "startup:b_3",
+        "metadata": {
+          "conditionStatementId": "startup:1x275be8p9jks"
+        }
+      },
+      {
+        "kind": "IfFallThrough",
+        "sourceBlockId": "startup:b_1",
+        "targetBlockId": "startup:b_2",
+        "metadata": {}
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "startup:b_2",
+        "targetBlockId": "startup:b_1",
+        "metadata": {
+          "label": "match_loop"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "startup:b_5",
+        "targetBlockId": "startup:b_6",
+        "metadata": {}
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "startup:b_8",
+        "targetBlockId": "startup:b_11",
+        "metadata": {
+          "label": "final_rally"
+        }
+      },
+      {
+        "kind": "IfBranch",
+        "sourceBlockId": "startup:b_6",
+        "targetBlockId": "startup:b_8",
+        "metadata": {
+          "conditionStatementId": "startup:j8khew1p5wktm"
+        }
+      },
+      {
+        "kind": "IfFallThrough",
+        "sourceBlockId": "startup:b_6",
+        "targetBlockId": "startup:b_7",
+        "metadata": {}
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "startup:b_7",
+        "targetBlockId": "startup:b_1",
+        "metadata": {
+          "label": "match_loop"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "startup:b_10",
+        "targetBlockId": "startup:b_11",
+        "metadata": {}
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "startup:b_11",
+        "targetBlockId": "startup:b_13",
+        "metadata": {
+          "label": "match_over"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "startup:b_12",
+        "targetBlockId": "startup:b_13",
+        "metadata": {}
+      },
+      {
+        "kind": "SceneExit",
+        "sourceBlockId": "startup:b_13",
+        "targetBlockId": null,
+        "metadata": {}
+      }
+    ],
+    "entryBlockId": "startup:b_0",
+    "labelToBlockId": {
+      "match_loop": "startup:b_1",
+      "intense_phase": "startup:b_6",
+      "final_rally": "startup:b_11",
+      "match_over": "startup:b_13"
+    },
+    "unresolvedEdges": []
+  }
+]

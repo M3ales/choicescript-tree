@@ -1,0 +1,472 @@
+{
+  "totalIterations": 1,
+  "widenedSccs": 0,
+  "stateCount": 1,
+  "cfgEntryStateCount": 31,
+  "blockDeltaCount": 47,
+  "blockMappedCount": 49,
+  "states": {
+    "seg_0": {
+      "entryGlobals": {
+        "progress": "0",
+        "attempts": "0",
+        "mood": "neutral",
+        "depth": "0",
+        "inner_count": "0",
+        "wave": "0",
+        "shield": "100",
+        "combo": "0",
+        "phase": "0",
+        "heat": "0"
+      },
+      "exitGlobals": {
+        "progress": "20",
+        "attempts": "1",
+        "mood": "neutral",
+        "depth": "0",
+        "inner_count": "0",
+        "wave": "1",
+        "shield": "75",
+        "combo": "1",
+        "phase": "0",
+        "heat": "1"
+      }
+    }
+  },
+  "cfgEntryStates": {
+    "startup:": {
+      "globals": {
+        "progress": "0",
+        "attempts": "0",
+        "mood": "neutral",
+        "depth": "0",
+        "inner_count": "0",
+        "wave": "0",
+        "shield": "100",
+        "combo": "0",
+        "phase": "0",
+        "heat": "0"
+      }
+    },
+    "startup:__entry__cont_0": {
+      "globals": {
+        "progress": "20",
+        "attempts": "0",
+        "mood": "neutral",
+        "depth": "1",
+        "inner_count": "0",
+        "wave": "0",
+        "shield": "100",
+        "combo": "0",
+        "phase": "1",
+        "heat": "0"
+      }
+    },
+    "startup:__entry__cont_1": {
+      "globals": {
+        "progress": "20",
+        "attempts": "0",
+        "mood": "neutral",
+        "depth": "1",
+        "inner_count": "1",
+        "wave": "0",
+        "shield": "100",
+        "combo": "0",
+        "phase": "1",
+        "heat": "0"
+      }
+    },
+    "startup:__entry__cont_2": {
+      "globals": {
+        "progress": "20",
+        "attempts": "0",
+        "mood": "neutral",
+        "depth": "1",
+        "inner_count": "1",
+        "wave": "1",
+        "shield": "75",
+        "combo": "1",
+        "phase": "1",
+        "heat": "1"
+      }
+    },
+    "startup:advance_wave": {
+      "globals": {
+        "progress": "20",
+        "attempts": "0",
+        "mood": "neutral",
+        "depth": "1",
+        "inner_count": "1",
+        "wave": "0",
+        "shield": "75",
+        "combo": "1",
+        "phase": "1",
+        "heat": "1"
+      }
+    },
+    "startup:bump_depth": {
+      "globals": {
+        "progress": "20",
+        "attempts": "0",
+        "mood": "neutral",
+        "depth": "0",
+        "inner_count": "0",
+        "wave": "0",
+        "shield": "100",
+        "combo": "0",
+        "phase": "1",
+        "heat": "0"
+      }
+    },
+    "startup:bump_inner": {
+      "globals": {
+        "progress": "20",
+        "attempts": "0",
+        "mood": "neutral",
+        "depth": "1",
+        "inner_count": "0",
+        "wave": "0",
+        "shield": "100",
+        "combo": "0",
+        "phase": "1",
+        "heat": "0"
+      }
+    },
+    "startup:combo_loop": {
+      "globals": {
+        "progress": "20",
+        "attempts": "1",
+        "mood": "neutral",
+        "depth": "0",
+        "inner_count": "0",
+        "wave": "1",
+        "shield": "75",
+        "combo": "1",
+        "phase": "0",
+        "heat": "1"
+      }
+    },
+    "startup:combo_loop__cont_0": {
+      "globals": {
+        "progress": "20",
+        "attempts": "0",
+        "mood": "neutral",
+        "depth": "1",
+        "inner_count": "1",
+        "wave": "0",
+        "shield": "100",
+        "combo": "1",
+        "phase": "1",
+        "heat": "1"
+      }
+    },
+    "startup:counter_loop": {
+      "globals": {
+        "progress": "20",
+        "attempts": "0",
+        "mood": "neutral",
+        "depth": "1",
+        "inner_count": "1",
+        "wave": "1",
+        "shield": "75",
+        "combo": "1",
+        "phase": "1",
+        "heat": "1"
+      }
+    },
+    "startup:counter_loop__cont_0": {
+      "globals": {
+        "progress": "20",
+        "attempts": "0",
+        "mood": "neutral",
+        "depth": "0",
+        "inner_count": "0",
+        "wave": "0",
+        "shield": "100",
+        "combo": "0",
+        "phase": "0",
+        "heat": "0"
+      }
+    },
+    "startup:dispatch": {
+      "globals": {
+        "progress": "20",
+        "attempts": "1",
+        "mood": "neutral",
+        "depth": "1",
+        "inner_count": "1",
+        "wave": "1",
+        "shield": "75",
+        "combo": "1",
+        "phase": "1",
+        "heat": "1"
+      }
+    },
+    "startup:do_combo_hit": {
+      "globals": {
+        "progress": "20",
+        "attempts": "0",
+        "mood": "neutral",
+        "depth": "1",
+        "inner_count": "1",
+        "wave": "0",
+        "shield": "100",
+        "combo": "0",
+        "phase": "1",
+        "heat": "0"
+      }
+    },
+    "startup:do_shield_tick": {
+      "globals": {
+        "progress": "20",
+        "attempts": "0",
+        "mood": "neutral",
+        "depth": "1",
+        "inner_count": "0",
+        "wave": "0",
+        "shield": "100",
+        "combo": "0",
+        "phase": "1",
+        "heat": "0"
+      }
+    },
+    "startup:do_wave": {
+      "globals": {
+        "progress": "20",
+        "attempts": "0",
+        "mood": "neutral",
+        "depth": "0",
+        "inner_count": "0",
+        "wave": "0",
+        "shield": "100",
+        "combo": "0",
+        "phase": "0",
+        "heat": "0"
+      }
+    },
+    "startup:happy_path": {
+      "globals": {
+        "progress": "20",
+        "attempts": "1",
+        "mood": "neutral",
+        "depth": "1",
+        "inner_count": "1",
+        "wave": "1",
+        "shield": "75",
+        "combo": "1",
+        "phase": "1",
+        "heat": "1"
+      }
+    },
+    "startup:inner_loop": {
+      "globals": {
+        "progress": "20",
+        "attempts": "0",
+        "mood": "neutral",
+        "depth": "0",
+        "inner_count": "0",
+        "wave": "0",
+        "shield": "100",
+        "combo": "0",
+        "phase": "0",
+        "heat": "0"
+      }
+    },
+    "startup:inner_spin": {
+      "globals": {
+        "progress": "20",
+        "attempts": "1",
+        "mood": "neutral",
+        "depth": "0",
+        "inner_count": "0",
+        "wave": "1",
+        "shield": "75",
+        "combo": "1",
+        "phase": "0",
+        "heat": "1"
+      }
+    },
+    "startup:inner_spin__cont_0": {
+      "globals": {
+        "progress": "20",
+        "attempts": "0",
+        "mood": "neutral",
+        "depth": "0",
+        "inner_count": "0",
+        "wave": "0",
+        "shield": "100",
+        "combo": "0",
+        "phase": "1",
+        "heat": "0"
+      }
+    },
+    "startup:middle_loop": {
+      "globals": {
+        "progress": "20",
+        "attempts": "0",
+        "mood": "neutral",
+        "depth": "0",
+        "inner_count": "0",
+        "wave": "0",
+        "shield": "100",
+        "combo": "0",
+        "phase": "0",
+        "heat": "0"
+      }
+    },
+    "startup:middle_spin": {
+      "globals": {
+        "progress": "20",
+        "attempts": "1",
+        "mood": "neutral",
+        "depth": "0",
+        "inner_count": "0",
+        "wave": "1",
+        "shield": "75",
+        "combo": "1",
+        "phase": "0",
+        "heat": "1"
+      }
+    },
+    "startup:middle_spin__cont_0": {
+      "globals": {
+        "progress": "20",
+        "attempts": "0",
+        "mood": "neutral",
+        "depth": "0",
+        "inner_count": "0",
+        "wave": "0",
+        "shield": "100",
+        "combo": "0",
+        "phase": "0",
+        "heat": "0"
+      }
+    },
+    "startup:outer_loop": {
+      "globals": {
+        "progress": "20",
+        "attempts": "1",
+        "mood": "neutral",
+        "depth": "0",
+        "inner_count": "0",
+        "wave": "1",
+        "shield": "75",
+        "combo": "1",
+        "phase": "0",
+        "heat": "1"
+      }
+    },
+    "startup:outer_loop__cont_0": {
+      "globals": {
+        "progress": "20",
+        "attempts": "0",
+        "mood": "neutral",
+        "depth": "0",
+        "inner_count": "0",
+        "wave": "0",
+        "shield": "100",
+        "combo": "0",
+        "phase": "0",
+        "heat": "0"
+      }
+    },
+    "startup:sad_path": {
+      "globals": {
+        "progress": "20",
+        "attempts": "1",
+        "mood": "neutral",
+        "depth": "0",
+        "inner_count": "0",
+        "wave": "1",
+        "shield": "75",
+        "combo": "1",
+        "phase": "0",
+        "heat": "1"
+      }
+    },
+    "startup:shield_loop": {
+      "globals": {
+        "progress": "20",
+        "attempts": "1",
+        "mood": "neutral",
+        "depth": "0",
+        "inner_count": "0",
+        "wave": "1",
+        "shield": "75",
+        "combo": "1",
+        "phase": "0",
+        "heat": "1"
+      }
+    },
+    "startup:shield_loop__cont_0": {
+      "globals": {
+        "progress": "20",
+        "attempts": "0",
+        "mood": "neutral",
+        "depth": "1",
+        "inner_count": "0",
+        "wave": "0",
+        "shield": "100",
+        "combo": "0",
+        "phase": "1",
+        "heat": "0"
+      }
+    },
+    "startup:tick_phase": {
+      "globals": {
+        "progress": "20",
+        "attempts": "0",
+        "mood": "neutral",
+        "depth": "0",
+        "inner_count": "0",
+        "wave": "0",
+        "shield": "100",
+        "combo": "0",
+        "phase": "0",
+        "heat": "0"
+      }
+    },
+    "startup:update_progress": {
+      "globals": {
+        "progress": "0",
+        "attempts": "0",
+        "mood": "neutral",
+        "depth": "0",
+        "inner_count": "0",
+        "wave": "0",
+        "shield": "100",
+        "combo": "0",
+        "phase": "0",
+        "heat": "0"
+      }
+    },
+    "startup:wave_loop": {
+      "globals": {
+        "progress": "20",
+        "attempts": "1",
+        "mood": "neutral",
+        "depth": "0",
+        "inner_count": "0",
+        "wave": "1",
+        "shield": "75",
+        "combo": "1",
+        "phase": "0",
+        "heat": "1"
+      }
+    },
+    "startup:wave_loop__cont_0": {
+      "globals": {
+        "progress": "20",
+        "attempts": "0",
+        "mood": "neutral",
+        "depth": "0",
+        "inner_count": "0",
+        "wave": "0",
+        "shield": "100",
+        "combo": "0",
+        "phase": "0",
+        "heat": "0"
+      }
+    }
+  }
+}

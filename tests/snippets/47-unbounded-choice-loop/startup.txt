@@ -1,0 +1,16 @@
+*create mood "neutral"
+
+*label chat_hub
+Who do you talk to?
+*choice
+  #Talk to the guard.
+    The guard nods.
+    *set mood "alert"
+    *goto chat_hub
+  #Talk to the merchant.
+    The merchant smiles.
+    *set mood "happy"
+    *goto chat_hub
+  #Leave.
+    You walk away.
+    *finish

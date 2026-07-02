@@ -1,0 +1,48 @@
+{
+  "states": [
+    {
+      "cfgId": "startup:",
+      "entryGlobals": [
+        {
+          "health": "100"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "health": "100"
+        }
+      ]
+    },
+    {
+      "cfgId": "tavern:",
+      "entryGlobals": [
+        {
+          "health": "100"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "health": "100"
+        }
+      ]
+    },
+    {
+      "cfgId": "market:",
+      "entryGlobals": [
+        {
+          "health": "100"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "health": "100"
+        }
+      ]
+    }
+  ],
+  "diagnostics": {
+    "unresolvedExits": 0,
+    "droppedContexts": 0,
+    "missingCfgs": []
+  }
+}

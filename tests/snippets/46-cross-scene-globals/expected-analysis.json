@@ -1,0 +1,27 @@
+{
+  "deadBranchCount": 2,
+  "deadBranches": [
+    {
+      "blockId": "arena:b_2",
+      "scene": "arena",
+      "reason": "condition-false"
+    },
+    {
+      "blockId": "arena:b_4",
+      "scene": "arena",
+      "reason": "condition-false"
+    }
+  ],
+  "controlFlowViolationCount": 1,
+  "controlFlowViolations": [
+    {
+      "blockId": "town:b_1",
+      "scene": "town",
+      "kind": "implicit-end"
+    }
+  ],
+  "undeclaredSetCount": 0,
+  "undeclaredSets": [],
+  "multiReplaceViolationCount": 0,
+  "multiReplaceViolations": []
+}

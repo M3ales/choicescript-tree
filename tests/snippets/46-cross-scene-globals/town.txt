@@ -1,0 +1,11 @@
+You arrive in town.
+*set gold (gold - 10)
+
+*choice
+  #Visit the shop.
+    *set visited_shop true
+    *set gold (gold - 20)
+    *goto_scene shop
+  #Go to the arena.
+    *set health (health - 30)
+    *goto_scene arena

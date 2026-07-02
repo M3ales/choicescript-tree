@@ -15,10 +15,10 @@
           "type": "Identifier",
           "value": "talk",
           "rawValue": "talk",
-          "position": 6,
-          "lineNumber": 0,
           "sceneName": "startup",
           "indent": 0,
+          "lineNumber": 0,
+          "position": 7,
           "isLabelName": true
         }
       },
@@ -62,6 +62,7 @@
               "sceneName": "startup",
               "indent": 1,
               "lineNumber": 3,
+              "position": 17,
               "rawText": "Talk to the guard.",
               "hasMultiReplace": false
             },
@@ -102,10 +103,10 @@
                   "type": "Identifier",
                   "value": "talk",
                   "rawValue": "talk",
-                  "position": 10,
-                  "lineNumber": 5,
                   "sceneName": "startup",
                   "indent": 2,
+                  "lineNumber": 5,
+                  "position": 10,
                   "isLabelName": true
                 }
               }
@@ -116,7 +117,7 @@
                 "start": 0,
                 "end": 18,
                 "lineNumber": 3,
-                "position": null,
+                "position": 18,
                 "text": "Talk to the guard."
               }
             ],
@@ -130,6 +131,7 @@
               "sceneName": "startup",
               "indent": 1,
               "lineNumber": 6,
+              "position": 17,
               "rawText": "Talk to the merchant.",
               "hasMultiReplace": false
             },
@@ -170,10 +172,10 @@
                   "type": "Identifier",
                   "value": "talk",
                   "rawValue": "talk",
-                  "position": 10,
-                  "lineNumber": 8,
                   "sceneName": "startup",
                   "indent": 2,
+                  "lineNumber": 8,
+                  "position": 10,
                   "isLabelName": true
                 }
               }
@@ -184,7 +186,7 @@
                 "start": 0,
                 "end": 21,
                 "lineNumber": 6,
-                "position": null,
+                "position": 18,
                 "text": "Talk to the merchant."
               }
             ],
@@ -198,6 +200,7 @@
               "sceneName": "startup",
               "indent": 1,
               "lineNumber": 9,
+              "position": 2,
               "rawText": "Walk away.",
               "hasMultiReplace": false
             },
@@ -243,7 +246,7 @@
                 "start": 0,
                 "end": 10,
                 "lineNumber": 9,
-                "position": null,
+                "position": 3,
                 "text": "Walk away."
               }
             ],

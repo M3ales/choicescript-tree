@@ -1,0 +1,282 @@
+[
+  {
+    "name": "startup",
+    "statements": [
+      {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "var1",
+          "rawValue": "var1",
+          "position": 8,
+          "lineNumber": 0,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "BooleanLiteral",
+            "value": true,
+            "position": 13,
+            "lineNumber": 0,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 0,
+          "position": 0
+        }
+      },
+      {
+        "kind": "Achievement",
+        "token": {
+          "type": "Achievement",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 1,
+          "position": 0
+        },
+        "codename": {
+          "type": "Identifier",
+          "value": "test_ach",
+          "rawValue": "test_ach",
+          "lineNumber": 1,
+          "position": 13,
+          "indent": 0,
+          "sceneName": "startup"
+        },
+        "visibility": {
+          "type": "Identifier",
+          "value": "visible",
+          "rawValue": "visible",
+          "lineNumber": 1,
+          "position": 22,
+          "indent": 0,
+          "sceneName": "startup"
+        },
+        "title": {
+          "token": {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 1,
+            "position": 32,
+            "indent": 0,
+            "content": "Test Achievement Title"
+          },
+          "content": "Test Achievement Title",
+          "lineNumber": 1,
+          "position": 32,
+          "indent": 0,
+          "sceneName": "startup"
+        },
+        "preDescription": {
+          "token": {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 2,
+            "position": 2,
+            "indent": 1,
+            "content": "Pre-earned description."
+          },
+          "content": "Pre-earned description.",
+          "lineNumber": 2,
+          "position": 2,
+          "indent": 1,
+          "sceneName": "startup"
+        },
+        "postDescription": {
+          "token": {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 3,
+            "position": 2,
+            "indent": 1,
+            "content": "Post-earned description."
+          },
+          "content": "Post-earned description.",
+          "lineNumber": 3,
+          "position": 2,
+          "indent": 1,
+          "sceneName": "startup"
+        },
+        "hidden": false
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 5,
+            "position": 0,
+            "indent": 0,
+            "content": "Some prose after achievements.\n\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 32,
+            "lineNumber": 5,
+            "position": 0,
+            "text": "Some prose after achievements.\n\n"
+          }
+        ]
+      },
+      {
+        "kind": "Choice",
+        "token": {
+          "type": "Choice",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 7,
+          "position": 0
+        },
+        "body": [
+          {
+            "kind": "ChoiceOption",
+            "token": {
+              "type": "ChoiceOption",
+              "sceneName": "startup",
+              "indent": 1,
+              "lineNumber": 8,
+              "position": 2,
+              "rawText": "Option A",
+              "hasMultiReplace": false
+            },
+            "body": [
+              {
+                "content": [
+                  {
+                    "type": "Prose",
+                    "sceneName": "startup",
+                    "lineNumber": 9,
+                    "position": 4,
+                    "indent": 2,
+                    "content": "Chose A.\n"
+                  }
+                ],
+                "kind": "Prose",
+                "parsedSegments": [
+                  {
+                    "kind": "Text",
+                    "start": 0,
+                    "end": 9,
+                    "lineNumber": 9,
+                    "position": 4,
+                    "text": "Chose A.\n"
+                  }
+                ]
+              },
+              {
+                "kind": "Finish",
+                "token": {
+                  "type": "Finish",
+                  "sceneName": "startup",
+                  "indent": 2,
+                  "lineNumber": 10,
+                  "position": 4
+                },
+                "buttonText": null
+              }
+            ],
+            "parsedSegments": [
+              {
+                "kind": "Text",
+                "start": 0,
+                "end": 8,
+                "lineNumber": 8,
+                "position": 3,
+                "text": "Option A"
+              }
+            ],
+            "reuse": null,
+            "selectableIf": null
+          },
+          {
+            "kind": "ChoiceOption",
+            "token": {
+              "type": "ChoiceOption",
+              "sceneName": "startup",
+              "indent": 1,
+              "lineNumber": 11,
+              "position": 2,
+              "rawText": "Option B",
+              "hasMultiReplace": false
+            },
+            "body": [
+              {
+                "content": [
+                  {
+                    "type": "Prose",
+                    "sceneName": "startup",
+                    "lineNumber": 12,
+                    "position": 4,
+                    "indent": 2,
+                    "content": "Chose B.\n"
+                  }
+                ],
+                "kind": "Prose",
+                "parsedSegments": [
+                  {
+                    "kind": "Text",
+                    "start": 0,
+                    "end": 9,
+                    "lineNumber": 12,
+                    "position": 4,
+                    "text": "Chose B.\n"
+                  }
+                ]
+              },
+              {
+                "kind": "Finish",
+                "token": {
+                  "type": "Finish",
+                  "sceneName": "startup",
+                  "indent": 2,
+                  "lineNumber": 13,
+                  "position": 4
+                },
+                "buttonText": null
+              }
+            ],
+            "parsedSegments": [
+              {
+                "kind": "Text",
+                "start": 0,
+                "end": 8,
+                "lineNumber": 11,
+                "position": 3,
+                "text": "Option B"
+              }
+            ],
+            "reuse": null,
+            "selectableIf": null
+          }
+        ]
+      }
+    ],
+    "parseErrors": [],
+    "start": {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    "end": {
+      "type": "Finish",
+      "sceneName": "startup",
+      "indent": 2,
+      "lineNumber": 13,
+      "position": 4
+    }
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "cfgCount": 1,
+  "states": [
+    {
+      "cfgId": "startup:",
+      "entryGlobals": [
+        {
+          "strength": "60",
+          "intelligence": "40",
+          "charisma": "50",
+          "name": "Hero"
+        }
+      ]
+    }
+  ]
+}

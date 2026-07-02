@@ -51,6 +51,7 @@
       "sceneName": "startup",
       "indent": 1,
       "lineNumber": 4,
+      "position": 2,
       "rawText": "Go to the armory.",
       "hasMultiReplace": false
     },
@@ -58,7 +59,7 @@
       "type": "Prose",
       "sceneName": "startup",
       "lineNumber": 4,
-      "position": null,
+      "position": 3,
       "indent": 1,
       "content": "Go to the armory."
     },
@@ -106,6 +107,7 @@
       "sceneName": "startup",
       "indent": 3,
       "lineNumber": 8,
+      "position": 6,
       "rawText": "Take the sword.",
       "hasMultiReplace": false
     },
@@ -113,7 +115,7 @@
       "type": "Prose",
       "sceneName": "startup",
       "lineNumber": 8,
-      "position": null,
+      "position": 7,
       "indent": 3,
       "content": "Take the sword."
     },
@@ -161,6 +163,7 @@
       "sceneName": "startup",
       "indent": 3,
       "lineNumber": 12,
+      "position": 6,
       "rawText": "Take the axe.",
       "hasMultiReplace": false
     },
@@ -168,7 +171,7 @@
       "type": "Prose",
       "sceneName": "startup",
       "lineNumber": 12,
-      "position": null,
+      "position": 7,
       "indent": 3,
       "content": "Take the axe."
     },
@@ -216,6 +219,7 @@
       "sceneName": "startup",
       "indent": 1,
       "lineNumber": 16,
+      "position": 2,
       "rawText": "Go to the market.",
       "hasMultiReplace": false
     },
@@ -223,7 +227,7 @@
       "type": "Prose",
       "sceneName": "startup",
       "lineNumber": 16,
-      "position": null,
+      "position": 3,
       "indent": 1,
       "content": "Go to the market."
     },

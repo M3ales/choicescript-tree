@@ -1,0 +1,21 @@
+{
+  "cfgCount": 2,
+  "states": [
+    {
+      "cfgId": "startup:",
+      "entryGlobals": [
+        {
+          "mood": "neutral"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:chat_hub",
+      "entryGlobals": [
+        {
+          "mood": "{alert,happy,neutral}"
+        }
+      ]
+    }
+  ]
+}

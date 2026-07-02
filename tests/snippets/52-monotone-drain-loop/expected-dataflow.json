@@ -1,0 +1,41 @@
+{
+  "states": [
+    {
+      "cfgId": "startup:",
+      "entryGlobals": [
+        {
+          "gold": "50"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "gold": "50"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:shop",
+      "entryGlobals": [
+        {
+          "gold": "50"
+        },
+        {
+          "gold": "20"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "gold": "20"
+        },
+        {
+          "gold": "-10"
+        }
+      ]
+    }
+  ],
+  "diagnostics": {
+    "unresolvedExits": 0,
+    "droppedContexts": 0,
+    "missingCfgs": []
+  }
+}

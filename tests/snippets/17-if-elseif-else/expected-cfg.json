@@ -28,8 +28,8 @@
       "startup:b_0": {
         "scene": "startup",
         "statementIds": [
-          "startup:0",
-          "startup:10"
+          "startup:du7v7zntkkxp",
+          "startup:1saef2c18n6acm"
         ],
         "entryType": "SceneEntry",
         "exitType": "Branch"
@@ -43,7 +43,7 @@
       "startup:b_2": {
         "scene": "startup",
         "statementIds": [
-          "startup:1"
+          "startup:evkjz3hd1ix9"
         ],
         "entryType": "ConditionalBody",
         "exitType": "FallThrough"
@@ -51,7 +51,8 @@
       "startup:b_3": {
         "scene": "startup",
         "statementIds": [
-          "startup:2"
+          "startup:m3asymiq9uhc",
+          "startup:tv28xk1gbbs82"
         ],
         "entryType": "ConditionalBody",
         "exitType": "FallThrough"
@@ -59,7 +60,8 @@
       "startup:b_4": {
         "scene": "startup",
         "statementIds": [
-          "startup:4"
+          "startup:lw53p115xvkor",
+          "startup:15iopkd1pr1fb3"
         ],
         "entryType": "ConditionalBody",
         "exitType": "FallThrough"
@@ -67,7 +69,8 @@
       "startup:b_5": {
         "scene": "startup",
         "statementIds": [
-          "startup:6"
+          "startup:1nicuyn1tpkl7h",
+          "startup:12q4ej2yjuwtw"
         ],
         "entryType": "ConditionalBody",
         "exitType": "FallThrough"
@@ -75,7 +78,8 @@
       "startup:b_6": {
         "scene": "startup",
         "statementIds": [
-          "startup:8"
+          "startup:sel42nf22sm1",
+          "startup:eiqi4a1kp43ak"
         ],
         "entryType": "ConditionalBody",
         "exitType": "FallThrough"
@@ -87,7 +91,7 @@
         "sourceBlockId": "startup:b_0",
         "targetBlockId": "startup:b_2",
         "metadata": {
-          "conditionStatementId": "startup:10"
+          "conditionStatementId": "startup:1saef2c18n6acm"
         }
       },
       {
@@ -101,7 +105,7 @@
         "sourceBlockId": "startup:b_0",
         "targetBlockId": "startup:b_3",
         "metadata": {
-          "conditionStatementId": "startup:3"
+          "conditionStatementId": "startup:m3asymiq9uhc"
         }
       },
       {
@@ -115,7 +119,7 @@
         "sourceBlockId": "startup:b_0",
         "targetBlockId": "startup:b_4",
         "metadata": {
-          "conditionStatementId": "startup:5"
+          "conditionStatementId": "startup:lw53p115xvkor"
         }
       },
       {
@@ -129,7 +133,7 @@
         "sourceBlockId": "startup:b_0",
         "targetBlockId": "startup:b_5",
         "metadata": {
-          "conditionStatementId": "startup:7"
+          "conditionStatementId": "startup:1nicuyn1tpkl7h"
         }
       },
       {

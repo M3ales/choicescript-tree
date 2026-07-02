@@ -1,0 +1,21 @@
+{
+  "cfgCount": 2,
+  "states": [
+    {
+      "cfgId": "startup:",
+      "entryGlobals": [
+        {
+          "count": "0"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:loop",
+      "entryGlobals": [
+        {
+          "count": "{0,1,2}"
+        }
+      ]
+    }
+  ]
+}

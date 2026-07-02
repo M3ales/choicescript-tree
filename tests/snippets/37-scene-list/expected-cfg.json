@@ -13,8 +13,8 @@
       "chapter1:b_0": {
         "scene": "chapter1",
         "statementIds": [
-          "chapter1:0",
-          "chapter1:1"
+          "chapter1:4phbwqucb4b8",
+          "chapter1:emokg91ji542f"
         ],
         "entryType": "SceneEntry",
         "exitType": "Finish"
@@ -52,8 +52,8 @@
       "chapter2:b_0": {
         "scene": "chapter2",
         "statementIds": [
-          "chapter2:0",
-          "chapter2:1"
+          "chapter2:65zlhwlq5wu",
+          "chapter2:emokg91ji542f"
         ],
         "entryType": "SceneEntry",
         "exitType": "Finish"
@@ -91,11 +91,11 @@
       "startup:b_0": {
         "scene": "startup",
         "statementIds": [
-          "startup:0",
-          "startup:1",
-          "startup:2",
-          "startup:3",
-          "startup:4"
+          "startup:14i7g6t57tav",
+          "startup:nye76jx5elsp",
+          "startup:2du7k21spw8oc",
+          "startup:29kjmx1tepclb",
+          "startup:gule011ha8ain"
         ],
         "entryType": "SceneEntry",
         "exitType": "Finish"

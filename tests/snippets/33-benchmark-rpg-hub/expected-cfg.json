@@ -97,11 +97,11 @@
       "arena:b_0": {
         "scene": "arena",
         "statementIds": [
-          "arena:0",
-          "arena:1",
-          "arena:2",
-          "arena:3",
-          "arena:4"
+          "arena:l7u1m24b1u5k",
+          "arena:1phl823wfab1p",
+          "arena:171mchkwagf0y",
+          "arena:1di07xsvo6mk6",
+          "arena:7hftb9rfkz9v"
         ],
         "entryType": "SceneEntry",
         "exitType": "FallThrough"
@@ -109,10 +109,10 @@
       "arena:b_1": {
         "scene": "arena",
         "statementIds": [
-          "arena:5",
-          "arena:6",
-          "arena:7",
-          "arena:9"
+          "arena:8bcd3b15y1dn1",
+          "arena:1x9nuya725ypo",
+          "arena:1bf4qnrwkdwrx",
+          "arena:1n4a4efly1akh"
         ],
         "entryType": "Label",
         "exitType": "Branch",
@@ -121,7 +121,7 @@
       "arena:b_2": {
         "scene": "arena",
         "statementIds": [
-          "arena:11"
+          "arena:10mf2kvfjf3w1"
         ],
         "entryType": "Continuation",
         "exitType": "Branch"
@@ -129,7 +129,7 @@
       "arena:b_3": {
         "scene": "arena",
         "statementIds": [
-          "arena:8"
+          "arena:1ul2ccwadji52"
         ],
         "entryType": "ConditionalBody",
         "exitType": "Goto"
@@ -143,7 +143,7 @@
       "arena:b_5": {
         "scene": "arena",
         "statementIds": [
-          "arena:13"
+          "arena:8jvjtixvjaow"
         ],
         "entryType": "Continuation",
         "exitType": "Branch"
@@ -151,7 +151,7 @@
       "arena:b_6": {
         "scene": "arena",
         "statementIds": [
-          "arena:10"
+          "arena:plkx0j9qv6sd"
         ],
         "entryType": "ConditionalBody",
         "exitType": "Goto"
@@ -165,7 +165,7 @@
       "arena:b_8": {
         "scene": "arena",
         "statementIds": [
-          "arena:45"
+          "arena:1s5nn67g8b9o"
         ],
         "entryType": "Continuation",
         "exitType": "Choice"
@@ -173,7 +173,7 @@
       "arena:b_9": {
         "scene": "arena",
         "statementIds": [
-          "arena:12"
+          "arena:1dz7nxg1eho09y"
         ],
         "entryType": "ConditionalBody",
         "exitType": "Goto"
@@ -193,15 +193,16 @@
       "arena:b_12": {
         "scene": "arena",
         "statementIds": [
-          "arena:14",
-          "arena:15",
-          "arena:16",
-          "arena:17",
-          "arena:18",
-          "arena:19",
-          "arena:20",
-          "arena:21",
-          "arena:22"
+          "arena:7fmf1hsk5l27",
+          "arena:tevn0n1epzvpl",
+          "arena:bafo725k3w3c",
+          "arena:9ih7y7mimmv5",
+          "arena:105o4y21xsd7bo",
+          "arena:ki5qemd28am4",
+          "arena:yyrg0kro67le",
+          "arena:moasdq1id60wg",
+          "arena:12il2afvh25sd",
+          "arena:fgehhjpf0p"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "Goto"
@@ -215,15 +216,16 @@
       "arena:b_14": {
         "scene": "arena",
         "statementIds": [
-          "arena:24",
-          "arena:25",
-          "arena:26",
-          "arena:27",
-          "arena:28",
-          "arena:29",
-          "arena:30",
-          "arena:31",
-          "arena:32"
+          "arena:lvfh0stjnxwe",
+          "arena:u76z0u2b4s0w",
+          "arena:si0xm51sbupxj",
+          "arena:1gh9ml6xqa96c",
+          "arena:f56k331t6j9bx",
+          "arena:16p4b5jv8cmyt",
+          "arena:1708dry1o3im9g",
+          "arena:1uthg3n1ql0xk5",
+          "arena:qzjxnh1ba7kbj",
+          "arena:1rwqhgqz8o7hs"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "Goto"
@@ -237,15 +239,16 @@
       "arena:b_16": {
         "scene": "arena",
         "statementIds": [
-          "arena:35",
-          "arena:36",
-          "arena:37",
-          "arena:38",
-          "arena:39",
-          "arena:40",
-          "arena:41",
-          "arena:42",
-          "arena:43"
+          "arena:1hg7s0e15d3h2c",
+          "arena:1t3170x12z25hb",
+          "arena:rd1s8r1cfdizx",
+          "arena:fxhep1qi4acf",
+          "arena:1x6gydg738fti",
+          "arena:1ebc5ro14xb5xy",
+          "arena:jlwog1bnsnbn",
+          "arena:1ud6kmoi9hiry",
+          "arena:5nptgbvteia5",
+          "arena:tqplhposmuh7"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "Goto"
@@ -259,12 +262,12 @@
       "arena:b_18": {
         "scene": "arena",
         "statementIds": [
-          "arena:46",
-          "arena:47",
-          "arena:48",
-          "arena:49",
-          "arena:50",
-          "arena:60"
+          "arena:ntdvv51yas0hb",
+          "arena:3cztm2vl49vk",
+          "arena:1vd4ezp1f8ihsj",
+          "arena:1vt8gibau9m91",
+          "arena:7xyst0qwkc9a",
+          "arena:1mx7nj1hh7acn"
         ],
         "entryType": "Label",
         "exitType": "Choice",
@@ -279,9 +282,10 @@
       "arena:b_20": {
         "scene": "arena",
         "statementIds": [
-          "arena:51",
-          "arena:52",
-          "arena:53"
+          "arena:wd1d3y16yzv2w",
+          "arena:arkvxc8ehima",
+          "arena:wdgz0j22fpd1",
+          "arena:15k0pga18tn8lg"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "Goto"
@@ -295,10 +299,11 @@
       "arena:b_22": {
         "scene": "arena",
         "statementIds": [
-          "arena:55",
-          "arena:56",
-          "arena:57",
-          "arena:58"
+          "arena:1wj85st66qmm7",
+          "arena:xgiejvaja9zh",
+          "arena:1jb4zjip8tgvk",
+          "arena:7yc9m61lv8ung",
+          "arena:1qak2ulu3ifrz"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "Goto"
@@ -312,10 +317,10 @@
       "arena:b_24": {
         "scene": "arena",
         "statementIds": [
-          "arena:61",
-          "arena:62",
-          "arena:63",
-          "arena:64"
+          "arena:1q51q12eab35o",
+          "arena:1g1lve919ts8o7",
+          "arena:6rubgx1cqf8tr",
+          "arena:1pnhq7q124mn04"
         ],
         "entryType": "Label",
         "exitType": "Goto",
@@ -330,11 +335,11 @@
       "arena:b_26": {
         "scene": "arena",
         "statementIds": [
-          "arena:65",
-          "arena:66",
-          "arena:67",
-          "arena:68",
-          "arena:69"
+          "arena:an4ulf1v4jpat",
+          "arena:edhrc81npgfiu",
+          "arena:1de5ixv1oqstml",
+          "arena:se465sh9zmxy",
+          "arena:1jtl1ko1juxzmm"
         ],
         "entryType": "Label",
         "exitType": "Goto",
@@ -349,9 +354,9 @@
       "arena:b_28": {
         "scene": "arena",
         "statementIds": [
-          "arena:70",
-          "arena:71",
-          "arena:72"
+          "arena:f9w5br9ptrq5",
+          "arena:1a7h2sedfkbys",
+          "arena:1x5mbx21x10z1w"
         ],
         "entryType": "Label",
         "exitType": "GotoScene",
@@ -384,7 +389,7 @@
         "sourceBlockId": "arena:b_1",
         "targetBlockId": "arena:b_3",
         "metadata": {
-          "conditionStatementId": "arena:9"
+          "conditionStatementId": "arena:1n4a4efly1akh"
         }
       },
       {
@@ -406,7 +411,7 @@
         "sourceBlockId": "arena:b_2",
         "targetBlockId": "arena:b_6",
         "metadata": {
-          "conditionStatementId": "arena:11"
+          "conditionStatementId": "arena:10mf2kvfjf3w1"
         }
       },
       {
@@ -428,7 +433,7 @@
         "sourceBlockId": "arena:b_5",
         "targetBlockId": "arena:b_9",
         "metadata": {
-          "conditionStatementId": "arena:13"
+          "conditionStatementId": "arena:8jvjtixvjaow"
         }
       },
       {
@@ -450,7 +455,7 @@
         "sourceBlockId": "arena:b_8",
         "targetBlockId": "arena:b_12",
         "metadata": {
-          "optionStatementId": "arena:23"
+          "optionStatementId": "arena:7fmf1hsk5l27"
         }
       },
       {
@@ -466,7 +471,7 @@
         "sourceBlockId": "arena:b_8",
         "targetBlockId": "arena:b_14",
         "metadata": {
-          "optionStatementId": "arena:33"
+          "optionStatementId": "arena:lvfh0stjnxwe"
         }
       },
       {
@@ -482,8 +487,8 @@
         "sourceBlockId": "arena:b_8",
         "targetBlockId": "arena:b_16",
         "metadata": {
-          "optionStatementId": "arena:44",
-          "conditionStatementId": "arena:44",
+          "optionStatementId": "arena:1hg7s0e15d3h2c",
+          "conditionStatementId": "arena:1hg7s0e15d3h2c",
           "choiceConditionKind": "selectable_if"
         }
       },
@@ -512,7 +517,7 @@
         "sourceBlockId": "arena:b_18",
         "targetBlockId": "arena:b_20",
         "metadata": {
-          "optionStatementId": "arena:54"
+          "optionStatementId": "arena:wd1d3y16yzv2w"
         }
       },
       {
@@ -528,7 +533,7 @@
         "sourceBlockId": "arena:b_18",
         "targetBlockId": "arena:b_22",
         "metadata": {
-          "optionStatementId": "arena:59"
+          "optionStatementId": "arena:1wj85st66qmm7"
         }
       },
       {
@@ -752,10 +757,10 @@
       "shop:b_0": {
         "scene": "shop",
         "statementIds": [
-          "shop:0",
-          "shop:1",
-          "shop:2",
-          "shop:3"
+          "shop:ya1mpim5yd10",
+          "shop:29av1tsnr4vr",
+          "shop:sglcei59lzu4",
+          "shop:d2l7te19l8tcc"
         ],
         "entryType": "SceneEntry",
         "exitType": "FallThrough"
@@ -763,8 +768,8 @@
       "shop:b_1": {
         "scene": "shop",
         "statementIds": [
-          "shop:4",
-          "shop:6"
+          "shop:1a95tx94imiuz",
+          "shop:zwug4c1wlsgq"
         ],
         "entryType": "Label",
         "exitType": "Branch",
@@ -773,8 +778,8 @@
       "shop:b_2": {
         "scene": "shop",
         "statementIds": [
-          "shop:7",
-          "shop:42"
+          "shop:16kwfml1y2cr97",
+          "shop:17efx4s1gvdyhy"
         ],
         "entryType": "Continuation",
         "exitType": "Choice"
@@ -782,7 +787,7 @@
       "shop:b_3": {
         "scene": "shop",
         "statementIds": [
-          "shop:5"
+          "shop:1i92j021mripjs"
         ],
         "entryType": "ConditionalBody",
         "exitType": "FallThrough"
@@ -796,9 +801,10 @@
       "shop:b_5": {
         "scene": "shop",
         "statementIds": [
-          "shop:9",
-          "shop:10",
-          "shop:11"
+          "shop:e642dr1k17nbh",
+          "shop:wchyte9v2nd0",
+          "shop:16hsxkq1hulics",
+          "shop:1n2z7rll0bspf"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "GoSub"
@@ -806,7 +812,7 @@
       "shop:b_6": {
         "scene": "shop",
         "statementIds": [
-          "shop:13"
+          "shop:14tayk1scbbju"
         ],
         "entryType": "GoSubContinuation",
         "exitType": "Branch"
@@ -814,7 +820,7 @@
       "shop:b_7": {
         "scene": "shop",
         "statementIds": [
-          "shop:14"
+          "shop:b6nrhj150uoit"
         ],
         "entryType": "Continuation",
         "exitType": "Goto"
@@ -822,7 +828,7 @@
       "shop:b_8": {
         "scene": "shop",
         "statementIds": [
-          "shop:12"
+          "shop:1ybm41e13t1zrg"
         ],
         "entryType": "ConditionalBody",
         "exitType": "Goto"
@@ -842,9 +848,10 @@
       "shop:b_11": {
         "scene": "shop",
         "statementIds": [
-          "shop:17",
-          "shop:18",
-          "shop:19"
+          "shop:1ldapak1ch9bs2",
+          "shop:zdn8jutv8mw4",
+          "shop:1i9oba3ilkug9",
+          "shop:68gzvrpmrq7d"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "GoSub"
@@ -852,7 +859,7 @@
       "shop:b_12": {
         "scene": "shop",
         "statementIds": [
-          "shop:21"
+          "shop:wwiupg5ibbfq"
         ],
         "entryType": "GoSubContinuation",
         "exitType": "Branch"
@@ -860,7 +867,7 @@
       "shop:b_13": {
         "scene": "shop",
         "statementIds": [
-          "shop:22"
+          "shop:1uqvzno1j8t21i"
         ],
         "entryType": "Continuation",
         "exitType": "Goto"
@@ -868,7 +875,7 @@
       "shop:b_14": {
         "scene": "shop",
         "statementIds": [
-          "shop:20"
+          "shop:m3x9fg155r3ni"
         ],
         "entryType": "ConditionalBody",
         "exitType": "Goto"
@@ -888,9 +895,10 @@
       "shop:b_17": {
         "scene": "shop",
         "statementIds": [
-          "shop:25",
-          "shop:26",
-          "shop:27"
+          "shop:1boto0cfvp9z2",
+          "shop:z9oi2a759g1w",
+          "shop:17pe8331q5pvy5",
+          "shop:d20dmx1536mwj"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "GoSub"
@@ -898,7 +906,7 @@
       "shop:b_18": {
         "scene": "shop",
         "statementIds": [
-          "shop:29"
+          "shop:18h68i1okj7b8"
         ],
         "entryType": "GoSubContinuation",
         "exitType": "Branch"
@@ -906,7 +914,7 @@
       "shop:b_19": {
         "scene": "shop",
         "statementIds": [
-          "shop:30"
+          "shop:1oollkgwoxrt2"
         ],
         "entryType": "Continuation",
         "exitType": "Goto"
@@ -914,7 +922,7 @@
       "shop:b_20": {
         "scene": "shop",
         "statementIds": [
-          "shop:28"
+          "shop:1262nrm1fmf9z0"
         ],
         "entryType": "ConditionalBody",
         "exitType": "Goto"
@@ -934,9 +942,10 @@
       "shop:b_23": {
         "scene": "shop",
         "statementIds": [
-          "shop:33",
-          "shop:34",
-          "shop:35"
+          "shop:3i30ukgy7g46",
+          "shop:mh9nzy1pmah0k",
+          "shop:1v7d3qho7xvv7",
+          "shop:1y1i5u6ep1pjs"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "GoSub"
@@ -944,7 +953,7 @@
       "shop:b_24": {
         "scene": "shop",
         "statementIds": [
-          "shop:37"
+          "shop:q8m0jg1jauece"
         ],
         "entryType": "GoSubContinuation",
         "exitType": "Branch"
@@ -952,7 +961,7 @@
       "shop:b_25": {
         "scene": "shop",
         "statementIds": [
-          "shop:38"
+          "shop:f60mswilye0i"
         ],
         "entryType": "Continuation",
         "exitType": "Goto"
@@ -960,7 +969,7 @@
       "shop:b_26": {
         "scene": "shop",
         "statementIds": [
-          "shop:36"
+          "shop:kkjfd4yi0nmy"
         ],
         "entryType": "ConditionalBody",
         "exitType": "Goto"
@@ -980,7 +989,8 @@
       "shop:b_29": {
         "scene": "shop",
         "statementIds": [
-          "shop:40"
+          "shop:1xg9ucppnavh7",
+          "shop:1dim20m331dqk"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "Goto"
@@ -994,9 +1004,9 @@
       "shop:b_31": {
         "scene": "shop",
         "statementIds": [
-          "shop:43",
-          "shop:44",
-          "shop:45"
+          "shop:cfitcjljbdix",
+          "shop:1gilycbafcae",
+          "shop:16kzy0l1ku2ckn"
         ],
         "entryType": "Label",
         "exitType": "GotoScene",
@@ -1011,9 +1021,9 @@
       "shop:b_33": {
         "scene": "shop",
         "statementIds": [
-          "shop:46",
-          "shop:47",
-          "shop:62"
+          "shop:q6saec89b4vq",
+          "shop:1ies0qc628ak6",
+          "shop:n8evp5bvyaob"
         ],
         "entryType": "Label",
         "exitType": "Choice",
@@ -1028,9 +1038,10 @@
       "shop:b_35": {
         "scene": "shop",
         "statementIds": [
-          "shop:48",
-          "shop:49",
-          "shop:51"
+          "shop:4f32lg129enne",
+          "shop:eaz0x71b037yh",
+          "shop:1q8g8r68qudsk",
+          "shop:rqyvsk1121ezq"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "Branch"
@@ -1038,7 +1049,7 @@
       "shop:b_36": {
         "scene": "shop",
         "statementIds": [
-          "shop:53"
+          "shop:1im8r8jmu7qcx"
         ],
         "entryType": "Continuation",
         "exitType": "Branch"
@@ -1046,7 +1057,7 @@
       "shop:b_37": {
         "scene": "shop",
         "statementIds": [
-          "shop:50"
+          "shop:vxp83azl49rw"
         ],
         "entryType": "ConditionalBody",
         "exitType": "FallThrough"
@@ -1054,7 +1065,7 @@
       "shop:b_38": {
         "scene": "shop",
         "statementIds": [
-          "shop:55"
+          "shop:1e8the7zd5lwh"
         ],
         "entryType": "Continuation",
         "exitType": "Branch"
@@ -1062,7 +1073,7 @@
       "shop:b_39": {
         "scene": "shop",
         "statementIds": [
-          "shop:52"
+          "shop:1h7fx1rlzisjl"
         ],
         "entryType": "ConditionalBody",
         "exitType": "FallThrough"
@@ -1070,8 +1081,8 @@
       "shop:b_40": {
         "scene": "shop",
         "statementIds": [
-          "shop:56",
-          "shop:57"
+          "shop:1tfw6kf1u6ves9",
+          "shop:1bhtpxn8wzgph"
         ],
         "entryType": "Continuation",
         "exitType": "Goto"
@@ -1079,7 +1090,7 @@
       "shop:b_41": {
         "scene": "shop",
         "statementIds": [
-          "shop:54"
+          "shop:76yst71dduazx"
         ],
         "entryType": "ConditionalBody",
         "exitType": "FallThrough"
@@ -1093,8 +1104,9 @@
       "shop:b_43": {
         "scene": "shop",
         "statementIds": [
-          "shop:59",
-          "shop:60"
+          "shop:1e27jrzp16ayl",
+          "shop:6jd10qk1xt80",
+          "shop:5mspno1qa8uk6"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "Goto"
@@ -1108,8 +1120,8 @@
       "shop:b_45": {
         "scene": "shop",
         "statementIds": [
-          "shop:63",
-          "shop:69"
+          "shop:10ps09r1atxmmx",
+          "shop:iudjsf1f83tu1"
         ],
         "entryType": "Label",
         "exitType": "Choice",
@@ -1124,7 +1136,8 @@
       "shop:b_47": {
         "scene": "shop",
         "statementIds": [
-          "shop:64"
+          "shop:h4vnkulsjbv8",
+          "shop:1x6rg2rzlmn4x"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "Return"
@@ -1138,8 +1151,9 @@
       "shop:b_49": {
         "scene": "shop",
         "statementIds": [
-          "shop:66",
-          "shop:67"
+          "shop:q05u3erpbzcw",
+          "shop:7pjw7512dy76v",
+          "shop:1y0q95o10flg7u"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "Return"
@@ -1163,7 +1177,7 @@
         "sourceBlockId": "shop:b_1",
         "targetBlockId": "shop:b_3",
         "metadata": {
-          "conditionStatementId": "shop:6"
+          "conditionStatementId": "shop:zwug4c1wlsgq"
         }
       },
       {
@@ -1205,7 +1219,7 @@
         "sourceBlockId": "shop:b_6",
         "targetBlockId": "shop:b_8",
         "metadata": {
-          "conditionStatementId": "shop:13"
+          "conditionStatementId": "shop:14tayk1scbbju"
         }
       },
       {
@@ -1227,8 +1241,8 @@
         "sourceBlockId": "shop:b_2",
         "targetBlockId": "shop:b_5",
         "metadata": {
-          "optionStatementId": "shop:15",
-          "conditionStatementId": "shop:15",
+          "optionStatementId": "shop:e642dr1k17nbh",
+          "conditionStatementId": "shop:e642dr1k17nbh",
           "choiceConditionKind": "selectable_if"
         }
       },
@@ -1259,7 +1273,7 @@
         "sourceBlockId": "shop:b_12",
         "targetBlockId": "shop:b_14",
         "metadata": {
-          "conditionStatementId": "shop:21"
+          "conditionStatementId": "shop:wwiupg5ibbfq"
         }
       },
       {
@@ -1281,8 +1295,8 @@
         "sourceBlockId": "shop:b_2",
         "targetBlockId": "shop:b_11",
         "metadata": {
-          "optionStatementId": "shop:23",
-          "conditionStatementId": "shop:23",
+          "optionStatementId": "shop:1ldapak1ch9bs2",
+          "conditionStatementId": "shop:1ldapak1ch9bs2",
           "choiceConditionKind": "selectable_if"
         }
       },
@@ -1313,7 +1327,7 @@
         "sourceBlockId": "shop:b_18",
         "targetBlockId": "shop:b_20",
         "metadata": {
-          "conditionStatementId": "shop:29"
+          "conditionStatementId": "shop:18h68i1okj7b8"
         }
       },
       {
@@ -1335,8 +1349,8 @@
         "sourceBlockId": "shop:b_2",
         "targetBlockId": "shop:b_17",
         "metadata": {
-          "optionStatementId": "shop:31",
-          "conditionStatementId": "shop:31",
+          "optionStatementId": "shop:1boto0cfvp9z2",
+          "conditionStatementId": "shop:1boto0cfvp9z2",
           "choiceConditionKind": "selectable_if"
         }
       },
@@ -1367,7 +1381,7 @@
         "sourceBlockId": "shop:b_24",
         "targetBlockId": "shop:b_26",
         "metadata": {
-          "conditionStatementId": "shop:37"
+          "conditionStatementId": "shop:q8m0jg1jauece"
         }
       },
       {
@@ -1389,8 +1403,8 @@
         "sourceBlockId": "shop:b_2",
         "targetBlockId": "shop:b_23",
         "metadata": {
-          "optionStatementId": "shop:39",
-          "conditionStatementId": "shop:39",
+          "optionStatementId": "shop:3i30ukgy7g46",
+          "conditionStatementId": "shop:3i30ukgy7g46",
           "choiceConditionKind": "selectable_if"
         }
       },
@@ -1407,7 +1421,7 @@
         "sourceBlockId": "shop:b_2",
         "targetBlockId": "shop:b_29",
         "metadata": {
-          "optionStatementId": "shop:41"
+          "optionStatementId": "shop:1xg9ucppnavh7"
         }
       },
       {
@@ -1442,7 +1456,7 @@
         "sourceBlockId": "shop:b_35",
         "targetBlockId": "shop:b_37",
         "metadata": {
-          "conditionStatementId": "shop:51"
+          "conditionStatementId": "shop:rqyvsk1121ezq"
         }
       },
       {
@@ -1462,7 +1476,7 @@
         "sourceBlockId": "shop:b_36",
         "targetBlockId": "shop:b_39",
         "metadata": {
-          "conditionStatementId": "shop:53"
+          "conditionStatementId": "shop:1im8r8jmu7qcx"
         }
       },
       {
@@ -1482,7 +1496,7 @@
         "sourceBlockId": "shop:b_38",
         "targetBlockId": "shop:b_41",
         "metadata": {
-          "conditionStatementId": "shop:55"
+          "conditionStatementId": "shop:1e8the7zd5lwh"
         }
       },
       {
@@ -1510,7 +1524,7 @@
         "sourceBlockId": "shop:b_33",
         "targetBlockId": "shop:b_35",
         "metadata": {
-          "optionStatementId": "shop:58"
+          "optionStatementId": "shop:4f32lg129enne"
         }
       },
       {
@@ -1526,7 +1540,7 @@
         "sourceBlockId": "shop:b_33",
         "targetBlockId": "shop:b_43",
         "metadata": {
-          "optionStatementId": "shop:61"
+          "optionStatementId": "shop:1e27jrzp16ayl"
         }
       },
       {
@@ -1552,7 +1566,7 @@
         "sourceBlockId": "shop:b_45",
         "targetBlockId": "shop:b_47",
         "metadata": {
-          "optionStatementId": "shop:65"
+          "optionStatementId": "shop:h4vnkulsjbv8"
         }
       },
       {
@@ -1566,7 +1580,7 @@
         "sourceBlockId": "shop:b_45",
         "targetBlockId": "shop:b_49",
         "metadata": {
-          "optionStatementId": "shop:68"
+          "optionStatementId": "shop:q05u3erpbzcw"
         }
       },
       {
@@ -1677,17 +1691,17 @@
       "startup:b_0": {
         "scene": "startup",
         "statementIds": [
-          "startup:0",
-          "startup:1",
-          "startup:2",
-          "startup:3",
-          "startup:4",
-          "startup:5",
-          "startup:6",
-          "startup:7",
-          "startup:8",
-          "startup:9",
-          "startup:10"
+          "startup:1g6hf8a6jo6n0",
+          "startup:azgpec11gxje6",
+          "startup:1vzlhqg1qvwieq",
+          "startup:1pr702bs4e265",
+          "startup:1iybakk1cu4wgu",
+          "startup:1skyrky1ps24og",
+          "startup:e65n6idi4gw0",
+          "startup:ixn0u31lcfbxt",
+          "startup:1qcx6wod4jwb6",
+          "startup:1vkz14q6n45s8",
+          "startup:q0lwv81oy2ih2"
         ],
         "entryType": "SceneEntry",
         "exitType": "Input"
@@ -1695,7 +1709,7 @@
       "startup:b_1": {
         "scene": "startup",
         "statementIds": [
-          "startup:11"
+          "startup:lewa3g8ul8iy"
         ],
         "entryType": "InputContinuation",
         "exitType": "FallThrough"
@@ -1703,10 +1717,10 @@
       "startup:b_2": {
         "scene": "startup",
         "statementIds": [
-          "startup:12",
-          "startup:13",
-          "startup:14",
-          "startup:29"
+          "startup:1as8znyzvtyc4",
+          "startup:1kj4zi1192z13v",
+          "startup:1fqih351na9kov",
+          "startup:ph5zg8ou4th2"
         ],
         "entryType": "Label",
         "exitType": "Choice",
@@ -1721,7 +1735,8 @@
       "startup:b_4": {
         "scene": "startup",
         "statementIds": [
-          "startup:16"
+          "startup:13yf5uassfb6w",
+          "startup:1jxhej1110r5a7"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "GotoScene"
@@ -1735,7 +1750,8 @@
       "startup:b_6": {
         "scene": "startup",
         "statementIds": [
-          "startup:18"
+          "startup:17m601aefawy4",
+          "startup:1i9jsd710grxw9"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "GotoScene"
@@ -1749,7 +1765,8 @@
       "startup:b_8": {
         "scene": "startup",
         "statementIds": [
-          "startup:21"
+          "startup:t3jxqsthyche",
+          "startup:1itizr5zwsqib"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "GotoScene"
@@ -1763,7 +1780,8 @@
       "startup:b_10": {
         "scene": "startup",
         "statementIds": [
-          "startup:23"
+          "startup:1qckepx159zgkz",
+          "startup:tz2km315hsyhd"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "GoSub"
@@ -1771,7 +1789,7 @@
       "startup:b_11": {
         "scene": "startup",
         "statementIds": [
-          "startup:24"
+          "startup:b83b49fif9xv"
         ],
         "entryType": "GoSubContinuation",
         "exitType": "Goto"
@@ -1785,7 +1803,8 @@
       "startup:b_13": {
         "scene": "startup",
         "statementIds": [
-          "startup:27"
+          "startup:17bafb7abjfd",
+          "startup:4n6jbq2nn8qk"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "Goto"
@@ -1799,9 +1818,9 @@
       "startup:b_15": {
         "scene": "startup",
         "statementIds": [
-          "startup:30",
-          "startup:31",
-          "startup:39"
+          "startup:1441a7t1cqr7nz",
+          "startup:lzw1djvwt33",
+          "startup:aw5osy17fria0"
         ],
         "entryType": "Label",
         "exitType": "Branch",
@@ -1816,8 +1835,8 @@
       "startup:b_17": {
         "scene": "startup",
         "statementIds": [
-          "startup:32",
-          "startup:33"
+          "startup:1nku2z2ojlf9",
+          "startup:1uglrax1tpjc8f"
         ],
         "entryType": "ConditionalBody",
         "exitType": "Goto"
@@ -1831,8 +1850,9 @@
       "startup:b_19": {
         "scene": "startup",
         "statementIds": [
-          "startup:34",
-          "startup:35"
+          "startup:mtljvc1q0r156",
+          "startup:1bklj3oyu62we",
+          "startup:10o6rz01yldi3m"
         ],
         "entryType": "ConditionalBody",
         "exitType": "Goto"
@@ -1846,7 +1866,8 @@
       "startup:b_21": {
         "scene": "startup",
         "statementIds": [
-          "startup:37"
+          "startup:19eroby118lc9g",
+          "startup:c7lgbp1m6e32z"
         ],
         "entryType": "ConditionalBody",
         "exitType": "FallThrough"
@@ -1854,9 +1875,9 @@
       "startup:b_22": {
         "scene": "startup",
         "statementIds": [
-          "startup:40",
-          "startup:41",
-          "startup:42"
+          "startup:nnjpm31k0pp45",
+          "startup:gdskwt8xat6v",
+          "startup:1csgr8b15rlt91"
         ],
         "entryType": "Label",
         "exitType": "Ending",
@@ -1871,9 +1892,9 @@
       "startup:b_24": {
         "scene": "startup",
         "statementIds": [
-          "startup:43",
-          "startup:44",
-          "startup:45"
+          "startup:5qw8w7199hr35",
+          "startup:1qn4xz117vt8zb",
+          "startup:3plqz11y00ujr"
         ],
         "entryType": "Label",
         "exitType": "Return",
@@ -1912,8 +1933,8 @@
         "sourceBlockId": "startup:b_2",
         "targetBlockId": "startup:b_4",
         "metadata": {
-          "optionStatementId": "startup:17",
-          "conditionStatementId": "startup:17",
+          "optionStatementId": "startup:13yf5uassfb6w",
+          "conditionStatementId": "startup:13yf5uassfb6w",
           "choiceConditionKind": "selectable_if"
         }
       },
@@ -1930,7 +1951,7 @@
         "sourceBlockId": "startup:b_2",
         "targetBlockId": "startup:b_6",
         "metadata": {
-          "optionStatementId": "startup:19"
+          "optionStatementId": "startup:17m601aefawy4"
         }
       },
       {
@@ -1946,8 +1967,8 @@
         "sourceBlockId": "startup:b_2",
         "targetBlockId": "startup:b_8",
         "metadata": {
-          "optionStatementId": "startup:22",
-          "conditionStatementId": "startup:22",
+          "optionStatementId": "startup:t3jxqsthyche",
+          "conditionStatementId": "startup:t3jxqsthyche",
           "choiceConditionKind": "selectable_if"
         }
       },
@@ -1978,7 +1999,7 @@
         "sourceBlockId": "startup:b_2",
         "targetBlockId": "startup:b_10",
         "metadata": {
-          "optionStatementId": "startup:25"
+          "optionStatementId": "startup:1qckepx159zgkz"
         }
       },
       {
@@ -1994,8 +2015,8 @@
         "sourceBlockId": "startup:b_2",
         "targetBlockId": "startup:b_13",
         "metadata": {
-          "optionStatementId": "startup:28",
-          "conditionStatementId": "startup:28",
+          "optionStatementId": "startup:17bafb7abjfd",
+          "conditionStatementId": "startup:17bafb7abjfd",
           "choiceConditionKind": "selectable_if"
         }
       },
@@ -2024,7 +2045,7 @@
         "sourceBlockId": "startup:b_15",
         "targetBlockId": "startup:b_17",
         "metadata": {
-          "conditionStatementId": "startup:39"
+          "conditionStatementId": "startup:aw5osy17fria0"
         }
       },
       {
@@ -2040,7 +2061,7 @@
         "sourceBlockId": "startup:b_15",
         "targetBlockId": "startup:b_19",
         "metadata": {
-          "conditionStatementId": "startup:36"
+          "conditionStatementId": "startup:mtljvc1q0r156"
         }
       },
       {
@@ -2178,9 +2199,9 @@
       "tavern:b_0": {
         "scene": "tavern",
         "statementIds": [
-          "tavern:0",
-          "tavern:1",
-          "tavern:2"
+          "tavern:1hnthl9eczten",
+          "tavern:4ka7vz1ozbt29",
+          "tavern:1jqvjdu19q0t5g"
         ],
         "entryType": "SceneEntry",
         "exitType": "FallThrough"
@@ -2188,8 +2209,8 @@
       "tavern:b_1": {
         "scene": "tavern",
         "statementIds": [
-          "tavern:3",
-          "tavern:24"
+          "tavern:o90s069bb51w",
+          "tavern:1fu3u29b6gft7"
         ],
         "entryType": "Label",
         "exitType": "Choice",
@@ -2204,11 +2225,12 @@
       "tavern:b_3": {
         "scene": "tavern",
         "statementIds": [
-          "tavern:5",
-          "tavern:6",
-          "tavern:7",
-          "tavern:8",
-          "tavern:11"
+          "tavern:kdwzam1ns9m9c",
+          "tavern:1z0q7d2opis7",
+          "tavern:10t60rl13jy8v",
+          "tavern:1gprctq1hae9bg",
+          "tavern:eqaxco11j31l6",
+          "tavern:1a68u35wlswzj"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "Branch"
@@ -2216,7 +2238,7 @@
       "tavern:b_4": {
         "scene": "tavern",
         "statementIds": [
-          "tavern:12"
+          "tavern:3bngrhoc6n13"
         ],
         "entryType": "Continuation",
         "exitType": "Goto"
@@ -2224,8 +2246,8 @@
       "tavern:b_5": {
         "scene": "tavern",
         "statementIds": [
-          "tavern:9",
-          "tavern:10"
+          "tavern:pv0wpkxj5y06",
+          "tavern:1s1o09n190h2ud"
         ],
         "entryType": "ConditionalBody",
         "exitType": "FallThrough"
@@ -2239,7 +2261,8 @@
       "tavern:b_7": {
         "scene": "tavern",
         "statementIds": [
-          "tavern:14"
+          "tavern:1mvv38x1ng5npj",
+          "tavern:14za7hdw6dofv"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "GoSub"
@@ -2247,7 +2270,7 @@
       "tavern:b_8": {
         "scene": "tavern",
         "statementIds": [
-          "tavern:15"
+          "tavern:16jxla4l7oiai"
         ],
         "entryType": "GoSubContinuation",
         "exitType": "Goto"
@@ -2261,9 +2284,10 @@
       "tavern:b_10": {
         "scene": "tavern",
         "statementIds": [
-          "tavern:18",
-          "tavern:19",
-          "tavern:20"
+          "tavern:ikswfp1tlaa6b",
+          "tavern:156tb9q1b9vw6s",
+          "tavern:xxogng18z91wm",
+          "tavern:9tvkudxq6lqj"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "Goto"
@@ -2277,7 +2301,8 @@
       "tavern:b_12": {
         "scene": "tavern",
         "statementIds": [
-          "tavern:22"
+          "tavern:1xbvp2j14r82sh",
+          "tavern:1hg2kgs1v5s4li"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "Goto"
@@ -2291,9 +2316,9 @@
       "tavern:b_14": {
         "scene": "tavern",
         "statementIds": [
-          "tavern:25",
-          "tavern:26",
-          "tavern:27"
+          "tavern:rrj45d1yezufv",
+          "tavern:1qvlkhn7iwpep",
+          "tavern:31y74x1in81g3"
         ],
         "entryType": "Label",
         "exitType": "GotoScene",
@@ -2308,9 +2333,9 @@
       "tavern:b_16": {
         "scene": "tavern",
         "statementIds": [
-          "tavern:28",
-          "tavern:29",
-          "tavern:46"
+          "tavern:sly6sc1n8o0e6",
+          "tavern:o66mx4lh90j2",
+          "tavern:1f6cjoz15pht81"
         ],
         "entryType": "Label",
         "exitType": "Choice",
@@ -2325,9 +2350,10 @@
       "tavern:b_18": {
         "scene": "tavern",
         "statementIds": [
-          "tavern:30",
-          "tavern:31",
-          "tavern:32"
+          "tavern:1iazjiu1m592lc",
+          "tavern:qe3wr5pxno2n",
+          "tavern:10a4t811dj6z6z",
+          "tavern:11uf6akzb87ua"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "Return"
@@ -2341,8 +2367,9 @@
       "tavern:b_20": {
         "scene": "tavern",
         "statementIds": [
-          "tavern:34",
-          "tavern:35"
+          "tavern:1lctdtc1rwo51e",
+          "tavern:ese0anihov65",
+          "tavern:2lqhp41ww5l9u"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "Return"
@@ -2356,7 +2383,8 @@
       "tavern:b_22": {
         "scene": "tavern",
         "statementIds": [
-          "tavern:43"
+          "tavern:mmi5aa1a5pj28",
+          "tavern:1dfjud5baign7"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "Branch"
@@ -2364,7 +2392,7 @@
       "tavern:b_23": {
         "scene": "tavern",
         "statementIds": [
-          "tavern:44"
+          "tavern:17pbqa1vi4fb0"
         ],
         "entryType": "Continuation",
         "exitType": "Return"
@@ -2372,9 +2400,9 @@
       "tavern:b_24": {
         "scene": "tavern",
         "statementIds": [
-          "tavern:37",
-          "tavern:38",
-          "tavern:39"
+          "tavern:jnscly101m2sg",
+          "tavern:1d1jbr960op1j",
+          "tavern:7vs7mpjug3nf"
         ],
         "entryType": "ConditionalBody",
         "exitType": "FallThrough"
@@ -2382,8 +2410,9 @@
       "tavern:b_25": {
         "scene": "tavern",
         "statementIds": [
-          "tavern:40",
-          "tavern:41"
+          "tavern:x8t9p980oomb",
+          "tavern:1to47oqxvf6eg",
+          "tavern:1gnqiip49s9gj"
         ],
         "entryType": "ConditionalBody",
         "exitType": "FallThrough"
@@ -2407,7 +2436,7 @@
         "sourceBlockId": "tavern:b_3",
         "targetBlockId": "tavern:b_5",
         "metadata": {
-          "conditionStatementId": "tavern:11"
+          "conditionStatementId": "tavern:1a68u35wlswzj"
         }
       },
       {
@@ -2435,8 +2464,8 @@
         "sourceBlockId": "tavern:b_1",
         "targetBlockId": "tavern:b_3",
         "metadata": {
-          "optionStatementId": "tavern:13",
-          "conditionStatementId": "tavern:13",
+          "optionStatementId": "tavern:kdwzam1ns9m9c",
+          "conditionStatementId": "tavern:kdwzam1ns9m9c",
           "choiceConditionKind": "selectable_if"
         }
       },
@@ -2467,7 +2496,7 @@
         "sourceBlockId": "tavern:b_1",
         "targetBlockId": "tavern:b_7",
         "metadata": {
-          "optionStatementId": "tavern:16"
+          "optionStatementId": "tavern:1mvv38x1ng5npj"
         }
       },
       {
@@ -2483,8 +2512,8 @@
         "sourceBlockId": "tavern:b_1",
         "targetBlockId": "tavern:b_10",
         "metadata": {
-          "optionStatementId": "tavern:21",
-          "conditionStatementId": "tavern:21",
+          "optionStatementId": "tavern:ikswfp1tlaa6b",
+          "conditionStatementId": "tavern:ikswfp1tlaa6b",
           "choiceConditionKind": "selectable_if"
         }
       },
@@ -2501,7 +2530,7 @@
         "sourceBlockId": "tavern:b_1",
         "targetBlockId": "tavern:b_12",
         "metadata": {
-          "optionStatementId": "tavern:23"
+          "optionStatementId": "tavern:1xbvp2j14r82sh"
         }
       },
       {
@@ -2542,7 +2571,7 @@
         "sourceBlockId": "tavern:b_16",
         "targetBlockId": "tavern:b_18",
         "metadata": {
-          "optionStatementId": "tavern:33"
+          "optionStatementId": "tavern:1iazjiu1m592lc"
         }
       },
       {
@@ -2556,7 +2585,7 @@
         "sourceBlockId": "tavern:b_16",
         "targetBlockId": "tavern:b_20",
         "metadata": {
-          "optionStatementId": "tavern:36"
+          "optionStatementId": "tavern:1lctdtc1rwo51e"
         }
       },
       {
@@ -2564,7 +2593,7 @@
         "sourceBlockId": "tavern:b_22",
         "targetBlockId": "tavern:b_24",
         "metadata": {
-          "conditionStatementId": "tavern:43"
+          "conditionStatementId": "tavern:1dfjud5baign7"
         }
       },
       {
@@ -2596,7 +2625,7 @@
         "sourceBlockId": "tavern:b_16",
         "targetBlockId": "tavern:b_22",
         "metadata": {
-          "optionStatementId": "tavern:45"
+          "optionStatementId": "tavern:mmi5aa1a5pj28"
         }
       },
       {

@@ -1,0 +1,379 @@
+[
+  {
+    "sceneName": "arena",
+    "blocks": {
+      "arena:b_0": {
+        "exitType": "Branch"
+      },
+      "arena:b_1": {
+        "exitType": "Branch"
+      },
+      "arena:b_2": {
+        "exitType": "FallThrough"
+      },
+      "arena:b_3": {
+        "exitType": "Finish"
+      },
+      "arena:b_4": {
+        "exitType": "FallThrough"
+      },
+      "arena:b_5": {
+        "exitType": "FallThrough"
+      }
+    },
+    "blockIndex": {
+      "arena:b_0": {
+        "scene": "arena",
+        "statementIds": [
+          "arena:1pez0rorg6u8e",
+          "arena:roa4vjh1hc7t",
+          "arena:nmovp71v8mrvl"
+        ],
+        "entryType": "SceneEntry",
+        "exitType": "Branch"
+      },
+      "arena:b_1": {
+        "scene": "arena",
+        "statementIds": [
+          "arena:14qqvan1bu4vwp"
+        ],
+        "entryType": "Continuation",
+        "exitType": "Branch"
+      },
+      "arena:b_2": {
+        "scene": "arena",
+        "statementIds": [
+          "arena:1solh4h1lqmw6b",
+          "arena:14tihqnduom8p"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "FallThrough"
+      },
+      "arena:b_3": {
+        "scene": "arena",
+        "statementIds": [
+          "arena:gklsb21h08oto"
+        ],
+        "entryType": "Continuation",
+        "exitType": "Finish"
+      },
+      "arena:b_4": {
+        "scene": "arena",
+        "statementIds": [
+          "arena:xhccx51nvw6t3"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "FallThrough"
+      },
+      "arena:b_5": {
+        "scene": "arena",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      }
+    },
+    "edges": [
+      {
+        "kind": "IfBranch",
+        "sourceBlockId": "arena:b_0",
+        "targetBlockId": "arena:b_2",
+        "metadata": {
+          "conditionStatementId": "arena:nmovp71v8mrvl"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "arena:b_2",
+        "targetBlockId": "arena:b_1",
+        "metadata": {}
+      },
+      {
+        "kind": "IfFallThrough",
+        "sourceBlockId": "arena:b_0",
+        "targetBlockId": "arena:b_1",
+        "metadata": {}
+      },
+      {
+        "kind": "IfBranch",
+        "sourceBlockId": "arena:b_1",
+        "targetBlockId": "arena:b_4",
+        "metadata": {
+          "conditionStatementId": "arena:14qqvan1bu4vwp"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "arena:b_4",
+        "targetBlockId": "arena:b_3",
+        "metadata": {}
+      },
+      {
+        "kind": "IfFallThrough",
+        "sourceBlockId": "arena:b_1",
+        "targetBlockId": "arena:b_3",
+        "metadata": {}
+      },
+      {
+        "kind": "SceneExit",
+        "sourceBlockId": "arena:b_3",
+        "targetBlockId": null,
+        "metadata": {}
+      }
+    ],
+    "entryBlockId": "arena:b_0",
+    "labelToBlockId": {},
+    "unresolvedEdges": []
+  },
+  {
+    "sceneName": "shop",
+    "blocks": {
+      "shop:b_0": {
+        "exitType": "Branch"
+      },
+      "shop:b_1": {
+        "exitType": "Finish"
+      },
+      "shop:b_2": {
+        "exitType": "FallThrough"
+      },
+      "shop:b_3": {
+        "exitType": "FallThrough"
+      }
+    },
+    "blockIndex": {
+      "shop:b_0": {
+        "scene": "shop",
+        "statementIds": [
+          "shop:jezvrd1lr5lx3",
+          "shop:1dhc3l719vgqnd"
+        ],
+        "entryType": "SceneEntry",
+        "exitType": "Branch"
+      },
+      "shop:b_1": {
+        "scene": "shop",
+        "statementIds": [
+          "shop:16e2jbx1fhgv3f",
+          "shop:1h5zr7oebhiqa",
+          "shop:fqmz851ie6paj"
+        ],
+        "entryType": "Continuation",
+        "exitType": "Finish"
+      },
+      "shop:b_2": {
+        "scene": "shop",
+        "statementIds": [
+          "shop:1nnrx4luaf8w3"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "FallThrough"
+      },
+      "shop:b_3": {
+        "scene": "shop",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      }
+    },
+    "edges": [
+      {
+        "kind": "IfBranch",
+        "sourceBlockId": "shop:b_0",
+        "targetBlockId": "shop:b_2",
+        "metadata": {
+          "conditionStatementId": "shop:1dhc3l719vgqnd"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "shop:b_2",
+        "targetBlockId": "shop:b_1",
+        "metadata": {}
+      },
+      {
+        "kind": "IfFallThrough",
+        "sourceBlockId": "shop:b_0",
+        "targetBlockId": "shop:b_1",
+        "metadata": {}
+      },
+      {
+        "kind": "SceneExit",
+        "sourceBlockId": "shop:b_1",
+        "targetBlockId": null,
+        "metadata": {}
+      }
+    ],
+    "entryBlockId": "shop:b_0",
+    "labelToBlockId": {},
+    "unresolvedEdges": []
+  },
+  {
+    "sceneName": "startup",
+    "blocks": {
+      "startup:b_0": {
+        "exitType": "GotoScene"
+      },
+      "startup:b_1": {
+        "exitType": "FallThrough"
+      }
+    },
+    "blockIndex": {
+      "startup:b_0": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:1mt59xe1p4v2f0",
+          "startup:1xepsc7dt7ojh",
+          "startup:3vvrzp17ihmpv",
+          "startup:kzsmge1bvfm00",
+          "startup:nmjw3arik6v0",
+          "startup:sogix8ktuefe",
+          "startup:17iwk1f18i5bxx"
+        ],
+        "entryType": "SceneEntry",
+        "exitType": "GotoScene"
+      },
+      "startup:b_1": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      }
+    },
+    "edges": [
+      {
+        "kind": "GotoScene",
+        "sourceBlockId": "startup:b_0",
+        "targetBlockId": null,
+        "metadata": {
+          "targetScene": "town"
+        }
+      }
+    ],
+    "entryBlockId": "startup:b_0",
+    "labelToBlockId": {},
+    "unresolvedEdges": []
+  },
+  {
+    "sceneName": "town",
+    "blocks": {
+      "town:b_0": {
+        "exitType": "Choice"
+      },
+      "town:b_1": {
+        "exitType": "ImplicitEnd"
+      },
+      "town:b_2": {
+        "exitType": "GotoScene"
+      },
+      "town:b_3": {
+        "exitType": "FallThrough"
+      },
+      "town:b_4": {
+        "exitType": "GotoScene"
+      },
+      "town:b_5": {
+        "exitType": "FallThrough"
+      }
+    },
+    "blockIndex": {
+      "town:b_0": {
+        "scene": "town",
+        "statementIds": [
+          "town:1mni2vgia778m",
+          "town:mtxnsv1vua3ex",
+          "town:m862k11w0ivu"
+        ],
+        "entryType": "SceneEntry",
+        "exitType": "Choice"
+      },
+      "town:b_1": {
+        "scene": "town",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "ImplicitEnd"
+      },
+      "town:b_2": {
+        "scene": "town",
+        "statementIds": [
+          "town:iqr1er1s2op5d",
+          "town:6p2z7l1q47s2z",
+          "town:1mq7c297r3mnn",
+          "town:17iwk1f18i5bxx"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "GotoScene"
+      },
+      "town:b_3": {
+        "scene": "town",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "town:b_4": {
+        "scene": "town",
+        "statementIds": [
+          "town:t9bjgp1uy17o7",
+          "town:7q8y391ox2ayr",
+          "town:fpep1rzmpzbd"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "GotoScene"
+      },
+      "town:b_5": {
+        "scene": "town",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      }
+    },
+    "edges": [
+      {
+        "kind": "GotoScene",
+        "sourceBlockId": "town:b_2",
+        "targetBlockId": null,
+        "metadata": {
+          "targetScene": "shop"
+        }
+      },
+      {
+        "kind": "ChoiceOption",
+        "sourceBlockId": "town:b_0",
+        "targetBlockId": "town:b_2",
+        "metadata": {
+          "optionStatementId": "town:iqr1er1s2op5d"
+        }
+      },
+      {
+        "kind": "GotoScene",
+        "sourceBlockId": "town:b_4",
+        "targetBlockId": null,
+        "metadata": {
+          "targetScene": "arena"
+        }
+      },
+      {
+        "kind": "ChoiceOption",
+        "sourceBlockId": "town:b_0",
+        "targetBlockId": "town:b_4",
+        "metadata": {
+          "optionStatementId": "town:t9bjgp1uy17o7"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "town:b_0",
+        "targetBlockId": "town:b_1",
+        "metadata": {}
+      },
+      {
+        "kind": "SceneExit",
+        "sourceBlockId": "town:b_1",
+        "targetBlockId": null,
+        "metadata": {}
+      }
+    ],
+    "entryBlockId": "town:b_0",
+    "labelToBlockId": {},
+    "unresolvedEdges": []
+  }
+]

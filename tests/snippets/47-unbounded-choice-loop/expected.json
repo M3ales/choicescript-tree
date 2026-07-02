@@ -1,0 +1,372 @@
+[
+  {
+    "name": "startup",
+    "statements": [
+      {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "mood",
+          "rawValue": "mood",
+          "position": 8,
+          "lineNumber": 0,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "StringLiteral",
+            "value": "neutral",
+            "position": 13,
+            "lineNumber": 0,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 0,
+          "position": 0
+        }
+      },
+      {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 2,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "chat_hub",
+          "rawValue": "chat_hub",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 2,
+          "position": 7,
+          "isLabelName": true
+        }
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 3,
+            "position": 0,
+            "indent": 0,
+            "content": "Who do you talk to?\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 20,
+            "lineNumber": 3,
+            "position": 0,
+            "text": "Who do you talk to?\n"
+          }
+        ]
+      },
+      {
+        "kind": "Choice",
+        "token": {
+          "type": "Choice",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 4,
+          "position": 0
+        },
+        "body": [
+          {
+            "kind": "ChoiceOption",
+            "token": {
+              "type": "ChoiceOption",
+              "sceneName": "startup",
+              "indent": 1,
+              "lineNumber": 5,
+              "position": 2,
+              "rawText": "Talk to the guard.",
+              "hasMultiReplace": false
+            },
+            "body": [
+              {
+                "content": [
+                  {
+                    "type": "Prose",
+                    "sceneName": "startup",
+                    "lineNumber": 6,
+                    "position": 4,
+                    "indent": 2,
+                    "content": "The guard nods.\n"
+                  }
+                ],
+                "kind": "Prose",
+                "parsedSegments": [
+                  {
+                    "kind": "Text",
+                    "start": 0,
+                    "end": 16,
+                    "lineNumber": 6,
+                    "position": 4,
+                    "text": "The guard nods.\n"
+                  }
+                ]
+              },
+              {
+                "kind": "SetVariable",
+                "expression": {
+                  "kind": "Identifier",
+                  "token": {
+                    "type": "Identifier",
+                    "value": "mood",
+                    "rawValue": "mood",
+                    "position": 9,
+                    "lineNumber": 7,
+                    "sceneName": "startup",
+                    "indent": 2
+                  }
+                },
+                "assignment": {
+                  "kind": "Literal",
+                  "value": {
+                    "type": "StringLiteral",
+                    "value": "alert",
+                    "position": 14,
+                    "lineNumber": 7,
+                    "sceneName": "startup",
+                    "indent": 2
+                  }
+                },
+                "token": {
+                  "type": "SetVariable",
+                  "sceneName": "startup",
+                  "indent": 2,
+                  "lineNumber": 7,
+                  "position": 4
+                }
+              },
+              {
+                "kind": "GotoLabel",
+                "token": {
+                  "type": "GotoLabel",
+                  "sceneName": "startup",
+                  "indent": 2,
+                  "lineNumber": 8,
+                  "position": 4
+                },
+                "label": {
+                  "type": "Identifier",
+                  "value": "chat_hub",
+                  "rawValue": "chat_hub",
+                  "sceneName": "startup",
+                  "indent": 2,
+                  "lineNumber": 8,
+                  "position": 10,
+                  "isLabelName": true
+                }
+              }
+            ],
+            "parsedSegments": [
+              {
+                "kind": "Text",
+                "start": 0,
+                "end": 18,
+                "lineNumber": 5,
+                "position": 3,
+                "text": "Talk to the guard."
+              }
+            ],
+            "reuse": null,
+            "selectableIf": null
+          },
+          {
+            "kind": "ChoiceOption",
+            "token": {
+              "type": "ChoiceOption",
+              "sceneName": "startup",
+              "indent": 1,
+              "lineNumber": 9,
+              "position": 2,
+              "rawText": "Talk to the merchant.",
+              "hasMultiReplace": false
+            },
+            "body": [
+              {
+                "content": [
+                  {
+                    "type": "Prose",
+                    "sceneName": "startup",
+                    "lineNumber": 10,
+                    "position": 4,
+                    "indent": 2,
+                    "content": "The merchant smiles.\n"
+                  }
+                ],
+                "kind": "Prose",
+                "parsedSegments": [
+                  {
+                    "kind": "Text",
+                    "start": 0,
+                    "end": 21,
+                    "lineNumber": 10,
+                    "position": 4,
+                    "text": "The merchant smiles.\n"
+                  }
+                ]
+              },
+              {
+                "kind": "SetVariable",
+                "expression": {
+                  "kind": "Identifier",
+                  "token": {
+                    "type": "Identifier",
+                    "value": "mood",
+                    "rawValue": "mood",
+                    "position": 9,
+                    "lineNumber": 11,
+                    "sceneName": "startup",
+                    "indent": 2
+                  }
+                },
+                "assignment": {
+                  "kind": "Literal",
+                  "value": {
+                    "type": "StringLiteral",
+                    "value": "happy",
+                    "position": 14,
+                    "lineNumber": 11,
+                    "sceneName": "startup",
+                    "indent": 2
+                  }
+                },
+                "token": {
+                  "type": "SetVariable",
+                  "sceneName": "startup",
+                  "indent": 2,
+                  "lineNumber": 11,
+                  "position": 4
+                }
+              },
+              {
+                "kind": "GotoLabel",
+                "token": {
+                  "type": "GotoLabel",
+                  "sceneName": "startup",
+                  "indent": 2,
+                  "lineNumber": 12,
+                  "position": 4
+                },
+                "label": {
+                  "type": "Identifier",
+                  "value": "chat_hub",
+                  "rawValue": "chat_hub",
+                  "sceneName": "startup",
+                  "indent": 2,
+                  "lineNumber": 12,
+                  "position": 10,
+                  "isLabelName": true
+                }
+              }
+            ],
+            "parsedSegments": [
+              {
+                "kind": "Text",
+                "start": 0,
+                "end": 21,
+                "lineNumber": 9,
+                "position": 3,
+                "text": "Talk to the merchant."
+              }
+            ],
+            "reuse": null,
+            "selectableIf": null
+          },
+          {
+            "kind": "ChoiceOption",
+            "token": {
+              "type": "ChoiceOption",
+              "sceneName": "startup",
+              "indent": 1,
+              "lineNumber": 13,
+              "position": 2,
+              "rawText": "Leave.",
+              "hasMultiReplace": false
+            },
+            "body": [
+              {
+                "content": [
+                  {
+                    "type": "Prose",
+                    "sceneName": "startup",
+                    "lineNumber": 14,
+                    "position": 4,
+                    "indent": 2,
+                    "content": "You walk away.\n"
+                  }
+                ],
+                "kind": "Prose",
+                "parsedSegments": [
+                  {
+                    "kind": "Text",
+                    "start": 0,
+                    "end": 15,
+                    "lineNumber": 14,
+                    "position": 4,
+                    "text": "You walk away.\n"
+                  }
+                ]
+              },
+              {
+                "kind": "Finish",
+                "token": {
+                  "type": "Finish",
+                  "sceneName": "startup",
+                  "indent": 2,
+                  "lineNumber": 15,
+                  "position": 4
+                },
+                "buttonText": null
+              }
+            ],
+            "parsedSegments": [
+              {
+                "kind": "Text",
+                "start": 0,
+                "end": 6,
+                "lineNumber": 13,
+                "position": 3,
+                "text": "Leave."
+              }
+            ],
+            "reuse": null,
+            "selectableIf": null
+          }
+        ]
+      }
+    ],
+    "parseErrors": [],
+    "start": {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    "end": {
+      "type": "Finish",
+      "sceneName": "startup",
+      "indent": 2,
+      "lineNumber": 15,
+      "position": 4
+    }
+  }
+]

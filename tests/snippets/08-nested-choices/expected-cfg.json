@@ -37,9 +37,9 @@
       "startup:b_0": {
         "scene": "startup",
         "statementIds": [
-          "startup:0",
-          "startup:1",
-          "startup:17"
+          "startup:1ynjqknceclr9",
+          "startup:pxd8ufe2z089",
+          "startup:pmvhg41q2ygo6"
         ],
         "entryType": "SceneEntry",
         "exitType": "Choice"
@@ -53,9 +53,10 @@
       "startup:b_2": {
         "scene": "startup",
         "statementIds": [
-          "startup:2",
-          "startup:3",
-          "startup:12"
+          "startup:18l4kz81siw0sa",
+          "startup:7isbfl13paj37",
+          "startup:16b45dhraq797",
+          "startup:14q4e711gbrto3"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "Choice"
@@ -69,9 +70,10 @@
       "startup:b_4": {
         "scene": "startup",
         "statementIds": [
-          "startup:4",
-          "startup:5",
-          "startup:6"
+          "startup:1a43a8f1nqhfo5",
+          "startup:6jldstf966dz",
+          "startup:1lzp9001qtf65q",
+          "startup:1fem2zs1l65ziq"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "Finish"
@@ -85,9 +87,10 @@
       "startup:b_6": {
         "scene": "startup",
         "statementIds": [
-          "startup:8",
-          "startup:9",
-          "startup:10"
+          "startup:187tsk11a7x28z",
+          "startup:xyjm4d1g6okon",
+          "startup:cbn35fe028rp",
+          "startup:1gikhro1k27kqu"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "Finish"
@@ -101,8 +104,9 @@
       "startup:b_8": {
         "scene": "startup",
         "statementIds": [
-          "startup:14",
-          "startup:15"
+          "startup:1ago1lc7ne35y",
+          "startup:1f28vguwbwhws",
+          "startup:1dgov4z1no2erh"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "Finish"
@@ -126,7 +130,7 @@
         "sourceBlockId": "startup:b_2",
         "targetBlockId": "startup:b_4",
         "metadata": {
-          "optionStatementId": "startup:7"
+          "optionStatementId": "startup:1a43a8f1nqhfo5"
         }
       },
       {
@@ -140,7 +144,7 @@
         "sourceBlockId": "startup:b_2",
         "targetBlockId": "startup:b_6",
         "metadata": {
-          "optionStatementId": "startup:11"
+          "optionStatementId": "startup:187tsk11a7x28z"
         }
       },
       {
@@ -154,7 +158,7 @@
         "sourceBlockId": "startup:b_0",
         "targetBlockId": "startup:b_2",
         "metadata": {
-          "optionStatementId": "startup:13"
+          "optionStatementId": "startup:18l4kz81siw0sa"
         }
       },
       {
@@ -176,7 +180,7 @@
         "sourceBlockId": "startup:b_0",
         "targetBlockId": "startup:b_8",
         "metadata": {
-          "optionStatementId": "startup:16"
+          "optionStatementId": "startup:1ago1lc7ne35y"
         }
       },
       {

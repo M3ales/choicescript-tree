@@ -1,0 +1,785 @@
+{
+  "states": [
+    {
+      "cfgId": "startup:",
+      "entryGlobals": [
+        {
+          "gold": "100",
+          "reputation": "50",
+          "strength": "40",
+          "charm": "60",
+          "quest_complete": "false",
+          "items_bought": "0",
+          "arena_wins": "0",
+          "tavern_visits": "0",
+          "name": ""
+        }
+      ],
+      "exitGlobals": [
+        {
+          "gold": "100",
+          "reputation": "50",
+          "strength": "40",
+          "charm": "60",
+          "quest_complete": "false",
+          "items_bought": "0",
+          "arena_wins": "0",
+          "tavern_visits": "0",
+          "name": "input"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:village_hub",
+      "entryGlobals": [
+        {
+          "gold": "100",
+          "reputation": "50",
+          "strength": "40",
+          "charm": "60",
+          "quest_complete": "false",
+          "items_bought": "0",
+          "arena_wins": "0",
+          "tavern_visits": "0",
+          "name": "input"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "gold": "100",
+          "reputation": "50",
+          "strength": "40",
+          "charm": "60",
+          "quest_complete": "false",
+          "items_bought": "0",
+          "arena_wins": "0",
+          "tavern_visits": "1",
+          "name": "input"
+        }
+      ]
+    },
+    {
+      "cfgId": "shop:",
+      "entryGlobals": [
+        {
+          "gold": "100",
+          "reputation": "50",
+          "strength": "40",
+          "charm": "60",
+          "quest_complete": "false",
+          "items_bought": "0",
+          "arena_wins": "0",
+          "tavern_visits": "1",
+          "name": "input"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "gold": "100",
+          "reputation": "50",
+          "strength": "40",
+          "charm": "60",
+          "quest_complete": "false",
+          "items_bought": "0",
+          "arena_wins": "0",
+          "tavern_visits": "1",
+          "name": "input"
+        }
+      ]
+    },
+    {
+      "cfgId": "shop:shop_hub",
+      "entryGlobals": [
+        {
+          "gold": "100",
+          "reputation": "50",
+          "strength": "40",
+          "charm": "60",
+          "quest_complete": "false",
+          "items_bought": "0",
+          "arena_wins": "0",
+          "tavern_visits": "1",
+          "name": "input"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "gold": "100",
+          "reputation": "50",
+          "strength": "40",
+          "charm": "60",
+          "quest_complete": "false",
+          "items_bought": "0",
+          "arena_wins": "0",
+          "tavern_visits": "1",
+          "name": "input"
+        }
+      ]
+    },
+    {
+      "cfgId": "tavern:",
+      "entryGlobals": [
+        {
+          "gold": "100",
+          "reputation": "50",
+          "strength": "40",
+          "charm": "60",
+          "quest_complete": "false",
+          "items_bought": "0",
+          "arena_wins": "0",
+          "tavern_visits": "1",
+          "name": "input"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "gold": "100",
+          "reputation": "50",
+          "strength": "40",
+          "charm": "60",
+          "quest_complete": "false",
+          "items_bought": "0",
+          "arena_wins": "0",
+          "tavern_visits": "1",
+          "name": "input"
+        }
+      ]
+    },
+    {
+      "cfgId": "tavern:tavern_hub",
+      "entryGlobals": [
+        {
+          "gold": "100",
+          "reputation": "50",
+          "strength": "40",
+          "charm": "60",
+          "quest_complete": "false",
+          "items_bought": "0",
+          "arena_wins": "0",
+          "tavern_visits": "1",
+          "name": "input"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "gold": "95",
+          "reputation": "57",
+          "strength": "40",
+          "charm": "60",
+          "quest_complete": "false",
+          "items_bought": "0",
+          "arena_wins": "0",
+          "tavern_visits": "1",
+          "name": "input"
+        }
+      ]
+    },
+    {
+      "cfgId": "arena:",
+      "entryGlobals": [
+        {
+          "gold": "100",
+          "reputation": "50",
+          "strength": "40",
+          "charm": "60",
+          "quest_complete": "false",
+          "items_bought": "0",
+          "arena_wins": "0",
+          "tavern_visits": "1",
+          "name": "input"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "gold": "100",
+          "reputation": "50",
+          "strength": "40",
+          "charm": "60",
+          "quest_complete": "false",
+          "items_bought": "0",
+          "arena_wins": "0",
+          "tavern_visits": "1",
+          "name": "input"
+        }
+      ]
+    },
+    {
+      "cfgId": "arena:combat_loop",
+      "entryGlobals": [
+        {
+          "gold": "100",
+          "reputation": "50",
+          "strength": "40",
+          "charm": "60",
+          "quest_complete": "false",
+          "items_bought": "0",
+          "arena_wins": "0",
+          "tavern_visits": "1",
+          "name": "input"
+        },
+        {
+          "gold": "100",
+          "reputation": "50",
+          "strength": "40",
+          "charm": "60",
+          "quest_complete": "false",
+          "items_bought": "0",
+          "arena_wins": "0",
+          "tavern_visits": "1",
+          "name": "input"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "gold": "100",
+          "reputation": "50",
+          "strength": "40",
+          "charm": "60",
+          "quest_complete": "false",
+          "items_bought": "0",
+          "arena_wins": "0",
+          "tavern_visits": "1",
+          "name": "input"
+        },
+        {
+          "gold": "100",
+          "reputation": "50",
+          "strength": "40",
+          "charm": "60",
+          "quest_complete": "false",
+          "items_bought": "0",
+          "arena_wins": "0",
+          "tavern_visits": "1",
+          "name": "input"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:show_stats",
+      "entryGlobals": [
+        {
+          "gold": "100",
+          "reputation": "50",
+          "strength": "40",
+          "charm": "60",
+          "quest_complete": "false",
+          "items_bought": "0",
+          "arena_wins": "0",
+          "tavern_visits": "1",
+          "name": "input"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "gold": "100",
+          "reputation": "50",
+          "strength": "40",
+          "charm": "60",
+          "quest_complete": "false",
+          "items_bought": "0",
+          "arena_wins": "0",
+          "tavern_visits": "1",
+          "name": "input"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:village_hub__cont_0",
+      "entryGlobals": [
+        {
+          "gold": "100",
+          "reputation": "50",
+          "strength": "40",
+          "charm": "60",
+          "quest_complete": "false",
+          "items_bought": "0",
+          "arena_wins": "0",
+          "tavern_visits": "1",
+          "name": "input"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "gold": "100",
+          "reputation": "50",
+          "strength": "40",
+          "charm": "60",
+          "quest_complete": "false",
+          "items_bought": "0",
+          "arena_wins": "0",
+          "tavern_visits": "1",
+          "name": "input"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:ending",
+      "entryGlobals": [
+        {
+          "gold": "100",
+          "reputation": "50",
+          "strength": "40",
+          "charm": "60",
+          "quest_complete": "false",
+          "items_bought": "0",
+          "arena_wins": "0",
+          "tavern_visits": "1",
+          "name": "input"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "gold": "100",
+          "reputation": "50",
+          "strength": "40",
+          "charm": "60",
+          "quest_complete": "false",
+          "items_bought": "0",
+          "arena_wins": "0",
+          "tavern_visits": "1",
+          "name": "input"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:final",
+      "entryGlobals": [
+        {
+          "gold": "100",
+          "reputation": "50",
+          "strength": "40",
+          "charm": "60",
+          "quest_complete": "false",
+          "items_bought": "0",
+          "arena_wins": "0",
+          "tavern_visits": "1",
+          "name": "input"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "gold": "100",
+          "reputation": "50",
+          "strength": "40",
+          "charm": "60",
+          "quest_complete": "false",
+          "items_bought": "0",
+          "arena_wins": "0",
+          "tavern_visits": "1",
+          "name": "input"
+        }
+      ]
+    },
+    {
+      "cfgId": "shop:confirm_purchase",
+      "entryGlobals": [
+        {
+          "gold": "100",
+          "reputation": "50",
+          "strength": "40",
+          "charm": "60",
+          "quest_complete": "false",
+          "items_bought": "0",
+          "arena_wins": "0",
+          "tavern_visits": "1",
+          "name": "input"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "gold": "70",
+          "reputation": "50",
+          "strength": "65",
+          "charm": "75",
+          "quest_complete": "false",
+          "items_bought": "1",
+          "arena_wins": "0",
+          "tavern_visits": "1",
+          "name": "input"
+        }
+      ]
+    },
+    {
+      "cfgId": "tavern:bard_conversation",
+      "entryGlobals": [
+        {
+          "gold": "95",
+          "reputation": "57",
+          "strength": "40",
+          "charm": "60",
+          "quest_complete": "false",
+          "items_bought": "0",
+          "arena_wins": "0",
+          "tavern_visits": "1",
+          "name": "input"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "gold": "94",
+          "reputation": "61",
+          "strength": "40",
+          "charm": "60",
+          "quest_complete": "false",
+          "items_bought": "0",
+          "arena_wins": "0",
+          "tavern_visits": "1",
+          "name": "input"
+        }
+      ]
+    },
+    {
+      "cfgId": "tavern:tavern_exit",
+      "entryGlobals": [
+        {
+          "gold": "95",
+          "reputation": "57",
+          "strength": "40",
+          "charm": "60",
+          "quest_complete": "false",
+          "items_bought": "0",
+          "arena_wins": "0",
+          "tavern_visits": "1",
+          "name": "input"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "gold": "95",
+          "reputation": "57",
+          "strength": "40",
+          "charm": "60",
+          "quest_complete": "false",
+          "items_bought": "0",
+          "arena_wins": "0",
+          "tavern_visits": "1",
+          "name": "input"
+        }
+      ]
+    },
+    {
+      "cfgId": "shop:confirm_continue",
+      "entryGlobals": [
+        {
+          "gold": "70",
+          "reputation": "50",
+          "strength": "65",
+          "charm": "75",
+          "quest_complete": "false",
+          "items_bought": "1",
+          "arena_wins": "0",
+          "tavern_visits": "1",
+          "name": "input"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "gold": "70",
+          "reputation": "50",
+          "strength": "65",
+          "charm": "75",
+          "quest_complete": "false",
+          "items_bought": "1",
+          "arena_wins": "0",
+          "tavern_visits": "1",
+          "name": "input"
+        }
+      ]
+    },
+    {
+      "cfgId": "tavern:tavern_hub__cont_0",
+      "entryGlobals": [
+        {
+          "gold": "94",
+          "reputation": "61",
+          "strength": "40",
+          "charm": "60",
+          "quest_complete": "false",
+          "items_bought": "0",
+          "arena_wins": "0",
+          "tavern_visits": "1",
+          "name": "input"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "gold": "94",
+          "reputation": "61",
+          "strength": "40",
+          "charm": "60",
+          "quest_complete": "false",
+          "items_bought": "0",
+          "arena_wins": "0",
+          "tavern_visits": "1",
+          "name": "input"
+        }
+      ]
+    },
+    {
+      "cfgId": "arena:victory",
+      "entryGlobals": [
+        {
+          "gold": "100",
+          "reputation": "50",
+          "strength": "40",
+          "charm": "60",
+          "quest_complete": "false",
+          "items_bought": "0",
+          "arena_wins": "0",
+          "tavern_visits": "1",
+          "name": "input"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "gold": "125",
+          "reputation": "69",
+          "strength": "40",
+          "charm": "65",
+          "quest_complete": "false",
+          "items_bought": "0",
+          "arena_wins": "1",
+          "tavern_visits": "1",
+          "name": "input"
+        }
+      ]
+    },
+    {
+      "cfgId": "arena:draw",
+      "entryGlobals": [
+        {
+          "gold": "100",
+          "reputation": "50",
+          "strength": "40",
+          "charm": "60",
+          "quest_complete": "false",
+          "items_bought": "0",
+          "arena_wins": "0",
+          "tavern_visits": "1",
+          "name": "input"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "gold": "110",
+          "reputation": "53",
+          "strength": "40",
+          "charm": "60",
+          "quest_complete": "false",
+          "items_bought": "0",
+          "arena_wins": "0",
+          "tavern_visits": "1",
+          "name": "input"
+        }
+      ]
+    },
+    {
+      "cfgId": "shop:shop_hub__cont_0",
+      "entryGlobals": [
+        {
+          "gold": "70",
+          "reputation": "50",
+          "strength": "65",
+          "charm": "75",
+          "quest_complete": "false",
+          "items_bought": "1",
+          "arena_wins": "0",
+          "tavern_visits": "1",
+          "name": "input"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "gold": "70",
+          "reputation": "50",
+          "strength": "65",
+          "charm": "75",
+          "quest_complete": "false",
+          "items_bought": "1",
+          "arena_wins": "0",
+          "tavern_visits": "1",
+          "name": "input"
+        }
+      ]
+    },
+    {
+      "cfgId": "shop:shop_hub__cont_1",
+      "entryGlobals": [
+        {
+          "gold": "70",
+          "reputation": "50",
+          "strength": "65",
+          "charm": "75",
+          "quest_complete": "false",
+          "items_bought": "1",
+          "arena_wins": "0",
+          "tavern_visits": "1",
+          "name": "input"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "gold": "70",
+          "reputation": "50",
+          "strength": "65",
+          "charm": "75",
+          "quest_complete": "false",
+          "items_bought": "1",
+          "arena_wins": "0",
+          "tavern_visits": "1",
+          "name": "input"
+        }
+      ]
+    },
+    {
+      "cfgId": "shop:shop_hub__cont_2",
+      "entryGlobals": [
+        {
+          "gold": "70",
+          "reputation": "50",
+          "strength": "65",
+          "charm": "75",
+          "quest_complete": "false",
+          "items_bought": "1",
+          "arena_wins": "0",
+          "tavern_visits": "1",
+          "name": "input"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "gold": "70",
+          "reputation": "50",
+          "strength": "65",
+          "charm": "75",
+          "quest_complete": "false",
+          "items_bought": "1",
+          "arena_wins": "0",
+          "tavern_visits": "1",
+          "name": "input"
+        }
+      ]
+    },
+    {
+      "cfgId": "shop:shop_hub__cont_3",
+      "entryGlobals": [
+        {
+          "gold": "70",
+          "reputation": "50",
+          "strength": "65",
+          "charm": "75",
+          "quest_complete": "false",
+          "items_bought": "1",
+          "arena_wins": "0",
+          "tavern_visits": "1",
+          "name": "input"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "gold": "70",
+          "reputation": "50",
+          "strength": "65",
+          "charm": "75",
+          "quest_complete": "false",
+          "items_bought": "1",
+          "arena_wins": "0",
+          "tavern_visits": "1",
+          "name": "input"
+        }
+      ]
+    },
+    {
+      "cfgId": "arena:defeat",
+      "entryGlobals": [
+        {
+          "gold": "{100,125}",
+          "reputation": "{50,69}",
+          "strength": "40",
+          "charm": "{60,65}",
+          "quest_complete": "false",
+          "items_bought": "0",
+          "arena_wins": "{0,1}",
+          "tavern_visits": "1",
+          "name": "input"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "gold": "{100,125}",
+          "reputation": "[45..62]",
+          "strength": "40",
+          "charm": "{60,65}",
+          "quest_complete": "false",
+          "items_bought": "0",
+          "arena_wins": "{0,1}",
+          "tavern_visits": "1",
+          "name": "input"
+        }
+      ]
+    },
+    {
+      "cfgId": "shop:shop_exit",
+      "entryGlobals": [
+        {
+          "gold": "{100,70}",
+          "reputation": "50",
+          "strength": "{40,65}",
+          "charm": "{60,75}",
+          "quest_complete": "false",
+          "items_bought": "{0,1}",
+          "arena_wins": "0",
+          "tavern_visits": "1",
+          "name": "input"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "gold": "{100,70}",
+          "reputation": "50",
+          "strength": "{40,65}",
+          "charm": "{60,75}",
+          "quest_complete": "false",
+          "items_bought": "{0,1}",
+          "arena_wins": "0",
+          "tavern_visits": "1",
+          "name": "input"
+        }
+      ]
+    },
+    {
+      "cfgId": "arena:arena_exit",
+      "entryGlobals": [
+        {
+          "gold": "{100,110,125}",
+          "reputation": "[45..69]",
+          "strength": "40",
+          "charm": "{60,65}",
+          "quest_complete": "false",
+          "items_bought": "0",
+          "arena_wins": "{0,1}",
+          "tavern_visits": "1",
+          "name": "input"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "gold": "{100,110,125}",
+          "reputation": "[45..69]",
+          "strength": "40",
+          "charm": "{60,65}",
+          "quest_complete": "false",
+          "items_bought": "0",
+          "arena_wins": "{0,1}",
+          "tavern_visits": "1",
+          "name": "input"
+        }
+      ]
+    }
+  ],
+  "diagnostics": {
+    "unresolvedExits": 1,
+    "droppedContexts": 0,
+    "missingCfgs": []
+  }
+}

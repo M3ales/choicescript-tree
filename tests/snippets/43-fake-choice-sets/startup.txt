@@ -1,0 +1,27 @@
+*create style ""
+*create condition 50
+*scene_list
+  startup
+  chapter1
+Welcome to the game.
+*gosub adjust_condition 5
+
+Pick your style:
+*fake_choice
+  #Warrior.
+    *set style "Warrior"
+    You grab a sword.
+  #Mage.
+    *set style "Mage"
+    You grab a staff.
+
+You are a ${style}.
+*gosub adjust_condition 3
+
+Ready to go.
+*finish
+
+*label adjust_condition
+*params amount
+*set condition + amount
+*return

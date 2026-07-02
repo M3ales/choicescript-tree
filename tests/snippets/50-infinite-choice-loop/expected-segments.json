@@ -1,0 +1,78 @@
+{
+  "segmentCount": 3,
+  "edgeCount": 6,
+  "entrySegmentId": "seg_0",
+  "segments": {
+    "seg_0": {
+      "cfgId": "startup:",
+      "entries": [
+        {
+          "kind": "game-start"
+        }
+      ],
+      "exits": [
+        {
+          "kind": "choice"
+        }
+      ],
+      "blockCount": 2,
+      "gosubCount": 0
+    },
+    "seg_1": {
+      "cfgId": "startup:loop",
+      "entries": [
+        {
+          "kind": "choice-option"
+        }
+      ],
+      "exits": [
+        {
+          "kind": "choice"
+        }
+      ],
+      "blockCount": 2,
+      "gosubCount": 0
+    },
+    "seg_2": {
+      "cfgId": "startup:loop",
+      "entries": [
+        {
+          "kind": "choice-option"
+        }
+      ],
+      "exits": [
+        {
+          "kind": "choice"
+        }
+      ],
+      "blockCount": 2,
+      "gosubCount": 0
+    }
+  },
+  "edges": [
+    {
+      "source": "seg_0",
+      "target": "seg_1"
+    },
+    {
+      "source": "seg_0",
+      "target": "seg_2"
+    },
+    {
+      "source": "seg_1",
+      "target": "seg_1"
+    },
+    {
+      "source": "seg_1",
+      "target": "seg_2"
+    },
+    {
+      "source": "seg_2",
+      "target": "seg_1"
+    },
+    {
+      "source": "seg_2",
+      "target": "seg_2"
+    }
+  ]
+}

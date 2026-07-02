@@ -1,0 +1,501 @@
+[
+  {
+    "name": "startup",
+    "statements": [
+      {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "gold",
+          "rawValue": "gold",
+          "position": 8,
+          "lineNumber": 0,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 50,
+            "position": 13,
+            "lineNumber": 0,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 0,
+          "position": 0
+        }
+      },
+      {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 2,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "shop",
+          "rawValue": "shop",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 2,
+          "position": 7,
+          "isLabelName": true
+        }
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 3,
+            "position": 0,
+            "indent": 0,
+            "content": "Gold: "
+          },
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 3,
+            "position": 13,
+            "indent": 0,
+            "content": ".\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 6,
+            "lineNumber": 3,
+            "position": 0,
+            "text": "Gold: "
+          },
+          {
+            "kind": "Print",
+            "start": 0,
+            "end": 0,
+            "lineNumber": 3,
+            "position": 6,
+            "expression": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "gold",
+                "rawValue": "gold",
+                "position": 8,
+                "lineNumber": 3,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          },
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 2,
+            "lineNumber": 3,
+            "position": 13,
+            "text": ".\n"
+          }
+        ]
+      },
+      {
+        "kind": "Choice",
+        "token": {
+          "type": "Choice",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 4,
+          "position": 0
+        },
+        "body": [
+          {
+            "kind": "ChoiceOption",
+            "token": {
+              "type": "ChoiceOption",
+              "sceneName": "startup",
+              "indent": 1,
+              "lineNumber": 5,
+              "position": 30,
+              "rawText": "Buy armor (20g).",
+              "hasMultiReplace": false
+            },
+            "body": [
+              {
+                "kind": "SetVariable",
+                "expression": {
+                  "kind": "Binary",
+                  "left": {
+                    "kind": "Identifier",
+                    "token": {
+                      "type": "Identifier",
+                      "value": "gold",
+                      "rawValue": "gold",
+                      "position": 9,
+                      "lineNumber": 6,
+                      "sceneName": "startup",
+                      "indent": 2
+                    }
+                  },
+                  "operator": {
+                    "type": "SubtractionOperator",
+                    "rawValue": "-",
+                    "position": 14,
+                    "lineNumber": 6,
+                    "sceneName": "startup",
+                    "indent": 2
+                  },
+                  "right": {
+                    "kind": "Literal",
+                    "value": {
+                      "type": "NumberLiteral",
+                      "value": 20,
+                      "position": 16,
+                      "lineNumber": 6,
+                      "sceneName": "startup",
+                      "indent": 2
+                    }
+                  }
+                },
+                "token": {
+                  "type": "SetVariable",
+                  "sceneName": "startup",
+                  "indent": 2,
+                  "lineNumber": 6,
+                  "position": 4
+                }
+              },
+              {
+                "content": [
+                  {
+                    "type": "Prose",
+                    "sceneName": "startup",
+                    "lineNumber": 7,
+                    "position": 4,
+                    "indent": 2,
+                    "content": "You bought armor.\n"
+                  }
+                ],
+                "kind": "Prose",
+                "parsedSegments": [
+                  {
+                    "kind": "Text",
+                    "start": 0,
+                    "end": 18,
+                    "lineNumber": 7,
+                    "position": 4,
+                    "text": "You bought armor.\n"
+                  }
+                ]
+              },
+              {
+                "kind": "GotoLabel",
+                "token": {
+                  "type": "GotoLabel",
+                  "sceneName": "startup",
+                  "indent": 2,
+                  "lineNumber": 8,
+                  "position": 4
+                },
+                "label": {
+                  "type": "Identifier",
+                  "value": "shop",
+                  "rawValue": "shop",
+                  "sceneName": "startup",
+                  "indent": 2,
+                  "lineNumber": 8,
+                  "position": 10,
+                  "isLabelName": true
+                }
+              }
+            ],
+            "parsedSegments": [
+              {
+                "kind": "Text",
+                "start": 0,
+                "end": 16,
+                "lineNumber": 5,
+                "position": 31,
+                "text": "Buy armor (20g)."
+              }
+            ],
+            "reuse": null,
+            "selectableIf": {
+              "kind": "Grouping",
+              "expression": {
+                "kind": "Binary",
+                "left": {
+                  "kind": "Identifier",
+                  "token": {
+                    "type": "Identifier",
+                    "value": "gold",
+                    "rawValue": "gold",
+                    "position": 18,
+                    "lineNumber": 5,
+                    "sceneName": "startup",
+                    "indent": 1
+                  }
+                },
+                "operator": {
+                  "type": "GreaterThanEqualsOperator",
+                  "rawValue": ">=",
+                  "position": 23,
+                  "lineNumber": 5,
+                  "sceneName": "startup",
+                  "indent": 1
+                },
+                "right": {
+                  "kind": "Literal",
+                  "value": {
+                    "type": "NumberLiteral",
+                    "value": 20,
+                    "position": 26,
+                    "lineNumber": 5,
+                    "sceneName": "startup",
+                    "indent": 1
+                  }
+                }
+              }
+            }
+          },
+          {
+            "kind": "ChoiceOption",
+            "token": {
+              "type": "ChoiceOption",
+              "sceneName": "startup",
+              "indent": 1,
+              "lineNumber": 9,
+              "position": 30,
+              "rawText": "Buy potion (10g).",
+              "hasMultiReplace": false
+            },
+            "body": [
+              {
+                "kind": "SetVariable",
+                "expression": {
+                  "kind": "Binary",
+                  "left": {
+                    "kind": "Identifier",
+                    "token": {
+                      "type": "Identifier",
+                      "value": "gold",
+                      "rawValue": "gold",
+                      "position": 9,
+                      "lineNumber": 10,
+                      "sceneName": "startup",
+                      "indent": 2
+                    }
+                  },
+                  "operator": {
+                    "type": "SubtractionOperator",
+                    "rawValue": "-",
+                    "position": 14,
+                    "lineNumber": 10,
+                    "sceneName": "startup",
+                    "indent": 2
+                  },
+                  "right": {
+                    "kind": "Literal",
+                    "value": {
+                      "type": "NumberLiteral",
+                      "value": 10,
+                      "position": 16,
+                      "lineNumber": 10,
+                      "sceneName": "startup",
+                      "indent": 2
+                    }
+                  }
+                },
+                "token": {
+                  "type": "SetVariable",
+                  "sceneName": "startup",
+                  "indent": 2,
+                  "lineNumber": 10,
+                  "position": 4
+                }
+              },
+              {
+                "content": [
+                  {
+                    "type": "Prose",
+                    "sceneName": "startup",
+                    "lineNumber": 11,
+                    "position": 4,
+                    "indent": 2,
+                    "content": "You bought a potion.\n"
+                  }
+                ],
+                "kind": "Prose",
+                "parsedSegments": [
+                  {
+                    "kind": "Text",
+                    "start": 0,
+                    "end": 21,
+                    "lineNumber": 11,
+                    "position": 4,
+                    "text": "You bought a potion.\n"
+                  }
+                ]
+              },
+              {
+                "kind": "GotoLabel",
+                "token": {
+                  "type": "GotoLabel",
+                  "sceneName": "startup",
+                  "indent": 2,
+                  "lineNumber": 12,
+                  "position": 4
+                },
+                "label": {
+                  "type": "Identifier",
+                  "value": "shop",
+                  "rawValue": "shop",
+                  "sceneName": "startup",
+                  "indent": 2,
+                  "lineNumber": 12,
+                  "position": 10,
+                  "isLabelName": true
+                }
+              }
+            ],
+            "parsedSegments": [
+              {
+                "kind": "Text",
+                "start": 0,
+                "end": 17,
+                "lineNumber": 9,
+                "position": 31,
+                "text": "Buy potion (10g)."
+              }
+            ],
+            "reuse": null,
+            "selectableIf": {
+              "kind": "Grouping",
+              "expression": {
+                "kind": "Binary",
+                "left": {
+                  "kind": "Identifier",
+                  "token": {
+                    "type": "Identifier",
+                    "value": "gold",
+                    "rawValue": "gold",
+                    "position": 18,
+                    "lineNumber": 9,
+                    "sceneName": "startup",
+                    "indent": 1
+                  }
+                },
+                "operator": {
+                  "type": "GreaterThanEqualsOperator",
+                  "rawValue": ">=",
+                  "position": 23,
+                  "lineNumber": 9,
+                  "sceneName": "startup",
+                  "indent": 1
+                },
+                "right": {
+                  "kind": "Literal",
+                  "value": {
+                    "type": "NumberLiteral",
+                    "value": 10,
+                    "position": 26,
+                    "lineNumber": 9,
+                    "sceneName": "startup",
+                    "indent": 1
+                  }
+                }
+              }
+            }
+          },
+          {
+            "kind": "ChoiceOption",
+            "token": {
+              "type": "ChoiceOption",
+              "sceneName": "startup",
+              "indent": 1,
+              "lineNumber": 13,
+              "position": 2,
+              "rawText": "Leave.",
+              "hasMultiReplace": false
+            },
+            "body": [
+              {
+                "content": [
+                  {
+                    "type": "Prose",
+                    "sceneName": "startup",
+                    "lineNumber": 14,
+                    "position": 4,
+                    "indent": 2,
+                    "content": "You leave.\n"
+                  }
+                ],
+                "kind": "Prose",
+                "parsedSegments": [
+                  {
+                    "kind": "Text",
+                    "start": 0,
+                    "end": 11,
+                    "lineNumber": 14,
+                    "position": 4,
+                    "text": "You leave.\n"
+                  }
+                ]
+              },
+              {
+                "kind": "Finish",
+                "token": {
+                  "type": "Finish",
+                  "sceneName": "startup",
+                  "indent": 2,
+                  "lineNumber": 15,
+                  "position": 4
+                },
+                "buttonText": null
+              }
+            ],
+            "parsedSegments": [
+              {
+                "kind": "Text",
+                "start": 0,
+                "end": 6,
+                "lineNumber": 13,
+                "position": 3,
+                "text": "Leave."
+              }
+            ],
+            "reuse": null,
+            "selectableIf": null
+          }
+        ]
+      }
+    ],
+    "parseErrors": [],
+    "start": {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    "end": {
+      "type": "Finish",
+      "sceneName": "startup",
+      "indent": 2,
+      "lineNumber": 15,
+      "position": 4
+    }
+  }
+]

@@ -1,0 +1,8 @@
+Welcome to chapter 1.
+*if (style = "Warrior")
+  You swing your sword.
+*elseif (style = "Mage")
+  You cast a spell.
+*else
+  You have no style.
+*finish

@@ -1,0 +1,524 @@
+[
+  [
+    {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    {
+      "type": "Comment",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 0,
+      "position": 0,
+      "value": "Negative test cases (should produce violations):"
+    },
+    {
+      "type": "Comment",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 1,
+      "position": 0,
+      "value": "  pet = 0: multireplace is 1-indexed, 0 is uninitialized/invalid"
+    },
+    {
+      "type": "Comment",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 2,
+      "position": 0,
+      "value": "  mood = \"happy\": string cannot be coerced to a number or boolean"
+    },
+    {
+      "type": "Comment",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 3,
+      "position": 0,
+      "value": "Positive test cases (should NOT produce violations):"
+    },
+    {
+      "type": "Comment",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 4,
+      "position": 0,
+      "value": "  gender = 2: valid numeric index within range"
+    },
+    {
+      "type": "Comment",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 5,
+      "position": 0,
+      "value": "  is_tall = true: boolean is valid (true=first, false=second)"
+    },
+    {
+      "type": "Comment",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 6,
+      "position": 0,
+      "value": "  count = \"3\": numeric string is coercible to a number"
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 8,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "pet",
+      "rawValue": "pet",
+      "position": 8,
+      "lineNumber": 8,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 12,
+      "lineNumber": 8,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 9,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "mood",
+      "rawValue": "mood",
+      "position": 8,
+      "lineNumber": 9,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "happy",
+      "position": 13,
+      "lineNumber": 9,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 10,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "gender",
+      "rawValue": "gender",
+      "position": 8,
+      "lineNumber": 10,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 2,
+      "position": 15,
+      "lineNumber": 10,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 11,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "is_tall",
+      "rawValue": "is_tall",
+      "position": 8,
+      "lineNumber": 11,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "BooleanLiteral",
+      "value": true,
+      "position": 16,
+      "lineNumber": 11,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 12,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "count",
+      "rawValue": "count",
+      "position": 8,
+      "lineNumber": 12,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "3",
+      "position": 14,
+      "lineNumber": 12,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 14,
+      "position": 0,
+      "indent": 0,
+      "content": "You have a "
+    },
+    {
+      "type": "OpenMultiReplace",
+      "sceneName": "startup",
+      "lineNumber": 14,
+      "position": 11,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "pet",
+      "rawValue": "pet",
+      "position": 13,
+      "lineNumber": 14,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 14,
+      "position": 17,
+      "indent": 0,
+      "content": "cat"
+    },
+    {
+      "type": "MultiReplaceElse",
+      "sceneName": "startup",
+      "lineNumber": 14,
+      "position": 20,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 14,
+      "position": 21,
+      "indent": 0,
+      "content": "dog"
+    },
+    {
+      "type": "MultiReplaceElse",
+      "sceneName": "startup",
+      "lineNumber": 14,
+      "position": 24,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 14,
+      "position": 25,
+      "indent": 0,
+      "content": "bird"
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "startup",
+      "lineNumber": 14,
+      "position": 29,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 14,
+      "position": 30,
+      "indent": 0,
+      "content": ".\nYou feel "
+    },
+    {
+      "type": "OpenMultiReplace",
+      "sceneName": "startup",
+      "lineNumber": 15,
+      "position": 9,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "mood",
+      "rawValue": "mood",
+      "position": 11,
+      "lineNumber": 15,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 15,
+      "position": 16,
+      "indent": 0,
+      "content": "great"
+    },
+    {
+      "type": "MultiReplaceElse",
+      "sceneName": "startup",
+      "lineNumber": 15,
+      "position": 21,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 15,
+      "position": 22,
+      "indent": 0,
+      "content": "terrible"
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "startup",
+      "lineNumber": 15,
+      "position": 30,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 15,
+      "position": 31,
+      "indent": 0,
+      "content": ".\n"
+    },
+    {
+      "type": "OpenMultiReplace",
+      "sceneName": "startup",
+      "lineNumber": 16,
+      "position": 0,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "gender",
+      "rawValue": "gender",
+      "position": 2,
+      "lineNumber": 16,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 16,
+      "position": 9,
+      "indent": 0,
+      "content": "He"
+    },
+    {
+      "type": "MultiReplaceElse",
+      "sceneName": "startup",
+      "lineNumber": 16,
+      "position": 11,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 16,
+      "position": 12,
+      "indent": 0,
+      "content": "She"
+    },
+    {
+      "type": "MultiReplaceElse",
+      "sceneName": "startup",
+      "lineNumber": 16,
+      "position": 15,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 16,
+      "position": 16,
+      "indent": 0,
+      "content": "They"
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "startup",
+      "lineNumber": 16,
+      "position": 20,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 16,
+      "position": 21,
+      "indent": 0,
+      "content": " walked in.\n"
+    },
+    {
+      "type": "OpenMultiReplace",
+      "sceneName": "startup",
+      "lineNumber": 17,
+      "position": 0,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "is_tall",
+      "rawValue": "is_tall",
+      "position": 2,
+      "lineNumber": 17,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 17,
+      "position": 10,
+      "indent": 0,
+      "content": "tall"
+    },
+    {
+      "type": "MultiReplaceElse",
+      "sceneName": "startup",
+      "lineNumber": 17,
+      "position": 14,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 17,
+      "position": 15,
+      "indent": 0,
+      "content": "short"
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "startup",
+      "lineNumber": 17,
+      "position": 20,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 17,
+      "position": 21,
+      "indent": 0,
+      "content": " person.\nOption "
+    },
+    {
+      "type": "OpenMultiReplace",
+      "sceneName": "startup",
+      "lineNumber": 18,
+      "position": 7,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "count",
+      "rawValue": "count",
+      "position": 9,
+      "lineNumber": 18,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 18,
+      "position": 15,
+      "indent": 0,
+      "content": "one"
+    },
+    {
+      "type": "MultiReplaceElse",
+      "sceneName": "startup",
+      "lineNumber": 18,
+      "position": 18,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 18,
+      "position": 19,
+      "indent": 0,
+      "content": "two"
+    },
+    {
+      "type": "MultiReplaceElse",
+      "sceneName": "startup",
+      "lineNumber": 18,
+      "position": 22,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 18,
+      "position": 23,
+      "indent": 0,
+      "content": "three"
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "startup",
+      "lineNumber": 18,
+      "position": 28,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 18,
+      "position": 29,
+      "indent": 0,
+      "content": ".\n"
+    },
+    {
+      "type": "Finish",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 19,
+      "position": 0
+    },
+    {
+      "lineNumber": 21,
+      "indent": 0,
+      "position": 0,
+      "sceneName": "startup",
+      "type": "SceneEnd"
+    }
+  ]
+]

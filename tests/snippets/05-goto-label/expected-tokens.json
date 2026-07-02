@@ -26,10 +26,10 @@
       "type": "Identifier",
       "value": "start_adventure",
       "rawValue": "start_adventure",
-      "position": 6,
-      "lineNumber": 1,
       "sceneName": "startup",
       "indent": 0,
+      "lineNumber": 1,
+      "position": 6,
       "isLabelName": true
     },
     {
@@ -43,10 +43,10 @@
       "type": "Identifier",
       "value": "start_adventure",
       "rawValue": "start_adventure",
-      "position": 6,
-      "lineNumber": 3,
       "sceneName": "startup",
       "indent": 0,
+      "lineNumber": 3,
+      "position": 7,
       "isLabelName": true
     },
     {
@@ -68,10 +68,10 @@
       "type": "Identifier",
       "value": "the_end",
       "rawValue": "the_end",
-      "position": 6,
-      "lineNumber": 5,
       "sceneName": "startup",
       "indent": 0,
+      "lineNumber": 5,
+      "position": 6,
       "isLabelName": true
     },
     {
@@ -85,10 +85,10 @@
       "type": "Identifier",
       "value": "the_end",
       "rawValue": "the_end",
-      "position": 6,
-      "lineNumber": 7,
       "sceneName": "startup",
       "indent": 0,
+      "lineNumber": 7,
+      "position": 7,
       "isLabelName": true
     },
     {

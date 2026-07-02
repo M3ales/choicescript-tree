@@ -1,0 +1,47 @@
+*create turn 0
+*create energy 100
+*create morale 50
+
+*comment ============================================
+*comment  Outer loop: hub that dispatches to activities
+*comment  Inner loop A: training drill (gosub cycle)
+*comment  Inner loop B: patrol route (gosub cycle)
+*comment  Overlap: patrol can gosub back to training
+*comment ============================================
+
+*label hub
+*set turn + 1
+
+*if (turn < 5)
+  *gosub training
+  *gosub patrol
+  *goto hub
+
+You survived all rounds.
+*finish
+
+*comment --- Inner loop A: training drill ---
+*label training
+*set energy - 10
+
+*if (energy > 30)
+  *gosub drill_round
+  *goto training
+
+*return
+
+*comment --- drill_round is shared by training loop ---
+*label drill_round
+*set morale + 5
+*return
+
+*comment --- Inner loop B: patrol route ---
+*label patrol
+*set energy - 5
+
+*if (morale < 80)
+  *comment patrol calls back into training — creates overlap
+  *gosub training
+  *goto patrol
+
+*return

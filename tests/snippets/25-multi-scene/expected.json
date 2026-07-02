@@ -88,12 +88,11 @@
           "type": "Identifier",
           "value": "tavern",
           "rawValue": "tavern",
-          "position": 12,
-          "lineNumber": 3,
           "sceneName": "startup",
           "indent": 0,
-          "isSceneName": true,
-          "isLabelName": false
+          "lineNumber": 3,
+          "position": 12,
+          "isSceneName": true
         }
       }
     ],
@@ -109,12 +108,11 @@
       "type": "Identifier",
       "value": "tavern",
       "rawValue": "tavern",
-      "position": 12,
-      "lineNumber": 3,
       "sceneName": "startup",
       "indent": 0,
-      "isSceneName": true,
-      "isLabelName": false
+      "lineNumber": 3,
+      "position": 12,
+      "isSceneName": true
     }
   },
   {
@@ -160,6 +158,7 @@
               "sceneName": "tavern",
               "indent": 1,
               "lineNumber": 2,
+              "position": 2,
               "rawText": "Order a drink.",
               "hasMultiReplace": false
             },
@@ -200,12 +199,11 @@
                   "type": "Identifier",
                   "value": "market",
                   "rawValue": "market",
-                  "position": 16,
-                  "lineNumber": 4,
                   "sceneName": "tavern",
                   "indent": 2,
-                  "isSceneName": true,
-                  "isLabelName": false
+                  "lineNumber": 4,
+                  "position": 16,
+                  "isSceneName": true
                 }
               }
             ],
@@ -215,7 +213,7 @@
                 "start": 0,
                 "end": 14,
                 "lineNumber": 2,
-                "position": null,
+                "position": 3,
                 "text": "Order a drink."
               }
             ],
@@ -229,6 +227,7 @@
               "sceneName": "tavern",
               "indent": 1,
               "lineNumber": 5,
+              "position": 2,
               "rawText": "Talk to the bartender.",
               "hasMultiReplace": false
             },
@@ -274,7 +273,7 @@
                 "start": 0,
                 "end": 22,
                 "lineNumber": 5,
-                "position": null,
+                "position": 3,
                 "text": "Talk to the bartender."
               }
             ],

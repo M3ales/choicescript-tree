@@ -1,0 +1,202 @@
+{
+  "states": [
+    {
+      "cfgId": "startup:",
+      "entryGlobals": [
+        {
+          "turn": "0",
+          "energy": "100",
+          "morale": "50"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "turn": "0",
+          "energy": "100",
+          "morale": "50"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:hub",
+      "entryGlobals": [
+        {
+          "turn": "0",
+          "energy": "100",
+          "morale": "50"
+        },
+        {
+          "turn": "1",
+          "energy": "85",
+          "morale": "50"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "turn": "1",
+          "energy": "100",
+          "morale": "50"
+        },
+        {
+          "turn": "2",
+          "energy": "85",
+          "morale": "50"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:training",
+      "entryGlobals": [
+        {
+          "turn": "1",
+          "energy": "100",
+          "morale": "50"
+        },
+        {
+          "turn": "1",
+          "energy": "90",
+          "morale": "55"
+        },
+        {
+          "turn": "1",
+          "energy": "85",
+          "morale": "50"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "turn": "1",
+          "energy": "90",
+          "morale": "50"
+        },
+        {
+          "turn": "1",
+          "energy": "80",
+          "morale": "55"
+        },
+        {
+          "turn": "1",
+          "energy": "75",
+          "morale": "50"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:drill_round",
+      "entryGlobals": [
+        {
+          "turn": "1",
+          "energy": "90",
+          "morale": "50"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "turn": "1",
+          "energy": "90",
+          "morale": "55"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:hub__cont_0",
+      "entryGlobals": [
+        {
+          "turn": "1",
+          "energy": "90",
+          "morale": "50"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "turn": "1",
+          "energy": "90",
+          "morale": "50"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:patrol",
+      "entryGlobals": [
+        {
+          "turn": "1",
+          "energy": "90",
+          "morale": "50"
+        },
+        {
+          "turn": "1",
+          "energy": "{75,80}",
+          "morale": "{50,55}"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "turn": "1",
+          "energy": "85",
+          "morale": "50"
+        },
+        {
+          "turn": "1",
+          "energy": "{70,75}",
+          "morale": "{50,55}"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:training__cont_0",
+      "entryGlobals": [
+        {
+          "turn": "1",
+          "energy": "90",
+          "morale": "55"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "turn": "1",
+          "energy": "90",
+          "morale": "55"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:__entry__cont_0",
+      "entryGlobals": [
+        {
+          "turn": "1",
+          "energy": "85",
+          "morale": "50"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "turn": "1",
+          "energy": "85",
+          "morale": "50"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:patrol__cont_0",
+      "entryGlobals": [
+        {
+          "turn": "1",
+          "energy": "{75,80}",
+          "morale": "{50,55}"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "turn": "1",
+          "energy": "{75,80}",
+          "morale": "{50,55}"
+        }
+      ]
+    }
+  ],
+  "diagnostics": {
+    "unresolvedExits": 0,
+    "droppedContexts": 0,
+    "missingCfgs": []
+  }
+}

@@ -27,6 +27,7 @@
       "sceneName": "startup",
       "indent": 1,
       "lineNumber": 2,
+      "position": 2,
       "rawText": "Fight the dragon.",
       "hasMultiReplace": false
     },
@@ -34,7 +35,7 @@
       "type": "Prose",
       "sceneName": "startup",
       "lineNumber": 2,
-      "position": null,
+      "position": 3,
       "indent": 1,
       "content": "Fight the dragon."
     },
@@ -58,6 +59,7 @@
       "sceneName": "startup",
       "indent": 1,
       "lineNumber": 5,
+      "position": 2,
       "rawText": "Run away.",
       "hasMultiReplace": false
     },
@@ -65,7 +67,7 @@
       "type": "Prose",
       "sceneName": "startup",
       "lineNumber": 5,
-      "position": null,
+      "position": 3,
       "indent": 1,
       "content": "Run away."
     },
@@ -89,6 +91,7 @@
       "sceneName": "startup",
       "indent": 1,
       "lineNumber": 8,
+      "position": 2,
       "rawText": "Try to talk.",
       "hasMultiReplace": false
     },
@@ -96,7 +99,7 @@
       "type": "Prose",
       "sceneName": "startup",
       "lineNumber": 8,
-      "position": null,
+      "position": 3,
       "indent": 1,
       "content": "Try to talk."
     },

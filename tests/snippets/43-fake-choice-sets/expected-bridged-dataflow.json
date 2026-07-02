@@ -1,0 +1,50 @@
+{
+  "cfgCount": 5,
+  "states": [
+    {
+      "cfgId": "chapter1:",
+      "entryGlobals": [
+        {
+          "style": "{Mage,Warrior}",
+          "condition": "58"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:",
+      "entryGlobals": [
+        {
+          "style": "",
+          "condition": "50"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:__entry__cont_0",
+      "entryGlobals": [
+        {
+          "style": "{Mage,Warrior}",
+          "condition": "55"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:__entry__cont_1",
+      "entryGlobals": [
+        {
+          "style": "{Mage,Warrior}",
+          "condition": "58"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:adjust_condition",
+      "entryGlobals": [
+        {
+          "style": "{,Mage,Warrior}",
+          "condition": "{50,55}"
+        }
+      ]
+    }
+  ]
+}

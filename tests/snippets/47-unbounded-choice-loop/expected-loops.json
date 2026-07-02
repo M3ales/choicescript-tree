@@ -1,0 +1,16 @@
+[
+  {
+    "headerCfgId": "startup:chat_hub",
+    "bodyCfgIds": [
+      "startup:chat_hub"
+    ],
+    "backEdgeCount": 2,
+    "exitCount": 2,
+    "mechanism": "direct",
+    "pure": false,
+    "bound": "input-bounded",
+    "tripCount": 1,
+    "unrollDepth": 1,
+    "infinite": false
+  }
+]

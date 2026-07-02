@@ -70,9 +70,9 @@
       "startup:b_0": {
         "scene": "startup",
         "statementIds": [
-          "startup:0",
-          "startup:1",
-          "startup:2"
+          "startup:1q8h9cq3iqio8",
+          "startup:1wdumyr9pwkxt",
+          "startup:1m5ea4oei5s6m"
         ],
         "entryType": "SceneEntry",
         "exitType": "GoSub"
@@ -80,8 +80,8 @@
       "startup:b_1": {
         "scene": "startup",
         "statementIds": [
-          "startup:3",
-          "startup:4"
+          "startup:kh0jmbujsl19",
+          "startup:fqmz851ie6paj"
         ],
         "entryType": "GoSubContinuation",
         "exitType": "Finish"
@@ -95,10 +95,10 @@
       "startup:b_3": {
         "scene": "startup",
         "statementIds": [
-          "startup:5",
-          "startup:6",
-          "startup:7",
-          "startup:8"
+          "startup:2iiz5a1gcimg",
+          "startup:2edlgf307ot",
+          "startup:qnmepy56u3es",
+          "startup:mwz1bfiklo51"
         ],
         "entryType": "Label",
         "exitType": "GoSub",
@@ -107,8 +107,8 @@
       "startup:b_4": {
         "scene": "startup",
         "statementIds": [
-          "startup:9",
-          "startup:10"
+          "startup:1lk0tk319llge9",
+          "startup:xyr1kwyr2pge"
         ],
         "entryType": "GoSubContinuation",
         "exitType": "Return"
@@ -122,10 +122,10 @@
       "startup:b_6": {
         "scene": "startup",
         "statementIds": [
-          "startup:11",
-          "startup:12",
-          "startup:13",
-          "startup:15"
+          "startup:1yyozrxs9us7v",
+          "startup:1ujyrdkng381y",
+          "startup:17jrjfsrduqe6",
+          "startup:gv4pt61vr3vlo"
         ],
         "entryType": "Label",
         "exitType": "Branch",
@@ -134,8 +134,8 @@
       "startup:b_7": {
         "scene": "startup",
         "statementIds": [
-          "startup:16",
-          "startup:17"
+          "startup:78gllas37ysg",
+          "startup:15qcri51tu3nn7"
         ],
         "entryType": "Continuation",
         "exitType": "Return"
@@ -143,7 +143,7 @@
       "startup:b_8": {
         "scene": "startup",
         "statementIds": [
-          "startup:14"
+          "startup:vyfnpcjcqbt6"
         ],
         "entryType": "ConditionalBody",
         "exitType": "GoSub"
@@ -163,10 +163,10 @@
       "startup:b_11": {
         "scene": "startup",
         "statementIds": [
-          "startup:18",
-          "startup:19",
-          "startup:20",
-          "startup:21"
+          "startup:rwxk5j3bwn7p",
+          "startup:1u2cstmqwq3q0",
+          "startup:eyk4d517ysj5z",
+          "startup:i8akv95l3mov"
         ],
         "entryType": "Label",
         "exitType": "GoSub",
@@ -175,8 +175,8 @@
       "startup:b_12": {
         "scene": "startup",
         "statementIds": [
-          "startup:22",
-          "startup:23"
+          "startup:12qtb4zh3ic0t",
+          "startup:13sfjnc1v81o42"
         ],
         "entryType": "GoSubContinuation",
         "exitType": "Return"
@@ -190,10 +190,10 @@
       "startup:b_14": {
         "scene": "startup",
         "statementIds": [
-          "startup:24",
-          "startup:25",
-          "startup:26",
-          "startup:28"
+          "startup:i6toz3y8c2xx",
+          "startup:wk73oh1x5u34f",
+          "startup:4i8xefhudvbx",
+          "startup:asf9sh1dry8nz"
         ],
         "entryType": "Label",
         "exitType": "Branch",
@@ -202,8 +202,8 @@
       "startup:b_15": {
         "scene": "startup",
         "statementIds": [
-          "startup:29",
-          "startup:30"
+          "startup:1upw8mv1cgeuap",
+          "startup:138d6rf10p68b5"
         ],
         "entryType": "Continuation",
         "exitType": "Return"
@@ -211,7 +211,7 @@
       "startup:b_16": {
         "scene": "startup",
         "statementIds": [
-          "startup:27"
+          "startup:1g96nfd14c8vl3"
         ],
         "entryType": "ConditionalBody",
         "exitType": "GoSub"
@@ -231,10 +231,10 @@
       "startup:b_19": {
         "scene": "startup",
         "statementIds": [
-          "startup:31",
-          "startup:32",
-          "startup:33",
-          "startup:34"
+          "startup:g8ccfr1t3re29",
+          "startup:1nn6qu21sdos8g",
+          "startup:s6ikfdtqlit",
+          "startup:2vq3e31x656yt"
         ],
         "entryType": "Label",
         "exitType": "Return",
@@ -319,7 +319,7 @@
         "sourceBlockId": "startup:b_6",
         "targetBlockId": "startup:b_8",
         "metadata": {
-          "conditionStatementId": "startup:15"
+          "conditionStatementId": "startup:gv4pt61vr3vlo"
         }
       },
       {
@@ -391,7 +391,7 @@
         "sourceBlockId": "startup:b_14",
         "targetBlockId": "startup:b_16",
         "metadata": {
-          "conditionStatementId": "startup:28"
+          "conditionStatementId": "startup:asf9sh1dry8nz"
         }
       },
       {

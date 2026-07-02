@@ -1,0 +1,25 @@
+{
+  "totalIterations": 1,
+  "widenedSccs": 0,
+  "stateCount": 1,
+  "cfgEntryStateCount": 3,
+  "blockDeltaCount": 0,
+  "blockMappedCount": 3,
+  "states": {
+    "seg_0": {
+      "entryGlobals": {},
+      "exitGlobals": {}
+    }
+  },
+  "cfgEntryStates": {
+    "startup:": {
+      "globals": {}
+    },
+    "startup:start_adventure": {
+      "globals": {}
+    },
+    "startup:the_end": {
+      "globals": {}
+    }
+  }
+}

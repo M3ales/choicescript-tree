@@ -1,0 +1,9 @@
+You enter the arena.
+*set health (health - 10)
+
+*if (health > 50)
+  You feel strong.
+  *set gold (gold + 100)
+*if (quest_done)
+  The crowd cheers your completed quest.
+*finish

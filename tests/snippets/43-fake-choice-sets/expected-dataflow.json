@@ -1,0 +1,92 @@
+{
+  "states": [
+    {
+      "cfgId": "startup:",
+      "entryGlobals": [
+        {
+          "style": "",
+          "condition": "50"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "style": "",
+          "condition": "50"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:adjust_condition",
+      "entryGlobals": [
+        {
+          "style": "",
+          "condition": "50"
+        },
+        {
+          "style": "{Mage,Warrior}",
+          "condition": "55"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "style": "",
+          "condition": "55"
+        },
+        {
+          "style": "{Mage,Warrior}",
+          "condition": "58"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:__entry__cont_0",
+      "entryGlobals": [
+        {
+          "style": "",
+          "condition": "55"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "style": "{Mage,Warrior}",
+          "condition": "55"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:__entry__cont_1",
+      "entryGlobals": [
+        {
+          "style": "{Mage,Warrior}",
+          "condition": "58"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "style": "{Mage,Warrior}",
+          "condition": "58"
+        }
+      ]
+    },
+    {
+      "cfgId": "chapter1:",
+      "entryGlobals": [
+        {
+          "style": "{Mage,Warrior}",
+          "condition": "58"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "style": "{Mage,Warrior}",
+          "condition": "58"
+        }
+      ]
+    }
+  ],
+  "diagnostics": {
+    "unresolvedExits": 0,
+    "droppedContexts": 0,
+    "missingCfgs": []
+  }
+}

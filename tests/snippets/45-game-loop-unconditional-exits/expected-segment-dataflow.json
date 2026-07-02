@@ -1,0 +1,59 @@
+{
+  "totalIterations": 1,
+  "widenedSccs": 0,
+  "stateCount": 1,
+  "cfgEntryStateCount": 5,
+  "blockDeltaCount": 7,
+  "blockMappedCount": 9,
+  "states": {
+    "seg_0": {
+      "entryGlobals": {
+        "stamina": "100",
+        "score": "0",
+        "intensity": "1"
+      },
+      "exitGlobals": {
+        "stamina": "98",
+        "score": "13",
+        "intensity": "2"
+      }
+    }
+  },
+  "cfgEntryStates": {
+    "startup:": {
+      "globals": {
+        "stamina": "100",
+        "score": "0",
+        "intensity": "1"
+      }
+    },
+    "startup:final_rally": {
+      "globals": {
+        "stamina": "98",
+        "score": "3",
+        "intensity": "2"
+      }
+    },
+    "startup:intense_phase": {
+      "globals": {
+        "stamina": "98",
+        "score": "1",
+        "intensity": "2"
+      }
+    },
+    "startup:match_loop": {
+      "globals": {
+        "stamina": "100",
+        "score": "0",
+        "intensity": "1"
+      }
+    },
+    "startup:match_over": {
+      "globals": {
+        "stamina": "98",
+        "score": "13",
+        "intensity": "2"
+      }
+    }
+  }
+}

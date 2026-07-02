@@ -1,0 +1,53 @@
+*comment Test: scope analysis patterns
+*create health 100
+*create stamina 50
+*create gold 0
+*temp battle_log ""
+
+*comment 1. Basic: defined then referenced
+Your health is ${health}.
+*set health 90
+
+*comment 2. Gosub propagation: health/stamina in scope inside subroutine
+*gosub drain_stamina
+
+*comment 3. Conditional def creates 'may' presence
+*if (health > 50)
+  *temp bonus 10
+  *set health (health + bonus)
+
+*comment 4. Reference after conditional def — bonus may not be defined
+*comment This is intentional: bonus only exists on one branch
+*if (health > 80)
+  You feel strong with ${bonus} bonus!
+
+*comment 5. Delete removes from scope
+*delete gold
+*comment gold is now out of scope
+
+*comment 6. Gosub to subroutine that reads deleted var
+*gosub check_gold
+
+*comment 7. Reference to variable defined in subroutine
+The log says: ${battle_log}
+
+*goto_scene chapter1
+
+*comment --- Subroutines ---
+
+*label drain_stamina
+*comment stamina should be in scope here via gosub call edge
+*set stamina (stamina - 10)
+*set battle_log "drained"
+*return
+
+*label check_gold
+*comment gold was deleted before this gosub — undefined ref expected
+You have ${gold} gold.
+*return
+
+*label dead_label
+*comment This label is never gosub'd — entry scope should be empty
+*comment Any variable reference here is undefined
+*set health (health + stamina)
+*return

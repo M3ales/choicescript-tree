@@ -1,0 +1,23 @@
+{
+  "cfgCount": 3,
+  "states": [
+    {
+      "cfgId": "startup:",
+      "entryGlobals": [
+        {}
+      ]
+    },
+    {
+      "cfgId": "startup:start_adventure",
+      "entryGlobals": [
+        {}
+      ]
+    },
+    {
+      "cfgId": "startup:the_end",
+      "entryGlobals": [
+        {}
+      ]
+    }
+  ]
+}

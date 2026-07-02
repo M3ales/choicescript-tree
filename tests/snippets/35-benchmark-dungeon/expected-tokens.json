@@ -146,10 +146,10 @@
       "type": "Identifier",
       "value": "boss_fight",
       "rawValue": "boss_fight",
-      "position": 6,
-      "lineNumber": 10,
       "sceneName": "boss",
       "indent": 0,
+      "lineNumber": 10,
+      "position": 7,
       "isLabelName": true
     },
     {
@@ -526,10 +526,10 @@
       "type": "Identifier",
       "value": "boss_victory",
       "rawValue": "boss_victory",
-      "position": 8,
-      "lineNumber": 23,
       "sceneName": "boss",
       "indent": 1,
+      "lineNumber": 23,
+      "position": 8,
       "isLabelName": true
     },
     {
@@ -575,10 +575,10 @@
       "type": "Identifier",
       "value": "boss_defeat",
       "rawValue": "boss_defeat",
-      "position": 8,
-      "lineNumber": 25,
       "sceneName": "boss",
       "indent": 1,
+      "lineNumber": 25,
+      "position": 8,
       "isLabelName": true
     },
     {
@@ -593,6 +593,7 @@
       "sceneName": "boss",
       "indent": 1,
       "lineNumber": 28,
+      "position": 2,
       "rawText": "Heavy attack",
       "hasMultiReplace": false
     },
@@ -600,7 +601,7 @@
       "type": "Prose",
       "sceneName": "boss",
       "lineNumber": 28,
-      "position": null,
+      "position": 3,
       "indent": 1,
       "content": "Heavy attack"
     },
@@ -1061,10 +1062,10 @@
       "type": "Identifier",
       "value": "boss_fight",
       "rawValue": "boss_fight",
-      "position": 10,
-      "lineNumber": 40,
       "sceneName": "boss",
       "indent": 2,
+      "lineNumber": 40,
+      "position": 10,
       "isLabelName": true
     },
     {
@@ -1072,6 +1073,7 @@
       "sceneName": "boss",
       "indent": 1,
       "lineNumber": 41,
+      "position": 2,
       "rawText": "Aim for the cracks",
       "hasMultiReplace": false
     },
@@ -1079,7 +1081,7 @@
       "type": "Prose",
       "sceneName": "boss",
       "lineNumber": 41,
-      "position": null,
+      "position": 3,
       "indent": 1,
       "content": "Aim for the cracks"
     },
@@ -1659,10 +1661,10 @@
       "type": "Identifier",
       "value": "boss_fight",
       "rawValue": "boss_fight",
-      "position": 10,
-      "lineNumber": 58,
       "sceneName": "boss",
       "indent": 2,
+      "lineNumber": 58,
+      "position": 10,
       "isLabelName": true
     },
     {
@@ -1716,7 +1718,7 @@
       "sceneName": "boss",
       "indent": 1,
       "lineNumber": 59,
-      "position": 16,
+      "position": 31,
       "rawText": "Heal with a potion",
       "hasMultiReplace": false
     },
@@ -1724,7 +1726,7 @@
       "type": "Prose",
       "sceneName": "boss",
       "lineNumber": 59,
-      "position": 17,
+      "position": 32,
       "indent": 1,
       "content": "Heal with a potion"
     },
@@ -2260,10 +2262,10 @@
       "type": "Identifier",
       "value": "boss_fight",
       "rawValue": "boss_fight",
-      "position": 10,
-      "lineNumber": 74,
       "sceneName": "boss",
       "indent": 2,
+      "lineNumber": 74,
+      "position": 10,
       "isLabelName": true
     },
     {
@@ -2301,7 +2303,7 @@
       "sceneName": "boss",
       "indent": 1,
       "lineNumber": 75,
-      "position": 16,
+      "position": 27,
       "rawText": "Wait for an opening",
       "hasMultiReplace": false
     },
@@ -2309,7 +2311,7 @@
       "type": "Prose",
       "sceneName": "boss",
       "lineNumber": 75,
-      "position": 17,
+      "position": 28,
       "indent": 1,
       "content": "Wait for an opening"
     },
@@ -2815,10 +2817,10 @@
       "type": "Identifier",
       "value": "boss_fight",
       "rawValue": "boss_fight",
-      "position": 10,
-      "lineNumber": 90,
       "sceneName": "boss",
       "indent": 2,
+      "lineNumber": 90,
+      "position": 10,
       "isLabelName": true
     },
     {
@@ -2832,10 +2834,10 @@
       "type": "Identifier",
       "value": "boss_victory",
       "rawValue": "boss_victory",
-      "position": 6,
-      "lineNumber": 92,
       "sceneName": "boss",
       "indent": 0,
+      "lineNumber": 92,
+      "position": 7,
       "isLabelName": true
     },
     {
@@ -2945,6 +2947,7 @@
       "sceneName": "boss",
       "indent": 1,
       "lineNumber": 101,
+      "position": 2,
       "rawText": "Claim the treasure and leave",
       "hasMultiReplace": false
     },
@@ -2952,7 +2955,7 @@
       "type": "Prose",
       "sceneName": "boss",
       "lineNumber": 101,
-      "position": null,
+      "position": 3,
       "indent": 1,
       "content": "Claim the treasure and leave"
     },
@@ -2975,10 +2978,10 @@
       "type": "Identifier",
       "value": "boss_exit",
       "rawValue": "boss_exit",
-      "position": 10,
-      "lineNumber": 103,
       "sceneName": "boss",
       "indent": 2,
+      "lineNumber": 103,
+      "position": 10,
       "isLabelName": true
     },
     {
@@ -2986,6 +2989,7 @@
       "sceneName": "boss",
       "indent": 1,
       "lineNumber": 104,
+      "position": 2,
       "rawText": "Search for something special",
       "hasMultiReplace": false
     },
@@ -2993,7 +2997,7 @@
       "type": "Prose",
       "sceneName": "boss",
       "lineNumber": 104,
-      "position": null,
+      "position": 3,
       "indent": 1,
       "content": "Search for something special"
     },
@@ -3080,10 +3084,10 @@
       "type": "Identifier",
       "value": "boss_exit",
       "rawValue": "boss_exit",
-      "position": 10,
-      "lineNumber": 108,
       "sceneName": "boss",
       "indent": 2,
+      "lineNumber": 108,
+      "position": 10,
       "isLabelName": true
     },
     {
@@ -3097,10 +3101,10 @@
       "type": "Identifier",
       "value": "boss_defeat",
       "rawValue": "boss_defeat",
-      "position": 6,
-      "lineNumber": 110,
       "sceneName": "boss",
       "indent": 0,
+      "lineNumber": 110,
+      "position": 7,
       "isLabelName": true
     },
     {
@@ -3168,10 +3172,10 @@
       "type": "Identifier",
       "value": "boss_exit",
       "rawValue": "boss_exit",
-      "position": 6,
-      "lineNumber": 116,
       "sceneName": "boss",
       "indent": 0,
+      "lineNumber": 116,
+      "position": 7,
       "isLabelName": true
     },
     {
@@ -3405,10 +3409,10 @@
       "type": "Identifier",
       "value": "dungeon_hub",
       "rawValue": "dungeon_hub",
-      "position": 6,
-      "lineNumber": 5,
       "sceneName": "dungeon",
       "indent": 0,
+      "lineNumber": 5,
+      "position": 7,
       "isLabelName": true
     },
     {
@@ -3666,6 +3670,7 @@
       "sceneName": "dungeon",
       "indent": 3,
       "lineNumber": 14,
+      "position": 6,
       "rawText": "Enter the boss chamber",
       "hasMultiReplace": false
     },
@@ -3673,7 +3678,7 @@
       "type": "Prose",
       "sceneName": "dungeon",
       "lineNumber": 14,
-      "position": null,
+      "position": 7,
       "indent": 3,
       "content": "Enter the boss chamber"
     },
@@ -3688,18 +3693,18 @@
       "type": "Identifier",
       "value": "boss",
       "rawValue": "boss",
-      "position": 20,
-      "lineNumber": 15,
       "sceneName": "dungeon",
       "indent": 4,
-      "isSceneName": true,
-      "isLabelName": false
+      "lineNumber": 15,
+      "position": 20,
+      "isSceneName": true
     },
     {
       "type": "ChoiceOption",
       "sceneName": "dungeon",
       "indent": 3,
       "lineNumber": 16,
+      "position": 6,
       "rawText": "Rest and prepare first",
       "hasMultiReplace": false
     },
@@ -3707,7 +3712,7 @@
       "type": "Prose",
       "sceneName": "dungeon",
       "lineNumber": 16,
-      "position": null,
+      "position": 7,
       "indent": 3,
       "content": "Rest and prepare first"
     },
@@ -3722,10 +3727,10 @@
       "type": "Identifier",
       "value": "rest",
       "rawValue": "rest",
-      "position": 15,
-      "lineNumber": 17,
       "sceneName": "dungeon",
       "indent": 4,
+      "lineNumber": 17,
+      "position": 15,
       "isLabelName": true
     },
     {
@@ -3739,10 +3744,10 @@
       "type": "Identifier",
       "value": "dungeon_hub",
       "rawValue": "dungeon_hub",
-      "position": 14,
-      "lineNumber": 18,
       "sceneName": "dungeon",
       "indent": 4,
+      "lineNumber": 18,
+      "position": 14,
       "isLabelName": true
     },
     {
@@ -3818,6 +3823,7 @@
       "sceneName": "dungeon",
       "indent": 1,
       "lineNumber": 25,
+      "position": 14,
       "rawText": "Take the left passage (dark and narrow)",
       "hasMultiReplace": false
     },
@@ -3825,7 +3831,7 @@
       "type": "Prose",
       "sceneName": "dungeon",
       "lineNumber": 25,
-      "position": null,
+      "position": 15,
       "indent": 1,
       "content": "Take the left passage (dark and narrow)"
     },
@@ -3864,10 +3870,10 @@
       "type": "Identifier",
       "value": "enter_room",
       "rawValue": "enter_room",
-      "position": 11,
-      "lineNumber": 27,
       "sceneName": "dungeon",
       "indent": 2,
+      "lineNumber": 27,
+      "position": 11,
       "isLabelName": true
     },
     {
@@ -3881,10 +3887,10 @@
       "type": "Identifier",
       "value": "dungeon_hub",
       "rawValue": "dungeon_hub",
-      "position": 10,
-      "lineNumber": 28,
       "sceneName": "dungeon",
       "indent": 2,
+      "lineNumber": 28,
+      "position": 10,
       "isLabelName": true
     },
     {
@@ -3899,6 +3905,7 @@
       "sceneName": "dungeon",
       "indent": 1,
       "lineNumber": 29,
+      "position": 14,
       "rawText": "Take the right passage (wide and echoing)",
       "hasMultiReplace": false
     },
@@ -3906,7 +3913,7 @@
       "type": "Prose",
       "sceneName": "dungeon",
       "lineNumber": 29,
-      "position": null,
+      "position": 15,
       "indent": 1,
       "content": "Take the right passage (wide and echoing)"
     },
@@ -3945,10 +3952,10 @@
       "type": "Identifier",
       "value": "enter_room",
       "rawValue": "enter_room",
-      "position": 11,
-      "lineNumber": 31,
       "sceneName": "dungeon",
       "indent": 2,
+      "lineNumber": 31,
+      "position": 11,
       "isLabelName": true
     },
     {
@@ -3962,10 +3969,10 @@
       "type": "Identifier",
       "value": "dungeon_hub",
       "rawValue": "dungeon_hub",
-      "position": 10,
-      "lineNumber": 32,
       "sceneName": "dungeon",
       "indent": 2,
+      "lineNumber": 32,
+      "position": 10,
       "isLabelName": true
     },
     {
@@ -3980,6 +3987,7 @@
       "sceneName": "dungeon",
       "indent": 1,
       "lineNumber": 33,
+      "position": 14,
       "rawText": "Descend a crumbling staircase",
       "hasMultiReplace": false
     },
@@ -3987,7 +3995,7 @@
       "type": "Prose",
       "sceneName": "dungeon",
       "lineNumber": 33,
-      "position": null,
+      "position": 15,
       "indent": 1,
       "content": "Descend a crumbling staircase"
     },
@@ -4026,10 +4034,10 @@
       "type": "Identifier",
       "value": "enter_room",
       "rawValue": "enter_room",
-      "position": 11,
-      "lineNumber": 35,
       "sceneName": "dungeon",
       "indent": 2,
+      "lineNumber": 35,
+      "position": 11,
       "isLabelName": true
     },
     {
@@ -4043,10 +4051,10 @@
       "type": "Identifier",
       "value": "dungeon_hub",
       "rawValue": "dungeon_hub",
-      "position": 10,
-      "lineNumber": 36,
       "sceneName": "dungeon",
       "indent": 2,
+      "lineNumber": 36,
+      "position": 10,
       "isLabelName": true
     },
     {
@@ -4061,6 +4069,7 @@
       "sceneName": "dungeon",
       "indent": 1,
       "lineNumber": 37,
+      "position": 14,
       "rawText": "Crawl through a gap in the wall",
       "hasMultiReplace": false
     },
@@ -4068,7 +4077,7 @@
       "type": "Prose",
       "sceneName": "dungeon",
       "lineNumber": 37,
-      "position": null,
+      "position": 15,
       "indent": 1,
       "content": "Crawl through a gap in the wall"
     },
@@ -4107,10 +4116,10 @@
       "type": "Identifier",
       "value": "enter_room",
       "rawValue": "enter_room",
-      "position": 11,
-      "lineNumber": 39,
       "sceneName": "dungeon",
       "indent": 2,
+      "lineNumber": 39,
+      "position": 11,
       "isLabelName": true
     },
     {
@@ -4124,10 +4133,10 @@
       "type": "Identifier",
       "value": "dungeon_hub",
       "rawValue": "dungeon_hub",
-      "position": 10,
-      "lineNumber": 40,
       "sceneName": "dungeon",
       "indent": 2,
+      "lineNumber": 40,
+      "position": 10,
       "isLabelName": true
     },
     {
@@ -4142,6 +4151,7 @@
       "sceneName": "dungeon",
       "indent": 1,
       "lineNumber": 41,
+      "position": 14,
       "rawText": "Follow the sound of running water",
       "hasMultiReplace": false
     },
@@ -4149,7 +4159,7 @@
       "type": "Prose",
       "sceneName": "dungeon",
       "lineNumber": 41,
-      "position": null,
+      "position": 15,
       "indent": 1,
       "content": "Follow the sound of running water"
     },
@@ -4188,10 +4198,10 @@
       "type": "Identifier",
       "value": "enter_room",
       "rawValue": "enter_room",
-      "position": 11,
-      "lineNumber": 43,
       "sceneName": "dungeon",
       "indent": 2,
+      "lineNumber": 43,
+      "position": 11,
       "isLabelName": true
     },
     {
@@ -4205,10 +4215,10 @@
       "type": "Identifier",
       "value": "dungeon_hub",
       "rawValue": "dungeon_hub",
-      "position": 10,
-      "lineNumber": 44,
       "sceneName": "dungeon",
       "indent": 2,
+      "lineNumber": 44,
+      "position": 10,
       "isLabelName": true
     },
     {
@@ -4223,6 +4233,7 @@
       "sceneName": "dungeon",
       "indent": 1,
       "lineNumber": 45,
+      "position": 14,
       "rawText": "Push open a rusted gate",
       "hasMultiReplace": false
     },
@@ -4230,7 +4241,7 @@
       "type": "Prose",
       "sceneName": "dungeon",
       "lineNumber": 45,
-      "position": null,
+      "position": 15,
       "indent": 1,
       "content": "Push open a rusted gate"
     },
@@ -4269,10 +4280,10 @@
       "type": "Identifier",
       "value": "enter_room",
       "rawValue": "enter_room",
-      "position": 11,
-      "lineNumber": 47,
       "sceneName": "dungeon",
       "indent": 2,
+      "lineNumber": 47,
+      "position": 11,
       "isLabelName": true
     },
     {
@@ -4286,10 +4297,10 @@
       "type": "Identifier",
       "value": "dungeon_hub",
       "rawValue": "dungeon_hub",
-      "position": 10,
-      "lineNumber": 48,
       "sceneName": "dungeon",
       "indent": 2,
+      "lineNumber": 48,
+      "position": 10,
       "isLabelName": true
     },
     {
@@ -4343,7 +4354,7 @@
       "sceneName": "dungeon",
       "indent": 1,
       "lineNumber": 49,
-      "position": 16,
+      "position": 31,
       "rawText": "Use a potion",
       "hasMultiReplace": false
     },
@@ -4351,7 +4362,7 @@
       "type": "Prose",
       "sceneName": "dungeon",
       "lineNumber": 49,
-      "position": 17,
+      "position": 32,
       "indent": 1,
       "content": "Use a potion"
     },
@@ -4366,10 +4377,10 @@
       "type": "Identifier",
       "value": "use_potion",
       "rawValue": "use_potion",
-      "position": 11,
-      "lineNumber": 50,
       "sceneName": "dungeon",
       "indent": 2,
+      "lineNumber": 50,
+      "position": 11,
       "isLabelName": true
     },
     {
@@ -4383,10 +4394,10 @@
       "type": "Identifier",
       "value": "dungeon_hub",
       "rawValue": "dungeon_hub",
-      "position": 10,
-      "lineNumber": 51,
       "sceneName": "dungeon",
       "indent": 2,
+      "lineNumber": 51,
+      "position": 10,
       "isLabelName": true
     },
     {
@@ -4394,6 +4405,7 @@
       "sceneName": "dungeon",
       "indent": 1,
       "lineNumber": 52,
+      "position": 2,
       "rawText": "Retreat to the surface",
       "hasMultiReplace": false
     },
@@ -4401,7 +4413,7 @@
       "type": "Prose",
       "sceneName": "dungeon",
       "lineNumber": 52,
-      "position": null,
+      "position": 3,
       "indent": 1,
       "content": "Retreat to the surface"
     },
@@ -4416,10 +4428,10 @@
       "type": "Identifier",
       "value": "retreat",
       "rawValue": "retreat",
-      "position": 10,
-      "lineNumber": 53,
       "sceneName": "dungeon",
       "indent": 2,
+      "lineNumber": 53,
+      "position": 10,
       "isLabelName": true
     },
     {
@@ -4433,10 +4445,10 @@
       "type": "Identifier",
       "value": "enter_room",
       "rawValue": "enter_room",
-      "position": 6,
-      "lineNumber": 55,
       "sceneName": "dungeon",
       "indent": 0,
+      "lineNumber": 55,
+      "position": 7,
       "isLabelName": true
     },
     {
@@ -4546,10 +4558,10 @@
       "type": "Identifier",
       "value": "combat_encounter",
       "rawValue": "combat_encounter",
-      "position": 9,
-      "lineNumber": 60,
       "sceneName": "dungeon",
       "indent": 1,
+      "lineNumber": 60,
+      "position": 9,
       "isLabelName": true
     },
     {
@@ -4595,10 +4607,10 @@
       "type": "Identifier",
       "value": "treasure_room",
       "rawValue": "treasure_room",
-      "position": 9,
-      "lineNumber": 62,
       "sceneName": "dungeon",
       "indent": 1,
+      "lineNumber": 62,
+      "position": 9,
       "isLabelName": true
     },
     {
@@ -4619,10 +4631,10 @@
       "type": "Identifier",
       "value": "key_room",
       "rawValue": "key_room",
-      "position": 9,
-      "lineNumber": 64,
       "sceneName": "dungeon",
       "indent": 1,
+      "lineNumber": 64,
+      "position": 9,
       "isLabelName": true
     },
     {
@@ -4643,10 +4655,10 @@
       "type": "Identifier",
       "value": "combat_encounter",
       "rawValue": "combat_encounter",
-      "position": 6,
-      "lineNumber": 68,
       "sceneName": "dungeon",
       "indent": 0,
+      "lineNumber": 68,
+      "position": 7,
       "isLabelName": true
     },
     {
@@ -4785,10 +4797,10 @@
       "type": "Identifier",
       "value": "combat_round",
       "rawValue": "combat_round",
-      "position": 6,
-      "lineNumber": 74,
       "sceneName": "dungeon",
       "indent": 0,
+      "lineNumber": 74,
+      "position": 7,
       "isLabelName": true
     },
     {
@@ -4904,10 +4916,10 @@
       "type": "Identifier",
       "value": "combat_victory",
       "rawValue": "combat_victory",
-      "position": 8,
-      "lineNumber": 79,
       "sceneName": "dungeon",
       "indent": 1,
+      "lineNumber": 79,
+      "position": 8,
       "isLabelName": true
     },
     {
@@ -4953,10 +4965,10 @@
       "type": "Identifier",
       "value": "death",
       "rawValue": "death",
-      "position": 8,
-      "lineNumber": 81,
       "sceneName": "dungeon",
       "indent": 1,
+      "lineNumber": 81,
+      "position": 8,
       "isLabelName": true
     },
     {
@@ -4971,6 +4983,7 @@
       "sceneName": "dungeon",
       "indent": 1,
       "lineNumber": 84,
+      "position": 2,
       "rawText": "Strike!",
       "hasMultiReplace": false
     },
@@ -4978,7 +4991,7 @@
       "type": "Prose",
       "sceneName": "dungeon",
       "lineNumber": 84,
-      "position": null,
+      "position": 3,
       "indent": 1,
       "content": "Strike!"
     },
@@ -5508,10 +5521,10 @@
       "type": "Identifier",
       "value": "combat_round",
       "rawValue": "combat_round",
-      "position": 10,
-      "lineNumber": 97,
       "sceneName": "dungeon",
       "indent": 2,
+      "lineNumber": 97,
+      "position": 10,
       "isLabelName": true
     },
     {
@@ -5519,6 +5532,7 @@
       "sceneName": "dungeon",
       "indent": 1,
       "lineNumber": 98,
+      "position": 2,
       "rawText": "Dodge and counter",
       "hasMultiReplace": false
     },
@@ -5526,7 +5540,7 @@
       "type": "Prose",
       "sceneName": "dungeon",
       "lineNumber": 98,
-      "position": null,
+      "position": 3,
       "indent": 1,
       "content": "Dodge and counter"
     },
@@ -6031,10 +6045,10 @@
       "type": "Identifier",
       "value": "combat_round",
       "rawValue": "combat_round",
-      "position": 10,
-      "lineNumber": 113,
       "sceneName": "dungeon",
       "indent": 2,
+      "lineNumber": 113,
+      "position": 10,
       "isLabelName": true
     },
     {
@@ -6088,7 +6102,7 @@
       "sceneName": "dungeon",
       "indent": 1,
       "lineNumber": 114,
-      "position": 16,
+      "position": 31,
       "rawText": "Use a potion mid-fight",
       "hasMultiReplace": false
     },
@@ -6096,7 +6110,7 @@
       "type": "Prose",
       "sceneName": "dungeon",
       "lineNumber": 114,
-      "position": 17,
+      "position": 32,
       "indent": 1,
       "content": "Use a potion mid-fight"
     },
@@ -6111,10 +6125,10 @@
       "type": "Identifier",
       "value": "use_potion",
       "rawValue": "use_potion",
-      "position": 11,
-      "lineNumber": 115,
       "sceneName": "dungeon",
       "indent": 2,
+      "lineNumber": 115,
+      "position": 11,
       "isLabelName": true
     },
     {
@@ -6256,10 +6270,10 @@
       "type": "Identifier",
       "value": "combat_round",
       "rawValue": "combat_round",
-      "position": 10,
-      "lineNumber": 120,
       "sceneName": "dungeon",
       "indent": 2,
+      "lineNumber": 120,
+      "position": 10,
       "isLabelName": true
     },
     {
@@ -6273,10 +6287,10 @@
       "type": "Identifier",
       "value": "combat_victory",
       "rawValue": "combat_victory",
-      "position": 6,
-      "lineNumber": 122,
       "sceneName": "dungeon",
       "indent": 0,
+      "lineNumber": 122,
+      "position": 7,
       "isLabelName": true
     },
     {
@@ -6481,10 +6495,10 @@
       "type": "Identifier",
       "value": "treasure_room",
       "rawValue": "treasure_room",
-      "position": 6,
-      "lineNumber": 133,
       "sceneName": "dungeon",
       "indent": 0,
+      "lineNumber": 133,
+      "position": 7,
       "isLabelName": true
     },
     {
@@ -6539,6 +6553,7 @@
       "sceneName": "dungeon",
       "indent": 1,
       "lineNumber": 139,
+      "position": 2,
       "rawText": "Take the gold",
       "hasMultiReplace": false
     },
@@ -6546,7 +6561,7 @@
       "type": "Prose",
       "sceneName": "dungeon",
       "lineNumber": 139,
-      "position": null,
+      "position": 3,
       "indent": 1,
       "content": "Take the gold"
     },
@@ -6602,6 +6617,7 @@
       "sceneName": "dungeon",
       "indent": 1,
       "lineNumber": 143,
+      "position": 2,
       "rawText": "Search for hidden items",
       "hasMultiReplace": false
     },
@@ -6609,7 +6625,7 @@
       "type": "Prose",
       "sceneName": "dungeon",
       "lineNumber": 143,
-      "position": null,
+      "position": 3,
       "indent": 1,
       "content": "Search for hidden items"
     },
@@ -6782,10 +6798,10 @@
       "type": "Identifier",
       "value": "key_room",
       "rawValue": "key_room",
-      "position": 6,
-      "lineNumber": 153,
       "sceneName": "dungeon",
       "indent": 0,
+      "lineNumber": 153,
+      "position": 7,
       "isLabelName": true
     },
     {
@@ -6885,10 +6901,10 @@
       "type": "Identifier",
       "value": "use_potion",
       "rawValue": "use_potion",
-      "position": 6,
-      "lineNumber": 161,
       "sceneName": "dungeon",
       "indent": 0,
+      "lineNumber": 161,
+      "position": 7,
       "isLabelName": true
     },
     {
@@ -7189,10 +7205,10 @@
       "type": "Identifier",
       "value": "rest",
       "rawValue": "rest",
-      "position": 6,
-      "lineNumber": 171,
       "sceneName": "dungeon",
       "indent": 0,
+      "lineNumber": 171,
+      "position": 7,
       "isLabelName": true
     },
     {
@@ -7469,10 +7485,10 @@
       "type": "Identifier",
       "value": "death",
       "rawValue": "death",
-      "position": 6,
-      "lineNumber": 181,
       "sceneName": "dungeon",
       "indent": 0,
+      "lineNumber": 181,
+      "position": 7,
       "isLabelName": true
     },
     {
@@ -7571,10 +7587,10 @@
       "type": "Identifier",
       "value": "retreat",
       "rawValue": "retreat",
-      "position": 6,
-      "lineNumber": 187,
       "sceneName": "dungeon",
       "indent": 0,
+      "lineNumber": 187,
+      "position": 7,
       "isLabelName": true
     },
     {
@@ -8047,12 +8063,11 @@
       "type": "Identifier",
       "value": "dungeon",
       "rawValue": "dungeon",
-      "position": 12,
-      "lineNumber": 16,
       "sceneName": "startup",
       "indent": 0,
-      "isSceneName": true,
-      "isLabelName": false
+      "lineNumber": 16,
+      "position": 12,
+      "isSceneName": true
     },
     {
       "lineNumber": 19,

@@ -81,29 +81,6 @@
           {
             "type": "Prose",
             "sceneName": "startup",
-            "lineNumber": 2,
-            "position": 46,
-            "indent": 0,
-            "content": "d\n"
-          }
-        ],
-        "kind": "Prose",
-        "parsedSegments": [
-          {
-            "kind": "Text",
-            "start": 0,
-            "end": 2,
-            "lineNumber": 2,
-            "position": 46,
-            "text": "d\n"
-          }
-        ]
-      },
-      {
-        "content": [
-          {
-            "type": "Prose",
-            "sceneName": "startup",
             "lineNumber": 3,
             "position": 2,
             "indent": 1,

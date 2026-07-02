@@ -1,0 +1,48 @@
+{
+  "states": [
+    {
+      "cfgId": "startup:",
+      "entryGlobals": [
+        {
+          "gold": "100"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "gold": "100"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:check_gold",
+      "entryGlobals": [
+        {
+          "gold": "100"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "gold": "100"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:__entry__cont_0",
+      "entryGlobals": [
+        {
+          "gold": "100"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "gold": "100"
+        }
+      ]
+    }
+  ],
+  "diagnostics": {
+    "unresolvedExits": 0,
+    "droppedContexts": 0,
+    "missingCfgs": []
+  }
+}

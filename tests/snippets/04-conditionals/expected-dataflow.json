@@ -1,0 +1,24 @@
+{
+  "states": [
+    {
+      "cfgId": "startup:",
+      "entryGlobals": [
+        {
+          "strength": "50",
+          "charm": "30"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "strength": "50",
+          "charm": "30"
+        }
+      ]
+    }
+  ],
+  "diagnostics": {
+    "unresolvedExits": 0,
+    "droppedContexts": 0,
+    "missingCfgs": []
+  }
+}

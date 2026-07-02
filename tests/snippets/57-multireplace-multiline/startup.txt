@@ -1,0 +1,8 @@
+*comment Test: multi-line multireplace is illegal and should produce a parse error.
+*comment The @{...} must be on a single line.
+
+*create mood 1
+
+You feel @{mood happy
+|sad}.
+*finish

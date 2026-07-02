@@ -10,11 +10,10 @@
       "startup:b_0": {
         "scene": "startup",
         "statementIds": [
-          "startup:0",
-          "startup:1",
-          "startup:2",
-          "startup:3",
-          "startup:4"
+          "startup:1car0eq1bb9to4",
+          "startup:1jvp82u64jyoo",
+          "startup:aleyfxu2g1hn",
+          "startup:1mem05w1eay3y2"
         ],
         "entryType": "SceneEntry",
         "exitType": "ImplicitEnd"

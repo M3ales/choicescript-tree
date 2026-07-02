@@ -1,0 +1,16 @@
+*create gold 50
+
+*label shop
+Gold: ${gold}.
+*choice
+  *selectable_if (gold >= 20) #Buy armor (20g).
+    *set gold - 20
+    You bought armor.
+    *goto shop
+  *selectable_if (gold >= 10) #Buy potion (10g).
+    *set gold - 10
+    You bought a potion.
+    *goto shop
+  #Leave.
+    You leave.
+    *finish

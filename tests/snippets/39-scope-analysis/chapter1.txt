@@ -1,0 +1,18 @@
+*comment Test: cross-scene scope propagation
+*comment health and stamina should be in scope (globals from startup)
+*comment gold should NOT be in scope (deleted in startup)
+*comment battle_log is a temp — should NOT cross scene boundary
+
+You arrive with ${health} health and ${stamina} stamina.
+
+*comment Temp from startup should not be visible
+*temp local_var "hello"
+
+*comment Reference gold (was deleted in startup) — undefined expected
+*if (gold > 0)
+  You still have gold!
+
+*comment Reference battle_log (temp, doesn't cross scenes) — undefined expected
+The log: ${battle_log}
+
+*finish

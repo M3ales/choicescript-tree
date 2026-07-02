@@ -1,0 +1,8 @@
+*comment --- goto_scene back to startup label = cross-scene infinite loop ---
+*goto_scene startup goto_loop
+
+*comment --- gosub_scene infinite loop ---
+*label sub_loop
+*set health 99
+*gosub_scene chapter2 bounce_back
+*goto sub_loop

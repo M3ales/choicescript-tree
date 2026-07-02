@@ -1,0 +1,109 @@
+{
+  "states": [
+    {
+      "cfgId": "startup:",
+      "entryGlobals": [
+        {
+          "gender": "female",
+          "trans": "false",
+          "father": "50",
+          "intense": "30",
+          "genuine": "40",
+          "endurance": "22",
+          "condition": "100"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "gender": "female",
+          "trans": "false",
+          "father": "52",
+          "intense": "33",
+          "genuine": "42",
+          "endurance": "22",
+          "condition": "100"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:race_stage_condition_drain",
+      "entryGlobals": [
+        {
+          "gender": "female",
+          "trans": "false",
+          "father": "52",
+          "intense": "33",
+          "genuine": "42",
+          "endurance": "22",
+          "condition": "100"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "gender": "female",
+          "trans": "false",
+          "father": "52",
+          "intense": "33",
+          "genuine": "42",
+          "endurance": "22",
+          "condition": "{0,80,85,90,95}"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:__entry__cont_0",
+      "entryGlobals": [
+        {
+          "gender": "female",
+          "trans": "false",
+          "father": "52",
+          "intense": "33",
+          "genuine": "42",
+          "endurance": "22",
+          "condition": "{0,80,85,90,95}"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "gender": "female",
+          "trans": "false",
+          "father": "52",
+          "intense": "33",
+          "genuine": "42",
+          "endurance": "22",
+          "condition": "{0,80,85,90,95}"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:choose_restaurant",
+      "entryGlobals": [
+        {
+          "gender": "female",
+          "trans": "false",
+          "father": "52",
+          "intense": "33",
+          "genuine": "42",
+          "endurance": "22",
+          "condition": "{0,80,85,90,95}"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "gender": "female",
+          "trans": "false",
+          "father": "52",
+          "intense": "33",
+          "genuine": "42",
+          "endurance": "22",
+          "condition": "{0,80,85,90,95}"
+        }
+      ]
+    }
+  ],
+  "diagnostics": {
+    "unresolvedExits": 0,
+    "droppedContexts": 0,
+    "missingCfgs": []
+  }
+}

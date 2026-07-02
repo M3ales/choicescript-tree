@@ -1,0 +1,48 @@
+{
+  "states": [
+    {
+      "cfgId": "startup:",
+      "entryGlobals": [
+        {
+          "reputation": "0"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "reputation": "0"
+        }
+      ]
+    },
+    {
+      "cfgId": "helpers:add_rep",
+      "entryGlobals": [
+        {
+          "reputation": "0"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "reputation": "10"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:__entry__cont_0",
+      "entryGlobals": [
+        {
+          "reputation": "10"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "reputation": "10"
+        }
+      ]
+    }
+  ],
+  "diagnostics": {
+    "unresolvedExits": 0,
+    "droppedContexts": 0,
+    "missingCfgs": []
+  }
+}

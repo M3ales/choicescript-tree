@@ -1,0 +1,116 @@
+[
+  {
+    "headerCfgId": "startup:",
+    "bodyCfgIds": [
+      "arena:",
+      "arena:arena_exit",
+      "arena:combat_loop",
+      "arena:defeat",
+      "arena:draw",
+      "arena:victory",
+      "shop:",
+      "shop:confirm_continue",
+      "shop:confirm_purchase",
+      "shop:shop_exit",
+      "shop:shop_hub",
+      "shop:shop_hub__cont_0",
+      "shop:shop_hub__cont_1",
+      "shop:shop_hub__cont_2",
+      "shop:shop_hub__cont_3",
+      "startup:",
+      "startup:village_hub",
+      "startup:village_hub__cont_0",
+      "tavern:",
+      "tavern:tavern_exit",
+      "tavern:tavern_hub",
+      "tavern:tavern_hub__cont_0"
+    ],
+    "backEdgeCount": 1,
+    "exitCount": 6,
+    "mechanism": "mixed",
+    "pure": false,
+    "bound": "condition-bounded",
+    "tripCount": 0,
+    "unrollDepth": 0,
+    "infinite": false
+  },
+  {
+    "headerCfgId": "shop:shop_hub",
+    "bodyCfgIds": [
+      "shop:shop_hub",
+      "shop:shop_hub__cont_0",
+      "shop:shop_hub__cont_1",
+      "shop:shop_hub__cont_2",
+      "shop:shop_hub__cont_3"
+    ],
+    "backEdgeCount": 4,
+    "exitCount": 10,
+    "mechanism": "direct",
+    "pure": false,
+    "bound": "condition-bounded",
+    "tripCount": 0,
+    "unrollDepth": 0,
+    "infinite": false
+  },
+  {
+    "headerCfgId": "startup:village_hub",
+    "bodyCfgIds": [
+      "arena:",
+      "arena:arena_exit",
+      "arena:combat_loop",
+      "arena:defeat",
+      "arena:draw",
+      "arena:victory",
+      "shop:",
+      "shop:shop_exit",
+      "shop:shop_hub",
+      "shop:shop_hub__cont_0",
+      "shop:shop_hub__cont_1",
+      "shop:shop_hub__cont_2",
+      "shop:shop_hub__cont_3",
+      "startup:village_hub",
+      "startup:village_hub__cont_0",
+      "tavern:",
+      "tavern:tavern_exit",
+      "tavern:tavern_hub",
+      "tavern:tavern_hub__cont_0"
+    ],
+    "backEdgeCount": 4,
+    "exitCount": 8,
+    "mechanism": "cross-scene",
+    "pure": false,
+    "bound": "condition-bounded",
+    "tripCount": 0,
+    "unrollDepth": 0,
+    "infinite": false
+  },
+  {
+    "headerCfgId": "tavern:tavern_hub",
+    "bodyCfgIds": [
+      "tavern:tavern_hub",
+      "tavern:tavern_hub__cont_0"
+    ],
+    "backEdgeCount": 3,
+    "exitCount": 3,
+    "mechanism": "direct",
+    "pure": false,
+    "bound": "condition-bounded",
+    "tripCount": 0,
+    "unrollDepth": 0,
+    "infinite": false
+  },
+  {
+    "headerCfgId": "arena:combat_loop",
+    "bodyCfgIds": [
+      "arena:combat_loop"
+    ],
+    "backEdgeCount": 3,
+    "exitCount": 4,
+    "mechanism": "direct",
+    "pure": false,
+    "bound": "condition-bounded",
+    "tripCount": 2,
+    "unrollDepth": 2,
+    "infinite": false
+  }
+]

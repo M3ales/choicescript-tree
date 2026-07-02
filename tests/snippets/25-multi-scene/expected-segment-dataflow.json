@@ -1,0 +1,51 @@
+{
+  "totalIterations": 3,
+  "widenedSccs": 0,
+  "stateCount": 3,
+  "cfgEntryStateCount": 3,
+  "blockDeltaCount": 0,
+  "blockMappedCount": 5,
+  "states": {
+    "seg_0": {
+      "entryGlobals": {
+        "health": "100"
+      },
+      "exitGlobals": {
+        "health": "100"
+      }
+    },
+    "seg_1": {
+      "entryGlobals": {
+        "health": "100"
+      },
+      "exitGlobals": {
+        "health": "100"
+      }
+    },
+    "seg_2": {
+      "entryGlobals": {
+        "health": "100"
+      },
+      "exitGlobals": {
+        "health": "100"
+      }
+    }
+  },
+  "cfgEntryStates": {
+    "market:": {
+      "globals": {
+        "health": "100"
+      }
+    },
+    "startup:": {
+      "globals": {
+        "health": "100"
+      }
+    },
+    "tavern:": {
+      "globals": {
+        "health": "100"
+      }
+    }
+  }
+}

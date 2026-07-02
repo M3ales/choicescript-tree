@@ -1,0 +1,58 @@
+{
+  "states": [
+    {
+      "cfgId": "startup:",
+      "entryGlobals": [
+        {
+          "g_name": "Alex",
+          "health": "100"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "g_name": "Alex",
+          "health": "100"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:rejoin_teammates_g",
+      "entryGlobals": [
+        {
+          "g_name": "Alex",
+          "health": "100"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "g_name": "Alex",
+          "health": "100"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:goto_loop",
+      "entryGlobals": [
+        {
+          "g_name": "Alex",
+          "health": "100"
+        },
+        {
+          "g_name": "Alex",
+          "health": "50"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "g_name": "Alex",
+          "health": "50"
+        }
+      ]
+    }
+  ],
+  "diagnostics": {
+    "unresolvedExits": 0,
+    "droppedContexts": 0,
+    "missingCfgs": []
+  }
+}

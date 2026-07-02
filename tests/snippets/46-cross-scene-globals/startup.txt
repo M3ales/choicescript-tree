@@ -1,0 +1,8 @@
+*create health 100
+*create gold 50
+*create quest_done false
+*create visited_shop false
+
+You begin your adventure.
+*set health 90
+*goto_scene town

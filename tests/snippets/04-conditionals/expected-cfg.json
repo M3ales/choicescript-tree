@@ -22,9 +22,9 @@
       "startup:b_0": {
         "scene": "startup",
         "statementIds": [
-          "startup:0",
-          "startup:1",
-          "startup:7"
+          "startup:17bk5y7hjfz4d",
+          "startup:1bibz5g1vuss96",
+          "startup:1q8ptmb1nb6yed"
         ],
         "entryType": "SceneEntry",
         "exitType": "Branch"
@@ -38,7 +38,7 @@
       "startup:b_2": {
         "scene": "startup",
         "statementIds": [
-          "startup:2"
+          "startup:9q79ur60nty1"
         ],
         "entryType": "ConditionalBody",
         "exitType": "FallThrough"
@@ -46,7 +46,8 @@
       "startup:b_3": {
         "scene": "startup",
         "statementIds": [
-          "startup:3"
+          "startup:ftir7d1d7ypp7",
+          "startup:1ftbu35ny78ur"
         ],
         "entryType": "ConditionalBody",
         "exitType": "FallThrough"
@@ -54,7 +55,8 @@
       "startup:b_4": {
         "scene": "startup",
         "statementIds": [
-          "startup:5"
+          "startup:nf2wxi54a5po",
+          "startup:icm02jr3r5g5"
         ],
         "entryType": "ConditionalBody",
         "exitType": "FallThrough"
@@ -66,7 +68,7 @@
         "sourceBlockId": "startup:b_0",
         "targetBlockId": "startup:b_2",
         "metadata": {
-          "conditionStatementId": "startup:7"
+          "conditionStatementId": "startup:1q8ptmb1nb6yed"
         }
       },
       {
@@ -80,7 +82,7 @@
         "sourceBlockId": "startup:b_0",
         "targetBlockId": "startup:b_3",
         "metadata": {
-          "conditionStatementId": "startup:4"
+          "conditionStatementId": "startup:ftir7d1d7ypp7"
         }
       },
       {

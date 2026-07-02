@@ -1,0 +1,16 @@
+[
+  {
+    "headerCfgId": "startup:shop",
+    "bodyCfgIds": [
+      "startup:shop"
+    ],
+    "backEdgeCount": 2,
+    "exitCount": 2,
+    "mechanism": "direct",
+    "pure": false,
+    "bound": "condition-bounded",
+    "tripCount": null,
+    "unrollDepth": 2,
+    "infinite": false
+  }
+]

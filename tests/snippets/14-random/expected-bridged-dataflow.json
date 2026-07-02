@@ -1,0 +1,14 @@
+{
+  "cfgCount": 1,
+  "states": [
+    {
+      "cfgId": "startup:",
+      "entryGlobals": [
+        {
+          "dice_roll": "0",
+          "damage": "0"
+        }
+      ]
+    }
+  ]
+}

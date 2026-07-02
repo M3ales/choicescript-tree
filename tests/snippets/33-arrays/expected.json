@@ -981,10 +981,10 @@
           "type": "Identifier",
           "value": "search_loop",
           "rawValue": "search_loop",
-          "position": 6,
-          "lineNumber": 28,
           "sceneName": "startup",
           "indent": 0,
+          "lineNumber": 28,
+          "position": 7,
           "isLabelName": true
         }
       },
@@ -1054,10 +1054,10 @@
                   "type": "Identifier",
                   "value": "search_done",
                   "rawValue": "search_done",
-                  "position": 10,
-                  "lineNumber": 32,
                   "sceneName": "startup",
                   "indent": 2,
+                  "lineNumber": 32,
+                  "position": 10,
                   "isLabelName": true
                 }
               }
@@ -1171,10 +1171,10 @@
               "type": "Identifier",
               "value": "search_loop",
               "rawValue": "search_loop",
-              "position": 8,
-              "lineNumber": 34,
               "sceneName": "startup",
               "indent": 1,
+              "lineNumber": 34,
+              "position": 8,
               "isLabelName": true
             }
           }
@@ -1233,10 +1233,10 @@
           "type": "Identifier",
           "value": "search_done",
           "rawValue": "search_done",
-          "position": 6,
-          "lineNumber": 35,
           "sceneName": "startup",
           "indent": 0,
+          "lineNumber": 35,
+          "position": 7,
           "isLabelName": true
         }
       },
@@ -2453,11 +2453,44 @@
         }
       },
       {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "labels_3",
+            "rawValue": "labels_3",
+            "position": 5,
+            "lineNumber": 61,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "assignment": {
+          "kind": "Literal",
+          "value": {
+            "type": "StringLiteral",
+            "value": "hello",
+            "position": 14,
+            "lineNumber": 61,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 61,
+          "position": 0
+        }
+      },
+      {
         "content": [
           {
             "type": "Prose",
             "sceneName": "startup",
-            "lineNumber": 61,
+            "lineNumber": 63,
             "position": 0,
             "indent": 0,
             "content": "Labels: "
@@ -2465,7 +2498,7 @@
           {
             "type": "Prose",
             "sceneName": "startup",
-            "lineNumber": 61,
+            "lineNumber": 63,
             "position": 19,
             "indent": 0,
             "content": ", "
@@ -2473,7 +2506,7 @@
           {
             "type": "Prose",
             "sceneName": "startup",
-            "lineNumber": 61,
+            "lineNumber": 63,
             "position": 32,
             "indent": 0,
             "content": "\n\n"
@@ -2485,7 +2518,7 @@
             "kind": "Text",
             "start": 0,
             "end": 8,
-            "lineNumber": 61,
+            "lineNumber": 63,
             "position": 0,
             "text": "Labels: "
           },
@@ -2493,7 +2526,7 @@
             "kind": "Print",
             "start": 0,
             "end": 0,
-            "lineNumber": 61,
+            "lineNumber": 63,
             "position": 8,
             "expression": {
               "kind": "Identifier",
@@ -2502,7 +2535,7 @@
                 "value": "labels_1",
                 "rawValue": "labels_1",
                 "position": 10,
-                "lineNumber": 61,
+                "lineNumber": 63,
                 "sceneName": "startup",
                 "indent": 0
               }
@@ -2512,7 +2545,7 @@
             "kind": "Text",
             "start": 0,
             "end": 2,
-            "lineNumber": 61,
+            "lineNumber": 63,
             "position": 19,
             "text": ", "
           },
@@ -2520,7 +2553,7 @@
             "kind": "Print",
             "start": 0,
             "end": 0,
-            "lineNumber": 61,
+            "lineNumber": 63,
             "position": 21,
             "expression": {
               "kind": "Identifier",
@@ -2529,7 +2562,7 @@
                 "value": "labels_2",
                 "rawValue": "labels_2",
                 "position": 23,
-                "lineNumber": 61,
+                "lineNumber": 63,
                 "sceneName": "startup",
                 "indent": 0
               }
@@ -2539,7 +2572,7 @@
             "kind": "Text",
             "start": 0,
             "end": 2,
-            "lineNumber": 61,
+            "lineNumber": 63,
             "position": 32,
             "text": "\n\n"
           }
@@ -2555,7 +2588,7 @@
           "type": "DeleteArray",
           "sceneName": "startup",
           "indent": 0,
-          "lineNumber": 64,
+          "lineNumber": 66,
           "position": 0
         },
         "variable": {
@@ -2563,7 +2596,7 @@
           "value": "scores",
           "rawValue": "scores",
           "position": 14,
-          "lineNumber": 64,
+          "lineNumber": 66,
           "sceneName": "startup",
           "indent": 0
         }
@@ -2574,7 +2607,7 @@
           "type": "DeleteArray",
           "sceneName": "startup",
           "indent": 0,
-          "lineNumber": 65,
+          "lineNumber": 67,
           "position": 0
         },
         "variable": {
@@ -2582,7 +2615,7 @@
           "value": "labels",
           "rawValue": "labels",
           "position": 14,
-          "lineNumber": 65,
+          "lineNumber": 67,
           "sceneName": "startup",
           "indent": 0
         }
@@ -2598,7 +2631,7 @@
           "value": "slot",
           "rawValue": "slot",
           "position": 6,
-          "lineNumber": 68,
+          "lineNumber": 70,
           "sceneName": "startup",
           "indent": 0
         },
@@ -2608,7 +2641,7 @@
             "type": "NumberLiteral",
             "value": 3,
             "position": 11,
-            "lineNumber": 68,
+            "lineNumber": 70,
             "sceneName": "startup",
             "indent": 0
           }
@@ -2618,7 +2651,7 @@
           "type": "CreateTempVariable",
           "sceneName": "startup",
           "indent": 0,
-          "lineNumber": 68,
+          "lineNumber": 70,
           "position": 0
         }
       },
@@ -2633,7 +2666,7 @@
               "value": "slot",
               "rawValue": "slot",
               "position": 15,
-              "lineNumber": 69,
+              "lineNumber": 71,
               "sceneName": "startup",
               "indent": 0
             }
@@ -2643,7 +2676,7 @@
             "value": "inventory",
             "rawValue": "inventory",
             "position": 5,
-            "lineNumber": 69,
+            "lineNumber": 71,
             "sceneName": "startup",
             "indent": 0
           }
@@ -2654,7 +2687,7 @@
             "type": "StringLiteral",
             "value": "elixir",
             "position": 21,
-            "lineNumber": 69,
+            "lineNumber": 71,
             "sceneName": "startup",
             "indent": 0
           }
@@ -2663,7 +2696,7 @@
           "type": "SetVariable",
           "sceneName": "startup",
           "indent": 0,
-          "lineNumber": 69,
+          "lineNumber": 71,
           "position": 0
         }
       }
@@ -2680,7 +2713,7 @@
       "type": "StringLiteral",
       "value": "elixir",
       "position": 21,
-      "lineNumber": 69,
+      "lineNumber": 71,
       "sceneName": "startup",
       "indent": 0
     }

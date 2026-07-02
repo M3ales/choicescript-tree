@@ -1,0 +1,21 @@
+{
+  "cfgCount": 2,
+  "states": [
+    {
+      "cfgId": "startup:",
+      "entryGlobals": [
+        {
+          "gold": "50"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:shop",
+      "entryGlobals": [
+        {
+          "gold": "top"
+        }
+      ]
+    }
+  ]
+}

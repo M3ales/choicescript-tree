@@ -1,0 +1,235 @@
+[
+  {
+    "sceneName": "startup",
+    "blocks": {
+      "startup:b_0": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_1": {
+        "exitType": "Choice"
+      },
+      "startup:b_2": {
+        "exitType": "Finish"
+      },
+      "startup:b_3": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_4": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_5": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_6": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_7": {
+        "exitType": "Input"
+      },
+      "startup:b_8": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_9": {
+        "exitType": "FallThrough"
+      }
+    },
+    "blockIndex": {
+      "startup:b_0": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:as5mk11fxgxjz"
+        ],
+        "entryType": "SceneEntry",
+        "exitType": "FallThrough"
+      },
+      "startup:b_1": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:1qokcdw1sg1b1q",
+          "startup:o042yt1ntc2bz"
+        ],
+        "entryType": "Label",
+        "exitType": "Choice",
+        "label": "set_the_table"
+      },
+      "startup:b_2": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:645pl2bf0ke0",
+          "startup:1h2jp5m1ji8dcw"
+        ],
+        "entryType": "Continuation",
+        "exitType": "Finish"
+      },
+      "startup:b_3": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:187qhclhr3n8b",
+          "startup:1t1b9c71gikjad"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "FallThrough"
+      },
+      "startup:b_4": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:rv8wosr36qg2",
+          "startup:u8epjn1a9pja1"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "FallThrough"
+      },
+      "startup:b_5": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:1c3occpzzbftr",
+          "startup:dmtsjde5xi7r"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "FallThrough"
+      },
+      "startup:b_6": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:1c11fd68nn0ac",
+          "startup:12dukwo1mf2p0y"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "FallThrough"
+      },
+      "startup:b_7": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:tcmzj2v4ufr0",
+          "startup:1ni86qt497yg3",
+          "startup:1opfspb190z7yp"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "Input"
+      },
+      "startup:b_8": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "InputContinuation",
+        "exitType": "FallThrough"
+      },
+      "startup:b_9": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      }
+    },
+    "edges": [
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "startup:b_0",
+        "targetBlockId": "startup:b_1",
+        "metadata": {}
+      },
+      {
+        "kind": "ChoiceOption",
+        "sourceBlockId": "startup:b_1",
+        "targetBlockId": "startup:b_3",
+        "metadata": {
+          "optionStatementId": "startup:187qhclhr3n8b"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "startup:b_3",
+        "targetBlockId": "startup:b_2",
+        "metadata": {
+          "implicitControlFlow": true
+        }
+      },
+      {
+        "kind": "ChoiceOption",
+        "sourceBlockId": "startup:b_1",
+        "targetBlockId": "startup:b_4",
+        "metadata": {
+          "optionStatementId": "startup:rv8wosr36qg2"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "startup:b_4",
+        "targetBlockId": "startup:b_2",
+        "metadata": {
+          "implicitControlFlow": true
+        }
+      },
+      {
+        "kind": "ChoiceOption",
+        "sourceBlockId": "startup:b_1",
+        "targetBlockId": "startup:b_5",
+        "metadata": {
+          "optionStatementId": "startup:1c3occpzzbftr"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "startup:b_5",
+        "targetBlockId": "startup:b_2",
+        "metadata": {
+          "implicitControlFlow": true
+        }
+      },
+      {
+        "kind": "ChoiceOption",
+        "sourceBlockId": "startup:b_1",
+        "targetBlockId": "startup:b_6",
+        "metadata": {
+          "optionStatementId": "startup:1c11fd68nn0ac"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "startup:b_6",
+        "targetBlockId": "startup:b_2",
+        "metadata": {
+          "implicitControlFlow": true
+        }
+      },
+      {
+        "kind": "InputReturn",
+        "sourceBlockId": "startup:b_7",
+        "targetBlockId": "startup:b_8",
+        "metadata": {}
+      },
+      {
+        "kind": "ChoiceOption",
+        "sourceBlockId": "startup:b_1",
+        "targetBlockId": "startup:b_7",
+        "metadata": {
+          "optionStatementId": "startup:tcmzj2v4ufr0"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "startup:b_8",
+        "targetBlockId": "startup:b_2",
+        "metadata": {
+          "implicitControlFlow": true
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "startup:b_1",
+        "targetBlockId": "startup:b_2",
+        "metadata": {}
+      },
+      {
+        "kind": "SceneExit",
+        "sourceBlockId": "startup:b_2",
+        "targetBlockId": null,
+        "metadata": {}
+      }
+    ],
+    "entryBlockId": "startup:b_0",
+    "labelToBlockId": {
+      "set_the_table": "startup:b_1"
+    },
+    "unresolvedEdges": []
+  }
+]

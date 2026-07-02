@@ -1,0 +1,46 @@
+{
+  "totalIterations": 1,
+  "widenedSccs": 0,
+  "stateCount": 1,
+  "cfgEntryStateCount": 4,
+  "blockDeltaCount": 0,
+  "blockMappedCount": 6,
+  "states": {
+    "seg_0": {
+      "entryGlobals": {
+        "g_name": "Alex",
+        "health": "100"
+      },
+      "exitGlobals": {
+        "g_name": "Alex",
+        "health": "50"
+      }
+    }
+  },
+  "cfgEntryStates": {
+    "startup:": {
+      "globals": {
+        "g_name": "Alex",
+        "health": "100"
+      }
+    },
+    "startup:goto_loop": {
+      "globals": {
+        "g_name": "Alex",
+        "health": "100"
+      }
+    },
+    "startup:rejoin_teammates_g": {
+      "globals": {
+        "g_name": "Alex",
+        "health": "100"
+      }
+    },
+    "startup:rejoin_teammates_g__cont_0": {
+      "globals": {
+        "g_name": "Alex",
+        "health": "100"
+      }
+    }
+  }
+}

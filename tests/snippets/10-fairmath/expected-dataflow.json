@@ -1,0 +1,24 @@
+{
+  "states": [
+    {
+      "cfgId": "startup:",
+      "entryGlobals": [
+        {
+          "morale": "50",
+          "fear": "30"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "morale": "54",
+          "fear": "44"
+        }
+      ]
+    }
+  ],
+  "diagnostics": {
+    "unresolvedExits": 0,
+    "droppedContexts": 0,
+    "missingCfgs": []
+  }
+}

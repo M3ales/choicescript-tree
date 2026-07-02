@@ -1,0 +1,14 @@
+{
+  "cfgCount": 1,
+  "states": [
+    {
+      "cfgId": "startup:",
+      "entryGlobals": [
+        {
+          "strength": "50",
+          "charm": "30"
+        }
+      ]
+    }
+  ]
+}

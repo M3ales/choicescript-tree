@@ -1,0 +1,121 @@
+{
+  "states": [
+    {
+      "cfgId": "startup:",
+      "entryGlobals": [
+        {
+          "health": "100",
+          "stamina": "50",
+          "gold": "0"
+        },
+        {
+          "health": "{100,90}",
+          "stamina": "40",
+          "gold": "0"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "health": "90",
+          "stamina": "50",
+          "gold": "0"
+        },
+        {
+          "health": "90",
+          "stamina": "50",
+          "gold": "0"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:drain_stamina",
+      "entryGlobals": [
+        {
+          "health": "90",
+          "stamina": "50",
+          "gold": "0"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "health": "90",
+          "stamina": "40",
+          "gold": "0"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:__entry__cont_0",
+      "entryGlobals": [
+        {
+          "health": "90",
+          "stamina": "40",
+          "gold": "0"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "health": "{100,90}",
+          "stamina": "40",
+          "gold": "0"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:check_gold",
+      "entryGlobals": [
+        {
+          "health": "{100,90}",
+          "stamina": "40",
+          "gold": "0"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "health": "{100,90}",
+          "stamina": "40",
+          "gold": "0"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:__entry__cont_1",
+      "entryGlobals": [
+        {
+          "health": "{100,90}",
+          "stamina": "40",
+          "gold": "0"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "health": "{100,90}",
+          "stamina": "40",
+          "gold": "0"
+        }
+      ]
+    },
+    {
+      "cfgId": "chapter1:",
+      "entryGlobals": [
+        {
+          "health": "{100,90}",
+          "stamina": "40",
+          "gold": "0"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "health": "{100,90}",
+          "stamina": "40",
+          "gold": "0"
+        }
+      ]
+    }
+  ],
+  "diagnostics": {
+    "unresolvedExits": 0,
+    "droppedContexts": 0,
+    "missingCfgs": []
+  }
+}

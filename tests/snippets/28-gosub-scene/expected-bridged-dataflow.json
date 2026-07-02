@@ -1,0 +1,29 @@
+{
+  "cfgCount": 3,
+  "states": [
+    {
+      "cfgId": "helpers:add_rep",
+      "entryGlobals": [
+        {
+          "reputation": "0"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:",
+      "entryGlobals": [
+        {
+          "reputation": "0"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:__entry__cont_0",
+      "entryGlobals": [
+        {
+          "reputation": "10"
+        }
+      ]
+    }
+  ]
+}

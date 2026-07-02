@@ -1,0 +1,37 @@
+{
+  "deadBranchCount": 4,
+  "deadBranches": [
+    {
+      "blockId": "startup:b_10",
+      "scene": "startup",
+      "reason": "condition-true-elsewhere"
+    },
+    {
+      "blockId": "startup:b_11",
+      "scene": "startup",
+      "reason": "condition-true-elsewhere"
+    },
+    {
+      "blockId": "startup:b_12",
+      "scene": "startup",
+      "reason": "condition-true-elsewhere"
+    },
+    {
+      "blockId": "startup:b_9",
+      "scene": "startup",
+      "reason": "condition-true-elsewhere"
+    }
+  ],
+  "controlFlowViolationCount": 1,
+  "controlFlowViolations": [
+    {
+      "blockId": "startup:b_1",
+      "scene": "startup",
+      "kind": "implicit-end"
+    }
+  ],
+  "undeclaredSetCount": 0,
+  "undeclaredSets": [],
+  "multiReplaceViolationCount": 0,
+  "multiReplaceViolations": []
+}

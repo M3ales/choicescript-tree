@@ -1,0 +1,34 @@
+{
+  "totalIterations": 1,
+  "widenedSccs": 0,
+  "stateCount": 1,
+  "cfgEntryStateCount": 1,
+  "blockDeltaCount": 0,
+  "blockMappedCount": 1,
+  "states": {
+    "seg_0": {
+      "entryGlobals": {
+        "strength": "60",
+        "intelligence": "40",
+        "charisma": "50",
+        "name": "Hero"
+      },
+      "exitGlobals": {
+        "strength": "60",
+        "intelligence": "40",
+        "charisma": "50",
+        "name": "Hero"
+      }
+    }
+  },
+  "cfgEntryStates": {
+    "startup:": {
+      "globals": {
+        "strength": "60",
+        "intelligence": "40",
+        "charisma": "50",
+        "name": "Hero"
+      }
+    }
+  }
+}

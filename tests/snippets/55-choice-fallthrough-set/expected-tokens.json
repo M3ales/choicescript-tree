@@ -1,0 +1,317 @@
+[
+  [
+    {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 0,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "thanksgiving_food",
+      "rawValue": "thanksgiving_food",
+      "position": 8,
+      "lineNumber": 0,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "",
+      "position": 26,
+      "lineNumber": 0,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Label",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 2,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "set_the_table",
+      "rawValue": "set_the_table",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 2,
+      "position": 7,
+      "isLabelName": true
+    },
+    {
+      "type": "Choice",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 3,
+      "position": 0
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 4,
+      "position": 2,
+      "rawText": "Stew and mashed potatoes.",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 4,
+      "position": 3,
+      "indent": 1,
+      "content": "Stew and mashed potatoes."
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 2,
+      "lineNumber": 5,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "thanksgiving_food",
+      "rawValue": "thanksgiving_food",
+      "position": 9,
+      "lineNumber": 5,
+      "sceneName": "startup",
+      "indent": 2
+    },
+    {
+      "type": "StringLiteral",
+      "value": "stew and mashed potatoes",
+      "position": 27,
+      "lineNumber": 5,
+      "sceneName": "startup",
+      "indent": 2
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 6,
+      "position": 2,
+      "rawText": "Marinated skewers and crushed cucumber salad.",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 6,
+      "position": 3,
+      "indent": 1,
+      "content": "Marinated skewers and crushed cucumber salad."
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 2,
+      "lineNumber": 7,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "thanksgiving_food",
+      "rawValue": "thanksgiving_food",
+      "position": 9,
+      "lineNumber": 7,
+      "sceneName": "startup",
+      "indent": 2
+    },
+    {
+      "type": "StringLiteral",
+      "value": "marinated skewers and crushed cucumber salad",
+      "position": 27,
+      "lineNumber": 7,
+      "sceneName": "startup",
+      "indent": 2
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 8,
+      "position": 2,
+      "rawText": "Hummus and flatbread.",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 8,
+      "position": 3,
+      "indent": 1,
+      "content": "Hummus and flatbread."
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 2,
+      "lineNumber": 9,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "thanksgiving_food",
+      "rawValue": "thanksgiving_food",
+      "position": 9,
+      "lineNumber": 9,
+      "sceneName": "startup",
+      "indent": 2
+    },
+    {
+      "type": "StringLiteral",
+      "value": "hummus and flatbread",
+      "position": 27,
+      "lineNumber": 9,
+      "sceneName": "startup",
+      "indent": 2
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 10,
+      "position": 2,
+      "rawText": "Empanadas and salsa with tacos.",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 10,
+      "position": 3,
+      "indent": 1,
+      "content": "Empanadas and salsa with tacos."
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 2,
+      "lineNumber": 11,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "thanksgiving_food",
+      "rawValue": "thanksgiving_food",
+      "position": 9,
+      "lineNumber": 11,
+      "sceneName": "startup",
+      "indent": 2
+    },
+    {
+      "type": "StringLiteral",
+      "value": "empanadas and salsa with tacos",
+      "position": 27,
+      "lineNumber": 11,
+      "sceneName": "startup",
+      "indent": 2
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 12,
+      "position": 2,
+      "rawText": "Something else. (Type it in)",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 12,
+      "position": 3,
+      "indent": 1,
+      "content": "Something else. (Type it in)"
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 13,
+      "position": 4,
+      "indent": 2,
+      "content": "You lay out the dishes you and your father have brought over—\n"
+    },
+    {
+      "type": "InputText",
+      "sceneName": "startup",
+      "indent": 2,
+      "lineNumber": 14,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "thanksgiving_food",
+      "rawValue": "thanksgiving_food",
+      "position": 16,
+      "lineNumber": 14,
+      "sceneName": "startup",
+      "indent": 2
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 16,
+      "position": 0,
+      "indent": 0,
+      "content": "You've set the table with "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "startup",
+      "lineNumber": 16,
+      "position": 26,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "thanksgiving_food",
+      "rawValue": "thanksgiving_food",
+      "position": 28,
+      "lineNumber": 16,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "startup",
+      "lineNumber": 16,
+      "position": 45,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 16,
+      "position": 46,
+      "indent": 0,
+      "content": ".\n"
+    },
+    {
+      "type": "Finish",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 17,
+      "position": 0
+    },
+    {
+      "lineNumber": 19,
+      "indent": 0,
+      "position": 0,
+      "sceneName": "startup",
+      "type": "SceneEnd"
+    }
+  ]
+]

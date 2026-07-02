@@ -121,7 +121,7 @@
       "sceneName": "startup",
       "indent": 1,
       "lineNumber": 5,
-      "position": 16,
+      "position": 34,
       "rawText": "Break down the door.",
       "hasMultiReplace": false
     },
@@ -129,7 +129,7 @@
       "type": "Prose",
       "sceneName": "startup",
       "lineNumber": 5,
-      "position": 17,
+      "position": 35,
       "indent": 1,
       "content": "Break down the door."
     },
@@ -199,7 +199,7 @@
       "sceneName": "startup",
       "indent": 1,
       "lineNumber": 8,
-      "position": 16,
+      "position": 31,
       "rawText": "Cast a spell.",
       "hasMultiReplace": false
     },
@@ -207,7 +207,7 @@
       "type": "Prose",
       "sceneName": "startup",
       "lineNumber": 8,
-      "position": 17,
+      "position": 32,
       "indent": 1,
       "content": "Cast a spell."
     },
@@ -231,6 +231,7 @@
       "sceneName": "startup",
       "indent": 1,
       "lineNumber": 11,
+      "position": 2,
       "rawText": "Pick the lock.",
       "hasMultiReplace": false
     },
@@ -238,7 +239,7 @@
       "type": "Prose",
       "sceneName": "startup",
       "lineNumber": 11,
-      "position": null,
+      "position": 3,
       "indent": 1,
       "content": "Pick the lock."
     },

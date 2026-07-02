@@ -1,0 +1,151 @@
+*create progress 0
+*create attempts 0
+*create mood "neutral"
+*create depth 0
+*create inner_count 0
+*create wave 0
+*create shield 100
+*create combo 0
+*create phase 0
+*create heat 0
+
+*comment ============================================
+*comment  Loop patterns that trigger unroll doubling
+*comment  in refineTripCounts + depth-3 nesting that
+*comment  causes CFG node explosion if naive.
+*comment
+*comment  Loop A: counter behind gosub (depth 1)
+*comment  Loop B: dispatch hub, unbounded
+*comment  Loop C: depth-3 nesting via gosub chains
+*comment    outer -> middle -> inner, each condition-
+*comment    bounded but counter modified only in gosub
+*comment    so static trip count is null at every level.
+*comment  Loop D: depth-3 nesting, direct goto loops
+*comment    outer wave loop -> shield drain -> combo
+*comment    builder, all condition-bounded with counters
+*comment    modified in nested gosubs.
+*comment ============================================
+
+*comment --- Loop A: counter behind gosub ---
+
+*label counter_loop
+*set attempts + 1
+
+*gosub update_progress
+
+*if (progress < 100)
+  *goto counter_loop
+
+*comment --- Loop B: dispatch hub ---
+
+*label dispatch
+*if (mood = "happy")
+  *goto happy_path
+*if (mood = "sad")
+  *goto sad_path
+*goto dispatch
+
+*label happy_path
+You feel great.
+
+*comment --- Loop C: depth-3 nested gosub chain ---
+*comment outer: loops on depth, incremented in middle gosub
+*comment middle: loops on inner_count, incremented in inner gosub
+*comment inner: loops on phase, incremented in deep gosub
+
+*set depth 0
+*set inner_count 0
+*set phase 0
+
+*label outer_loop
+*gosub middle_loop
+*if (depth < 6)
+  *goto outer_loop
+
+*comment --- Loop D: depth-3 direct loops with gosub mutations ---
+*comment wave_loop: exits on wave >= 3, wave incremented in gosub
+*comment shield_loop: exits on shield <= 0, shield decremented in gosub
+*comment combo_loop: exits on combo >= 5, combo incremented in gosub
+
+*set wave 0
+*set shield 100
+*set combo 0
+
+*label wave_loop
+*gosub do_wave
+*if (wave < 3)
+  *goto wave_loop
+
+All waves complete.
+*finish
+
+*label sad_path
+You feel down.
+*finish
+
+*comment --- Subroutines ---
+*label update_progress
+*set progress + 20
+*return
+
+*comment --- Loop C subroutines ---
+
+*label middle_loop
+*set inner_count 0
+*label middle_spin
+*gosub inner_loop
+*if (inner_count < 4)
+  *goto middle_spin
+*gosub bump_depth
+*return
+
+*label inner_loop
+*set phase 0
+*label inner_spin
+*gosub tick_phase
+*if (phase < 3)
+  *goto inner_spin
+*gosub bump_inner
+*return
+
+*label tick_phase
+*set phase + 1
+*return
+
+*label bump_inner
+*set inner_count + 1
+*return
+
+*label bump_depth
+*set depth + 1
+*return
+
+*comment --- Loop D subroutines ---
+
+*label do_wave
+*set shield 100
+*set combo 0
+*label shield_loop
+*gosub do_shield_tick
+*if (shield > 0)
+  *goto shield_loop
+*gosub advance_wave
+*return
+
+*label do_shield_tick
+*set combo 0
+*label combo_loop
+*gosub do_combo_hit
+*if (combo < 5)
+  *goto combo_loop
+*set shield - 25
+*return
+
+*label do_combo_hit
+*set combo + 1
+*set heat + 1
+*return
+
+*label advance_wave
+*set wave + 1
+*return

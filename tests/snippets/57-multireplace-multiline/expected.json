@@ -1,0 +1,201 @@
+[
+  {
+    "name": "startup",
+    "statements": [
+      {
+        "content": [
+          {
+            "type": "Comment",
+            "sceneName": "startup",
+            "indent": 0,
+            "lineNumber": 1,
+            "position": 0,
+            "value": "The @{...} must be on a single line."
+          }
+        ],
+        "kind": "Comment"
+      },
+      {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "mood",
+          "rawValue": "mood",
+          "position": 8,
+          "lineNumber": 3,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 1,
+            "position": 13,
+            "lineNumber": 3,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 3,
+          "position": 0
+        }
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 5,
+            "position": 0,
+            "indent": 0,
+            "content": "You feel "
+          },
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 5,
+            "position": 16,
+            "indent": 0,
+            "content": "happy"
+          },
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 6,
+            "position": 5,
+            "indent": 0,
+            "content": ".\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 9,
+            "lineNumber": 5,
+            "position": 0,
+            "text": "You feel "
+          },
+          {
+            "kind": "MultiReplace",
+            "start": 0,
+            "end": 0,
+            "lineNumber": 5,
+            "position": 9,
+            "selector": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "mood",
+                "rawValue": "mood",
+                "position": 11,
+                "lineNumber": 5,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "alternatives": [
+              {
+                "start": 0,
+                "end": 0,
+                "segments": [
+                  {
+                    "kind": "Text",
+                    "start": 0,
+                    "end": 5,
+                    "lineNumber": 5,
+                    "position": 16,
+                    "text": "happy"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 2,
+            "lineNumber": 6,
+            "position": 5,
+            "text": ".\n"
+          }
+        ]
+      },
+      {
+        "kind": "Finish",
+        "token": {
+          "type": "Finish",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 7,
+          "position": 0
+        },
+        "buttonText": null
+      }
+    ],
+    "parseErrors": [
+      {
+        "token": {
+          "type": "OpenMultiReplace",
+          "sceneName": "startup",
+          "lineNumber": 5,
+          "position": 9,
+          "indent": 0
+        },
+        "endToken": {
+          "type": "CloseBrace",
+          "sceneName": "startup",
+          "lineNumber": 6,
+          "position": 4,
+          "indent": 0
+        },
+        "message": "Multireplace spans multiple lines — @{...} must be on a single line.",
+        "context": [
+          {
+            "kind": "Scene 'startup'",
+            "token": {
+              "sceneName": "startup",
+              "lineNumber": 0,
+              "position": 0,
+              "indent": 0,
+              "type": "SceneStart"
+            }
+          },
+          {
+            "kind": "Prose",
+            "token": {
+              "type": "Prose",
+              "sceneName": "startup",
+              "lineNumber": 5,
+              "position": 0,
+              "indent": 0,
+              "content": "You feel "
+            }
+          }
+        ],
+        "solutionCode": "multiline-multireplace"
+      }
+    ],
+    "start": {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    "end": {
+      "type": "Finish",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 7,
+      "position": 0
+    }
+  }
+]

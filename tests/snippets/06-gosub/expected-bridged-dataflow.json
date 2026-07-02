@@ -1,0 +1,29 @@
+{
+  "cfgCount": 3,
+  "states": [
+    {
+      "cfgId": "startup:",
+      "entryGlobals": [
+        {
+          "gold": "100"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:__entry__cont_0",
+      "entryGlobals": [
+        {
+          "gold": "100"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:check_gold",
+      "entryGlobals": [
+        {
+          "gold": "100"
+        }
+      ]
+    }
+  ]
+}

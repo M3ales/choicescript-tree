@@ -1,0 +1,92 @@
+{
+  "totalIterations": 3,
+  "widenedSccs": 0,
+  "stateCount": 5,
+  "cfgEntryStateCount": 5,
+  "blockDeltaCount": 6,
+  "blockMappedCount": 12,
+  "states": {
+    "seg_0": {
+      "entryGlobals": {
+        "style": "",
+        "condition": "50"
+      },
+      "exitGlobals": {
+        "style": "{Mage,Warrior}",
+        "condition": "55"
+      }
+    },
+    "seg_1": {
+      "entryGlobals": {
+        "style": "{Mage,Warrior}",
+        "condition": "55"
+      },
+      "exitGlobals": {
+        "style": "{Mage,Warrior}",
+        "condition": "58"
+      }
+    },
+    "seg_2": {
+      "entryGlobals": {
+        "style": "{Mage,Warrior}",
+        "condition": "55"
+      },
+      "exitGlobals": {
+        "style": "{Mage,Warrior}",
+        "condition": "58"
+      }
+    },
+    "__xcfg_startup:__entry__cont_1": {
+      "entryGlobals": {
+        "style": "{Mage,Warrior}",
+        "condition": "58"
+      },
+      "exitGlobals": {
+        "style": "{Mage,Warrior}",
+        "condition": "58"
+      }
+    },
+    "__xcfg_chapter1:": {
+      "entryGlobals": {
+        "style": "{Mage,Warrior}",
+        "condition": "58"
+      },
+      "exitGlobals": {
+        "style": "{Mage,Warrior}",
+        "condition": "58"
+      }
+    }
+  },
+  "cfgEntryStates": {
+    "chapter1:": {
+      "globals": {
+        "style": "{Mage,Warrior}",
+        "condition": "58"
+      }
+    },
+    "startup:": {
+      "globals": {
+        "style": "",
+        "condition": "50"
+      }
+    },
+    "startup:__entry__cont_0": {
+      "globals": {
+        "style": "{Mage,Warrior}",
+        "condition": "55"
+      }
+    },
+    "startup:__entry__cont_1": {
+      "globals": {
+        "style": "{Mage,Warrior}",
+        "condition": "58"
+      }
+    },
+    "startup:adjust_condition": {
+      "globals": {
+        "style": "{,Mage,Warrior}",
+        "condition": "{50,55}"
+      }
+    }
+  }
+}

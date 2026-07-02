@@ -1,0 +1,829 @@
+[
+  {
+    "name": "chapter1",
+    "statements": [
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "chapter1",
+            "lineNumber": 0,
+            "position": 0,
+            "indent": 0,
+            "content": "Welcome to chapter 1.\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 22,
+            "lineNumber": 0,
+            "position": 0,
+            "text": "Welcome to chapter 1.\n"
+          }
+        ]
+      },
+      {
+        "kind": "If",
+        "token": {
+          "type": "If",
+          "sceneName": "chapter1",
+          "indent": 0,
+          "lineNumber": 1,
+          "position": 0
+        },
+        "body": [
+          {
+            "content": [
+              {
+                "type": "Prose",
+                "sceneName": "chapter1",
+                "lineNumber": 2,
+                "position": 2,
+                "indent": 1,
+                "content": "You swing your sword.\n"
+              }
+            ],
+            "kind": "Prose",
+            "parsedSegments": [
+              {
+                "kind": "Text",
+                "start": 0,
+                "end": 22,
+                "lineNumber": 2,
+                "position": 2,
+                "text": "You swing your sword.\n"
+              }
+            ]
+          }
+        ],
+        "expression": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Binary",
+            "left": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "style",
+                "rawValue": "style",
+                "position": 5,
+                "lineNumber": 1,
+                "sceneName": "chapter1",
+                "indent": 0
+              }
+            },
+            "operator": {
+              "type": "EqualityOperator",
+              "rawValue": "=",
+              "position": 11,
+              "lineNumber": 1,
+              "sceneName": "chapter1",
+              "indent": 0
+            },
+            "right": {
+              "kind": "Literal",
+              "value": {
+                "type": "StringLiteral",
+                "value": "Warrior",
+                "position": 13,
+                "lineNumber": 1,
+                "sceneName": "chapter1",
+                "indent": 0
+              }
+            }
+          }
+        },
+        "elseBranch": {
+          "kind": "Else",
+          "token": {
+            "type": "Else",
+            "sceneName": "chapter1",
+            "indent": 0,
+            "lineNumber": 5,
+            "position": 0
+          },
+          "body": [
+            {
+              "content": [
+                {
+                  "type": "Prose",
+                  "sceneName": "chapter1",
+                  "lineNumber": 6,
+                  "position": 2,
+                  "indent": 1,
+                  "content": "You have no style.\n"
+                }
+              ],
+              "kind": "Prose",
+              "parsedSegments": [
+                {
+                  "kind": "Text",
+                  "start": 0,
+                  "end": 19,
+                  "lineNumber": 6,
+                  "position": 2,
+                  "text": "You have no style.\n"
+                }
+              ]
+            }
+          ]
+        },
+        "elseIfBranches": [
+          {
+            "kind": "ElseIf",
+            "token": {
+              "type": "ElseIf",
+              "sceneName": "chapter1",
+              "indent": 0,
+              "lineNumber": 3,
+              "position": 0
+            },
+            "body": [
+              {
+                "content": [
+                  {
+                    "type": "Prose",
+                    "sceneName": "chapter1",
+                    "lineNumber": 4,
+                    "position": 2,
+                    "indent": 1,
+                    "content": "You cast a spell.\n"
+                  }
+                ],
+                "kind": "Prose",
+                "parsedSegments": [
+                  {
+                    "kind": "Text",
+                    "start": 0,
+                    "end": 18,
+                    "lineNumber": 4,
+                    "position": 2,
+                    "text": "You cast a spell.\n"
+                  }
+                ]
+              }
+            ],
+            "expression": {
+              "kind": "Grouping",
+              "expression": {
+                "kind": "Binary",
+                "left": {
+                  "kind": "Identifier",
+                  "token": {
+                    "type": "Identifier",
+                    "value": "style",
+                    "rawValue": "style",
+                    "position": 9,
+                    "lineNumber": 3,
+                    "sceneName": "chapter1",
+                    "indent": 0
+                  }
+                },
+                "operator": {
+                  "type": "EqualityOperator",
+                  "rawValue": "=",
+                  "position": 15,
+                  "lineNumber": 3,
+                  "sceneName": "chapter1",
+                  "indent": 0
+                },
+                "right": {
+                  "kind": "Literal",
+                  "value": {
+                    "type": "StringLiteral",
+                    "value": "Mage",
+                    "position": 17,
+                    "lineNumber": 3,
+                    "sceneName": "chapter1",
+                    "indent": 0
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "Finish",
+        "token": {
+          "type": "Finish",
+          "sceneName": "chapter1",
+          "indent": 0,
+          "lineNumber": 7,
+          "position": 0
+        },
+        "buttonText": null
+      }
+    ],
+    "parseErrors": [],
+    "start": {
+      "sceneName": "chapter1",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    "end": {
+      "type": "Finish",
+      "sceneName": "chapter1",
+      "indent": 0,
+      "lineNumber": 7,
+      "position": 0
+    }
+  },
+  {
+    "name": "startup",
+    "statements": [
+      {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "style",
+          "rawValue": "style",
+          "position": 8,
+          "lineNumber": 0,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "StringLiteral",
+            "value": "",
+            "position": 14,
+            "lineNumber": 0,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 0,
+          "position": 0
+        }
+      },
+      {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "condition",
+          "rawValue": "condition",
+          "position": 8,
+          "lineNumber": 1,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 50,
+            "position": 18,
+            "lineNumber": 1,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 1,
+          "position": 0
+        }
+      },
+      {
+        "kind": "SceneList",
+        "token": {
+          "type": "SceneList",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 2,
+          "position": 0
+        },
+        "identifiers": [
+          {
+            "paid": false,
+            "type": "Identifier",
+            "value": "startup",
+            "rawValue": "startup",
+            "sceneName": "startup",
+            "lineNumber": 4,
+            "position": 2,
+            "indent": 1,
+            "isSceneName": true
+          },
+          {
+            "paid": false,
+            "type": "Identifier",
+            "value": "chapter1",
+            "rawValue": "chapter1",
+            "sceneName": "startup",
+            "lineNumber": 5,
+            "position": 2,
+            "indent": 1,
+            "isSceneName": true
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 5,
+            "position": 0,
+            "indent": 0,
+            "content": "Welcome to the game.\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 21,
+            "lineNumber": 5,
+            "position": 0,
+            "text": "Welcome to the game.\n"
+          }
+        ]
+      },
+      {
+        "kind": "GoSub",
+        "token": {
+          "type": "GoSub",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 6,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "adjust_condition",
+          "rawValue": "adjust_condition",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 6,
+          "position": 7,
+          "isLabelName": true
+        },
+        "args": [
+          {
+            "kind": "Literal",
+            "value": {
+              "type": "NumberLiteral",
+              "value": 5,
+              "position": 24,
+              "lineNumber": 6,
+              "sceneName": "startup",
+              "indent": 0
+            }
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 8,
+            "position": 0,
+            "indent": 0,
+            "content": "Pick your style:\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 17,
+            "lineNumber": 8,
+            "position": 0,
+            "text": "Pick your style:\n"
+          }
+        ]
+      },
+      {
+        "kind": "FakeChoice",
+        "token": {
+          "type": "FakeChoice",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 9,
+          "position": 0
+        },
+        "body": [
+          {
+            "kind": "ChoiceOption",
+            "token": {
+              "type": "ChoiceOption",
+              "sceneName": "startup",
+              "indent": 1,
+              "lineNumber": 10,
+              "position": 2,
+              "rawText": "Warrior.",
+              "hasMultiReplace": false
+            },
+            "body": [
+              {
+                "kind": "SetVariable",
+                "expression": {
+                  "kind": "Identifier",
+                  "token": {
+                    "type": "Identifier",
+                    "value": "style",
+                    "rawValue": "style",
+                    "position": 9,
+                    "lineNumber": 11,
+                    "sceneName": "startup",
+                    "indent": 2
+                  }
+                },
+                "assignment": {
+                  "kind": "Literal",
+                  "value": {
+                    "type": "StringLiteral",
+                    "value": "Warrior",
+                    "position": 15,
+                    "lineNumber": 11,
+                    "sceneName": "startup",
+                    "indent": 2
+                  }
+                },
+                "token": {
+                  "type": "SetVariable",
+                  "sceneName": "startup",
+                  "indent": 2,
+                  "lineNumber": 11,
+                  "position": 4
+                }
+              },
+              {
+                "content": [
+                  {
+                    "type": "Prose",
+                    "sceneName": "startup",
+                    "lineNumber": 12,
+                    "position": 4,
+                    "indent": 2,
+                    "content": "You grab a sword.\n"
+                  }
+                ],
+                "kind": "Prose",
+                "parsedSegments": [
+                  {
+                    "kind": "Text",
+                    "start": 0,
+                    "end": 18,
+                    "lineNumber": 12,
+                    "position": 4,
+                    "text": "You grab a sword.\n"
+                  }
+                ]
+              }
+            ],
+            "parsedSegments": [
+              {
+                "kind": "Text",
+                "start": 0,
+                "end": 8,
+                "lineNumber": 10,
+                "position": 3,
+                "text": "Warrior."
+              }
+            ],
+            "reuse": null,
+            "selectableIf": null
+          },
+          {
+            "kind": "ChoiceOption",
+            "token": {
+              "type": "ChoiceOption",
+              "sceneName": "startup",
+              "indent": 1,
+              "lineNumber": 13,
+              "position": 2,
+              "rawText": "Mage.",
+              "hasMultiReplace": false
+            },
+            "body": [
+              {
+                "kind": "SetVariable",
+                "expression": {
+                  "kind": "Identifier",
+                  "token": {
+                    "type": "Identifier",
+                    "value": "style",
+                    "rawValue": "style",
+                    "position": 9,
+                    "lineNumber": 14,
+                    "sceneName": "startup",
+                    "indent": 2
+                  }
+                },
+                "assignment": {
+                  "kind": "Literal",
+                  "value": {
+                    "type": "StringLiteral",
+                    "value": "Mage",
+                    "position": 15,
+                    "lineNumber": 14,
+                    "sceneName": "startup",
+                    "indent": 2
+                  }
+                },
+                "token": {
+                  "type": "SetVariable",
+                  "sceneName": "startup",
+                  "indent": 2,
+                  "lineNumber": 14,
+                  "position": 4
+                }
+              },
+              {
+                "content": [
+                  {
+                    "type": "Prose",
+                    "sceneName": "startup",
+                    "lineNumber": 15,
+                    "position": 4,
+                    "indent": 2,
+                    "content": "You grab a staff.\n\n"
+                  }
+                ],
+                "kind": "Prose",
+                "parsedSegments": [
+                  {
+                    "kind": "Text",
+                    "start": 0,
+                    "end": 19,
+                    "lineNumber": 15,
+                    "position": 4,
+                    "text": "You grab a staff.\n\n"
+                  }
+                ]
+              }
+            ],
+            "parsedSegments": [
+              {
+                "kind": "Text",
+                "start": 0,
+                "end": 5,
+                "lineNumber": 13,
+                "position": 3,
+                "text": "Mage."
+              }
+            ],
+            "reuse": null,
+            "selectableIf": null
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 17,
+            "position": 0,
+            "indent": 0,
+            "content": "You are a "
+          },
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 17,
+            "position": 18,
+            "indent": 0,
+            "content": ".\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 10,
+            "lineNumber": 17,
+            "position": 0,
+            "text": "You are a "
+          },
+          {
+            "kind": "Print",
+            "start": 0,
+            "end": 0,
+            "lineNumber": 17,
+            "position": 10,
+            "expression": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "style",
+                "rawValue": "style",
+                "position": 12,
+                "lineNumber": 17,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          },
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 2,
+            "lineNumber": 17,
+            "position": 18,
+            "text": ".\n"
+          }
+        ]
+      },
+      {
+        "kind": "GoSub",
+        "token": {
+          "type": "GoSub",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 18,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "adjust_condition",
+          "rawValue": "adjust_condition",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 18,
+          "position": 7,
+          "isLabelName": true
+        },
+        "args": [
+          {
+            "kind": "Literal",
+            "value": {
+              "type": "NumberLiteral",
+              "value": 3,
+              "position": 24,
+              "lineNumber": 18,
+              "sceneName": "startup",
+              "indent": 0
+            }
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 20,
+            "position": 0,
+            "indent": 0,
+            "content": "Ready to go.\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 13,
+            "lineNumber": 20,
+            "position": 0,
+            "text": "Ready to go.\n"
+          }
+        ]
+      },
+      {
+        "kind": "Finish",
+        "token": {
+          "type": "Finish",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 21,
+          "position": 0
+        },
+        "buttonText": null
+      },
+      {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 23,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "adjust_condition",
+          "rawValue": "adjust_condition",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 23,
+          "position": 7,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "Parameters",
+        "token": {
+          "type": "Parameters",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 24,
+          "position": 0
+        },
+        "identifiers": [
+          {
+            "type": "Identifier",
+            "value": "amount",
+            "rawValue": "amount",
+            "position": 8,
+            "lineNumber": 24,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        ]
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Binary",
+          "left": {
+            "kind": "Identifier",
+            "token": {
+              "type": "Identifier",
+              "value": "condition",
+              "rawValue": "condition",
+              "position": 5,
+              "lineNumber": 25,
+              "sceneName": "startup",
+              "indent": 0
+            }
+          },
+          "operator": {
+            "type": "AdditionOperator",
+            "rawValue": "+",
+            "position": 15,
+            "lineNumber": 25,
+            "sceneName": "startup",
+            "indent": 0
+          },
+          "right": {
+            "kind": "Identifier",
+            "token": {
+              "type": "Identifier",
+              "value": "amount",
+              "rawValue": "amount",
+              "position": 17,
+              "lineNumber": 25,
+              "sceneName": "startup",
+              "indent": 0
+            }
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 25,
+          "position": 0
+        }
+      },
+      {
+        "kind": "Return",
+        "token": {
+          "type": "Return",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 26,
+          "position": 0
+        }
+      }
+    ],
+    "parseErrors": [],
+    "start": {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    "end": {
+      "type": "Return",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 26,
+      "position": 0
+    }
+  }
+]

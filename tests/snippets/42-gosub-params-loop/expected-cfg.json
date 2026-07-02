@@ -1,0 +1,186 @@
+[
+  {
+    "sceneName": "startup",
+    "blocks": {
+      "startup:b_0": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_1": {
+        "exitType": "Branch"
+      },
+      "startup:b_2": {
+        "exitType": "Finish"
+      },
+      "startup:b_3": {
+        "exitType": "GoSub"
+      },
+      "startup:b_4": {
+        "exitType": "Goto"
+      },
+      "startup:b_5": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_6": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_7": {
+        "exitType": "Return"
+      },
+      "startup:b_8": {
+        "exitType": "FallThrough"
+      }
+    },
+    "blockIndex": {
+      "startup:b_0": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:16mvbgpk0630j",
+          "startup:1rijwi5jk8jmf",
+          "startup:468sh29bo43"
+        ],
+        "entryType": "SceneEntry",
+        "exitType": "FallThrough"
+      },
+      "startup:b_1": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:rk82pehuls44",
+          "startup:y4csegb2vodu",
+          "startup:kxp033p71y1x"
+        ],
+        "entryType": "Label",
+        "exitType": "Branch",
+        "label": "hub"
+      },
+      "startup:b_2": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:14ubh16ryonf8",
+          "startup:1g8kw2p1kw6dtr"
+        ],
+        "entryType": "Continuation",
+        "exitType": "Finish"
+      },
+      "startup:b_3": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:1wtdn899pistb"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "GoSub"
+      },
+      "startup:b_4": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:1fdz3218jptr0"
+        ],
+        "entryType": "GoSubContinuation",
+        "exitType": "Goto"
+      },
+      "startup:b_5": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "startup:b_6": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "startup:b_7": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:cef77pbnqodb",
+          "startup:16h8ve81c02b96",
+          "startup:1ftcf0qqcobkc",
+          "startup:qizyho1mekf5e",
+          "startup:10qn2imvz6oio"
+        ],
+        "entryType": "Label",
+        "exitType": "Return",
+        "label": "add_value",
+        "parameterNames": [
+          "amount",
+          "desc",
+          "seq"
+        ]
+      },
+      "startup:b_8": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      }
+    },
+    "edges": [
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "startup:b_0",
+        "targetBlockId": "startup:b_1",
+        "metadata": {}
+      },
+      {
+        "kind": "GoSubCall",
+        "sourceBlockId": "startup:b_3",
+        "targetBlockId": "startup:b_7",
+        "metadata": {
+          "label": "add_value"
+        }
+      },
+      {
+        "kind": "GoSubReturn",
+        "sourceBlockId": "startup:b_3",
+        "targetBlockId": "startup:b_4",
+        "metadata": {}
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "startup:b_4",
+        "targetBlockId": "startup:b_1",
+        "metadata": {
+          "label": "hub"
+        }
+      },
+      {
+        "kind": "IfBranch",
+        "sourceBlockId": "startup:b_1",
+        "targetBlockId": "startup:b_3",
+        "metadata": {
+          "conditionStatementId": "startup:kxp033p71y1x"
+        }
+      },
+      {
+        "kind": "IfFallThrough",
+        "sourceBlockId": "startup:b_1",
+        "targetBlockId": "startup:b_2",
+        "metadata": {}
+      },
+      {
+        "kind": "SceneExit",
+        "sourceBlockId": "startup:b_2",
+        "targetBlockId": null,
+        "metadata": {}
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "startup:b_6",
+        "targetBlockId": "startup:b_7",
+        "metadata": {}
+      },
+      {
+        "kind": "Return",
+        "sourceBlockId": "startup:b_7",
+        "targetBlockId": null,
+        "metadata": {}
+      }
+    ],
+    "entryBlockId": "startup:b_0",
+    "labelToBlockId": {
+      "hub": "startup:b_1",
+      "add_value": "startup:b_7"
+    },
+    "unresolvedEdges": []
+  }
+]

@@ -1,0 +1,35 @@
+{
+  "deadBranchCount": 0,
+  "deadBranches": [],
+  "controlFlowViolationCount": 1,
+  "controlFlowViolations": [
+    {
+      "blockId": "startup:b_0",
+      "scene": "startup",
+      "kind": "implicit-end"
+    }
+  ],
+  "undeclaredSetCount": 3,
+  "undeclaredSets": [
+    {
+      "variable": "local_var",
+      "scene": "startup",
+      "kind": "reference",
+      "statementKind": "Prose"
+    },
+    {
+      "variable": "local_var",
+      "scene": "startup",
+      "kind": "set",
+      "statementKind": "SetVariable"
+    },
+    {
+      "variable": "reference",
+      "scene": "startup",
+      "kind": "reference",
+      "statementKind": "SetVariable"
+    }
+  ],
+  "multiReplaceViolationCount": 0,
+  "multiReplaceViolations": []
+}

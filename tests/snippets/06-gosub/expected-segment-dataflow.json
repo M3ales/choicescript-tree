@@ -1,0 +1,35 @@
+{
+  "totalIterations": 1,
+  "widenedSccs": 0,
+  "stateCount": 1,
+  "cfgEntryStateCount": 3,
+  "blockDeltaCount": 0,
+  "blockMappedCount": 3,
+  "states": {
+    "seg_0": {
+      "entryGlobals": {
+        "gold": "100"
+      },
+      "exitGlobals": {
+        "gold": "100"
+      }
+    }
+  },
+  "cfgEntryStates": {
+    "startup:": {
+      "globals": {
+        "gold": "100"
+      }
+    },
+    "startup:__entry__cont_0": {
+      "globals": {
+        "gold": "100"
+      }
+    },
+    "startup:check_gold": {
+      "globals": {
+        "gold": "100"
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "states": [
+    {
+      "cfgId": "startup:",
+      "entryGlobals": [
+        {
+          "pet": "0",
+          "mood": "happy",
+          "gender": "2",
+          "is_tall": "true",
+          "count": "3"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "pet": "0",
+          "mood": "happy",
+          "gender": "2",
+          "is_tall": "true",
+          "count": "3"
+        }
+      ]
+    }
+  ],
+  "diagnostics": {
+    "unresolvedExits": 0,
+    "droppedContexts": 0,
+    "missingCfgs": []
+  }
+}

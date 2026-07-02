@@ -1,0 +1,1081 @@
+[
+  {
+    "name": "arena",
+    "statements": [
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "arena",
+            "lineNumber": 0,
+            "position": 0,
+            "indent": 0,
+            "content": "You enter the arena.\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 21,
+            "lineNumber": 0,
+            "position": 0,
+            "text": "You enter the arena.\n"
+          }
+        ]
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "health",
+            "rawValue": "health",
+            "position": 5,
+            "lineNumber": 1,
+            "sceneName": "arena",
+            "indent": 0
+          }
+        },
+        "assignment": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Binary",
+            "left": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "health",
+                "rawValue": "health",
+                "position": 13,
+                "lineNumber": 1,
+                "sceneName": "arena",
+                "indent": 0
+              }
+            },
+            "operator": {
+              "type": "SubtractionOperator",
+              "rawValue": "-",
+              "position": 20,
+              "lineNumber": 1,
+              "sceneName": "arena",
+              "indent": 0
+            },
+            "right": {
+              "kind": "Literal",
+              "value": {
+                "type": "NumberLiteral",
+                "value": 10,
+                "position": 22,
+                "lineNumber": 1,
+                "sceneName": "arena",
+                "indent": 0
+              }
+            }
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "arena",
+          "indent": 0,
+          "lineNumber": 1,
+          "position": 0
+        }
+      },
+      {
+        "kind": "If",
+        "token": {
+          "type": "If",
+          "sceneName": "arena",
+          "indent": 0,
+          "lineNumber": 3,
+          "position": 0
+        },
+        "body": [
+          {
+            "content": [
+              {
+                "type": "Prose",
+                "sceneName": "arena",
+                "lineNumber": 4,
+                "position": 2,
+                "indent": 1,
+                "content": "You feel strong.\n"
+              }
+            ],
+            "kind": "Prose",
+            "parsedSegments": [
+              {
+                "kind": "Text",
+                "start": 0,
+                "end": 17,
+                "lineNumber": 4,
+                "position": 2,
+                "text": "You feel strong.\n"
+              }
+            ]
+          },
+          {
+            "kind": "SetVariable",
+            "expression": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "gold",
+                "rawValue": "gold",
+                "position": 7,
+                "lineNumber": 5,
+                "sceneName": "arena",
+                "indent": 1
+              }
+            },
+            "assignment": {
+              "kind": "Grouping",
+              "expression": {
+                "kind": "Binary",
+                "left": {
+                  "kind": "Identifier",
+                  "token": {
+                    "type": "Identifier",
+                    "value": "gold",
+                    "rawValue": "gold",
+                    "position": 13,
+                    "lineNumber": 5,
+                    "sceneName": "arena",
+                    "indent": 1
+                  }
+                },
+                "operator": {
+                  "type": "AdditionOperator",
+                  "rawValue": "+",
+                  "position": 18,
+                  "lineNumber": 5,
+                  "sceneName": "arena",
+                  "indent": 1
+                },
+                "right": {
+                  "kind": "Literal",
+                  "value": {
+                    "type": "NumberLiteral",
+                    "value": 100,
+                    "position": 20,
+                    "lineNumber": 5,
+                    "sceneName": "arena",
+                    "indent": 1
+                  }
+                }
+              }
+            },
+            "token": {
+              "type": "SetVariable",
+              "sceneName": "arena",
+              "indent": 1,
+              "lineNumber": 5,
+              "position": 2
+            }
+          }
+        ],
+        "expression": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Binary",
+            "left": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "health",
+                "rawValue": "health",
+                "position": 5,
+                "lineNumber": 3,
+                "sceneName": "arena",
+                "indent": 0
+              }
+            },
+            "operator": {
+              "type": "GreaterThanOperator",
+              "rawValue": ">",
+              "position": 12,
+              "lineNumber": 3,
+              "sceneName": "arena",
+              "indent": 0
+            },
+            "right": {
+              "kind": "Literal",
+              "value": {
+                "type": "NumberLiteral",
+                "value": 50,
+                "position": 14,
+                "lineNumber": 3,
+                "sceneName": "arena",
+                "indent": 0
+              }
+            }
+          }
+        },
+        "elseBranch": null,
+        "elseIfBranches": []
+      },
+      {
+        "kind": "If",
+        "token": {
+          "type": "If",
+          "sceneName": "arena",
+          "indent": 0,
+          "lineNumber": 6,
+          "position": 0
+        },
+        "body": [
+          {
+            "content": [
+              {
+                "type": "Prose",
+                "sceneName": "arena",
+                "lineNumber": 7,
+                "position": 2,
+                "indent": 1,
+                "content": "The crowd cheers your completed quest.\n"
+              }
+            ],
+            "kind": "Prose",
+            "parsedSegments": [
+              {
+                "kind": "Text",
+                "start": 0,
+                "end": 39,
+                "lineNumber": 7,
+                "position": 2,
+                "text": "The crowd cheers your completed quest.\n"
+              }
+            ]
+          }
+        ],
+        "expression": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Identifier",
+            "token": {
+              "type": "Identifier",
+              "value": "quest_done",
+              "rawValue": "quest_done",
+              "position": 5,
+              "lineNumber": 6,
+              "sceneName": "arena",
+              "indent": 0
+            }
+          }
+        },
+        "elseBranch": null,
+        "elseIfBranches": []
+      },
+      {
+        "kind": "Finish",
+        "token": {
+          "type": "Finish",
+          "sceneName": "arena",
+          "indent": 0,
+          "lineNumber": 8,
+          "position": 0
+        },
+        "buttonText": null
+      }
+    ],
+    "parseErrors": [],
+    "start": {
+      "sceneName": "arena",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    "end": {
+      "type": "Finish",
+      "sceneName": "arena",
+      "indent": 0,
+      "lineNumber": 8,
+      "position": 0
+    }
+  },
+  {
+    "name": "shop",
+    "statements": [
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "shop",
+            "lineNumber": 0,
+            "position": 0,
+            "indent": 0,
+            "content": "You enter the shop.\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 20,
+            "lineNumber": 0,
+            "position": 0,
+            "text": "You enter the shop.\n"
+          }
+        ]
+      },
+      {
+        "kind": "If",
+        "token": {
+          "type": "If",
+          "sceneName": "shop",
+          "indent": 0,
+          "lineNumber": 1,
+          "position": 0
+        },
+        "body": [
+          {
+            "content": [
+              {
+                "type": "Prose",
+                "sceneName": "shop",
+                "lineNumber": 2,
+                "position": 2,
+                "indent": 1,
+                "content": "The shopkeeper recognises you.\n"
+              }
+            ],
+            "kind": "Prose",
+            "parsedSegments": [
+              {
+                "kind": "Text",
+                "start": 0,
+                "end": 31,
+                "lineNumber": 2,
+                "position": 2,
+                "text": "The shopkeeper recognises you.\n"
+              }
+            ]
+          }
+        ],
+        "expression": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Identifier",
+            "token": {
+              "type": "Identifier",
+              "value": "visited_shop",
+              "rawValue": "visited_shop",
+              "position": 5,
+              "lineNumber": 1,
+              "sceneName": "shop",
+              "indent": 0
+            }
+          }
+        },
+        "elseBranch": null,
+        "elseIfBranches": []
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "gold",
+            "rawValue": "gold",
+            "position": 5,
+            "lineNumber": 3,
+            "sceneName": "shop",
+            "indent": 0
+          }
+        },
+        "assignment": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Binary",
+            "left": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "gold",
+                "rawValue": "gold",
+                "position": 11,
+                "lineNumber": 3,
+                "sceneName": "shop",
+                "indent": 0
+              }
+            },
+            "operator": {
+              "type": "AdditionOperator",
+              "rawValue": "+",
+              "position": 16,
+              "lineNumber": 3,
+              "sceneName": "shop",
+              "indent": 0
+            },
+            "right": {
+              "kind": "Literal",
+              "value": {
+                "type": "NumberLiteral",
+                "value": 5,
+                "position": 18,
+                "lineNumber": 3,
+                "sceneName": "shop",
+                "indent": 0
+              }
+            }
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "shop",
+          "indent": 0,
+          "lineNumber": 3,
+          "position": 0
+        }
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "quest_done",
+            "rawValue": "quest_done",
+            "position": 5,
+            "lineNumber": 4,
+            "sceneName": "shop",
+            "indent": 0
+          }
+        },
+        "assignment": {
+          "kind": "Literal",
+          "value": {
+            "type": "BooleanLiteral",
+            "value": true,
+            "position": 16,
+            "lineNumber": 4,
+            "sceneName": "shop",
+            "indent": 0
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "shop",
+          "indent": 0,
+          "lineNumber": 4,
+          "position": 0
+        }
+      },
+      {
+        "kind": "Finish",
+        "token": {
+          "type": "Finish",
+          "sceneName": "shop",
+          "indent": 0,
+          "lineNumber": 5,
+          "position": 0
+        },
+        "buttonText": null
+      }
+    ],
+    "parseErrors": [],
+    "start": {
+      "sceneName": "shop",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    "end": {
+      "type": "Finish",
+      "sceneName": "shop",
+      "indent": 0,
+      "lineNumber": 5,
+      "position": 0
+    }
+  },
+  {
+    "name": "startup",
+    "statements": [
+      {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "health",
+          "rawValue": "health",
+          "position": 8,
+          "lineNumber": 0,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 100,
+            "position": 15,
+            "lineNumber": 0,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 0,
+          "position": 0
+        }
+      },
+      {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "gold",
+          "rawValue": "gold",
+          "position": 8,
+          "lineNumber": 1,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 50,
+            "position": 13,
+            "lineNumber": 1,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 1,
+          "position": 0
+        }
+      },
+      {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "quest_done",
+          "rawValue": "quest_done",
+          "position": 8,
+          "lineNumber": 2,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "BooleanLiteral",
+            "value": false,
+            "position": 19,
+            "lineNumber": 2,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 2,
+          "position": 0
+        }
+      },
+      {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "visited_shop",
+          "rawValue": "visited_shop",
+          "position": 8,
+          "lineNumber": 3,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "BooleanLiteral",
+            "value": false,
+            "position": 21,
+            "lineNumber": 3,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 3,
+          "position": 0
+        }
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 5,
+            "position": 0,
+            "indent": 0,
+            "content": "You begin your adventure.\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 26,
+            "lineNumber": 5,
+            "position": 0,
+            "text": "You begin your adventure.\n"
+          }
+        ]
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "health",
+            "rawValue": "health",
+            "position": 5,
+            "lineNumber": 6,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "assignment": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 90,
+            "position": 12,
+            "lineNumber": 6,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 6,
+          "position": 0
+        }
+      },
+      {
+        "kind": "GotoScene",
+        "token": {
+          "type": "GotoScene",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 7,
+          "position": 0
+        },
+        "scene": {
+          "type": "Identifier",
+          "value": "town",
+          "rawValue": "town",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 7,
+          "position": 12,
+          "isSceneName": true
+        }
+      }
+    ],
+    "parseErrors": [],
+    "start": {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    "end": {
+      "type": "Identifier",
+      "value": "town",
+      "rawValue": "town",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 7,
+      "position": 12,
+      "isSceneName": true
+    }
+  },
+  {
+    "name": "town",
+    "statements": [
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "town",
+            "lineNumber": 0,
+            "position": 0,
+            "indent": 0,
+            "content": "You arrive in town.\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 20,
+            "lineNumber": 0,
+            "position": 0,
+            "text": "You arrive in town.\n"
+          }
+        ]
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "gold",
+            "rawValue": "gold",
+            "position": 5,
+            "lineNumber": 1,
+            "sceneName": "town",
+            "indent": 0
+          }
+        },
+        "assignment": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Binary",
+            "left": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "gold",
+                "rawValue": "gold",
+                "position": 11,
+                "lineNumber": 1,
+                "sceneName": "town",
+                "indent": 0
+              }
+            },
+            "operator": {
+              "type": "SubtractionOperator",
+              "rawValue": "-",
+              "position": 16,
+              "lineNumber": 1,
+              "sceneName": "town",
+              "indent": 0
+            },
+            "right": {
+              "kind": "Literal",
+              "value": {
+                "type": "NumberLiteral",
+                "value": 10,
+                "position": 18,
+                "lineNumber": 1,
+                "sceneName": "town",
+                "indent": 0
+              }
+            }
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "town",
+          "indent": 0,
+          "lineNumber": 1,
+          "position": 0
+        }
+      },
+      {
+        "kind": "Choice",
+        "token": {
+          "type": "Choice",
+          "sceneName": "town",
+          "indent": 0,
+          "lineNumber": 3,
+          "position": 0
+        },
+        "body": [
+          {
+            "kind": "ChoiceOption",
+            "token": {
+              "type": "ChoiceOption",
+              "sceneName": "town",
+              "indent": 1,
+              "lineNumber": 4,
+              "position": 2,
+              "rawText": "Visit the shop.",
+              "hasMultiReplace": false
+            },
+            "body": [
+              {
+                "kind": "SetVariable",
+                "expression": {
+                  "kind": "Identifier",
+                  "token": {
+                    "type": "Identifier",
+                    "value": "visited_shop",
+                    "rawValue": "visited_shop",
+                    "position": 9,
+                    "lineNumber": 5,
+                    "sceneName": "town",
+                    "indent": 2
+                  }
+                },
+                "assignment": {
+                  "kind": "Literal",
+                  "value": {
+                    "type": "BooleanLiteral",
+                    "value": true,
+                    "position": 22,
+                    "lineNumber": 5,
+                    "sceneName": "town",
+                    "indent": 2
+                  }
+                },
+                "token": {
+                  "type": "SetVariable",
+                  "sceneName": "town",
+                  "indent": 2,
+                  "lineNumber": 5,
+                  "position": 4
+                }
+              },
+              {
+                "kind": "SetVariable",
+                "expression": {
+                  "kind": "Identifier",
+                  "token": {
+                    "type": "Identifier",
+                    "value": "gold",
+                    "rawValue": "gold",
+                    "position": 9,
+                    "lineNumber": 6,
+                    "sceneName": "town",
+                    "indent": 2
+                  }
+                },
+                "assignment": {
+                  "kind": "Grouping",
+                  "expression": {
+                    "kind": "Binary",
+                    "left": {
+                      "kind": "Identifier",
+                      "token": {
+                        "type": "Identifier",
+                        "value": "gold",
+                        "rawValue": "gold",
+                        "position": 15,
+                        "lineNumber": 6,
+                        "sceneName": "town",
+                        "indent": 2
+                      }
+                    },
+                    "operator": {
+                      "type": "SubtractionOperator",
+                      "rawValue": "-",
+                      "position": 20,
+                      "lineNumber": 6,
+                      "sceneName": "town",
+                      "indent": 2
+                    },
+                    "right": {
+                      "kind": "Literal",
+                      "value": {
+                        "type": "NumberLiteral",
+                        "value": 20,
+                        "position": 22,
+                        "lineNumber": 6,
+                        "sceneName": "town",
+                        "indent": 2
+                      }
+                    }
+                  }
+                },
+                "token": {
+                  "type": "SetVariable",
+                  "sceneName": "town",
+                  "indent": 2,
+                  "lineNumber": 6,
+                  "position": 4
+                }
+              },
+              {
+                "kind": "GotoScene",
+                "token": {
+                  "type": "GotoScene",
+                  "sceneName": "town",
+                  "indent": 2,
+                  "lineNumber": 7,
+                  "position": 4
+                },
+                "scene": {
+                  "type": "Identifier",
+                  "value": "shop",
+                  "rawValue": "shop",
+                  "sceneName": "town",
+                  "indent": 2,
+                  "lineNumber": 7,
+                  "position": 16,
+                  "isSceneName": true
+                }
+              }
+            ],
+            "parsedSegments": [
+              {
+                "kind": "Text",
+                "start": 0,
+                "end": 15,
+                "lineNumber": 4,
+                "position": 3,
+                "text": "Visit the shop."
+              }
+            ],
+            "reuse": null,
+            "selectableIf": null
+          },
+          {
+            "kind": "ChoiceOption",
+            "token": {
+              "type": "ChoiceOption",
+              "sceneName": "town",
+              "indent": 1,
+              "lineNumber": 8,
+              "position": 2,
+              "rawText": "Go to the arena.",
+              "hasMultiReplace": false
+            },
+            "body": [
+              {
+                "kind": "SetVariable",
+                "expression": {
+                  "kind": "Identifier",
+                  "token": {
+                    "type": "Identifier",
+                    "value": "health",
+                    "rawValue": "health",
+                    "position": 9,
+                    "lineNumber": 9,
+                    "sceneName": "town",
+                    "indent": 2
+                  }
+                },
+                "assignment": {
+                  "kind": "Grouping",
+                  "expression": {
+                    "kind": "Binary",
+                    "left": {
+                      "kind": "Identifier",
+                      "token": {
+                        "type": "Identifier",
+                        "value": "health",
+                        "rawValue": "health",
+                        "position": 17,
+                        "lineNumber": 9,
+                        "sceneName": "town",
+                        "indent": 2
+                      }
+                    },
+                    "operator": {
+                      "type": "SubtractionOperator",
+                      "rawValue": "-",
+                      "position": 24,
+                      "lineNumber": 9,
+                      "sceneName": "town",
+                      "indent": 2
+                    },
+                    "right": {
+                      "kind": "Literal",
+                      "value": {
+                        "type": "NumberLiteral",
+                        "value": 30,
+                        "position": 26,
+                        "lineNumber": 9,
+                        "sceneName": "town",
+                        "indent": 2
+                      }
+                    }
+                  }
+                },
+                "token": {
+                  "type": "SetVariable",
+                  "sceneName": "town",
+                  "indent": 2,
+                  "lineNumber": 9,
+                  "position": 4
+                }
+              },
+              {
+                "kind": "GotoScene",
+                "token": {
+                  "type": "GotoScene",
+                  "sceneName": "town",
+                  "indent": 2,
+                  "lineNumber": 10,
+                  "position": 4
+                },
+                "scene": {
+                  "type": "Identifier",
+                  "value": "arena",
+                  "rawValue": "arena",
+                  "sceneName": "town",
+                  "indent": 2,
+                  "lineNumber": 10,
+                  "position": 16,
+                  "isSceneName": true
+                }
+              }
+            ],
+            "parsedSegments": [
+              {
+                "kind": "Text",
+                "start": 0,
+                "end": 16,
+                "lineNumber": 8,
+                "position": 3,
+                "text": "Go to the arena."
+              }
+            ],
+            "reuse": null,
+            "selectableIf": null
+          }
+        ]
+      }
+    ],
+    "parseErrors": [],
+    "start": {
+      "sceneName": "town",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    "end": {
+      "type": "Identifier",
+      "value": "arena",
+      "rawValue": "arena",
+      "sceneName": "town",
+      "indent": 2,
+      "lineNumber": 10,
+      "position": 16,
+      "isSceneName": true
+    }
+  }
+]

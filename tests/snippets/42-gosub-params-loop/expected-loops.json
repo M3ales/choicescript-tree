@@ -1,0 +1,17 @@
+[
+  {
+    "headerCfgId": "startup:hub",
+    "bodyCfgIds": [
+      "startup:hub",
+      "startup:hub__cont_0"
+    ],
+    "backEdgeCount": 1,
+    "exitCount": 2,
+    "mechanism": "direct",
+    "pure": false,
+    "bound": "condition-bounded",
+    "tripCount": 4,
+    "unrollDepth": 4,
+    "infinite": false
+  }
+]

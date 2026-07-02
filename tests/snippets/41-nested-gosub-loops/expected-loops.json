@@ -1,0 +1,48 @@
+[
+  {
+    "headerCfgId": "startup:training",
+    "bodyCfgIds": [
+      "startup:training",
+      "startup:training__cont_0"
+    ],
+    "backEdgeCount": 1,
+    "exitCount": 2,
+    "mechanism": "direct",
+    "pure": false,
+    "bound": "condition-bounded",
+    "tripCount": 7,
+    "unrollDepth": 7,
+    "infinite": false
+  },
+  {
+    "headerCfgId": "startup:patrol",
+    "bodyCfgIds": [
+      "startup:patrol",
+      "startup:patrol__cont_0"
+    ],
+    "backEdgeCount": 1,
+    "exitCount": 2,
+    "mechanism": "direct",
+    "pure": false,
+    "bound": "condition-bounded",
+    "tripCount": 6,
+    "unrollDepth": 6,
+    "infinite": false
+  },
+  {
+    "headerCfgId": "startup:hub",
+    "bodyCfgIds": [
+      "startup:__entry__cont_0",
+      "startup:hub",
+      "startup:hub__cont_0"
+    ],
+    "backEdgeCount": 1,
+    "exitCount": 3,
+    "mechanism": "direct",
+    "pure": false,
+    "bound": "condition-bounded",
+    "tripCount": 5,
+    "unrollDepth": 5,
+    "infinite": false
+  }
+]

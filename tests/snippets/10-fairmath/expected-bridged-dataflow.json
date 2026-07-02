@@ -1,0 +1,14 @@
+{
+  "cfgCount": 1,
+  "states": [
+    {
+      "cfgId": "startup:",
+      "entryGlobals": [
+        {
+          "morale": "50",
+          "fear": "30"
+        }
+      ]
+    }
+  ]
+}

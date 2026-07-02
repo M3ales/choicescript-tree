@@ -1,0 +1,18 @@
+[
+  {
+    "headerCfgId": "startup:",
+    "bodyCfgIds": [
+      "market:",
+      "startup:",
+      "tavern:"
+    ],
+    "backEdgeCount": 1,
+    "exitCount": 2,
+    "mechanism": "cross-scene",
+    "pure": false,
+    "bound": "input-bounded",
+    "tripCount": 1,
+    "unrollDepth": 1,
+    "infinite": false
+  }
+]

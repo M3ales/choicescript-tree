@@ -1,0 +1,62 @@
+{
+  "segmentCount": 3,
+  "edgeCount": 2,
+  "entrySegmentId": "seg_0",
+  "segments": {
+    "seg_0": {
+      "cfgId": "startup:",
+      "entries": [
+        {
+          "kind": "game-start"
+        }
+      ],
+      "exits": [
+        {
+          "kind": "choice"
+        }
+      ],
+      "blockCount": 2,
+      "gosubCount": 0
+    },
+    "seg_1": {
+      "cfgId": "town:",
+      "entries": [
+        {
+          "kind": "choice-option"
+        }
+      ],
+      "exits": [
+        {
+          "kind": "terminal"
+        }
+      ],
+      "blockCount": 4,
+      "gosubCount": 0
+    },
+    "seg_2": {
+      "cfgId": "town:",
+      "entries": [
+        {
+          "kind": "choice-option"
+        }
+      ],
+      "exits": [
+        {
+          "kind": "terminal"
+        }
+      ],
+      "blockCount": 6,
+      "gosubCount": 0
+    }
+  },
+  "edges": [
+    {
+      "source": "seg_0",
+      "target": "seg_1"
+    },
+    {
+      "source": "seg_0",
+      "target": "seg_2"
+    }
+  ]
+}

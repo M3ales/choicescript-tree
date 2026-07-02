@@ -73,6 +73,7 @@
               "sceneName": "startup",
               "indent": 1,
               "lineNumber": 4,
+              "position": 2,
               "rawText": "Go to the armory.",
               "hasMultiReplace": false
             },
@@ -150,6 +151,7 @@
                       "sceneName": "startup",
                       "indent": 3,
                       "lineNumber": 8,
+                      "position": 6,
                       "rawText": "Take the sword.",
                       "hasMultiReplace": false
                     },
@@ -228,7 +230,7 @@
                         "start": 0,
                         "end": 15,
                         "lineNumber": 8,
-                        "position": null,
+                        "position": 7,
                         "text": "Take the sword."
                       }
                     ],
@@ -242,6 +244,7 @@
                       "sceneName": "startup",
                       "indent": 3,
                       "lineNumber": 12,
+                      "position": 6,
                       "rawText": "Take the axe.",
                       "hasMultiReplace": false
                     },
@@ -320,7 +323,7 @@
                         "start": 0,
                         "end": 13,
                         "lineNumber": 12,
-                        "position": null,
+                        "position": 7,
                         "text": "Take the axe."
                       }
                     ],
@@ -336,7 +339,7 @@
                 "start": 0,
                 "end": 17,
                 "lineNumber": 4,
-                "position": null,
+                "position": 3,
                 "text": "Go to the armory."
               }
             ],
@@ -350,6 +353,7 @@
               "sceneName": "startup",
               "indent": 1,
               "lineNumber": 16,
+              "position": 2,
               "rawText": "Go to the market.",
               "hasMultiReplace": false
             },
@@ -395,7 +399,7 @@
                 "start": 0,
                 "end": 17,
                 "lineNumber": 16,
-                "position": null,
+                "position": 3,
                 "text": "Go to the market."
               }
             ],

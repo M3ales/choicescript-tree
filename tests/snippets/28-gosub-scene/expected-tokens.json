@@ -18,10 +18,10 @@
       "type": "Identifier",
       "value": "add_rep",
       "rawValue": "add_rep",
-      "position": 6,
-      "lineNumber": 0,
       "sceneName": "helpers",
       "indent": 0,
+      "lineNumber": 0,
+      "position": 7,
       "isLabelName": true
     },
     {
@@ -122,21 +122,20 @@
       "type": "Identifier",
       "value": "helpers",
       "rawValue": "helpers",
-      "position": 13,
-      "lineNumber": 3,
       "sceneName": "startup",
       "indent": 0,
-      "isSceneName": true,
-      "isLabelName": false
+      "lineNumber": 3,
+      "position": 13,
+      "isSceneName": true
     },
     {
       "type": "Identifier",
       "value": "add_rep",
       "rawValue": "add_rep",
-      "position": 21,
-      "lineNumber": 3,
       "sceneName": "startup",
       "indent": 0,
+      "lineNumber": 3,
+      "position": 21,
       "isLabelName": true
     },
     {

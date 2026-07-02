@@ -1,0 +1,20 @@
+*create G_name "Alex"
+*create health 100
+
+You know your teammates have probably noticed your absence, and perhaps your hallmates have noticed $!{G_name}'s—though you're banking on the fact that neither party will put two and two together.
+*goto rejoin_teammates_g
+
+*label rejoin_teammates_g
+
+*if (true)
+  *gosub rejoin_teammates_g
+
+*comment --- goto infinite loop ---
+*goto goto_loop
+
+*label goto_loop
+*set health 50
+*goto goto_loop
+
+*comment --- goto_scene infinite loop ---
+*goto_scene chapter1

@@ -1,0 +1,29 @@
+{
+  "cfgCount": 3,
+  "states": [
+    {
+      "cfgId": "market:",
+      "entryGlobals": [
+        {
+          "health": "100"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:",
+      "entryGlobals": [
+        {
+          "health": "100"
+        }
+      ]
+    },
+    {
+      "cfgId": "tavern:",
+      "entryGlobals": [
+        {
+          "health": "100"
+        }
+      ]
+    }
+  ]
+}

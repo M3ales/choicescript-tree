@@ -40,9 +40,9 @@
       "startup:b_1": {
         "scene": "startup",
         "statementIds": [
-          "startup:0",
-          "startup:1",
-          "startup:13"
+          "startup:e9xawb1g47ejx",
+          "startup:109kosyxeh01c",
+          "startup:1513atp1c00983"
         ],
         "entryType": "Label",
         "exitType": "Choice",
@@ -57,8 +57,9 @@
       "startup:b_3": {
         "scene": "startup",
         "statementIds": [
-          "startup:3",
-          "startup:4"
+          "startup:2ik2ixchqjn7",
+          "startup:1f7otbs1upyeou",
+          "startup:13y29pb10t944t"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "Goto"
@@ -72,8 +73,9 @@
       "startup:b_5": {
         "scene": "startup",
         "statementIds": [
-          "startup:7",
-          "startup:8"
+          "startup:1eq9co2n5dg6c",
+          "startup:1ozffdm1ri8m7s",
+          "startup:s30bv412cyq7a"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "Goto"
@@ -87,8 +89,9 @@
       "startup:b_7": {
         "scene": "startup",
         "statementIds": [
-          "startup:10",
-          "startup:11"
+          "startup:q1gxe4zquk2q",
+          "startup:1nwgbkh1pd3ak7",
+          "startup:1fem2zs1l65ziq"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "Finish"
@@ -120,7 +123,7 @@
         "sourceBlockId": "startup:b_1",
         "targetBlockId": "startup:b_3",
         "metadata": {
-          "optionStatementId": "startup:5",
+          "optionStatementId": "startup:2ik2ixchqjn7",
           "effectiveReuse": "hide_reuse"
         }
       },
@@ -137,7 +140,7 @@
         "sourceBlockId": "startup:b_1",
         "targetBlockId": "startup:b_5",
         "metadata": {
-          "optionStatementId": "startup:9",
+          "optionStatementId": "startup:1eq9co2n5dg6c",
           "effectiveReuse": "hide_reuse"
         }
       },
@@ -152,7 +155,7 @@
         "sourceBlockId": "startup:b_1",
         "targetBlockId": "startup:b_7",
         "metadata": {
-          "optionStatementId": "startup:12"
+          "optionStatementId": "startup:q1gxe4zquk2q"
         }
       },
       {

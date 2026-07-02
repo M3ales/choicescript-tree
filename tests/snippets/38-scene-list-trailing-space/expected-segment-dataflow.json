@@ -1,0 +1,59 @@
+{
+  "totalIterations": 1,
+  "widenedSccs": 0,
+  "stateCount": 4,
+  "cfgEntryStateCount": 3,
+  "blockDeltaCount": 0,
+  "blockMappedCount": 3,
+  "states": {
+    "seg_0": {
+      "entryGlobals": {
+        "score": "0"
+      },
+      "exitGlobals": {
+        "score": "0"
+      }
+    },
+    "__xcfg_startup:": {
+      "entryGlobals": {
+        "score": "0"
+      },
+      "exitGlobals": {
+        "score": "0"
+      }
+    },
+    "__xcfg_chapter1:": {
+      "entryGlobals": {
+        "score": "0"
+      },
+      "exitGlobals": {
+        "score": "0"
+      }
+    },
+    "__xcfg_chapter2:": {
+      "entryGlobals": {
+        "score": "0"
+      },
+      "exitGlobals": {
+        "score": "0"
+      }
+    }
+  },
+  "cfgEntryStates": {
+    "chapter1:": {
+      "globals": {
+        "score": "0"
+      }
+    },
+    "chapter2:": {
+      "globals": {
+        "score": "0"
+      }
+    },
+    "startup:": {
+      "globals": {
+        "score": "0"
+      }
+    }
+  }
+}

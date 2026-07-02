@@ -1,0 +1,109 @@
+[
+  {
+    "headerCfgId": "dungeon:combat_round",
+    "bodyCfgIds": [
+      "dungeon:combat_round",
+      "dungeon:combat_round__cont_0"
+    ],
+    "backEdgeCount": 3,
+    "exitCount": 4,
+    "mechanism": "direct",
+    "pure": false,
+    "bound": "condition-bounded",
+    "tripCount": 1,
+    "unrollDepth": 1,
+    "infinite": false
+  },
+  {
+    "headerCfgId": "dungeon:dungeon_hub",
+    "bodyCfgIds": [
+      "dungeon:dungeon_hub",
+      "dungeon:dungeon_hub__cont_0",
+      "dungeon:dungeon_hub__cont_1",
+      "dungeon:dungeon_hub__cont_2",
+      "dungeon:dungeon_hub__cont_3",
+      "dungeon:dungeon_hub__cont_4",
+      "dungeon:dungeon_hub__cont_5",
+      "dungeon:dungeon_hub__cont_6",
+      "dungeon:dungeon_hub__cont_7"
+    ],
+    "backEdgeCount": 8,
+    "exitCount": 11,
+    "mechanism": "direct",
+    "pure": false,
+    "bound": "choice-bounded",
+    "tripCount": 7,
+    "unrollDepth": 7,
+    "infinite": false
+  },
+  {
+    "headerCfgId": "startup:",
+    "bodyCfgIds": [
+      "boss:",
+      "boss:boss_exit",
+      "boss:boss_fight",
+      "boss:boss_victory",
+      "dungeon:",
+      "dungeon:dungeon_hub",
+      "dungeon:dungeon_hub__cont_0",
+      "dungeon:dungeon_hub__cont_1",
+      "dungeon:dungeon_hub__cont_2",
+      "dungeon:dungeon_hub__cont_3",
+      "dungeon:dungeon_hub__cont_4",
+      "dungeon:dungeon_hub__cont_5",
+      "dungeon:dungeon_hub__cont_6",
+      "dungeon:dungeon_hub__cont_7",
+      "dungeon:retreat",
+      "startup:"
+    ],
+    "backEdgeCount": 1,
+    "exitCount": 11,
+    "mechanism": "cross-scene",
+    "pure": false,
+    "bound": "choice-bounded",
+    "tripCount": 7,
+    "unrollDepth": 7,
+    "infinite": false
+  },
+  {
+    "headerCfgId": "dungeon:",
+    "bodyCfgIds": [
+      "boss:",
+      "boss:boss_exit",
+      "boss:boss_fight",
+      "boss:boss_victory",
+      "dungeon:",
+      "dungeon:dungeon_hub",
+      "dungeon:dungeon_hub__cont_0",
+      "dungeon:dungeon_hub__cont_1",
+      "dungeon:dungeon_hub__cont_2",
+      "dungeon:dungeon_hub__cont_3",
+      "dungeon:dungeon_hub__cont_4",
+      "dungeon:dungeon_hub__cont_5",
+      "dungeon:dungeon_hub__cont_6",
+      "dungeon:dungeon_hub__cont_7"
+    ],
+    "backEdgeCount": 1,
+    "exitCount": 12,
+    "mechanism": "cross-scene",
+    "pure": false,
+    "bound": "choice-bounded",
+    "tripCount": 7,
+    "unrollDepth": 7,
+    "infinite": false
+  },
+  {
+    "headerCfgId": "boss:boss_fight",
+    "bodyCfgIds": [
+      "boss:boss_fight"
+    ],
+    "backEdgeCount": 4,
+    "exitCount": 3,
+    "mechanism": "direct",
+    "pure": false,
+    "bound": "condition-bounded",
+    "tripCount": 0,
+    "unrollDepth": 0,
+    "infinite": false
+  }
+]

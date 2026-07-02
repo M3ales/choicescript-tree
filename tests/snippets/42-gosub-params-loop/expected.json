@@ -1,0 +1,670 @@
+[
+  {
+    "name": "startup",
+    "statements": [
+      {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "total",
+          "rawValue": "total",
+          "position": 8,
+          "lineNumber": 0,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 0,
+            "position": 14,
+            "lineNumber": 0,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 0,
+          "position": 0
+        }
+      },
+      {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "rounds",
+          "rawValue": "rounds",
+          "position": 8,
+          "lineNumber": 1,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 0,
+            "position": 15,
+            "lineNumber": 1,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 1,
+          "position": 0
+        }
+      },
+      {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "label",
+          "rawValue": "label",
+          "position": 8,
+          "lineNumber": 2,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "StringLiteral",
+            "value": "",
+            "position": 14,
+            "lineNumber": 2,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 2,
+          "position": 0
+        }
+      },
+      {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 4,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "hub",
+          "rawValue": "hub",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 4,
+          "position": 7,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Binary",
+          "left": {
+            "kind": "Identifier",
+            "token": {
+              "type": "Identifier",
+              "value": "rounds",
+              "rawValue": "rounds",
+              "position": 5,
+              "lineNumber": 5,
+              "sceneName": "startup",
+              "indent": 0
+            }
+          },
+          "operator": {
+            "type": "AdditionOperator",
+            "rawValue": "+",
+            "position": 12,
+            "lineNumber": 5,
+            "sceneName": "startup",
+            "indent": 0
+          },
+          "right": {
+            "kind": "Literal",
+            "value": {
+              "type": "NumberLiteral",
+              "value": 1,
+              "position": 14,
+              "lineNumber": 5,
+              "sceneName": "startup",
+              "indent": 0
+            }
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 5,
+          "position": 0
+        }
+      },
+      {
+        "kind": "If",
+        "token": {
+          "type": "If",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 7,
+          "position": 0
+        },
+        "body": [
+          {
+            "kind": "GoSub",
+            "token": {
+              "type": "GoSub",
+              "sceneName": "startup",
+              "indent": 1,
+              "lineNumber": 8,
+              "position": 2
+            },
+            "label": {
+              "type": "Identifier",
+              "value": "add_value",
+              "rawValue": "add_value",
+              "sceneName": "startup",
+              "indent": 1,
+              "lineNumber": 8,
+              "position": 9,
+              "isLabelName": true
+            },
+            "args": [
+              {
+                "kind": "Grouping",
+                "expression": {
+                  "kind": "Binary",
+                  "left": {
+                    "kind": "Identifier",
+                    "token": {
+                      "type": "Identifier",
+                      "value": "rounds",
+                      "rawValue": "rounds",
+                      "position": 20,
+                      "lineNumber": 8,
+                      "sceneName": "startup",
+                      "indent": 1
+                    }
+                  },
+                  "operator": {
+                    "type": "MultiplicationOperator",
+                    "rawValue": "*",
+                    "position": 27,
+                    "lineNumber": 8,
+                    "sceneName": "startup",
+                    "indent": 1
+                  },
+                  "right": {
+                    "kind": "Literal",
+                    "value": {
+                      "type": "NumberLiteral",
+                      "value": 10,
+                      "position": 29,
+                      "lineNumber": 8,
+                      "sceneName": "startup",
+                      "indent": 1
+                    }
+                  }
+                }
+              },
+              {
+                "kind": "Grouping",
+                "expression": {
+                  "kind": "Binary",
+                  "left": {
+                    "kind": "Literal",
+                    "value": {
+                      "type": "StringLiteral",
+                      "value": "round ",
+                      "position": 34,
+                      "lineNumber": 8,
+                      "sceneName": "startup",
+                      "indent": 1
+                    }
+                  },
+                  "operator": {
+                    "type": "ConcatenationOperator",
+                    "rawValue": "&",
+                    "position": 43,
+                    "lineNumber": 8,
+                    "sceneName": "startup",
+                    "indent": 1
+                  },
+                  "right": {
+                    "kind": "Identifier",
+                    "token": {
+                      "type": "Identifier",
+                      "value": "rounds",
+                      "rawValue": "rounds",
+                      "position": 45,
+                      "lineNumber": 8,
+                      "sceneName": "startup",
+                      "indent": 1
+                    }
+                  }
+                }
+              },
+              {
+                "kind": "Grouping",
+                "expression": {
+                  "kind": "Binary",
+                  "left": {
+                    "kind": "Identifier",
+                    "token": {
+                      "type": "Identifier",
+                      "value": "total",
+                      "rawValue": "total",
+                      "position": 54,
+                      "lineNumber": 8,
+                      "sceneName": "startup",
+                      "indent": 1
+                    }
+                  },
+                  "operator": {
+                    "type": "AdditionOperator",
+                    "rawValue": "+",
+                    "position": 60,
+                    "lineNumber": 8,
+                    "sceneName": "startup",
+                    "indent": 1
+                  },
+                  "right": {
+                    "kind": "Literal",
+                    "value": {
+                      "type": "NumberLiteral",
+                      "value": 1,
+                      "position": 62,
+                      "lineNumber": 8,
+                      "sceneName": "startup",
+                      "indent": 1
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "kind": "GotoLabel",
+            "token": {
+              "type": "GotoLabel",
+              "sceneName": "startup",
+              "indent": 1,
+              "lineNumber": 9,
+              "position": 2
+            },
+            "label": {
+              "type": "Identifier",
+              "value": "hub",
+              "rawValue": "hub",
+              "sceneName": "startup",
+              "indent": 1,
+              "lineNumber": 9,
+              "position": 8,
+              "isLabelName": true
+            }
+          }
+        ],
+        "expression": {
+          "kind": "Grouping",
+          "expression": {
+            "kind": "Binary",
+            "left": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "rounds",
+                "rawValue": "rounds",
+                "position": 5,
+                "lineNumber": 7,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            },
+            "operator": {
+              "type": "LessThanEqualsOperator",
+              "rawValue": "<=",
+              "position": 12,
+              "lineNumber": 7,
+              "sceneName": "startup",
+              "indent": 0
+            },
+            "right": {
+              "kind": "Literal",
+              "value": {
+                "type": "NumberLiteral",
+                "value": 3,
+                "position": 15,
+                "lineNumber": 7,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          }
+        },
+        "elseBranch": null,
+        "elseIfBranches": []
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 11,
+            "position": 0,
+            "indent": 0,
+            "content": "Done. Total: "
+          },
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 11,
+            "position": 21,
+            "indent": 0,
+            "content": ", rounds: "
+          },
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 11,
+            "position": 40,
+            "indent": 0,
+            "content": ", label: "
+          },
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 11,
+            "position": 57,
+            "indent": 0,
+            "content": ".\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 13,
+            "lineNumber": 11,
+            "position": 0,
+            "text": "Done. Total: "
+          },
+          {
+            "kind": "Print",
+            "start": 0,
+            "end": 0,
+            "lineNumber": 11,
+            "position": 13,
+            "expression": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "total",
+                "rawValue": "total",
+                "position": 15,
+                "lineNumber": 11,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          },
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 10,
+            "lineNumber": 11,
+            "position": 21,
+            "text": ", rounds: "
+          },
+          {
+            "kind": "Print",
+            "start": 0,
+            "end": 0,
+            "lineNumber": 11,
+            "position": 31,
+            "expression": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "rounds",
+                "rawValue": "rounds",
+                "position": 33,
+                "lineNumber": 11,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          },
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 9,
+            "lineNumber": 11,
+            "position": 40,
+            "text": ", label: "
+          },
+          {
+            "kind": "Print",
+            "start": 0,
+            "end": 0,
+            "lineNumber": 11,
+            "position": 49,
+            "expression": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "label",
+                "rawValue": "label",
+                "position": 51,
+                "lineNumber": 11,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          },
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 2,
+            "lineNumber": 11,
+            "position": 57,
+            "text": ".\n"
+          }
+        ]
+      },
+      {
+        "kind": "Finish",
+        "token": {
+          "type": "Finish",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 12,
+          "position": 0
+        },
+        "buttonText": null
+      },
+      {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 14,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "add_value",
+          "rawValue": "add_value",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 14,
+          "position": 7,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "Parameters",
+        "token": {
+          "type": "Parameters",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 15,
+          "position": 0
+        },
+        "identifiers": [
+          {
+            "type": "Identifier",
+            "value": "amount",
+            "rawValue": "amount",
+            "position": 8,
+            "lineNumber": 15,
+            "sceneName": "startup",
+            "indent": 0
+          },
+          {
+            "type": "Identifier",
+            "value": "desc",
+            "rawValue": "desc",
+            "position": 15,
+            "lineNumber": 15,
+            "sceneName": "startup",
+            "indent": 0
+          },
+          {
+            "type": "Identifier",
+            "value": "seq",
+            "rawValue": "seq",
+            "position": 20,
+            "lineNumber": 15,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        ]
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Binary",
+          "left": {
+            "kind": "Identifier",
+            "token": {
+              "type": "Identifier",
+              "value": "total",
+              "rawValue": "total",
+              "position": 5,
+              "lineNumber": 16,
+              "sceneName": "startup",
+              "indent": 0
+            }
+          },
+          "operator": {
+            "type": "AdditionOperator",
+            "rawValue": "+",
+            "position": 11,
+            "lineNumber": 16,
+            "sceneName": "startup",
+            "indent": 0
+          },
+          "right": {
+            "kind": "Identifier",
+            "token": {
+              "type": "Identifier",
+              "value": "amount",
+              "rawValue": "amount",
+              "position": 13,
+              "lineNumber": 16,
+              "sceneName": "startup",
+              "indent": 0
+            }
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 16,
+          "position": 0
+        }
+      },
+      {
+        "kind": "SetVariable",
+        "expression": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "label",
+            "rawValue": "label",
+            "position": 5,
+            "lineNumber": 17,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "assignment": {
+          "kind": "Identifier",
+          "token": {
+            "type": "Identifier",
+            "value": "desc",
+            "rawValue": "desc",
+            "position": 11,
+            "lineNumber": 17,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "token": {
+          "type": "SetVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 17,
+          "position": 0
+        }
+      },
+      {
+        "kind": "Return",
+        "token": {
+          "type": "Return",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 18,
+          "position": 0
+        }
+      }
+    ],
+    "parseErrors": [],
+    "start": {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    "end": {
+      "type": "Return",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 18,
+      "position": 0
+    }
+  }
+]

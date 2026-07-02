@@ -66,10 +66,10 @@
       "type": "Identifier",
       "value": "layer1",
       "rawValue": "layer1",
-      "position": 7,
-      "lineNumber": 3,
       "sceneName": "startup",
       "indent": 0,
+      "lineNumber": 3,
+      "position": 7,
       "isLabelName": true
     },
     {
@@ -160,10 +160,10 @@
       "type": "Identifier",
       "value": "layer1",
       "rawValue": "layer1",
-      "position": 6,
-      "lineNumber": 7,
       "sceneName": "startup",
       "indent": 0,
+      "lineNumber": 7,
+      "position": 7,
       "isLabelName": true
     },
     {
@@ -264,10 +264,10 @@
       "type": "Identifier",
       "value": "layer2",
       "rawValue": "layer2",
-      "position": 7,
-      "lineNumber": 10,
       "sceneName": "startup",
       "indent": 0,
+      "lineNumber": 10,
+      "position": 7,
       "isLabelName": true
     },
     {
@@ -343,10 +343,10 @@
       "type": "Identifier",
       "value": "layer2",
       "rawValue": "layer2",
-      "position": 6,
-      "lineNumber": 14,
       "sceneName": "startup",
       "indent": 0,
+      "lineNumber": 14,
+      "position": 7,
       "isLabelName": true
     },
     {
@@ -493,10 +493,10 @@
       "type": "Identifier",
       "value": "layer3",
       "rawValue": "layer3",
-      "position": 9,
-      "lineNumber": 18,
       "sceneName": "startup",
       "indent": 1,
+      "lineNumber": 18,
+      "position": 9,
       "isLabelName": true
     },
     {
@@ -572,10 +572,10 @@
       "type": "Identifier",
       "value": "layer3",
       "rawValue": "layer3",
-      "position": 6,
-      "lineNumber": 22,
       "sceneName": "startup",
       "indent": 0,
+      "lineNumber": 22,
+      "position": 7,
       "isLabelName": true
     },
     {
@@ -676,10 +676,10 @@
       "type": "Identifier",
       "value": "layer4",
       "rawValue": "layer4",
-      "position": 7,
-      "lineNumber": 25,
       "sceneName": "startup",
       "indent": 0,
+      "lineNumber": 25,
+      "position": 7,
       "isLabelName": true
     },
     {
@@ -755,10 +755,10 @@
       "type": "Identifier",
       "value": "layer4",
       "rawValue": "layer4",
-      "position": 6,
-      "lineNumber": 29,
       "sceneName": "startup",
       "indent": 0,
+      "lineNumber": 29,
+      "position": 7,
       "isLabelName": true
     },
     {
@@ -905,10 +905,10 @@
       "type": "Identifier",
       "value": "layer5",
       "rawValue": "layer5",
-      "position": 9,
-      "lineNumber": 33,
       "sceneName": "startup",
       "indent": 1,
+      "lineNumber": 33,
+      "position": 9,
       "isLabelName": true
     },
     {
@@ -984,10 +984,10 @@
       "type": "Identifier",
       "value": "layer5",
       "rawValue": "layer5",
-      "position": 6,
-      "lineNumber": 37,
       "sceneName": "startup",
       "indent": 0,
+      "lineNumber": 37,
+      "position": 7,
       "isLabelName": true
     },
     {

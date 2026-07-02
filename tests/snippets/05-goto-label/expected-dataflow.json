@@ -1,0 +1,36 @@
+{
+  "states": [
+    {
+      "cfgId": "startup:",
+      "entryGlobals": [
+        {}
+      ],
+      "exitGlobals": [
+        {}
+      ]
+    },
+    {
+      "cfgId": "startup:start_adventure",
+      "entryGlobals": [
+        {}
+      ],
+      "exitGlobals": [
+        {}
+      ]
+    },
+    {
+      "cfgId": "startup:the_end",
+      "entryGlobals": [
+        {}
+      ],
+      "exitGlobals": [
+        {}
+      ]
+    }
+  ],
+  "diagnostics": {
+    "unresolvedExits": 0,
+    "droppedContexts": 0,
+    "missingCfgs": []
+  }
+}

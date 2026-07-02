@@ -1,0 +1,53 @@
+{
+  "states": [
+    {
+      "cfgId": "startup:",
+      "entryGlobals": [
+        {
+          "gold": "30",
+          "bought_sword": "false",
+          "bought_shield": "false"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "gold": "30",
+          "bought_sword": "false",
+          "bought_shield": "false"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:shop",
+      "entryGlobals": [
+        {
+          "gold": "30",
+          "bought_sword": "false",
+          "bought_shield": "false"
+        },
+        {
+          "gold": "0",
+          "bought_sword": "true",
+          "bought_shield": "true"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "gold": "0",
+          "bought_sword": "true",
+          "bought_shield": "true"
+        },
+        {
+          "gold": "-30",
+          "bought_sword": "true",
+          "bought_shield": "true"
+        }
+      ]
+    }
+  ],
+  "diagnostics": {
+    "unresolvedExits": 0,
+    "droppedContexts": 0,
+    "missingCfgs": []
+  }
+}

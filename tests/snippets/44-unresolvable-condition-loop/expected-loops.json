@@ -1,0 +1,150 @@
+[
+  {
+    "headerCfgId": "startup:counter_loop",
+    "bodyCfgIds": [
+      "startup:counter_loop",
+      "startup:counter_loop__cont_0"
+    ],
+    "backEdgeCount": 1,
+    "exitCount": 2,
+    "mechanism": "direct",
+    "pure": false,
+    "bound": "condition-bounded",
+    "tripCount": 5,
+    "unrollDepth": 5,
+    "infinite": false
+  },
+  {
+    "headerCfgId": "startup:inner_spin",
+    "bodyCfgIds": [
+      "startup:inner_spin",
+      "startup:inner_spin__cont_0"
+    ],
+    "backEdgeCount": 1,
+    "exitCount": 2,
+    "mechanism": "direct",
+    "pure": false,
+    "bound": "condition-bounded",
+    "tripCount": 3,
+    "unrollDepth": 3,
+    "infinite": false
+  },
+  {
+    "headerCfgId": "startup:middle_spin",
+    "bodyCfgIds": [
+      "startup:middle_spin",
+      "startup:middle_spin__cont_0"
+    ],
+    "backEdgeCount": 1,
+    "exitCount": 2,
+    "mechanism": "direct",
+    "pure": false,
+    "bound": "condition-bounded",
+    "tripCount": 4,
+    "unrollDepth": 4,
+    "infinite": false
+  },
+  {
+    "headerCfgId": "startup:outer_loop",
+    "bodyCfgIds": [
+      "startup:outer_loop",
+      "startup:outer_loop__cont_0"
+    ],
+    "backEdgeCount": 1,
+    "exitCount": 2,
+    "mechanism": "direct",
+    "pure": false,
+    "bound": "condition-bounded",
+    "tripCount": 6,
+    "unrollDepth": 6,
+    "infinite": false
+  },
+  {
+    "headerCfgId": "startup:combo_loop",
+    "bodyCfgIds": [
+      "startup:combo_loop",
+      "startup:combo_loop__cont_0"
+    ],
+    "backEdgeCount": 1,
+    "exitCount": 2,
+    "mechanism": "direct",
+    "pure": false,
+    "bound": "condition-bounded",
+    "tripCount": 5,
+    "unrollDepth": 5,
+    "infinite": false
+  },
+  {
+    "headerCfgId": "startup:shield_loop",
+    "bodyCfgIds": [
+      "startup:shield_loop",
+      "startup:shield_loop__cont_0"
+    ],
+    "backEdgeCount": 1,
+    "exitCount": 2,
+    "mechanism": "direct",
+    "pure": false,
+    "bound": "condition-bounded",
+    "tripCount": 4,
+    "unrollDepth": 4,
+    "infinite": false
+  },
+  {
+    "headerCfgId": "startup:wave_loop",
+    "bodyCfgIds": [
+      "startup:wave_loop",
+      "startup:wave_loop__cont_0"
+    ],
+    "backEdgeCount": 1,
+    "exitCount": 2,
+    "mechanism": "direct",
+    "pure": false,
+    "bound": "condition-bounded",
+    "tripCount": 3,
+    "unrollDepth": 3,
+    "infinite": false
+  },
+  {
+    "headerCfgId": "startup:dispatch",
+    "bodyCfgIds": [
+      "startup:dispatch"
+    ],
+    "backEdgeCount": 1,
+    "exitCount": 2,
+    "mechanism": "direct",
+    "pure": false,
+    "bound": "unbounded",
+    "tripCount": null,
+    "unrollDepth": null,
+    "infinite": false,
+    "infiniteCondition": {
+      "type": "and",
+      "operands": [
+        {
+          "type": "comparison",
+          "operator": "NotEqualityOperator",
+          "left": {
+            "type": "var",
+            "name": "mood"
+          },
+          "right": {
+            "type": "literal",
+            "value": "happy"
+          }
+        },
+        {
+          "type": "comparison",
+          "operator": "NotEqualityOperator",
+          "left": {
+            "type": "var",
+            "name": "mood"
+          },
+          "right": {
+            "type": "literal",
+            "value": "sad"
+          }
+        }
+      ]
+    }
+  }
+]

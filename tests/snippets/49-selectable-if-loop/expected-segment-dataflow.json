@@ -1,0 +1,74 @@
+{
+  "totalIterations": 8,
+  "widenedSccs": 1,
+  "stateCount": 4,
+  "cfgEntryStateCount": 2,
+  "blockDeltaCount": 0,
+  "blockMappedCount": 5,
+  "states": {
+    "seg_0": {
+      "entryGlobals": {
+        "gold": "30",
+        "bought_sword": "false",
+        "bought_shield": "false"
+      },
+      "exitGlobals": {
+        "gold": "30",
+        "bought_sword": "false",
+        "bought_shield": "false"
+      }
+    },
+    "seg_1": {
+      "entryGlobals": {
+        "gold": "{0,10,20,30}",
+        "bought_sword": "{false,true}",
+        "bought_shield": "{false,true}"
+      },
+      "exitGlobals": {
+        "gold": "{0,10,20,30}",
+        "bought_sword": "{false,true}",
+        "bought_shield": "{false,true}"
+      }
+    },
+    "seg_2": {
+      "entryGlobals": {
+        "gold": "{0,10,20,30}",
+        "bought_sword": "{false,true}",
+        "bought_shield": "{false,true}"
+      },
+      "exitGlobals": {
+        "gold": "{0,10,20,30}",
+        "bought_sword": "{false,true}",
+        "bought_shield": "{false,true}"
+      }
+    },
+    "seg_3": {
+      "entryGlobals": {
+        "gold": "{0,10,20,30}",
+        "bought_sword": "{false,true}",
+        "bought_shield": "{false,true}"
+      },
+      "exitGlobals": {
+        "gold": "{0,10,20,30}",
+        "bought_sword": "{false,true}",
+        "bought_shield": "{false,true}"
+      }
+    }
+  },
+  "cfgEntryStates": {
+    "startup:": {
+      "globals": {
+        "gold": "30",
+        "bought_sword": "false",
+        "bought_shield": "false"
+      }
+    },
+    "startup:shop": {
+      "globals": {
+        "gold": "{0,10,20,30}",
+        "bought_sword": "{false,true}",
+        "bought_shield": "{false,true}"
+      }
+    }
+  }
+}

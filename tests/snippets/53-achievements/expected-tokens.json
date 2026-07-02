@@ -1,0 +1,178 @@
+[
+  [
+    {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 0,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "var1",
+      "rawValue": "var1",
+      "position": 8,
+      "lineNumber": 0,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "BooleanLiteral",
+      "value": true,
+      "position": 13,
+      "lineNumber": 0,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Achievement",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 1,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "test_ach",
+      "rawValue": "test_ach",
+      "lineNumber": 1,
+      "position": 13,
+      "indent": 0,
+      "sceneName": "startup"
+    },
+    {
+      "type": "Identifier",
+      "value": "visible",
+      "rawValue": "visible",
+      "lineNumber": 1,
+      "position": 22,
+      "indent": 0,
+      "sceneName": "startup"
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 5,
+      "lineNumber": 1,
+      "position": 30,
+      "indent": 0,
+      "sceneName": "startup"
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 1,
+      "position": 32,
+      "indent": 0,
+      "content": "Test Achievement Title"
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 2,
+      "position": 2,
+      "indent": 1,
+      "content": "Pre-earned description."
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 3,
+      "position": 2,
+      "indent": 1,
+      "content": "Post-earned description."
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 5,
+      "position": 0,
+      "indent": 0,
+      "content": "Some prose after achievements.\n\n"
+    },
+    {
+      "type": "Choice",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 7,
+      "position": 0
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 8,
+      "position": 2,
+      "rawText": "Option A",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 8,
+      "position": 3,
+      "indent": 1,
+      "content": "Option A"
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 9,
+      "position": 4,
+      "indent": 2,
+      "content": "Chose A.\n"
+    },
+    {
+      "type": "Finish",
+      "sceneName": "startup",
+      "indent": 2,
+      "lineNumber": 10,
+      "position": 4
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 11,
+      "position": 2,
+      "rawText": "Option B",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 11,
+      "position": 3,
+      "indent": 1,
+      "content": "Option B"
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 12,
+      "position": 4,
+      "indent": 2,
+      "content": "Chose B.\n"
+    },
+    {
+      "type": "Finish",
+      "sceneName": "startup",
+      "indent": 2,
+      "lineNumber": 13,
+      "position": 4
+    },
+    {
+      "lineNumber": 15,
+      "indent": 0,
+      "position": 0,
+      "sceneName": "startup",
+      "type": "SceneEnd"
+    }
+  ]
+]

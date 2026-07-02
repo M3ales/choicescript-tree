@@ -1,0 +1,54 @@
+{
+  "totalIterations": 5,
+  "widenedSccs": 0,
+  "stateCount": 4,
+  "cfgEntryStateCount": 2,
+  "blockDeltaCount": 0,
+  "blockMappedCount": 5,
+  "states": {
+    "seg_0": {
+      "entryGlobals": {
+        "mood": "neutral"
+      },
+      "exitGlobals": {
+        "mood": "neutral"
+      }
+    },
+    "seg_1": {
+      "entryGlobals": {
+        "mood": "{alert,happy,neutral}"
+      },
+      "exitGlobals": {
+        "mood": "alert"
+      }
+    },
+    "seg_2": {
+      "entryGlobals": {
+        "mood": "{alert,happy,neutral}"
+      },
+      "exitGlobals": {
+        "mood": "happy"
+      }
+    },
+    "seg_3": {
+      "entryGlobals": {
+        "mood": "{alert,happy,neutral}"
+      },
+      "exitGlobals": {
+        "mood": "{alert,happy,neutral}"
+      }
+    }
+  },
+  "cfgEntryStates": {
+    "startup:": {
+      "globals": {
+        "mood": "neutral"
+      }
+    },
+    "startup:chat_hub": {
+      "globals": {
+        "mood": "{alert,happy,neutral}"
+      }
+    }
+  }
+}

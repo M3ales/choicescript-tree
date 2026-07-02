@@ -1,0 +1,328 @@
+[
+  {
+    "sceneName": "chapter1",
+    "blocks": {
+      "chapter1:b_0": {
+        "exitType": "Branch"
+      },
+      "chapter1:b_1": {
+        "exitType": "Finish"
+      },
+      "chapter1:b_2": {
+        "exitType": "FallThrough"
+      },
+      "chapter1:b_3": {
+        "exitType": "FallThrough"
+      },
+      "chapter1:b_4": {
+        "exitType": "FallThrough"
+      },
+      "chapter1:b_5": {
+        "exitType": "FallThrough"
+      }
+    },
+    "blockIndex": {
+      "chapter1:b_0": {
+        "scene": "chapter1",
+        "statementIds": [
+          "chapter1:9qomhk76j5w2",
+          "chapter1:cdn1p94hpxbn"
+        ],
+        "entryType": "SceneEntry",
+        "exitType": "Branch"
+      },
+      "chapter1:b_1": {
+        "scene": "chapter1",
+        "statementIds": [
+          "chapter1:f6nru71iy5woh"
+        ],
+        "entryType": "Continuation",
+        "exitType": "Finish"
+      },
+      "chapter1:b_2": {
+        "scene": "chapter1",
+        "statementIds": [
+          "chapter1:1qcvj7ekc5jkg"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "FallThrough"
+      },
+      "chapter1:b_3": {
+        "scene": "chapter1",
+        "statementIds": [
+          "chapter1:o05k9018lcmry",
+          "chapter1:cc90bkrc6cuy"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "FallThrough"
+      },
+      "chapter1:b_4": {
+        "scene": "chapter1",
+        "statementIds": [
+          "chapter1:59re3tlv48rb",
+          "chapter1:kki40e1udrgds"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "FallThrough"
+      },
+      "chapter1:b_5": {
+        "scene": "chapter1",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      }
+    },
+    "edges": [
+      {
+        "kind": "IfBranch",
+        "sourceBlockId": "chapter1:b_0",
+        "targetBlockId": "chapter1:b_2",
+        "metadata": {
+          "conditionStatementId": "chapter1:cdn1p94hpxbn"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "chapter1:b_2",
+        "targetBlockId": "chapter1:b_1",
+        "metadata": {}
+      },
+      {
+        "kind": "ElseIfBranch",
+        "sourceBlockId": "chapter1:b_0",
+        "targetBlockId": "chapter1:b_3",
+        "metadata": {
+          "conditionStatementId": "chapter1:o05k9018lcmry"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "chapter1:b_3",
+        "targetBlockId": "chapter1:b_1",
+        "metadata": {}
+      },
+      {
+        "kind": "ElseBranch",
+        "sourceBlockId": "chapter1:b_0",
+        "targetBlockId": "chapter1:b_4",
+        "metadata": {}
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "chapter1:b_4",
+        "targetBlockId": "chapter1:b_1",
+        "metadata": {}
+      },
+      {
+        "kind": "SceneExit",
+        "sourceBlockId": "chapter1:b_1",
+        "targetBlockId": null,
+        "metadata": {}
+      }
+    ],
+    "entryBlockId": "chapter1:b_0",
+    "labelToBlockId": {},
+    "unresolvedEdges": []
+  },
+  {
+    "sceneName": "startup",
+    "blocks": {
+      "startup:b_0": {
+        "exitType": "GoSub"
+      },
+      "startup:b_1": {
+        "exitType": "Choice"
+      },
+      "startup:b_2": {
+        "exitType": "GoSub"
+      },
+      "startup:b_3": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_4": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_5": {
+        "exitType": "Finish"
+      },
+      "startup:b_6": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_7": {
+        "exitType": "Return"
+      },
+      "startup:b_8": {
+        "exitType": "FallThrough"
+      }
+    },
+    "blockIndex": {
+      "startup:b_0": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:sj4x2m80an2k",
+          "startup:v7fye01vku15y",
+          "startup:m3t54yo1oa08",
+          "startup:172epp91fupxgf",
+          "startup:1k5bg0s1n630ya"
+        ],
+        "entryType": "SceneEntry",
+        "exitType": "GoSub"
+      },
+      "startup:b_1": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:13hn9n81udi2d2",
+          "startup:uk6uy2v8k4ls"
+        ],
+        "entryType": "GoSubContinuation",
+        "exitType": "Choice"
+      },
+      "startup:b_2": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:16q5dq3j8wti5",
+          "startup:kmfh17nnkjql"
+        ],
+        "entryType": "Continuation",
+        "exitType": "GoSub"
+      },
+      "startup:b_3": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:13yqs3rogwpel",
+          "startup:1bq8prc1psnwnq",
+          "startup:66lsz2qs84eo"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "FallThrough"
+      },
+      "startup:b_4": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:cetb7q148s6wk",
+          "startup:37imon12i48y1",
+          "startup:praek56hsw83"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "FallThrough"
+      },
+      "startup:b_5": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:1jc6057pk7bgp",
+          "startup:bfxulv1ne5ykh"
+        ],
+        "entryType": "GoSubContinuation",
+        "exitType": "Finish"
+      },
+      "startup:b_6": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "startup:b_7": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:1r9upxr1yrdm6d",
+          "startup:1hvw4h82xtzb6",
+          "startup:1gjzbrrkdjlbd",
+          "startup:142f5cb1vi19t1"
+        ],
+        "entryType": "Label",
+        "exitType": "Return",
+        "label": "adjust_condition",
+        "parameterNames": [
+          "amount"
+        ]
+      },
+      "startup:b_8": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      }
+    },
+    "edges": [
+      {
+        "kind": "GoSubCall",
+        "sourceBlockId": "startup:b_0",
+        "targetBlockId": "startup:b_7",
+        "metadata": {
+          "label": "adjust_condition"
+        }
+      },
+      {
+        "kind": "GoSubReturn",
+        "sourceBlockId": "startup:b_0",
+        "targetBlockId": "startup:b_1",
+        "metadata": {}
+      },
+      {
+        "kind": "ChoiceOption",
+        "sourceBlockId": "startup:b_1",
+        "targetBlockId": "startup:b_3",
+        "metadata": {
+          "optionStatementId": "startup:13yqs3rogwpel"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "startup:b_3",
+        "targetBlockId": "startup:b_2",
+        "metadata": {}
+      },
+      {
+        "kind": "ChoiceOption",
+        "sourceBlockId": "startup:b_1",
+        "targetBlockId": "startup:b_4",
+        "metadata": {
+          "optionStatementId": "startup:cetb7q148s6wk"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "startup:b_4",
+        "targetBlockId": "startup:b_2",
+        "metadata": {}
+      },
+      {
+        "kind": "GoSubCall",
+        "sourceBlockId": "startup:b_2",
+        "targetBlockId": "startup:b_7",
+        "metadata": {
+          "label": "adjust_condition"
+        }
+      },
+      {
+        "kind": "GoSubReturn",
+        "sourceBlockId": "startup:b_2",
+        "targetBlockId": "startup:b_5",
+        "metadata": {}
+      },
+      {
+        "kind": "SceneExit",
+        "sourceBlockId": "startup:b_5",
+        "targetBlockId": null,
+        "metadata": {}
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "startup:b_6",
+        "targetBlockId": "startup:b_7",
+        "metadata": {}
+      },
+      {
+        "kind": "Return",
+        "sourceBlockId": "startup:b_7",
+        "targetBlockId": null,
+        "metadata": {}
+      }
+    ],
+    "entryBlockId": "startup:b_0",
+    "labelToBlockId": {
+      "adjust_condition": "startup:b_7"
+    },
+    "unresolvedEdges": []
+  }
+]

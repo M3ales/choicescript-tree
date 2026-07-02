@@ -1,0 +1,87 @@
+{
+  "totalIterations": 1,
+  "widenedSccs": 0,
+  "stateCount": 1,
+  "cfgEntryStateCount": 9,
+  "blockDeltaCount": 13,
+  "blockMappedCount": 15,
+  "states": {
+    "seg_0": {
+      "entryGlobals": {
+        "turn": "0",
+        "energy": "100",
+        "morale": "50"
+      },
+      "exitGlobals": {
+        "turn": "1",
+        "energy": "85",
+        "morale": "55"
+      }
+    }
+  },
+  "cfgEntryStates": {
+    "startup:": {
+      "globals": {
+        "turn": "0",
+        "energy": "100",
+        "morale": "50"
+      }
+    },
+    "startup:__entry__cont_0": {
+      "globals": {
+        "turn": "0",
+        "energy": "85",
+        "morale": "50"
+      }
+    },
+    "startup:drill_round": {
+      "globals": {
+        "turn": "0",
+        "energy": "85",
+        "morale": "50"
+      }
+    },
+    "startup:hub": {
+      "globals": {
+        "turn": "0",
+        "energy": "85",
+        "morale": "55"
+      }
+    },
+    "startup:hub__cont_0": {
+      "globals": {
+        "turn": "0",
+        "energy": "90",
+        "morale": "50"
+      }
+    },
+    "startup:patrol": {
+      "globals": {
+        "turn": "0",
+        "energy": "90",
+        "morale": "50"
+      }
+    },
+    "startup:patrol__cont_0": {
+      "globals": {
+        "turn": "1",
+        "energy": "85",
+        "morale": "55"
+      }
+    },
+    "startup:training": {
+      "globals": {
+        "turn": "0",
+        "energy": "100",
+        "morale": "50"
+      }
+    },
+    "startup:training__cont_0": {
+      "globals": {
+        "turn": "0",
+        "energy": "85",
+        "morale": "55"
+      }
+    }
+  }
+}

@@ -1,0 +1,395 @@
+[
+  {
+    "sceneName": "chapter1",
+    "blocks": {
+      "chapter1:b_0": {
+        "exitType": "Branch"
+      },
+      "chapter1:b_1": {
+        "exitType": "Finish"
+      },
+      "chapter1:b_2": {
+        "exitType": "FallThrough"
+      },
+      "chapter1:b_3": {
+        "exitType": "FallThrough"
+      }
+    },
+    "blockIndex": {
+      "chapter1:b_0": {
+        "scene": "chapter1",
+        "statementIds": [
+          "chapter1:1i79n8a1cxwews",
+          "chapter1:1etp742gqtfso",
+          "chapter1:1i79n8a1cxwews",
+          "chapter1:1r9g2pacif4s",
+          "chapter1:1i79n8a1cxwews",
+          "chapter1:1gp93o6mv9ync"
+        ],
+        "entryType": "SceneEntry",
+        "exitType": "Branch"
+      },
+      "chapter1:b_1": {
+        "scene": "chapter1",
+        "statementIds": [
+          "chapter1:1i79n8a1cxwews",
+          "chapter1:e5zegqgklkq4",
+          "chapter1:1h2jp5m1ji8dcw"
+        ],
+        "entryType": "Continuation",
+        "exitType": "Finish"
+      },
+      "chapter1:b_2": {
+        "scene": "chapter1",
+        "statementIds": [
+          "chapter1:10sz1wzbuvgxt"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "FallThrough"
+      },
+      "chapter1:b_3": {
+        "scene": "chapter1",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      }
+    },
+    "edges": [
+      {
+        "kind": "IfBranch",
+        "sourceBlockId": "chapter1:b_0",
+        "targetBlockId": "chapter1:b_2",
+        "metadata": {
+          "conditionStatementId": "chapter1:1gp93o6mv9ync"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "chapter1:b_2",
+        "targetBlockId": "chapter1:b_1",
+        "metadata": {}
+      },
+      {
+        "kind": "IfFallThrough",
+        "sourceBlockId": "chapter1:b_0",
+        "targetBlockId": "chapter1:b_1",
+        "metadata": {}
+      },
+      {
+        "kind": "SceneExit",
+        "sourceBlockId": "chapter1:b_1",
+        "targetBlockId": null,
+        "metadata": {}
+      }
+    ],
+    "entryBlockId": "chapter1:b_0",
+    "labelToBlockId": {},
+    "unresolvedEdges": []
+  },
+  {
+    "sceneName": "startup",
+    "blocks": {
+      "startup:b_0": {
+        "exitType": "GoSub"
+      },
+      "startup:b_1": {
+        "exitType": "Branch"
+      },
+      "startup:b_2": {
+        "exitType": "Branch"
+      },
+      "startup:b_3": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_4": {
+        "exitType": "GoSub"
+      },
+      "startup:b_5": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_6": {
+        "exitType": "GotoScene"
+      },
+      "startup:b_7": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_8": {
+        "exitType": "Return"
+      },
+      "startup:b_9": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_10": {
+        "exitType": "Return"
+      },
+      "startup:b_11": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_12": {
+        "exitType": "Return"
+      },
+      "startup:b_13": {
+        "exitType": "FallThrough"
+      }
+    },
+    "blockIndex": {
+      "startup:b_0": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:1i79n8a1cxwews",
+          "startup:1yox1lh1efqrnz",
+          "startup:1a6pd4djc6w6r",
+          "startup:1xqe9ik118xb6a",
+          "startup:1q83hf0k11262",
+          "startup:1i79n8a1cxwews",
+          "startup:lm2r3j1vs4k3l",
+          "startup:p8th1e1gyhspw",
+          "startup:1i79n8a1cxwews",
+          "startup:43jiwnaxn75t"
+        ],
+        "entryType": "SceneEntry",
+        "exitType": "GoSub"
+      },
+      "startup:b_1": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:1i79n8a1cxwews",
+          "startup:184n0dq16y8grc"
+        ],
+        "entryType": "GoSubContinuation",
+        "exitType": "Branch"
+      },
+      "startup:b_2": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:1i79n8a1cxwews",
+          "startup:fn8pqg1ru5bi"
+        ],
+        "entryType": "Continuation",
+        "exitType": "Branch"
+      },
+      "startup:b_3": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:1gtfme112ar0hr",
+          "startup:rvoinjba81p1"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "FallThrough"
+      },
+      "startup:b_4": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:1i79n8a1cxwews",
+          "startup:hseidr3hkghl",
+          "startup:1i79n8a1cxwews",
+          "startup:8my17a10h95tw"
+        ],
+        "entryType": "Continuation",
+        "exitType": "GoSub"
+      },
+      "startup:b_5": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:1jdlmhtmopc47"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "FallThrough"
+      },
+      "startup:b_6": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:1i79n8a1cxwews",
+          "startup:aez10a1pv4nu8",
+          "startup:1jxkk10138r4by"
+        ],
+        "entryType": "GoSubContinuation",
+        "exitType": "GotoScene"
+      },
+      "startup:b_7": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:1i79n8a1cxwews"
+        ],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "startup:b_8": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:1h0qch11orhnuj",
+          "startup:1i79n8a1cxwews",
+          "startup:11xxo32297r7s",
+          "startup:1leb2rxyjfw0v",
+          "startup:2lqhp41ww5l9u"
+        ],
+        "entryType": "Label",
+        "exitType": "Return",
+        "label": "drain_stamina"
+      },
+      "startup:b_9": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "startup:b_10": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:18b9zc31p9tzth",
+          "startup:1i79n8a1cxwews",
+          "startup:10hkpnx1xog48v",
+          "startup:4jnpjx1vi7ksz"
+        ],
+        "entryType": "Label",
+        "exitType": "Return",
+        "label": "check_gold"
+      },
+      "startup:b_11": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "startup:b_12": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:oj9vm19qnp2w",
+          "startup:1i79n8a1cxwews",
+          "startup:9t871k1w1mple",
+          "startup:nq4cc1w23moy"
+        ],
+        "entryType": "Label",
+        "exitType": "Return",
+        "label": "dead_label"
+      },
+      "startup:b_13": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      }
+    },
+    "edges": [
+      {
+        "kind": "GoSubCall",
+        "sourceBlockId": "startup:b_0",
+        "targetBlockId": "startup:b_8",
+        "metadata": {
+          "label": "drain_stamina"
+        }
+      },
+      {
+        "kind": "GoSubReturn",
+        "sourceBlockId": "startup:b_0",
+        "targetBlockId": "startup:b_1",
+        "metadata": {}
+      },
+      {
+        "kind": "IfBranch",
+        "sourceBlockId": "startup:b_1",
+        "targetBlockId": "startup:b_3",
+        "metadata": {
+          "conditionStatementId": "startup:184n0dq16y8grc"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "startup:b_3",
+        "targetBlockId": "startup:b_2",
+        "metadata": {}
+      },
+      {
+        "kind": "IfFallThrough",
+        "sourceBlockId": "startup:b_1",
+        "targetBlockId": "startup:b_2",
+        "metadata": {}
+      },
+      {
+        "kind": "IfBranch",
+        "sourceBlockId": "startup:b_2",
+        "targetBlockId": "startup:b_5",
+        "metadata": {
+          "conditionStatementId": "startup:fn8pqg1ru5bi"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "startup:b_5",
+        "targetBlockId": "startup:b_4",
+        "metadata": {}
+      },
+      {
+        "kind": "IfFallThrough",
+        "sourceBlockId": "startup:b_2",
+        "targetBlockId": "startup:b_4",
+        "metadata": {}
+      },
+      {
+        "kind": "GoSubCall",
+        "sourceBlockId": "startup:b_4",
+        "targetBlockId": "startup:b_10",
+        "metadata": {
+          "label": "check_gold"
+        }
+      },
+      {
+        "kind": "GoSubReturn",
+        "sourceBlockId": "startup:b_4",
+        "targetBlockId": "startup:b_6",
+        "metadata": {}
+      },
+      {
+        "kind": "GotoScene",
+        "sourceBlockId": "startup:b_6",
+        "targetBlockId": null,
+        "metadata": {
+          "targetScene": "chapter1"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "startup:b_7",
+        "targetBlockId": "startup:b_8",
+        "metadata": {}
+      },
+      {
+        "kind": "Return",
+        "sourceBlockId": "startup:b_8",
+        "targetBlockId": null,
+        "metadata": {}
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "startup:b_9",
+        "targetBlockId": "startup:b_10",
+        "metadata": {}
+      },
+      {
+        "kind": "Return",
+        "sourceBlockId": "startup:b_10",
+        "targetBlockId": null,
+        "metadata": {}
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "startup:b_11",
+        "targetBlockId": "startup:b_12",
+        "metadata": {}
+      },
+      {
+        "kind": "Return",
+        "sourceBlockId": "startup:b_12",
+        "targetBlockId": null,
+        "metadata": {}
+      }
+    ],
+    "entryBlockId": "startup:b_0",
+    "labelToBlockId": {
+      "drain_stamina": "startup:b_8",
+      "check_gold": "startup:b_10",
+      "dead_label": "startup:b_12"
+    },
+    "unresolvedEdges": []
+  }
+]

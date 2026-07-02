@@ -18,10 +18,10 @@
       "type": "Identifier",
       "value": "shop",
       "rawValue": "shop",
-      "position": 6,
-      "lineNumber": 0,
       "sceneName": "startup",
       "indent": 0,
+      "lineNumber": 0,
+      "position": 7,
       "isLabelName": true
     },
     {
@@ -51,6 +51,7 @@
       "sceneName": "startup",
       "indent": 1,
       "lineNumber": 3,
+      "position": 14,
       "rawText": "Buy a sword.",
       "hasMultiReplace": false
     },
@@ -58,7 +59,7 @@
       "type": "Prose",
       "sceneName": "startup",
       "lineNumber": 3,
-      "position": null,
+      "position": 15,
       "indent": 1,
       "content": "Buy a sword."
     },
@@ -81,10 +82,10 @@
       "type": "Identifier",
       "value": "shop",
       "rawValue": "shop",
-      "position": 10,
-      "lineNumber": 5,
       "sceneName": "startup",
       "indent": 2,
+      "lineNumber": 5,
+      "position": 10,
       "isLabelName": true
     },
     {
@@ -99,6 +100,7 @@
       "sceneName": "startup",
       "indent": 1,
       "lineNumber": 6,
+      "position": 14,
       "rawText": "Buy a shield.",
       "hasMultiReplace": false
     },
@@ -106,7 +108,7 @@
       "type": "Prose",
       "sceneName": "startup",
       "lineNumber": 6,
-      "position": null,
+      "position": 15,
       "indent": 1,
       "content": "Buy a shield."
     },
@@ -129,10 +131,10 @@
       "type": "Identifier",
       "value": "shop",
       "rawValue": "shop",
-      "position": 10,
-      "lineNumber": 8,
       "sceneName": "startup",
       "indent": 2,
+      "lineNumber": 8,
+      "position": 10,
       "isLabelName": true
     },
     {
@@ -140,6 +142,7 @@
       "sceneName": "startup",
       "indent": 1,
       "lineNumber": 9,
+      "position": 2,
       "rawText": "Leave the shop.",
       "hasMultiReplace": false
     },
@@ -147,7 +150,7 @@
       "type": "Prose",
       "sceneName": "startup",
       "lineNumber": 9,
-      "position": null,
+      "position": 3,
       "indent": 1,
       "content": "Leave the shop."
     },

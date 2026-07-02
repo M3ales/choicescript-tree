@@ -1,0 +1,18 @@
+*create thanksgiving_food ""
+
+*label set_the_table
+*choice
+  #Stew and mashed potatoes.
+    *set thanksgiving_food "stew and mashed potatoes"
+  #Marinated skewers and crushed cucumber salad.
+    *set thanksgiving_food "marinated skewers and crushed cucumber salad"
+  #Hummus and flatbread.
+    *set thanksgiving_food "hummus and flatbread"
+  #Empanadas and salsa with tacos.
+    *set thanksgiving_food "empanadas and salsa with tacos"
+  #Something else. (Type it in)
+    You lay out the dishes you and your father have brought over—
+    *input_text thanksgiving_food
+
+You've set the table with ${thanksgiving_food}.
+*finish

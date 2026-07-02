@@ -1,0 +1,4 @@
+*comment --- gosub_scene target ---
+*label bounce_back
+*set health 50
+*return

@@ -1,0 +1,28 @@
+{
+  "totalIterations": 1,
+  "widenedSccs": 0,
+  "stateCount": 1,
+  "cfgEntryStateCount": 1,
+  "blockDeltaCount": 0,
+  "blockMappedCount": 1,
+  "states": {
+    "seg_0": {
+      "entryGlobals": {
+        "morale": "50",
+        "fear": "30"
+      },
+      "exitGlobals": {
+        "morale": "54",
+        "fear": "44"
+      }
+    }
+  },
+  "cfgEntryStates": {
+    "startup:": {
+      "globals": {
+        "morale": "50",
+        "fear": "30"
+      }
+    }
+  }
+}

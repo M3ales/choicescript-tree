@@ -1,0 +1,58 @@
+{
+  "totalIterations": 4,
+  "widenedSccs": 0,
+  "stateCount": 4,
+  "cfgEntryStateCount": 1,
+  "blockDeltaCount": 0,
+  "blockMappedCount": 4,
+  "states": {
+    "seg_0": {
+      "entryGlobals": {
+        "strength": "30",
+        "magic": "60"
+      },
+      "exitGlobals": {
+        "strength": "30",
+        "magic": "60"
+      }
+    },
+    "seg_1": {
+      "entryGlobals": {
+        "strength": "30",
+        "magic": "60"
+      },
+      "exitGlobals": {
+        "strength": "30",
+        "magic": "60"
+      }
+    },
+    "seg_2": {
+      "entryGlobals": {
+        "strength": "30",
+        "magic": "60"
+      },
+      "exitGlobals": {
+        "strength": "30",
+        "magic": "60"
+      }
+    },
+    "seg_3": {
+      "entryGlobals": {
+        "strength": "30",
+        "magic": "60"
+      },
+      "exitGlobals": {
+        "strength": "30",
+        "magic": "60"
+      }
+    }
+  },
+  "cfgEntryStates": {
+    "startup:": {
+      "globals": {
+        "strength": "30",
+        "magic": "60"
+      }
+    }
+  }
+}

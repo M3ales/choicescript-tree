@@ -1,0 +1,62 @@
+{
+  "totalIterations": 5,
+  "widenedSccs": 1,
+  "stateCount": 5,
+  "cfgEntryStateCount": 2,
+  "blockDeltaCount": 0,
+  "blockMappedCount": 6,
+  "states": {
+    "seg_0": {
+      "entryGlobals": {
+        "gold": "50"
+      },
+      "exitGlobals": {
+        "gold": "50"
+      }
+    },
+    "seg_1": {
+      "entryGlobals": {
+        "gold": "{0,10,20,30,40,50}"
+      },
+      "exitGlobals": {
+        "gold": "top"
+      }
+    },
+    "seg_2": {
+      "entryGlobals": {
+        "gold": "{10,20,30,40,50}"
+      },
+      "exitGlobals": {
+        "gold": "top"
+      }
+    },
+    "seg_3": {
+      "entryGlobals": {
+        "gold": "{10,20,30,40,50}"
+      },
+      "exitGlobals": {
+        "gold": "top"
+      }
+    },
+    "seg_4": {
+      "entryGlobals": {
+        "gold": "top"
+      },
+      "exitGlobals": {
+        "gold": "top"
+      }
+    }
+  },
+  "cfgEntryStates": {
+    "startup:": {
+      "globals": {
+        "gold": "50"
+      }
+    },
+    "startup:shop": {
+      "globals": {
+        "gold": "top"
+      }
+    }
+  }
+}

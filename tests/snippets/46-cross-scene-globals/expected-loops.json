@@ -1,0 +1,19 @@
+[
+  {
+    "headerCfgId": "startup:",
+    "bodyCfgIds": [
+      "arena:",
+      "shop:",
+      "startup:",
+      "town:"
+    ],
+    "backEdgeCount": 1,
+    "exitCount": 1,
+    "mechanism": "cross-scene",
+    "pure": false,
+    "bound": "input-bounded",
+    "tripCount": 1,
+    "unrollDepth": 1,
+    "infinite": false
+  }
+]

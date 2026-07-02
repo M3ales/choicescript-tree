@@ -1,0 +1,10 @@
+{
+  "deadBranchCount": 0,
+  "deadBranches": [],
+  "controlFlowViolationCount": 0,
+  "controlFlowViolations": [],
+  "undeclaredSetCount": 0,
+  "undeclaredSets": [],
+  "multiReplaceViolationCount": 0,
+  "multiReplaceViolations": []
+}

@@ -27,6 +27,7 @@
       "sceneName": "startup",
       "indent": 1,
       "lineNumber": 2,
+      "position": 2,
       "rawText": "Enter boldly.",
       "hasMultiReplace": false
     },
@@ -34,7 +35,7 @@
       "type": "Prose",
       "sceneName": "startup",
       "lineNumber": 2,
-      "position": null,
+      "position": 3,
       "indent": 1,
       "content": "Enter boldly."
     },
@@ -51,6 +52,7 @@
       "sceneName": "startup",
       "indent": 1,
       "lineNumber": 4,
+      "position": 2,
       "rawText": "Sneak inside.",
       "hasMultiReplace": false
     },
@@ -58,7 +60,7 @@
       "type": "Prose",
       "sceneName": "startup",
       "lineNumber": 4,
-      "position": null,
+      "position": 3,
       "indent": 1,
       "content": "Sneak inside."
     },
@@ -75,6 +77,7 @@
       "sceneName": "startup",
       "indent": 1,
       "lineNumber": 6,
+      "position": 2,
       "rawText": "Knock first.",
       "hasMultiReplace": false
     },
@@ -82,7 +85,7 @@
       "type": "Prose",
       "sceneName": "startup",
       "lineNumber": 6,
-      "position": null,
+      "position": 3,
       "indent": 1,
       "content": "Knock first."
     },

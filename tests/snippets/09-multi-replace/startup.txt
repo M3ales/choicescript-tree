@@ -1,4 +1,4 @@
-*create gender "male"
+*create gender 1
 
 @{gender He|She|They} walked into the room.
 

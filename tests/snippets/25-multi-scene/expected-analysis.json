@@ -1,0 +1,16 @@
+{
+  "deadBranchCount": 0,
+  "deadBranches": [],
+  "controlFlowViolationCount": 1,
+  "controlFlowViolations": [
+    {
+      "blockId": "tavern:b_1",
+      "scene": "tavern",
+      "kind": "implicit-end"
+    }
+  ],
+  "undeclaredSetCount": 0,
+  "undeclaredSets": [],
+  "multiReplaceViolationCount": 0,
+  "multiReplaceViolations": []
+}

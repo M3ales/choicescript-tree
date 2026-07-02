@@ -1,0 +1,832 @@
+[
+  [
+    {
+      "sceneName": "arena",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    {
+      "type": "Prose",
+      "sceneName": "arena",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "content": "You enter the arena.\n"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "arena",
+      "indent": 0,
+      "lineNumber": 1,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "health",
+      "rawValue": "health",
+      "position": 5,
+      "lineNumber": 1,
+      "sceneName": "arena",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 12,
+      "lineNumber": 1,
+      "sceneName": "arena",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "health",
+      "rawValue": "health",
+      "position": 13,
+      "lineNumber": 1,
+      "sceneName": "arena",
+      "indent": 0
+    },
+    {
+      "type": "SubtractionOperator",
+      "rawValue": "-",
+      "position": 20,
+      "lineNumber": 1,
+      "sceneName": "arena",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 10,
+      "position": 22,
+      "lineNumber": 1,
+      "sceneName": "arena",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 24,
+      "lineNumber": 1,
+      "sceneName": "arena",
+      "indent": 0
+    },
+    {
+      "type": "If",
+      "sceneName": "arena",
+      "indent": 0,
+      "lineNumber": 3,
+      "position": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 4,
+      "lineNumber": 3,
+      "sceneName": "arena",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "health",
+      "rawValue": "health",
+      "position": 5,
+      "lineNumber": 3,
+      "sceneName": "arena",
+      "indent": 0
+    },
+    {
+      "type": "GreaterThanOperator",
+      "rawValue": ">",
+      "position": 12,
+      "lineNumber": 3,
+      "sceneName": "arena",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 50,
+      "position": 14,
+      "lineNumber": 3,
+      "sceneName": "arena",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 16,
+      "lineNumber": 3,
+      "sceneName": "arena",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "arena",
+      "lineNumber": 4,
+      "position": 2,
+      "indent": 1,
+      "content": "You feel strong.\n"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "arena",
+      "indent": 1,
+      "lineNumber": 5,
+      "position": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "gold",
+      "rawValue": "gold",
+      "position": 7,
+      "lineNumber": 5,
+      "sceneName": "arena",
+      "indent": 1
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 12,
+      "lineNumber": 5,
+      "sceneName": "arena",
+      "indent": 1
+    },
+    {
+      "type": "Identifier",
+      "value": "gold",
+      "rawValue": "gold",
+      "position": 13,
+      "lineNumber": 5,
+      "sceneName": "arena",
+      "indent": 1
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 18,
+      "lineNumber": 5,
+      "sceneName": "arena",
+      "indent": 1
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 100,
+      "position": 20,
+      "lineNumber": 5,
+      "sceneName": "arena",
+      "indent": 1
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 23,
+      "lineNumber": 5,
+      "sceneName": "arena",
+      "indent": 1
+    },
+    {
+      "type": "If",
+      "sceneName": "arena",
+      "indent": 0,
+      "lineNumber": 6,
+      "position": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 4,
+      "lineNumber": 6,
+      "sceneName": "arena",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "quest_done",
+      "rawValue": "quest_done",
+      "position": 5,
+      "lineNumber": 6,
+      "sceneName": "arena",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 15,
+      "lineNumber": 6,
+      "sceneName": "arena",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "arena",
+      "lineNumber": 7,
+      "position": 2,
+      "indent": 1,
+      "content": "The crowd cheers your completed quest.\n"
+    },
+    {
+      "type": "Finish",
+      "sceneName": "arena",
+      "indent": 0,
+      "lineNumber": 8,
+      "position": 0
+    },
+    {
+      "lineNumber": 9,
+      "indent": 0,
+      "position": 0,
+      "sceneName": "arena",
+      "type": "SceneEnd"
+    }
+  ],
+  [
+    {
+      "sceneName": "shop",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    {
+      "type": "Prose",
+      "sceneName": "shop",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "content": "You enter the shop.\n"
+    },
+    {
+      "type": "If",
+      "sceneName": "shop",
+      "indent": 0,
+      "lineNumber": 1,
+      "position": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 4,
+      "lineNumber": 1,
+      "sceneName": "shop",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "visited_shop",
+      "rawValue": "visited_shop",
+      "position": 5,
+      "lineNumber": 1,
+      "sceneName": "shop",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 17,
+      "lineNumber": 1,
+      "sceneName": "shop",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "shop",
+      "lineNumber": 2,
+      "position": 2,
+      "indent": 1,
+      "content": "The shopkeeper recognises you.\n"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "shop",
+      "indent": 0,
+      "lineNumber": 3,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "gold",
+      "rawValue": "gold",
+      "position": 5,
+      "lineNumber": 3,
+      "sceneName": "shop",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 10,
+      "lineNumber": 3,
+      "sceneName": "shop",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "gold",
+      "rawValue": "gold",
+      "position": 11,
+      "lineNumber": 3,
+      "sceneName": "shop",
+      "indent": 0
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 16,
+      "lineNumber": 3,
+      "sceneName": "shop",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 5,
+      "position": 18,
+      "lineNumber": 3,
+      "sceneName": "shop",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 19,
+      "lineNumber": 3,
+      "sceneName": "shop",
+      "indent": 0
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "shop",
+      "indent": 0,
+      "lineNumber": 4,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "quest_done",
+      "rawValue": "quest_done",
+      "position": 5,
+      "lineNumber": 4,
+      "sceneName": "shop",
+      "indent": 0
+    },
+    {
+      "type": "BooleanLiteral",
+      "value": true,
+      "position": 16,
+      "lineNumber": 4,
+      "sceneName": "shop",
+      "indent": 0
+    },
+    {
+      "type": "Finish",
+      "sceneName": "shop",
+      "indent": 0,
+      "lineNumber": 5,
+      "position": 0
+    },
+    {
+      "lineNumber": 6,
+      "indent": 0,
+      "position": 0,
+      "sceneName": "shop",
+      "type": "SceneEnd"
+    }
+  ],
+  [
+    {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 0,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "health",
+      "rawValue": "health",
+      "position": 8,
+      "lineNumber": 0,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 100,
+      "position": 15,
+      "lineNumber": 0,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 1,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "gold",
+      "rawValue": "gold",
+      "position": 8,
+      "lineNumber": 1,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 50,
+      "position": 13,
+      "lineNumber": 1,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 2,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "quest_done",
+      "rawValue": "quest_done",
+      "position": 8,
+      "lineNumber": 2,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "BooleanLiteral",
+      "value": false,
+      "position": 19,
+      "lineNumber": 2,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 3,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "visited_shop",
+      "rawValue": "visited_shop",
+      "position": 8,
+      "lineNumber": 3,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "BooleanLiteral",
+      "value": false,
+      "position": 21,
+      "lineNumber": 3,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 5,
+      "position": 0,
+      "indent": 0,
+      "content": "You begin your adventure.\n"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 6,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "health",
+      "rawValue": "health",
+      "position": 5,
+      "lineNumber": 6,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 90,
+      "position": 12,
+      "lineNumber": 6,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "GotoScene",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 7,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "town",
+      "rawValue": "town",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 7,
+      "position": 12,
+      "isSceneName": true
+    },
+    {
+      "lineNumber": 8,
+      "indent": 0,
+      "position": 0,
+      "sceneName": "startup",
+      "type": "SceneEnd"
+    }
+  ],
+  [
+    {
+      "sceneName": "town",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    {
+      "type": "Prose",
+      "sceneName": "town",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "content": "You arrive in town.\n"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "town",
+      "indent": 0,
+      "lineNumber": 1,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "gold",
+      "rawValue": "gold",
+      "position": 5,
+      "lineNumber": 1,
+      "sceneName": "town",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 10,
+      "lineNumber": 1,
+      "sceneName": "town",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "gold",
+      "rawValue": "gold",
+      "position": 11,
+      "lineNumber": 1,
+      "sceneName": "town",
+      "indent": 0
+    },
+    {
+      "type": "SubtractionOperator",
+      "rawValue": "-",
+      "position": 16,
+      "lineNumber": 1,
+      "sceneName": "town",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 10,
+      "position": 18,
+      "lineNumber": 1,
+      "sceneName": "town",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 20,
+      "lineNumber": 1,
+      "sceneName": "town",
+      "indent": 0
+    },
+    {
+      "type": "Choice",
+      "sceneName": "town",
+      "indent": 0,
+      "lineNumber": 3,
+      "position": 0
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "town",
+      "indent": 1,
+      "lineNumber": 4,
+      "position": 2,
+      "rawText": "Visit the shop.",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "town",
+      "lineNumber": 4,
+      "position": 3,
+      "indent": 1,
+      "content": "Visit the shop."
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "town",
+      "indent": 2,
+      "lineNumber": 5,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "visited_shop",
+      "rawValue": "visited_shop",
+      "position": 9,
+      "lineNumber": 5,
+      "sceneName": "town",
+      "indent": 2
+    },
+    {
+      "type": "BooleanLiteral",
+      "value": true,
+      "position": 22,
+      "lineNumber": 5,
+      "sceneName": "town",
+      "indent": 2
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "town",
+      "indent": 2,
+      "lineNumber": 6,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "gold",
+      "rawValue": "gold",
+      "position": 9,
+      "lineNumber": 6,
+      "sceneName": "town",
+      "indent": 2
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 14,
+      "lineNumber": 6,
+      "sceneName": "town",
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "gold",
+      "rawValue": "gold",
+      "position": 15,
+      "lineNumber": 6,
+      "sceneName": "town",
+      "indent": 2
+    },
+    {
+      "type": "SubtractionOperator",
+      "rawValue": "-",
+      "position": 20,
+      "lineNumber": 6,
+      "sceneName": "town",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 20,
+      "position": 22,
+      "lineNumber": 6,
+      "sceneName": "town",
+      "indent": 2
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 24,
+      "lineNumber": 6,
+      "sceneName": "town",
+      "indent": 2
+    },
+    {
+      "type": "GotoScene",
+      "sceneName": "town",
+      "indent": 2,
+      "lineNumber": 7,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "shop",
+      "rawValue": "shop",
+      "sceneName": "town",
+      "indent": 2,
+      "lineNumber": 7,
+      "position": 16,
+      "isSceneName": true
+    },
+    {
+      "type": "ChoiceOption",
+      "sceneName": "town",
+      "indent": 1,
+      "lineNumber": 8,
+      "position": 2,
+      "rawText": "Go to the arena.",
+      "hasMultiReplace": false
+    },
+    {
+      "type": "Prose",
+      "sceneName": "town",
+      "lineNumber": 8,
+      "position": 3,
+      "indent": 1,
+      "content": "Go to the arena."
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "town",
+      "indent": 2,
+      "lineNumber": 9,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "health",
+      "rawValue": "health",
+      "position": 9,
+      "lineNumber": 9,
+      "sceneName": "town",
+      "indent": 2
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 16,
+      "lineNumber": 9,
+      "sceneName": "town",
+      "indent": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "health",
+      "rawValue": "health",
+      "position": 17,
+      "lineNumber": 9,
+      "sceneName": "town",
+      "indent": 2
+    },
+    {
+      "type": "SubtractionOperator",
+      "rawValue": "-",
+      "position": 24,
+      "lineNumber": 9,
+      "sceneName": "town",
+      "indent": 2
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 30,
+      "position": 26,
+      "lineNumber": 9,
+      "sceneName": "town",
+      "indent": 2
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 28,
+      "lineNumber": 9,
+      "sceneName": "town",
+      "indent": 2
+    },
+    {
+      "type": "GotoScene",
+      "sceneName": "town",
+      "indent": 2,
+      "lineNumber": 10,
+      "position": 4
+    },
+    {
+      "type": "Identifier",
+      "value": "arena",
+      "rawValue": "arena",
+      "sceneName": "town",
+      "indent": 2,
+      "lineNumber": 10,
+      "position": 16,
+      "isSceneName": true
+    },
+    {
+      "lineNumber": 11,
+      "indent": 0,
+      "position": 0,
+      "sceneName": "town",
+      "type": "SceneEnd"
+    }
+  ]
+]

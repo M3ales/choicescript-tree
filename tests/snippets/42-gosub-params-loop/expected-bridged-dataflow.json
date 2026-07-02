@@ -1,0 +1,45 @@
+{
+  "cfgCount": 4,
+  "states": [
+    {
+      "cfgId": "startup:",
+      "entryGlobals": [
+        {
+          "total": "0",
+          "rounds": "0",
+          "label": ""
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:add_value",
+      "entryGlobals": [
+        {
+          "total": "0",
+          "rounds": "0",
+          "label": ""
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:hub",
+      "entryGlobals": [
+        {
+          "total": "0",
+          "rounds": "0",
+          "label": "round 0"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:hub__cont_0",
+      "entryGlobals": [
+        {
+          "total": "0",
+          "rounds": "0",
+          "label": "round 0"
+        }
+      ]
+    }
+  ]
+}

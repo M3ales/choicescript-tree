@@ -1,0 +1,423 @@
+{
+  "cfgCount": 19,
+  "states": [
+    {
+      "cfgId": "crime_scene:",
+      "entryGlobals": [
+        {
+          "clues_found": "{0,1,10,11,12,13,14,15,16,17,18,19,2,20,21,22,23,24,25,26,27,28,29,3,30,31,32,33,34,35,36,37,38,39,4,40,41,42,43,44,45,46,47,48,49,5,51,54,6,7,8,9}",
+          "suspects_interviewed": "{0,10,12,14,16,18,2,20,22,24,26,28,30,32,34,36,4,6,8}",
+          "confidence": "[-50..775]",
+          "has_weapon": "{false,true}",
+          "has_motive": "{false,true}",
+          "has_alibi_broken": "{false,true}",
+          "detective_rank": "{Junior,Senior}",
+          "case_closed": "{false,true}",
+          "notes": "top",
+          "current_suspect": "bottom",
+          "question_count": "bottom",
+          "caught_contradiction": "bottom",
+          "areas_searched": "bottom",
+          "found_weapon_here": "bottom",
+          "found_glass_here": "bottom"
+        }
+      ]
+    },
+    {
+      "cfgId": "crime_scene:scene_exit",
+      "entryGlobals": [
+        {
+          "clues_found": "{0,1,10,11,12,13,14,15,16,17,18,19,2,20,21,22,23,24,25,26,27,28,29,3,30,31,32,33,34,35,36,37,38,39,4,40,41,42,43,44,45,46,47,48,49,5,51,54,6,7,8,9}",
+          "suspects_interviewed": "{0,10,12,14,16,18,2,20,22,24,26,28,30,32,34,36,4,6,8}",
+          "confidence": "[-50..775]",
+          "has_weapon": "{false,true}",
+          "has_motive": "{false,true}",
+          "has_alibi_broken": "{false,true}",
+          "detective_rank": "{Junior,Senior}",
+          "case_closed": "{false,true}",
+          "notes": "top",
+          "current_suspect": "bottom",
+          "question_count": "bottom",
+          "caught_contradiction": "bottom",
+          "areas_searched": "bottom",
+          "found_weapon_here": "bottom",
+          "found_glass_here": "bottom"
+        }
+      ]
+    },
+    {
+      "cfgId": "crime_scene:scene_hub",
+      "entryGlobals": [
+        {
+          "clues_found": "{0,1,10,11,12,13,14,15,16,17,18,19,2,20,21,22,23,24,25,26,27,28,29,3,30,31,32,33,34,35,36,37,38,39,4,40,41,42,43,44,45,46,47,48,49,5,51,54,6,7,8,9}",
+          "suspects_interviewed": "{0,10,12,14,16,18,2,20,22,24,26,28,30,32,34,36,4,6,8}",
+          "confidence": "[-50..775]",
+          "has_weapon": "{false,true}",
+          "has_motive": "{false,true}",
+          "has_alibi_broken": "{false,true}",
+          "detective_rank": "{Junior,Senior}",
+          "case_closed": "{false,true}",
+          "notes": "top",
+          "current_suspect": "bottom",
+          "question_count": "bottom",
+          "caught_contradiction": "bottom",
+          "areas_searched": "bottom",
+          "found_weapon_here": "bottom",
+          "found_glass_here": "bottom"
+        }
+      ]
+    },
+    {
+      "cfgId": "interrogation:",
+      "entryGlobals": [
+        {
+          "clues_found": "{0,1,10,11,12,13,14,15,16,17,18,19,2,20,21,22,23,24,25,26,27,28,29,3,30,31,32,33,34,35,36,37,38,39,4,40,42,45,48,5,51,54,6,7,8,9}",
+          "suspects_interviewed": "{0,10,12,14,16,18,2,20,22,24,26,28,30,32,34,36,4,6,8}",
+          "confidence": "[-50..750]",
+          "has_weapon": "{false,true}",
+          "has_motive": "{false,true}",
+          "has_alibi_broken": "{false,true}",
+          "detective_rank": "{Junior,Senior}",
+          "case_closed": "{false,true}",
+          "notes": "top",
+          "current_suspect": "bottom",
+          "question_count": "bottom",
+          "caught_contradiction": "bottom",
+          "areas_searched": "bottom",
+          "found_weapon_here": "bottom",
+          "found_glass_here": "bottom"
+        }
+      ]
+    },
+    {
+      "cfgId": "interrogation:interrogation_exit",
+      "entryGlobals": [
+        {
+          "clues_found": "{0,1,10,11,12,13,14,15,16,17,18,19,2,20,21,22,23,24,25,26,27,28,29,3,30,31,32,33,34,35,36,37,38,39,4,40,42,45,48,5,51,54,6,7,8,9}",
+          "suspects_interviewed": "{0,10,12,14,16,18,2,20,22,24,26,28,30,32,34,36,4,6,8}",
+          "confidence": "[-40..650]",
+          "has_weapon": "{false,true}",
+          "has_motive": "{false,true}",
+          "has_alibi_broken": "{false,true}",
+          "detective_rank": "{Junior,Senior}",
+          "case_closed": "{false,true}",
+          "notes": "top",
+          "current_suspect": "bottom",
+          "question_count": "bottom",
+          "caught_contradiction": "bottom",
+          "areas_searched": "bottom",
+          "found_weapon_here": "bottom",
+          "found_glass_here": "bottom"
+        }
+      ]
+    },
+    {
+      "cfgId": "interrogation:interview_loop",
+      "entryGlobals": [
+        {
+          "clues_found": "top",
+          "suspects_interviewed": "top",
+          "confidence": "top",
+          "has_weapon": "top",
+          "has_motive": "top",
+          "has_alibi_broken": "top",
+          "detective_rank": "top",
+          "case_closed": "top",
+          "notes": "top",
+          "current_suspect": "top",
+          "question_count": "top",
+          "caught_contradiction": "top",
+          "areas_searched": "top",
+          "found_weapon_here": "top",
+          "found_glass_here": "top"
+        }
+      ]
+    },
+    {
+      "cfgId": "interrogation:suspect_select",
+      "entryGlobals": [
+        {
+          "clues_found": "{0,1,10,11,12,13,14,15,16,17,18,19,2,20,21,22,23,24,25,26,27,28,29,3,30,31,32,33,34,35,36,37,38,39,4,40,41,42,43,44,45,46,48,5,51,54,57,6,60,7,8,9}",
+          "suspects_interviewed": "{0,10,12,14,16,18,2,20,22,24,26,28,30,32,34,36,38,4,40,6,8}",
+          "confidence": "[-50..750]",
+          "has_weapon": "{false,true}",
+          "has_motive": "{false,true}",
+          "has_alibi_broken": "{false,true}",
+          "detective_rank": "{Junior,Senior}",
+          "case_closed": "{false,true}",
+          "notes": "top",
+          "current_suspect": "bottom",
+          "question_count": "bottom",
+          "caught_contradiction": "bottom",
+          "areas_searched": "bottom",
+          "found_weapon_here": "bottom",
+          "found_glass_here": "bottom"
+        }
+      ]
+    },
+    {
+      "cfgId": "interrogation:suspect_select__cont_0",
+      "entryGlobals": [
+        {
+          "clues_found": "{10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,3,30,31,32,33,34,35,36,37,38,39,4,40,41,42,43,44,45,46,47,48,49,5,51,54,57,6,60,63,7,8,9}",
+          "suspects_interviewed": "{10,12,14,16,18,2,20,22,24,26,28,30,32,34,36,38,4,40,42,6,8}",
+          "confidence": "[-40..650]",
+          "has_weapon": "{false,true}",
+          "has_motive": "{false,true}",
+          "has_alibi_broken": "true",
+          "detective_rank": "{Junior,Senior}",
+          "case_closed": "{false,true}",
+          "notes": "top",
+          "current_suspect": "bottom",
+          "question_count": "bottom",
+          "caught_contradiction": "bottom",
+          "areas_searched": "bottom",
+          "found_weapon_here": "bottom",
+          "found_glass_here": "bottom"
+        }
+      ]
+    },
+    {
+      "cfgId": "interrogation:suspect_select__cont_1",
+      "entryGlobals": [
+        {
+          "clues_found": "{10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,3,30,31,32,33,34,35,36,37,38,39,4,40,41,42,43,44,45,46,48,5,51,54,57,6,60,7,8,9}",
+          "suspects_interviewed": "{10,12,14,16,18,2,20,22,24,26,28,30,32,34,36,38,4,40,6,8}",
+          "confidence": "[-40..650]",
+          "has_weapon": "{false,true}",
+          "has_motive": "{false,true}",
+          "has_alibi_broken": "true",
+          "detective_rank": "{Junior,Senior}",
+          "case_closed": "{false,true}",
+          "notes": "top",
+          "current_suspect": "bottom",
+          "question_count": "bottom",
+          "caught_contradiction": "bottom",
+          "areas_searched": "bottom",
+          "found_weapon_here": "bottom",
+          "found_glass_here": "bottom"
+        }
+      ]
+    },
+    {
+      "cfgId": "interrogation:suspect_select__cont_2",
+      "entryGlobals": [
+        {
+          "clues_found": "{10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,3,30,31,32,33,34,35,36,37,38,39,4,40,41,42,43,45,48,5,51,54,57,6,7,8,9}",
+          "suspects_interviewed": "{10,12,14,16,18,2,20,22,24,26,28,30,32,34,36,38,4,6,8}",
+          "confidence": "[-40..650]",
+          "has_weapon": "{false,true}",
+          "has_motive": "{false,true}",
+          "has_alibi_broken": "true",
+          "detective_rank": "{Junior,Senior}",
+          "case_closed": "{false,true}",
+          "notes": "top",
+          "current_suspect": "bottom",
+          "question_count": "bottom",
+          "caught_contradiction": "bottom",
+          "areas_searched": "bottom",
+          "found_weapon_here": "bottom",
+          "found_glass_here": "bottom"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:",
+      "entryGlobals": [
+        {
+          "clues_found": "0",
+          "suspects_interviewed": "0",
+          "confidence": "0",
+          "has_weapon": "false",
+          "has_motive": "false",
+          "has_alibi_broken": "false",
+          "detective_rank": "Junior",
+          "case_closed": "false",
+          "notes": "",
+          "current_suspect": "bottom",
+          "question_count": "bottom",
+          "caught_contradiction": "bottom",
+          "areas_searched": "bottom",
+          "found_weapon_here": "bottom",
+          "found_glass_here": "bottom"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:accusation",
+      "entryGlobals": [
+        {
+          "clues_found": "{0,1,10,11,12,13,14,15,16,17,18,19,2,20,21,22,23,24,25,26,27,28,29,3,30,31,32,33,34,35,36,37,38,39,4,40,42,45,5,6,7,8,9}",
+          "suspects_interviewed": "{0,10,12,14,16,18,2,20,22,24,26,28,30,4,6,8}",
+          "confidence": "[-50..750]",
+          "has_weapon": "{false,true}",
+          "has_motive": "{false,true}",
+          "has_alibi_broken": "{false,true}",
+          "detective_rank": "{Junior,Senior}",
+          "case_closed": "{false,true}",
+          "notes": "top",
+          "current_suspect": "bottom",
+          "question_count": "bottom",
+          "caught_contradiction": "bottom",
+          "areas_searched": "bottom",
+          "found_weapon_here": "bottom",
+          "found_glass_here": "bottom"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:case_hub",
+      "entryGlobals": [
+        {
+          "clues_found": "{0,1,10,11,12,13,14,15,16,17,18,19,2,20,21,22,23,24,25,26,27,28,29,3,30,31,32,33,34,35,36,37,38,39,4,40,41,42,43,44,45,46,47,48,49,5,51,54,6,7,8,9}",
+          "suspects_interviewed": "{0,10,12,14,16,18,2,20,22,24,26,28,30,32,34,36,4,6,8}",
+          "confidence": "[-70..775]",
+          "has_weapon": "{false,true}",
+          "has_motive": "{false,true}",
+          "has_alibi_broken": "{false,true}",
+          "detective_rank": "{Junior,Senior}",
+          "case_closed": "{false,true}",
+          "notes": "top",
+          "current_suspect": "bottom",
+          "question_count": "bottom",
+          "caught_contradiction": "bottom",
+          "areas_searched": "bottom",
+          "found_weapon_here": "bottom",
+          "found_glass_here": "bottom"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:case_hub__cont_0",
+      "entryGlobals": [
+        {
+          "clues_found": "{0,1,10,11,12,13,14,15,16,17,18,19,2,20,21,22,23,24,25,26,27,28,29,3,30,31,32,33,34,35,36,37,38,39,4,40,42,45,5,6,7,8,9}",
+          "suspects_interviewed": "{0,10,12,14,16,18,2,20,22,24,26,28,30,4,6,8}",
+          "confidence": "[-20..750]",
+          "has_weapon": "{false,true}",
+          "has_motive": "{false,true}",
+          "has_alibi_broken": "{false,true}",
+          "detective_rank": "{Junior,Senior}",
+          "case_closed": "{false,true}",
+          "notes": "top",
+          "current_suspect": "bottom",
+          "question_count": "bottom",
+          "caught_contradiction": "bottom",
+          "areas_searched": "bottom",
+          "found_weapon_here": "bottom",
+          "found_glass_here": "bottom"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:case_hub__cont_1",
+      "entryGlobals": [
+        {
+          "clues_found": "{0,1,10,11,12,13,14,15,16,17,18,19,2,20,21,22,23,24,25,26,27,28,29,3,30,31,32,33,34,35,36,37,38,39,4,40,42,45,5,6,7,8,9}",
+          "suspects_interviewed": "{0,10,12,14,16,18,2,20,22,24,26,28,30,4,6,8}",
+          "confidence": "[-20..730]",
+          "has_weapon": "{false,true}",
+          "has_motive": "{false,true}",
+          "has_alibi_broken": "{false,true}",
+          "detective_rank": "{Junior,Senior}",
+          "case_closed": "{false,true}",
+          "notes": "top",
+          "current_suspect": "bottom",
+          "question_count": "bottom",
+          "caught_contradiction": "bottom",
+          "areas_searched": "bottom",
+          "found_weapon_here": "bottom",
+          "found_glass_here": "bottom"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:correct_accusation",
+      "entryGlobals": [
+        {
+          "clues_found": "{0,1,10,11,12,13,14,15,16,17,18,19,2,20,21,22,23,24,25,26,27,28,29,3,30,31,33,36,4,5,6,7,8,9}",
+          "suspects_interviewed": "{0,10,12,14,16,18,2,20,22,24,4,6,8}",
+          "confidence": "[-40..650]",
+          "has_weapon": "{false,true}",
+          "has_motive": "{false,true}",
+          "has_alibi_broken": "{false,true}",
+          "detective_rank": "{Junior,Senior}",
+          "case_closed": "{false,true}",
+          "notes": "top",
+          "current_suspect": "bottom",
+          "question_count": "bottom",
+          "caught_contradiction": "bottom",
+          "areas_searched": "bottom",
+          "found_weapon_here": "bottom",
+          "found_glass_here": "bottom"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:forensics",
+      "entryGlobals": [
+        {
+          "clues_found": "{0,1,10,11,12,13,14,15,16,17,18,19,2,20,21,22,23,24,25,26,27,28,29,3,30,31,32,33,34,35,36,37,38,39,4,40,42,45,5,6,7,8,9}",
+          "suspects_interviewed": "{0,10,12,14,16,18,2,20,22,24,26,28,30,4,6,8}",
+          "confidence": "[-20..715]",
+          "has_weapon": "{false,true}",
+          "has_motive": "{false,true}",
+          "has_alibi_broken": "{false,true}",
+          "detective_rank": "{Junior,Senior}",
+          "case_closed": "{false,true}",
+          "notes": "top",
+          "current_suspect": "bottom",
+          "question_count": "bottom",
+          "caught_contradiction": "bottom",
+          "areas_searched": "bottom",
+          "found_weapon_here": "bottom",
+          "found_glass_here": "bottom"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:review_notes",
+      "entryGlobals": [
+        {
+          "clues_found": "{0,1,10,11,12,13,14,15,16,17,18,19,2,20,21,22,23,24,25,26,27,28,29,3,30,31,32,33,34,35,36,37,38,39,4,40,42,45,5,6,7,8,9}",
+          "suspects_interviewed": "{0,10,12,14,16,18,2,20,22,24,26,28,30,4,6,8}",
+          "confidence": "[-20..750]",
+          "has_weapon": "{false,true}",
+          "has_motive": "{false,true}",
+          "has_alibi_broken": "{false,true}",
+          "detective_rank": "{Junior,Senior}",
+          "case_closed": "{false,true}",
+          "notes": "top",
+          "current_suspect": "bottom",
+          "question_count": "bottom",
+          "caught_contradiction": "bottom",
+          "areas_searched": "bottom",
+          "found_weapon_here": "bottom",
+          "found_glass_here": "bottom"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:wrong_accusation",
+      "entryGlobals": [
+        {
+          "clues_found": "top",
+          "suspects_interviewed": "top",
+          "confidence": "top",
+          "has_weapon": "top",
+          "has_motive": "top",
+          "has_alibi_broken": "top",
+          "detective_rank": "top",
+          "case_closed": "top",
+          "notes": "top",
+          "current_suspect": "top",
+          "question_count": "top",
+          "caught_contradiction": "top",
+          "areas_searched": "top",
+          "found_weapon_here": "top",
+          "found_glass_here": "top"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "totalIterations": 1,
+  "widenedSccs": 0,
+  "stateCount": 1,
+  "cfgEntryStateCount": 1,
+  "blockDeltaCount": 0,
+  "blockMappedCount": 1,
+  "states": {
+    "seg_0": {
+      "entryGlobals": {
+        "strength": "50",
+        "name": "Hero",
+        "is_alive": "true"
+      },
+      "exitGlobals": {
+        "strength": "60",
+        "name": "Champion",
+        "is_alive": "false"
+      }
+    }
+  },
+  "cfgEntryStates": {
+    "startup:": {
+      "globals": {
+        "strength": "50",
+        "name": "Hero",
+        "is_alive": "true"
+      }
+    }
+  }
+}

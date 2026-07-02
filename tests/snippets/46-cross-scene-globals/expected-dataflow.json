@@ -1,0 +1,85 @@
+{
+  "states": [
+    {
+      "cfgId": "startup:",
+      "entryGlobals": [
+        {
+          "health": "100",
+          "gold": "50",
+          "quest_done": "false",
+          "visited_shop": "false"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "health": "90",
+          "gold": "50",
+          "quest_done": "false",
+          "visited_shop": "false"
+        }
+      ]
+    },
+    {
+      "cfgId": "town:",
+      "entryGlobals": [
+        {
+          "health": "90",
+          "gold": "50",
+          "quest_done": "false",
+          "visited_shop": "false"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "health": "60",
+          "gold": "20",
+          "quest_done": "false",
+          "visited_shop": "true"
+        }
+      ]
+    },
+    {
+      "cfgId": "arena:",
+      "entryGlobals": [
+        {
+          "health": "60",
+          "gold": "20",
+          "quest_done": "false",
+          "visited_shop": "true"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "health": "50",
+          "gold": "{120,20}",
+          "quest_done": "false",
+          "visited_shop": "true"
+        }
+      ]
+    },
+    {
+      "cfgId": "shop:",
+      "entryGlobals": [
+        {
+          "health": "{50,60}",
+          "gold": "{120,20}",
+          "quest_done": "false",
+          "visited_shop": "true"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "health": "{50,60}",
+          "gold": "{125,25}",
+          "quest_done": "true",
+          "visited_shop": "true"
+        }
+      ]
+    }
+  ],
+  "diagnostics": {
+    "unresolvedExits": 0,
+    "droppedContexts": 0,
+    "missingCfgs": []
+  }
+}

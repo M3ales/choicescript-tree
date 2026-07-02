@@ -27,6 +27,7 @@
       "sceneName": "startup",
       "indent": 1,
       "lineNumber": 2,
+      "position": 2,
       "rawText": "Fight to the end.",
       "hasMultiReplace": false
     },
@@ -34,7 +35,7 @@
       "type": "Prose",
       "sceneName": "startup",
       "lineNumber": 2,
-      "position": null,
+      "position": 3,
       "indent": 1,
       "content": "Fight to the end."
     },
@@ -66,6 +67,7 @@
       "sceneName": "startup",
       "indent": 1,
       "lineNumber": 5,
+      "position": 2,
       "rawText": "Surrender.",
       "hasMultiReplace": false
     },
@@ -73,7 +75,7 @@
       "type": "Prose",
       "sceneName": "startup",
       "lineNumber": 5,
-      "position": null,
+      "position": 3,
       "indent": 1,
       "content": "Surrender."
     },
@@ -97,6 +99,7 @@
       "sceneName": "startup",
       "indent": 1,
       "lineNumber": 8,
+      "position": 2,
       "rawText": "Negotiate peace.",
       "hasMultiReplace": false
     },
@@ -104,7 +107,7 @@
       "type": "Prose",
       "sceneName": "startup",
       "lineNumber": 8,
-      "position": null,
+      "position": 3,
       "indent": 1,
       "content": "Negotiate peace."
     },

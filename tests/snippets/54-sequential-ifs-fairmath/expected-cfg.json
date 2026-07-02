@@ -1,0 +1,466 @@
+[
+  {
+    "sceneName": "startup",
+    "blocks": {
+      "startup:b_0": {
+        "exitType": "Branch"
+      },
+      "startup:b_1": {
+        "exitType": "Branch"
+      },
+      "startup:b_2": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_3": {
+        "exitType": "Branch"
+      },
+      "startup:b_4": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_5": {
+        "exitType": "Branch"
+      },
+      "startup:b_6": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_7": {
+        "exitType": "GoSub"
+      },
+      "startup:b_8": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_9": {
+        "exitType": "Goto"
+      },
+      "startup:b_10": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_11": {
+        "exitType": "Branch"
+      },
+      "startup:b_12": {
+        "exitType": "Branch"
+      },
+      "startup:b_13": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_14": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_15": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_16": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_17": {
+        "exitType": "Return"
+      },
+      "startup:b_18": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_19": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_20": {
+        "exitType": "ImplicitEnd"
+      }
+    },
+    "blockIndex": {
+      "startup:b_0": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:kghsw614c555o",
+          "startup:1y66xlv2ss2bp",
+          "startup:76q6z01dylhwm",
+          "startup:s0q3w51jntznv",
+          "startup:v37k0a1g2vgeg",
+          "startup:1ws5a5dkr5nbf",
+          "startup:1n426871rwfjgd",
+          "startup:1m4bv3guuvvea",
+          "startup:1lajivf1fcipux",
+          "startup:1m1wmbktx09ne",
+          "startup:1nlswoo1n0nogu",
+          "startup:cs9ja11nbnzn3"
+        ],
+        "entryType": "SceneEntry",
+        "exitType": "Branch"
+      },
+      "startup:b_1": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:xdpbjnfvyrrp"
+        ],
+        "entryType": "Continuation",
+        "exitType": "Branch"
+      },
+      "startup:b_2": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:1od8m7i1y9mu5k"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "FallThrough"
+      },
+      "startup:b_3": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:1qig1nk1mr8npu"
+        ],
+        "entryType": "Continuation",
+        "exitType": "Branch"
+      },
+      "startup:b_4": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:1ddivt6myn8us"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "FallThrough"
+      },
+      "startup:b_5": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:1fkyb8i1yzuho8"
+        ],
+        "entryType": "Continuation",
+        "exitType": "Branch"
+      },
+      "startup:b_6": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:9a5soo3zb182"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "FallThrough"
+      },
+      "startup:b_7": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:14gd3etbiji9r",
+          "startup:18qssuh1p5nmh3"
+        ],
+        "entryType": "Continuation",
+        "exitType": "GoSub"
+      },
+      "startup:b_8": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:1ra3qo7nwi3j9"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "FallThrough"
+      },
+      "startup:b_9": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:gi19266308hw"
+        ],
+        "entryType": "GoSubContinuation",
+        "exitType": "Goto"
+      },
+      "startup:b_10": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "startup:b_11": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:1qz5o491sugjkn",
+          "startup:1dptswx1e80sbf",
+          "startup:78fpcu8sc90"
+        ],
+        "entryType": "Label",
+        "exitType": "Branch",
+        "label": "race_stage_condition_drain",
+        "parameterNames": [
+          "cost"
+        ]
+      },
+      "startup:b_12": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:15kiqpa13q8zsw"
+        ],
+        "entryType": "Continuation",
+        "exitType": "Branch"
+      },
+      "startup:b_13": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:s4h08a1p03wa4"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "FallThrough"
+      },
+      "startup:b_14": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:144a6021je11jg",
+          "startup:sncmzp54joo3"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "FallThrough"
+      },
+      "startup:b_15": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:rle4x71ilkiw9",
+          "startup:17symicokhkjq"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "FallThrough"
+      },
+      "startup:b_16": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:15piiy1jyv8po",
+          "startup:156lgfr1wx3ch5"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "FallThrough"
+      },
+      "startup:b_17": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:124erzjzl7tj9"
+        ],
+        "entryType": "Continuation",
+        "exitType": "Return"
+      },
+      "startup:b_18": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:9l9j3pflud97"
+        ],
+        "entryType": "ConditionalBody",
+        "exitType": "FallThrough"
+      },
+      "startup:b_19": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "startup:b_20": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:88oyon17rifc5"
+        ],
+        "entryType": "Label",
+        "exitType": "ImplicitEnd",
+        "label": "choose_restaurant"
+      }
+    },
+    "edges": [
+      {
+        "kind": "IfBranch",
+        "sourceBlockId": "startup:b_0",
+        "targetBlockId": "startup:b_2",
+        "metadata": {
+          "conditionStatementId": "startup:cs9ja11nbnzn3"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "startup:b_2",
+        "targetBlockId": "startup:b_1",
+        "metadata": {}
+      },
+      {
+        "kind": "IfFallThrough",
+        "sourceBlockId": "startup:b_0",
+        "targetBlockId": "startup:b_1",
+        "metadata": {}
+      },
+      {
+        "kind": "IfBranch",
+        "sourceBlockId": "startup:b_1",
+        "targetBlockId": "startup:b_4",
+        "metadata": {
+          "conditionStatementId": "startup:xdpbjnfvyrrp"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "startup:b_4",
+        "targetBlockId": "startup:b_3",
+        "metadata": {}
+      },
+      {
+        "kind": "IfFallThrough",
+        "sourceBlockId": "startup:b_1",
+        "targetBlockId": "startup:b_3",
+        "metadata": {}
+      },
+      {
+        "kind": "IfBranch",
+        "sourceBlockId": "startup:b_3",
+        "targetBlockId": "startup:b_6",
+        "metadata": {
+          "conditionStatementId": "startup:1qig1nk1mr8npu"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "startup:b_6",
+        "targetBlockId": "startup:b_5",
+        "metadata": {}
+      },
+      {
+        "kind": "IfFallThrough",
+        "sourceBlockId": "startup:b_3",
+        "targetBlockId": "startup:b_5",
+        "metadata": {}
+      },
+      {
+        "kind": "IfBranch",
+        "sourceBlockId": "startup:b_5",
+        "targetBlockId": "startup:b_8",
+        "metadata": {
+          "conditionStatementId": "startup:1fkyb8i1yzuho8"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "startup:b_8",
+        "targetBlockId": "startup:b_7",
+        "metadata": {}
+      },
+      {
+        "kind": "IfFallThrough",
+        "sourceBlockId": "startup:b_5",
+        "targetBlockId": "startup:b_7",
+        "metadata": {}
+      },
+      {
+        "kind": "GoSubCall",
+        "sourceBlockId": "startup:b_7",
+        "targetBlockId": "startup:b_11",
+        "metadata": {
+          "label": "race_stage_condition_drain"
+        }
+      },
+      {
+        "kind": "GoSubReturn",
+        "sourceBlockId": "startup:b_7",
+        "targetBlockId": "startup:b_9",
+        "metadata": {}
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "startup:b_9",
+        "targetBlockId": "startup:b_20",
+        "metadata": {
+          "label": "choose_restaurant"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "startup:b_10",
+        "targetBlockId": "startup:b_11",
+        "metadata": {}
+      },
+      {
+        "kind": "IfBranch",
+        "sourceBlockId": "startup:b_11",
+        "targetBlockId": "startup:b_13",
+        "metadata": {
+          "conditionStatementId": "startup:78fpcu8sc90"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "startup:b_13",
+        "targetBlockId": "startup:b_12",
+        "metadata": {}
+      },
+      {
+        "kind": "ElseIfBranch",
+        "sourceBlockId": "startup:b_11",
+        "targetBlockId": "startup:b_14",
+        "metadata": {
+          "conditionStatementId": "startup:144a6021je11jg"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "startup:b_14",
+        "targetBlockId": "startup:b_12",
+        "metadata": {}
+      },
+      {
+        "kind": "ElseIfBranch",
+        "sourceBlockId": "startup:b_11",
+        "targetBlockId": "startup:b_15",
+        "metadata": {
+          "conditionStatementId": "startup:rle4x71ilkiw9"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "startup:b_15",
+        "targetBlockId": "startup:b_12",
+        "metadata": {}
+      },
+      {
+        "kind": "ElseBranch",
+        "sourceBlockId": "startup:b_11",
+        "targetBlockId": "startup:b_16",
+        "metadata": {}
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "startup:b_16",
+        "targetBlockId": "startup:b_12",
+        "metadata": {}
+      },
+      {
+        "kind": "IfBranch",
+        "sourceBlockId": "startup:b_12",
+        "targetBlockId": "startup:b_18",
+        "metadata": {
+          "conditionStatementId": "startup:15kiqpa13q8zsw"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "startup:b_18",
+        "targetBlockId": "startup:b_17",
+        "metadata": {}
+      },
+      {
+        "kind": "IfFallThrough",
+        "sourceBlockId": "startup:b_12",
+        "targetBlockId": "startup:b_17",
+        "metadata": {}
+      },
+      {
+        "kind": "Return",
+        "sourceBlockId": "startup:b_17",
+        "targetBlockId": null,
+        "metadata": {}
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "startup:b_19",
+        "targetBlockId": "startup:b_20",
+        "metadata": {}
+      },
+      {
+        "kind": "SceneExit",
+        "sourceBlockId": "startup:b_20",
+        "targetBlockId": null,
+        "metadata": {}
+      }
+    ],
+    "entryBlockId": "startup:b_0",
+    "labelToBlockId": {
+      "race_stage_condition_drain": "startup:b_11",
+      "choose_restaurant": "startup:b_20"
+    },
+    "unresolvedEdges": []
+  }
+]

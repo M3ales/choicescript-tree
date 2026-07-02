@@ -1,0 +1,17 @@
+[
+  {
+    "headerCfgId": "startup:",
+    "bodyCfgIds": [
+      "chapter1:",
+      "startup:"
+    ],
+    "backEdgeCount": 1,
+    "exitCount": 1,
+    "mechanism": "cross-scene",
+    "pure": false,
+    "bound": "unbounded",
+    "tripCount": null,
+    "unrollDepth": null,
+    "infinite": false
+  }
+]

@@ -1,0 +1,48 @@
+{
+  "states": [
+    {
+      "cfgId": "startup:",
+      "entryGlobals": [
+        {
+          "score": "0"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "score": "0"
+        }
+      ]
+    },
+    {
+      "cfgId": "chapter1:",
+      "entryGlobals": [
+        {
+          "score": "0"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "score": "0"
+        }
+      ]
+    },
+    {
+      "cfgId": "chapter2:",
+      "entryGlobals": [
+        {
+          "score": "0"
+        }
+      ],
+      "exitGlobals": [
+        {
+          "score": "0"
+        }
+      ]
+    }
+  ],
+  "diagnostics": {
+    "unresolvedExits": 0,
+    "droppedContexts": 0,
+    "missingCfgs": []
+  }
+}

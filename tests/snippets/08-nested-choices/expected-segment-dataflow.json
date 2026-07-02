@@ -1,0 +1,57 @@
+{
+  "totalIterations": 5,
+  "widenedSccs": 0,
+  "stateCount": 5,
+  "cfgEntryStateCount": 1,
+  "blockDeltaCount": 0,
+  "blockMappedCount": 5,
+  "states": {
+    "seg_0": {
+      "entryGlobals": {
+        "weapon": "none"
+      },
+      "exitGlobals": {
+        "weapon": "none"
+      }
+    },
+    "seg_1": {
+      "entryGlobals": {
+        "weapon": "none"
+      },
+      "exitGlobals": {
+        "weapon": "sword"
+      }
+    },
+    "seg_2": {
+      "entryGlobals": {
+        "weapon": "none"
+      },
+      "exitGlobals": {
+        "weapon": "none"
+      }
+    },
+    "seg_3": {
+      "entryGlobals": {
+        "weapon": "sword"
+      },
+      "exitGlobals": {
+        "weapon": "sword"
+      }
+    },
+    "seg_4": {
+      "entryGlobals": {
+        "weapon": "sword"
+      },
+      "exitGlobals": {
+        "weapon": "axe"
+      }
+    }
+  },
+  "cfgEntryStates": {
+    "startup:": {
+      "globals": {
+        "weapon": "{none,sword}"
+      }
+    }
+  }
+}

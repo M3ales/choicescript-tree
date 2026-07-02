@@ -1,0 +1,41 @@
+{
+  "totalIterations": 3,
+  "widenedSccs": 0,
+  "stateCount": 3,
+  "cfgEntryStateCount": 1,
+  "blockDeltaCount": 0,
+  "blockMappedCount": 3,
+  "states": {
+    "seg_0": {
+      "entryGlobals": {
+        "var1": "true"
+      },
+      "exitGlobals": {
+        "var1": "true"
+      }
+    },
+    "seg_1": {
+      "entryGlobals": {
+        "var1": "true"
+      },
+      "exitGlobals": {
+        "var1": "true"
+      }
+    },
+    "seg_2": {
+      "entryGlobals": {
+        "var1": "true"
+      },
+      "exitGlobals": {
+        "var1": "true"
+      }
+    }
+  },
+  "cfgEntryStates": {
+    "startup:": {
+      "globals": {
+        "var1": "true"
+      }
+    }
+  }
+}

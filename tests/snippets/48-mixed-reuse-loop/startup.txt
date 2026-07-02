@@ -1,0 +1,19 @@
+*create gold 50
+
+*label shop
+What do you want?
+*choice
+  *hide_reuse #Buy a sword (10g).
+    *set gold - 10
+    You buy a sword.
+    *goto shop
+  *hide_reuse #Buy a shield (10g).
+    *set gold - 10
+    You buy a shield.
+    *goto shop
+  #Ask about prices.
+    The shopkeeper explains the prices.
+    *goto shop
+  #Leave.
+    Goodbye.
+    *finish

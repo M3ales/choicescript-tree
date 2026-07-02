@@ -1,0 +1,46 @@
+{
+  "totalIterations": 1,
+  "widenedSccs": 0,
+  "stateCount": 1,
+  "cfgEntryStateCount": 4,
+  "blockDeltaCount": 2,
+  "blockMappedCount": 4,
+  "states": {
+    "seg_0": {
+      "entryGlobals": {
+        "score": "0",
+        "name": "Nobody"
+      },
+      "exitGlobals": {
+        "score": "100",
+        "name": "Winner"
+      }
+    }
+  },
+  "cfgEntryStates": {
+    "startup:": {
+      "globals": {
+        "score": "0",
+        "name": "Nobody"
+      }
+    },
+    "startup:bottom_label": {
+      "globals": {
+        "score": "100",
+        "name": "Winner"
+      }
+    },
+    "startup:bottom_label__cont_0": {
+      "globals": {
+        "score": "100",
+        "name": "Winner"
+      }
+    },
+    "startup:top_label": {
+      "globals": {
+        "score": "0",
+        "name": "Nobody"
+      }
+    }
+  }
+}

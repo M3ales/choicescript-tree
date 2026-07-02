@@ -22,8 +22,8 @@
       "startup:b_0": {
         "scene": "startup",
         "statementIds": [
-          "startup:0",
-          "startup:7"
+          "startup:1aw8gn111f7uzj",
+          "startup:13bpglajcpbqw"
         ],
         "entryType": "SceneEntry",
         "exitType": "Choice"
@@ -37,7 +37,8 @@
       "startup:b_2": {
         "scene": "startup",
         "statementIds": [
-          "startup:1"
+          "startup:my7kcmi8snc",
+          "startup:hw8ay2c9mia0"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "FallThrough"
@@ -45,7 +46,8 @@
       "startup:b_3": {
         "scene": "startup",
         "statementIds": [
-          "startup:3"
+          "startup:1q4lgv0ics6h2",
+          "startup:1ogt7mn12sloxh"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "FallThrough"
@@ -53,7 +55,8 @@
       "startup:b_4": {
         "scene": "startup",
         "statementIds": [
-          "startup:5"
+          "startup:6nl7c0jmhqc2",
+          "startup:19r0qvua49vl4"
         ],
         "entryType": "ChoiceOptionEntry",
         "exitType": "FallThrough"
@@ -65,7 +68,7 @@
         "sourceBlockId": "startup:b_0",
         "targetBlockId": "startup:b_2",
         "metadata": {
-          "optionStatementId": "startup:2"
+          "optionStatementId": "startup:my7kcmi8snc"
         }
       },
       {
@@ -79,7 +82,7 @@
         "sourceBlockId": "startup:b_0",
         "targetBlockId": "startup:b_3",
         "metadata": {
-          "optionStatementId": "startup:4"
+          "optionStatementId": "startup:1q4lgv0ics6h2"
         }
       },
       {
@@ -93,7 +96,7 @@
         "sourceBlockId": "startup:b_0",
         "targetBlockId": "startup:b_4",
         "metadata": {
-          "optionStatementId": "startup:6"
+          "optionStatementId": "startup:6nl7c0jmhqc2"
         }
       },
       {

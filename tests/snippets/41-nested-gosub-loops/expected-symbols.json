@@ -1,0 +1,332 @@
+[
+  {
+    "labels": {
+      "hub": {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 11,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "hub",
+          "rawValue": "hub",
+          "position": 6,
+          "lineNumber": 11,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        }
+      },
+      "training": {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 23,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "training",
+          "rawValue": "training",
+          "position": 6,
+          "lineNumber": 23,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        }
+      },
+      "drill_round": {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 33,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "drill_round",
+          "rawValue": "drill_round",
+          "position": 6,
+          "lineNumber": 33,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        }
+      },
+      "patrol": {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 38,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "patrol",
+          "rawValue": "patrol",
+          "position": 6,
+          "lineNumber": 38,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        }
+      }
+    },
+    "globalVariables": {
+      "turn": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "turn",
+          "rawValue": "turn",
+          "position": 8,
+          "lineNumber": 0,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 0,
+            "position": 13,
+            "lineNumber": 0,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 0,
+          "position": 0
+        }
+      },
+      "energy": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "energy",
+          "rawValue": "energy",
+          "position": 8,
+          "lineNumber": 1,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 100,
+            "position": 15,
+            "lineNumber": 1,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 1,
+          "position": 0
+        }
+      },
+      "morale": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "morale",
+          "rawValue": "morale",
+          "position": 8,
+          "lineNumber": 2,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 50,
+            "position": 15,
+            "lineNumber": 2,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 2,
+          "position": 0
+        }
+      }
+    },
+    "tempVariables": {},
+    "checkpoints": {},
+    "gosubs": [
+      {
+        "kind": "GoSub",
+        "token": {
+          "type": "GoSub",
+          "sceneName": "startup",
+          "indent": 1,
+          "lineNumber": 15,
+          "position": 2
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "training",
+          "rawValue": "training",
+          "position": 9,
+          "lineNumber": 15,
+          "sceneName": "startup",
+          "indent": 1,
+          "isLabelName": true
+        },
+        "args": []
+      },
+      {
+        "kind": "GoSub",
+        "token": {
+          "type": "GoSub",
+          "sceneName": "startup",
+          "indent": 1,
+          "lineNumber": 16,
+          "position": 2
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "patrol",
+          "rawValue": "patrol",
+          "position": 9,
+          "lineNumber": 16,
+          "sceneName": "startup",
+          "indent": 1,
+          "isLabelName": true
+        },
+        "args": []
+      },
+      {
+        "kind": "GoSub",
+        "token": {
+          "type": "GoSub",
+          "sceneName": "startup",
+          "indent": 1,
+          "lineNumber": 27,
+          "position": 2
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "drill_round",
+          "rawValue": "drill_round",
+          "position": 9,
+          "lineNumber": 27,
+          "sceneName": "startup",
+          "indent": 1,
+          "isLabelName": true
+        },
+        "args": []
+      },
+      {
+        "kind": "GoSub",
+        "token": {
+          "type": "GoSub",
+          "sceneName": "startup",
+          "indent": 1,
+          "lineNumber": 43,
+          "position": 2
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "training",
+          "rawValue": "training",
+          "position": 9,
+          "lineNumber": 43,
+          "sceneName": "startup",
+          "indent": 1,
+          "isLabelName": true
+        },
+        "args": []
+      }
+    ],
+    "gotos": [
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "startup",
+          "indent": 1,
+          "lineNumber": 17,
+          "position": 2
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "hub",
+          "rawValue": "hub",
+          "position": 8,
+          "lineNumber": 17,
+          "sceneName": "startup",
+          "indent": 1,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "startup",
+          "indent": 1,
+          "lineNumber": 28,
+          "position": 2
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "training",
+          "rawValue": "training",
+          "position": 8,
+          "lineNumber": 28,
+          "sceneName": "startup",
+          "indent": 1,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "startup",
+          "indent": 1,
+          "lineNumber": 44,
+          "position": 2
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "patrol",
+          "rawValue": "patrol",
+          "position": 8,
+          "lineNumber": 44,
+          "sceneName": "startup",
+          "indent": 1,
+          "isLabelName": true
+        }
+      }
+    ],
+    "implicitControlFlow": []
+  }
+]

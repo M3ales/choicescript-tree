@@ -25,10 +25,14 @@
       "startup:b_0": {
         "scene": "startup",
         "statementIds": [
-          "startup:0",
-          "startup:1",
-          "startup:2",
-          "startup:3"
+          "startup:1qjr3a8uj9blu",
+          "startup:npvscobi70kq",
+          "startup:13e91ex1y2dgi3",
+          "startup:1ivdmrn1xvmro9",
+          "startup:1i79n8a1cxwews",
+          "startup:1iaqrn019g7f8m",
+          "startup:xo21y7rkp1wt",
+          "startup:15x9jpp1eqv2en"
         ],
         "entryType": "SceneEntry",
         "exitType": "Goto"
@@ -42,10 +46,10 @@
       "startup:b_2": {
         "scene": "startup",
         "statementIds": [
-          "startup:4",
-          "startup:5",
-          "startup:6",
-          "startup:7"
+          "startup:d3apua12lep9s",
+          "startup:1ipd95ybscmd8",
+          "startup:14ei2ss135v4ga",
+          "startup:zcp21r1050px9"
         ],
         "entryType": "Label",
         "exitType": "Return",
@@ -60,9 +64,9 @@
       "startup:b_4": {
         "scene": "startup",
         "statementIds": [
-          "startup:8",
-          "startup:9",
-          "startup:10"
+          "startup:1plg8jh1uiw1x3",
+          "startup:74d7l91sbie9f",
+          "startup:1reaxb0160py1u"
         ],
         "entryType": "Label",
         "exitType": "GoSub",

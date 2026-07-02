@@ -42,6 +42,7 @@
               "sceneName": "startup",
               "indent": 1,
               "lineNumber": 2,
+              "position": 2,
               "rawText": "Fight to the end.",
               "hasMultiReplace": false
             },
@@ -111,7 +112,7 @@
                 "start": 0,
                 "end": 17,
                 "lineNumber": 2,
-                "position": null,
+                "position": 3,
                 "text": "Fight to the end."
               }
             ],
@@ -125,6 +126,7 @@
               "sceneName": "startup",
               "indent": 1,
               "lineNumber": 5,
+              "position": 2,
               "rawText": "Surrender.",
               "hasMultiReplace": false
             },
@@ -170,7 +172,7 @@
                 "start": 0,
                 "end": 10,
                 "lineNumber": 5,
-                "position": null,
+                "position": 3,
                 "text": "Surrender."
               }
             ],
@@ -184,6 +186,7 @@
               "sceneName": "startup",
               "indent": 1,
               "lineNumber": 8,
+              "position": 2,
               "rawText": "Negotiate peace.",
               "hasMultiReplace": false
             },
@@ -229,7 +232,7 @@
                 "start": 0,
                 "end": 16,
                 "lineNumber": 8,
-                "position": null,
+                "position": 3,
                 "text": "Negotiate peace."
               }
             ],

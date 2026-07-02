@@ -1,0 +1,14 @@
+*create var1 true
+*achievement test_ach visible 5 Test Achievement Title
+  Pre-earned description.
+  Post-earned description.
+
+Some prose after achievements.
+
+*choice
+  #Option A
+    Chose A.
+    *finish
+  #Option B
+    Chose B.
+    *finish

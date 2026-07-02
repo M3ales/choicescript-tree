@@ -1,0 +1,222 @@
+[
+  {
+    "sceneName": "startup",
+    "blocks": {
+      "startup:b_0": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_1": {
+        "exitType": "Choice"
+      },
+      "startup:b_2": {
+        "exitType": "ImplicitEnd"
+      },
+      "startup:b_3": {
+        "exitType": "Goto"
+      },
+      "startup:b_4": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_5": {
+        "exitType": "Goto"
+      },
+      "startup:b_6": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_7": {
+        "exitType": "Goto"
+      },
+      "startup:b_8": {
+        "exitType": "FallThrough"
+      },
+      "startup:b_9": {
+        "exitType": "Finish"
+      },
+      "startup:b_10": {
+        "exitType": "FallThrough"
+      }
+    },
+    "blockIndex": {
+      "startup:b_0": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:22oy2y1vws68w"
+        ],
+        "entryType": "SceneEntry",
+        "exitType": "FallThrough"
+      },
+      "startup:b_1": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:7x4mkh2bgr9j",
+          "startup:1sbzho8vt3f5i",
+          "startup:k27crddqexzz"
+        ],
+        "entryType": "Label",
+        "exitType": "Choice",
+        "label": "shop"
+      },
+      "startup:b_2": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "ImplicitEnd"
+      },
+      "startup:b_3": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:1latyoe19za4yg",
+          "startup:kfbn4e1ud978",
+          "startup:1f7otbs1upyeou",
+          "startup:s30bv412cyq7a"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "Goto"
+      },
+      "startup:b_4": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "startup:b_5": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:1gzp7pi21t2q4",
+          "startup:qlozmz1mk7lzd",
+          "startup:1ozffdm1ri8m7s",
+          "startup:1i5rfkb957141"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "Goto"
+      },
+      "startup:b_6": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "startup:b_7": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:gxae0qzwtmnc",
+          "startup:hc9h4f1nzeb85",
+          "startup:13rfjfu1vrev3w"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "Goto"
+      },
+      "startup:b_8": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      },
+      "startup:b_9": {
+        "scene": "startup",
+        "statementIds": [
+          "startup:7x0iwc1bo2uza",
+          "startup:d9m13m1f1ev7s",
+          "startup:1dgov4z1no2erh"
+        ],
+        "entryType": "ChoiceOptionEntry",
+        "exitType": "Finish"
+      },
+      "startup:b_10": {
+        "scene": "startup",
+        "statementIds": [],
+        "entryType": "Continuation",
+        "exitType": "FallThrough"
+      }
+    },
+    "edges": [
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "startup:b_0",
+        "targetBlockId": "startup:b_1",
+        "metadata": {}
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "startup:b_3",
+        "targetBlockId": "startup:b_1",
+        "metadata": {
+          "label": "shop"
+        }
+      },
+      {
+        "kind": "ChoiceOption",
+        "sourceBlockId": "startup:b_1",
+        "targetBlockId": "startup:b_3",
+        "metadata": {
+          "optionStatementId": "startup:1latyoe19za4yg",
+          "effectiveReuse": "hide_reuse"
+        }
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "startup:b_5",
+        "targetBlockId": "startup:b_1",
+        "metadata": {
+          "label": "shop"
+        }
+      },
+      {
+        "kind": "ChoiceOption",
+        "sourceBlockId": "startup:b_1",
+        "targetBlockId": "startup:b_5",
+        "metadata": {
+          "optionStatementId": "startup:1gzp7pi21t2q4",
+          "effectiveReuse": "hide_reuse"
+        }
+      },
+      {
+        "kind": "Goto",
+        "sourceBlockId": "startup:b_7",
+        "targetBlockId": "startup:b_1",
+        "metadata": {
+          "label": "shop"
+        }
+      },
+      {
+        "kind": "ChoiceOption",
+        "sourceBlockId": "startup:b_1",
+        "targetBlockId": "startup:b_7",
+        "metadata": {
+          "optionStatementId": "startup:gxae0qzwtmnc"
+        }
+      },
+      {
+        "kind": "SceneExit",
+        "sourceBlockId": "startup:b_9",
+        "targetBlockId": null,
+        "metadata": {}
+      },
+      {
+        "kind": "ChoiceOption",
+        "sourceBlockId": "startup:b_1",
+        "targetBlockId": "startup:b_9",
+        "metadata": {
+          "optionStatementId": "startup:7x0iwc1bo2uza"
+        }
+      },
+      {
+        "kind": "FallThrough",
+        "sourceBlockId": "startup:b_1",
+        "targetBlockId": "startup:b_2",
+        "metadata": {}
+      },
+      {
+        "kind": "SceneExit",
+        "sourceBlockId": "startup:b_2",
+        "targetBlockId": null,
+        "metadata": {}
+      }
+    ],
+    "entryBlockId": "startup:b_0",
+    "labelToBlockId": {
+      "shop": "startup:b_1"
+    },
+    "unresolvedEdges": []
+  }
+]

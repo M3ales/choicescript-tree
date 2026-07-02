@@ -1,0 +1,458 @@
+[
+  {
+    "name": "startup",
+    "statements": [
+      {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "thanksgiving_food",
+          "rawValue": "thanksgiving_food",
+          "position": 8,
+          "lineNumber": 0,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "StringLiteral",
+            "value": "",
+            "position": 26,
+            "lineNumber": 0,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 0,
+          "position": 0
+        }
+      },
+      {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 2,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "set_the_table",
+          "rawValue": "set_the_table",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 2,
+          "position": 7,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "Choice",
+        "token": {
+          "type": "Choice",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 3,
+          "position": 0
+        },
+        "body": [
+          {
+            "kind": "ChoiceOption",
+            "token": {
+              "type": "ChoiceOption",
+              "sceneName": "startup",
+              "indent": 1,
+              "lineNumber": 4,
+              "position": 2,
+              "rawText": "Stew and mashed potatoes.",
+              "hasMultiReplace": false
+            },
+            "body": [
+              {
+                "kind": "SetVariable",
+                "expression": {
+                  "kind": "Identifier",
+                  "token": {
+                    "type": "Identifier",
+                    "value": "thanksgiving_food",
+                    "rawValue": "thanksgiving_food",
+                    "position": 9,
+                    "lineNumber": 5,
+                    "sceneName": "startup",
+                    "indent": 2
+                  }
+                },
+                "assignment": {
+                  "kind": "Literal",
+                  "value": {
+                    "type": "StringLiteral",
+                    "value": "stew and mashed potatoes",
+                    "position": 27,
+                    "lineNumber": 5,
+                    "sceneName": "startup",
+                    "indent": 2
+                  }
+                },
+                "token": {
+                  "type": "SetVariable",
+                  "sceneName": "startup",
+                  "indent": 2,
+                  "lineNumber": 5,
+                  "position": 4
+                }
+              }
+            ],
+            "parsedSegments": [
+              {
+                "kind": "Text",
+                "start": 0,
+                "end": 25,
+                "lineNumber": 4,
+                "position": 3,
+                "text": "Stew and mashed potatoes."
+              }
+            ],
+            "reuse": null,
+            "selectableIf": null
+          },
+          {
+            "kind": "ChoiceOption",
+            "token": {
+              "type": "ChoiceOption",
+              "sceneName": "startup",
+              "indent": 1,
+              "lineNumber": 6,
+              "position": 2,
+              "rawText": "Marinated skewers and crushed cucumber salad.",
+              "hasMultiReplace": false
+            },
+            "body": [
+              {
+                "kind": "SetVariable",
+                "expression": {
+                  "kind": "Identifier",
+                  "token": {
+                    "type": "Identifier",
+                    "value": "thanksgiving_food",
+                    "rawValue": "thanksgiving_food",
+                    "position": 9,
+                    "lineNumber": 7,
+                    "sceneName": "startup",
+                    "indent": 2
+                  }
+                },
+                "assignment": {
+                  "kind": "Literal",
+                  "value": {
+                    "type": "StringLiteral",
+                    "value": "marinated skewers and crushed cucumber salad",
+                    "position": 27,
+                    "lineNumber": 7,
+                    "sceneName": "startup",
+                    "indent": 2
+                  }
+                },
+                "token": {
+                  "type": "SetVariable",
+                  "sceneName": "startup",
+                  "indent": 2,
+                  "lineNumber": 7,
+                  "position": 4
+                }
+              }
+            ],
+            "parsedSegments": [
+              {
+                "kind": "Text",
+                "start": 0,
+                "end": 45,
+                "lineNumber": 6,
+                "position": 3,
+                "text": "Marinated skewers and crushed cucumber salad."
+              }
+            ],
+            "reuse": null,
+            "selectableIf": null
+          },
+          {
+            "kind": "ChoiceOption",
+            "token": {
+              "type": "ChoiceOption",
+              "sceneName": "startup",
+              "indent": 1,
+              "lineNumber": 8,
+              "position": 2,
+              "rawText": "Hummus and flatbread.",
+              "hasMultiReplace": false
+            },
+            "body": [
+              {
+                "kind": "SetVariable",
+                "expression": {
+                  "kind": "Identifier",
+                  "token": {
+                    "type": "Identifier",
+                    "value": "thanksgiving_food",
+                    "rawValue": "thanksgiving_food",
+                    "position": 9,
+                    "lineNumber": 9,
+                    "sceneName": "startup",
+                    "indent": 2
+                  }
+                },
+                "assignment": {
+                  "kind": "Literal",
+                  "value": {
+                    "type": "StringLiteral",
+                    "value": "hummus and flatbread",
+                    "position": 27,
+                    "lineNumber": 9,
+                    "sceneName": "startup",
+                    "indent": 2
+                  }
+                },
+                "token": {
+                  "type": "SetVariable",
+                  "sceneName": "startup",
+                  "indent": 2,
+                  "lineNumber": 9,
+                  "position": 4
+                }
+              }
+            ],
+            "parsedSegments": [
+              {
+                "kind": "Text",
+                "start": 0,
+                "end": 21,
+                "lineNumber": 8,
+                "position": 3,
+                "text": "Hummus and flatbread."
+              }
+            ],
+            "reuse": null,
+            "selectableIf": null
+          },
+          {
+            "kind": "ChoiceOption",
+            "token": {
+              "type": "ChoiceOption",
+              "sceneName": "startup",
+              "indent": 1,
+              "lineNumber": 10,
+              "position": 2,
+              "rawText": "Empanadas and salsa with tacos.",
+              "hasMultiReplace": false
+            },
+            "body": [
+              {
+                "kind": "SetVariable",
+                "expression": {
+                  "kind": "Identifier",
+                  "token": {
+                    "type": "Identifier",
+                    "value": "thanksgiving_food",
+                    "rawValue": "thanksgiving_food",
+                    "position": 9,
+                    "lineNumber": 11,
+                    "sceneName": "startup",
+                    "indent": 2
+                  }
+                },
+                "assignment": {
+                  "kind": "Literal",
+                  "value": {
+                    "type": "StringLiteral",
+                    "value": "empanadas and salsa with tacos",
+                    "position": 27,
+                    "lineNumber": 11,
+                    "sceneName": "startup",
+                    "indent": 2
+                  }
+                },
+                "token": {
+                  "type": "SetVariable",
+                  "sceneName": "startup",
+                  "indent": 2,
+                  "lineNumber": 11,
+                  "position": 4
+                }
+              }
+            ],
+            "parsedSegments": [
+              {
+                "kind": "Text",
+                "start": 0,
+                "end": 31,
+                "lineNumber": 10,
+                "position": 3,
+                "text": "Empanadas and salsa with tacos."
+              }
+            ],
+            "reuse": null,
+            "selectableIf": null
+          },
+          {
+            "kind": "ChoiceOption",
+            "token": {
+              "type": "ChoiceOption",
+              "sceneName": "startup",
+              "indent": 1,
+              "lineNumber": 12,
+              "position": 2,
+              "rawText": "Something else. (Type it in)",
+              "hasMultiReplace": false
+            },
+            "body": [
+              {
+                "content": [
+                  {
+                    "type": "Prose",
+                    "sceneName": "startup",
+                    "lineNumber": 13,
+                    "position": 4,
+                    "indent": 2,
+                    "content": "You lay out the dishes you and your father have brought over—\n"
+                  }
+                ],
+                "kind": "Prose",
+                "parsedSegments": [
+                  {
+                    "kind": "Text",
+                    "start": 0,
+                    "end": 62,
+                    "lineNumber": 13,
+                    "position": 4,
+                    "text": "You lay out the dishes you and your father have brought over—\n"
+                  }
+                ]
+              },
+              {
+                "kind": "InputText",
+                "token": {
+                  "type": "InputText",
+                  "sceneName": "startup",
+                  "indent": 2,
+                  "lineNumber": 14,
+                  "position": 4
+                },
+                "storeInto": {
+                  "type": "Identifier",
+                  "value": "thanksgiving_food",
+                  "rawValue": "thanksgiving_food",
+                  "position": 16,
+                  "lineNumber": 14,
+                  "sceneName": "startup",
+                  "indent": 2
+                }
+              }
+            ],
+            "parsedSegments": [
+              {
+                "kind": "Text",
+                "start": 0,
+                "end": 28,
+                "lineNumber": 12,
+                "position": 3,
+                "text": "Something else. (Type it in)"
+              }
+            ],
+            "reuse": null,
+            "selectableIf": null
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 16,
+            "position": 0,
+            "indent": 0,
+            "content": "You've set the table with "
+          },
+          {
+            "type": "Prose",
+            "sceneName": "startup",
+            "lineNumber": 16,
+            "position": 46,
+            "indent": 0,
+            "content": ".\n"
+          }
+        ],
+        "kind": "Prose",
+        "parsedSegments": [
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 26,
+            "lineNumber": 16,
+            "position": 0,
+            "text": "You've set the table with "
+          },
+          {
+            "kind": "Print",
+            "start": 0,
+            "end": 0,
+            "lineNumber": 16,
+            "position": 26,
+            "expression": {
+              "kind": "Identifier",
+              "token": {
+                "type": "Identifier",
+                "value": "thanksgiving_food",
+                "rawValue": "thanksgiving_food",
+                "position": 28,
+                "lineNumber": 16,
+                "sceneName": "startup",
+                "indent": 0
+              }
+            }
+          },
+          {
+            "kind": "Text",
+            "start": 0,
+            "end": 2,
+            "lineNumber": 16,
+            "position": 46,
+            "text": ".\n"
+          }
+        ]
+      },
+      {
+        "kind": "Finish",
+        "token": {
+          "type": "Finish",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 17,
+          "position": 0
+        },
+        "buttonText": null
+      }
+    ],
+    "parseErrors": [],
+    "start": {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    "end": {
+      "type": "Finish",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 17,
+      "position": 0
+    }
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "deadBranchCount": 0,
+  "deadBranches": [],
+  "controlFlowViolationCount": 0,
+  "controlFlowViolations": [],
+  "undeclaredSetCount": 0,
+  "undeclaredSets": [],
+  "multiReplaceViolationCount": 2,
+  "multiReplaceViolations": [
+    {
+      "scene": "startup",
+      "line": 14,
+      "kind": "zero-index",
+      "selectorValue": 0,
+      "alternativeCount": 3
+    },
+    {
+      "scene": "startup",
+      "line": 15,
+      "kind": "string-selector",
+      "selectorValue": "happy",
+      "alternativeCount": 2
+    }
+  ]
+}

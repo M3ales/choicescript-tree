@@ -1,0 +1,41 @@
+{
+  "cfgCount": 4,
+  "states": [
+    {
+      "cfgId": "startup:",
+      "entryGlobals": [
+        {
+          "g_name": "Alex",
+          "health": "100"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:goto_loop",
+      "entryGlobals": [
+        {
+          "g_name": "Alex",
+          "health": "100"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:rejoin_teammates_g",
+      "entryGlobals": [
+        {
+          "g_name": "Alex",
+          "health": "100"
+        }
+      ]
+    },
+    {
+      "cfgId": "startup:rejoin_teammates_g__cont_0",
+      "entryGlobals": [
+        {
+          "g_name": "Alex",
+          "health": "100"
+        }
+      ]
+    }
+  ]
+}

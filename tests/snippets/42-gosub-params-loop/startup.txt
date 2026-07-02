@@ -1,0 +1,19 @@
+*create total 0
+*create rounds 0
+*create label ""
+
+*label hub
+*set rounds + 1
+
+*if (rounds <= 3)
+  *gosub add_value (rounds * 10) ("round " & rounds) (total + 1)
+  *goto hub
+
+Done. Total: ${total}, rounds: ${rounds}, label: ${label}.
+*finish
+
+*label add_value
+*params amount desc seq
+*set total + amount
+*set label desc
+*return

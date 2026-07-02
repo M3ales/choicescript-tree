@@ -1,0 +1,16 @@
+[
+  {
+    "headerCfgId": "startup:search_loop",
+    "bodyCfgIds": [
+      "startup:search_loop"
+    ],
+    "backEdgeCount": 1,
+    "exitCount": 2,
+    "mechanism": "direct",
+    "pure": false,
+    "bound": "condition-bounded",
+    "tripCount": null,
+    "unrollDepth": 2,
+    "infinite": false
+  }
+]

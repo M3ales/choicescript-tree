@@ -123,14 +123,6 @@
       "content": "note that it works"
     },
     {
-      "type": "Prose",
-      "sceneName": "startup",
-      "lineNumber": 8,
-      "position": 22,
-      "indent": 0,
-      "content": "ment hidden 2 one\n"
-    },
-    {
       "type": "Comment",
       "sceneName": "startup",
       "indent": 0,
@@ -197,10 +189,10 @@
       "type": "Identifier",
       "value": "bottom_label",
       "rawValue": "bottom_label",
-      "position": 6,
-      "lineNumber": 12,
       "sceneName": "startup",
       "indent": 0,
+      "lineNumber": 12,
+      "position": 6,
       "isLabelName": true
     },
     {
@@ -214,10 +206,10 @@
       "type": "Identifier",
       "value": "top_label",
       "rawValue": "top_label",
-      "position": 6,
-      "lineNumber": 14,
       "sceneName": "startup",
       "indent": 0,
+      "lineNumber": 14,
+      "position": 7,
       "isLabelName": true
     },
     {
@@ -286,10 +278,10 @@
       "type": "Identifier",
       "value": "bottom_label",
       "rawValue": "bottom_label",
-      "position": 6,
-      "lineNumber": 19,
       "sceneName": "startup",
       "indent": 0,
+      "lineNumber": 19,
+      "position": 7,
       "isLabelName": true
     },
     {
@@ -327,10 +319,10 @@
       "type": "Identifier",
       "value": "top_label",
       "rawValue": "top_label",
-      "position": 7,
-      "lineNumber": 21,
       "sceneName": "startup",
       "indent": 0,
+      "lineNumber": 21,
+      "position": 7,
       "isLabelName": true
     },
     {

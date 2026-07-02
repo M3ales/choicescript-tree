@@ -1,0 +1,364 @@
+[
+  {
+    "labels": {
+      "sub_loop": {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "chapter1",
+          "indent": 0,
+          "lineNumber": 4,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "sub_loop",
+          "rawValue": "sub_loop",
+          "position": 6,
+          "lineNumber": 4,
+          "sceneName": "chapter1",
+          "indent": 0,
+          "isLabelName": true
+        }
+      }
+    },
+    "globalVariables": {},
+    "tempVariables": {},
+    "checkpoints": {},
+    "gosubs": [
+      {
+        "kind": "GoSubScene",
+        "token": {
+          "type": "GoSubScene",
+          "sceneName": "chapter1",
+          "indent": 0,
+          "lineNumber": 6,
+          "position": 0
+        },
+        "scene": {
+          "type": "Identifier",
+          "value": "chapter2",
+          "rawValue": "chapter2",
+          "position": 13,
+          "lineNumber": 6,
+          "sceneName": "chapter1",
+          "indent": 0,
+          "isSceneName": true,
+          "isLabelName": false
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "bounce_back",
+          "rawValue": "bounce_back",
+          "position": 22,
+          "lineNumber": 6,
+          "sceneName": "chapter1",
+          "indent": 0,
+          "isLabelName": true
+        },
+        "args": []
+      }
+    ],
+    "gotos": [
+      {
+        "kind": "GotoScene",
+        "token": {
+          "type": "GotoScene",
+          "sceneName": "chapter1",
+          "indent": 0,
+          "lineNumber": 1,
+          "position": 0
+        },
+        "scene": {
+          "type": "Identifier",
+          "value": "startup",
+          "rawValue": "startup",
+          "position": 12,
+          "lineNumber": 1,
+          "sceneName": "chapter1",
+          "indent": 0,
+          "isSceneName": true,
+          "isLabelName": false
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "goto_loop",
+          "rawValue": "goto_loop",
+          "position": 20,
+          "lineNumber": 1,
+          "sceneName": "chapter1",
+          "indent": 0,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "chapter1",
+          "indent": 0,
+          "lineNumber": 7,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "sub_loop",
+          "rawValue": "sub_loop",
+          "position": 6,
+          "lineNumber": 7,
+          "sceneName": "chapter1",
+          "indent": 0,
+          "isLabelName": true
+        }
+      }
+    ],
+    "implicitControlFlow": []
+  },
+  {
+    "labels": {
+      "bounce_back": {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "chapter2",
+          "indent": 0,
+          "lineNumber": 1,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "bounce_back",
+          "rawValue": "bounce_back",
+          "position": 6,
+          "lineNumber": 1,
+          "sceneName": "chapter2",
+          "indent": 0,
+          "isLabelName": true
+        }
+      }
+    },
+    "globalVariables": {},
+    "tempVariables": {},
+    "checkpoints": {},
+    "gosubs": [],
+    "gotos": [],
+    "implicitControlFlow": []
+  },
+  {
+    "labels": {
+      "rejoin_teammates_g": {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 6,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "rejoin_teammates_g",
+          "rawValue": "rejoin_teammates_g",
+          "position": 6,
+          "lineNumber": 6,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        }
+      },
+      "goto_loop": {
+        "kind": "Label",
+        "token": {
+          "type": "Label",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 14,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "goto_loop",
+          "rawValue": "goto_loop",
+          "position": 6,
+          "lineNumber": 14,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        }
+      }
+    },
+    "globalVariables": {
+      "g_name": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "g_name",
+          "rawValue": "G_name",
+          "position": 8,
+          "lineNumber": 0,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "StringLiteral",
+            "value": "Alex",
+            "position": 15,
+            "lineNumber": 0,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 0,
+          "position": 0
+        }
+      },
+      "health": {
+        "kind": "DeclareVariable",
+        "variable": {
+          "type": "Identifier",
+          "value": "health",
+          "rawValue": "health",
+          "position": 8,
+          "lineNumber": 1,
+          "sceneName": "startup",
+          "indent": 0
+        },
+        "expression": {
+          "kind": "Literal",
+          "value": {
+            "type": "NumberLiteral",
+            "value": 100,
+            "position": 15,
+            "lineNumber": 1,
+            "sceneName": "startup",
+            "indent": 0
+          }
+        },
+        "scope": "Global",
+        "token": {
+          "type": "CreateVariable",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 1,
+          "position": 0
+        }
+      }
+    },
+    "tempVariables": {},
+    "checkpoints": {},
+    "gosubs": [
+      {
+        "kind": "GoSub",
+        "token": {
+          "type": "GoSub",
+          "sceneName": "startup",
+          "indent": 1,
+          "lineNumber": 9,
+          "position": 2
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "rejoin_teammates_g",
+          "rawValue": "rejoin_teammates_g",
+          "position": 9,
+          "lineNumber": 9,
+          "sceneName": "startup",
+          "indent": 1,
+          "isLabelName": true
+        },
+        "args": []
+      }
+    ],
+    "gotos": [
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 4,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "rejoin_teammates_g",
+          "rawValue": "rejoin_teammates_g",
+          "position": 6,
+          "lineNumber": 4,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 12,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "goto_loop",
+          "rawValue": "goto_loop",
+          "position": 6,
+          "lineNumber": 12,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "GotoLabel",
+        "token": {
+          "type": "GotoLabel",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 16,
+          "position": 0
+        },
+        "label": {
+          "type": "Identifier",
+          "value": "goto_loop",
+          "rawValue": "goto_loop",
+          "position": 6,
+          "lineNumber": 16,
+          "sceneName": "startup",
+          "indent": 0,
+          "isLabelName": true
+        }
+      },
+      {
+        "kind": "GotoScene",
+        "token": {
+          "type": "GotoScene",
+          "sceneName": "startup",
+          "indent": 0,
+          "lineNumber": 19,
+          "position": 0
+        },
+        "scene": {
+          "type": "Identifier",
+          "value": "chapter1",
+          "rawValue": "chapter1",
+          "position": 12,
+          "lineNumber": 19,
+          "sceneName": "startup",
+          "indent": 0,
+          "isSceneName": true,
+          "isLabelName": false
+        }
+      }
+    ],
+    "implicitControlFlow": []
+  }
+]

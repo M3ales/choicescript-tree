@@ -1,0 +1,1126 @@
+[
+  [
+    {
+      "sceneName": "chapter1",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    {
+      "type": "Comment",
+      "sceneName": "chapter1",
+      "indent": 0,
+      "lineNumber": 0,
+      "position": 0,
+      "value": "Test: cross-scene scope propagation"
+    },
+    {
+      "type": "Comment",
+      "sceneName": "chapter1",
+      "indent": 0,
+      "lineNumber": 1,
+      "position": 0,
+      "value": "health and stamina should be in scope (globals from startup)"
+    },
+    {
+      "type": "Comment",
+      "sceneName": "chapter1",
+      "indent": 0,
+      "lineNumber": 2,
+      "position": 0,
+      "value": "gold should NOT be in scope (deleted in startup)"
+    },
+    {
+      "type": "Comment",
+      "sceneName": "chapter1",
+      "indent": 0,
+      "lineNumber": 3,
+      "position": 0,
+      "value": "battle_log is a temp — should NOT cross scene boundary"
+    },
+    {
+      "type": "Prose",
+      "sceneName": "chapter1",
+      "lineNumber": 5,
+      "position": 0,
+      "indent": 0,
+      "content": "You arrive with "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "chapter1",
+      "lineNumber": 5,
+      "position": 16,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "health",
+      "rawValue": "health",
+      "position": 18,
+      "lineNumber": 5,
+      "sceneName": "chapter1",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "chapter1",
+      "lineNumber": 5,
+      "position": 24,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "chapter1",
+      "lineNumber": 5,
+      "position": 25,
+      "indent": 0,
+      "content": " health and "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "chapter1",
+      "lineNumber": 5,
+      "position": 37,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "stamina",
+      "rawValue": "stamina",
+      "position": 39,
+      "lineNumber": 5,
+      "sceneName": "chapter1",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "chapter1",
+      "lineNumber": 5,
+      "position": 46,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "chapter1",
+      "lineNumber": 5,
+      "position": 47,
+      "indent": 0,
+      "content": " stamina.\n\n"
+    },
+    {
+      "type": "Comment",
+      "sceneName": "chapter1",
+      "indent": 0,
+      "lineNumber": 7,
+      "position": 0,
+      "value": "Temp from startup should not be visible"
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "chapter1",
+      "indent": 0,
+      "lineNumber": 8,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "local_var",
+      "rawValue": "local_var",
+      "position": 6,
+      "lineNumber": 8,
+      "sceneName": "chapter1",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "hello",
+      "position": 16,
+      "lineNumber": 8,
+      "sceneName": "chapter1",
+      "indent": 0
+    },
+    {
+      "type": "Comment",
+      "sceneName": "chapter1",
+      "indent": 0,
+      "lineNumber": 10,
+      "position": 0,
+      "value": "Reference gold (was deleted in startup) — undefined expected"
+    },
+    {
+      "type": "If",
+      "sceneName": "chapter1",
+      "indent": 0,
+      "lineNumber": 11,
+      "position": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 4,
+      "lineNumber": 11,
+      "sceneName": "chapter1",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "gold",
+      "rawValue": "gold",
+      "position": 5,
+      "lineNumber": 11,
+      "sceneName": "chapter1",
+      "indent": 0
+    },
+    {
+      "type": "GreaterThanOperator",
+      "rawValue": ">",
+      "position": 10,
+      "lineNumber": 11,
+      "sceneName": "chapter1",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 12,
+      "lineNumber": 11,
+      "sceneName": "chapter1",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 13,
+      "lineNumber": 11,
+      "sceneName": "chapter1",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "chapter1",
+      "lineNumber": 12,
+      "position": 2,
+      "indent": 1,
+      "content": "You still have gold!\n\n"
+    },
+    {
+      "type": "Comment",
+      "sceneName": "chapter1",
+      "indent": 0,
+      "lineNumber": 14,
+      "position": 0,
+      "value": "Reference battle_log (temp, doesn't cross scenes) — undefined expected"
+    },
+    {
+      "type": "Prose",
+      "sceneName": "chapter1",
+      "lineNumber": 15,
+      "position": 0,
+      "indent": 0,
+      "content": "The log: "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "chapter1",
+      "lineNumber": 15,
+      "position": 9,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "battle_log",
+      "rawValue": "battle_log",
+      "position": 11,
+      "lineNumber": 15,
+      "sceneName": "chapter1",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "chapter1",
+      "lineNumber": 15,
+      "position": 21,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "chapter1",
+      "lineNumber": 15,
+      "position": 22,
+      "indent": 0,
+      "content": "\n\n"
+    },
+    {
+      "type": "Finish",
+      "sceneName": "chapter1",
+      "indent": 0,
+      "lineNumber": 17,
+      "position": 0
+    },
+    {
+      "lineNumber": 19,
+      "indent": 0,
+      "position": 0,
+      "sceneName": "chapter1",
+      "type": "SceneEnd"
+    }
+  ],
+  [
+    {
+      "sceneName": "startup",
+      "lineNumber": 0,
+      "position": 0,
+      "indent": 0,
+      "type": "SceneStart"
+    },
+    {
+      "type": "Comment",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 0,
+      "position": 0,
+      "value": "Test: scope analysis patterns"
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 1,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "health",
+      "rawValue": "health",
+      "position": 8,
+      "lineNumber": 1,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 100,
+      "position": 15,
+      "lineNumber": 1,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 2,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "stamina",
+      "rawValue": "stamina",
+      "position": 8,
+      "lineNumber": 2,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 50,
+      "position": 16,
+      "lineNumber": 2,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 3,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "gold",
+      "rawValue": "gold",
+      "position": 8,
+      "lineNumber": 3,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 0,
+      "position": 13,
+      "lineNumber": 3,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 4,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "battle_log",
+      "rawValue": "battle_log",
+      "position": 6,
+      "lineNumber": 4,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "",
+      "position": 17,
+      "lineNumber": 4,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Comment",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 6,
+      "position": 0,
+      "value": "1. Basic: defined then referenced"
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 7,
+      "position": 0,
+      "indent": 0,
+      "content": "Your health is "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "startup",
+      "lineNumber": 7,
+      "position": 15,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "health",
+      "rawValue": "health",
+      "position": 17,
+      "lineNumber": 7,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "startup",
+      "lineNumber": 7,
+      "position": 23,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 7,
+      "position": 24,
+      "indent": 0,
+      "content": ".\n"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 8,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "health",
+      "rawValue": "health",
+      "position": 5,
+      "lineNumber": 8,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 90,
+      "position": 12,
+      "lineNumber": 8,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Comment",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 10,
+      "position": 0,
+      "value": "2. Gosub propagation: health/stamina in scope inside subroutine"
+    },
+    {
+      "type": "GoSub",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 11,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "drain_stamina",
+      "rawValue": "drain_stamina",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 11,
+      "position": 7,
+      "isLabelName": true
+    },
+    {
+      "type": "Comment",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 13,
+      "position": 0,
+      "value": "3. Conditional def creates 'may' presence"
+    },
+    {
+      "type": "If",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 14,
+      "position": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 4,
+      "lineNumber": 14,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "health",
+      "rawValue": "health",
+      "position": 5,
+      "lineNumber": 14,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "GreaterThanOperator",
+      "rawValue": ">",
+      "position": 12,
+      "lineNumber": 14,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 50,
+      "position": 14,
+      "lineNumber": 14,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 16,
+      "lineNumber": 14,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CreateTempVariable",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 15,
+      "position": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "bonus",
+      "rawValue": "bonus",
+      "position": 8,
+      "lineNumber": 15,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 10,
+      "position": 14,
+      "lineNumber": 15,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 1,
+      "lineNumber": 16,
+      "position": 2
+    },
+    {
+      "type": "Identifier",
+      "value": "health",
+      "rawValue": "health",
+      "position": 7,
+      "lineNumber": 16,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 14,
+      "lineNumber": 16,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "Identifier",
+      "value": "health",
+      "rawValue": "health",
+      "position": 15,
+      "lineNumber": 16,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 22,
+      "lineNumber": 16,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "Identifier",
+      "value": "bonus",
+      "rawValue": "bonus",
+      "position": 24,
+      "lineNumber": 16,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 29,
+      "lineNumber": 16,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "Comment",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 18,
+      "position": 0,
+      "value": "4. Reference after conditional def — bonus may not be defined"
+    },
+    {
+      "type": "Comment",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 19,
+      "position": 0,
+      "value": "This is intentional: bonus only exists on one branch"
+    },
+    {
+      "type": "If",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 20,
+      "position": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 4,
+      "lineNumber": 20,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "health",
+      "rawValue": "health",
+      "position": 5,
+      "lineNumber": 20,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "GreaterThanOperator",
+      "rawValue": ">",
+      "position": 12,
+      "lineNumber": 20,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 80,
+      "position": 14,
+      "lineNumber": 20,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 16,
+      "lineNumber": 20,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 21,
+      "position": 2,
+      "indent": 1,
+      "content": "You feel strong with "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "startup",
+      "lineNumber": 21,
+      "position": 23,
+      "indent": 1
+    },
+    {
+      "type": "Identifier",
+      "value": "bonus",
+      "rawValue": "bonus",
+      "position": 25,
+      "lineNumber": 21,
+      "sceneName": "startup",
+      "indent": 1
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "startup",
+      "lineNumber": 21,
+      "position": 30,
+      "indent": 1
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 21,
+      "position": 31,
+      "indent": 1,
+      "content": " bonus!\n\n"
+    },
+    {
+      "type": "Comment",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 23,
+      "position": 0,
+      "value": "5. Delete removes from scope"
+    },
+    {
+      "type": "DeleteVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 24,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "gold",
+      "rawValue": "gold",
+      "position": 8,
+      "lineNumber": 24,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Comment",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 25,
+      "position": 0,
+      "value": "gold is now out of scope"
+    },
+    {
+      "type": "Comment",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 27,
+      "position": 0,
+      "value": "6. Gosub to subroutine that reads deleted var"
+    },
+    {
+      "type": "GoSub",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 28,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "check_gold",
+      "rawValue": "check_gold",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 28,
+      "position": 7,
+      "isLabelName": true
+    },
+    {
+      "type": "Comment",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 30,
+      "position": 0,
+      "value": "7. Reference to variable defined in subroutine"
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 31,
+      "position": 0,
+      "indent": 0,
+      "content": "The log says: "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "startup",
+      "lineNumber": 31,
+      "position": 14,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "battle_log",
+      "rawValue": "battle_log",
+      "position": 16,
+      "lineNumber": 31,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "startup",
+      "lineNumber": 31,
+      "position": 26,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 31,
+      "position": 27,
+      "indent": 0,
+      "content": "\n\n"
+    },
+    {
+      "type": "GotoScene",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 33,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "chapter1",
+      "rawValue": "chapter1",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 33,
+      "position": 12,
+      "isSceneName": true
+    },
+    {
+      "type": "Comment",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 35,
+      "position": 0,
+      "value": "--- Subroutines ---"
+    },
+    {
+      "type": "Label",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 37,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "drain_stamina",
+      "rawValue": "drain_stamina",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 37,
+      "position": 7,
+      "isLabelName": true
+    },
+    {
+      "type": "Comment",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 38,
+      "position": 0,
+      "value": "stamina should be in scope here via gosub call edge"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 39,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "stamina",
+      "rawValue": "stamina",
+      "position": 5,
+      "lineNumber": 39,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 13,
+      "lineNumber": 39,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "stamina",
+      "rawValue": "stamina",
+      "position": 14,
+      "lineNumber": 39,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "SubtractionOperator",
+      "rawValue": "-",
+      "position": 22,
+      "lineNumber": 39,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "NumberLiteral",
+      "value": 10,
+      "position": 24,
+      "lineNumber": 39,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 26,
+      "lineNumber": 39,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 40,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "battle_log",
+      "rawValue": "battle_log",
+      "position": 5,
+      "lineNumber": 40,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "StringLiteral",
+      "value": "drained",
+      "position": 16,
+      "lineNumber": 40,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Return",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 41,
+      "position": 0
+    },
+    {
+      "type": "Label",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 43,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "check_gold",
+      "rawValue": "check_gold",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 43,
+      "position": 7,
+      "isLabelName": true
+    },
+    {
+      "type": "Comment",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 44,
+      "position": 0,
+      "value": "gold was deleted before this gosub — undefined ref expected"
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 45,
+      "position": 0,
+      "indent": 0,
+      "content": "You have "
+    },
+    {
+      "type": "OpenPrint",
+      "sceneName": "startup",
+      "lineNumber": 45,
+      "position": 9,
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "gold",
+      "rawValue": "gold",
+      "position": 11,
+      "lineNumber": 45,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseBrace",
+      "sceneName": "startup",
+      "lineNumber": 45,
+      "position": 15,
+      "indent": 0
+    },
+    {
+      "type": "Prose",
+      "sceneName": "startup",
+      "lineNumber": 45,
+      "position": 16,
+      "indent": 0,
+      "content": " gold.\n"
+    },
+    {
+      "type": "Return",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 46,
+      "position": 0
+    },
+    {
+      "type": "Label",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 48,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "dead_label",
+      "rawValue": "dead_label",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 48,
+      "position": 7,
+      "isLabelName": true
+    },
+    {
+      "type": "Comment",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 49,
+      "position": 0,
+      "value": "This label is never gosub'd — entry scope should be empty"
+    },
+    {
+      "type": "Comment",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 50,
+      "position": 0,
+      "value": "Any variable reference here is undefined"
+    },
+    {
+      "type": "SetVariable",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 51,
+      "position": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "health",
+      "rawValue": "health",
+      "position": 5,
+      "lineNumber": 51,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "OpenParenthesis",
+      "position": 12,
+      "lineNumber": 51,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "health",
+      "rawValue": "health",
+      "position": 13,
+      "lineNumber": 51,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "AdditionOperator",
+      "rawValue": "+",
+      "position": 20,
+      "lineNumber": 51,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Identifier",
+      "value": "stamina",
+      "rawValue": "stamina",
+      "position": 22,
+      "lineNumber": 51,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "CloseParenthesis",
+      "position": 29,
+      "lineNumber": 51,
+      "sceneName": "startup",
+      "indent": 0
+    },
+    {
+      "type": "Return",
+      "sceneName": "startup",
+      "indent": 0,
+      "lineNumber": 52,
+      "position": 0
+    },
+    {
+      "lineNumber": 54,
+      "indent": 0,
+      "position": 0,
+      "sceneName": "startup",
+      "type": "SceneEnd"
+    }
+  ]
+]

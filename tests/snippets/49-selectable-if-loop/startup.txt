@@ -1,0 +1,20 @@
+*create gold 30
+*create bought_sword false
+*create bought_shield false
+
+*label shop
+Welcome to the shop. Gold: ${gold}.
+*choice
+  *selectable_if ((gold >= 20) and (not(bought_sword))) #Buy a sword (20g).
+    *set gold - 20
+    *set bought_sword true
+    You buy a sword.
+    *goto shop
+  *selectable_if ((gold >= 10) and (not(bought_shield))) #Buy a shield (10g).
+    *set gold - 10
+    *set bought_shield true
+    You buy a shield.
+    *goto shop
+  #Leave.
+    You leave the shop.
+    *finish

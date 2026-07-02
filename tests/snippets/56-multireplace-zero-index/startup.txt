@@ -1,0 +1,20 @@
+*comment Negative test cases (should produce violations):
+*comment   pet = 0: multireplace is 1-indexed, 0 is uninitialized/invalid
+*comment   mood = "happy": string cannot be coerced to a number or boolean
+*comment Positive test cases (should NOT produce violations):
+*comment   gender = 2: valid numeric index within range
+*comment   is_tall = true: boolean is valid (true=first, false=second)
+*comment   count = "3": numeric string is coercible to a number
+
+*create pet 0
+*create mood "happy"
+*create gender 2
+*create is_tall true
+*create count "3"
+
+You have a @{pet cat|dog|bird}.
+You feel @{mood great|terrible}.
+@{gender He|She|They} walked in.
+@{is_tall tall|short} person.
+Option @{count one|two|three}.
+*finish
