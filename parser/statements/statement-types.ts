@@ -40,6 +40,7 @@ export type StatementTypes =
   | "Ending"
   | "SceneList"
   | "Image"
+  | "TextImage"
   | "Round"
   | "Length"
   | "GameIdentifier"

@@ -1,6 +1,6 @@
 import { AchievementToken, IdentifierToken } from "../../scanner/tokens";
 import { ProseLiteral } from "./prose-literal";
-import { Statement } from "./statement";
+import { Statement, ContentKeyFn } from "./statement";
 
 export interface AchievementStatement extends Statement {
   kind: "Achievement";
@@ -12,3 +12,5 @@ export interface AchievementStatement extends Statement {
   preDescription: ProseLiteral | IdentifierToken | null;
   postDescription: ProseLiteral;
 }
+
+export const contentKey: ContentKeyFn<AchievementStatement> = (stmt) => stmt.codename?.value;

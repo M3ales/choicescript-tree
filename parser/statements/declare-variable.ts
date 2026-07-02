@@ -1,6 +1,6 @@
 import { CreateTempVariableToken, CreateVariableToken, IdentifierToken, SetVariableToken } from "../../scanner/tokens";
 import { Expression } from "../expressions";
-import { Statement } from "./statement";
+import { Statement, ContentKeyFn } from "./statement";
 
 export interface DeclareVariableStatement extends Statement {
   kind: "DeclareVariable";
@@ -9,3 +9,5 @@ export interface DeclareVariableStatement extends Statement {
   expression: Expression | null;
   scope: 'Temporary' | 'Global';
 }
+
+export const contentKey: ContentKeyFn<DeclareVariableStatement> = (stmt) => stmt.variable?.value;

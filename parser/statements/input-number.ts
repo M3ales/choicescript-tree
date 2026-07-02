@@ -1,6 +1,6 @@
 import { IdentifierToken, InputNumberToken, NumberLiteralToken } from "../../scanner/tokens";
 import { Expression } from "../expressions";
-import { Statement } from "./statement";
+import { Statement, ContentKeyFn } from "./statement";
 
 export interface InputNumberStatement extends Statement {
     kind: "InputNumber";
@@ -9,4 +9,6 @@ export interface InputNumberStatement extends Statement {
     min: Expression;
     max: Expression;
 }
+
+export const contentKey: ContentKeyFn<InputNumberStatement> = (stmt) => stmt.storeInto?.value;
   

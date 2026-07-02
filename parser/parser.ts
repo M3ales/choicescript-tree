@@ -14,6 +14,7 @@ import {
   HideReuseToken,
   IdentifierToken,
   ImageToken,
+  TextImageToken,
   NumberLiteralToken,
   ProseToken,
   RestoreCheckpointToken,
@@ -35,6 +36,8 @@ import {
   Identifier,
   Literal,
   Unary,
+  invertExpression,
+  combineWithAnd,
 } from "./expressions";
 import {
   AchievementStatement,
@@ -65,6 +68,7 @@ import {
   HideReuseStatement,
   IfStatement,
   ImageStatement,
+  TextImageStatement,
   InputNumberStatement,
   InputTextStatement,
   LabelStatement,
@@ -89,12 +93,14 @@ import {
   Statement,
   TextStat,
   AchieveStatement,
+  BugStatement,
 } from "./statements";
 import { SceneAst } from "./scene";
 import {
   SceneIdentifier as SceneIdentifierToken,
   SceneListStatement,
 } from "./statements/scene-list";
+import { hashStatement } from "./merkle-hash";
 
 export class ParseErrorSignal extends Error {
   parseError: ParseError;
@@ -110,8 +116,12 @@ const choiceScopeOnlyTokenTypes: Set<TokenType> = new Set<TokenType>([
 ]);
 
 const startupHeaderStatements = new Set([
-  "DeclareVariable", "DeclareArray", "Author", "SceneList", "GameIdentifier", "Comment", "Achievement",
+  "DeclareVariable", "DeclareArray", "Author", "SceneList", "GameIdentifier", "Comment", "Achievement", "Prose",
 ]);
+
+export interface ParserOptions {
+  computeConditionHints?: boolean;
+}
 
 export class Parser {
   tokens: Token[];
@@ -120,12 +130,14 @@ export class Parser {
   contextStack: ParseContext[];
   seenNonHeaderStatement = false;
   sceneName: string | null = null;
+  private options: ParserOptions;
 
-  constructor(tokens: Token[]) {
+  constructor(tokens: Token[], options?: ParserOptions) {
     this.tokens = tokens;
     this.current = 0;
     this.errors = [];
     this.contextStack = [];
+    this.options = options ?? {};
   }
 
   withContext<T>(ctx: ParseContext, f: () => T): T {
@@ -463,18 +475,19 @@ export class Parser {
 
   recoverInto(body: Statement[], e: unknown): void {
     if (!(e instanceof ParseErrorSignal)) throw e;
-    body.push(<ErrorStatement>{
+    body.push(this.assignStatementId(<ErrorStatement>{
       kind: "Error",
       token: e.parseError.token,
       message: e.parseError.message,
-      statementId: this.generateStatementId(),
-    });
+    }));
     this.synchronize();
   }
 
-  statementId = 0;
-  generateStatementId() {
-    return this.statementId++;
+  currentLabel = "_entry";
+  assignStatementId<T extends { kind: string }>(stmt: T): T & { statementId: string } {
+    return Object.assign(stmt, {
+      statementId: hashStatement(stmt),
+    });
   }
 
   parseScene(): SceneAst {
@@ -525,12 +538,14 @@ export class Parser {
     ["DeleteVariable", () => this.deleteVariable()],
     ["DeleteArray", () => this.deleteArray()],
     ["Image", () => this.imageStatement()],
+    ["TextImage", () => this.textImageStatement()],
     ["GoSub", () => this.goSub()],
     ["Finish", () => this.finishStatement()],
     ["GoSubScene", () => this.goSubScene()],
     ["Return", () => this.return()],
     ["Comment", () => this.commentBlock()],
     ["Ending", () => this.endingStatement()],
+    ["Bug", () => this.bugStatement()],
     ["Author", () => this.authorStatement()],
     ["SceneList", () => this.sceneList()],
     ["Achievement", () => this.achievementDefinition()],
@@ -586,11 +601,11 @@ export class Parser {
     if(this.peekSameLine()) {
       identifier = this.consumeProseLiteral("Expect identifier for checkpoint after *restore_checkpoint");
     }
-    return <RestoreCheckpointStatement>{
+    return this.assignStatementId(<RestoreCheckpointStatement>{
       kind: "RestoreCheckpoint",
       token: token,
       identifier: identifier,
-    }
+    })
   }
   saveCheckpointStatement(): SaveCheckpointStatement {
     const token = this.previous() as SaveCheckpointToken;
@@ -598,21 +613,21 @@ export class Parser {
     if(this.peekSameLine()) {
       identifier = this.consumeProseLiteral("Expect identifier for checkpoint after *save_checkpoint");
     }
-    return <SaveCheckpointStatement>{
+    return this.assignStatementId(<SaveCheckpointStatement>{
       kind: "SaveCheckpoint",
       token: token,
       identifier: identifier,
-    }
+    })
   }
 
   gameIdentifierStatement(): GameIdentifierStatement {
     const token = this.previous() as GameIdentifierToken;
     const id = this.consumeProseLiteral("Expect identifier uuid following *ifid");
-    return <GameIdentifierStatement> {
+    return this.assignStatementId(<GameIdentifierStatement>{
       kind: "GameIdentifier",
       token: token,
       uuid: id,
-    }
+    })
   }
 
   imageStatement(): ImageStatement {
@@ -627,13 +642,34 @@ export class Parser {
       }
     }
 
-    return <ImageStatement>{
+    return this.assignStatementId(<ImageStatement>{
       kind: "Image",
       token: token,
       path: path,
       alignment: alignment,
       altText: altText,
+    })
+  }
+
+  textImageStatement(): TextImageStatement {
+    const token = this.previous() as TextImageToken;
+    const path = this.consumeProseValue("Expect path after *text_image.");
+    let alignment: IdentifierToken | undefined = undefined;
+    let altText: ProseValue | undefined = undefined;
+    if(this.peekSameLine()) {
+      alignment = this.consume("Identifier", "Expect alignment after text_image path.", true, true) as IdentifierToken;
+      if(this.peekSameLine()) {
+        altText = this.consumeProseValue("Expect alt text after text_image alignment.");
+      }
     }
+
+    return this.assignStatementId(<TextImageStatement>{
+      kind: "TextImage",
+      token: token,
+      path: path,
+      alignment: alignment,
+      altText: altText,
+    })
   }
 
   statChart(): StatChartStatement {
@@ -707,13 +743,12 @@ export class Parser {
       }
     }
 
-    return <StatChartStatement>{
+    return this.assignStatementId(<StatChartStatement>{
       kind: "StatChart",
       token: token,
       title: title,
       stats: stats,
-      statementId: this.generateStatementId()
-    };
+    });
   }
   parametersStatement(): ParametersStatement {
     const token = this.previous();
@@ -728,12 +763,11 @@ export class Parser {
         )
       );
     }
-    return <ParametersStatement>{
+    return this.assignStatementId(<ParametersStatement>{
       kind: "Parameters",
       token: token,
       identifiers: identifiers,
-      statementId: this.generateStatementId()
-    };
+    });
   }
 
   generateRandomStatement(): GenerateRandomStatement {
@@ -747,14 +781,13 @@ export class Parser {
     const min = this.expression();
     const max = this.expression();
     this.expectLineChange();
-    return <GenerateRandomStatement>{
+    return this.assignStatementId(<GenerateRandomStatement>{
       kind: "GenerateRandom",
       token: token,
       identifier: identifier,
       min: min,
       max: max,
-      statementId: this.generateStatementId()
-    };
+    });
   }
 
   linkStatement(): LinkStatement {
@@ -764,17 +797,16 @@ export class Parser {
       url = this.consumeProseValue("Expect URL after Link.");
     }
     this.expectLineChange();
-    return <LinkStatement>{ kind: "Link", token: token, url: url };
+    return this.assignStatementId(<LinkStatement>{ kind: "Link", token: token, url: url });
   }
 
   checkAchievementsStatement(): Statement {
     const token = this.previous() as CheckAchievementsToken;
     this.expectLineChange();
-    return <CheckAchievementsStatement>{
+    return this.assignStatementId(<CheckAchievementsStatement>{
       kind: "CheckAchievements",
       token: token,
-      statementId: this.generateStatementId()
-    };
+    });
   }
 
   achieveStatement(): Statement {
@@ -784,12 +816,11 @@ export class Parser {
       "Expect achievement codename."
     ) as IdentifierToken;
     this.expectLineChange();
-    return <AchieveStatement>{
+    return this.assignStatementId(<AchieveStatement>{
       kind: "Achieve",
       token: token,
       codename: codename,
-      statementId: this.generateStatementId()
-    };
+    });
   }
 
   achievementDefinition(): AchievementStatement {
@@ -821,7 +852,7 @@ export class Parser {
 
     const postDescription = this.consumeProseLiteral("Expect unlocked achievement description.");
 
-    return <AchievementStatement>{
+    return this.assignStatementId(<AchievementStatement>{
       kind: "Achievement",
       token: token,
       codename,
@@ -830,8 +861,7 @@ export class Parser {
       preDescription,
       postDescription,
       hidden: visibility.value === "hidden",
-      statementId: this.generateStatementId()
-    };
+    });
   }
 
   sceneList(): SceneListStatement {
@@ -848,24 +878,22 @@ export class Parser {
       identifiers.push({ paid: paid, ...id });
     }
 
-    return <SceneListStatement>{
+    return this.assignStatementId(<SceneListStatement>{
       kind: "SceneList",
       token: token,
       identifiers: identifiers,
-      statementId: this.generateStatementId()
-    };
+    });
   }
 
   authorStatement(): AuthorStatement {
     const token = this.previous();
     const name = this.consumeProseLiteral("Expect author name.");
     this.expectLineChange();
-    return <AuthorStatement>{
+    return this.assignStatementId(<AuthorStatement>{
       kind: "Author",
       token: token,
       value: name,
-      statementId: this.generateStatementId()
-    };
+    });
   }
 
   commentBlock(): CommentBlock {
@@ -876,16 +904,16 @@ export class Parser {
       collectedComments.push(comment);
     }
 
-    return <CommentBlock>{ content: collectedComments, kind: "Comment" };
+    return this.assignStatementId(<CommentBlock>{ content: collectedComments, kind: "Comment" });
   }
 
   return(): ReturnStatement {
     const token = this.previous();
     this.expectLineChange();
-    return <ReturnStatement>{ 
+    return this.assignStatementId(<ReturnStatement>{
       kind: "Return",
       token: token,
-      statementId: this.generateStatementId() };
+    });
   }
 
   parseLabel() {
@@ -915,14 +943,13 @@ export class Parser {
 
     this.expectLineChange();
 
-    return <GoSubSceneStatement>{
+    return this.assignStatementId(<GoSubSceneStatement>{
       kind: "GoSubScene",
       token: token,
       scene: scene,
       label: label,
       args: args,
-      statementId: this.generateStatementId()
-    };
+    });
   }
 
   goSub(): GoSubStatement {
@@ -937,13 +964,12 @@ export class Parser {
 
     this.expectLineChange();
 
-    return <GoSubStatement>{
+    return this.assignStatementId(<GoSubStatement>{
       kind: "GoSub",
       token: token,
       label: label,
       args: args,
-      statementId: this.generateStatementId()
-    };
+    });
   }
 
   inputNumber(): InputNumberStatement {
@@ -955,14 +981,13 @@ export class Parser {
     const min = this.expression();
     const max = this.expression();
     this.expectLineChange();
-    return <InputNumberStatement>{
+    return this.assignStatementId(<InputNumberStatement>{
       kind: "InputNumber",
       token: token,
       storeInto: variable,
       min: min,
       max: max,
-      statementId: this.generateStatementId()
-    };
+    });
   }
 
   inputText(): InputTextStatement {
@@ -972,12 +997,11 @@ export class Parser {
       "Expect variable name to store input text."
     ) as IdentifierToken;
     this.expectLineChange();
-    return <InputTextStatement>{
+    return this.assignStatementId(<InputTextStatement>{
       kind: "InputText",
       token: token,
       storeInto: variable,
-      statementId: this.generateStatementId()
-    };
+    });
   }
 
   gotoScene(): GotoSceneStatement {
@@ -1001,37 +1025,35 @@ export class Parser {
     }
 
     this.expectLineChange();
-    return <GotoSceneStatement>{
+    return this.assignStatementId(<GotoSceneStatement>{
       kind: "GotoScene",
       token: token,
       scene: scene,
       label: label,
-      statementId: this.generateStatementId()
-    };
+    });
   }
 
   lineBreak(): LineBreakStatement {
     const token = this.previous();
-    return <LineBreakStatement>{
+    return this.assignStatementId(<LineBreakStatement>{
       kind: "LineBreak",
       token: token,
-      statementId: this.generateStatementId()
-    };
+    });
   }
 
   pageBreak(): PageBreakStatement {
     const token = this.previous();
     let buttonText: ProseValue | null = null;
     if (this.peekSameLine()) {
-      buttonText = this.consumeProseValue("Expect button text after page break.");
+      const anchor = this.consume("Prose", "Expect button text after page break.") as ProseToken;
+      buttonText = this.proseValueFrom(anchor, true);
     }
     this.expectLineChange();
-    return <PageBreakStatement>{
+    return this.assignStatementId(<PageBreakStatement>{
       kind: "PageBreak",
       token: token,
       buttonText: buttonText,
-      statementId: this.generateStatementId()
-    };
+    });
   }
 
   choiceBoundedifStatement(): Statement {
@@ -1077,24 +1099,33 @@ export class Parser {
       this.siblingScope(token.indent) &&
       this.match(["ElseIf"], false, false)
     ) {
-      elseIfBranches.push(this.elseIfStatement(bodyParser));
+      const branch = this.elseIfStatement(bodyParser);
+      if (this.options.computeConditionHints) {
+        const priorConditions = [expression, ...elseIfBranches.map(b => b.expression)];
+        const invertedPriors = combineWithAnd(priorConditions.map(invertExpression));
+        branch.effectiveCondition = combineWithAnd([invertedPriors, branch.expression]);
+      }
+      elseIfBranches.push(branch);
     }
 
     let elseBranch: ElseStatement | null = null;
     if (this.siblingScope(token.indent) && this.match(["Else"], false, false)) {
       elseBranch = this.elseStatement(bodyParser);
+      if (this.options.computeConditionHints) {
+        const allConditions = [expression, ...elseIfBranches.map(b => b.expression)];
+        elseBranch.invertedCondition = combineWithAnd(allConditions.map(invertExpression));
+      }
     }
 
     //console.log('Complete If', token);
-    return <IfStatement>{
+    return this.assignStatementId(<IfStatement>{
       kind: "If",
       token: token,
       body: body,
       expression: expression,
       elseBranch: elseBranch,
       elseIfBranches: elseIfBranches,
-      statementId: this.generateStatementId()
-    };
+    });
   }
 
   elseStatement(
@@ -1109,12 +1140,11 @@ export class Parser {
         this.recoverInto(body, e);
       }
     }
-    return <ElseStatement>{
+    return this.assignStatementId(<ElseStatement>{
       kind: "Else",
       token: token,
       body: body,
-      statementId: this.generateStatementId()
-    };
+    });
   }
 
   elseIfStatement(
@@ -1130,13 +1160,12 @@ export class Parser {
         this.recoverInto(body, e);
       }
     }
-    return <ElseIfStatement>{
+    return this.assignStatementId(<ElseIfStatement>{
       kind: "ElseIf",
       token: token,
       body: body,
       expression: expression,
-      statementId: this.generateStatementId()
-    };
+    });
   }
 
   finishStatement(): FinishStatement {
@@ -1145,11 +1174,11 @@ export class Parser {
     if (this.check("Prose", true, true)) {
       prose = this.matchProseValue() ?? null;
     }
-    return <FinishStatement>{
+    return this.assignStatementId(<FinishStatement>{
       kind: "Finish",
       token: token,
       buttonText: prose,
-      statementId: this.generateStatementId() };
+    });
   }
 
   endingStatement(): EndingStatement {
@@ -1158,11 +1187,24 @@ export class Parser {
     if (this.check("Prose", true, true)) {
       prose = this.matchProseValue() ?? null;
     }
-    return <EndingStatement>{
+    return this.assignStatementId(<EndingStatement>{
       kind: "Ending",
       token: token,
       buttonText: prose,
-      statementId: this.generateStatementId() };
+    });
+  }
+
+  bugStatement(): BugStatement {
+    const token = this.previous();
+    let message: ProseValue | null = null;
+    if (this.check("Prose", true, true)) {
+      message = this.matchProseValue() ?? null;
+    }
+    return this.assignStatementId(<BugStatement>{
+      kind: "Bug",
+      token: token,
+      message: message,
+    });
   }
 
   choiceStatement(): ChoiceStatement {
@@ -1210,11 +1252,11 @@ export class Parser {
 
     //console.log('Complete Choice');
 
-    return <ChoiceStatement>{
+    return this.assignStatementId(<ChoiceStatement>{
       kind: "Choice",
       token: token,
       body: body,
-      statementId: this.generateStatementId() };
+    });
   }
 
   fakeChoiceStatement(): FakeChoiceStatement {
@@ -1257,47 +1299,45 @@ export class Parser {
 
     //console.log('Complete Fake Choice');
 
-    return <FakeChoiceStatement>{
+    return this.assignStatementId(<FakeChoiceStatement>{
       kind: "FakeChoice",
       token: token,
       body: body,
-      statementId: this.generateStatementId()
-    };
+    });
   }
 
   gotoLabel(): GotoLabelStatement {
     const token = this.previous();
     const label = this.parseLabel();
     this.expectLineChange();
-    return <GotoLabelStatement>{
+    return this.assignStatementId(<GotoLabelStatement>{
       kind: "GotoLabel",
       token: token,
       label: label,
-      statementId: this.generateStatementId()
-    };
+    });
   }
 
   labelDefinition(): LabelStatement {
     const token = this.previous();
     const label = this.consume("Identifier", "Expect label name.");
     this.expectLineChange();
-    return <LabelStatement>{ 
+    const labelName = (label as IdentifierToken)?.value ?? "unknown";
+    this.currentLabel = labelName;
+    return this.assignStatementId(<LabelStatement>{
       kind: "Label",
       token: token,
       label: label,
-      statementId: this.generateStatementId()
-    };
+    });
   }
 
   selectableIf(): SelectableIfStatement {
     const token = this.previous();
     const expression = this.expression();
-    return <SelectableIfStatement>{
+    return this.assignStatementId(<SelectableIfStatement>{
       kind: "SelectableIf",
       token: token,
       expression: expression,
-      statementId: this.generateStatementId()
-    };
+    });
   }
 
   choiceOptionWithModifiers(): Statement {
@@ -1361,29 +1401,26 @@ export class Parser {
 
   hideReuse() {
     const token = this.previous();
-    return <HideReuseStatement>{ 
+    return this.assignStatementId(<HideReuseStatement>{
       kind: "HideReuse",
       token: token,
-      statementId: this.generateStatementId()
-    };
+    });
   }
 
   disableReuse() {
     const token = this.previous();
-    return <DisableReuseStatement>{
+    return this.assignStatementId(<DisableReuseStatement>{
       kind: "DisableReuse",
       token: token,
-      statementId: this.generateStatementId()
-    };
+    });
   }
 
   allowReuse() {
     const token = this.previous();
-    return <AllowReuseStatement>{
+    return this.assignStatementId(<AllowReuseStatement>{
       kind: "AllowReuse",
       token: token,
-      statementId: this.generateStatementId()
-    };
+    });
   }
 
   choiceOption(modifiers: Statement[] = []): ChoiceOptionStatement {
@@ -1437,9 +1474,8 @@ export class Parser {
         ) as SelectableIfStatement
       )?.expression ?? null;
 
-    return <ChoiceOptionStatement>{
+    return this.assignStatementId(<ChoiceOptionStatement>{
       kind: "ChoiceOption",
-      statementId: this.generateStatementId(),
       token: token,
       body: body,
       parsedSegments: parsedSegments,
@@ -1451,7 +1487,7 @@ export class Parser {
         ? "allow_reuse"
         : null,
       selectableIf: selectableIf,
-    };
+    });
   }
 
   proseStatement(): ProseStatement {
@@ -1462,12 +1498,11 @@ export class Parser {
     this.appendTextSegment(parsedSegments, startToken);
     this.collectProseSegments(parsedSegments, content, startToken.indent);
 
-    return <ProseStatement>{
+    return this.assignStatementId(<ProseStatement>{
       content,
       kind: "Prose",
       parsedSegments,
-      statementId: this.generateStatementId(),
-    };
+    });
   }
 
   consumeProseValue(message: string): ProseValue {
@@ -1534,11 +1569,11 @@ export class Parser {
     return this.proseValueFrom(anchor);
   }
 
-  private proseValueFrom(anchor: ProseToken): ProseValue {
+  private proseValueFrom(anchor: ProseToken, sameLine: boolean = false): ProseValue {
     const parsedSegments: ProseSegmentStatement[] = [];
     const content: ProseToken[] = [anchor];
     this.appendTextSegment(parsedSegments, anchor);
-    this.collectProseSegments(parsedSegments, content, anchor.indent);
+    this.collectProseSegments(parsedSegments, content, anchor.indent, [], sameLine ? anchor.lineNumber : null);
     const joined = content.map(t => t.content).join("");
     return {
       token: anchor,
@@ -1568,9 +1603,11 @@ export class Parser {
     content: ProseToken[],
     sameIndent: number,
     stopAt: TokenType[] = [],
+    sameLine: number | null = null,
   ): void {
     while (!this.isAtEnd()) {
       const peek = this.peek();
+      if (sameLine !== null && peek.lineNumber !== sameLine) return;
       if (stopAt.includes(peek.type)) return;
 
       if (peek.type === "Prose" && peek.indent === sameIndent) {
@@ -1638,6 +1675,16 @@ export class Parser {
         } catch (e) {
           if (!(e instanceof ParseErrorSignal)) throw e;
         }
+        if (this.previous().type === "CloseBrace" && this.previous().lineNumber !== opener.lineNumber) {
+          const closeBrace = this.previous();
+          this.errors.push({
+            token: opener,
+            endToken: closeBrace,
+            message: `Multireplace spans multiple lines — @{...} must be on a single line.`,
+            context: this.contextStack.map(c => ({ ...c })),
+            solutionCode: "multiline-multireplace",
+          });
+        }
         out.push({
           kind: "MultiReplace",
           start: 0,
@@ -1665,10 +1712,10 @@ export class Parser {
 
   expressionStatement(): ExpressionStatement {
     const expr = this.expression();
-    return <ExpressionStatement>{ 
+    return this.assignStatementId(<ExpressionStatement>{
+      kind: "Expression",
       expression: expr,
-      statementId: this.generateStatementId()
-    };
+    });
   }
 
   createVariable(temporary: boolean): DeclareVariableStatement {
@@ -1680,14 +1727,13 @@ export class Parser {
     const identifier = this.consume("Identifier", "Expect variable name");
     const expr = !this.peekSameLine() ? null : this.expression();
     this.expectLineChange();
-    return <DeclareVariableStatement>{
+    return this.assignStatementId(<DeclareVariableStatement>{
       kind: "DeclareVariable",
       variable: identifier,
       expression: expr,
       scope: temporary ? "Temporary" : "Global",
       token: token,
-      statementId: this.generateStatementId()
-    };
+    });
   }
 
   createArray(temporary: boolean): DeclareArrayStatement {
@@ -1711,49 +1757,45 @@ export class Parser {
         ...identifier,
         value: `${identifier.value}_${i}`,
       };
-      declarations.push(<DeclareVariableStatement>{
+      declarations.push(this.assignStatementId(<DeclareVariableStatement>{
         kind: "DeclareVariable",
         variable: syntheticIdentifier,
         expression: valueExpr,
         scope: temporary ? "Temporary" : "Global",
         token: token,
-        statementId: this.generateStatementId(),
-      });
+      }));
     }
 
-    return <DeclareArrayStatement>{
+    return this.assignStatementId(<DeclareArrayStatement>{
       kind: "DeclareArray",
       token: token,
       variable: identifier,
       count: count,
       declarations: declarations,
       scope: temporary ? "Temporary" : "Global",
-      statementId: this.generateStatementId(),
-    };
+    });
   }
 
   deleteVariable(): DeleteVariableStatement {
     const token = this.previous();
     const identifier = this.consume("Identifier", "Expect variable name");
     this.expectLineChange();
-    return <DeleteVariableStatement>{
+    return this.assignStatementId(<DeleteVariableStatement>{
       kind: "DeleteVariable",
       token: token,
       variable: identifier,
-      statementId: this.generateStatementId(),
-    };
+    });
   }
 
   deleteArray(): DeleteArrayStatement {
     const token = this.previous();
     const identifier = this.consume("Identifier", "Expect array name");
     this.expectLineChange();
-    return <DeleteArrayStatement>{
+    return this.assignStatementId(<DeleteArrayStatement>{
       kind: "DeleteArray",
       token: token,
       variable: identifier,
-      statementId: this.generateStatementId(),
-    };
+    });
   }
 
   setVariable(): SetVariableStatement {
@@ -1767,13 +1809,12 @@ export class Parser {
 
     // console.log('Set Expression', identifierOrAssignment, 'to', assignment);
 
-    return <SetVariableStatement>{
+    return this.assignStatementId(<SetVariableStatement>{
       kind: "SetVariable",
       expression: identifierOrAssignment,
       assignment: assignment,
       token: token,
-      statementId: this.generateStatementId()
-    };
+    });
   }
 
   synchronize(): void {
@@ -1803,6 +1844,7 @@ export class Parser {
         case "CreateVariable":
         case "CreateTempVariable":
         case "Image":
+        case "TextImage":
         case "GoSub":
         case "GoSubScene":
         case "Finish":

@@ -7,6 +7,8 @@ export interface ParseContext {
 
 export interface ParseError {
   token: Token;
+  endToken?: Token;
   message: string;
   context?: ParseContext[];
+  solutionCode?: string;
 }

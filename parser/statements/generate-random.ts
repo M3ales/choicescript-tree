@@ -1,6 +1,6 @@
 import { GenerateRandomToken, IdentifierToken } from "../../scanner/tokens";
 import { Expression } from "../expressions";
-import { Statement } from "./statement";
+import { Statement, ContentKeyFn } from "./statement";
 
 export interface GenerateRandomStatement extends Statement {
     kind: "GenerateRandom";
@@ -9,3 +9,5 @@ export interface GenerateRandomStatement extends Statement {
     min: Expression,
     max: Expression,
 }
+
+export const contentKey: ContentKeyFn<GenerateRandomStatement> = (stmt) => stmt.identifier?.value;

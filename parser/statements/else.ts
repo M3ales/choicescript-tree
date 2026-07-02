@@ -6,4 +6,5 @@ export interface ElseStatement extends Statement {
   kind: "Else";
   token: ElseToken;
   body: Statement[];
+  invertedCondition?: Expression;
 }

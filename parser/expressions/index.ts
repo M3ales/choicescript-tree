@@ -6,3 +6,4 @@ export * from "./grouping";
 export * from "./identifier";
 export * from "./literal";
 export * from "./unary";
+export * from "./invert";

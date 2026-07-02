@@ -7,4 +7,5 @@ export interface ElseIfStatement extends Statement {
   token: ElseIfToken;
   expression: Expression;
   body: Statement[];
+  effectiveCondition?: Expression;
 }
